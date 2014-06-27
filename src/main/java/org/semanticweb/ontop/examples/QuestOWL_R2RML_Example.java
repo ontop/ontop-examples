@@ -20,7 +20,6 @@ package org.semanticweb.ontop.examples;
  * #L%
  */
 
-import it.unibz.krdb.obda.io.ModelIOManager;
 import it.unibz.krdb.obda.model.OBDADataFactory;
 import it.unibz.krdb.obda.model.OBDADataSource;
 import it.unibz.krdb.obda.model.OBDAModel;
@@ -54,7 +53,7 @@ public class QuestOWL_R2RML_Example {
 	 * 
 	 */
 	final String owlFile = "src/main/resources/example/exampleBooks.owl";
-	final String r2rmlfile = "src/main/resources/example/exampleBooks.ttl";
+	final String r2rmlFile = "src/main/resources/example/exampleBooks.ttl";
     final String sparqlFile = "src/main/resources/example/q1.rq";
 
 
@@ -72,9 +71,10 @@ public class QuestOWL_R2RML_Example {
         String driverClass = "org.h2.Driver";
 
         OBDADataFactory f = OBDADataFactoryImpl.getInstance();
-//		String sourceUrl = "http://example.org/customOBDA";
-        URI obdaURI =  new File(r2rmlfile).toURI();
-        String sourceUrl =obdaURI.toString();
+
+        URI obdaURI =  new File(r2rmlFile).toURI();
+
+        String sourceUrl = obdaURI.toString();
         OBDADataSource dataSource = f.getJDBCDataSource(sourceUrl, jdbcUrl,
                 username, password, driverClass);
         QuestOWLFactory factory = new QuestOWLFactory();
@@ -86,7 +86,7 @@ public class QuestOWL_R2RML_Example {
 
         factory.setPreferenceHolder(p);
 
-        R2RMLReader reader = new R2RMLReader(r2rmlfile);
+        R2RMLReader reader = new R2RMLReader(r2rmlFile);
 
         OBDAModel obdaModel = reader.readModel(dataSource);
 
