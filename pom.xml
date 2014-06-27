@@ -12,7 +12,14 @@
 			<version>1.12.0</version>
 		</dependency>
 
-		<dependency>
+        <dependency>
+            <groupId>it.unibz.inf.ontop</groupId>
+            <artifactId>ontop-quest-sesame</artifactId>
+            <version>1.12.0</version>
+        </dependency>
+
+
+        <dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
 			<version>1.0.2</version>
@@ -26,7 +33,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>it.unibz.inf.obda.p4plugin-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

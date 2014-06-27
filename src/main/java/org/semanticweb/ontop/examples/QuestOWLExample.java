@@ -32,7 +32,9 @@ import it.unibz.krdb.obda.owlrefplatform.owlapi3.QuestOWLFactory;
 import it.unibz.krdb.obda.owlrefplatform.owlapi3.QuestOWLResultSet;
 import it.unibz.krdb.obda.owlrefplatform.owlapi3.QuestOWLStatement;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLObject;
@@ -49,16 +51,18 @@ public class QuestOWLExample {
 	 * Please use the pre-bundled H2 server from the above link
 	 * 
 	 */
-	final String owlfile = "src/main/resources/example/exampleBooks.owl";
-	final String obdafile = "src/main/resources/example/exampleBooks.obda";
+	final String owlFile = "src/main/resources/example/exampleBooks.owl";
+	final String obdaFile = "src/main/resources/example/exampleBooks.obda";
+    final String sparqlFile = "src/main/resources/example/q1.rq";
 
-	public void runQuery() throws Exception {
+
+    public void runQuery() throws Exception {
 
 		/*
 		 * Load the ontology from an external .owl file.
 		 */
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-		OWLOntology ontology = manager.loadOntologyFromOntologyDocument(new File(owlfile));
+		OWLOntology ontology = manager.loadOntologyFromOntologyDocument(new File(owlFile));
 
 		/*
 		 * Load the OBDA model from an external .obda file
@@ -66,7 +70,7 @@ public class QuestOWLExample {
 		OBDADataFactory fac = OBDADataFactoryImpl.getInstance();
 		OBDAModel obdaModel = fac.getOBDAModel();
 		ModelIOManager ioManager = new ModelIOManager(obdaModel);
-		ioManager.load(obdafile);
+		ioManager.load(obdaFile);
 
 		/*
 		 * Prepare the configuration for the Quest instance. The example below shows the setup for
@@ -89,17 +93,16 @@ public class QuestOWLExample {
 		QuestOWLConnection conn = reasoner.getConnection();
 		QuestOWLStatement st = conn.createStatement();
 
-		/*
-		 * Get the book information that is stored in the database
-		 */
-		String sparqlQuery = 
-				"PREFIX : <http://meraka/moss/exampleBooks.owl#> \n" +
-				"SELECT DISTINCT ?x ?title ?author ?genre ?edition \n" +
-				"WHERE { ?x a :Book; :title ?title; :genre ?genre; :writtenBy ?y; :hasEdition ?z. \n" +
-				"		 ?y a :Author; :name ?author. \n" +
-				"		 ?z a :Edition; :editionNumber ?edition }";
+        String sparqlQuery = "";
 
-		try {
+        BufferedReader br = new BufferedReader(new FileReader(sparqlFile));
+        String line;
+        while ((line = br.readLine()) != null) { // while loop begins here
+            sparqlQuery += line + "\n";
+        }
+
+
+        try {
 			QuestOWLResultSet rs = st.executeTuple(sparqlQuery);
 			int columnSize = rs.getColumnCount();
 			while (rs.nextRow()) {
@@ -114,8 +117,8 @@ public class QuestOWLExample {
 			/*
 			 * Print the query summary
 			 */
-			QuestOWLStatement qst = (QuestOWLStatement) st;
-			String sqlQuery = qst.getUnfolding(sparqlQuery);
+
+			String sqlQuery = st.getUnfolding(sparqlQuery);
 
 			System.out.println();
 			System.out.println("The input SPARQL query:");
