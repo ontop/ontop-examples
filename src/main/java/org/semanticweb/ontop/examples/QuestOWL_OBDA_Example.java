@@ -20,6 +20,8 @@ package org.semanticweb.ontop.examples;
  * #L%
  */
 
+import it.unibz.krdb.obda.exception.InvalidMappingException;
+import it.unibz.krdb.obda.exception.InvalidPredicateDeclarationException;
 import it.unibz.krdb.obda.io.ModelIOManager;
 import it.unibz.krdb.obda.model.OBDADataFactory;
 import it.unibz.krdb.obda.model.OBDAModel;
@@ -35,14 +37,16 @@ import it.unibz.krdb.obda.owlrefplatform.owlapi3.QuestOWLStatement;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLObject;
 import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.reasoner.SimpleConfiguration;
 
-public class QuestOWLExample {
+public class QuestOWL_OBDA_Example {
 	
 	/*
 	 * Use the sample database using H2 from
@@ -55,22 +59,22 @@ public class QuestOWLExample {
 	final String obdaFile = "src/main/resources/example/exampleBooks.obda";
     final String sparqlFile = "src/main/resources/example/q1.rq";
 
+    /**
+     * Main client program
+     */
+    public static void main(String[] args) {
+        try {
+            QuestOWL_OBDA_Example example = new QuestOWL_OBDA_Example();
+            example.run();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
-    public void runQuery() throws Exception {
 
-		/*
-		 * Load the ontology from an external .owl file.
-		 */
-		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-		OWLOntology ontology = manager.loadOntologyFromOntologyDocument(new File(owlFile));
-
-		/*
-		 * Load the OBDA model from an external .obda file
-		 */
-		OBDADataFactory fac = OBDADataFactoryImpl.getInstance();
-		OBDAModel obdaModel = fac.getOBDAModel();
-		ModelIOManager ioManager = new ModelIOManager(obdaModel);
-		ioManager.load(obdaFile);
+    public void run() throws Exception {
+        OWLOntology ontology = loadOWLOntology(owlFile);
+        OBDAModel obdaModel = loadOBDA(obdaFile);
 
 		/*
 		 * Prepare the configuration for the Quest instance. The example below shows the setup for
@@ -93,13 +97,7 @@ public class QuestOWLExample {
 		QuestOWLConnection conn = reasoner.getConnection();
 		QuestOWLStatement st = conn.createStatement();
 
-        String sparqlQuery = "";
-
-        BufferedReader br = new BufferedReader(new FileReader(sparqlFile));
-        String line;
-        while ((line = br.readLine()) != null) { // while loop begins here
-            sparqlQuery += line + "\n";
-        }
+        String sparqlQuery = loadSPARQL(sparqlFile);
 
 
         try {
@@ -138,22 +136,42 @@ public class QuestOWLExample {
 			if (st != null && !st.isClosed()) {
 				st.close();
 			}
-			if (conn != null && !conn.isClosed()) {
+			if (!conn.isClosed()) {
 				conn.close();
 			}
 			reasoner.dispose();
 		}
 	}
 
-	/**
-	 * Main client program
-	 */
-	public static void main(String[] args) {
-		try {
-			QuestOWLExample example = new QuestOWLExample();
-			example.runQuery();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
+    private OBDAModel loadOBDA(String obdaFile) throws IOException, InvalidPredicateDeclarationException, InvalidMappingException {
+    /*
+     * Load the OBDA model from an external .obda file
+     */
+        OBDADataFactory fac = OBDADataFactoryImpl.getInstance();
+        OBDAModel obdaModel = fac.getOBDAModel();
+        ModelIOManager ioManager = new ModelIOManager(obdaModel);
+        ioManager.load(obdaFile);
+        return obdaModel;
+    }
+
+    private String loadSPARQL(String sparqlFile) throws IOException {
+        String sparqlQuery = "";
+
+        BufferedReader br = new BufferedReader(new FileReader(sparqlFile));
+        String line;
+        while ((line = br.readLine()) != null) { // while loop begins here
+            sparqlQuery += line + "\n";
+        }
+        return sparqlQuery;
+    }
+
+    /*
+     * Load the ontology from an external .owl file.
+     */
+    private OWLOntology loadOWLOntology(String owlFile) throws OWLOntologyCreationException {
+        OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+        return manager.loadOntologyFromOntologyDocument(new File(owlFile));
+    }
+
+
 }

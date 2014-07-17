@@ -30,8 +30,9 @@ import sesameWrapper.SesameVirtualRepo;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 
-public class QuestSesameExample {
+public class QuestSesame_OBDA_Example {
 
     /*
      * Use the sample database using H2 from
@@ -40,18 +41,24 @@ public class QuestSesameExample {
      * Please use the pre-bundled H2 server from the above link
      *
      */
-    final String owlfile = "src/main/resources/example/exampleBooks.owl";
-    final String obdafile = "src/main/resources/example/exampleBooks.obda";
+    final String owlFile = "src/main/resources/example/exampleBooks.owl";
+    final String obdaFile = "src/main/resources/example/exampleBooks.obda";
     final String sparqlFile = "src/main/resources/example/q1.rq";
 
-    public void runQuery() throws Exception {
-        String queryString = "";
-
-        BufferedReader br = new BufferedReader(new FileReader(sparqlFile));
-        String line;
-        while ((line = br.readLine()) != null) {
-            queryString += line + "\n";
+    /**
+     * Main client program
+     */
+    public static void main(String[] args) {
+        try {
+            QuestSesame_OBDA_Example example = new QuestSesame_OBDA_Example();
+            example.run();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+    }
+
+    public void run() throws Exception {
+        String queryString = loadSPARQL(sparqlFile);
 
 
         System.out.println();
@@ -64,7 +71,7 @@ public class QuestSesameExample {
         // create and initialize repo
         boolean existential = false;
         String rewriting = "TreeWitness";
-        SesameVirtualRepo repo = new SesameVirtualRepo("test_repo", owlfile, obdafile, existential, rewriting);
+        SesameVirtualRepo repo = new SesameVirtualRepo("test_repo", owlFile, obdaFile, existential, rewriting);
 
         repo.initialize();
 
@@ -86,15 +93,16 @@ public class QuestSesameExample {
 
     }
 
-    /**
-     * Main client program
-     */
-    public static void main(String[] args) {
-        try {
-            QuestSesameExample example = new QuestSesameExample();
-            example.runQuery();
-        } catch (Exception e) {
-            e.printStackTrace();
+    private String loadSPARQL(String sparqlFile) throws IOException {
+        String queryString = "";
+
+        BufferedReader br = new BufferedReader(new FileReader(sparqlFile));
+        String line;
+        while ((line = br.readLine()) != null) {
+            queryString += line + "\n";
         }
+        return queryString;
     }
+
+
 }
