@@ -1,310 +1,171 @@
-@prefix rr: <http://www.w3.org/ns/r2rml#> .
-
-_:node18res62k4x2 rr:class <http://meraka/moss/exampleBooks.owl#Author> .
-
-_:node18res62k4x6 rr:predicate <http://meraka/moss/exampleBooks.owl#name> .
-
-_:node18res62k4x2 a rr:SubjectMap .
-
-_:node18res62k4x5 a rr:ObjectMap .
-
-_:node18res62k4x1 rr:sqlQuery "select \"wr_code\", \"wr_name\" from \"tb_affiliated_writers\"" .
-
-_:node18res62k4x3 rr:predicateObjectMap _:node18res62k4x6 .
-
-_:node18res62k4x1 a rr:R2RMLView .
-
-_:node18res62k4x2 a rr:TermMap ;
-	rr:template "http://meraka/moss/exampleBooks.owl#author/{wr_code}/" .
-
-_:node18res62k4x6 a rr:PredicateObjectMap .
-
-_:node18res62k4x5 rr:column "wr_name" .
-
-_:node18res62k4x3 a rr:TriplesMap .
-
-_:node18res62k4x5 rr:termType rr:Literal .
-
-_:node18res62k4x6 rr:objectMap _:node18res62k4x5 .
-
-_:node18res62k4x5 a rr:TermMap .
-
-_:node18res62k4x3 rr:logicalTable _:node18res62k4x1 .
-
-_:node18res62k4x2 rr:termType rr:IRI .
-
-_:node18res62k4x3 rr:subjectMap _:node18res62k4x2 .
-
-_:node18res62k4x12 rr:predicate <http://meraka/moss/exampleBooks.owl#title> .
-
-_:node18res62k4x7 rr:sqlQuery "select \"bk_code\", \"bk_title\" from \"tb_books\"" .
-
-_:node18res62k4x11 rr:termType rr:Literal .
-
-_:node18res62k4x9 a rr:TriplesMap ;
-	rr:logicalTable _:node18res62k4x7 ;
-	rr:subjectMap _:node18res62k4x8 ;
-	rr:predicateObjectMap _:node18res62k4x12 .
-
-_:node18res62k4x12 rr:objectMap _:node18res62k4x11 .
-
-_:node18res62k4x8 rr:termType rr:IRI ;
-	a rr:SubjectMap .
-
-_:node18res62k4x11 a rr:TermMap .
-
-_:node18res62k4x8 a rr:TermMap .
-
-_:node18res62k4x11 rr:column "bk_title" .
-
-_:node18res62k4x12 a rr:PredicateObjectMap .
-
-_:node18res62k4x8 rr:class <http://meraka/moss/exampleBooks.owl#Book> .
-
-_:node18res62k4x11 a rr:ObjectMap .
-
-_:node18res62k4x7 a rr:R2RMLView .
-
-_:node18res62k4x8 rr:template "http://meraka/moss/exampleBooks.owl#book/{bk_code}/" .
-
-_:node18res62k4x18 a rr:PredicateObjectMap .
-
-_:node18res62k4x14 a rr:TermMap .
-
-_:node18res62k4x17 a rr:TermMap .
-
-_:node18res62k4x14 rr:class <http://meraka/moss/exampleBooks.owl#Editor> .
-
-_:node18res62k4x15 rr:subjectMap _:node18res62k4x14 .
-
-_:node18res62k4x14 rr:template "http://meraka/moss/exampleBooks.owl#editor/{ed_code}/" .
-
-_:node18res62k4x15 rr:logicalTable _:node18res62k4x13 .
-
-_:node18res62k4x17 a rr:ObjectMap ;
-	rr:termType rr:Literal .
-
-_:node18res62k4x13 a rr:R2RMLView .
-
-_:node18res62k4x18 rr:predicate <http://meraka/moss/exampleBooks.owl#name> .
-
-_:node18res62k4x17 rr:column "ed_name" .
-
-_:node18res62k4x13 rr:sqlQuery "select \"ed_code\", \"ed_name\" from \"tb_editor\"" .
-
-_:node18res62k4x15 rr:predicateObjectMap _:node18res62k4x18 .
-
-_:node18res62k4x14 rr:termType rr:IRI ;
-	a rr:SubjectMap .
-
-_:node18res62k4x15 a rr:TriplesMap .
-
-_:node18res62k4x18 rr:objectMap _:node18res62k4x17 .
-
-_:node18res62k4x26 a rr:TermMap .
-
-_:node18res62k4x27 a rr:PredicateObjectMap .
-
-_:node18res62k4x21 rr:logicalTable _:node18res62k4x19 .
-
-_:node18res62k4x26 rr:column "n_edt" .
-
-_:node18res62k4x21 a rr:TriplesMap .
-
-_:node18res62k4x23 rr:column "pub_date" .
-
-_:node18res62k4x24 rr:objectMap _:node18res62k4x23 ;
-	a rr:PredicateObjectMap .
-
-_:node18res62k4x20 a rr:TermMap , rr:SubjectMap .
-
-_:node18res62k4x21 rr:subjectMap _:node18res62k4x20 .
-
-_:node18res62k4x20 rr:termType rr:IRI .
-
-_:node18res62k4x21 rr:predicateObjectMap _:node18res62k4x24 , _:node18res62k4x27 .
-
-_:node18res62k4x26 a rr:ObjectMap .
-
-_:node18res62k4x23 rr:termType rr:Literal .
-
-_:node18res62k4x20 rr:class <http://meraka/moss/exampleBooks.owl#Edition> .
-
-_:node18res62k4x23 a rr:TermMap .
-
-_:node18res62k4x19 a rr:R2RMLView .
-
-_:node18res62k4x27 rr:predicate <http://meraka/moss/exampleBooks.owl#editionNumber> .
-
-_:node18res62k4x23 a rr:ObjectMap .
-
-_:node18res62k4x19 rr:sqlQuery "select \"ed_code\", \"pub_date\", \"n_edt\" from \"tb_edition\"" .
-
-_:node18res62k4x27 rr:objectMap _:node18res62k4x26 .
-
-_:node18res62k4x24 rr:predicate <http://meraka/moss/exampleBooks.owl#dateOfPublication> .
-
-_:node18res62k4x20 rr:template "http://meraka/moss/exampleBooks.owl#edition/{ed_code}/" .
-
-_:node18res62k4x26 rr:termType rr:Literal .
-
-_:node18res62k4x29 a rr:SubjectMap .
-
-_:node18res62k4x30 rr:subjectMap _:node18res62k4x29 .
-
-_:node18res62k4x29 a rr:TermMap .
-
-_:node18res62k4x30 rr:logicalTable _:node18res62k4x28 .
-
-_:node18res62k4x29 rr:termType rr:IRI .
-
-_:node18res62k4x28 rr:sqlQuery "select \"bk_code\", \"bk_title\" from \"tb_books\" where \"bk_type\"='A'" .
-
-_:node18res62k4x29 rr:template "http://meraka/moss/exampleBooks.owl#book/{bk_code}/" ;
-	rr:class <http://meraka/moss/exampleBooks.owl#AudioBook> .
-
-_:node18res62k4x28 a rr:R2RMLView .
-
-_:node18res62k4x30 a rr:TriplesMap .
-
-_:node18res62k4x32 rr:class <http://meraka/moss/exampleBooks.owl#EmergingWriter> ;
-	a rr:TermMap ;
-	rr:template "http://meraka/moss/exampleBooks.owl#author/{wr_code}/" .
-
-_:node18res62k4x36 rr:objectMap _:node18res62k4x35 .
-
-_:node18res62k4x31 rr:sqlQuery "select \"wr_code\", \"wr_name\" from \"tb_on_prob_wr\"" .
-
-_:node18res62k4x33 rr:predicateObjectMap _:node18res62k4x36 .
-
-_:node18res62k4x35 rr:column "wr_name" ;
-	a rr:ObjectMap .
-
-_:node18res62k4x32 rr:termType rr:IRI .
-
-_:node18res62k4x35 a rr:TermMap ;
-	rr:termType rr:Literal .
-
-_:node18res62k4x36 rr:predicate <http://meraka/moss/exampleBooks.owl#name> .
-
-_:node18res62k4x33 rr:logicalTable _:node18res62k4x31 ;
-	a rr:TriplesMap .
-
-_:node18res62k4x31 a rr:R2RMLView .
-
-_:node18res62k4x33 rr:subjectMap _:node18res62k4x32 .
-
-_:node18res62k4x36 a rr:PredicateObjectMap .
-
-_:node18res62k4x32 a rr:SubjectMap .
-
-_:node18res62k4x39 a rr:TriplesMap .
-
-_:node18res62k4x38 a rr:SubjectMap .
-
-_:node18res62k4x37 a rr:R2RMLView ;
-	rr:sqlQuery "select \"ed_code\", \"pub_date\", \"n_edt\" from \"tb_edition\" where ed_type='S'" .
-
-_:node18res62k4x39 rr:logicalTable _:node18res62k4x37 ;
-	rr:subjectMap _:node18res62k4x38 .
-
-_:node18res62k4x38 rr:template "http://meraka/moss/exampleBooks.owl#edition/{ed_code}/" ;
-	rr:class <http://meraka/moss/exampleBooks.owl#SpecialEdition> ;
-	a rr:TermMap ;
-	rr:termType rr:IRI .
-
-_:node18res62k4x40 rr:sqlQuery "select \"id_bk\", \"gen_name\" from \"tb_bk_gen\"" .
-
-_:node18res62k4x41 a rr:TermMap .
-
-_:node18res62k4x44 rr:column "gen_name" .
-
-_:node18res62k4x41 rr:termType rr:IRI .
-
-_:node18res62k4x44 a rr:TermMap .
-
-_:node18res62k4x42 rr:logicalTable _:node18res62k4x40 .
-
-_:node18res62k4x45 a rr:PredicateObjectMap .
-
-_:node18res62k4x44 a rr:ObjectMap .
-
-_:node18res62k4x41 rr:template "http://meraka/moss/exampleBooks.owl#book/{id_bk}/" .
-
-_:node18res62k4x42 rr:subjectMap _:node18res62k4x41 ;
-	rr:predicateObjectMap _:node18res62k4x45 .
-
-_:node18res62k4x44 rr:termType rr:Literal .
-
-_:node18res62k4x41 a rr:SubjectMap .
-
-_:node18res62k4x45 rr:predicate <http://meraka/moss/exampleBooks.owl#genre> .
-
-_:node18res62k4x40 a rr:R2RMLView .
-
-_:node18res62k4x42 a rr:TriplesMap .
-
-_:node18res62k4x45 rr:objectMap _:node18res62k4x44 .
-
-_:node18res62k4x46 rr:sqlQuery "select \"bk_code\", \"wr_id\" from \"tb_authors\"" .
-
-_:node18res62k4x51 a rr:PredicateObjectMap .
-
-_:node18res62k4x47 rr:template "http://meraka/moss/exampleBooks.owl#book/{bk_code}/" .
-
-_:node18res62k4x51 rr:predicate <http://meraka/moss/exampleBooks.owl#writtenBy> .
-
-_:node18res62k4x50 a rr:TermMap .
-
-_:node18res62k4x47 a rr:TermMap .
-
-_:node18res62k4x51 rr:objectMap _:node18res62k4x50 .
-
-_:node18res62k4x46 a rr:R2RMLView .
-
-_:node18res62k4x48 rr:predicateObjectMap _:node18res62k4x51 ;
-	rr:logicalTable _:node18res62k4x46 ;
-	rr:subjectMap _:node18res62k4x47 .
-
-_:node18res62k4x50 rr:termType rr:IRI ;
-	a rr:ObjectMap .
-
-_:node18res62k4x47 a rr:SubjectMap .
-
-_:node18res62k4x50 rr:template "http://meraka/moss/exampleBooks.owl#author/{wr_id}/" .
-
-_:node18res62k4x48 a rr:TriplesMap .
-
-_:node18res62k4x47 rr:termType rr:IRI .
-
-_:node18res62k4x56 a rr:TermMap .
-
-_:node18res62k4x53 a rr:TermMap .
-
-_:node18res62k4x56 rr:template "http://meraka/moss/exampleBooks.owl#edition/{ed_code}/" .
-
-_:node18res62k4x57 rr:predicate <http://meraka/moss/exampleBooks.owl#hasEdition> .
-
-_:node18res62k4x54 rr:logicalTable _:node18res62k4x52 .
-
-_:node18res62k4x57 a rr:PredicateObjectMap ;
-	rr:objectMap _:node18res62k4x56 .
-
-_:node18res62k4x52 rr:sqlQuery "select \"ed_code\", \"bk_id\" from \"tb_edition\"" .
-
-_:node18res62k4x54 rr:predicateObjectMap _:node18res62k4x57 .
-
-_:node18res62k4x53 rr:termType rr:IRI ;
-	rr:template "http://meraka/moss/exampleBooks.owl#book/{bk_id}/" .
-
-_:node18res62k4x52 a rr:R2RMLView .
-
-_:node18res62k4x54 rr:subjectMap _:node18res62k4x53 .
-
-_:node18res62k4x56 rr:termType rr:IRI .
-
-_:node18res62k4x53 a rr:SubjectMap .
-
-_:node18res62k4x56 a rr:ObjectMap .
-
-_:node18res62k4x54 a rr:TriplesMap .
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+
+[ a                rr:TriplesMap ;
+  rr:logicalTable  [ a            rr:R2RMLView ;
+                     rr:sqlQuery  "select \"bk_code\", \"bk_title\" from \"tb_books\" where \"bk_type\"='A'"
+                   ] ;
+  rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                     rr:class     <http://meraka/moss/exampleBooks.owl#AudioBook> ;
+                     rr:template  "http://meraka/moss/exampleBooks.owl#book/{bk_code}/" ;
+                     rr:termType  rr:IRI
+                   ]
+] .
+
+[ a                      rr:TriplesMap ;
+  rr:logicalTable        [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select \"ed_code\", \"bk_id\" from \"tb_edition\""
+                         ] ;
+  rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                           rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                           rr:template  "http://meraka/moss/exampleBooks.owl#edition/{ed_code}/" ;
+                                           rr:termType  rr:IRI
+                                         ] ;
+                           rr:predicate  <http://meraka/moss/exampleBooks.owl#hasEdition>
+                         ] ;
+  rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:template  "http://meraka/moss/exampleBooks.owl#book/{bk_id}/" ;
+                           rr:termType  rr:IRI
+                         ]
+] .
+
+[ a                rr:TriplesMap ;
+  rr:logicalTable  [ a            rr:R2RMLView ;
+                     rr:sqlQuery  "select \"ed_code\", \"pub_date\", \"n_edt\" from \"tb_edition\" where ed_type='S'"
+                   ] ;
+  rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                     rr:class     <http://meraka/moss/exampleBooks.owl#SpecialEdition> ;
+                     rr:template  "http://meraka/moss/exampleBooks.owl#edition/{ed_code}/" ;
+                     rr:termType  rr:IRI
+                   ]
+] .
+
+[ a                      rr:TriplesMap ;
+  rr:logicalTable        [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select \"bk_code\", \"wr_id\" from \"tb_authors\""
+                         ] ;
+  rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                           rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                           rr:template  "http://meraka/moss/exampleBooks.owl#author/{wr_id}/" ;
+                                           rr:termType  rr:IRI
+                                         ] ;
+                           rr:predicate  <http://meraka/moss/exampleBooks.owl#writtenBy>
+                         ] ;
+  rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:template  "http://meraka/moss/exampleBooks.owl#book/{bk_code}/" ;
+                           rr:termType  rr:IRI
+                         ]
+] .
+
+[ a                      rr:TriplesMap ;
+  rr:logicalTable        [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select \"id_bk\", \"gen_name\" from \"tb_bk_gen\""
+                         ] ;
+  rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                           rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                           rr:column    "gen_name" ;
+                                           rr:termType  rr:Literal
+                                         ] ;
+                           rr:predicate  <http://meraka/moss/exampleBooks.owl#genre>
+                         ] ;
+  rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:template  "http://meraka/moss/exampleBooks.owl#book/{id_bk}/" ;
+                           rr:termType  rr:IRI
+                         ]
+] .
+
+[ a                      rr:TriplesMap ;
+  rr:logicalTable        [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select \"bk_code\", \"bk_title\" from \"tb_books\""
+                         ] ;
+  rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                           rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                           rr:column    "bk_title" ;
+                                           rr:termType  rr:Literal
+                                         ] ;
+                           rr:predicate  <http://meraka/moss/exampleBooks.owl#title>
+                         ] ;
+  rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     <http://meraka/moss/exampleBooks.owl#Book> ;
+                           rr:template  "http://meraka/moss/exampleBooks.owl#book/{bk_code}/" ;
+                           rr:termType  rr:IRI
+                         ]
+] .
+
+[ a                      rr:TriplesMap ;
+  rr:logicalTable        [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select \"wr_code\", \"wr_name\" from \"tb_affiliated_writers\""
+                         ] ;
+  rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                           rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                           rr:column    "wr_name" ;
+                                           rr:termType  rr:Literal
+                                         ] ;
+                           rr:predicate  <http://meraka/moss/exampleBooks.owl#name>
+                         ] ;
+  rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     <http://meraka/moss/exampleBooks.owl#Author> ;
+                           rr:template  "http://meraka/moss/exampleBooks.owl#author/{wr_code}/" ;
+                           rr:termType  rr:IRI
+                         ]
+] .
+
+[ a                      rr:TriplesMap ;
+  rr:logicalTable        [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select \"wr_code\", \"wr_name\" from \"tb_on_prob_wr\""
+                         ] ;
+  rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                           rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                           rr:column    "wr_name" ;
+                                           rr:termType  rr:Literal
+                                         ] ;
+                           rr:predicate  <http://meraka/moss/exampleBooks.owl#name>
+                         ] ;
+  rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:class     <http://meraka/moss/exampleBooks.owl#EmergingWriter> ;
+                           rr:template  "http://meraka/moss/exampleBooks.owl#author/{wr_code}/" ;
+                           rr:termType  rr:IRI
+                         ]
+] .
+
+[ a                      rr:TriplesMap ;
+  rr:logicalTable        [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select \"ed_code\", \"pub_date\", \"n_edt\" from \"tb_edition\""
+                         ] ;
+  rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                           rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                           rr:column    "n_edt" ;
+                                           rr:termType  rr:Literal
+                                         ] ;
+                           rr:predicate  <http://meraka/moss/exampleBooks.owl#editionNumber>
+                         ] ;
+  rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                           rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                           rr:column    "pub_date" ;
+                                           rr:termType  rr:Literal
+                                         ] ;
+                           rr:predicate  <http://meraka/moss/exampleBooks.owl#dateOfPublication>
+                         ] ;
+  rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:class     <http://meraka/moss/exampleBooks.owl#Edition> ;
+                           rr:template  "http://meraka/moss/exampleBooks.owl#edition/{ed_code}/" ;
+                           rr:termType  rr:IRI
+                         ]
+] .
+
+[ a                      rr:TriplesMap ;
+  rr:logicalTable        [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select \"ed_code\", \"ed_name\" from \"tb_editor\""
+                         ] ;
+  rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                           rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                           rr:column    "ed_name" ;
+                                           rr:termType  rr:Literal
+                                         ] ;
+                           rr:predicate  <http://meraka/moss/exampleBooks.owl#name>
+                         ] ;
+  rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:class     <http://meraka/moss/exampleBooks.owl#Editor> ;
+                           rr:template  "http://meraka/moss/exampleBooks.owl#editor/{ed_code}/" ;
+                           rr:termType  rr:IRI
+                         ]
+] .
