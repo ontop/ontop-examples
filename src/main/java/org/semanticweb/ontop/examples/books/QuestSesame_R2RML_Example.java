@@ -1,4 +1,4 @@
-package org.semanticweb.ontop.examples;
+package org.semanticweb.ontop.examples.books;
 
 /*
  * #%L
@@ -57,9 +57,9 @@ public class QuestSesame_R2RML_Example {
      * Please use the pre-bundled H2 server from the above link
      *
      */
-    final String owlFile = "src/main/resources/example/exampleBooks.owl";
-    final String r2rmlFile = "src/main/resources/example/exampleBooks.ttl";
-    final String sparqlFile = "src/main/resources/example/q1.rq";
+    final String owlFile = "src/main/resources/example/books/exampleBooks.owl";
+    final String r2rmlFile = "src/main/resources/example/books/exampleBooks.ttl";
+    final String sparqlFile = "src/main/resources/example/books/q1.rq";
 
     /**
      * Main client program

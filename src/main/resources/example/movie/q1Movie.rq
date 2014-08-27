@@ -1,0 +1,13 @@
+#   Find names that act as both the director and the actor at the same time produced in eastern asia
+
+PREFIX : <http://www.movieontology.org/2009/11/09/movieontology.owl#>
+PREFIX mo: <http://www.movieontology.org/2009/10/01/movieontology.owl#>
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT $x $title $company_name
+WHERE {
+   $m a mo:Movie; mo:title ?title; mo:hasActor ?x; mo:hasDirector ?x; mo:isProducedBy $y; mo:belongsToGenre $z .
+   $x dbpedia:birthName $actor_name .
+   $y :companyName $company_name; :hasCompanyLocation [ a mo:Eastern_Asia ] .
+   $z a mo:Love .
+}

@@ -1,4 +1,4 @@
-package org.semanticweb.ontop.examples;
+package org.semanticweb.ontop.examples.books;
 
 /*
  * #%L
@@ -20,8 +20,10 @@ package org.semanticweb.ontop.examples;
  * #L%
  */
 
+import it.unibz.krdb.obda.exception.InvalidMappingException;
+import it.unibz.krdb.obda.exception.InvalidPredicateDeclarationException;
+import it.unibz.krdb.obda.io.ModelIOManager;
 import it.unibz.krdb.obda.model.OBDADataFactory;
-import it.unibz.krdb.obda.model.OBDADataSource;
 import it.unibz.krdb.obda.model.OBDAModel;
 import it.unibz.krdb.obda.model.impl.OBDADataFactoryImpl;
 import it.unibz.krdb.obda.owlrefplatform.core.QuestConstants;
@@ -31,7 +33,11 @@ import it.unibz.krdb.obda.owlrefplatform.owlapi3.QuestOWLConnection;
 import it.unibz.krdb.obda.owlrefplatform.owlapi3.QuestOWLFactory;
 import it.unibz.krdb.obda.owlrefplatform.owlapi3.QuestOWLResultSet;
 import it.unibz.krdb.obda.owlrefplatform.owlapi3.QuestOWLStatement;
-import it.unibz.krdb.obda.r2rml.R2RMLReader;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLObject;
@@ -40,13 +46,7 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.reasoner.SimpleConfiguration;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.net.URI;
-
-public class QuestOWL_R2RML_Example {
+public class QuestOWL_OBDA_Example {
 	
 	/*
 	 * Use the sample database using H2 from
@@ -55,31 +55,41 @@ public class QuestOWL_R2RML_Example {
 	 * Please use the pre-bundled H2 server from the above link
 	 * 
 	 */
-	final String owlFile = "src/main/resources/example/exampleBooks.owl";
-	final String r2rmlFile = "src/main/resources/example/exampleBooks.ttl";
-    final String sparqlFile = "src/main/resources/example/q1.rq";
+	final String owlFile = "src/main/resources/example/books/exampleBooks.owl";
+	final String obdaFile = "src/main/resources/example/books/exampleBooks.obda";
+    final String sparqlFile = "src/main/resources/example/books/q1.rq";
+
+    /**
+     * Main client program
+     */
+    public static void main(String[] args) {
+        try {
+            QuestOWL_OBDA_Example example = new QuestOWL_OBDA_Example();
+            example.run();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
-    public void runQuery() throws Exception {
+    public void run() throws Exception {
+        OWLOntology ontology = loadOWLOntology(owlFile);
+        OBDAModel obdaModel = loadOBDA(obdaFile);
 
-        OWLOntology owlOntology = loadOWLOntology(owlFile);
+		/*
+		 * Prepare the configuration for the Quest instance. The example below shows the setup for
+		 * "Virtual ABox" mode
+		 */
+		QuestPreferences preference = new QuestPreferences();
+		preference.setCurrentValueOf(QuestPreferences.ABOX_MODE, QuestConstants.VIRTUAL);
 
-
-        OBDAModel obdaModel = loadR2RML(r2rmlFile);
-
-
-        QuestOWLFactory factory = new QuestOWLFactory();
-
-        QuestPreferences p = new QuestPreferences();
-        p.setCurrentValueOf(QuestPreferences.ABOX_MODE, QuestConstants.VIRTUAL);
-        p.setCurrentValueOf(QuestPreferences.OBTAIN_FULL_METADATA,
-                QuestConstants.FALSE);
-
-        factory.setPreferenceHolder(p);
-
-        factory.setOBDAController(obdaModel);
-
-        QuestOWL reasoner = (QuestOWL) factory.createReasoner(owlOntology, new SimpleConfiguration());
+		/*
+		 * Create the instance of Quest OWL reasoner.
+		 */
+		QuestOWLFactory factory = new QuestOWLFactory();
+		factory.setOBDAController(obdaModel);
+		factory.setPreferenceHolder(preference);
+		QuestOWL reasoner = (QuestOWL) factory.createReasoner(ontology, new SimpleConfiguration());
 
 		/*
 		 * Prepare the data connection for querying.
@@ -88,14 +98,6 @@ public class QuestOWL_R2RML_Example {
 		QuestOWLStatement st = conn.createStatement();
 
         String sparqlQuery = loadSPARQL(sparqlFile);
-
-        String sqlQuery = st.getUnfolding(sparqlQuery);
-
-        System.out.println();
-        System.out.println("The input SPARQL query:");
-        System.out.println("=======================");
-        System.out.println(sparqlQuery);
-        System.out.println();
 
 
         try {
@@ -114,16 +116,24 @@ public class QuestOWL_R2RML_Example {
 			 * Print the query summary
 			 */
 
+			String sqlQuery = st.getUnfolding(sparqlQuery);
 
+			System.out.println();
+			System.out.println("The input SPARQL query:");
+			System.out.println("=======================");
+			System.out.println(sparqlQuery);
+			System.out.println();
+			
 			System.out.println("The output SQL query:");
 			System.out.println("=====================");
 			System.out.println(sqlQuery);
 			
 		} finally {
+			
 			/*
 			 * Close connection and resources
 			 */
-			if (!st.isClosed()) {
+			if (st != null && !st.isClosed()) {
 				st.close();
 			}
 			if (!conn.isClosed()) {
@@ -133,53 +143,35 @@ public class QuestOWL_R2RML_Example {
 		}
 	}
 
-    private OBDAModel loadR2RML(String r2rmlFile) {
-        String jdbcUrl = "jdbc:h2:tcp://localhost/books;DATABASE_TO_UPPER=FALSE";
-        String username = "sa";
-        String password = "";
-        String driverClass = "org.h2.Driver";
-
-        OBDADataFactory f = OBDADataFactoryImpl.getInstance();
-
-        URI obdaURI = new File(r2rmlFile).toURI();
-
-        String sourceUrl = obdaURI.toString();
-        OBDADataSource dataSource = f.getJDBCDataSource(sourceUrl, jdbcUrl,
-                username, password, driverClass);
-
-        R2RMLReader reader = new R2RMLReader(r2rmlFile);
-
-        return reader.readModel(dataSource);
+    private OBDAModel loadOBDA(String obdaFile) throws IOException, InvalidPredicateDeclarationException, InvalidMappingException {
+    /*
+     * Load the OBDA model from an external .obda file
+     */
+        OBDADataFactory fac = OBDADataFactoryImpl.getInstance();
+        OBDAModel obdaModel = fac.getOBDAModel();
+        ModelIOManager ioManager = new ModelIOManager(obdaModel);
+        ioManager.load(obdaFile);
+        return obdaModel;
     }
-
-
-
-    private OWLOntology loadOWLOntology(String owlFile) throws OWLOntologyCreationException {
-        OWLOntologyManager owlManager = OWLManager.createOWLOntologyManager();
-
-        return owlManager.loadOntologyFromOntologyDocument(new File(owlFile));
-    }
-
 
     private String loadSPARQL(String sparqlFile) throws IOException {
-        String queryString = "";
+        String sparqlQuery = "";
+
         BufferedReader br = new BufferedReader(new FileReader(sparqlFile));
         String line;
-        while ((line = br.readLine()) != null) {
-            queryString += line + "\n";
+        while ((line = br.readLine()) != null) { // while loop begins here
+            sparqlQuery += line + "\n";
         }
-        return queryString;
+        return sparqlQuery;
     }
 
-    /**
-     * Main client program
+    /*
+     * Load the ontology from an external .owl file.
      */
-    public static void main(String[] args) {
-        try {
-            QuestOWL_R2RML_Example example = new QuestOWL_R2RML_Example();
-            example.runQuery();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    private OWLOntology loadOWLOntology(String owlFile) throws OWLOntologyCreationException {
+        OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
+        return manager.loadOntologyFromOntologyDocument(new File(owlFile));
     }
+
+
 }
