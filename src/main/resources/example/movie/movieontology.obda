@@ -16,9 +16,9 @@ owl2xml:		http://www.w3.org/2006/12/owl2-xml#
 
 [SourceDeclaration]
 sourceUri	imdb-obda
-connectionUrl	jdbc:postgresql://localhost/imdbobda
-username
-password
+connectionUrl	jdbc:postgresql://localhost/imdb
+username	
+password	
 driverClass	org.postgresql.Driver
 
 [MappingDeclaration] @collection [[
@@ -59,15 +59,15 @@ target		imdb:company/{company_id} a mo:Production_Company .
 source		select company_id from movie_companies where movie_companies.company_type_id = 2
 
 mappingId	Person has Birth Date
-target		imdb:name/{person_id} dbpedia:birthDate {dob}^^xsd:dateTime .
+target		imdb:name/{person_id} dbpedia:birthDate {dob}^^xsd:string . 
 source		select person_id, info as dob from person_info where info_type_id = 21
 
 mappingId	Person has Birth Name
-target		imdb:name/{person_id} dbpedia:birthName {name} .
+target		imdb:name/{person_id} dbpedia:birthName {name} . 
 source		select name.id as person_id, name.name as name from name
 
 mappingId	Movie has rating
-target		imdb:title/{movie_id} mo:imdbrating {rating}^^xsd:double .
+target		imdb:title/{movie_id} mo:imdbrating {rating}^^xsd:double . 
 source		select movie_id, info as rating from movie_info_idx where info_type_id = 101
 
 mappingId	Movies with any types of genre
@@ -83,7 +83,7 @@ target		imdb:genre/{title_id} a mo:Porn .
 source		select movie_info.movie_id as title_id from movie_info where movie_info.info_type_id = 3 and movie_info.info='Adult'
 
 mappingId	Label for Adventure genre
-target		imdb:genre/{title_id} a mo:Imaginational_Entertainment, mo:Actionreach . 
+target		imdb:genre/{title_id} a mo:Imaginational_Entertainment , mo:Actionreach . 
 source		select movie_info.movie_id as title_id from movie_info where movie_info.info_type_id = 3 and movie_info.info='Adventure'
 
 mappingId	Label for Animation genre
@@ -187,11 +187,11 @@ target		imdb:genre/{title_id} a mo:Old_Action .
 source		select movie_info.movie_id as title_id from movie_info where movie_info.info_type_id = 3 and movie_info.info='Western'
 
 mappingId	Movie has production Budget
-target		imdb:title/{movie_id} dbpedia:budget {budget}^^xsd:double .
+target		imdb:title/{movie_id} dbpedia:budget {budget}^^xsd:string . 
 source		select movie_id, info as budget from movie_info where movie_info.info_type_id = 105
 
 mappingId	Movie gets Gross revenue
-target		imdb:title/{movie_id} dbpedia:gross {gross}^^xsd:double .
+target		imdb:title/{movie_id} dbpedia:gross {gross}^^xsd:string . 
 source		select movie_id, info as gross from movie_info where movie_info.info_type_id = 107
 
 mappingId	Movie has Actor
@@ -287,14 +287,15 @@ target		imdb:company/{cid}#country a mo:Eastern_Asia .
 source		select company_name.id as cid from company_name where company_name.country_code = '[cn]'
 
 mappingId	Company has name
-target		imdb:company/{company_id} mo2:companyName {company_name} .
+target		imdb:company/{company_id} mo2:companyName {company_name} . 
 source		select company_name.id as company_id, company_name.name as company_name from company_name
 
 mappingId	Movie has title and production year
-target		imdb:title/{id} mo:title {title}; dbpedia:productionStartYear {production_year}^^xsd:integer .
+target		imdb:title/{id} mo:title {title} ; dbpedia:productionStartYear {production_year}^^xsd:integer . 
 source		select id, title, production_year from title
 
 mappingId	Country has country code
-target		imdb:company/{cid}#country mo2:countryCode {country_code} . imdb:company/{cid} mo2:hasCompanyLocation imdb:company/{cid}#country .
+target		imdb:company/{cid} mo2:hasCompanyLocation imdb:company/{cid}#country . imdb:company/{cid}#country mo2:countryCode {country_code} . 
 source		select company_name.id as cid, company_name.country_code as country_code from company_name
 ]]
+
