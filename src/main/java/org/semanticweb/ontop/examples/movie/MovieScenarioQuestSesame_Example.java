@@ -52,19 +52,19 @@ public class MovieScenarioQuestSesame_Example {
         RepositoryConnection conn = repo.getConnection();
 
 
-            // execute query
-            Query query = conn.prepareQuery(QueryLanguage.SPARQL, queryString);
+        // execute query
+        Query query = conn.prepareQuery(QueryLanguage.SPARQL, queryString);
 
-            TupleQuery tq = (TupleQuery) query;
+        TupleQuery tq = (TupleQuery) query;
 
-            TupleQueryResult result = tq.evaluate();
+        TupleQueryResult result = tq.evaluate();
 
-            while (result.hasNext()) {
-                for (Binding binding : result.next()) {
-                    System.out.print(binding.getValue() + ", ");
-                }
-                System.out.println();
+        while (result.hasNext()) {
+            for (Binding binding : result.next()) {
+                System.out.print(binding.getValue() + ", ");
             }
+            System.out.println();
+        }
 
         //Close result set to release resources
         result.close();

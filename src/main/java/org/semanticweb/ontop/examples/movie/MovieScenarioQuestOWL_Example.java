@@ -1,4 +1,5 @@
 package org.semanticweb.ontop.examples.movie;
+
 import it.unibz.krdb.obda.io.ModelIOManager;
 import it.unibz.krdb.obda.io.QueryIOManager;
 import it.unibz.krdb.obda.model.OBDADataFactory;
@@ -13,7 +14,9 @@ import it.unibz.krdb.obda.owlrefplatform.owlapi3.QuestOWLResultSet;
 import it.unibz.krdb.obda.owlrefplatform.owlapi3.QuestOWLStatement;
 
 import java.io.File;
-import java.lang.Exception;import java.lang.String;import java.lang.System;
+import java.lang.Exception;
+import java.lang.String;
+import java.lang.System;
 import java.util.Properties;
 
 import it.unibz.krdb.obda.querymanager.QueryController;
@@ -27,7 +30,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-
 public class MovieScenarioQuestOWL_Example {
 
     private OBDADataFactory fac;
@@ -39,7 +41,7 @@ public class MovieScenarioQuestOWL_Example {
     final String owlFile = "src/main/resources/example/movie/movieontology.owl";
 
     /*
-	It needs PostgreSQL database to run.
+    It needs PostgreSQL database to run.
 	See https://github.com/ontop/ontop/wiki/Example_MovieOntology
 	*/
     final String obdaFile = "src/main/resources/example/movie/movieontology.obda";
@@ -76,48 +78,48 @@ public class MovieScenarioQuestOWL_Example {
         QuestOWLConnection conn = reasoner.getConnection();
         QuestOWLStatement st = conn.createStatement();
 
-        try{
-        QueryController qc = new QueryController();
-        QueryIOManager qman = new QueryIOManager(qc);
-        qman.load("src/main/resources/example/movie/movieontology.q");
+        try {
+            QueryController qc = new QueryController();
+            QueryIOManager qman = new QueryIOManager(qc);
+            qman.load("src/main/resources/example/movie/movieontology.q");
 
-        for (QueryControllerGroup group : qc.getGroups()) {
-            for (QueryControllerQuery query : group.getQueries()) {
+            for (QueryControllerGroup group : qc.getGroups()) {
+                for (QueryControllerQuery query : group.getQueries()) {
 
-                System.out.println("=====================");
-                System.out.println("Executing query: " + query.getID());
-                System.out.println("Query: \n" + query.getQuery());
+                    System.out.println("=====================");
+                    System.out.println("Executing query: " + query.getID());
+                    System.out.println("Query: \n" + query.getQuery());
 
-                long start = System.nanoTime();
-                QuestOWLResultSet res = st.executeTuple(query.getQuery());
-                long end = System.nanoTime();
+                    long start = System.nanoTime();
+                    QuestOWLResultSet res = st.executeTuple(query.getQuery());
+                    long end = System.nanoTime();
 
-                double time = (end - start) / 1000;
+                    double time = (end - start) / 1000;
 
-                int count = 0;
-                while (res.nextRow()) {
-                    count += 1;
-                }
-                System.out.println("Total result: " + count);
-                System.out.println("Elapsed time:  " + time + " ms");
+                    int count = 0;
+                    while (res.nextRow()) {
+                        count += 1;
+                    }
+                    System.out.println("Total result: " + count);
+                    System.out.println("Elapsed time:  " + time + " ms");
 
                 /*
 			 * Print the query summary
 			 */
 
-                String sqlQuery = st.getUnfolding(query.getQuery());
+                    String sqlQuery = st.getUnfolding(query.getQuery());
 
-                System.out.println();
-                System.out.println("The input SPARQL query:");
-                System.out.println("=======================");
-                System.out.println(query.getQuery());
-                System.out.println();
+                    System.out.println();
+                    System.out.println("The input SPARQL query:");
+                    System.out.println("=======================");
+                    System.out.println(query.getQuery());
+                    System.out.println();
 
-                System.out.println("The output SQL query:");
-                System.out.println("=====================");
-                System.out.println(sqlQuery);
+                    System.out.println("The output SQL query:");
+                    System.out.println("=====================");
+                    System.out.println(sqlQuery);
+                }
             }
-        }
         } finally {
 
 			/*
