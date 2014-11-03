@@ -129,7 +129,7 @@ PREFIX dbpedia: <http://dbpedia.org/ontology/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT $x $y
 WHERE { 
-   $x a mo:TVSeries; mo:title "24"^^xsd:string; dbpedia:gross $y
+   $x a mo:TVSeries; mo:title "Vendetta"^^xsd:string; dbpedia:gross $y
 }
 
 [QueryItem="Find movie production year"]
