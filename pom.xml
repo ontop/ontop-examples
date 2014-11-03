@@ -36,6 +36,14 @@
             <artifactId>postgresql</artifactId>
             <version>9.0-801.jdbc4</version>
         </dependency>
+
+        <!-- only for the json output example -->
+        <dependency>
+            <groupId>org.openrdf.sesame</groupId>
+            <artifactId>sesame-queryresultio-sparqljson</artifactId>
+            <version>2.7.11</version>
+        </dependency>
+
     </dependencies>
 
     <build>
