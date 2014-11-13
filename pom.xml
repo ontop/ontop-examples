@@ -3,19 +3,19 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.unibz.inf.ontop</groupId>
     <artifactId>ontop-examples</artifactId>
-    <version>1.13.1</version>
+    <version>1.14.0</version>
 
     <dependencies>
         <dependency>
             <groupId>it.unibz.inf.ontop</groupId>
             <artifactId>ontop-quest-owlapi3</artifactId>
-            <version>1.13.1</version>
+            <version>1.14.0</version>
         </dependency>
 
         <dependency>
             <groupId>it.unibz.inf.ontop</groupId>
             <artifactId>ontop-quest-sesame</artifactId>
-            <version>1.13.1</version>
+            <version>1.14.0</version>
         </dependency>
 
 
