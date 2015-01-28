@@ -1,0 +1,63 @@
+
+		\begin{minipage}{.30\textwidth}
+		\begin{tikzpicture}
+		\pgfplotsset{every axis/.append style={
+			font=\footnotesize,
+			semithick,
+			tick style={thick}}}
+			% FishMark - Results
+		    \begin{axis}[
+				title= MySQL,
+	    			height=7cm,
+				width=14cm,
+				xtick={0,1,2,3,4,5,6,7,8,9,10,11,12},
+				xticklabels={0,1,2,3,4,5,6,7,8,9,10,11,12},
+		        	grid=major,
+				ymode=log,
+				% legend to name=benchmarkset,
+				legend columns=-1
+		    ]
+%%%%%%%%%%%%%%%%%%%%%%%    
+   	     %JOINS !!
+%%%%%%%%%%%%%%%%%%%%%%%
+\addplot[black,,mark=square, mark options={solid}] coordinates { (1,10)(2,6)(3,4)(4,3)(5,7)(6,15)(7,4)(8,4)(9,3)(10,5)(11,7)(12,5) };
+\addplot[black,,mark=triangle, mark options={solid}] coordinates { (1,19)(2,6)(3,4)(4,4)(5,6)(6,13)(7,8)(8,4)(9,5)(10,4)(11,5)(12,3) };
+\addplot[black,,mark=o, mark options={solid}] coordinates { (1,7)(2,6)(3,4)(4,3)(5,4)(6,4)(7,4)(8,4)(9,5)(10,4)(11,5)(12,3) };
+\addplot[black,,mark=ball, mark options={solid}] coordinates { (1,14)(2,4)(3,11)(4,11)(5,4)(6,3)(7,5)(8,5)(9,4)(10,6)(11,4)(12,4) };
+\addplot[black,,mark=diamond, mark options={solid}] coordinates { (1,19)(2,4)(3,15)(4,6)(5,4)(6,7)(7,5)(8,6)(9,5)(10,4)(11,5)(12,4) };
+\addplot[black,,mark=otimes, mark options={solid}] coordinates { (1,25)(2,12)(3,25)(4,11)(5,11)(6,20)(7,10)(8,9)(9,10)(10,10)(11,9)(12,9) };
+%%%%%%%%%%%%%%%%%%%%%%%
+    %View no keys!!!
+%%%%%%%%%%%%%%%%%%%%%%%
+\addplot[black,dash pattern=on 3pt off 6pt on 6pt off 6pt,mark=square, mark options={solid}] coordinates { (1,314)(2,211)(3,224)(4,207)(5,249)(6,270)(7,268)(8,292)(9,318)(10,275)(11,297)(12,331) };
+\addplot[black,dash pattern=on 3pt off 6pt on 6pt off 6pt,mark=triangle, mark options={solid}] coordinates { (1,157)(2,186)(3,237)(4,179)(5,204)(6,263)(7,185)(8,224)(9,283)(10,189)(11,232)(12,289) };
+\addplot[black,dash pattern=on 3pt off 6pt on 6pt off 6pt,mark=o, mark options={solid}] coordinates { (1,172)(2,209)(3,277)(4,178)(5,227)(6,306)(7,194)(8,249)(9,326)(10,198)(11,249)(12,330) };
+\addplot[black,dash pattern=on 3pt off 6pt on 6pt off 6pt,mark=ball, mark options={solid}] coordinates { (1,249)(2,390)(3,630)(4,260)(5,406)(6,681)(7,272)(8,420)(9,669)(10,274)(11,430)(12,672) };
+\addplot[black,dash pattern=on 3pt off 6pt on 6pt off 6pt,mark=diamond, mark options={solid}] coordinates { (1,363)(2,608)(3,1053)(4,363)(5,634)(6,1152)(7,373)(8,648)(9,1088)(10,377)(11,647)(12,1100) };
+\addplot[black,dash pattern=on 3pt off 6pt on 6pt off 6pt,mark=otimes, mark options={solid}] coordinates { (1,2257)(2,4610)(3,8862)(4,2165)(5,4617)(6,9702)(7,2177)(8,4633)(9,8784)(10,2159)(11,4647)(12,8878) };
+%%%%%%%%%%%%%%%%%%%%%%%
+    %View Tuned keys!!!
+%%%%%%%%%%%%%%%%%%%%%%%
+\addplot[black,densely dotted,mark=square, mark options={solid}] coordinates { (1,425)(2,359)(3,103)(4,385)(5,390)(6,173)(7,492)(8,156)(9,149)(10,626)(11,164)(12,174) };
+\addplot[black,densely dotted,mark=triangle, mark options={solid}] coordinates { (1,48)(2,46)(3,44)(4,45)(5,50)(6,48)(7,57)(8,65)(9,52)(10,47)(11,51)(12,69) };
+\addplot[black,densely dotted,mark=o, mark options={solid}] coordinates { (1,61)(2,45)(3,45)(4,138)(5,46)(6,49)(7,43)(8,47)(9,51)(10,53)(11,57)(12,58) };
+\addplot[black,densely dotted,mark=ball, mark options={solid}] coordinates { (1,54)(2,51)(3,87)(4,59)(5,49)(6,57)(7,51)(8,55)(9,56)(10,48)(11,56)(12,56) };
+\addplot[black,densely dotted,mark=diamond, mark options={solid}] coordinates { (1,58)(2,41)(3,67)(4,78)(5,46)(6,52)(7,59)(8,51)(9,60)(10,56)(11,53)(12,63) };
+\addplot[black,densely dotted,mark=otimes, mark options={solid}] coordinates { (1,223)(2,45)(3,71)(4,86)(5,55)(6,63)(7,57)(8,55)(9,62)(10,60)(11,66)(12,60) };
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+\begin{minipage}{.90\textwidth}
+	\centering
+		\footnotesize{
+			\ref{mil} $\sigma_{1.000}$~~~ 
+			\ref{diez} $\sigma_{10.000}$ ~~~
+			\ref{veinte} $\sigma_{20.000}$~~~
+			\ref{cincuenta} $\sigma_{50.000}$~~~
+			\ref{cien} $\sigma_{100.000}$ ~~~
+			\ref{quinientos} $\sigma_{500.000}$ ~~~
+			}
+\end{minipage}
+
