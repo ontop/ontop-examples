@@ -1,0 +1,40 @@
+[PrefixDeclaration]
+:		http://www.semanticweb.org/mrezk#
+
+[SourceDeclaration]
+sourceUri	PatientDB
+connectionUrl	jdbc:h2:tcp://localhost/helloworld
+username	sa
+password	
+driverClass	org.h2.Driver
+
+[MappingDeclaration] @collection [[
+mappingId	Patient
+target		:db1/{patientid} a :Patient . 
+source		SELECT patientid FROM "tbl_patient"
+
+mappingId	hasName
+target		:db1/{patientid} :hasName {name} . 
+source		Select patientid,name FROM "tbl_patient"
+
+mappingId	Neop
+target		:db1/{patientid} :hasNeoplasm :db1/neoplasm/{patientid} . 
+source		SELECT patientid FROM "tbl_patient"
+
+mappingId	hasSt2
+target		:db1/neoplasm/{patientid} :hasStage :stage-IIIa . 
+source		SELECT patientid FROM "tbl_patient" where stage=4
+
+mappingId	Employee Inconsistent
+target		:db1/{patientid} a :Employee . 
+source		SELECT patientid FROM "tbl_patient"
+
+mappingId	NLCS
+target		:db1/{patientid} a :NSCLC . 
+source		SELECT * FROM "tbl_patient"  where type = false
+
+mappingId	SCLC
+target		:db1/{patientid} a :SCLC . 
+source		SELECT * FROM "tbl_patient"  where type = true
+]]
+
