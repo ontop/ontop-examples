@@ -14,8 +14,8 @@
 
  
 - For the consistency check in Protege, use the files in `npd-benchmark/ontology/consistency checking/`:
- - [npd-v2-ql_inconsistent.owl](https://github.com/ontop/npd-benchmark/tree/master/ontology/consistency%20checking/npd-v2-ql_inconsistent.owl) is the inconsitent ontology
+ - [npd-v2-ql_inconsistent.owl](https://github.com/ontop/npd-benchmark/tree/master/ontology/consistency%20checking/npd-v2-ql_inconsistent.owl) is the inconsistent ontology
  - [npd-v2-ql_consistent.owl](https://github.com/ontop/npd-benchmark/tree/master/ontology/consistency%20checking/npd-v2-ql_consistent.owl) is the consistent ontology
  - The mapping file [npd-v2-ql_a.obda](https://github.com/ontop/npd-benchmark/tree/master/mappings/mysql/spatial/npd-v2-ql_a.obda) needs to be renamed in order to be load by Protege:
-    -  rename it to `npd-v2-ql_inconsistent.obda` when loading the inconsisent ontology
+    -  rename it to `npd-v2-ql_inconsistent.obda` when loading the inconsistent ontology
     -  rename it to `npd-v2-ql_consistent.obda` when loading the consistent ontology 
