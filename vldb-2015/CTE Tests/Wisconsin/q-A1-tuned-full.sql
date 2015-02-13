@@ -1,4 +1,4 @@
-WITH SnRCTE (
+WITH SnRCTE AS (
 	SELECT (unique2Tab5 +1) as  yyy, unique1Tab5 as yx  FROM Tab5 where Tab5.unique1Tab5< 20
 	UNION
 	SELECT (unique2Tab5 +1) as  yyy, unique1Tab5 as yx  FROM Tab5 where Tab5.unique1Tab5> 20 AND Tab5.unique1Tab5 <40
