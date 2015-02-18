@@ -21,8 +21,8 @@ diskosv:	http://sws.ifi.uio.no/vocab/diskos#
 [SourceDeclaration]
 sourceUri	http://sws.ifi.uio.no/vocab/npd-v2
 connectionUrl	jdbc:mysql://localhost/provaNpdOriginal
-username	tir	
-password	gr3g4r10
+username	x	
+password	x
 driverClass	com.mysql.jdbc.Driver
 
 [MappingDeclaration] @collection [[
