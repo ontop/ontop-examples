@@ -1,0 +1,1501 @@
+The input SPARQL query:
+=======================
+SELECT ?x WHERE { ?x a <http://www.example.org/0Tab1> } LIMIT 1
+
+The output SQL query:
+=====================
+
+The input SPARQL query:
+=======================
+SELECT ?x WHERE { ?x a <http://www.example.org/1Tab1> } LIMIT 1001
+
+The output SQL query:
+=====================
+SELECT *
+FROM (
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x"
+ FROM 
+"view12" QVIEW1
+WHERE 
+QVIEW1."unique21" IS NOT NULL
+) SUB_QVIEW
+LIMIT 1001
+
+
+The input SPARQL query:
+=======================
+SELECT ?x WHERE { ?x a <http://www.example.org/2Tab1> } LIMIT 2001
+
+The output SQL query:
+=====================
+SELECT *
+FROM (
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x"
+ FROM 
+"view123" QVIEW1
+WHERE 
+QVIEW1."unique21" IS NOT NULL
+) SUB_QVIEW
+LIMIT 2001
+
+
+The input SPARQL query:
+=======================
+SELECT ?x WHERE { ?x a <http://www.example.org/3Tab1> } LIMIT 3001
+
+The output SQL query:
+=====================
+SELECT *
+FROM (
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x"
+ FROM 
+"view1234" QVIEW1
+WHERE 
+QVIEW1."unique21" IS NOT NULL
+) SUB_QVIEW
+LIMIT 3001
+
+
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW2."unique12" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW2."unique12" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW2."unique12" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW2."unique13" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW2."unique13" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW2."unique13" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW2."unique14" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW2."unique14" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW2."unique14" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW2."unique15" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW2."unique15" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW2."unique15" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique12" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique12" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique12" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique13" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique13" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique13" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique14" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique14" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique14" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique15" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique15" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique15" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . ?x :hasString22j ?y2 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3,
+"view12" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique12" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . ?x :hasString22j ?y2 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3,
+"view12" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique12" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . ?x :hasString22j ?y2 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3,
+"view12" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique12" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . ?x :hasString23j ?y2 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3,
+"view123" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique13" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . ?x :hasString23j ?y2 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3,
+"view123" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique13" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . ?x :hasString23j ?y2 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3,
+"view123" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique13" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . ?x :hasString24j ?y2 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3,
+"view1234" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique14" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . ?x :hasString24j ?y2 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3,
+"view1234" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique14" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . ?x :hasString24j ?y2 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3,
+"view1234" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique14" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . ?x :hasString25j ?y2 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3,
+"view12345" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique15" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . ?x :hasString25j ?y2 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3,
+"view12345" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique15" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . ?x :hasString25j ?y2 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3,
+"view12345" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique15" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW2."unique12" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW2."unique12" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW2."unique12" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW2."unique13" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW2."unique13" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW2."unique13" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW2."unique14" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW2."unique14" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW2."unique14" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW2."unique15" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW2."unique15" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW2."unique15" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique12" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique12" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique12" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique13" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique13" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique13" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique14" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique14" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique14" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique15" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique15" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW2."unique15" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . ?x :hasString22j ?y2 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3,
+"view12" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique12" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . ?x :hasString22j ?y2 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3,
+"view12" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique12" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :1Tab1 . ?x :Tab2unique2Tab2 ?y . ?x :hasString2j ?y1 . ?x :hasString22j ?y2 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique12" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12" QVIEW1,
+"view12" QVIEW2,
+"view12" QVIEW3,
+"view12" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique12" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique12" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . ?x :hasString23j ?y2 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3,
+"view123" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique13" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . ?x :hasString23j ?y2 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3,
+"view123" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique13" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :2Tab1 . ?x :Tab3unique2Tab3 ?y . ?x :hasString3j ?y1 . ?x :hasString23j ?y2 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique13" AS VARCHAR(500)) AS "y"
+ FROM 
+"view123" QVIEW1,
+"view123" QVIEW2,
+"view123" QVIEW3,
+"view123" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique13" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique13" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . ?x :hasString24j ?y2 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3,
+"view1234" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique14" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . ?x :hasString24j ?y2 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3,
+"view1234" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique14" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :3Tab1 . ?x :Tab4unique2Tab4 ?y . ?x :hasString4j ?y1 . ?x :hasString24j ?y2 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique14" AS VARCHAR(500)) AS "y"
+ FROM 
+"view1234" QVIEW1,
+"view1234" QVIEW2,
+"view1234" QVIEW3,
+"view1234" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique14" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique14" < 100000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . ?x :hasString25j ?y2 . Filter( ?y < 100 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3,
+"view12345" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique15" < 100)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . ?x :hasString25j ?y2 . Filter( ?y < 10000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3,
+"view12345" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique15" < 10000)
+The input SPARQL query:
+=======================
+PREFIX :	<http://www.example.org/> SELECT ?x ?y  WHERE {?x a  :4Tab1 . ?x :Tab5unique2Tab5 ?y . ?x :hasString5j ?y1 . ?x :hasString25j ?y2 . Filter( ?y < 100000 )}
+
+The output SQL query:
+=====================
+SELECT 
+   1 AS "xQuestType", NULL AS "xLang", ('http://www.example.org/' || REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(CAST(QVIEW1."unique21" AS VARCHAR(500)),' ', '%20'),'!', '%21'),'@', '%40'),'#', '%23'),'$', '%24'),'&', '%26'),'*', '%42'), '(', '%28'), ')', '%29'), '[', '%5B'), ']', '%5D'), ',', '%2C'), ';', '%3B'), ':', '%3A'), '?', '%3F'), '=', '%3D'), '+', '%2B'), '''', '%22'), '/', '%2F')) AS "x", 
+   4 AS "yQuestType", NULL AS "yLang", CAST(QVIEW2."unique15" AS VARCHAR(500)) AS "y"
+ FROM 
+"view12345" QVIEW1,
+"view12345" QVIEW2,
+"view12345" QVIEW3,
+"view12345" QVIEW4
+WHERE 
+QVIEW1."unique21" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW2."unique21") AND
+QVIEW2."unique15" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW3."unique21") AND
+QVIEW3."stringu11" IS NOT NULL AND
+(QVIEW1."unique21" = QVIEW4."unique21") AND
+QVIEW4."stringu21" IS NOT NULL AND
+(QVIEW2."unique15" < 100000)
