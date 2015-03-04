@@ -1,0 +1,1 @@
+for i in {1..26}; do printf " yes &"; done; printf " yes"

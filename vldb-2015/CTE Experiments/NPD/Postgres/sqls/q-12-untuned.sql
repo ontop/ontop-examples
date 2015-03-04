@@ -1,3 +1,4 @@
+set statement_timeout to 1200000;
 SELECT *
 FROM (
 SELECT 
