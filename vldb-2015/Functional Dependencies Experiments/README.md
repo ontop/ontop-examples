@@ -6,7 +6,8 @@ The folder is structured as follows:
 - **SPARQL Queries:** SPARQL Queries used in the experiments;
 - **db2-FD-Exp:** Experiments outcomes with DB2;
 - **mappings:** Mappings used for the experiments;
-- **ontology:** Ontology used in the experiments.
+- **ontology:** Ontology used in the experiments;
+- **Tests Application:** The java application written to run the tests.
 
 The data instances and instructions for creating the Wisconsin schemas can be found in:
 
