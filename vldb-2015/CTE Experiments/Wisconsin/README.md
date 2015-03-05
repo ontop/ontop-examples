@@ -4,4 +4,4 @@ The folder is organized as follows:
 
 - **wisconsinDB2:** Material to replicate the experiments in DB2;
 - **wisconsinPostgres:** Material to replicate the experiments in PostgreSQL;
-- **wisconsinDataGenerator:** A small java program able to create a csv file for pumping the wisconsin table.
+- **wisconsinDataGenerator:** A small java program to create a csv file (of tunable size) for pumping the wisconsin table.
