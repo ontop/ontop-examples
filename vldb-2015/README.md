@@ -1,11 +1,12 @@
-ontop-examples
+vldb-2015
 ==============
 
-This repository shows how to use ontop as an API from maven.
+This folder contains all the material used for conducting the experiments used for the [VLDB 2015](vldb-2015) paper.
 
-In addition, it contains the supplemental materials  for ontop related publications:
+The folder is organized as follows:
 
+- CTE Experiments: It contains the experiments related to CTE-based tuning;
+- Exact_Mapping_Experiments: It contains the experiments related to Exact-Mappings-based tuning;
+- Functional Dependencies Experiments: It contains the experiments related to Functional-Dependency-based tuning;
+- fd_predicates_finder:
 
-- [WWW 2015](www-2015)
-- [VLDB 2015](vldb-2015)
-- [SWJ 2015](swj-2015)
