@@ -8,3 +8,4 @@ In addition, it contains the supplemental materials  for ontop related publicati
 
 - [SWJ 2015](swj-2015)
 - [VLDB 2015](vldb-2015)
+- [ESWC 2015](eswc-2015)
