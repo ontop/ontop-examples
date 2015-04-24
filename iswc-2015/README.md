@@ -1,7 +1,7 @@
-vldb-2015
+iswc-2015
 ==============
 
-This folder contains all the material used for conducting the experiments in the [VLDB 2015](vldb-2015) paper.
+This folder contains all the material used for conducting the experiments in the [ISWC 2015](iswc-2015) paper.
 
 The folder is organized as follows:
 
