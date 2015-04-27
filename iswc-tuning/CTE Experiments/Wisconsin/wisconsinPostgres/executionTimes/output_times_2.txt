@@ -1,0 +1,31 @@
+sqls/q-A1-tuned-full.sql
+
+real	0m47.336s
+user	0m0.044s
+sys	0m0.008s
+sqls/q-A1-tuned-selfjoin.sql
+
+real	0m46.778s
+user	0m0.044s
+sys	0m0.012s
+sqls/q-A1-untunned.sql
+
+real	10m10.663s
+user	0m0.044s
+sys	0m0.012s
+sqls/q-A4-tuned-full.sql
+
+real	0m47.447s
+user	0m0.052s
+sys	0m0.004s
+sqls/q-A4-tuned-selfjoin.sql
+
+real	0m46.663s
+user	0m0.044s
+sys	0m0.012s
+sqls/q-A4-untunned.sql
+psql:sqls/q-A4-untunned.sql:584: ERROR:  canceling statement due to statement timeout
+
+real	20m0.076s
+user	0m0.056s
+sys	0m0.008s

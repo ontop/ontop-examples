@@ -1,0 +1,1634 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class IRI="http://resource.geosciml.org/classifier/ics/ischart/GeochronologicEra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#AbandonedWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#AppraisalWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#AppraisalWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Area"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#AreaFee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#AssociatedGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Award"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#AwardArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#BAA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#BAAArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#BAALicensee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#BAATransfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Block"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#BlowOut"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#BlowoutWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ChangeOfCompanyNameTransfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#CommercialDiscovery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Company"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#CompanyReserve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#CompressedNaturalGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ConcreteStructureFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Condeep3ShaftsFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Condeep4ShaftsFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#CondeepMonoshaftFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Condensate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#CondensatePipeline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ContingentResources"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#CrudeOil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#DevelopmentWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#DevelopmentWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Discovery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryReserve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#DiscoveryWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#DorisFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#DryGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ElectromagneticSurvey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Equipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ExplorationWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ExplorationWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FPSOFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FSUFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Facility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FacilityPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FeederPipeline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Field"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FieldArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FieldInvestment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FieldLicensee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FieldMonthlyProduction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FieldOperator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FieldOwner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FieldReserve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FieldStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FieldYearlyProduction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#FixedFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Formation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Gas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#GasPipeline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#GroundSurvey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#InitialWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#InjectionWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#InjectionWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#JackUp3LegsFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#JackUp4LegsFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Jacket12LegsFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Jacket4LegsFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Jacket6LegsFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Jacket8LegsFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#JacketTripodFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#JunkedWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Kick"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#KickOffPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#LandfallFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#LicencedAcreage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Licensee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#LiquefiedNaturalGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#LiquefiedPetroleumGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#LithostratigraphicUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#LoadingSystemFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MainArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Member"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MergerTakeoverTransfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MonotowerFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MopustorFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MoveableFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MultiFieldWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MultiWellTemplateFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MultibranchWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MultifieldWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MultilateralWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MultilateralWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#MultipurposeWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#NCSMonthlyProduction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#NCSYearlyProduction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#NaturalGasLiquid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ObservationWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ObservationWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Oil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#OilEquivalents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#OilGasPipeline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#OilPipeline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#OnshoreFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Operator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#OtherSurvey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Owner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#PAWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ParcellBAA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Petroleum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#PetroleumActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#PetroleumDeposit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Pipeline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Plan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#PlanForDevelopmentAndOperationOfPetroleumDeposits"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#PlanForInstallationAndOperation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Play"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Point"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceAreaPerBlock"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceLicensee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceOperator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceTransfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ProductionLicenceWorkObligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ProductionWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ProductionWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Prospect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Quadrant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ReClassToDevWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ReClassToTestWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ReEntryWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Recovery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#RecoveryWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Refining"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#RegularSeismicSurvey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Reserve"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#RichGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Rig"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Riser"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#RouteSurvey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Royalty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SDFITransfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SeabedSeismicSurvey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SeismicAreaBAA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SeismicSurvey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SeismicSurveyCoordinate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SeismicSurveyProgress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SemisubConcreteFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SemisubSteelFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ShallowWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#ShallowWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Sidetrack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SidetrackWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SingleWellTemplateFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SiteSurvey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SlidingScaleBAA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SubseaCompletedWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SubseaStructureFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Survey"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SurveyArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SurveyMultilineArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SuspReenteredLaterWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#SuspendedWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TUFOperator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TUFOwner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TUFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TechnicalDiscovery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TechnicalSideTrack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TerminationPlan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TerminationPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TestProductionWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TlpConcreteFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TlpSteelFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Transfer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#TransportationPipeline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#UnitizedBAA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#VesselFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Well"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellHead"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellTarget"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellTrack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#Wellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreCasingAndLeakoffTest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreCoordinate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreCore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreCorePhoto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreCoreSet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreDocument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreDrillStemTest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreDrillingMudSample"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreOilSample"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellborePoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreStratigraphicCoreSet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WellboreStratum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WetGas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WildcatWell"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2#WildcatWellbore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#ChangedAwardNotification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#DeletedEasementNotification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#EasementNotification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#NewAwardNotification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#Notification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#ProductionLicence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#ProductionLicenceLicensee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#ProductionLicenceNotification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFLicensee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFNotification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFacility"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/snap#Continuant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/snap#DependentContinuant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/snap#MaterialEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/snap#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/snap#Quality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/snap#Site"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/span#ConnectedTemporalRegion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/span#Occurrent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/span#ProcessualEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ifomis.org/bfo/1.1/span#TemporalInstant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Thing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTForWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#LOTForWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#baaLicensee"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#baaOperatorCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#baaTransferCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#belongsToFacility"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#containsWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#coordinateForSurvey"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#coordinateForWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#coreForWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#corePhotoForWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#corePhotoURL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#coresForWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#currentFieldOperator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#currentFieldOwner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#currentResponsibleCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#developmentWellboreForField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#developmentWellboreForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#discoveryWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#documentForWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#documentURL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#drillingOperatorCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#explorationWellboreForField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#explorationWellboreForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#fieldLicensee"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#fieldOperator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#geochronologicEra"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#includedInField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#investmentForField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isGeometryOfFeature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#lastOperatorCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#licenceLicensee"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#licenceOperatorCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#licenceTransferCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#licenseeForBAA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#licenseeForField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#licenseeForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#messageForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#mudTestForWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#npdPageURL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#oilSampleTestForWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#operatorForField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#operatorForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#ownerForField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#pipelineFromFacility"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#pipelineOperator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#pipelineToFacility"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#pressReleaseURL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#productionFacility"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#provinceLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#quadrantLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#reclassedFromWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#registeredInCountry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#reportingCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#reservesForCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#reservesForDiscovery"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#reservesForField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#resourcesIncludedInDiscovery"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#shallowWellboreForField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#shallowWellboreForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#statusForField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#statusForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#statusForSurvey"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#stratigraphicParent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#stratumForWellbore"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#taskForCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#taskForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#transferredBAA"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#transferredLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellOperator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHc"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHcLevel1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHcLevel2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeHcLevel3"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreAgeTD"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreForDiscovery"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreForField"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHc"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHcLevel1"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHcLevel2"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreFormationHcLevel3"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFLicenceeCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFLicenceeForTUF"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOperatorCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOperatorForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOwnerCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#TUFOwnerForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#licenceLicenceeCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#licenceOperatorCompany"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#licenceeForLicence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#messageForTUF"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTBottomHolePressure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTChokeSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTDepthFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTDepthTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTFinalFlowPressure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTFinalShutInPressure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTGasDensity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTGasOilRelation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTGasProducedRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTOilDensity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTOilProducedRate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#DSTTestNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#LOTMudDensity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#SDFI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#TUFOwnerShare"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#ZValueFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#ZValueTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#areaSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#areaSize3DKm2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#blockId"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#casingDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#casingDiameter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#casingType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#codeEW"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#codeNS"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#companyGroup"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#companyShare"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#coreIntervalBottom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#coreIntervalTop"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#coreNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#corePhotoTitle"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#coresTotalLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#coresTotalNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#currentStatus"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateApproved"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateBaaAreaValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateBaaAreaValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateBaaLicenseeValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateBaaLicenseeValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateBaaValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateBaaValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateFieldLicenseeFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateFieldLicenseeTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateFieldOperatorFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateFieldOperatorTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateFieldOwnerFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateFieldOwnerTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateIncludedInField"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateInitialStatusTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateLicenceAreaValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateLicenceAreaValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateLicenceGranted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateLicenceValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateLicenseeValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateLicenseeValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateMudMeasured"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateOilSampleReceived"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateOilSampleTest"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateOperatorValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateOperatorValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateProductionStart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateResourceEstimate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateStatusFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateStatusTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateStatusValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateStatusValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateSurveyActualCompleted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateSurveyActualStart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateSurveyPlannedCompleted"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateSurveyPlannedStart"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateSurveyProgress"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateSyncNPD"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateTUFOperatorValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateTUFOperatorValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateTUFOwnerValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateTUFOwnerValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateTaskExpiry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateTransferValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateUpdated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateUpdatedMax"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateWDSSQC"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateWellboreCompletion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#dateWellboreEntry"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#decimalDegreesEW"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#decimalDegreesNS"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#degreesEW"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#degreesNS"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#designLifetime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#discoveryYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#documentFormat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#documentName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#documentSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#documentType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#drillPermit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#facilityType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#geodeticDatum"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#hydrocarbonType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#idNPD"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#investmentNOK"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isActive"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isCoreSampleAvailable"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isCurrentLicenceLicensee"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isCurrentLicenceOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isDiscoveryWellbore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isFormerLicenceLicensee"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isFormerLicenceOperator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isGeotechnicalMeasurement"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isMarketAvailable"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isMultilateral"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isReentryWellbore"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isSamplingPerformed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isShallowDrillingPerformed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isStratigraphical"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isSurfaceFacility"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#isTurnAreaIncluded"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#lengthBoatTotalKm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#lengthCdpTotalKm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#lengthPlannedBoatKm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#lengthPlannedCdpKm"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#licenseeInterest"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#licensingActivityName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#mapNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#minutesEW"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#minutesNS"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#mudMeasuredDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#mudType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#mudViscosity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#mudWeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#mudYieldPoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#oilSampleBottomDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#oilSampleFluidType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#oilSampleTestNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#oilSampleTestType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#oilSampleTopDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#originalAreaSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#pipelineDimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#pipelineMainGrouping"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#pipelineMedium"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#polygonNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#polygonPointNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#producedCondensate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#producedGas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#producedNGL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#producedOil"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#producedOilEquivalents"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#producedWater"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#productionMonth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#productionYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#recoverableCondensate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#recoverableGas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#recoverableNGL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#recoverableOil"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#recoverableOilEquivalents"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#remainingCondensate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#remainingGas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#remainingNGL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#remainingOil"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#remainingOilEquivalents"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#reservesResourceClass"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#secondsEW"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#secondsNS"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#sensorLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#sensorNumbers"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#sensorType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#shortName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#sourceNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#sourcePressure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#sourceSize"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#sourceType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#stratigraphicLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#surveySubType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#surveyType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#taskID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#taskType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#transferDirection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#transferredInterest"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#utmEW"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#utmNS"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#utmZone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#waterDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreBottomHoleTemperature"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreCompletionYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreContent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreDrillingDays"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreEntryYear"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreFinalVerticalDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreHoleDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreHoleDiameter"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreKellyBushElevation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreLicensingActivity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreMaxInclation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart3"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart4"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart5"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreNamePart6"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellborePlannedContent"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellborePlannedPurpose"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellborePlotSymbol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellborePurpose"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreReentryExplorationActivity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreSeismicLocation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreStratumBottomDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreStratumTopDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreTotalDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreWaterDepth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2#wellboreWellType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#dateAwarded"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#dateLicenceValidFrom"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#dateLicenceValidTo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#dateMessageRegistered"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#dateUpdated"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#dateUpdatedMax"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#licenseeInterest"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#messageNo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#messageType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://sws.ifi.uio.no/vocab/npd-v2-ptl#name"/>
+    </Declaration>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
+
