@@ -8,13 +8,13 @@ We provide :
 * the [execution Times](executionTimes) of the experiments divided by number of datasets and percentage of equality
 * the [log files](logFiles) of the experiments 
 * the [queries](queries) executed on 2 datasets and on 3 datasets
-* the [resources](resources/sameAs/ontowis) needed to run the experiments
+* the [resources](resources) needed to run the experiments
 
 
 To test the Ontop system use SameAs.jar and the folder resources.
 
 To create the database Wisconsin refers to the Wisconsin benchmark.
-Modify the obda files in [resources](resources) so that they will connect to your database.
+Modify the obda files in [resources](resources/sameAs/ontowis) so that they will connect to your database.
 
 Add the project parameters to the jar as follows:
 
