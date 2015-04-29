@@ -5,11 +5,10 @@ Ontology-based Integration of Cross-linked Datasets
 This repository contains the supplemental materials  for ontop ISWC 2015 publication.
 We provide :
 
-* the [execution Times](executionTimes) of the experiments divided by number of datasets and percentage of equality.
+* the [execution Times](executionTimes) of the experiments divided by number of datasets and percentage of equality
 * the [log files](logFiles) of the experiments 
 * the [queries](queries) executed on 2 datasets and on 3 datasets
 * the [resources](resources/sameAs/ontowis) needed to run the experiments
-
 
 
 To test the Ontop system use SameAs.jar and the folder resources.
@@ -47,7 +46,7 @@ In particular
 
  `java -jar -Xmx20G SameAs.jar --POSTGRES3DSsixty 1 `
 
-The results will be provided in [resources/results](resources/results)
+The results will be provided in [resources/results](resources/results) .
 
 
 
