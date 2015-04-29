@@ -11,7 +11,7 @@ We provide :
 * the [resources](resources) needed to run the experiments
 
 
-To test the Ontop system use SameAs.jar and the folder resources.
+To test the Ontop system use [SameAs.jar](SameAs.jar) and the folder [resources](resources).
 
 To create the database Wisconsin refers to the Wisconsin benchmark.
 Modify the obda files in [resources](resources/sameAs/ontowis) so that they will connect to your database.
