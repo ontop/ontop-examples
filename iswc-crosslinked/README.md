@@ -24,21 +24,27 @@ Add the project parameters to the jar as follows:
 In particular
 
 * To test sameAs between 2 DataSets with equality 10% and selectivities 0,001%, 0,01% and 0,1% run:
+
  `java -jar -Xmx20G SameAs.jar --POSTGRES2DSten 1 `
 
 * To test sameAs between 2 DataSets with equality 30% and selectivities 0,001%, 0,01% and 0,1% run:
+
  `java -jar -Xmx20G SameAs.jar --POSTGRES2DSthirty 1 `
 
 * To test sameAs between 2 DataSets with equality 60% and selectivities 0,001%, 0,01% and 0,1% run:
+
  `java -jar -Xmx20G SameAs.jar --POSTGRES2DSsixty 1 `
 
 * To test sameAs between 3 DataSets with equality 10% and selectivities 0,001%, 0,01% and 0,1% run:
+
  `java -jar -Xmx20G SameAs.jar --POSTGRES3DSten 1 `
 
 * To test sameAs between 3 DataSets with equality 30% and selectivities 0,001%, 0,01% and 0,1% run:
+
  `java -jar -Xmx20G SameAs.jar --POSTGRES3DSthirty 1 `
 
 * To test sameAs between 3 DataSets with equality 60% and selectivities 0,001%, 0,01% and 0,1% run:
+
  `java -jar -Xmx20G SameAs.jar --POSTGRES3DSsixty 1 `
 
 The results will be provided in [resources/results](resources/results)
