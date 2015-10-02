@@ -1,4 +1,4 @@
-edbt-2015
+edbt-2016-constraints
 ==============
 
 This folder contains all the material used for conducting the experiments in the paper "Enabling SPARQL Queries over Enterprise Relational Data".
