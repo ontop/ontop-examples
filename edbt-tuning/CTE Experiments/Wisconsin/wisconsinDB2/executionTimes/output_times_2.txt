@@ -1,0 +1,72 @@
+sqls/q-A1-tuned-full.sql
+
+   Database Connection Information
+
+ Database server        = DB2/LINUXX8664 9.7.5
+ SQL authorization ID   = DB2INST2
+ Local database alias   = WISC100M
+
+
+real	1m20.454s
+user	0m0.012s
+sys	0m0.012s
+sqls/q-A1-tuned-self.sql
+
+   Database Connection Information
+
+ Database server        = DB2/LINUXX8664 9.7.5
+ SQL authorization ID   = DB2INST2
+ Local database alias   = WISC100M
+
+
+real	2m35.823s
+user	0m0.012s
+sys	0m0.016s
+sqls/q-A1-untuned.sql
+
+   Database Connection Information
+
+ Database server        = DB2/LINUXX8664 9.7.5
+ SQL authorization ID   = DB2INST2
+ Local database alias   = WISC100M
+
+
+real	12m20.145s
+user	0m0.012s
+sys	0m0.020s
+sqls/q-A4-tuned-full.sql
+
+   Database Connection Information
+
+ Database server        = DB2/LINUXX8664 9.7.5
+ SQL authorization ID   = DB2INST2
+ Local database alias   = WISC100M
+
+
+real	1m21.304s
+user	0m0.008s
+sys	0m0.020s
+sqls/q-A4-tuned-self.sql
+
+   Database Connection Information
+
+ Database server        = DB2/LINUXX8664 9.7.5
+ SQL authorization ID   = DB2INST2
+ Local database alias   = WISC100M
+
+
+real	1m18.888s
+user	0m0.024s
+sys	0m0.004s
+sqls/q-A4-untuned.sql
+
+   Database Connection Information
+
+ Database server        = DB2/LINUXX8664 9.7.5
+ SQL authorization ID   = DB2INST2
+ Local database alias   = WISC100M
+
+
+real	68m30.330s
+user	0m0.128s
+sys	0m0.016s
