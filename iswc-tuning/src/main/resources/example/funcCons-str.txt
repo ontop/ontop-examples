@@ -1,4 +1,0 @@
-view12345st:stringu12
-view1234st:stringu12
-view123st:stringu12
-view12st:stringu12

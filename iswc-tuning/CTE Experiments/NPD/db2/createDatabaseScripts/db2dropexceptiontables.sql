@@ -1,5 +1,0 @@
--- This file was generated on : 11-04-2014 13:21:15
--- IBM Data Movement Tool Version : 2.00-b2126
---
--- This script contains DROP TABLE statements for the exception tables and is part of  db2dropobjects.sh script.
--- 
