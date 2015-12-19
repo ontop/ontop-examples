@@ -1,5 +1,6 @@
 [PrefixDeclaration]
-:		http://www.semanticweb.org/mrezk#
+:		http://example.org/hospital#
+inst:		http://example.org/hospital/instances/
 
 [SourceDeclaration]
 sourceUri	PatientDB
@@ -10,31 +11,26 @@ driverClass	org.h2.Driver
 
 [MappingDeclaration] @collection [[
 mappingId	Patient
-target		:db1/{patientid} a :Patient . 
-source		SELECT patientid FROM "tbl_patient"
-
-mappingId	hasName
-target		:db1/{patientid} :hasName {name} . 
+target		inst:db1/{patientid} a :Patient ; :hasName {name}^^xsd:string . 
 source		Select patientid,name FROM "tbl_patient"
 
 mappingId	Neop
-target		:db1/{patientid} :hasNeoplasm :db1/neoplasm/{patientid} . 
+target		inst:db1/{patientid} :hasNeoplasm inst:db1/neoplasm/{patientid} . 
 source		SELECT patientid FROM "tbl_patient"
 
-mappingId	hasSt2
-target		:db1/neoplasm/{patientid} :hasStage :stage-IIIa . 
-source		SELECT patientid FROM "tbl_patient" where stage=4
-
-mappingId	Employee Inconsistent
-target		:db1/{patientid} a :Employee . 
+mappingId	hasStage-IIIa
+target		inst:db1/neoplasm/{patientid} :hasStage inst:stage-IIIa . 
 source		SELECT patientid FROM "tbl_patient"
+			WHERE stage = 4 AND type = false
 
-mappingId	NLCS
-target		:db1/{patientid} a :NSCLC . 
-source		SELECT * FROM "tbl_patient"  where type = false
+mappingId	NSCLC
+target		inst:db1/{patientid} a :NSCLC . 
+source		SELECT patientid FROM "tbl_patient"
+			WHERE type = false
 
 mappingId	SCLC
-target		:db1/{patientid} a :SCLC . 
-source		SELECT * FROM "tbl_patient"  where type = true
+target		inst:db1/{patientid} a :SCLC . 
+source		SELECT patientid FROM "tbl_patient"
+			WHERE type = true
 ]]
 

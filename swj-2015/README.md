@@ -22,10 +22,10 @@ First dataset
 
 Let's consider a first denormalized table *tbl_patient* describing some patients and their lung cancer.
 
-patientid | name | stage
---------- | ---- | -----
-   1      | Mary |   4
-   2      | John |   7
+patientid | name |  type | stage
+--------- | ---- | ----- |------
+   1      | Mary | true  |  4
+   2      | John | false |  1
    
 The column *stage* encodes the international classification of the lung cancer:
 
@@ -33,42 +33,39 @@ The column *stage* encodes the international classification of the lung cancer:
  * 7-8: Small Cell Lung Cancer (SCLC): Limited, Extensive
  
 
-Start the database:
+1. Start the database:
+   * On Mac/Linux: open a terminal, go into *h2/bin* and run `sh h2.sh`
+   * On Windows: click on the executable `h2w.bat`
+2. After being automatically redirect to the web interface of H2, connect with the default parameters
 
-* On Mac/Linux: open a terminal, go into *h2/bin* and run `sh h2.sh`
-* On Windows: click on the executable `h2w.bat`
+    TODO: include two pictures
 
-This should redirect to the web interface of H2:
-
-TODO: include two pictures
-
-
-Create the table *tbl_patient* by executing the following query:
+3. Create the table *tbl_patient* by executing the following query:
 
 ```sql
 CREATE TABLE "tbl_patient" (
 patientid INT NOT NULL PRIMARY KEY,
-name VARCHAR(40),
-type BOOLEAN,
-stage TINYINT
+name VARCHAR(40) NOT NULL,
+type BOOLEAN NOT NULL,
+stage TINYINT NOT NULL
 )
 ```
 
-and insert some entries:
+4. Insert some entries:
 
 ```sql
 INSERT INTO "tbl_patient"
 (patientid,name,type,stage) VALUES
-(1,'Mary',4),
-(2,'John',7);
+(1,'Mary',false, 4),
+(2,'John',true, 1);
 ```
 
-Let's try a first query: "Give me all patients that have a NSCLC at stage IIIa"
+5. Try a first SQL query: "Give me all patients that have a NSCLC at stage IIIa"
 
 ```sql
 SELECT patientid
 FROM "tbl_patient"
-WHERE stage = 4
+WHERE stage = 4 AND type = false
 ```
 
 Ontology: classes and properties
@@ -86,17 +83,11 @@ Register the H2 JDBC driver:
      * Class Name: *org.h2.Driver*
      * Driver file (jar): */path/to/h2/bin/h2-1.3.176.jar*
      
-  * Create the following class hierarchy manually or, alternatively, open [this OWL file](PatientOnto.owl).
-  
-  TODO: put a screenshot
-  
-  * Create two object properties: *hasNeoplasm* and *hasStage*
-  
-  TODO: put a screenshot
-  
-  * Create a data property: *hasName*
-  
-    TODO: put a screenshot
+  * Download [this OWL ontology file](PatientOnto.owl).
+  * Go to "File/Open..." to load the ontology file.
+  * In the tab "Classes" you can visualize the class hierarchy
+  * In the tab "Object properties" you can see the properties *hasNeoplasm* and *hasStage*
+  * In the tab "Data properties" you can see the property *hasName*
     
     
 Mappings
@@ -116,63 +107,64 @@ TODO: quickly explain. "By-product: documentation."
 6. Select your datasource
 7. Click on "Create" to create a new mapping
 
+
 #### Mapping 1: Patient
  * Target: 
-    ```turtle
-     :db1/{patientid} a :Patient ; hasName "{name}"^^xsd:string .
-    ```
+```turtle
+     inst:ds1/{patientid} a :Patient ; hasName {name}^^xsd:string .
+```
  * Source:
-    ```sql
+```sql
        SELECT patientid, name 
        FROM "tbl_patient"
-    ```
+```
     
 #### Mapping 2: Neoplasm
  * Target: 
-    ```turtle
-     :db1/{patientid} :hasNeoplasm :db1/neoplasm/{patientid}.
-    ```
+```turtle
+     inst:ds1/{patientid} :hasNeoplasm inst:ds1/neoplasm/{patientid}.
+```
  * Source:
-    ```sql
+```sql
        SELECT patientid 
        FROM "tbl_patient"
-    ```
+```
 
 #### Mapping 3: NSCLC
  * Target: 
-    ```turtle
-     :db1/neoplasm/{patientid} a :NSCLC .
-    ```
+```turtle
+     inst:ds1/neoplasm/{patientid} a :NSCLC .
+```
  * Source:
-    ```sql
+```sql
        SELECT patientid 
        FROM "tbl_patient"
-       WHERE stage > 0 AND stage < 7
-    ```
+       WHERE type = false
+```
 
 #### Mapping 4: SCLC
  * Target: 
-    ```turtle
-     :db1/neoplasm/{patientid} a :SCLC .
-    ```
+```turtle
+     inst:ds1/neoplasm/{patientid} a :SCLC .
+```
  * Source:
-    ```sql
+```sql
        SELECT patientid 
        FROM "tbl_patient"
-       WHERE stage = 7 OR stage = 8
-    ```
+       WHERE type = true
+```
     
-#### Mapping 5: Stage I
+#### Mapping 5: Stage IIIa
  * Target: 
-    ```turtle
-     :db1/neoplasm/{patientid} :hasStage :stage-I .
-    ```
+ ```turtle
+     inst:ds1/neoplasm/{patientid} :hasStage inst:stage-IIIa .
+ ```
  * Source:
-    ```sql
+ ```sql
        SELECT patientid 
        FROM "tbl_patient"
-       WHERE stage = 1
-    ``` 
+       WHERE stage = 4 AND type = false
+  ``` 
     
 Similarly to the mapping 5, seven additional mappings can be added
 for the other stages.
@@ -188,20 +180,49 @@ TODO: add a screenshot
 
 3. Run the following query:
 ```sparql
-SELECT ?p ?name 
-WHERE{   ?p :hasName ?name ;      :hasNeoplasm ?tumor .  ?tumor :hasStage :stage-I .}
+PREFIX : <http://example.org/hospital#>
+PREFIX inst: <http://example.org/hospital/instances/>
+
+SELECT ?name 
+WHERE { 
+  ?p a :Patient ;
+     :hasName ?name ;      :hasNeoplasm ?tumor .  ?tumor :hasStage inst:stage-IIIa .}
 ``` 
+
+Tip: do a right click on the SPARQL query field to visualize the generated SQL query.
+
+### Inference
 
 Ontop embeds some inference capabilities and is thus capable of answering a query as follows:
 ```sparql
+PREFIX : <http://example.org/hospital#>
+
 SELECT ?x 
-WHERE 
-{ 
+WHERE { 
    ?x a :Neoplasm . 
 }
 ```
 
-Tip: do a right click on the SPARQL query field to visualize the generated SQL query.
+These inference capabilities can be, for a large part, understood as the ability to infer new mappings
+from the original mappings and the ontological axioms.
+
+To convince yourself:
+
+1. Change the target of the mapping 1 by the following:
+   ```turtle
+   :db1/{patientid} hasName "{name}"^^xsd:string .
+   ```
+2. Stop and start the reasoner.
+3. Run the following query:
+   ```sparql
+   PREFIX : <http://example.org/hospital#>
+
+   SELECT ?p WHERE {
+     ?p a :Patient .
+   }
+```
+4. You should find all the patients in the list. The inferred mapping has been derived from the mapping 2 and the domain of the property *hasNeoplasm*.
+
 
 
 # Second dataset
