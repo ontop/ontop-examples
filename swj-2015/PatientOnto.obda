@@ -11,26 +11,50 @@ driverClass	org.h2.Driver
 
 [MappingDeclaration] @collection [[
 mappingId	Patient
-target		inst:db1/{patientid} a :Patient ; :hasName {name}^^xsd:string . 
+target		inst:ds1/{patientid} a :Patient ; :hasName {name}^^xsd:string . 
 source		Select patientid,name FROM "tbl_patient"
 
 mappingId	Neop
-target		inst:db1/{patientid} :hasNeoplasm inst:db1/neoplasm/{patientid} . 
+target		inst:ds1/{patientid} :hasNeoplasm inst:ds1/neoplasm/{patientid} . 
 source		SELECT patientid FROM "tbl_patient"
 
 mappingId	hasStage-IIIa
-target		inst:db1/neoplasm/{patientid} :hasStage inst:stage-IIIa . 
+target		inst:ds1/neoplasm/{patientid} :hasStage inst:stage-IIIa . 
 source		SELECT patientid FROM "tbl_patient"
 			WHERE stage = 4 AND type = false
 
 mappingId	NSCLC
-target		inst:db1/{patientid} a :NSCLC . 
+target		inst:ds1/{patientid} a :NSCLC . 
 source		SELECT patientid FROM "tbl_patient"
 			WHERE type = false
 
 mappingId	SCLC
-target		inst:db1/{patientid} a :SCLC . 
+target		inst:ds1/{patientid} a :SCLC . 
 source		SELECT patientid FROM "tbl_patient"
 			WHERE type = true
+
+mappingId	Patient-2
+target		inst:ds2/{PID} a :Patient ; :hasName {NAME}^^xsd:string . 
+source		SELECT PID, NAME FROM T_NAME
+
+mappingId	Neoplasm-2a
+target		inst:ds2/{PID} :hasNeoplasm inst:ds2/nsclc/{PID} . 
+source		SELECT PID FROM T_NSCLC
+
+mappingId	Neoplasm-2b
+target		inst:ds2/{PID} :hasNeoplasm inst:ds2/sclc/{PID} . 
+source		SELECT PID FROM T_SCLC
+
+mappingId	nsclc
+target		inst:ds2/nsclc/{PID} a :NSCLC . 
+source		SELECT PID FROM T_NSCLC
+
+mappingId	sclc
+target		inst:ds2/sclc/{PID} a :SCLC . 
+source		SELECT PID FROM T_SCLC
+
+mappingId	Stage-IIIa-2
+target		inst:ds2/nsclc/{PID} :hasStage inst:stage-IIIa . 
+source		SELECT PID FROM T_NSCLC WHERE STAGE = 'three-a'
 ]]
 
