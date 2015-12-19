@@ -105,18 +105,18 @@ Mappings
 #### Mapping 1a: Patient
  * Target: 
 ```turtle
-     inst:ds1/{patientid} a :Patient ; hasName {name}^^xsd:string .
+inst:ds1/{patientid} a :Patient ; hasName {name}^^xsd:string .
 ```
  * Source:
 ```sql
-       SELECT patientid, name 
-       FROM "tbl_patient"
+SELECT patientid, name 
+FROM "tbl_patient"
 ```
     
 #### Mapping 2a: Neoplasm
  * Target: 
 ```turtle
-     inst:ds1/{patientid} :hasNeoplasm inst:ds1/neoplasm/{patientid}.
+inst:ds1/{patientid} :hasNeoplasm inst:ds1/neoplasm/{patientid}.
 ```
  * Source:
 ```sql
@@ -127,7 +127,7 @@ FROM "tbl_patient"
 #### Mapping 3a: NSCLC
  * Target: 
 ```turtle
-     inst:ds1/neoplasm/{patientid} a :NSCLC .
+inst:ds1/neoplasm/{patientid} a :NSCLC .
 ```
  * Source:
 ```sql
@@ -139,7 +139,7 @@ WHERE type = false
 #### Mapping 4a: SCLC
  * Target: 
 ```turtle
-     inst:ds1/neoplasm/{patientid} a :SCLC .
+inst:ds1/neoplasm/{patientid} a :SCLC .
 ```
  * Source:
 ```sql
@@ -151,13 +151,13 @@ WHERE type = true
 #### Mapping 5a: Stage IIIa
  * Target: 
 ```turtle
-     inst:ds1/neoplasm/{patientid} :hasStage inst:stage-IIIa .
+inst:ds1/neoplasm/{patientid} :hasStage inst:stage-IIIa .
 ```
  * Source:
 ```sql
-       SELECT patientid 
-       FROM "tbl_patient"
-       WHERE stage = 4 AND type = false
+SELECT patientid 
+FROM "tbl_patient"
+WHERE stage = 4 AND type = false
 ``` 
     
 Similarly to the mapping 5, seven additional mappings can be added
@@ -299,7 +299,7 @@ INSERT INTO T_SCLC
 #### Mapping 1b: Patient
  * Target: 
 ```turtle
-     inst:ds2/{PID} a :Patient ; :hasName {NAME}^^xsd:string .
+inst:ds2/{PID} a :Patient ; :hasName {NAME}^^xsd:string .
 ```
  * Source:
 ```sql
@@ -365,5 +365,5 @@ WHERE STAGE = 'three-a'
 
 ## SPARQL
 
-We can now run the previous SPARQL queries and observe that the results combines
+We can now run the previous SPARQL queries and observe that the results combine
 entries from the two datasets.
