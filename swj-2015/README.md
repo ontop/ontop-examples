@@ -10,8 +10,8 @@ Requirements
 ------------
 
 * Java 7 or 8
-* [H2 (relational database)](https://github.com/ontop/ontop-examples/raw/swj/tours-tutoriel-2015/h2.zip)
-* [Protégé with the Ontop plugin 1.16](http://sourceforge.net/projects/ontop4obda/files/ontop-1.16.1/ontopPro-plugin-with-protege-1.16.1.zip)
+* [H2 (relational database)](https://sourceforge.net/projects/ontop4obda/files/sample-data/)
+* [Latest Ontop Protégé bundle](https://sourceforge.net/projects/ontop4obda/files/)
 
 
 First dataset
@@ -36,7 +36,7 @@ Procedure:
    * On Mac/Linux: open a terminal, go into *h2/bin* and run `sh h2.sh`
    * On Windows: click on the executable `h2w.bat`
 3. After being automatically redirect to the web interface of H2, connect with the default parameters:
-     * JDBC URL:  *jdbc:h2:tcp://localhost/helloworld*
+     * JDBC URL:  *jdbc:h2:tcp://localhost/./helloworld*
      * User name: *sa*
      * No password
 
@@ -79,7 +79,7 @@ Ontology: classes and properties
      * Class Name: *org.h2.Driver*
      * Driver file (jar): */path/to/h2/bin/h2-1.3.176.jar*
      
-3. Download [this OWL ontology file](https://github.com/ontop/ontop-examples/raw/swj/swj-2015/PatientOnto.owl).
+3. Download [this OWL ontology file](https://github.com/ontop/ontop-examples/blob/master/swj-2015/PatientOnto.owl).
 4. Go to "File/Open..." to load the ontology file.
 5. In the tab "Classes" you can visualize the class hierarchy
 6. In the tab "Object properties" you can see the properties *hasNeoplasm* and *hasStage*
@@ -92,7 +92,7 @@ Mappings
 1. Go to the "Ontop mapping" tab
 2. Add a new data source (give it a name, e.g., *PatientDB*)
 3. Define the connection parameters as follows:
-    * Connection URL: *jdbc:h2:tcp://localhost/helloworld*
+    * Connection URL: *jdbc:h2:tcp://localhost/./helloworld*
     * Username: *sa*
     * Password: (leave empty)
     * Driver class: *org.h2.Driver* (choose it from the drop down menu)
@@ -105,7 +105,7 @@ Mappings
 #### Mapping 1a: Patient
  * Target: 
 ```turtle
-inst:ds1/{patientid} a :Patient ; hasName {name}^^xsd:string .
+inst:ds1/{patientid} a :Patient ; :hasName {name}^^xsd:string .
 ```
  * Source:
 ```sql
@@ -176,7 +176,10 @@ PREFIX inst: <http://example.org/hospital/instances/>
 SELECT ?name 
 WHERE { 
   ?p a :Patient ;
-     :hasName ?name ;      :hasNeoplasm ?tumor .  ?tumor :hasStage inst:stage-IIIa .}
+     :hasName ?name ; 
+     :hasNeoplasm ?tumor .
+  ?tumor :hasStage inst:stage-IIIa .
+}
 ``` 
 
 Tip: do a right click on the SPARQL query field to visualize the generated SQL query.
@@ -200,7 +203,7 @@ To convince yourself:
 
 1- Change the target of the mapping 1a by the following:
 ```turtle
-:db1/{patientid} hasName {name}^^xsd:string .   
+:db1/{patientid} :hasName {name}^^xsd:string .    
 ```
 
 2- Stop and start the reasoner.
@@ -210,7 +213,7 @@ To convince yourself:
 PREFIX : <http://example.org/hospital#>
 
 SELECT ?p WHERE {
-   p a :Patient .
+   ?p a :Patient .
 }
 ```
 
