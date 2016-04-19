@@ -1,0 +1,19 @@
+@prefix : <http://example.org/voc#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://example.org/> .
+
+<http://example.org/uni1/student/1> <http://xmlns.com/foaf/0.1/firstName> "Mary"^^xsd:string .
+<uni1/student/1> foaf:lastName "Smith"^^xsd:string .
+
+<uni2/person/1> rdf:type :AssociateProfessor .
+<uni2/person/1> :givesLecture <uni2/course/1> . 
+<uni2/person/1> :lastName "Lane"^^xsd:string .
+
+<uni2/person/3> :teaches <uni2/course/1> .
+
+<uni2/course/1> :title "Information security"^^xsd:string .
+
