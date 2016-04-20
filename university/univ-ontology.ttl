@@ -1,4 +1,5 @@
 @prefix : <http://example.org/voc#> .
+@prefix ex: <http://example.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -14,6 +15,7 @@
 foaf:Person a owl:Class .
 
 :Teacher rdfs:subClassOf foaf:Person .
+:ExternalTeacher rdfs:subClassOf :Teacher .
 
 :Researcher rdfs:subClassOf foaf:Person .
 
@@ -48,7 +50,7 @@ foaf:lastName rdf:type owl:DatatypeProperty ;
 :isTaughtBy owl:inverseOf :teaches .
 
 :givesLecture rdfs:subPropertyOf :teaches .
-:teachesLab rdfs:subPropertyOf :teaches .
+:givesLab rdfs:subPropertyOf :teaches .
 
 :title a owl:DatatypeProperty ;
 	rdfs:range xsd:string .
