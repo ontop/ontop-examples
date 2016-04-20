@@ -6,8 +6,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @base <http://example.org/> .
 
-<http://example.org/uni1/student/1> <http://xmlns.com/foaf/0.1/firstName> "Mary"^^xsd:string .
-<uni1/student/1> foaf:lastName "Smith"^^xsd:string .
+<http://example.org/uni2/person/3> <http://xmlns.com/foaf/0.1/firstName> "Céline"^^xsd:string .
+<uni2/person/3> foaf:lastName "Mendez"^^xsd:string .
+
+<uni2/person/3> :givesLab <uni2/course/1> .
+
 
 <uni2/person/1> rdf:type :AssociateProfessor .
 <uni2/person/1> :givesLecture <uni2/course/1> . 
