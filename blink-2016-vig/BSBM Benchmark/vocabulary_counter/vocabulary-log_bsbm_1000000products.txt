@@ -1,0 +1,9 @@
+DATA http://xmlns.com/foaf/0.1/mbox_sha1sum 512316
+DATA http://purl.org/dc/elements/1.1/title 10000000
+DATA http://xmlns.com/foaf/0.1/homepage 29812
+DATA http://purl.org/dc/elements/1.1/date 31640336
+DATA http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price 20000000
+DATA http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate 10000000
+DATA http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1 0
+DATA http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2 0
+DATA http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3 0
