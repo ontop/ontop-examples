@@ -21,11 +21,13 @@ foaf:Person a owl:Class .
 
 :Student rdfs:subClassOf foaf:Person .
 :UndergraduateStudent rdfs:subClassOf :Student .
-:GraduateStudent rdfs:subClassOf :Student .
+:GraduateStudent rdfs:subClassOf :Student,
+   [ a owl:Restriction ;
+     owl:onProperty :isSupervisedBy ;
+     owl:someValuesFrom :Professor ] .
 :PhDStudent rdfs:subClassOf :GraduateStudent, :Researcher .
 
 :PostDoc rdfs:subClassOf :Researcher .
-
 :Professor rdfs:subClassOf :Researcher, :Teacher .
 :FullProfessor rdfs:subClassOf :Professor .
 :AssociateProfessor rdfs:subClassOf :Professor .
@@ -54,4 +56,6 @@ foaf:lastName rdf:type owl:DatatypeProperty ;
 
 :title a owl:DatatypeProperty ;
 	rdfs:range xsd:string .
+
+:isSupervisedBy a owl:ObjectProperty .
 

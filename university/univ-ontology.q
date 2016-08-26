@@ -28,3 +28,11 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 SELECT DISTINCT ?teacher ?lastName {
   ?teacher a :Teacher ; foaf:lastName ?lastName .
 }
+
+[QueryItem="supervised_by_professor"]
+PREFIX : <http://example.org/voc#>
+
+SELECT ?x
+WHERE {
+   ?x :isSupervisedBy [ a :Professor ] .
+}
