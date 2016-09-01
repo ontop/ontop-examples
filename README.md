@@ -3,6 +3,7 @@ ontop-examples
 
 This repository contains the supplemental materials  for Ontop related publications/tutorials:
 
+- [EKAW 2016 Tutorial](ekaw-tutorial-2016)
 - [BLINK 2016 Paper](blink-2016-vig)
 - [AAAI 2016 Paper](aaai-2016-ontoprox)
 - [SWJ 2015 Article](swj-2015)
