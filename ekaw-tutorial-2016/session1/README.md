@@ -17,7 +17,7 @@ First data source: university 1
 --------------------------------
 
 As a first step, we focus on the database of a first university. It has
-the prefix "uni1".
+the schema *uni1*.
 It is composed of 4 tables.
 
 #### *uni1.student*
@@ -87,36 +87,16 @@ Procedure:
    * On Mac/Linux: open a terminal, go into *h2/bin* and run `sh h2.sh`
    * On Windows: click on the executable `h2w.bat`
 3. After being automatically redirect to the web interface of H2, connect with the default parameters:
-     * JDBC URL:  *jdbc:h2:tcp://localhost/./helloworld*
+     * JDBC URL:  *jdbc:h2:tcp://localhost/./university-session1*
      * User name: *sa*
      * No password
-
-4. Create the table *tbl_patient* by executing the following query:
-
-```sql
-CREATE TABLE "tbl_patient" (
-patientid INT NOT NULL PRIMARY KEY,
-name VARCHAR(40) NOT NULL,
-type BOOLEAN NOT NULL,
-stage TINYINT NOT NULL
-)
-```
-
-5- Insert some entries:
+4. Now you can see the tables in the schema *uni1*.
+5. Try a first SQL query: "Give me the last names of the full professors"
 
 ```sql
-INSERT INTO "tbl_patient"
-(patientid,name,type,stage) VALUES
-(1,'Mary',false, 4),
-(2,'John',true, 1);
-```
-
-6- Try a first SQL query: "Give me all patients that have a NSCLC at stage IIIa"
-
-```sql
-SELECT patientid
-FROM "tbl_patient"
-WHERE stage = 4 AND type = false
+SELECT "last_name"
+FROM "uni1"."academic"
+WHERE "position" = 1
 ```
 
 Ontology: classes and properties
@@ -130,44 +110,41 @@ Ontology: classes and properties
      * Class Name: *org.h2.Driver*
      * Driver file (jar): */path/to/h2/bin/h2-1.3.176.jar*
 
-3. Download [this OWL ontology file](https://github.com/ontop/ontop-examples/blob/master/swj-2015/PatientOnto.owl).
-4. Go to "File/Open..." to load the ontology file.
-5. In the tab "Classes" you can visualize the class hierarchy
-6. In the tab "Object properties" you can see the properties *hasNeoplasm* and *hasStage*
-7. In the tab "Data properties" you can see the property *hasName*
+3. Download [this OWL ontology file](https://github.com/ontop/ontop-examples/blob/master/ekaw-tutorial-2016/session1/university.ttl).
+4. Download [this mapping file file](https://github.com/ontop/ontop-examples/blob/master/ekaw-tutorial-2016/session1/university.obda).
+5. Go to "File/Open..." to load the ontology file.
+6. In the tab "Classes" you can visualize the class hierarchy
+7. In the tab "Object properties" you can see the properties *isSupervisedBy*, *isTaughtBy* and *teaches*
+8. In the tab "Data properties" you can see the properties *firstName*, *lastName* and *title*.
 
 
 Mappings
 --------
 
 1. Go to the "Ontop mapping" tab
-2. Add a new data source (give it a name, e.g., *PatientDB*)
-3. Define the connection parameters as follows:
-    * Connection URL: *jdbc:h2:tcp://localhost/./helloworld*
-    * Username: *sa*
-    * Password: (leave empty)
-    * Driver class: *org.h2.Driver* (choose it from the drop down menu)
-4. Test the connection using the “Test Connection” button
-5. Switch to the “Mapping Manager” tab in the ontop mappings tab
-6. Select your datasource
-7. Click on "Create" to create a new mapping
+2. Test the already defined connection configuration using the “Test Connection” button
+3. Switch to the “Mapping Manager” tab in the ontop mappings tab
+4. You should see a first mapping called *uni1-fullProfessor*
+5. Click on "Create" to create a new mapping
 
-
-#### Mapping 1a: Patient
+#### Mapping uni1-student
  * Target:
 ```turtle
-inst:ds1/{patientid} a :Patient ; :hasName {name}^^xsd:string .
+ex:uni1/student/{s_id} a :Student ;
+    foaf:firstName {first_name}^^xsd:string ;
+    foaf:lastName {last_name}^^xsd:string .
 ```
  * Source:
 ```sql
-SELECT patientid, name
-FROM "tbl_patient"
+SELECT *
+FROM "uni1"."student"
 ```
 
 #### Mapping 2a: Neoplasm
  * Target:
 ```turtle
-inst:ds1/{patientid} :hasNeoplasm inst:ds1/neoplasm/{patientid}.
+ex:uni1/academic/{a_id} foaf:firstName {first_name}^^xsd:string ;
+    foaf:lastName {last_name}^^xsd:string .
 ```
  * Source:
 ```sql
