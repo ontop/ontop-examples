@@ -188,44 +188,7 @@ FROM "uni1"."academic"
 WHERE "position" = 1
 ```
 
-#### Mapping uni1-AssociateProfessor
- * Target:
-```turtle
-ex:uni1/academic/{a_id} a :AssociateProfessor .
-```
- * Source:
-```sql
-SELECT *
-FROM "uni1"."academic"
-WHERE "position" = 2
-```
-
-#### Mapping uni1-externalTeacher
- * Target:
-```turtle
-ex:uni1/academic/{a_id} a :ExternalTeacher .
-```
- * Source:
-```sql
-SELECT *
-FROM "uni1"."academic"
-WHERE "position" = 8
-```
-
-#### Mapping uni1-postDoc
- * Target:
-```turtle
-ex:uni1/academic/{a_id} a :PostDoc .
-```
- * Source:
-```sql
-SELECT *
-FROM "uni1"."academic"
-WHERE "position" = 9
-```
-
-Similarly to the mapping 5, seven additional mappings can be added
-for the other stages.
+And so on for the other positions (assistant professor, postdoc, etc.).
 
 
 # SPARQL
