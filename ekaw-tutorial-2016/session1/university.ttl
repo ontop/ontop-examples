@@ -14,10 +14,12 @@
 
 foaf:Person a owl:Class .
 
-:Teacher rdfs:subClassOf foaf:Person .
+:FacultyMember rdfs:subClassOf foaf:Person .
+
+:Teacher rdfs:subClassOf :FacultyMember .
 :ExternalTeacher rdfs:subClassOf :Teacher .
 
-:Researcher rdfs:subClassOf foaf:Person .
+:Researcher rdfs:subClassOf :FacultyMember .
 
 :Student rdfs:subClassOf foaf:Person .
 :UndergraduateStudent rdfs:subClassOf :Student .

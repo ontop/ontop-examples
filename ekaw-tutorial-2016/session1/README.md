@@ -140,52 +140,88 @@ SELECT *
 FROM "uni1"."student"
 ```
 
-#### Mapping 2a: Neoplasm
+#### Mapping uni1-academic
  * Target:
 ```turtle
-ex:uni1/academic/{a_id} foaf:firstName {first_name}^^xsd:string ;
+ex:uni1/academic/{a_id} a :FacultyMember ;
+    foaf:firstName {first_name}^^xsd:string ;
     foaf:lastName {last_name}^^xsd:string .
 ```
  * Source:
 ```sql
-SELECT patientid
-FROM "tbl_patient"
+SELECT *
+FROM "uni1"."academic"
 ```
 
-#### Mapping 3a: NSCLC
+#### Mapping uni1-course
  * Target:
 ```turtle
-inst:ds1/neoplasm/{patientid} a :NSCLC .
+ex:uni1/course/{c_id} a :Course ;
+    :title {title} .
 ```
  * Source:
 ```sql
-SELECT patientid
-FROM "tbl_patient"
-WHERE type = false
+SELECT *
+FROM "uni1"."course"
 ```
 
-#### Mapping 4a: SCLC
+#### Mapping uni1-teaching
  * Target:
 ```turtle
-inst:ds1/neoplasm/{patientid} a :SCLC .
+ex:uni1/academic/{a_id} :teaches ex:uni1/course/{c_id} .
 ```
  * Source:
 ```sql
-SELECT patientid
-FROM "tbl_patient"
-WHERE type = true
+SELECT *
+FROM "uni1"."teaching"
 ```
 
-#### Mapping 5a: Stage IIIa
+#### Mapping uni1-fullProfessor
  * Target:
 ```turtle
-inst:ds1/neoplasm/{patientid} :hasStage inst:stage-IIIa .
+ex:uni1/academic/{a_id} a :FullProfessor .
 ```
  * Source:
 ```sql
-SELECT patientid
-FROM "tbl_patient"
-WHERE stage = 4 AND type = false
+SELECT *
+FROM "uni1"."academic"
+WHERE "position" = 1
+```
+
+#### Mapping uni1-AssociateProfessor
+ * Target:
+```turtle
+ex:uni1/academic/{a_id} a :AssociateProfessor .
+```
+ * Source:
+```sql
+SELECT *
+FROM "uni1"."academic"
+WHERE "position" = 2
+```
+
+#### Mapping uni1-externalTeacher
+ * Target:
+```turtle
+ex:uni1/academic/{a_id} a :ExternalTeacher .
+```
+ * Source:
+```sql
+SELECT *
+FROM "uni1"."academic"
+WHERE "position" = 8
+```
+
+#### Mapping uni1-postDoc
+ * Target:
+```turtle
+ex:uni1/academic/{a_id} a :PostDoc .
+```
+ * Source:
+```sql
+SELECT *
+FROM "uni1"."academic"
+WHERE "position" = 9
 ```
 
 Similarly to the mapping 5, seven additional mappings can be added

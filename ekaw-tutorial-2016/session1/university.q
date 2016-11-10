@@ -44,3 +44,11 @@ SELECT ?p
 WHERE {
   ?p a foaf:Person .
 }
+
+[QueryItem="All faculty members"]
+PREFIX : <http://example.org/voc#>
+
+SELECT ?p
+WHERE {
+  ?p a :FacultyMember .
+}

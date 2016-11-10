@@ -21,7 +21,7 @@ target		ex:uni1/student/{s_id} a :Student ; foaf:firstName {first_name}^^xsd:str
 source		SELECT * FROM "uni1"."student"
 
 mappingId	uni1-academic
-target		ex:uni1/academic/{a_id} foaf:firstName {first_name}^^xsd:string ; foaf:lastName {last_name}^^xsd:string . 
+target		ex:uni1/academic/{a_id} a :FacultyMember ; foaf:firstName {first_name}^^xsd:string ; foaf:lastName {last_name}^^xsd:string . 
 source		SELECT * FROM "uni1"."academic"
 
 mappingId	uni1-fullProfessor
