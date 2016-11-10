@@ -21,14 +21,6 @@ SELECT ?title ?fName ?lName {
   }
 }
 
-[QueryItem="teacher_last_name"]
-PREFIX : <http://example.org/voc#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-
-SELECT DISTINCT ?teacher ?lastName {
-  ?teacher a :Teacher ; foaf:lastName ?lastName .
-}
-
 [QueryItem="supervised_by_professor"]
 PREFIX : <http://example.org/voc#>
 
@@ -51,4 +43,20 @@ PREFIX : <http://example.org/voc#>
 SELECT ?p
 WHERE {
   ?p a :FacultyMember .
+}
+
+[QueryItem="FullProfessor_last_name"]
+PREFIX : <http://example.org/voc#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?prof ?lastName {
+  ?prof a :FullProfessor ; foaf:lastName ?lastName .
+}
+
+[QueryItem="teachers"]
+PREFIX : <http://example.org/voc#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?teacher {
+  ?teacher a :Teacher .
 }

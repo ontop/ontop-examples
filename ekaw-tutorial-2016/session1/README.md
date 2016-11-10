@@ -197,15 +197,11 @@ And so on for the other positions (assistant professor, postdoc, etc.).
 2. Start the reasoner
 3. Run the following query:
 ```sparql
-PREFIX : <http://example.org/hospital#>
-PREFIX inst: <http://example.org/hospital/instances/>
+PREFIX : <http://example.org/voc#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-SELECT ?name
-WHERE {
-  ?p a :Patient ;
-     :hasName ?name ;
-     :hasNeoplasm ?tumor .
-  ?tumor :hasStage inst:stage-IIIa .
+SELECT DISTINCT ?prof ?lastName {
+  ?prof a :FullProfessor ; foaf:lastName ?lastName .
 }
 ```
 
@@ -215,40 +211,20 @@ Tip: do a right click on the SPARQL query field to visualize the generated SQL q
 
 Ontop embeds some inference capabilities and is thus capable of answering a query as follows:
 ```sparql
-PREFIX : <http://example.org/hospital#>
+PREFIX : <http://example.org/voc#>
 
-SELECT ?x
-WHERE {
-   ?x a :Neoplasm .
+SELECT DISTINCT ?teacher {
+  ?teacher a :Teacher .
 }
 ```
 
 These inference capabilities can be, for a large part, understood as the ability to infer new mappings
 from the original mappings and the ontological axioms.
 
-To convince yourself:
-
-1- Change the target of the mapping 1a by the following:
-```turtle
-:db1/{patientid} :hasName {name}^^xsd:string .    
-```
-
-2- Stop and start the reasoner.
-
-3- Run the following query:
-```sparql
-PREFIX : <http://example.org/hospital#>
-
-SELECT ?p WHERE {
-   ?p a :Patient .
-}
-```
-
-4- You should find all the patients in the list. The inferred mapping has been derived from the mapping 2 and the domain of the property *hasNeoplasm*.
-
-
 
 # Second dataset
+
+TODO: continue
 
 We now consider a second dataset also describing patients having a lung cancer.
 However, this dataset has a different schema, composed of 3 tables:
@@ -276,52 +252,6 @@ PID | STAGE
  3  |   Lim
  4  |   Ext
 
-
-1- Create the new tables (in H2)
-
-```sql
-CREATE TABLE T_Name (
-PID INT NOT NULL PRIMARY KEY,
-NAME VARCHAR(40)
-);
-
-CREATE TABLE T_NSCLC (
-PID INT NOT NULL PRIMARY KEY,
-STAGE VARCHAR(40)
-);
-
-CREATE TABLE T_SCLC (
-PID INT NOT NULL PRIMARY KEY,
-STAGE VARCHAR(40)
-);
-
-ALTER TABLE T_NSCLC
-ADD FOREIGN KEY (PID) REFERENCES T_Name(PID);
-
-ALTER TABLE T_SCLC
-ADD FOREIGN KEY (PID) REFERENCES T_Name(PID);
-```
-
-2 - Populate them
-```sql
-
-INSERT INTO T_NAME
-(PID,NAME) VALUES
-(1,'Anna'),
-(2,'Mike'),
-(3, 'Roger'),
-(4, 'Jane');
-
-INSERT INTO T_NSCLC
-(PID,STAGE) VALUES
-(1,'three-a'),
-(2,'one');
-
-INSERT INTO T_SCLC
-(PID,STAGE) VALUES
-(3,'Lim'),
-(4,'Ext');
-```
 
 ## New mappings
 
