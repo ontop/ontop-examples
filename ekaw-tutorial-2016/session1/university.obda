@@ -53,7 +53,7 @@ target		ex:uni1/course/{c_id} a :Course ; :title {title} .
 source		SELECT * FROM "uni1"."course"
 
 mappingId	uni2-person
-target		ex:uni2/person/{pid} foaf:firstName {fname}^^xsd:string ; foaf:lastName {lname}^^xsd:string . 
+target		ex:uni2/person/{pid} a foaf:Person ; foaf:firstName {fname}^^xsd:string ; foaf:lastName {lname}^^xsd:string . 
 source		SELECT * FROM "uni2"."person"
 
 mappingId	uni2-undergraduate

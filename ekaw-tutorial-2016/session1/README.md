@@ -222,106 +222,98 @@ These inference capabilities can be, for a large part, understood as the ability
 from the original mappings and the ontological axioms.
 
 
-# Second dataset
+# Second database
 
-TODO: continue
+We now consider the database of another university. It has a different schema,
+composed of two tables:
 
-We now consider a second dataset also describing patients having a lung cancer.
-However, this dataset has a different schema, composed of 3 tables:
+### uni2.person
+*uni2.person*: describe the students and the academic staff of the university.
 
-*T_NAME*: describe the patient
+pid | fname   | lname  | status
+--- | ------- | ------ | ------
+ 1  |  Zak    | Lane   | 8
+ 2  |  Mattie | Moses  | 1
+ 3  |  Céline | Mendez | 2
 
-PID | NAME
---- | ----
- 1  |  Anna
- 2  |  Mike
- 3  |  Roger
- 4  |  Jane
+ The column *status* is populated of magic numbers (they differ from the ones of the first university):
+   - 1 -> Undergraduate Student
+   - 2 -> Graduate Student
+   - 3 -> PostDoc
+   - 7 -> Full Professor
+   - 8 -> Associate Professor
+   - 9 -> Assistant Professor
 
-*T_NSCLC* : describe a NSCLC. *PID* is a foreign key refering to *T_NAME.PID*
+### uni2.course
+*uni2.course* : ...
 
-PID | STAGE
---- | -------
- 1  | three-a
- 2  | one
-
-*T_SCLC* : describe a SCLC. *PID* is a foreign key refering to *T_NAME.PID*
-
-PID | STAGE
---- | ------
- 3  |   Lim
- 4  |   Ext
+cid | lecturer | lab_teacher | topic
+--- | -------- | ----------- | ---------------------
+ 1  | 1        | 3           |  Information security
 
 
 ## New mappings
 
-
-#### Mapping 1b: Patient
+#### Mapping uni2.person
  * Target:
 ```turtle
-inst:ds2/{PID} a :Patient ; :hasName {NAME}^^xsd:string .
+ex:uni2/person/{pid} a foaf:Person ;
+    foaf:firstName {fname}^^xsd:string ;
+    foaf:lastName {lname}^^xsd:string .
 ```
  * Source:
 ```sql
-SELECT PID, NAME
-FROM T_NAME
+SELECT *
+FROM "uni2"."person"
 ```
 
-#### Mapping 2b1: hasNeoplasm NSCLC
+#### Mapping uni2-course
  * Target:
 ```turtle
-inst:ds2/{PID} :hasNeoplasm inst:ds2/nsclc/{PID}.
+ex:uni2/course/{cid} a :Course ;
+    :title {topic}^^xsd:string .
 ```
  * Source:
 ```sql
-SELECT PID
-FROM T_NSCLC
+SELECT *
+FROM "uni2"."course"
 ```
 
-#### Mapping 2b2: hasNeoplasm SCLC
+#### Mapping uni2-lecturer
  * Target:
 ```turtle
-inst:ds2/{PID} :hasNeoplasm inst:ds2/sclc/{PID}.
+ex:uni2/person/{lecturer} :givesLecture ex:uni2/course/{cid} .
 ```
  * Source:
 ```sql
-SELECT PID
-FROM T_SCLC
+SELECT *
+FROM "uni2"."course"
 ```
 
-#### Mapping 3b: NSCLC
+#### Mapping uni2-lab-teacher
  * Target:
 ```turtle
-inst:ds2/sclc/{PID} a :NSCLC .
+ex:uni2/person/{lab_teacher} :givesLab ex:uni2/course/{cid} .
 ```
  * Source:
 ```sql
-SELECT PID
-FROM T_NSCLC
+SELECT *
+FROM "uni2"."course"
 ```
 
-#### Mapping 4b: SCLC
+#### Mapping uni2-undergraduate
  * Target:
 ```turtle
-inst:ds2/sclc/{PID} a :SCLC .
+ex:uni2/person/{pid} a :UndergraduateStudent .
 ```
  * Source:
 ```sql
-SELECT PID
-FROM T_SCLC
+SELECT *
+FROM "uni2"."person"
+WHERE "status" = 1
 ```
 
-#### Mapping 5: Stage IIIa
- * Target:
-```turtle
-inst:ds2/nsclc/{PID} :hasStage inst:stage-IIIa .
-```
- * Source:
-```sql
-SELECT PID
-FROM T_NSCLC
-WHERE STAGE = 'three-a'
-```
+And so on for the graduate students, the professors, etc.
 
 ## SPARQL
 
