@@ -111,7 +111,7 @@ Ontology: classes and properties
      * Driver file (jar): */path/to/h2/bin/h2-1.3.176.jar*
 
 3. Download [this OWL ontology file](https://github.com/ontop/ontop-examples/blob/master/ekaw-tutorial-2016/session1/university.ttl).
-4. Download [this mapping file file](https://github.com/ontop/ontop-examples/blob/master/ekaw-tutorial-2016/session1/university.obda).
+4. Download [this mapping  file](https://github.com/ontop/ontop-examples/blob/master/ekaw-tutorial-2016/session1/university.obda).
 5. Go to "File/Open..." to load the ontology file.
 6. In the tab "Classes" you can visualize the class hierarchy
 7. In the tab "Object properties" you can see the properties *isSupervisedBy*, *isTaughtBy* and *teaches*
@@ -191,7 +191,7 @@ WHERE "position" = 1
 And so on for the other positions (assistant professor, postdoc, etc.).
 
 
-# SPARQL
+### SPARQL
 
 1. Select Quest (Ontop) in the “Reasoner” menu
 2. Start the reasoner
@@ -228,7 +228,7 @@ We now consider the database of another university. It has a different schema,
 composed of two tables:
 
 ### uni2.person
-*uni2.person*: describe the students and the academic staff of the university.
+The table *uni2.person* describes the students and the academic staff of the university.
 
 pid | fname   | lname  | status
 --- | ------- | ------ | ------
@@ -244,13 +244,17 @@ pid | fname   | lname  | status
    - 8 -> Associate Professor
    - 9 -> Assistant Professor
 
+As you can see, undergraduate and graduate students are now distinguished.
+
 ### uni2.course
-*uni2.course* : ...
+The table *uni2.course* contains Information
+about courses, their topic, their lecturer and their lab teacher.
 
 cid | lecturer | lab_teacher | topic
 --- | -------- | ----------- | ---------------------
  1  | 1        | 3           |  Information security
 
+Note that in this data source, there are maximum two teachers per course. Lecturers and lab teachers are now distinguished.
 
 ## New mappings
 
@@ -319,3 +323,7 @@ And so on for the graduate students, the professors, etc.
 
 We can now run the previous SPARQL queries and observe that the results combine
 entries from the two datasets.
+
+# SPARQL endpoint deployment
+
+TODO: complete it.
