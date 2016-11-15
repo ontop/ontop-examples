@@ -60,3 +60,16 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 SELECT DISTINCT ?teacher {
   ?teacher a :Teacher .
 }
+
+[QueryItem="courses"]
+PREFIX : <http://example.org/voc#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?lname ?title 
+WHERE {
+
+  ?attendee foaf:lastName ?lname ;
+      :attends ?course .
+
+  ?course :title ?title .
+}

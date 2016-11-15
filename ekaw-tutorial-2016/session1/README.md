@@ -46,10 +46,6 @@ The column *position* is populated of magic numbers:
   - 1 -> Full Professor
   - 2 -> Associate Professor
   - 3 -> Assistant Professor
-  - 4 -> ?
-  - 5 -> ?
-  - 6 -> ?
-  - 7 -> ?
   - 8 -> External Teacher
   - 9 -> PostDoc
 
