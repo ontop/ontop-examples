@@ -52,6 +52,11 @@ mappingId	uni1-course
 target		ex:uni1/course/{c_id} a :Course ; :title {title} . 
 source		SELECT * FROM "uni1"."course"
 
+mappingId	uni1-registration
+target		ex:uni1/student/{s_id} :attends ex:uni1/course/{c_id} . 
+source		SELECT *
+			FROM "uni1"."course-registration"
+
 mappingId	uni2-person
 target		ex:uni2/person/{pid} a foaf:Person ; foaf:firstName {fname}^^xsd:string ; foaf:lastName {lname}^^xsd:string . 
 source		SELECT * FROM "uni2"."person"
@@ -66,6 +71,11 @@ target		ex:uni2/person/{pid} a :GraduateStudent .
 source		SELECT * FROM "uni2"."person"
 			WHERE "status" = 2
 
+mappingId	uni2-fullProfessor
+target		ex:uni2/person/{pid} a :FullProfessor . 
+source		SELECT * FROM "uni2"."person"
+			WHERE "status" = 7
+
 mappingId	uni2-associate-prof
 target		ex:uni2/person/{pid} a :AssociateProfessor . 
 source		SELECT * FROM "uni2"."person"
@@ -79,25 +89,6 @@ mappingId	uni2-lecturer
 target		ex:uni2/person/{lecturer} :givesLecture ex:uni2/course/{cid} . 
 source		SELECT * FROM "uni2"."course"
 
-mappingId	uni2-lab-teacher
-target		ex:uni2/person/{lab_teacher} :givesLab ex:uni2/course/{cid} . 
-source		SELECT * FROM "uni2"."course"
-
-mappingId	uni1-registration
-target		ex:uni1/student/{s_id} :attends ex:uni1/course/{c_id} . 
-source		SELECT *
-			FROM "uni1"."course-registration"
-
-mappingId	uni2-registration
-target		ex:uni2/person/{pid} :attends ex:uni2/course/{cid} . 
-source		SELECT *
-			FROM "uni2"."registration"
-
-mappingId	uni2-fullProfessor
-target		ex:uni2/person/{pid} a :FullProfessor . 
-source		SELECT * FROM "uni2"."person"
-			WHERE "status" = 7
-
 mappingId	uni2-assistantProfessor
 target		ex:uni2/person/{pid} a :AssistantProfessor . 
 source		SELECT * FROM "uni2"."person"
@@ -107,5 +98,14 @@ mappingId	uni2-postDoc
 target		ex:uni2/person/{pid} a :PostDoc . 
 source		SELECT * FROM "uni2"."person"
 			WHERE "status" = 3
+
+mappingId	uni2-lab-teacher
+target		ex:uni2/person/{lab_teacher} :givesLab ex:uni2/course/{cid} . 
+source		SELECT * FROM "uni2"."course"
+
+mappingId	uni2-registration
+target		ex:uni2/person/{pid} :attends ex:uni2/course/{cid} . 
+source		SELECT *
+			FROM "uni2"."registration"
 ]]
 
