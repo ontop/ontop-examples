@@ -173,10 +173,10 @@ INSERT INTO "uni2"."course"
 (5, 1, 8, 'Discrete mathematics and logic');
 
 INSERT INTO "uni2"."registration" ("pid","cid") VALUES
-(2, 4),
+(2, 1),
 (10, 4),
 (2, 5),
-(10, 1),
+(10, 4),
 (3, 2),
 (3, 3),
 (9, 2);

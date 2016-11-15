@@ -18,7 +18,7 @@ First data source: university 1
 
 As a first step, we focus on the database of a first university. It has
 the schema *uni1*.
-It is composed of 4 tables.
+It is composed of 5 tables.
 
 #### *uni1.student*
 
@@ -73,6 +73,19 @@ c_id | a_id
 1234 | 2
 
 There is no primary key, but two foreign keys to the tables *uni1.course* and *uni1.academic*.
+
+#### *uni1.course-registration*
+
+The table *uni1.course-registration* contains the n-n relation
+between courses and students.
+
+c_id | s_id
+---- | ----
+1234 | 1
+1234 | 2
+
+There is no primary key, but two foreign keys to the tables *uni1.course* and *uni1.student*.
+
 
 ## Database setup
 
@@ -172,6 +185,17 @@ SELECT *
 FROM "uni1"."teaching"
 ```
 
+#### Mapping uni1-registration
+ * Target:
+```turtle
+ex:uni1/student/{s_id} :attends ex:uni1/course/{c_id} .
+```
+ * Source:
+```sql
+SELECT *
+FROM "uni1"."course-registration"
+```
+
 #### Mapping uni1-fullProfessor
  * Target:
 ```turtle
@@ -192,6 +216,7 @@ And so on for the other positions (assistant professor, postdoc, etc.).
 1. Select Quest (Ontop) in the “Reasoner” menu
 2. Start the reasoner
 3. Run the following query:
+
 ```sparql
 PREFIX : <http://example.org/voc#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -206,6 +231,7 @@ Tip: do a right click on the SPARQL query field to visualize the generated SQL q
 ### Inference
 
 Ontop embeds some inference capabilities and is thus capable of answering a query as follows:
+
 ```sparql
 PREFIX : <http://example.org/voc#>
 
@@ -221,7 +247,7 @@ from the original mappings and the ontological axioms.
 # Second database
 
 We now consider the database of another university. It has a different schema,
-composed of two tables:
+composed of three tables:
 
 ### uni2.person
 The table *uni2.person* describes the students and the academic staff of the university.
@@ -251,6 +277,17 @@ cid | lecturer | lab_teacher | topic
  1  | 1        | 3           |  Information security
 
 Note that in this data source, there are maximum two teachers per course. Lecturers and lab teachers are now distinguished.
+
+#### uni2.registration
+
+The table *uni2.registration* contains the n-n relation
+between courses and attendees.
+
+pid | cid
+--- | ---
+2   | 1
+
+There is no primary key, but two foreign keys to the tables *uni2.course* and *uni2.person*.
 
 ## New mappings
 
@@ -300,6 +337,18 @@ ex:uni2/person/{lab_teacher} :givesLab ex:uni2/course/{cid} .
 SELECT *
 FROM "uni2"."course"
 ```
+
+#### Mapping uni2-registration
+ * Target:
+```turtle
+ex:uni2/person/{pid} :attends ex:uni2/course/{cid} .
+```
+ * Source:
+```sql
+SELECT *
+FROM "uni2"."registration"
+```
+
 
 #### Mapping uni2-undergraduate
  * Target:
