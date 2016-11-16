@@ -35,7 +35,9 @@ foaf:Person a owl:Class .
 :AssociateProfessor rdfs:subClassOf :Professor .
 :AssistantProfessor rdfs:subClassOf :Professor .
 
-:Course a owl:Class ; owl:disjointWith :Person .
+:Course a owl:Class ; owl:disjointWith foaf:Person .
+
+:EducationalInstitution a owl:Class ; owl:disjointWith :Course, foaf:Person .
 
 # Properties
 
@@ -64,3 +66,7 @@ foaf:lastName rdf:type owl:DatatypeProperty ;
 	rdfs:range xsd:string .
 
 :isSupervisedBy a owl:ObjectProperty .
+
+:isGivenAt a owl:ObjectProperty ;
+   rdfs:domain :Course ;
+   rdfs:range :EducationalInstitution .

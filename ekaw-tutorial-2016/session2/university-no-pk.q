@@ -95,3 +95,42 @@ WHERE {
      foaf:firstName ?firstName ;
      foaf:lastName ?lastName .
 }
+
+[QueryItem="teaching_different_institutions"]
+PREFIX : <http://example.org/voc#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?firstName ?lastName ?ins1 ?ins2 
+WHERE {
+   ?p foaf:firstName ?firstName ;
+      foaf:lastName ?lastName ;
+      :teaches [ :isGivenAt ?ins1 ],
+           [ :isGivenAt ?ins2 ] .
+
+   FILTER(?ins1 < ?ins2)
+}
+
+[QueryItem="teaching_different_institutions-2"]
+PREFIX : <http://example.org/voc#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?firstName ?lastName ?ins1 ?ins2 
+WHERE {
+   ?p1 foaf:firstName ?firstName ;
+      foaf:lastName ?lastName ;
+      :teaches [ :isGivenAt ?ins1 ] .
+
+   ?p2 foaf:firstName ?firstName ;
+      foaf:lastName ?lastName ;
+      :teaches [ :isGivenAt ?ins2 ] .
+
+   FILTER(?ins1 != ?ins2)
+}
+
+[QueryItem="institutions"]
+PREFIX : <http://example.org/voc#>
+
+SELECT DISTINCT ?institution
+WHERE {
+  ?institution a :EducationalInstitution .
+}

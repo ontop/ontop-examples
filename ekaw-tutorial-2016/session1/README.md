@@ -166,7 +166,8 @@ FROM "uni1"."academic"
  * Target:
 ```turtle
 ex:uni1/course/{c_id} a :Course ;
-    :title {title} .
+    :title {title} ;
+    :isGivenAt ex:uni1/university .
 ```
  * Source:
 ```sql
@@ -308,7 +309,8 @@ FROM "uni2"."person"
  * Target:
 ```turtle
 ex:uni2/course/{cid} a :Course ;
-    :title {topic}^^xsd:string .
+    :title {topic}^^xsd:string ;
+    :isGivenAt ex:uni2/university .
 ```
  * Source:
 ```sql

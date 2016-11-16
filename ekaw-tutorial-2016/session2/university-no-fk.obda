@@ -49,7 +49,7 @@ target		ex:uni1/academic/{a_id} :teaches ex:uni1/course/{c_id} .
 source		SELECT * FROM "uni1"."teaching"
 
 mappingId	uni1-course
-target		ex:uni1/course/{c_id} a :Course ; :title {title} . 
+target		ex:uni1/course/{c_id} a :Course ; :title {title} ; :isGivenAt ex:uni1/university . 
 source		SELECT * FROM "uni1"."course"
 
 mappingId	uni1-registration
@@ -82,7 +82,7 @@ source		SELECT * FROM "uni2"."person"
 			WHERE "status" = 8
 
 mappingId	uni2-course
-target		ex:uni2/course/{cid} a :Course ; :title {topic}^^xsd:string . 
+target		ex:uni2/course/{cid} a :Course ; :title {topic}^^xsd:string ; :isGivenAt ex:uni2/university . 
 source		SELECT * FROM "uni2"."course"
 
 mappingId	uni2-lecturer

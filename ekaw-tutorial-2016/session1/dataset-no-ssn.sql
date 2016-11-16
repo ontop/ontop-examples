@@ -1,3 +1,6 @@
+DROP SCHEMA IF EXISTS "uni1";
+DROP SCHEMA IF EXISTS "uni2";
+
 CREATE SCHEMA "uni1";
 
 CREATE TABLE "uni1"."student" (
@@ -127,6 +130,7 @@ INSERT INTO "uni1"."teaching" ("c_id", "a_id") VALUES
 (1234, 1),
 (1234, 2),
 (1235, 1),
+(1235, 3),
 (1236, 4),
 (1236, 8),
 (1236, 9),
@@ -170,7 +174,8 @@ INSERT INTO "uni2"."course"
 (2, 8, 5, 'Software factory'),
 (3, 7, 8, 'Software process management'),
 (4, 7, 9, 'Introduction to programming'),
-(5, 1, 8, 'Discrete mathematics and logic');
+(5, 1, 8, 'Discrete mathematics and logic'),
+(6, 7, 4, 'Intelligent Systems');
 
 INSERT INTO "uni2"."registration" ("pid","cid") VALUES
 (2, 1),
