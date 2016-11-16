@@ -42,14 +42,14 @@ foaf:Person a owl:Class .
 foaf:firstName rdf:type owl:DatatypeProperty ;
                rdfs:domain foaf:Person ;
                rdfs:range rdfs:Literal .
-			   
+
 foaf:lastName rdf:type owl:DatatypeProperty ;
               rdfs:domain foaf:Person ;
               rdfs:range rdfs:Literal .
 
-:teaches a owl:ObjectProperty ; 
+:teaches a owl:ObjectProperty ;
 		rdfs:domain :Teacher ;
-    	rdfs:range :Course .	
+    	rdfs:range :Course .
 
 :isTaughtBy owl:inverseOf :teaches .
 
@@ -57,11 +57,10 @@ foaf:lastName rdf:type owl:DatatypeProperty ;
 :givesLab rdfs:subPropertyOf :teaches .
 
 :attends a owl:ObjectProperty ;
-  rdfs:domain :Person ; 
+  rdfs:domain foaf:Person ; 
   rdfs:range :Course .
 
 :title a owl:DatatypeProperty ;
 	rdfs:range xsd:string .
 
 :isSupervisedBy a owl:ObjectProperty .
-
