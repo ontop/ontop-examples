@@ -1,8 +1,8 @@
 Role of foreign keys
 ====================
 
-Let us now consider the following files: [university-no-fk.ttl](university-no-fk.ttl)
-and [university-no-fk.obda](university-no-fk.obda) files.
+Let us now consider the following files: [university-no-fk.ttl](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-no-fk.ttl)
+and [university-no-fk.obda](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-no-fk.obda) files.
 
 
 Test the following query:
