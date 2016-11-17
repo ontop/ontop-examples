@@ -134,6 +134,13 @@ SELECT *
 FROM "uni1"."student"
 ```
 
+Some remarks:
+  - We used the primary key `s_id` to create the URI. As we will see this afternoon,
+    this practice enables Ontop to remove self-joins, which is very important for optimizing
+    the query performance.
+  - This entry could be split into three mapping assertions.
+
+
 Let us now add the other mapping assertions by clicking on "create":
 
 #### Mapping uni1-academic

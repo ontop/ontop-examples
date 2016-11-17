@@ -9,5 +9,13 @@ TODO: continue
 
 ### Manual approach
 
+TODO: prepare partial files for the manual part
 
 ### Canonical URIs
+
+Download the following files: [university-canonical.ttl](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-canonical.ttl)
+and [university-canonical.obda](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-canonical.obda) files.
+
+
+
+Look at the 3 last mapping assertions.

@@ -3,9 +3,12 @@ Role of primary keys (unique constraints)
 
 Let us now consider the following files: [university-no-pk.ttl](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-no-pk.ttl)
 and [university-no-pk.obda](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-no-pk.obda) files.
+The mapping assertions are the same than during the first session.
+The only difference is that primary keys have been removed.
 
+As mentioned in the talk, unique constraints (such as primary keys) are very useful for removing self-joins.
 
-TODO: explain more
+Open the new ontology file in Protégé and run the following SPARQL query:
 
 ```sparql
 PREFIX : <http://example.org/voc#>
@@ -18,7 +21,7 @@ SELECT DISTINCT ?prof ?lastName {
 }
 ```
 
-Without primary keys:
+Due to the absence of primary keys, the generated SQL is, after some minor reformatting, the following:
 
 ```sql
 SELECT *
@@ -55,7 +58,9 @@ QVIEW3."last_name" IS NOT NULL
 ) SUB_QVIEW
 ```
 
-With primary keys, self-joins are removed:
+In each sub-query, one can observe two self-joins, between `QVIEW1`, `QVIEW2` and `QVIEW3`.
+
+If you run the same query with the setting of the first session, you will obtain the following query:
 
 ```sql
 SELECT
@@ -90,4 +95,8 @@ WHERE
 QVIEW1."s_id" IS NOT NULL AND
 QVIEW1."first_name" IS NOT NULL AND
 QVIEW1."last_name" IS NOT NULL
-``
+```
+
+As you can see, the self-joins are removed when primary keys are provided and used as joining conditions.
+
+[Next: without foreign keys](foreign-keys.md)

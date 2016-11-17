@@ -1,12 +1,14 @@
 Role of foreign keys
 ====================
 
-Let us now consider the following files: [university-no-fk.ttl](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-no-fk.ttl)
+Let us now consider the case where foreign keys are missing.
+Please download the following files: [university-no-fk.ttl](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-no-fk.ttl)
 and [university-no-fk.obda](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-no-fk.obda) files.
 
+Foreign keys play a crucial for optimizing the mapping assertions after saturation.
 
-Test the following query:
-
+Let us consider the case of `foaf:Person` as discussed during the talk.
+If you run the following SPARQL query in the absence of foreign keys:
 
 ```sparql
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -17,7 +19,7 @@ WHERE {
 }
 ```
 
-It produces a SQL query similar to the following one :
+you will obtain a SQL query similar to the following one:
 
 ```sql
 SELECT
@@ -77,9 +79,11 @@ WHERE
 QVIEW1."pid" IS NOT NULL
 ```
 
-This SQL query is the union of 8 sub-queries.
+This SQL query is the union of 8 sub-queries. Basically, it queries
+the tables `uni1.student`, `uni1.academic`, `uni2.person` as expected, but also
+`uni1.teaching`, `uni1.course-registration`, `uni2.course` and `uni2.registration`.
 
-With foreign keys, the SQL query contains only 3 unions:
+With the setting of the first session which includes foreign keys, the SQL query contains only 3 unions:
 
 ```sql
 SELECT
@@ -135,3 +139,5 @@ WHERE {
      foaf:lastName ?lastName .
 }
 ```
+
+[Next: choice of URI template](uri-templates.md)
