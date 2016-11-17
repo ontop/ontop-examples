@@ -76,7 +76,7 @@ There is no primary key, but two foreign keys to the tables *uni1.course* and *u
 
 Procedure:
 
-1. Unzip the archive of H2 *(h2.zip)*
+1. Unzip the archive of H2 *(h2-ekaw.zip)*
 2. Start the database:
    * On Mac/Linux: open a terminal, go into *h2/bin* and run `sh h2.sh`
    * On Windows: click on the executable `h2w.bat`
@@ -108,7 +108,7 @@ Ontology: classes and properties
 4. Download [this mapping  file](https://github.com/ontop/ontop-examples/blob/master/ekaw-tutorial-2016/session1/university.obda).
 5. Go to "File/Open..." to load the ontology file.
 6. In the tab "Classes" you can visualize the class hierarchy
-7. In the tab "Object properties" you can see the properties *isSupervisedBy*, *isTaughtBy* and *teaches*
+7. In the tab "Object properties" you can see the properties *attends*, *isGivenAt*, *isSupervisedBy*, *isTaughtBy* and *teaches*.
 8. In the tab "Data properties" you can see the properties *firstName*, *lastName* and *title*.
 
 
@@ -118,8 +118,8 @@ Mappings
 1. Go to the "Ontop mapping" tab
 2. Test the already defined connection configuration using the “Test Connection” button
 3. Switch to the “Mapping Manager” tab in the ontop mappings tab
-4. You should see a first mapping called *uni1-fullProfessor*
-5. Click on "Create" to create a new mapping
+4. You should see a first mapping assertion called *uni1-student*
+5. Double-clic on it to observe it and then close this pop-up window.
 
 #### Mapping uni1-student
  * Target:
@@ -133,6 +133,8 @@ ex:uni1/student/{s_id} a :Student ;
 SELECT *
 FROM "uni1"."student"
 ```
+
+Let us now add the other mapping assertions by clicking on "create":
 
 #### Mapping uni1-academic
  * Target:
@@ -194,12 +196,12 @@ FROM "uni1"."academic"
 WHERE "position" = 1
 ```
 
-And so on for the other positions (assistant professor, postdoc, etc.).
+Then proceed in a similar way for the other positions (assistant professor, postdoc, etc.).
 
 
 ### SPARQL
 
-1. Select Quest (Ontop) in the “Reasoner” menu
+1. Select Ontop in the “Reasoner” menu
 2. Start the reasoner
 3. Run the following query:
 
@@ -227,6 +229,6 @@ SELECT DISTINCT ?teacher {
 ```
 
 These inference capabilities can be, for a large part, understood as the ability to infer new mappings
-from the original mappings and the ontological axioms.
+from the original mappings and the ontological axioms. We will discuss about this afternoon.
 
 [Next: Second data source](university-2.md)

@@ -4,7 +4,7 @@ Second data source: university 2
 We now consider the database of another university. It has a different schema,
 composed of three tables:
 
-### uni2.person
+#### *uni2.person*
 The table *uni2.person* describes the students and the academic staff of the university.
 
 pid | fname   | lname  | status
@@ -23,7 +23,7 @@ pid | fname   | lname  | status
 
 As you can see, undergraduate and graduate students are now distinguished.
 
-### uni2.course
+#### *uni2.course*
 The table *uni2.course* contains Information
 about courses, their topic, their lecturer and their lab teacher.
 
@@ -33,7 +33,7 @@ cid | lecturer | lab_teacher | topic
 
 Note that in this data source, there are maximum two teachers per course. Lecturers and lab teachers are now distinguished.
 
-#### uni2.registration
+#### *uni2.registration*
 
 The table *uni2.registration* contains the n-n relation
 between courses and attendees.
