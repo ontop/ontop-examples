@@ -17,67 +17,70 @@ driverClass	org.h2.Driver
 
 [MappingDeclaration] @collection [[
 mappingId	uni1-student
-target		ex:uni1/student/{s_id} a :Student ; foaf:firstName {first_name}^^xsd:string ; foaf:lastName {last_name}^^xsd:string . 
+target		ex:person/{ssn} a :Student ; foaf:firstName {first_name}^^xsd:string ; foaf:lastName {last_name}^^xsd:string . 
 source		SELECT * FROM "uni1"."student"
 
 mappingId	uni1-academic
-target		ex:uni1/academic/{a_id} a :FacultyMember ; foaf:firstName {first_name}^^xsd:string ; foaf:lastName {last_name}^^xsd:string . 
+target		ex:person/{ssn} a :FacultyMember ; foaf:firstName {first_name}^^xsd:string ; foaf:lastName {last_name}^^xsd:string . 
 source		SELECT * FROM "uni1"."academic"
 
 mappingId	uni1-fullProfessor
-target		ex:uni1/academic/{a_id} a :FullProfessor . 
+target		ex:person/{ssn} a :FullProfessor . 
 source		SELECT * FROM "uni1"."academic"
 			WHERE "position" = 1
 
 mappingId	uni1-AssociateProfessor
-target		ex:uni1/academic/{a_id} a :AssociateProfessor . 
+target		ex:person/{ssn} a :AssociateProfessor . 
 source		SELECT * FROM "uni1"."academic"
 			WHERE "position" = 2
 
 mappingId	uni1-PostDoc
-target		ex:uni1/academic/{a_id} a :PostDoc . 
+target		ex:person/{ssn} a :PostDoc . 
 source		SELECT * FROM "uni1"."academic"
 			WHERE "position" = 9
 
 mappingId	uni1-externalTeacher
-target		ex:uni1/academic/{a_id} a :ExternalTeacher . 
+target		ex:person/{ssn} a :ExternalTeacher . 
 source		SELECT * FROM "uni1"."academic"
 			WHERE "position" = 8
 
 mappingId	uni1-teaching
-target		ex:uni1/academic/{a_id} :teaches ex:uni1/course/{c_id} . 
-source		SELECT * FROM "uni1"."teaching"
+target		ex:person/{ac.ssn} :teaches ex:uni1/course/{te.c_id} . 
+source		SELECT * 
+			FROM "uni1"."teaching" te, "uni1"."academic" ac
+			WHERE te."a_id" = ac."a_id"
 
 mappingId	uni1-course
 target		ex:uni1/course/{c_id} a :Course ; :title {title} ; :isGivenAt ex:uni1/university . 
 source		SELECT * FROM "uni1"."course"
 
 mappingId	uni1-registration
-target		ex:uni1/student/{s_id} :attends ex:uni1/course/{c_id} . 
+target		ex:person/{st.ssn} :attends ex:uni1/course/{re.c_id} . 
 source		SELECT *
-			FROM "uni1"."course-registration"
+			FROM "uni1"."course-registration" re, "uni1"."student" st
+			WHERE re."s_id" = st."s_id"
 
 mappingId	uni2-person
-target		ex:uni2/person/{pid} a foaf:Person ; foaf:firstName {fname}^^xsd:string ; foaf:lastName {lname}^^xsd:string . 
+target		ex:person/{ssn} a foaf:Person ; foaf:firstName {fname}^^xsd:string ; foaf:lastName {lname}^^xsd:string . 
 source		SELECT * FROM "uni2"."person"
 
 mappingId	uni2-undergraduate
-target		ex:uni2/person/{pid} a :UndergraduateStudent . 
+target		ex:person/{ssn} a :UndergraduateStudent . 
 source		SELECT * FROM "uni2"."person"
 			WHERE "status" = 1
 
 mappingId	uni2-graduate
-target		ex:uni2/person/{pid} a :GraduateStudent . 
+target		ex:person/{ssn} a :GraduateStudent . 
 source		SELECT * FROM "uni2"."person"
 			WHERE "status" = 2
 
 mappingId	uni2-fullProfessor
-target		ex:uni2/person/{pid} a :FullProfessor . 
+target		ex:person/{ssn} a :FullProfessor . 
 source		SELECT * FROM "uni2"."person"
 			WHERE "status" = 7
 
 mappingId	uni2-associate-prof
-target		ex:uni2/person/{pid} a :AssociateProfessor . 
+target		ex:person/{ssn} a :AssociateProfessor . 
 source		SELECT * FROM "uni2"."person"
 			WHERE "status" = 8
 
@@ -86,26 +89,31 @@ target		ex:uni2/course/{cid} a :Course ; :title {topic}^^xsd:string ; :isGivenAt
 source		SELECT * FROM "uni2"."course"
 
 mappingId	uni2-lecturer
-target		ex:uni2/person/{lecturer} :givesLecture ex:uni2/course/{cid} . 
-source		SELECT * FROM "uni2"."course"
+target		ex:person/{pe.ssn} :givesLecture ex:uni2/course/{co.cid} . 
+source		SELECT * 
+			FROM "uni2"."course" co, "uni2"."person" pe
+			WHERE co."lecturer" = pe."pid"
 
 mappingId	uni2-assistantProfessor
-target		ex:uni2/person/{pid} a :AssistantProfessor . 
+target		ex:person/{ssn} a :AssistantProfessor . 
 source		SELECT * FROM "uni2"."person"
 			WHERE "status" = 9
 
 mappingId	uni2-postDoc
-target		ex:uni2/person/{pid} a :PostDoc . 
+target		ex:person/{ssn} a :PostDoc . 
 source		SELECT * FROM "uni2"."person"
 			WHERE "status" = 3
 
 mappingId	uni2-lab-teacher
-target		ex:uni2/person/{lab_teacher} :givesLab ex:uni2/course/{cid} . 
-source		SELECT * FROM "uni2"."course"
+target		ex:person/{pe.ssn} :givesLab ex:uni2/course/{co.cid} . 
+source		SELECT * 
+			FROM "uni2"."course" co, "uni2"."person" pe
+			WHERE co."lab_teacher" = pe."pid"
 
 mappingId	uni2-registration
-target		ex:uni2/person/{pid} :attends ex:uni2/course/{cid} . 
+target		ex:person/{pe.ssn} :attends ex:uni2/course/{re.cid} . 
 source		SELECT *
-			FROM "uni2"."registration"
+			FROM "uni2"."registration" re, "uni2"."person" pe
+			WHERE re."pid" = pe."pid"
 ]]
 
