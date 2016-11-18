@@ -9,21 +9,21 @@ Until now, we have been using local identifiers from the data sources to build 3
 Let us now consider the case where the tables `uni1.student`, `uni1.academic` and `uni2.person` have
 a new column: `ssn`. This column corresponds to the social security number of the person.
 
-This new column gives us the opportunity to use a common URI template for all the persons. Such URI template would allow us to collect information about one person coming from the two universities.
+This new column gives us the opportunity to use a common URI template for all the persons. Such URI template would allow us to collect information about a same person registered in both universities.
 
 As we will see, there are actually some persons that are teaching or studying in both universities.
 
 Given that we already have the mapping assertions produced during the first session, we will consider
 two ways to change the URI templates: first by doing it manually, then using the notion of canonical URIs.
 
-We will also see that using this new URI template have a negative impact on the performance of some queries.
+We will also see that using this new URI template has a negative impact on the performance of some queries.
 
 ## Manual approach
 
 Download the following files: [university-manual-ssn.ttl](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-manual-ssn.ttl)
 and [university-manual-ssn.obda](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-manual-ssn.obda) files.
 
-The mapping assertions are currently the same than during the first hands-on session.
+The mapping assertions are currently the same as during the first hands-on session.
 Let us now update them with the new URI template for persons.
 
 #### Mapping uni1.student
@@ -193,6 +193,7 @@ WHERE {
 ```
 Look at the SQL query, it should be very long.
 It suffers from the exponential blowup that we mentioned during the talk.
+Note that the first query also suffers from an exponential blowup but the latter is less important and thus less sensible on our small dataset.
 
 
 ## Canonical URIs

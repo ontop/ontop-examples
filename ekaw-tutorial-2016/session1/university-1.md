@@ -27,7 +27,7 @@ a_id | first_name |  last_name | position
   2  | Edward     | May        | 9
   3  | Rachel     | Ward       | 8
 
-The column *position* is populated of magic numbers:
+The column *position* is populated with magic numbers:
   - 1 -> Full Professor
   - 2 -> Associate Professor
   - 3 -> Assistant Professor
@@ -225,7 +225,7 @@ Tip: do a right click on the SPARQL query field to visualize the generated SQL q
 
 ### Inference
 
-Ontop embeds some inference capabilities and is thus capable of answering a query as follows:
+Ontop embeds some inference capabilities and is thus capable of answering a query like the following:
 
 ```sparql
 PREFIX : <http://example.org/voc#>
@@ -236,6 +236,6 @@ SELECT DISTINCT ?teacher {
 ```
 
 These inference capabilities can be, for a large part, understood as the ability to infer new mappings
-from the original mappings and the ontological axioms. We will discuss about this afternoon.
+from the original mappings and the ontological axioms. We will discuss it this afternoon.
 
 [Next: Second data source](university-2.md)

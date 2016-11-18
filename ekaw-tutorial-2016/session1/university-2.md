@@ -13,7 +13,7 @@ pid | fname   | lname  | status
  2  |  Mattie | Moses  | 1
  3  |  Céline | Mendez | 2
 
- The column *status* is populated of magic numbers (they differ from the ones of the first university):
+ The column *status* is populated with magic numbers (they differ from the ones of the first university):
    - 1 -> Undergraduate Student
    - 2 -> Graduate Student
    - 3 -> PostDoc
@@ -31,7 +31,8 @@ cid | lecturer | lab_teacher | topic
 --- | -------- | ----------- | ---------------------
  1  | 1        | 3           |  Information security
 
-Note that in this data source, there are maximum two teachers per course. Lecturers and lab teachers are now distinguished.
+`cid` is a primary key.
+Note that in this data source, there are at most two teachers per course. Lecturers and lab teachers are now distinguished.
 
 #### *uni2.registration*
 
@@ -45,6 +46,8 @@ pid | cid
 There is no primary key, but two foreign keys to the tables *uni2.course* and *uni2.person*.
 
 ## New mappings
+
+Let us add the following mapping assertions together with the previous one.
 
 #### Mapping uni2.person
  * Target:

@@ -3,7 +3,7 @@ Role of primary keys (unique constraints)
 
 Let us now consider the following files: [university-no-pk.ttl](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-no-pk.ttl)
 and [university-no-pk.obda](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session2/university-no-pk.obda) files.
-The mapping assertions are the same than during the first session.
+The mapping assertions are the same as during the first session.
 The only difference is that primary keys have been removed.
 
 As mentioned in the talk, unique constraints (such as primary keys) are very useful for removing self-joins.
@@ -65,7 +65,6 @@ If you run the same query with the setting of the first session, you will obtain
 ```sql
 SELECT
    1 AS "pQuestType", NULL AS "pLang", ('http://example.org/uni2/person/' || QVIEW1."pid" ) AS "p",
-   7 AS "firstNameQuestType", NULL AS "firstNameLang", QVIEW1."fname" AS "firstName",
    7 AS "lastNameQuestType", NULL AS "lastNameLang", QVIEW1."lname" AS "lastName"
  FROM
 "uni2"."person" QVIEW1
