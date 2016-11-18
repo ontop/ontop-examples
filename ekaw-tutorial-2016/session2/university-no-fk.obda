@@ -10,7 +10,7 @@ rdfs:		http://www.w3.org/2000/01/rdf-schema#
 
 [SourceDeclaration]
 sourceUri	university
-connectionUrl	jdbc:h2:tcp://localhost/./university-no-fk
+connectionUrl	jdbc:h2:tcp://localhost/../university-no-fk
 username	sa
 password	
 driverClass	org.h2.Driver

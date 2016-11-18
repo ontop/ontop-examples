@@ -10,7 +10,7 @@ rdfs:		http://www.w3.org/2000/01/rdf-schema#
 
 [SourceDeclaration]
 sourceUri	university
-connectionUrl	jdbc:h2:tcp://localhost/./university-ssn
+connectionUrl	jdbc:h2:tcp://localhost/../university-ssn
 username	sa
 password	
 driverClass	org.h2.Driver
@@ -46,7 +46,7 @@ source		SELECT * FROM "uni1"."academic"
 
 mappingId	uni1-teaching
 target		ex:person/{ac.ssn} :teaches ex:uni1/course/{te.c_id} . 
-source		SELECT * 
+source		SELECT *
 			FROM "uni1"."teaching" te, "uni1"."academic" ac
 			WHERE te."a_id" = ac."a_id"
 
@@ -90,7 +90,7 @@ source		SELECT * FROM "uni2"."course"
 
 mappingId	uni2-lecturer
 target		ex:person/{pe.ssn} :givesLecture ex:uni2/course/{co.cid} . 
-source		SELECT * 
+source		SELECT *
 			FROM "uni2"."course" co, "uni2"."person" pe
 			WHERE co."lecturer" = pe."pid"
 
@@ -106,7 +106,7 @@ source		SELECT * FROM "uni2"."person"
 
 mappingId	uni2-lab-teacher
 target		ex:person/{pe.ssn} :givesLab ex:uni2/course/{co.cid} . 
-source		SELECT * 
+source		SELECT *
 			FROM "uni2"."course" co, "uni2"."person" pe
 			WHERE co."lab_teacher" = pe."pid"
 

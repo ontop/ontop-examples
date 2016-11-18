@@ -11,7 +11,7 @@ ontop:		http://ontop.inf.unibz.it/pred#
 
 [SourceDeclaration]
 sourceUri	university
-connectionUrl	jdbc:h2:tcp://localhost/./university-ssn
+connectionUrl	jdbc:h2:tcp://localhost/../university-ssn
 username	sa
 password	
 driverClass	org.h2.Driver

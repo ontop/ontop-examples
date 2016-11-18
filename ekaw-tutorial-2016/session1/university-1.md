@@ -81,7 +81,7 @@ Procedure:
    * On Mac/Linux: open a terminal, go into *h2/bin* and run `sh h2.sh`
    * On Windows: click on the executable `h2w.bat`
 3. After being automatically redirect to the web interface of H2, connect with the default parameters:
-     * JDBC URL:  *jdbc:h2:tcp://localhost/./university-session1*
+     * JDBC URL:  *jdbc:h2:tcp://localhost/../university-session1*
      * User name: *sa*
      * No password
 4. Now you can see the tables in the schema *uni1*.
