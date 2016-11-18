@@ -5,7 +5,7 @@ SPARQL endpoint deployment
 
 Procedure: 
 
-1. Download and unzip the archive with Tomcat [tomcat-ontop-bundle.zip](https://github.com/ontop/ontop-examples/tree/master/ekaw-tutorial-2016/tomcat-ontop-bundle.zip)
+1. Download and unzip the archive with Tomcat [tomcat-ontop-bundle.zip](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/tomcat-ontop-bundle.zip)
 2. Start tomcat from the *bin folder* using the commands: 
 	* On Mac/Linux: using the terminal run `sh startup.sh` or  `sh catalina.sh start`.
 	* On Windows: click on the executable `startup.bat`.
