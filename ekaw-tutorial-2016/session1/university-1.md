@@ -104,8 +104,8 @@ Ontology: classes and properties
      * Class Name: *org.h2.Driver*
      * Driver file (jar): */path/to/h2/bin/h2-1.3.176.jar*
 
-3. Download [this OWL ontology file](https://github.com/ontop/ontop-examples/blob/master/ekaw-tutorial-2016/session1/university.ttl).
-4. Download [this mapping  file](https://github.com/ontop/ontop-examples/blob/master/ekaw-tutorial-2016/session1/university.obda).
+3. Download [this OWL ontology file](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session1/university.ttl).
+4. Download [this mapping  file](https://github.com/ontop/ontop-examples/raw/master/ekaw-tutorial-2016/session1/university.obda).
 5. Go to "File/Open..." to load the ontology file.
 6. In the tab "Classes" you can visualize the class hierarchy
 7. In the tab "Object properties" you can see the properties *attends*, *isGivenAt*, *isSupervisedBy*, *isTaughtBy* and *teaches*.
