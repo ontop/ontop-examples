@@ -1,0 +1,14 @@
+CLASS http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Producer 20600
+CLASS http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature 1051900
+CLASS http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer 0
+CLASS http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product 1000000
+CLASS http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Review 10000000
+CLASS http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Vendor 9900
+CLASS http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType 32900
+CLASS http://xmlns.com/foaf/0.1/Person 510200
+OBJ http://purl.org/dc/elements/1.1/publisher 0
+OBJ http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/type 1000000
+OBJ http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer 1000000
+OBJ http://purl.org/stuff/rev#reviewer 10000000
+OBJ http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country 540700
+OBJ http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product 0

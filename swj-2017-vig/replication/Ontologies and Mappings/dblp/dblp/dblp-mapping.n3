@@ -1,0 +1,613 @@
+######################################################################################
+# D2RQ mapping file for the D2R server from FUBerlin
+# (http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server)
+# to publish the L3S version of the DBLP data
+#
+# dc:creator: Jorg Diederich (http://www.l3s.de/~diederich)
+# dc:created: 2007-06-22
+# dcterms:modified: 2007-11-13
+######################################################################################
+
+######################################################################################
+# 1. the necessary prefixes
+######################################################################################
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix swrc: <http://swrc.ontoware.org/ontology#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix d2r: <http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#> .
+@prefix map: <file:///home/diederich/d2r-server-0.3.2/dblp-mapping.n3#> .
+
+######################################################################################
+# 2. the description for @self (this mapping file)
+######################################################################################
+<>
+    dc:title "DBLP Computer Science Bibliography D2RQ Map";
+    dc:description "Describes a D2RQ mapping from the DBLP publication database at L3S Research Center to RDF.";
+    .
+
+######################################################################################
+# 3. the L3S web server configuration
+######################################################################################
+map:Server a d2r:Server;
+    rdfs:label "D2R Server publishing the DBLP Bibliography Database, hosted at L3S Research Center";
+## l3s.de hier klein, weil es fuer RDF *nicht* egal ist, ob Gross- oder Kleinschreibung...
+    d2r:baseURI <http://dblp.l3s.de/d2r/>;
+    d2r:port 2021;
+#    d2r:sparqlTimeout 2000;
+    d2r:documentMetadata [
+        dc:license <http://www.informatik.uni-trier.de/~ley/db/copyright.html>;
+#        admin:errorReportsTo <mailto:diederich@l3s.de>;
+    ];
+    .
+######################################################################################
+# 4. the L3S database configuration
+######################################################################################
+map:DB a d2rq:Database;
+d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+d2rq:jdbcDSN "jdbc:mysql://10.7.20.65/vig_rand_scale_1_dblp_2017_02_04?autoReconnect=true";
+d2rq:username "fish";
+d2rq:password "fish";
+#    d2rq:resultSizeLimit 10000; # adds a LIMIT clause to all generated SQL queries
+#    d2rq:allowDistinct "true" ## Deprecated
+    .
+
+######################################################################################
+# 5. the publication class map
+######################################################################################
+map:Publications a d2rq:ClassMap;
+    d2rq:uriPattern "publications/@@dblp_pub_new.dblp_key@@";
+    d2rq:class foaf:Document; # necessary to be able to use foaf:homepage later
+    d2rq:dataStorage map:DB;
+    .
+
+######################################################################################
+# 6. all property bridges for the publication class map
+######################################################################################
+
+## the title
+## status: final
+map:publicationTitle a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dc:title;
+## rdfs:label is necessary to make the D2R web interface and other RDF browsers look nice
+    d2rq:property rdfs:label;
+    d2rq:column "dblp_pub_new.title";
+    d2rq:datatype xsd:string;
+    .
+
+## the dblp_key
+## status: testing (what pattern?)
+map:dblp_key a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dc:identifier;
+    d2rq:pattern "DBLP @@dblp_pub_new.dblp_key@@";
+    d2rq:datatype xsd:string;
+    .
+
+## the source for journal articles
+## status: testing (journal is usually meant to be a single issue...)
+map:publicationSourceJournal a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:uriPattern "journals/@@dblp_pub_new.source_id@@";
+    d2rq:property swrc:journal;
+    d2rq:condition "dblp_pub_new.type='article'";
+    .
+
+## the source for conferences
+## status: testing (better property?)
+map:publicationSourceConf a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:uriPattern "conferences/@@dblp_pub_new.source_id@@";
+    d2rq:property swrc:series;
+    d2rq:condition "dblp_pub_new.type IN ('inproceedings', 'proceedings')";
+    .
+
+## the source for collections
+## status: testing (better property?)
+map:publicationSourceColl a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:uriPattern "collections/@@dblp_pub_new.source_id@@";
+    d2rq:property swrc:series;
+    d2rq:condition "dblp_pub_new.type IN ('incollection')";
+    .
+## books do not have a source
+
+## the publication date (year only)
+## status: final 
+map:publicationYear a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dcterms:issued;
+    d2rq:column "dblp_pub_new.year";
+    d2rq:datatype xsd:gYear;
+    .
+
+## the publication date (year and month)
+## status: experimental / does not work
+## requires some extra Java programming...
+#map:publicationYearMonth a d2rq:PropertyBridge;
+#    d2rq:belongsToClassMap map:Publications;
+#    d2rq:property dcterms:issued;
+#    d2rq:pattern "@@dblp_pub_new.year@@-@@dblp_pub_new.month@@";
+#    d2rq:datatype xsd:gYearMonth;
+#    d2rq:translateWith map:MonthTypes;
+#    .
+#map:MonthTypes a d2rq:TranslationTable;
+#    d2rq:translation [ d2rq:databaseValue "January"; d2rq:rdfValue "01" ];
+#    d2rq:translation [ d2rq:databaseValue "February"; d2rq:rdfValue "02" ];
+#    d2rq:translation [ d2rq:databaseValue "March"; d2rq:rdfValue "03" ];
+#    d2rq:translation [ d2rq:databaseValue "April"; d2rq:rdfValue "04" ];
+#    d2rq:translation [ d2rq:databaseValue "May"; d2rq:rdfValue "05" ];
+#    d2rq:translation [ d2rq:databaseValue "June"; d2rq:rdfValue "06" ];
+#    d2rq:translation [ d2rq:databaseValue "July"; d2rq:rdfValue "07" ];
+#    d2rq:translation [ d2rq:databaseValue "August"; d2rq:rdfValue "08" ];
+#    d2rq:translation [ d2rq:databaseValue "September"; d2rq:rdfValue "09" ];
+#    d2rq:translation [ d2rq:databaseValue "October"; d2rq:rdfValue "10" ];
+#    d2rq:translation [ d2rq:databaseValue "November"; d2rq:rdfValue "11" ];
+#    d2rq:translation [ d2rq:databaseValue "December"; d2rq:rdfValue "12" ];
+#    .
+
+## the publication type (from swrc)
+## status: testing
+map:publicationType a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property rdf:type;
+    d2rq:uriColumn "dblp_pub_new.type";
+    d2rq:translateWith map:PubTypes;
+    .
+map:PubTypes a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "article"; d2rq:rdfValue swrc:Article ];
+    d2rq:translation [ d2rq:databaseValue "inproceedings"; d2rq:rdfValue swrc:InProceedings ];
+    d2rq:translation [ d2rq:databaseValue "incollection"; d2rq:rdfValue swrc:InCollection ];
+    d2rq:translation [ d2rq:databaseValue "proceedings"; d2rq:rdfValue swrc:Proceedings ];
+    d2rq:translation [ d2rq:databaseValue "book"; d2rq:rdfValue swrc:Book ];
+    d2rq:translation [ d2rq:databaseValue "mastersthesis"; d2rq:rdfValue swrc:MasterThesis ];
+    d2rq:translation [ d2rq:databaseValue "phdthesis"; d2rq:rdfValue swrc:PhDThesis ];
+    d2rq:translation [ d2rq:databaseValue "www"; d2rq:rdfValue foaf:Document ];
+    .
+
+## another publication type (from DC)
+## status: final
+map:publicationTypeDC a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dc:type;
+    d2rq:uriColumn "dblp_pub_new.type";
+    d2rq:translateWith map:PubTypesDC;
+    .
+
+map:PubTypesDC a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "article"; d2rq:rdfValue "http://purl.org/dc/dcmitype/Text" ];
+    d2rq:translation [ d2rq:databaseValue "inproceedings"; d2rq:rdfValue "http://purl.org/dc/dcmitype/Text" ];
+    d2rq:translation [ d2rq:databaseValue "incollection"; d2rq:rdfValue "http://purl.org/dc/dcmitype/Text" ];
+    d2rq:translation [ d2rq:databaseValue "proceedings"; d2rq:rdfValue "http://purl.org/dc/dcmitype/Collection" ];
+    d2rq:translation [ d2rq:databaseValue "book"; d2rq:rdfValue "http://purl.org/dc/dcmitype/Text" ];
+    d2rq:translation [ d2rq:databaseValue "mastersthesis"; d2rq:rdfValue "http://purl.org/dc/dcmitype/Text" ];
+    d2rq:translation [ d2rq:databaseValue "phdthesis"; d2rq:rdfValue "http://purl.org/dc/dcmitype/Text" ];
+#    d2rq:translation [ d2rq:databaseValue "www"; d2rq:rdfValue  ];
+    .
+
+## the publication volume
+## status: final
+map:publicationVolume a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property swrc:volume;
+    d2rq:column "dblp_pub_new.volume";
+    d2rq:datatype xsd:string; # yes, this is no integer...
+    .
+
+## the publication number
+## status: final
+map:publicationNumber a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property swrc:number;
+    d2rq:column "dblp_pub_new.number"; 
+    d2rq:datatype xsd:string; # yes, this is also no integer...
+   .
+
+## the publication month (in string format)
+## status: final
+map:publicationMonth a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property swrc:month;
+    d2rq:column "dblp_pub_new.month";
+    d2rq:datatype xsd:string; # yes, this is no gMonth as there are some ranges
+    .
+
+## the publication month (in numeric format; some month are not translated)
+## status: experimental: are two 'swrc:month' triples confusing?
+map:publicationMonthStandard a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property swrc:month;
+    d2rq:column "dblp_pub_new.month";
+    d2rq:datatype xsd:gMonth; 
+    d2rq:translateWith map:MonthTypes;
+    .
+
+## the publication pages
+## status: final
+map:publicationPages a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property swrc:pages;
+    d2rq:column "dblp_pub_new.pages";
+    d2rq:datatype xsd:string;
+    .
+
+## description of the publication in DBLP
+## status: testing (which property most common?)
+map:publicationDBLPURL a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+#    d2rq:property foaf:homepage;
+    d2rq:property rdfs:seeAlso;
+    d2rq:uriPattern "http://dblp.uni-trier.de/@@dblp_pub_new.url@@";
+## for these, we have the tableOfContent below...
+    d2rq:condition "dblp_pub_new.type NOT IN ('book', 'proceedings')";
+    .
+
+## description of the publication on the DL server
+## status: testing (which property most common?)
+map:publicationURL a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property foaf:page;
+    d2rq:property rdfs:seeAlso;
+    d2rq:uriColumn "dblp_pub_new.ee";
+    d2rq:condition "dblp_pub_new.ee_uniq=0";
+    .
+
+## description of the publication on the DL server
+## status: testing (which property most common?)
+map:publicationURLuniq a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property foaf:homepage;
+    d2rq:property rdfs:seeAlso;
+    d2rq:uriColumn "dblp_pub_new.ee";
+    d2rq:condition "dblp_pub_new.ee_uniq=1";
+    .
+
+
+## the publication publisher
+## status: final
+map:publicationPublisher a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dc:publisher;
+    d2rq:column "dblp_pub_new.publisher";
+    d2rq:datatype xsd:string;
+    .
+
+## the publication's ISBN
+## idea from FUBerlin to use urn:isbn, but this is from an informational RFC only (RFC 3187)
+## and it's not so common AFAIK
+## for example: http://scilib.typepad.com/science_library_pad/2006/02/urns_to_contain.html
+## --> convinced me that this is still useful :)
+## status: testing
+map:publicationISBNURN a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property owl:sameAs;
+    d2rq:uriPattern "urn:isbn:@@dblp_pub_new.isbn@@";
+    .
+
+## the publication's equivalent on bibsonomy
+## status: testing
+map:publicationBibsonomy a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property owl:sameAs;
+    d2rq:uriPattern "http://bibsonomy.org/uri/bibtexkey/@@dblp_pub_new.dblp_key@@/dblp";
+    .
+
+## the publication's equivalent on RKBexplorer (Uni Southampton)
+## status: testing
+map:publicationRKBexplorer a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property owl:sameAs;
+    d2rq:uriPattern "http://dblp.rkbexplorer.com/id/@@dblp_pub_new.dblp_key@@";
+    .
+
+map:publicationISBN a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dc:identifier;
+    d2rq:property swrc:isbn;
+## pattern as specified in http://dublincore.org/documents/2002/07/31/dcmes-xml/
+    d2rq:pattern "ISBN @@dblp_pub_new.isbn@@";
+    d2rq:datatype xsd:string;
+    .
+
+## link to amazon (taken from FUBerlin config file)
+## status: final
+map:publicationAmazonLink a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property rdfs:seeAlso;
+    d2rq:uriPattern "http://amazon.com/s/ref=nb_ss_gw?field-keywords=@@dblp_pub_new.isbn@@";
+    .
+
+## the publication's cross-reference (if available)
+## status: final
+map:publicationCrossref a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dcterms:partOf;
+    d2rq:refersToClassMap map:Publications;
+    d2rq:alias "dblp_pub_new AS CrossrefPubs";
+    d2rq:join "dblp_pub_new.crossref = CrossrefPubs.dblp_key";
+    .
+
+## the publication's DOI
+## status: testing (pattern analogeously as for ISBN?)
+map:publicationDOI a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dc:identifier;
+    d2rq:pattern "DOI @@dblp_pub_new.doi|urlify@@";
+    d2rq:datatype xsd:string;
+    .
+
+## the publication's URL created from the DOI
+## status: final
+map:publicationDOIURL a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property foaf:page;
+    d2rq:uriPattern "http://dx.doi.org/@@dblp_pub_new.doi|urlify@@";
+    d2rq:condition "dblp_pub_new.doi_uniq=0";
+    .
+
+## the publication's URL created from the DOI
+## status: final
+map:publicationDOIURLuniq a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property foaf:homepage;
+    d2rq:uriPattern "http://dx.doi.org/@@dblp_pub_new.doi|urlify@@";
+    d2rq:condition "dblp_pub_new.doi_uniq=1";
+    .
+
+
+
+# well, this is meta-metadata...
+#map:publicationModified a d2rq:PropertyBridge;
+#    d2rq:belongsToClassMap map:Publications;
+#    d2rq:property dcterms:modified;
+#    d2rq:column "dblp_pub_new.mdate";
+#    d2rq:datatype xsd:date;
+#    .
+
+## the publication's citations
+## status: final 
+map:publicationRefs a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dcterms:references;
+    d2rq:join "dblp_pub_new.id = dblp_ref_new.id";
+    d2rq:uriPattern "publications/@@dblp_ref_new.ref_id@@";
+    .
+
+## the bibtex entry in DBLP
+## status: final
+map:publicationBibTeX a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dcterms:bibliographicCitation;
+    d2rq:uriPattern "http://dblp.uni-trier.de/rec/bibtex/@@dblp_pub_new.dblp_key@@";
+    .
+
+## the table of content in DBLP for collections (book, proceedings)
+## status: final
+map:publicationToCColl a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+    d2rq:property dcterms:tableOfContent;
+    d2rq:uriPattern "http://dblp.uni-trier.de/@@dblp_pub_new.url@@";
+    d2rq:condition "dblp_pub_new.type IN ('book', 'proceedings')";
+    .
+
+## the publication's authors (label)
+## status: final
+##map:publicationAuthorLabel a d2rq:PropertyBridge;
+##    d2rq:belongsToClassMap map:Publications;
+## may add a separate service that maps creators to persons
+## but not all creators are in fact persons (organization can be author, too)
+##    d2rq:property dc:creator;
+##    d2rq:join "dblp_pub_new.id = dblp_author_ref_new.id";
+##    d2rq:pattern "@@dblp_author_ref_new.author@@";
+##    d2rq:condition "editor = 0";
+##    .
+
+## the publication's editors (label)
+## status: testing
+##map:publicationEditorLabel a d2rq:PropertyBridge;
+##    d2rq:belongsToClassMap map:Publications;
+## may add a separate service that maps creators to persons
+## but not all creators are in fact persons (organization can be author, too)
+##    d2rq:property dc:creator;
+##    d2rq:join "dblp_pub_new.id = dblp_author_ref_new.id";
+##    d2rq:pattern "@@dblp_author_ref_new.author@@";
+##    d2rq:condition "editor = 1";
+##    .
+
+## the publication's authors
+## status: final
+map:publicationAuthor a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+## may add a separate service that maps creators to persons
+## but not all creators are in fact persons (organization can be author, too)
+#    d2rq:property foaf:maker;
+    d2rq:property dc:creator;
+    d2rq:property foaf:maker;
+    d2rq:join "dblp_pub_new.id = dblp_author_ref_new.id";
+    d2rq:uriPattern "authors/@@dblp_author_ref_new.author|urlify@@";
+    d2rq:condition "dblp_author_ref_new.editor = 0";
+    .
+
+## the publication's editors
+## status: testing
+map:publicationEditor a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Publications;
+## may add a separate service that maps creators to persons
+## but not all creators are in fact persons (organization can be author, too)
+#    d2rq:property foaf:maker;
+    d2rq:property dc:creator;
+    d2rq:property swrc:editor;
+    d2rq:join "dblp_pub_new.id = dblp_author_ref_new.id";
+    d2rq:uriPattern "authors/@@dblp_author_ref_new.author|urlify@@";
+    d2rq:condition "dblp_author_ref_new.editor = 1";
+    .
+
+######################################################################################
+# 7. the author class map
+# status: experimental, needs to be changed to the original uncoded table
+######################################################################################
+map:Authors a d2rq:ClassMap;
+    d2rq:uriPattern "authors/@@dblp_authorid_ref_new.author|urlify@@";
+    d2rq:class foaf:Agent; # sometimes also organizations are authors
+    d2rq:dataStorage map:DB;
+#    d2rq:containsDuplicates "true";
+    .
+
+######################################################################################
+# 8. all property bridges for the author class map
+######################################################################################
+
+# alias with a view...
+## the author name
+## status: final (but it confuses the Authors main page...)
+#map:authorAlias a d2rq:PropertyBridge;
+#    d2rq:belongsToClassMap map:Authors;
+#    d2rq:property owl:sameAs;
+#    d2rq:join "dblp_authorid_ref_new.author_id = dblp_aliases_new.author_id";
+#    d2rq:uriPattern "authors/@@dblp_aliases_new.authorAlias|urlify@@";
+#    .
+
+## the author name
+## status: final
+map:authorName a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Authors;
+    d2rq:property foaf:name;
+    d2rq:property rdfs:label;
+    d2rq:column "dblp_authorid_ref_new.author";
+    .
+
+## the author of FacetedDBLP
+## status: final
+map:authorFDBLP a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Authors;
+    d2rq:property rdfs:seeAlso;
+## l3s.de hier klein, weil es fuer RDF *nicht* egal ist, ob Gross- oder Kleinschreibung...
+    d2rq:uriPattern "http://dblp.l3s.de/Authors/@@dblp_authorid_ref_new.author|urlencode@@";
+    .
+
+## the author in Bibsonomy
+## status: final
+map:authorBibsonomy a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Authors;
+    d2rq:property rdfs:seeAlso;
+    d2rq:uriPattern "http://www.bibsonomy.org/uri/author/@@dblp_authorid_ref_new.author|urlencode@@";
+    .
+
+## the authors homepage
+## status: experimental
+map:authorHomepage a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Authors;
+    d2rq:property foaf:homepage;
+    d2rq:join "dblp_authorid_ref_new.author_id = dblp_main_aliases_new.author_id";
+    d2rq:uriColumn "dblp_main_aliases_new.hp_ee";
+    .
+
+######################################################################################
+# 9. the journal class map
+# status: experimental
+######################################################################################
+map:Journals a d2rq:ClassMap;
+    d2rq:uriPattern "journals/@@dblp_pub_new.source_id@@";
+    d2rq:class swrc:Journal;
+#    d2rq:containsDuplicates "true";
+    d2rq:dataStorage map:DB;
+    d2rq:condition "dblp_pub_new.type = 'article'";
+    .
+
+######################################################################################
+# 10. all property bridges for the journal class map
+######################################################################################
+
+## the name of the journal as stored in 'source' for articles
+## status: testing
+map:JournalName a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Journals;
+    d2rq:property dc:title;
+    d2rq:property rdfs:label;
+    d2rq:column "dblp_pub_new.source";
+    d2rq:datatype xsd:string;
+    .
+
+## the journal in FacetedDBLP
+## status: final
+map:journalFDBLP a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Journals;
+    d2rq:property rdfs:seeAlso;
+## l3s.de hier klein, weil es fuer RDF *nicht* egal ist, ob Gross- oder Kleinschreibung...
+    d2rq:uriPattern "http://dblp.l3s.de/Venues/@@dblp_pub_new.source|urlencode@@";
+    .
+
+######################################################################################
+# 11. the conference class map
+# status: experimental
+######################################################################################
+map:Conferences a d2rq:ClassMap;
+    d2rq:uriPattern "conferences/@@dblp_pub_new.source_id@@";
+    d2rq:class swrc:Conference;
+#    d2rq:containsDuplicates "true";
+    d2rq:dataStorage map:DB;
+    d2rq:condition "dblp_pub_new.type IN ('inproceedings', 'proceedings')"
+    .
+
+######################################################################################
+# 12. all property bridges for the conference class map
+######################################################################################
+
+## the name of the conference as stored in 'source' for articles
+## status: testing
+map:ConferenceName a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Conferences;
+    d2rq:property dc:title;
+    d2rq:property rdfs:label;
+    d2rq:column "dblp_pub_new.source";
+    d2rq:datatype xsd:string;
+    .
+
+## the conference in FacetedDBLP
+## status: final
+map:conferenceFDBLP a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Conferences;
+    d2rq:property rdfs:seeAlso;
+## l3s.de hier klein, weil es fuer RDF *nicht* egal ist, ob Gross- oder Kleinschreibung...
+    d2rq:uriPattern "http://dblp.l3s.de/Venues/@@dblp_pub_new.source|urlencode@@";
+    .
+
+######################################################################################
+# 13. the collection class map (for books comprising articles from other persons)
+# status: testing
+######################################################################################
+map:Collections a d2rq:ClassMap;
+    d2rq:uriPattern "collections/@@dblp_pub_new.source_id@@";
+    d2rq:class swrc:Collection;
+#    d2rq:containsDuplicates "true";
+    d2rq:dataStorage map:DB;
+    d2rq:condition "dblp_pub_new.type IN ('incollection', 'book') and source_id like '%/%'"
+    .
+
+######################################################################################
+# 14. all property bridges for the collection class map
+######################################################################################
+
+## the name of the collection as stored in 'source' for articles
+## status: testing
+map:CollectionName a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Collections;
+    d2rq:property dc:title;
+    d2rq:property rdfs:label;
+    d2rq:column "dblp_pub_new.source";
+    d2rq:datatype xsd:string;
+    .
+
+## reference to crossref (if existing)
+## status: testing
+map:CollectionCrossref a d2rq:PropertyBridge;
+    d2rq:belongsToClassMap map:Collections;
+    d2rq:property owl:sameAs;
+    d2rq:uriPattern "publications/@@dblp_pub_new.crossref@@";
+    .

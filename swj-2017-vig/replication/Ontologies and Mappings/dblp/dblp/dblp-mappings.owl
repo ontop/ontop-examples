@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rdf:RDF xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    <owl:Ontology rdf:about=""/>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#University">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#hasParts"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Department"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#student"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Student"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#AssociateProfessor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#FacultyMember"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#SoftwareComponent">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Product"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#InBook">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#publisher"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#author"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#editor"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Conference">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Event"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Student">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#studiesAt"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#University"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#AssistantProfessor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#FacultyMember"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#FullProfessor">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#FacultyMember"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Manual">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#author"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#organization"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Department">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#hasParts"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Institute"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#ProjectReport">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Report"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#describesProject"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Project"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Report">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#author"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Thesis">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#school"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#University"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#author"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Employee">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#affiliation"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#SoftwareProject">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#DevelopmentProject"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#product"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Product"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Unpublished">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#author"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#InCollection">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#editor"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#publisher"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#author"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Lecturer">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#AcademicStaff"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#TechnicalReport">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Report"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#organization"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#PhDThesis">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Thesis"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Undergraduate">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Student"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Article">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#author"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#employs"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#technicalReport"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#TechnicalReport"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#finances"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Project"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#carriesOut"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Project"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#publishes"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#develops"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Product"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Exhibition">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Event"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Product">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#developedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Project">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#carriedOutBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#member"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#head"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Employee"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#projectInfo"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#financedBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#isAbout"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#ResearchTopic"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#AdministrativeStaff">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Employee"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#hasPartEvent"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Event"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#atEvent"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Event"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#ProjectMeeting">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Meeting"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Topic"/>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Lecture">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Event"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#givenBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Booklet">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#author"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#ResearchGroup">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#member"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Employee"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#head"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Employee"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#ResearchTopic">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Topic"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#isWorkedOnBy"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#AcademicStaff"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#dealtWithIn"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Project"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#PhDStudent">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Graduate"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#worksAtProject"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Project"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#supervisor"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#AcademicStaff"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#publication"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Institute">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#cooperateWith"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Institute"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#hasParts"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#ResearchGroup"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#cite"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#ResearchProject">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Project"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Manager">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Employee"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Enterprise">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#AcademicStaff">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Employee"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#worksAtProject"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Project"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#supervises"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#PhDStudent"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#editor"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#cooperateWith"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#AcademicStaff"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#memberOfPC"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Event"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#organizerOrChairOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Event"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#publication"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#headOfGroup"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#ResearchGroup"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#headOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Project"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Meeting">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Event"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#participant"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#TechnicalStaff">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Employee"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#FacultyMember">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#AcademicStaff"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Book">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#author"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#editor"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#publisher"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Misc">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#DevelopmentProject">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Project"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#MasterThesis">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Thesis"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Proceedings">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#organization"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#publisher"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#editor"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Association">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#InProceedings">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Publication"/>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#author"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#editor"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Person"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#organization"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://swrc.ontoware.org/ontology#publisher"/>
+                <owl:allValuesFrom>
+                    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Organization"/>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Workshop">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Event"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Graduate">
+        <rdfs:subClassOf>
+            <owl:Class rdf:about="http://swrc.ontoware.org/ontology#Student"/>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#atEvent"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#affiliation"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#organizerOrChairOf"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#keywords"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#financedBy"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#supervises"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#supervisor">
+        <owl:inverseOf rdf:resource="http://swrc.ontoware.org/ontology#supervises"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#product"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#RootRelation"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#fax"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#memberOfPC"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#develops">
+        <owl:inverseOf rdf:resource="http://swrc.ontoware.org/ontology#developedBy"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#givenBy"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#headOfGroup">
+        <owl:inverseOf rdf:resource="http://swrc.ontoware.org/ontology#head"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#worksAtProject"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#author"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#editor"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#publication"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#headOf"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#abstract"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#chapter"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#projectInfo">
+        <owl:inverseOf rdf:resource="http://swrc.ontoware.org/ontology#describesProject"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#member"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#citedBy">
+        <owl:inverseOf rdf:resource="http://swrc.ontoware.org/ontology#cite"/>
+        <rdfs:range>
+            <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#number"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#organization"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#location"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#school"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#series"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#describesProject"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#source"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#hasPartEvent">
+        <owl:inverseOf rdf:resource="http://swrc.ontoware.org/ontology#atEvent"/>
+    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#volume"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#carriedOutBy"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#isWorkedOnBy"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#developedBy"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#publisher">
+        <owl:inverseOf rdf:resource="http://swrc.ontoware.org/ontology#publishes"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#publishes"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#technicalReport"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#email"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#month"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#pages"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#phone"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#photo"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#price"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#title"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#isAbout"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#howpublished"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#booktitle"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#carriesOut">
+        <owl:inverseOf rdf:resource="http://swrc.ontoware.org/ontology#carriedOutBy"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#dealtWithIn"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#eventTitle"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#studiesAt"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#edition"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#student"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#participant"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#finances"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#institution"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#employs">
+        <owl:inverseOf rdf:resource="http://swrc.ontoware.org/ontology#affiliation"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#Root"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#cite">
+        <owl:inverseOf rdf:resource="http://swrc.ontoware.org/ontology#citedBy"/>
+    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#date"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#head"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#isbn"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#name"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#note"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#type"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#year"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#homepage"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#journal"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#cooperateWith"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#address"/>
+    <owl:ObjectProperty rdf:about="http://swrc.ontoware.org/ontology#hasParts"/>
+    <owl:DatatypeProperty rdf:about="http://swrc.ontoware.org/ontology#hasPrice"/>
+</rdf:RDF>

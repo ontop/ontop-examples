@@ -1,0 +1,108 @@
+[PrefixDeclaration]
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xsd:		http://www.w3.org/2001/XMLSchema#
+quest:		http://obda.org/quest#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+:           http://dblp.l3s.de/d2r/resource/
+foaf:       http://xmlns.com/foaf/0.1/
+swrc:       http://swrc.ontoware.org/ontology#
+bibsonomy:  http://www.bibsonomy.org/uri/
+dblp:       http://dblp.l3s.de/
+dc:         http://purl.org/dc/elements/1.1/
+dct:	    http://purl.org/dc/terms/
+
+[SourceDeclaration]
+sourceUri	file:/Users/xiao/src/D2RQ_to_R2RML/dblp.r2rml
+connectionUrl   jdbc:mysql://10.7.20.65/vig_rand_scale_1_dblp_2017_02_04
+username  fish
+password   fish
+driverClass  com.mysql.jdbc.Driver
+
+[MappingDeclaration] @collection [[
+mappingId	mapping--540425192
+target		:authors/{author} a foaf:Agent ; foaf:name {author}^^xsd:string ; rdfs:seeAlso dblp:Authors/{author} , bibsonomy:author/{author} ;  rdfs:label {author}^^xsd:string .
+source		SELECT author FROM dblp_authorid_ref_new
+
+mappingId	mapping--540425192
+target		:authors/{author} foaf:homepage <{hp_ee}> .
+source		SELECT author, hp_ee FROM dblp_main_aliases_new
+
+mappingId	mapping-1437803285
+target		:collections/{source_id} a swrc:Collection ; owl:sameAs :publications/{crossref} ; dc:title {source}^^xsd:string ; rdfs:label {source}^^xsd:string .
+source		SELECT * FROM dblp_pub_new WHERE type IN ('incollection', 'book')
+
+mappingId	mapping--Davide1
+target		:conferences/{source_id} a swrc:Conference ; rdfs:seeAlso <http://dblp.l3s.de/Venues/{source}> ; dc:title {source}^^xsd:string ; rdfs:label {source}^^xsd:string .
+source		SELECT * FROM dblp_pub_new where type IN ('inproceedings', 'proceedings')
+
+mappingId	mapping--584873494
+target		:publications/{dblp_key} a foaf:Document ; dc:publisher {publisher}^^xsd:string ; rdfs:seeAlso <http://amazon.com/s/ref=nb_ss_gw?field-keywords={isbn}> , <{ee}> ; dc:title {title}^^xsd:string ; rdfs:label {title}^^xsd:string ; swrc:volume {volume}^^xsd:string ; swrc:month {month}^^xsd:string ; swrc:number {number}^^xsd:string ; owl:sameAs <http://bibsonomy.org/uri/bibtexkey/{dblp_key}/dblp> , <http://dblp.rkbexplorer.com/id/{dblp_key}> ; dc:identifier "DOI {doi}"^^rdfs:Literal , "ISBN {isbn}"^^rdfs:Literal , "DBLP {dblp_key}"^^rdfs:Literal ; foaf:homepage <{ee}> ; swrc:isbn "ISBN {isbn}"^^rdfs:Literal ; swrc:series :conferences/{source_id} , :collections/{source_id} ; foaf:page <{ee}> , <http://dx.doi.org/{doi}> ; dct:tableOfContent <http://dblp.uni-trier.de/{url}> ; dct:issued {year}^^xsd:gYear ; dct:bibliographicCitation <http://dblp.uni-trier.de/rec/bibtex/{dblp_key}> ; swrc:pages {pages}^^xsd:string .
+source		SELECT * FROM dblp_pub_new
+
+mappingId	mapping-join--1547166648
+target		:publications/{dblp_key} rdfs:seeAlso <http://dblp.uni-trier.de/{url}> .
+source		SELECT * FROM dblp_pub_new
+
+mappingId	mapping-join--914526819
+target		:publications/{dblp_key} foaf:homepage <http://dx.doi.org/{doi}> .
+source		SELECT * FROM dblp_pub_new
+
+mappingId	mapping-join--1175902733
+target		:publications/{dblp_key} swrc:editor :authors/{author} ; dc:creator :authors/{author} .
+source		SELECT * FROM dblp_pub_new AS child, dblp_author_ref_new AS parent WHERE child.id=parent.id AND parent.editor = 1
+
+mappingId	mapping-join--263196419
+target		:publications/{dblp_key} dct:partOf :publications/{dblp_key} .
+source		SELECT dblp_key FROM dblp_pub_new 
+
+mappingId	mapping-join--1975154535
+target		:publications/{dblp_key} swrc:journal :journals/{source_id} .
+source		SELECT * FROM dblp_pub_new WHERE dblp_pub_new.type='article'
+
+mappingId	mapping-join--903207262
+target		:publications/{dblp_key} dct:references :publications/{ref_id} .
+source		SELECT * FROM dblp_pub_new AS child, dblp_ref_new AS parent WHERE child.id=parent.id
+
+mappingId	mapping-join--479379791
+target		:publications/{dblp_key} foaf:maker :authors/{author} ; dc:creator :authors/{author} .
+source		SELECT * FROM dblp_pub_new AS child, dblp_author_ref_new AS parent WHERE child.id=parent.id AND parent.editor = 0
+
+mappingId	mapping-1565489986
+target		:journals/{source_id} a swrc:Journal ; dc:title {source}^^xsd:string ; rdfs:label {source}^^xsd:string ; rdfs:seeAlso <http://dblp.l3s.de/Venues/{source}> .
+source		SELECT * FROM dblp_pub_new WHERE dblp_pub_new.type='article'
+
+mappingId	manual-1
+target 		:publications/{dblp_key} a swrc:Article .
+source 		SELECT type FROM dblp_pub_new WHERE type='article'
+
+mappingId	manual-2
+target 		:publications/{dblp_key} a swrc:InProceedings .
+source 		SELECT type FROM dblp_pub_new WHERE type='inproceedings'
+
+mappingId	manual-3
+target 		:publications/{dblp_key} a swrc:InCollection .
+source 		SELECT type FROM dblp_pub_new WHERE type='incollection'
+
+mappingId	manual-4
+target 		:publications/{dblp_key} a swrc:Proceedings .
+source 		SELECT type FROM dblp_pub_new WHERE type='proceedings'
+
+mappingId	manual-5
+target 		:publications/{dblp_key} a swrc:Book .
+source 		SELECT type FROM dblp_pub_new WHERE type='book'
+
+mappingId	manual-6
+target 		:publications/{dblp_key} a swrc:MasterThesis .
+source 		SELECT type FROM dblp_pub_new WHERE type='masterthesis'
+
+mappingId	manual-7
+target 		:publications/{dblp_key} a swrc:PhDThesis .
+source 		SELECT type FROM dblp_pub_new WHERE type='phdthesis'
+
+mappingId	manual-8
+target 		:publications/{dblp_key} a swrc:Document .
+source 		SELECT type FROM dblp_pub_new WHERE type='www'
+
+]]
+
