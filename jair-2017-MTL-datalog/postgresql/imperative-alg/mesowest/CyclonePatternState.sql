@@ -1,0 +1,144 @@
+CREATE TEMPORARY TABLE NW AS  
+SELECT SID, dFrom, dTo
+FROM (SELECT station_id AS SID,
+lag(date_time, 1) OVER (PARTITION BY station_id ORDER BY date_time) AS dFrom,
+date_time AS dTo,
+wind_direction_set_1 AS wd,
+wind_speed_set_1 AS ws,
+ROW_NUMBER() OVER(PARTITION BY station_id ORDER BY date_time) AS rnm 
+FROM tb_newyorkdata2005) AS a 
+WHERE (wd > 315 OR wd <= 45) AND ws > 0 AND rnm > 1 AND dTo - dFrom <= interval '1 day';
+
+CREATE TEMPORARY TABLE CNW AS
+SELECT * FROM CoalesceInterval('NW', 'SID', 'dFrom', 'dTo');
+
+CREATE TEMPORARY TABLE L1_NW AS 
+SELECT state, dFrom, dTo FROM CNW, tb_metadata WHERE SID = stid
+ORDER BY (state, dFrom);
+
+CREATE TEMPORARY TABLE LOCATIONOFNW AS 
+SELECT SID AS state, dFrom, dTo FROM CoalesceInterval('L1_NW', 'state', 'dFrom', 'dTo');
+
+CREATE TEMPORARY TABLE EW AS
+SELECT SID, dFrom, dTo
+FROM (SELECT station_id AS SID,
+lag(date_time, 1) OVER (PARTITION BY station_id ORDER BY date_time) AS dFrom,
+date_time AS dTo,
+wind_direction_set_1 AS wd,
+wind_speed_set_1 AS ws,
+ROW_NUMBER() OVER(PARTITION BY station_id ORDER BY date_time) AS rnm 
+FROM tb_newyorkdata2005) AS a 
+WHERE wd > 45 AND wd <= 135 AND ws > 0 AND rnm > 1 AND dTo - dFrom <= interval '1 day';
+
+CREATE TEMPORARY TABLE CEW AS
+SELECT * FROM CoalesceInterval('EW', 'SID', 'dFrom', 'dTo');
+
+CREATE TEMPORARY TABLE L1_EW AS 
+SELECT state, dFrom, dTo FROM CEW, tb_metadata WHERE SID = stid
+ORDER BY (state, dFrom);
+
+CREATE TEMPORARY TABLE LOCATIONOFEW AS 
+SELECT SID AS state, dFrom, dTo FROM CoalesceInterval('L1_EW', 'state', 'dFrom', 'dTo');
+ 	
+CREATE TEMPORARY TABLE SW AS
+SELECT SID, dFrom, dTo
+FROM (SELECT station_id AS SID,
+lag(date_time, 1) OVER (PARTITION BY station_id ORDER BY date_time) AS dFrom,
+date_time AS dTo,
+wind_direction_set_1 AS wd,
+wind_speed_set_1 AS ws,
+ROW_NUMBER() OVER(PARTITION BY station_id ORDER BY date_time) AS rnm 
+FROM tb_newyorkdata2005) AS a 
+WHERE wd > 135 AND wd <= 225 AND ws > 0 AND rnm > 1 AND dTo - dFrom <= interval '1 day';
+
+CREATE TEMPORARY TABLE CSW AS
+SELECT * FROM CoalesceInterval('SW', 'SID', 'dFrom', 'dTo');
+
+CREATE TEMPORARY TABLE L1_SW AS 
+SELECT state, dFrom, dTo FROM CSW, tb_metadata WHERE SID = stid
+ORDER BY (state, dFrom);
+
+CREATE TEMPORARY TABLE LOCATIONOFSW AS 
+SELECT SID AS state, dFrom, dTo FROM CoalesceInterval('L1_SW', 'state', 'dFrom', 'dTo');
+
+CREATE TEMPORARY TABLE WW AS
+SELECT SID, dFrom, dTo
+FROM (SELECT station_id AS SID,
+lag(date_time, 1) OVER (PARTITION BY station_id ORDER BY date_time) AS dFrom,
+date_time AS dTo,
+wind_direction_set_1 AS wd,
+wind_speed_set_1 AS ws,
+ROW_NUMBER() OVER(PARTITION BY station_id ORDER BY date_time) AS rnm 
+FROM tb_newyorkdata2005) AS a 
+WHERE wd > 225 AND wd <= 315 AND ws > 0 AND rnm > 1 AND dTo - dFrom <= interval '1 day';
+
+CREATE TEMPORARY TABLE CWW AS
+SELECT * FROM CoalesceInterval('WW', 'SID', 'dFrom', 'dTo');
+
+CREATE TEMPORARY TABLE L1_WW AS 
+SELECT state, dFrom, dTo FROM CWW, tb_metadata WHERE SID = stid
+ORDER BY (state, dFrom);
+
+CREATE TEMPORARY TABLE LOCATIONOFWW AS 
+SELECT SID AS state, dFrom, dTo FROM CoalesceInterval('L1_WW', 'state', 'dFrom', 'dTo');
+
+CREATE INDEX LOCATIONOFEW_IDX_FROM_TO ON LOCATIONOFEW (dFrom,dTo);
+CREATE INDEX LOCATIONOFWW_IDX_FROM_TO ON LOCATIONOFWW (dFrom,dTo);
+
+CREATE TEMPORARY TABLE F1 AS
+SELECT LOCATIONOFEW.state AS x_state_1,
+CASE 
+WHEN LOCATIONOFEW.dFrom > LOCATIONOFWW.dFrom AND LOCATIONOFWW.dTo > LOCATIONOFEW.dFrom THEN LOCATIONOFEW.dFrom
+WHEN LOCATIONOFWW.dFrom > LOCATIONOFEW.dFrom AND LOCATIONOFEW.dTo > LOCATIONOFWW.dFrom THEN LOCATIONOFWW.dFrom
+WHEN LOCATIONOFEW.dFrom = LOCATIONOFWW.dFrom THEN LOCATIONOFEW.dFrom
+END AS x_from_1,
+CASE 
+WHEN LOCATIONOFEW.dTo < LOCATIONOFWW.dTo AND LOCATIONOFEW.dTo > LOCATIONOFWW.dFrom THEN LOCATIONOFEW.dTo
+WHEN LOCATIONOFWW.dTo < LOCATIONOFEW.dTo AND LOCATIONOFWW.dTo > LOCATIONOFEW.dFrom THEN LOCATIONOFWW.dTo
+WHEN LOCATIONOFEW.dTo = LOCATIONOFWW.dTo THEN LOCATIONOFEW.dTo
+END AS x_to_1
+FROM LOCATIONOFEW, LOCATIONOFWW
+WHERE LOCATIONOFEW.state = LOCATIONOFWW.state AND 
+((LOCATIONOFEW.dFrom > LOCATIONOFWW.dFrom AND LOCATIONOFWW.dTo > LOCATIONOFEW.dFrom) OR (LOCATIONOFWW.dFrom > LOCATIONOFEW.dFrom AND LOCATIONOFEW.dTo > LOCATIONOFWW.dFrom) OR (LOCATIONOFEW.dFrom = LOCATIONOFWW.dFrom)) AND
+((LOCATIONOFEW.dTo < LOCATIONOFWW.dTo AND LOCATIONOFEW.dTo > LOCATIONOFWW.dFrom) OR (LOCATIONOFWW.dTo < LOCATIONOFEW.dTo AND LOCATIONOFWW.dTo > LOCATIONOFEW.dFrom) OR (LOCATIONOFEW.dTo = LOCATIONOFWW.dTo));
+
+CREATE INDEX LOCATIONOFNW_IDX_FROM_TO ON LOCATIONOFNW (dFrom,dTo);
+CREATE INDEX LOCATIONOFSW_IDX_FROM_TO ON LOCATIONOFSW (dFrom,dTo);
+
+CREATE TEMPORARY TABLE F2 AS
+SELECT LOCATIONOFNW.state AS x_state_2,
+CASE 
+WHEN LOCATIONOFNW.dFrom > LOCATIONOFSW.dFrom AND LOCATIONOFSW.dTo > LOCATIONOFNW.dFrom THEN LOCATIONOFNW.dFrom
+WHEN LOCATIONOFSW.dFrom > LOCATIONOFNW.dFrom AND LOCATIONOFNW.dTo > LOCATIONOFSW.dFrom THEN LOCATIONOFSW.dFrom
+WHEN LOCATIONOFNW.dFrom = LOCATIONOFSW.dFrom THEN LOCATIONOFNW.dFrom
+END AS x_from_2,
+CASE 
+WHEN LOCATIONOFNW.dTo < LOCATIONOFSW.dTo AND LOCATIONOFNW.dTo > LOCATIONOFSW.dFrom THEN LOCATIONOFNW.dTo
+WHEN LOCATIONOFSW.dTo < LOCATIONOFNW.dTo AND LOCATIONOFSW.dTo > LOCATIONOFNW.dFrom THEN LOCATIONOFSW.dTo
+WHEN LOCATIONOFNW.dTo = LOCATIONOFSW.dTo THEN LOCATIONOFNW.dTo
+END AS x_to_2
+FROM LOCATIONOFNW, LOCATIONOFSW
+WHERE LOCATIONOFNW.state = LOCATIONOFSW.state AND 
+((LOCATIONOFNW.dFrom > LOCATIONOFSW.dFrom AND LOCATIONOFSW.dTo > LOCATIONOFNW.dFrom) OR (LOCATIONOFSW.dFrom > LOCATIONOFNW.dFrom AND LOCATIONOFNW.dTo > LOCATIONOFSW.dFrom) OR (LOCATIONOFNW.dFrom = LOCATIONOFSW.dFrom)) AND
+((LOCATIONOFNW.dTo < LOCATIONOFSW.dTo AND LOCATIONOFNW.dTo > LOCATIONOFSW.dFrom) OR (LOCATIONOFSW.dTo < LOCATIONOFNW.dTo AND LOCATIONOFSW.dTo > LOCATIONOFNW.dFrom) OR (LOCATIONOFNW.dTo = LOCATIONOFSW.dTo));
+
+
+CREATE INDEX F1_IDX_FROM_TO ON F1 (x_from_1,x_to_1);
+CREATE INDEX F2_IDX_FROM_TO ON F2 (x_from_2,x_to_2);
+
+SELECT x_state_1 AS x_state_3,
+CASE
+WHEN x_from_1 > x_from_2 AND x_to_2 > x_from_1 THEN x_from_1
+WHEN x_from_2 > x_from_1 AND x_to_1 > x_from_2 THEN x_from_2
+WHEN x_from_1 = x_from_2 THEN x_from_1
+END AS x_from_3,
+CASE 
+WHEN x_to_1 < x_to_2 AND x_to_1 > x_from_2 THEN x_to_1
+WHEN x_to_2 < x_to_1 AND x_to_2 > x_from_1 THEN x_to_2
+WHEN x_to_1 = x_to_2 THEN x_to_1
+END AS x_to_3
+FROM F1, F2
+WHERE x_state_1 = x_state_2 AND 
+((x_from_1 > x_from_2 AND x_to_2 > x_from_1) OR (x_from_2 > x_from_1 AND x_to_1 > x_from_2) OR (x_from_1 = x_from_2))
+AND 
+((x_to_1 < x_to_2 AND x_to_1 > x_from_2) OR (x_to_2 < x_to_1 AND x_to_2 > x_from_1) OR (x_to_1 = x_to_2));
