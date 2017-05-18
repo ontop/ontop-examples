@@ -1,0 +1,11 @@
+PREFIX : <http://awards.org/> 
+SELECT ?firstName1 ?lastName1 ?firstName2 ?lastName2 ?awName ?y 
+WHERE { 
+ ?sc1 :hasOccupation "computer scientist" ; :hasReceived ?aw1 ;
+ :hasFirstName ?firstName1 ; :hasLastName ?lastName1 . 
+ ?aw1 :receivedIn ?y ; :hasTitle ?awName .
+ ?sc2 :hasOccupation "computer scientist" ; :hasReceived ?aw2 ;
+ :hasFirstName ?firstName2 ; :hasLastName ?lastName2 .
+ ?aw2 :receivedIn ?y ; :hasTitle ?awName .
+ FILTER (?sc1 != ?sc2)
+}
