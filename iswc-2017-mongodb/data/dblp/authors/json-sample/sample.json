@@ -1,0 +1,262 @@
+/* 1 */
+{
+    "_id" : "'Maseka_Lesaoana",
+    "name" : "'Maseka Lesaoana",
+    "publications" : {
+        "article" : [ 
+            {
+                "title" : "Scheduling with Fixed Delivery Dates.",
+                "year" : 2001,
+                "pages" : "134-144",
+                "in" : "Operations Research",
+                "url" : "http://dx.doi.org/10.1287/opre.49.1.134.11192",
+                "dblp_key" : "journals/ior/HallLP01"
+            }, 
+            {
+                "title" : "A transportation branch and bound algorithm for solving the generalized assignment problem.",
+                "year" : 2015,
+                "pages" : "217-223",
+                "in" : "Int. J. Systems Assurance Engineering and Management",
+                "url" : "http://dx.doi.org/10.1007/s13198-015-0343-9",
+                "dblp_key" : "journals/saem/MunapoLNK15"
+            }
+        ]
+    }
+}
+
+/* 2 */
+{
+    "_id" : "(Max)_Zong-Ming_Cheng",
+    "name" : "(Max) Zong-Ming Cheng",
+    "publications" : {
+        "article" : [ 
+            {
+                "title" : "MicroSyn: A user friendly tool for detection of microsynteny in a gene family.",
+                "year" : 2011,
+                "pages" : "79",
+                "in" : "BMC Bioinformatics",
+                "url" : "http://dx.doi.org/10.1186/1471-2105-12-79",
+                "dblp_key" : "journals/bmcbi/CaiYTC11"
+            }, 
+            {
+                "title" : "Comparative genome analysis of lignin biosynthesis gene families across the plant kingdom.",
+                "year" : 2009,
+                "pages" : "3",
+                "in" : "BMC Bioinformatics",
+                "url" : "http://dx.doi.org/10.1186/1471-2105-10-S11-S3",
+                "dblp_key" : "journals/bmcbi/XuZHZYRSSYGSDSBBCHLDSY09"
+            }
+        ]
+    }
+}
+
+/* 3 */
+{
+    "_id" : "(Zhou)_Bryan_Bai",
+    "name" : "(Zhou) Bryan Bai",
+    "publications" : {
+        "inproceedings" : [ 
+            {
+                "title" : "Sequence learning: analysis and solutions for sparse data in high dimensional spaces.",
+                "year" : 2012,
+                "pages" : "298-305",
+                "proceedings" : "conf/cibcb/2012",
+                "booktitle" : "CIBCB",
+                "url" : "http://dx.doi.org/10.1109/CIBCB.2012.6217244",
+                "dblp_key" : "conf/cibcb/BaiK12"
+            }, 
+            {
+                "title" : "Regularization of sequence data for machine learning.",
+                "year" : 2011,
+                "pages" : "19-25",
+                "proceedings" : "conf/bibm/2011w",
+                "booktitle" : "BIBM Workshops",
+                "url" : "http://dx.doi.org/10.1109/BIBMW.2011.6112350",
+                "dblp_key" : "conf/bibm/BaiK11"
+            }
+        ]
+    }
+}
+
+/* 4 */
+{
+    "_id" : "A_Lun",
+    "name" : "A Lun",
+    "publications" : {
+        "inproceedings" : [ 
+            {
+                "title" : "An intelligent and automatic detective system for pore structure of a new environment-friendly board.",
+                "year" : 2010,
+                "pages" : "3269-3273",
+                "proceedings" : "conf/icnc/2010",
+                "booktitle" : "ICNC",
+                "url" : "http://dx.doi.org/10.1109/ICNC.2010.5583874",
+                "dblp_key" : "conf/icnc/LunMLY10"
+            }
+        ]
+    }
+}
+
+/* 5 */
+{
+    "_id" : "A'ang_Subiyakto",
+    "name" : "A'ang Subiyakto",
+    "publications" : {
+        "article" : [ 
+            {
+                "title" : "Measurement of the information system project success of the higher education institutions in Indonesia: a pilot study.",
+                "year" : 2016,
+                "pages" : "229-247",
+                "in" : "IJBIS",
+                "url" : "http://dx.doi.org/10.1504/IJBIS.2016.10000261",
+                "dblp_key" : "journals/ijbis/SubiyaktoAKP16"
+            }
+        ]
+    }
+}
+
+/* 6 */
+{
+    "_id" : "A'fza_Shafie",
+    "name" : "A'fza Shafie",
+    "publications" : {
+        "inproceedings" : [ 
+            {
+                "title" : "User Experience Study on Folktales Mobile Application for Children's Education.",
+                "year" : 2015,
+                "pages" : "353-358",
+                "proceedings" : "conf/ngmast/2015",
+                "booktitle" : "NGMAST",
+                "url" : "http://dx.doi.org/10.1109/NGMAST.2015.73",
+                "dblp_key" : "conf/ngmast/IbrahimFAS15"
+            }
+        ]
+    }
+}
+
+/* 7 */
+{
+    "_id" : "A'zraa_Afhzan_Ab_Rahim",
+    "name" : "A'zraa Afhzan Ab Rahim",
+    "publications" : {
+        "inproceedings" : [ 
+            {
+                "title" : "A Non-invasive Method to Measure the Sweetness of Malaysian Papaya Quantitatively Using NIR Full-transmittance Technique - A Preliminary Study.",
+                "year" : 2011,
+                "pages" : "379-384",
+                "proceedings" : "conf/cicsyn/2011",
+                "booktitle" : "CICSyN",
+                "url" : "http://dx.doi.org/10.1109/CICSyN.2011.85",
+                "dblp_key" : "conf/cicsyn/RahimSTH11"
+            }
+        ]
+    }
+}
+
+/* 8 */
+{
+    "_id" : "A-Chuan_Hsueh",
+    "name" : "A-Chuan Hsueh",
+    "publications" : {
+        "article" : [ 
+            {
+                "title" : "Autonomous Robotic Vehicle Road Following.",
+                "year" : 1988,
+                "pages" : "648-658",
+                "in" : "IEEE Trans. Pattern Anal. Mach. Intell.",
+                "url" : "http://dx.doi.org/10.1109/34.6773",
+                "dblp_key" : "journals/pami/KuanPH88"
+            }
+        ],
+        "inproceedings" : [ 
+            {
+                "title" : "A Real-Time Road Following and Road Junction Detection Vision System for Autonomous Vehicles.",
+                "year" : 1986,
+                "pages" : "1127-1132",
+                "proceedings" : "conf/aaai/1986-2",
+                "booktitle" : "AAAI",
+                "url" : "http://www.aaai.org/Library/AAAI/1986/aaai86-186.php",
+                "dblp_key" : "conf/aaai/KuanPH86"
+            }
+        ]
+    }
+}
+
+/* 9 */
+{
+    "_id" : "A-Imam_Al-Sammak",
+    "name" : "A-Imam Al-Sammak",
+    "publications" : {
+        "article" : [ 
+            {
+                "title" : "Design of a Multicode Bi-phase Encoder for Data Transmission.",
+                "year" : 2006,
+                "pages" : "1-12",
+                "in" : "Journal of Circuits, Systems, and Computers",
+                "url" : "http://dx.doi.org/10.1142/S0218126606002897",
+                "dblp_key" : "journals/jcsc/Al-AlawiA06"
+            }, 
+            {
+                "title" : "Performance of collaborative codes in random multi access communication systems.",
+                "year" : 1992,
+                "pages" : "581-585",
+                "in" : "Computer Communications",
+                "url" : "http://dx.doi.org/10.1016/0140-3664(92)90056-K",
+                "dblp_key" : "journals/comcom/Al-SammakAA92"
+            }, 
+            {
+                "title" : "Markov chain analysis of collaborative codes in random multi access communication systems.",
+                "year" : 2005,
+                "pages" : "441-448",
+                "in" : "Computer Communications",
+                "url" : "http://dx.doi.org/10.1016/j.comcom.2004.08.015",
+                "dblp_key" : "journals/comcom/GebaliA05"
+            }, 
+            {
+                "title" : "Development of engineering education in bahrain.",
+                "year" : 2006,
+                "pages" : "12-17",
+                "in" : "IEEE Technol. Soc. Mag.",
+                "url" : "http://dx.doi.org/10.1109/MTAS.2006.1649023",
+                "dblp_key" : "journals/tasm/Al-SammakA06"
+            }, 
+            {
+                "title" : "Communication Networks Performance of collaborative codes in CSMA/CD environment.",
+                "year" : 2006,
+                "pages" : "525-531",
+                "in" : "European Transactions on Telecommunications",
+                "url" : "http://dx.doi.org/10.1002/ett.1137",
+                "dblp_key" : "journals/ett/GebaliA06"
+            }
+        ],
+        "inproceedings" : [ 
+            {
+                "title" : "Ten 5-user collaborative codes with reduced constellation size.",
+                "year" : 2008,
+                "pages" : "32-35",
+                "proceedings" : "conf/hpcncs/2008",
+                "booktitle" : "HPCNCS",
+                "dblp_key" : "conf/hpcncs/Al-Sammak08"
+            }
+        ]
+    }
+}
+
+/* 10 */
+{
+    "_id" : "A-ming_Hao",
+    "name" : "A-ming Hao",
+    "publications" : {
+        "inproceedings" : [ 
+            {
+                "title" : "The lap structure modeling and controller design of permanent magnet electromagnetic hybrid maglev trains.",
+                "year" : 2014,
+                "pages" : "1-5",
+                "proceedings" : "conf/mfi/2014",
+                "booktitle" : "MFI",
+                "url" : "http://dx.doi.org/10.1109/MFI.2014.6997731",
+                "dblp_key" : "conf/mfi/HaoWLZ14"
+            }
+        ]
+    }
+}

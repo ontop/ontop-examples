@@ -1,0 +1,48 @@
+{
+    "prefixes": {
+        "xsd:" : "http://www.w3.org/2001/XMLSchema#",
+        "rdfs:" : "http://www.w3.org/2000/01/rdf-schema#",
+        "ex:" : "http://ex.org/awards/",
+        ":" : "http://awards.org/"
+    },
+    "mappings": [
+        {
+            "mappingId": "Person",
+            "source": {
+                "collection": "awards",
+                "criteria": {
+                }
+            },
+            "target": "ex:person/{_id} a :Person ; :hasFirstName {name.first}^^xsd:string ; :hasLastName {name.last}^^xsd:string ; :bornInYear {birth.year}^^xsd:integer ; :bornInMonth {birth.month}^^xsd:integer ; :bornOnDay {birth.day}^^xsd:integer ; :bornIn {bornIn}^^xsd:string ; :diedInYear {death.year}^^xsd:integer ; :diedInMonth {death.month}^^xsd:integer ; :diedOnDay {death.day}^^xsd:integer ; :hasReceived ex:person/{_id}/award/{awards.#} ; :hasOccupation {occupation.$}^^xsd:string . "
+        },
+        {
+            "mappingId": "Female",
+            "source": {
+                "collection": "awards",
+                "criteria": {
+		            "sex": "female"
+                }
+            },
+            "target": "ex:person/{_id} a :Female ."
+        },
+        {
+            "mappingId": "Male",
+            "source": {
+                "collection": "awards",
+                "criteria": {
+		            "sex": "male"
+                }
+            },
+            "target": "ex:person/{_id} a :Male ."
+        },
+        {
+            "mappingId": "Award",
+            "source": {
+                "collection": "awards",
+                "criteria": {
+                }
+            },
+            "target": "ex:person/{_id}/award/{awards.#} a :Award ; :receivedIn {awards.#.year}^^xsd:integer ; :hasTitle {awards.#.award}^^xsd:string . "
+        }
+    ]
+}

@@ -1,0 +1,160 @@
+/* 1 */
+{
+    "_id" : "'Maseka_Lesaoana",
+    "name" : "'Maseka Lesaoana",
+    "publications" : {
+        "article" : [ 
+            {
+                "dblp_key" : "journals/ior/HallLP01"
+            }, 
+            {
+                "dblp_key" : "journals/saem/MunapoLNK15"
+            }
+        ]
+    }
+}
+
+/* 2 */
+{
+    "_id" : "(Max)_Zong-Ming_Cheng",
+    "name" : "(Max) Zong-Ming Cheng",
+    "publications" : {
+        "article" : [ 
+            {
+                "dblp_key" : "journals/bmcbi/CaiYTC11"
+            }, 
+            {
+                "dblp_key" : "journals/bmcbi/XuZHZYRSSYGSDSBBCHLDSY09"
+            }
+        ]
+    }
+}
+
+/* 3 */
+{
+    "_id" : "(Zhou)_Bryan_Bai",
+    "name" : "(Zhou) Bryan Bai",
+    "publications" : {
+        "inproceedings" : [ 
+            {
+                "dblp_key" : "conf/cibcb/BaiK12"
+            }, 
+            {
+                "dblp_key" : "conf/bibm/BaiK11"
+            }
+        ]
+    }
+}
+
+/* 4 */
+{
+    "_id" : "A_Lun",
+    "name" : "A Lun",
+    "publications" : {
+        "inproceedings" : [ 
+            {
+                "dblp_key" : "conf/icnc/LunMLY10"
+            }
+        ]
+    }
+}
+
+/* 5 */
+{
+    "_id" : "A'ang_Subiyakto",
+    "name" : "A'ang Subiyakto",
+    "publications" : {
+        "article" : [ 
+            {
+                "dblp_key" : "journals/ijbis/SubiyaktoAKP16"
+            }
+        ]
+    }
+}
+
+/* 6 */
+{
+    "_id" : "A'fza_Shafie",
+    "name" : "A'fza Shafie",
+    "publications" : {
+        "inproceedings" : [ 
+            {
+                "dblp_key" : "conf/ngmast/IbrahimFAS15"
+            }
+        ]
+    }
+}
+
+/* 7 */
+{
+    "_id" : "A'zraa_Afhzan_Ab_Rahim",
+    "name" : "A'zraa Afhzan Ab Rahim",
+    "publications" : {
+        "inproceedings" : [ 
+            {
+                "dblp_key" : "conf/cicsyn/RahimSTH11"
+            }
+        ]
+    }
+}
+
+/* 8 */
+{
+    "_id" : "A-Chuan_Hsueh",
+    "name" : "A-Chuan Hsueh",
+    "publications" : {
+        "article" : [ 
+            {
+                "dblp_key" : "journals/pami/KuanPH88"
+            }
+        ],
+        "inproceedings" : [ 
+            {
+                "dblp_key" : "conf/aaai/KuanPH86"
+            }
+        ]
+    }
+}
+
+/* 9 */
+{
+    "_id" : "A-Imam_Al-Sammak",
+    "name" : "A-Imam Al-Sammak",
+    "publications" : {
+        "article" : [ 
+            {
+                "dblp_key" : "journals/jcsc/Al-AlawiA06"
+            }, 
+            {
+                "dblp_key" : "journals/comcom/Al-SammakAA92"
+            }, 
+            {
+                "dblp_key" : "journals/comcom/GebaliA05"
+            }, 
+            {
+                "dblp_key" : "journals/tasm/Al-SammakA06"
+            }, 
+            {
+                "dblp_key" : "journals/ett/GebaliA06"
+            }
+        ],
+        "inproceedings" : [ 
+            {
+                "dblp_key" : "conf/hpcncs/Al-Sammak08"
+            }
+        ]
+    }
+}
+
+/* 10 */
+{
+    "_id" : "A-ming_Hao",
+    "name" : "A-ming Hao",
+    "publications" : {
+        "inproceedings" : [ 
+            {
+                "dblp_key" : "conf/mfi/HaoWLZ14"
+            }
+        ]
+    }
+}

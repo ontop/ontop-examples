@@ -1,0 +1,18 @@
+{
+  "constraints": {
+    "non-unique-functional": [
+      {
+        "collection": "publications",
+        "determinants": [
+          "authors._id"
+        ],
+        "dependents": [
+          "authors.name",
+          "authors.homepage"
+        ]
+      }
+    ],
+    "unique": [
+    ]
+  }
+}
