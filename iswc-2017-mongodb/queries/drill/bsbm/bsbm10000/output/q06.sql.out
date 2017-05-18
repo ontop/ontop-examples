@@ -1,0 +1,11 @@
+DriverManager.getConnection("jdbc:drill:drillbit=obdalin.inf.unibz.it")
+    trying org.apache.drill.jdbc.Driver
+getConnection returning org.apache.drill.jdbc.Driver
+time1 = 1182 ms
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product2; canniness
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product5631; impenitence plannings educator
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product4276; planning sublimities
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product7908; preplanning
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product810; unmanning benzine unpretentious
+#answers = 5
+overall time = 1194 ms

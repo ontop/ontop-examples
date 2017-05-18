@@ -1,0 +1,531 @@
+@prefix xrr: <http://i3s.unice.fr/xr2rml#> .
+@prefix rr:  <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix ex: <http://ex.org/bios/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+@prefix bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+@prefix dc: <http://purl.org/dc/elements/1.1/>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix foaf: <http://xmlns.com/foaf/0.1/>
+@prefix iso3166: <http://downlode.org/rdf/iso-3166/countries#>
+@prefix rev: <http://purl.org/stuff/rev#>
+
+@prefix : <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/mapping/>
+
+#"target": "bsbm-inst:dataFromProducer/Product{_id} a bsbm:Product ; bsbm:producer bsbm-inst:dataFromProducer/Producer{producer.producerId} ; dc:publisher bsbm-inst:dataFromProducer/Producer{producer.producerId} ; rdfs:label {productName}^^xsd:string ; foaf:name {productName}^^xsd:string ; bsbm:type bsbm-inst:ProductType{type.typeId} ; bsbm:productFeature bsbm:ProductFeature{features.#.featureId} ; bsbm:productPropertyNumeric1 {properties.numeric1}^^xsd:integer ; bsbm:productPropertyNumeric2 {properties.numeric2}^^xsd:integer ; bsbm:productPropertyNumeric3 {properties.numeric3}^^xsd:integer ; bsbm:productPropertyNumeric4 {properties.numeric4}^^xsd:integer ; bsbm:productPropertyNumeric5 {properties.numeric5}^^xsd:integer ; bsbm:productPropertyNumeric6 {properties.numeric6}^^xsd:integer ; bsbm:productPropertyTextual1 {properties.textual1}^^xsd:string ; bsbm:productPropertyTextual2 {properties.textual2}^^xsd:string ; bsbm:productPropertyTextual3 {properties.textual3}^^xsd:string ; bsbm:productPropertyTextual4 {properties.textual4}^^xsd:string ; bsbm:productPropertyTextual5 {properties.textual5}^^xsd:string ; bsbm:productPropertyTextual6 {properties.textual6}^^xsd:string ; rdfs:comment {comment}^^xsd:string. "
+
+:source_products xrr:query "db.products.find({})"; rml:iterator "$" ; xrr:uniqueRef "_id" .
+
+<#Product_Product>
+    xrr:logicalSource :source_products ;
+    rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+           rr:constant  bsbm:Product;
+           rr:termType rr:IRI
+        ]
+    ].
+
+<#Product_producer>
+    xrr:logicalSource :source_products ;
+    rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+    rr:predicateObjectMap [
+        rr:predicate bsbm:producer;
+        rr:objectMap [
+          rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}";
+          rr:termType rr:IRI ]
+   ].
+   
+<#Product_publisher>
+   xrr:logicalSource :source_products ;
+   rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+   rr:predicateObjectMap [
+       rr:predicate dc:publisher;
+       rr:objectMap [
+         rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}";
+         rr:termType rr:IRI ]
+  ].
+  
+<#Product_label>
+ 	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate rdfs:label;
+	 	rr:objectMap [ xrr:reference "$.productName" ]
+	].
+
+<#Product_name>
+ 	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate foaf:name;
+	 	rr:objectMap [ xrr:reference "$.productName" ]
+	].
+
+<#Product_type>
+ 	xrr:logicalSource :source_products ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:type;
+	 	rr:objectMap [ 
+     	rr:template "bsbm-inst:ProductType{$.type.typeId}";
+     	rr:termType rr:IRI ]
+	].
+
+<#Product_feature>
+ 	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productFeature;
+	 	rr:objectMap [ 
+     	rr:template "bsbm:ProductFeature{$.features[*].featureId}";
+     	rr:termType rr:IRI ]
+	].
+
+<#Product_productPropertyNumeric1>
+ 	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyNumeric1;
+	 	rr:objectMap [ xrr:reference "$.properties.numeric1" ]
+	].
+
+<#Product_productPropertyNumeric2>
+ 	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyNumeric2;
+	 	rr:objectMap [ xrr:reference "$.properties.numeric2" ]
+	].
+
+<#Product_productPropertyNumeric3>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyNumeric3;
+	 	rr:objectMap [ xrr:reference "$.properties.numeric3" ]
+	].
+	
+<#Product_productPropertyNumeric4>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyNumeric4;
+	 	rr:objectMap [ xrr:reference "$.properties.numeric4" ]
+	].
+   
+<#Product_productPropertyNumeric5>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyNumeric5;
+	 	rr:objectMap [ xrr:reference "$.properties.numeric5" ]
+	].
+	
+<#Product_productPropertyNumeric6>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyNumeric6;
+	 	rr:objectMap [ xrr:reference "$.properties.numeric6" ]
+	].
+	
+<#Product_productPropertyTextual1>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyTextual1;
+	 	rr:objectMap [ xrr:reference "$.properties.textual1" ]
+	].
+	
+<#Product_productPropertyTextual2>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyTextual2;
+	 	rr:objectMap [ xrr:reference "$.properties.textual2" ]
+	].
+
+<#Product_productPropertyTextual3>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyTextual3;
+	 	rr:objectMap [ xrr:reference "$.properties.textual3" ]
+	].
+
+<#Product_productPropertyTextual4>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyTextual4;
+	 	rr:objectMap [ xrr:reference "$.properties.textual4" ]
+	].
+	
+<#Product_productPropertyTextual5>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyTextual5;
+	 	rr:objectMap [ xrr:reference "$.properties.textual5" ]
+	].
+
+<#Product_productPropertyTextual6>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:productPropertyTextual6;
+	 	rr:objectMap [ xrr:reference "$.properties.textual6" ]
+	].
+	
+<#Product_comment>
+	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate rdfs:comment;
+	 	rr:objectMap [ xrr:reference "$.comment" ]
+	].
+	
+# "target": "bsbm-inst:dataFromProducer/Producer{producer.producerId} a bsbm:Producer ; rdfs:label {producer.name}^^xsd:string ; foaf:name {producer.name}^^xsd:string ; bsbm:country {producer.country}^^xsd:string ; foaf:homepage {producer.homepage}^^xsd:string . "*/
+
+<#Producer_Producer>
+    xrr:logicalSource :source_products ;
+    rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}"];
+    rr:predicateObjectMap [
+        rr:predicate rdf:type;
+        rr:objectMap [
+           rr:constant  bsbm:Producer;
+           rr:termType rr:IRI
+        ]
+    ].
+	
+<#Producer_label>
+ 	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate rdfs:label;
+	 	rr:objectMap [ xrr:reference "$.producer.name" ]
+	].	
+
+<#Producer_name>
+ 	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate foaf:name;
+	 	rr:objectMap [ xrr:reference "$.producer.name" ]
+	].	
+	
+<#Producer_country>
+ 	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate bsbm:country;
+	 	rr:objectMap [ 
+	 	rr:template "iso3166:{$.producer.country}";
+	 	rr:termType rr:IRI ]
+	].	
+
+<#Producer_homepage>
+ 	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate foaf:homepage;
+	 	rr:objectMap [ xrr:reference "$.producer.homepage" ]
+	].	
+	
+#    "target": "bsbm-inst:ProductType{type.typeId} rdfs:label {type.label} . "
+<#ProductType_label>
+ 	xrr:logicalSource :source_products ;
+ 	rr:subjectMap [ rr:template "bsbm-inst:ProductType{$.type.typeId}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate rdfs:label;
+	 	rr:objectMap [ xrr:reference "$.type.label" ]
+	].	
+	
+#  "target": "bsbm:ProductFeature{features.#.featureId} a bsbm:ProductFeature ; rdfs:label {features.#.description}^^xsd:string ; rdfs:comment {features.#.comment}^^xsd:string . "*/
+:source_features xrr:query "db.products.find({})"; rml:iterator "$.features.*" .
+	
+<#Feature_Feature>
+	xrr:logicalSource :source_features ;
+	rr:subjectMap [ rr:template "bsbm:ProductFeature{$.featureId}"];
+	rr:predicateObjectMap [
+	    rr:predicate rdf:type;
+	    rr:objectMap [
+	       rr:constant  bsbm:ProductFeature;
+	       rr:termType rr:IRI
+	    ]
+	].
+
+
+<#Feature_label>
+ 	xrr:logicalSource :source_features ;
+ 	rr:subjectMap [ rr:template "bsbm:ProductFeature{$.featureId}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate rdfs:label;
+	 	rr:objectMap [ xrr:reference "$.description" ]
+	].	
+	
+<#Feature_comment>
+ 	xrr:logicalSource :source_features ;
+ 	rr:subjectMap [ rr:template "bsbm:ProductFeature{$.featureId}"];
+ 	rr:predicateObjectMap [
+     	rr:predicate rdfs:comment;
+	 	rr:objectMap [ xrr:reference "$.comment" ]
+	].		
+
+#    "target": "bsbm-inst:dataFromVendor/Offer{offers.#.offerId} a bsbm:Offer ; bsbm:price {offers.#.price} ; bsbm:validFrom {offers.#.timeSpan.validFrom} ; bsbm:validTo {offers.#.timeSpan.validTo} ; bsbm:deliveryDays {offers.#.deliveryDays}^^xsd:integer ; bsbm:offerWebpage {offers.#.offerWebpage} ; bsbm:product bsbm-inst:dataFromProducer/Product{_id} ; bsbm:vendor bsbm-inst:dataFromVendor/Vendor{offers.#.vendor.vendorId} ; dc:publisher bsbm-inst:dataFromVendor/Vendor{offers.#.vendor.vendorId} . "
+
+:source_offers xrr:query "db.products.find({})"; rml:iterator "$.offers.*" .
+<#Offer_Offer>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:predicateObjectMap [
+	    rr:predicate rdf:type;
+	    rr:objectMap [
+	       rr:constant  bsbm:Offer;
+	       rr:termType rr:IRI
+	    ]
+	].
+
+<#Offer_price>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:price;
+	rr:objectMap [ xrr:reference "$.price" ]
+	].
+	
+<#Offer_validFrom>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:validFrom;
+	rr:objectMap [ xrr:reference "$.timeSpan.from" ]
+	].
+	
+<#Offer_validTo>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:validTo;
+	rr:objectMap [ xrr:reference "$.timeSpan.to" ]
+	].
+	
+<#Offer_deliveryDays>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:deliveryDays;
+	rr:objectMap [ xrr:reference "$.deliveryDays" ]
+	].
+	
+<#Offer_offerWebpage>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:offerWebpage;
+	rr:objectMap [ xrr:reference "$.offerWebpage" ]
+	].	
+	
+<#Offer_product>
+	xrr:logicalSource :source_products ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offers[*].offerId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:product;
+ 	rr:objectMap [ 
+ 	rr:template "bsbm-inst:dataFromProducer/Product{_id}";
+ 	rr:termType rr:IRI ]
+	].	
+	
+<#Offer_dataFromVendor>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:dataFromVendor;
+ 	rr:objectMap [ 
+ 	rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}";
+ 	rr:termType rr:IRI ]	
+	].
+			
+<#Offer_publisher>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:predicateObjectMap [
+	    rr:predicate dc:publisher;
+ 	rr:objectMap [ 
+ 	rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}";
+ 	rr:termType rr:IRI ]
+	].	
+	
+#   "target": "bsbm-inst:dataFromVendor/Vendor{offers.#.vendor.vendorId} a bsbm:Vendor ; rdfs:label {offers.#.vendor.name}^^xsd:string ; foaf:name {offers.#.vendor.name}^^xsd:string ; foaf:homepage {offers.#.vendor.homepage} ; bsbm:country iso3166:{offers.#.vendor.country} . "
+
+<#Vendor_Vendor>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}"];
+	rr:predicateObjectMap [
+	    rr:predicate rdf:type;
+	    rr:objectMap [
+	       rr:constant  bsbm:Vendor;
+	       rr:termType rr:IRI
+	    ]
+	].
+	
+<#Vendor_label>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}"];
+	rr:predicateObjectMap [
+	    rr:predicate rdfs:label;
+	rr:objectMap [ xrr:reference "$.vendor.name" ]
+	].
+	
+<#Vendor_name>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}"];
+	rr:predicateObjectMap [
+	    rr:predicate foaf:name;
+	rr:objectMap [ xrr:reference "$.vendor.name" ]
+	].
+	
+<#Vendor_homepage>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}"];
+	rr:predicateObjectMap [
+	    rr:predicate foaf:homepage;
+	rr:objectMap [ xrr:reference "$.vendor.homepage" ]
+	].
+	
+<#Vendor_country>
+	xrr:logicalSource :source_offers ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:country;
+ 	rr:objectMap [ 
+ 	rr:template "iso3166:{$.vendor.country}";
+ 	rr:termType rr:IRI ]
+	].
+	
+#    "target": "bsbm-inst:dataFromRatingSite/Review{reviews.#.reviewId} a bsbm:Review ; bsbm:reviewDate {reviews.#.date}^^xsd:date ; dc:title {reviews.#.title}^^xsd:string ; rev:text {reviews.#.content}^^xsd:string ; bsbm:rating1 {reviews.#.rating1}^^xsd:integer ; bsbm:rating2 {reviews.#.rating2}^^xsd:integer ; bsbm:rating3 {reviews.#.rating3}^^xsd:integer ; bsbm:rating4 {reviews.#.rating4}^^xsd:integer ; bsbm:reviewFor bsbm-inst:dataFromProducer/Product{_id} ; rev:reviewer bsbm-inst:dataFromRatingSite/Reviewer{reviews.#.reviewer.personId} . "
+
+:source_reviews xrr:query "db.products.find({})"; rml:iterator "$.reviews.*" .
+<#Review_country>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate rdf:type;
+	    rr:objectMap [
+	       rr:constant  bsbm:Review;
+	       rr:termType rr:IRI
+	    ]
+	].
+	
+<#Review_reviewDate>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:reviewDate;
+	rr:objectMap [ xrr:reference "$.date" ]
+	].
+	
+<#Review_title>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate dc:title;
+	rr:objectMap [ xrr:reference "$.title" ]
+	].
+	
+<#Review_text>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate rev:text;
+	rr:objectMap [ xrr:reference "$.content" ]
+	].	
+	
+<#Review_rating1>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:rating1;
+	rr:objectMap [ xrr:reference "$.rating1" ]
+	].	
+		
+<#Review_rating2>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:rating2;
+	rr:objectMap [ xrr:reference "$.rating2" ]
+	].	
+	
+<#Review_rating3>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:rating3;
+	rr:objectMap [ xrr:reference "$.rating3" ]
+	].	
+	
+<#Review_rating4>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:rating4;
+	rr:objectMap [ xrr:reference "$.rating4" ]
+	].	
+	
+<#Review_reviewFor>
+	xrr:logicalSource :source_products ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviews[*].reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:reviewFor;
+ 	rr:objectMap [ 
+ 	rr:template "bsbm-inst:dataFromProducer/Product{_id}";
+ 	rr:termType rr:IRI ]
+	].	
+
+<#Review_reviewer>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:reviewer;
+ 	rr:objectMap [ 
+ 	rr:template "bsbm-inst:dataFromRatingSite/Reviewer{$.reviewer.personId}";
+ 	rr:termType rr:IRI ]
+	].
+	
+#    "target": "bsbm-inst:dataFromRatingSite/Reviewer{reviews.#.reviewer.personId} a foaf:Person ; foaf:name {reviews.#.reviewer.name} ; bsbm:country iso3166:{reviews.#.reviewer.country} . "
+
+<#Reviewer_Reviewer>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Reviewer{$.reviewer.personId}"];
+	rr:predicateObjectMap [
+	    rr:predicate rdf:type;
+	    rr:objectMap [
+	       rr:constant  foaf:Person;
+	       rr:termType rr:IRI
+	    ]
+	].		
+
+<#Reviewer_name>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Reviewer{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate foaf:name;
+	rr:objectMap [ xrr:reference "$.reviewer.name" ]
+	].	
+	
+<#Reviewer_country>
+	xrr:logicalSource :source_reviews ;
+	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Reviewer{$.reviewId}"];
+	rr:predicateObjectMap [
+	    rr:predicate bsbm:country;
+ 	rr:objectMap [ 
+ 	rr:template "iso3166:{$.reviewer.country}";
+ 	rr:termType rr:IRI ]
+
+	].	

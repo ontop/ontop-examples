@@ -1,0 +1,13 @@
+DriverManager.getConnection("jdbc:drill:drillbit=obdalin.inf.unibz.it")
+    trying org.apache.drill.jdbc.Driver
+getConnection returning org.apache.drill.jdbc.Driver
+time1 = 2603 ms
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product1743; bafflements
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product3127; elderly reductional punier
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product1271; henbit pulped
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product7768; penises straightly
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product711; revolvers sundogs woodworks
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product643; swindling iberians hoers
+http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product1; toxaemia consanguinities
+#answers = 7
+overall time = 4171 ms

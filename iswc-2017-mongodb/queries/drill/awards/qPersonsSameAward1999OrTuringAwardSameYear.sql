@@ -1,0 +1,37 @@
+-- PREFIX : <http://awards.org/>
+-- SELECT ?fn1 ?ln1 ?fn2 ?ln2
+-- WHERE {
+--  { ?sc1 :hasReceived ?aw1 ; :hasFirstName ?fn1 ; :hasLastName ?ln1 .
+--    ?aw1 :hasTitle ?awName .
+--    ?aw1 :receivedIn 1999 .
+--    ?sc2 :hasReceived ?aw2 ; :hasFirstName ?fn2 ; :hasLastName ?ln2 .
+--    ?aw2 :hasTitle ?awName .
+--    ?aw2 :receivedIn 1999 .
+--    FILTER (?sc1 != ?sc2)
+--  } UNION {
+--    ?sc1 :hasReceived ?aw3; :hasFirstName ?fn1 ; :hasLastName ?ln1 .
+--    ?aw3 :receivedIn ?y .
+--    ?aw3 :hasTitle "Turing Award" .
+--    ?sc2 :hasReceived ?aw4 ; :hasFirstName ?fn2 ; :hasLastName ?ln2.
+--    ?aw4 :receivedIn ?y .
+--    ?aw4 :hasTitle "Turing Award" .
+--    FILTER (?sc1 != ?sc2) }
+-- }
+--
+--
+-- CONSTRUCT [ln2, fn1, fn2, ln1] [ln2/http://www.w3.org/2001/XMLSchema#string(name_lastm9f5f0), fn1/http://www.w3.org/2001/XMLSchema#string(name_firstm1f10f1), fn2/http://www.w3.org/2001/XMLSchema#string(name_firstm1f11f2), ln1/http://www.w3.org/2001/XMLSchema#string(name_lastm9f3)]
+--    UNION [name_lastm9f5f0, name_firstm1f10f1, name_firstm1f11f2, name_lastm9f3]
+--       FILTER AND(IS_NOT_NULL(awa_yearm6),EQ(awa_yearm6,awa_yearm6f4))
+--          STRICT-FLATTEN awardsm9f8 -> flat-awards-awards(awards_idxm5f4,awa_yearm6f4,"Turing Award")
+--             STRICT-FLATTEN awardsm9 -> flat-awards-awards(awards_idxm5f5,awa_yearm6,"Turing Award")
+--                JOIN AND(AND(AND(AND(NEQ(_idm5f3,_idm5f4),IS_NOT_NULL(name_firstm1f10f1)),IS_NOT_NULL(name_lastm9f3)),IS_NOT_NULL(name_firstm1f11f2)),IS_NOT_NULL(name_lastm9f5f0))
+--                   EXTENSIONAL awards(_idm5f4,name_firstm1f10f1,name_lastm9f3,birth_yearm9,birth_monthm9,birth_daym9,bornInm9,death_yearm9,death_monthm9,death_daym9,awardsm9,sexm9,occupationm9)
+--                   EXTENSIONAL awards(_idm5f3,name_firstm1f11f2,name_lastm9f5f0,birth_yearm9f7,birth_monthm9f10,birth_daym9f4,bornInm9f11,death_yearm9f0,death_monthm9f3,death_daym9f1,awardsm9f8,sexm9f9,occupationm9f2)
+--       FILTER AND(IS_NOT_NULL(awa_awardm8f3),EQ(awa_awardm8f3,awa_awardm8f3f5))
+--          STRICT-FLATTEN awardsm9f9 -> flat-awards-awards(awards_idxm5f3,1999,awa_awardm8f3f5)
+--             STRICT-FLATTEN awardsm9f10 -> flat-awards-awards(awards_idxm5,1999,awa_awardm8f3)
+--                JOIN AND(AND(AND(AND(NEQ(_idm5,_idm5f2),IS_NOT_NULL(name_firstm1f10f1)),IS_NOT_NULL(name_lastm9f3)),IS_NOT_NULL(name_firstm1f11f2)),IS_NOT_NULL(name_lastm9f5f0))
+--                   EXTENSIONAL awards(_idm5,name_firstm1f10f1,name_lastm9f3,birth_yearm9f9,birth_monthm9f12,birth_daym9f6,bornInm9f13,death_yearm9f2,death_monthm9f5,death_daym9f3,awardsm9f10,sexm9f11,occupationm9f4)
+--                   EXTENSIONAL awards(_idm5f2,name_firstm1f11f2,name_lastm9f5f0,birth_yearm9f8,birth_monthm9f11,birth_daym9f5,bornInm9f12,death_yearm9f1,death_monthm9f4,death_daym9f2,awardsm9f9,sexm9f10,occupationm9f3)
+
+-- UNSUPPORTED
