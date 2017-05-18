@@ -1,0 +1,12 @@
+PREFIX : <http://awards.org/> 
+SELECT ?firstName1 ?lastName1 ?firstName2 ?lastName2 ?awName1 ?awName2 
+WHERE { 
+ ?sc1 :hasReceived ?aw1 , ?aw2 ;
+ :hasFirstName ?firstName1 ; :hasLastName ?lastName1 . 
+ ?aw1 :receivedIn 2001 ; :hasTitle ?awName1 .
+ ?aw2 :receivedIn 2001 ; :hasTitle ?awName2 .
+ ?sc2 :hasReceived ?aw3 ;
+ :hasFirstName ?firstName2 ; :hasLastName ?lastName2 .
+ ?aw3 :receivedIn 2001 ; :hasTitle ?awName1 .
+ FILTER ((?aw1 != ?aw2) && (?sc1 != ?sc2))
+}
