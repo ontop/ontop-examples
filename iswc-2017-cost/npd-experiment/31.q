@@ -1,0 +1,57 @@
+PREFIX : <http://sws.ifi.uio.no/vocab/npd-v2#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX npd: <http://sws.ifi.uio.no/data/npd-v2/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX npdv: <http://sws.ifi.uio.no/vocab/npd-v2#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?facility ?country ?id ?wellbore ?year ?company
+WHERE { 
+  ?f a npdv:Facility ;
+      npdv:name ?facility ;
+      npdv:registeredInCountry ?country;
+      npdv:idNPD ?id . 
+   ?w npdv:productionFacility ?f.
+   ?w rdf:type                      npdv:Wellbore ;
+      npdv:name                     ?wellbore ;
+      npdv:wellboreCompletionYear   ?year ;
+      npdv:drillingOperatorCompany  [ npdv:name ?company ] 
+FILTER (?id > "0"^^xsd:integer)
+}
+ORDER BY ?facility
+
+Fragment 1:
+
+PREFIX : <http://sws.ifi.uio.no/vocab/npd-v2#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX npd: <http://sws.ifi.uio.no/data/npd-v2/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX npdv: <http://sws.ifi.uio.no/vocab/npd-v2#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT *
+WHERE { 
+  ?f a npdv:Facility ;
+      npdv:name ?facility ;
+      npdv:registeredInCountry ?country;
+      npdv:idNPD ?id . 
+   ?w npdv:productionFacility ?f.
+FILTER (?id > "0"^^xsd:integer)
+}
+
+Fragment 2:
+
+PREFIX : <http://sws.ifi.uio.no/vocab/npd-v2#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX npd: <http://sws.ifi.uio.no/data/npd-v2/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX npdv: <http://sws.ifi.uio.no/vocab/npd-v2#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT *
+WHERE { 
+   ?w rdf:type                      npdv:Wellbore ;
+      npdv:name                     ?wellbore ;
+      npdv:wellboreCompletionYear   ?year ;
+      npdv:drillingOperatorCompany  [ npdv:name ?company ] 
+}

@@ -1,0 +1,426 @@
+Doing ontop-10.sql
+
+real	0m49.354s
+user	0m1.744s
+sys	0m0.064s
+Doing ontop-11.sql
+
+real	17m52.677s
+user	15m7.116s
+sys	0m47.248s
+Doing ontop-12.sql
+
+real	7m53.535s
+user	6m9.940s
+sys	0m9.368s
+Doing ontop-13.sql
+
+real	3m22.176s
+user	1m57.164s
+sys	0m4.768s
+Doing ontop-14.sql
+
+real	1m45.683s
+user	0m24.148s
+sys	0m0.976s
+Doing ontop-15.sql
+
+real	1m19.544s
+user	0m1.720s
+sys	0m0.068s
+Doing ontop-16.sql
+
+real	36m0.407s
+user	31m5.592s
+sys	1m38.724s
+Doing ontop-17.sql
+
+real	20m50.061s
+user	17m36.376s
+sys	0m44.720s
+Doing ontop-18.sql
+
+real	8m27.919s
+user	6m6.160s
+sys	0m9.400s
+Doing ontop-19.sql
+
+real	4m11.956s
+user	2m9.536s
+sys	0m3.292s
+Doing ontop-1.sql
+
+real	0m4.131s
+user	0m1.596s
+sys	0m0.024s
+Doing ontop-20.sql
+
+real	2m24.746s
+user	0m24.192s
+sys	0m1.084s
+Doing ontop-21.sql
+
+real	1m57.166s
+user	0m1.684s
+sys	0m0.100s
+Doing ontop-22.sql
+
+real	0m6.020s
+user	0m3.152s
+sys	0m0.072s
+Doing ontop-23.sql
+
+real	1m3.675s
+user	0m47.380s
+sys	0m1.040s
+Doing ontop-24.sql
+
+real	0m16.097s
+user	0m3.176s
+sys	0m0.140s
+Doing ontop-25.sql
+
+real	4m38.934s
+user	3m51.864s
+sys	0m5.728s
+Doing ontop-26.sql
+
+real	1m21.627s
+user	0m45.936s
+sys	0m1.068s
+Doing ontop-27.sql
+
+real	0m36.052s
+user	0m3.676s
+sys	0m0.112s
+Doing ontop-28.sql
+
+real	14m39.152s
+user	12m46.004s
+sys	0m21.096s
+Doing ontop-29.sql
+
+real	5m7.500s
+user	3m52.064s
+sys	0m5.528s
+Doing ontop-2.sql
+
+real	0m35.554s
+user	0m23.208s
+sys	0m0.424s
+Doing ontop-30.sql
+
+real	1m54.082s
+user	0m49.980s
+sys	0m1.976s
+Doing ontop-31.sql
+
+real	1m5.277s
+user	0m3.764s
+sys	0m0.164s
+Doing ontop-32.sql
+
+real	35m47.745s
+user	31m5.972s
+sys	1m39.052s
+Doing ontop-33.sql
+
+real	15m58.016s
+user	12m54.764s
+sys	0m47.584s
+Doing ontop-34.sql
+
+real	5m55.821s
+user	3m57.544s
+sys	0m9.760s
+Doing ontop-35.sql
+
+real	2m38.725s
+user	0m52.736s
+sys	0m1.696s
+Doing ontop-36.sql
+
+real	1m45.725s
+user	0m3.312s
+sys	0m0.136s
+Doing ontop-37.sql
+./executeSql.sh: line 11: 18473 Killed                  PGOPTIONS='--statement-timeout=20min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	8m11.535s
+user	2m9.884s
+sys	0m48.860s
+Doing ontop-38.sql
+
+real	35m58.697s
+user	29m55.128s
+sys	1m36.520s
+Doing ontop-39.sql
+
+real	16m50.783s
+user	12m34.708s
+sys	0m30.656s
+Doing ontop-3.sql
+
+real	0m13.336s
+user	0m1.628s
+sys	0m0.096s
+Doing ontop-40.sql
+
+real	6m46.107s
+user	3m59.080s
+sys	0m10.992s
+Doing ontop-41.sql
+
+real	3m37.816s
+user	0m55.604s
+sys	0m1.888s
+Doing ontop-42.sql
+
+real	2m37.601s
+user	0m3.244s
+sys	0m0.212s
+Doing ontop-43.sql
+
+real	0m8.035s
+user	0m4.508s
+sys	0m0.096s
+Doing ontop-44.sql
+
+real	1m29.350s
+user	1m8.764s
+sys	0m1.724s
+Doing ontop-45.sql
+
+real	0m19.646s
+user	0m4.756s
+sys	0m0.132s
+Doing ontop-46.sql
+   C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c   C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c
+  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c  C-c C-c
+real	3m43.858s
+user	2m40.356s
+sys	0m12.200s
+Doing ontop-47.sql
+
+real	1m55.981s
+user	1m11.448s
+sys	0m1.488s
+Doing ontop-48.sql
+
+real	0m43.452s
+user	0m4.736s
+sys	0m0.184s
+Doing ontop-49.sql
+
+real	20m56.680s
+user	18m18.776s
+sys	0m34.156s
+Doing ontop-4.sql
+
+real	2m45.349s
+user	2m9.436s
+sys	0m4.956s
+Doing ontop-50.sql
+
+real	7m27.427s
+user	5m51.548s
+sys	0m8.664s
+Doing ontop-51.sql
+
+real	2m31.121s
+user	1m12.540s
+sys	0m3.032s
+Doing ontop-52.sql
+
+real	1m19.490s
+user	0m5.000s
+sys	0m0.272s
+Doing ontop-53.sql
+
+real	53m15.632s
+user	46m21.080s
+sys	2m51.552s
+Doing ontop-54.sql
+
+real	22m18.882s
+user	18m33.436s
+sys	0m36.144s
+Doing ontop-55.sql
+
+real	8m15.124s
+user	5m49.140s
+sys	0m8.964s
+Doing ontop-56.sql
+
+real	3m36.436s
+user	1m22.504s
+sys	0m2.892s
+Doing ontop-57.sql
+
+real	2m13.253s
+user	0m4.792s
+sys	0m0.288s
+Doing ontop-58.sql
+./executeSql.sh: line 11:  8007 Killed                  PGOPTIONS='--statement-timeout=20min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	8m32.341s
+user	2m6.188s
+sys	0m49.436s
+Doing ontop-59.sql
+
+real	53m41.009s
+user	44m59.408s
+sys	3m10.500s
+Doing ontop-5.sql
+
+real	0m59.391s
+user	0m23.112s
+sys	0m0.548s
+Doing ontop-60.sql
+
+real	23m55.542s
+user	18m54.420s
+sys	0m54.564s
+Doing ontop-61.sql
+
+real	9m36.969s
+user	6m8.600s
+sys	0m10.932s
+Doing ontop-62.sql
+
+real	4m52.117s
+user	1m24.048s
+sys	0m2.796s
+Doing ontop-63.sql
+
+real	3m17.442s
+user	0m4.736s
+sys	0m0.360s
+Doing ontop-64.sql
+
+real	0m9.937s
+user	0m5.872s
+sys	0m0.144s
+Doing ontop-65.sql
+
+real	1m55.559s
+user	1m31.540s
+sys	0m2.108s
+Doing ontop-66.sql
+
+real	0m23.404s
+user	0m6.204s
+sys	0m0.248s
+Doing ontop-67.sql
+
+real	10m23.996s
+user	9m5.880s
+sys	0m13.580s
+Doing ontop-68.sql
+
+real	2m27.150s
+user	1m34.144s
+sys	0m2.176s
+Doing ontop-69.sql
+
+real	0m51.171s
+user	0m6.556s
+sys	0m0.196s
+Doing ontop-6.sql
+
+real	0m27.759s
+user	0m1.796s
+sys	0m0.040s
+Doing ontop-70.sql
+
+real	28m8.639s
+user	24m26.780s
+sys	1m6.976s
+Doing ontop-71.sql
+
+real	10m0.597s
+user	7m49.940s
+sys	0m14.184s
+Doing ontop-72.sql
+
+real	3m12.633s
+user	1m38.760s
+sys	0m4.032s
+Doing ontop-73.sql
+
+real	1m35.972s
+user	0m6.348s
+sys	0m0.376s
+Doing ontop-74.sql
+./executeSql.sh: line 11: 25359 Killed                  PGOPTIONS='--statement-timeout=20min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	8m7.971s
+user	2m9.964s
+sys	0m47.188s
+Doing ontop-75.sql
+
+real	29m23.211s
+user	24m22.744s
+sys	0m48.676s
+Doing ontop-76.sql
+
+real	10m50.892s
+user	7m55.456s
+sys	0m13.932s
+Doing ontop-77.sql
+
+real	4m15.695s
+user	1m35.104s
+sys	0m3.668s
+Doing ontop-78.sql
+
+real	2m38.194s
+user	0m6.576s
+sys	0m0.416s
+Doing ontop-79.sql
+./executeSql.sh: line 11: 31491 Killed                  PGOPTIONS='--statement-timeout=20min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	8m58.191s
+user	2m8.268s
+sys	0m47.560s
+Doing ontop-7.sql
+
+real	7m33.410s
+user	6m5.464s
+sys	0m9.164s
+Doing ontop-80.sql
+./executeSql.sh: line 11:   796 Killed                  PGOPTIONS='--statement-timeout=20min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	9m34.154s
+user	2m8.732s
+sys	0m48.060s
+Doing ontop-81.sql
+
+real	31m44.307s
+user	24m39.468s
+sys	1m24.976s
+Doing ontop-82.sql
+
+real	12m52.224s
+user	8m3.000s
+sys	0m25.548s
+Doing ontop-83.sql
+
+real	5m47.503s
+user	1m37.440s
+sys	0m4.084s
+Doing ontop-84.sql
+
+real	4m0.546s
+user	0m6.268s
+sys	0m0.452s
+Doing ontop-8.sql
+
+real	2m55.223s
+user	1m57.128s
+sys	0m3.060s
+Doing ontop-9.sql
+
+real	1m14.084s
+user	0m24.348s
+sys	0m0.868s
