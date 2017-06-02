@@ -1,0 +1,756 @@
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M1R0Prop1 ?y1. ?x :S20O15M1R0Prop2 ?y2. ?x :S20O15M1R0Prop3 ?y3. ?x :S20O15M1R0Prop4 ?y4. }
+
+========== Query 1
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M2R0Prop1 ?y1. ?x :S20O15M2R0Prop2 ?y2. ?x :S20O15M2R0Prop3 ?y3. ?x :S20O15M2R0Prop4 ?y4. }
+
+========== Query 2
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M2R1Prop1 ?y1. ?x :S20O15M2R1Prop2 ?y2. ?x :S20O15M2R1Prop3 ?y3. ?x :S20O15M2R1Prop4 ?y4. }
+
+========== Query 3
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R0Prop1 ?y1. ?x :S20O15M3R0Prop2 ?y2. ?x :S20O15M3R0Prop3 ?y3. ?x :S20O15M3R0Prop4 ?y4. }
+
+========== Query 4
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R1Prop1 ?y1. ?x :S20O15M3R1Prop2 ?y2. ?x :S20O15M3R1Prop3 ?y3. ?x :S20O15M3R1Prop4 ?y4. }
+
+========== Query 5
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R2Prop1 ?y1. ?x :S20O15M3R2Prop2 ?y2. ?x :S20O15M3R2Prop3 ?y3. ?x :S20O15M3R2Prop4 ?y4. }
+
+========== Query 6
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R0Prop1 ?y1. ?x :S20O15M4R0Prop2 ?y2. ?x :S20O15M4R0Prop3 ?y3. ?x :S20O15M4R0Prop4 ?y4. }
+
+========== Query 7
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R1Prop1 ?y1. ?x :S20O15M4R1Prop2 ?y2. ?x :S20O15M4R1Prop3 ?y3. ?x :S20O15M4R1Prop4 ?y4. }
+
+========== Query 8
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R2Prop1 ?y1. ?x :S20O15M4R2Prop2 ?y2. ?x :S20O15M4R2Prop3 ?y3. ?x :S20O15M4R2Prop4 ?y4. }
+
+========== Query 9
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R3Prop1 ?y1. ?x :S20O15M4R3Prop2 ?y2. ?x :S20O15M4R3Prop3 ?y3. ?x :S20O15M4R3Prop4 ?y4. }
+
+========== Query 10
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R0Prop1 ?y1. ?x :S20O15M5R0Prop2 ?y2. ?x :S20O15M5R0Prop3 ?y3. ?x :S20O15M5R0Prop4 ?y4. }
+
+========== Query 11
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R1Prop1 ?y1. ?x :S20O15M5R1Prop2 ?y2. ?x :S20O15M5R1Prop3 ?y3. ?x :S20O15M5R1Prop4 ?y4. }
+
+========== Query 12
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R2Prop1 ?y1. ?x :S20O15M5R2Prop2 ?y2. ?x :S20O15M5R2Prop3 ?y3. ?x :S20O15M5R2Prop4 ?y4. }
+
+========== Query 13
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R3Prop1 ?y1. ?x :S20O15M5R3Prop2 ?y2. ?x :S20O15M5R3Prop3 ?y3. ?x :S20O15M5R3Prop4 ?y4. }
+
+========== Query 14
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R4Prop1 ?y1. ?x :S20O15M5R4Prop2 ?y2. ?x :S20O15M5R4Prop3 ?y3. ?x :S20O15M5R4Prop4 ?y4. }
+
+========== Query 15
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R0Prop1 ?y1. ?x :S20O15M6R0Prop2 ?y2. ?x :S20O15M6R0Prop3 ?y3. ?x :S20O15M6R0Prop4 ?y4. }
+
+========== Query 16
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R1Prop1 ?y1. ?x :S20O15M6R1Prop2 ?y2. ?x :S20O15M6R1Prop3 ?y3. ?x :S20O15M6R1Prop4 ?y4. }
+
+========== Query 17
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R2Prop1 ?y1. ?x :S20O15M6R2Prop2 ?y2. ?x :S20O15M6R2Prop3 ?y3. ?x :S20O15M6R2Prop4 ?y4. }
+
+========== Query 18
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R3Prop1 ?y1. ?x :S20O15M6R3Prop2 ?y2. ?x :S20O15M6R3Prop3 ?y3. ?x :S20O15M6R3Prop4 ?y4. }
+
+========== Query 19
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R4Prop1 ?y1. ?x :S20O15M6R4Prop2 ?y2. ?x :S20O15M6R4Prop3 ?y3. ?x :S20O15M6R4Prop4 ?y4. }
+
+========== Query 20
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R5Prop1 ?y1. ?x :S20O15M6R5Prop2 ?y2. ?x :S20O15M6R5Prop3 ?y3. ?x :S20O15M6R5Prop4 ?y4. }
+
+========== Query 21
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M1R0Prop1 ?y1. ?x :S20O10M1R0Prop2 ?y2. ?x :S20O10M1R0Prop3 ?y3. ?x :S20O10M1R0Prop4 ?y4. }
+
+========== Query 22
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M2R0Prop1 ?y1. ?x :S20O10M2R0Prop2 ?y2. ?x :S20O10M2R0Prop3 ?y3. ?x :S20O10M2R0Prop4 ?y4. }
+
+========== Query 23
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M2R1Prop1 ?y1. ?x :S20O10M2R1Prop2 ?y2. ?x :S20O10M2R1Prop3 ?y3. ?x :S20O10M2R1Prop4 ?y4. }
+
+========== Query 24
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R0Prop1 ?y1. ?x :S20O10M3R0Prop2 ?y2. ?x :S20O10M3R0Prop3 ?y3. ?x :S20O10M3R0Prop4 ?y4. }
+
+========== Query 25
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R1Prop1 ?y1. ?x :S20O10M3R1Prop2 ?y2. ?x :S20O10M3R1Prop3 ?y3. ?x :S20O10M3R1Prop4 ?y4. }
+
+========== Query 26
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R2Prop1 ?y1. ?x :S20O10M3R2Prop2 ?y2. ?x :S20O10M3R2Prop3 ?y3. ?x :S20O10M3R2Prop4 ?y4. }
+
+========== Query 27
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R0Prop1 ?y1. ?x :S20O10M4R0Prop2 ?y2. ?x :S20O10M4R0Prop3 ?y3. ?x :S20O10M4R0Prop4 ?y4. }
+
+========== Query 28
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R1Prop1 ?y1. ?x :S20O10M4R1Prop2 ?y2. ?x :S20O10M4R1Prop3 ?y3. ?x :S20O10M4R1Prop4 ?y4. }
+
+========== Query 29
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R2Prop1 ?y1. ?x :S20O10M4R2Prop2 ?y2. ?x :S20O10M4R2Prop3 ?y3. ?x :S20O10M4R2Prop4 ?y4. }
+
+========== Query 30
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R3Prop1 ?y1. ?x :S20O10M4R3Prop2 ?y2. ?x :S20O10M4R3Prop3 ?y3. ?x :S20O10M4R3Prop4 ?y4. }
+
+========== Query 31
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R0Prop1 ?y1. ?x :S20O10M5R0Prop2 ?y2. ?x :S20O10M5R0Prop3 ?y3. ?x :S20O10M5R0Prop4 ?y4. }
+
+========== Query 32
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R1Prop1 ?y1. ?x :S20O10M5R1Prop2 ?y2. ?x :S20O10M5R1Prop3 ?y3. ?x :S20O10M5R1Prop4 ?y4. }
+
+========== Query 33
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R2Prop1 ?y1. ?x :S20O10M5R2Prop2 ?y2. ?x :S20O10M5R2Prop3 ?y3. ?x :S20O10M5R2Prop4 ?y4. }
+
+========== Query 34
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R3Prop1 ?y1. ?x :S20O10M5R3Prop2 ?y2. ?x :S20O10M5R3Prop3 ?y3. ?x :S20O10M5R3Prop4 ?y4. }
+
+========== Query 35
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R4Prop1 ?y1. ?x :S20O10M5R4Prop2 ?y2. ?x :S20O10M5R4Prop3 ?y3. ?x :S20O10M5R4Prop4 ?y4. }
+
+========== Query 36
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R0Prop1 ?y1. ?x :S20O10M6R0Prop2 ?y2. ?x :S20O10M6R0Prop3 ?y3. ?x :S20O10M6R0Prop4 ?y4. }
+
+========== Query 37
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R1Prop1 ?y1. ?x :S20O10M6R1Prop2 ?y2. ?x :S20O10M6R1Prop3 ?y3. ?x :S20O10M6R1Prop4 ?y4. }
+
+========== Query 38
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R2Prop1 ?y1. ?x :S20O10M6R2Prop2 ?y2. ?x :S20O10M6R2Prop3 ?y3. ?x :S20O10M6R2Prop4 ?y4. }
+
+========== Query 39
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R3Prop1 ?y1. ?x :S20O10M6R3Prop2 ?y2. ?x :S20O10M6R3Prop3 ?y3. ?x :S20O10M6R3Prop4 ?y4. }
+
+========== Query 40
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R4Prop1 ?y1. ?x :S20O10M6R4Prop2 ?y2. ?x :S20O10M6R4Prop3 ?y3. ?x :S20O10M6R4Prop4 ?y4. }
+
+========== Query 41
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R5Prop1 ?y1. ?x :S20O10M6R5Prop2 ?y2. ?x :S20O10M6R5Prop3 ?y3. ?x :S20O10M6R5Prop4 ?y4. }
+
+========== Query 42
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M1R0Prop1 ?y1. ?x :S20O5M1R0Prop2 ?y2. ?x :S20O5M1R0Prop3 ?y3. ?x :S20O5M1R0Prop4 ?y4. }
+
+========== Query 43
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M2R0Prop1 ?y1. ?x :S20O5M2R0Prop2 ?y2. ?x :S20O5M2R0Prop3 ?y3. ?x :S20O5M2R0Prop4 ?y4. }
+
+========== Query 44
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M2R1Prop1 ?y1. ?x :S20O5M2R1Prop2 ?y2. ?x :S20O5M2R1Prop3 ?y3. ?x :S20O5M2R1Prop4 ?y4. }
+
+========== Query 45
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R0Prop1 ?y1. ?x :S20O5M3R0Prop2 ?y2. ?x :S20O5M3R0Prop3 ?y3. ?x :S20O5M3R0Prop4 ?y4. }
+
+========== Query 46
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R1Prop1 ?y1. ?x :S20O5M3R1Prop2 ?y2. ?x :S20O5M3R1Prop3 ?y3. ?x :S20O5M3R1Prop4 ?y4. }
+
+========== Query 47
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R2Prop1 ?y1. ?x :S20O5M3R2Prop2 ?y2. ?x :S20O5M3R2Prop3 ?y3. ?x :S20O5M3R2Prop4 ?y4. }
+
+========== Query 48
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R0Prop1 ?y1. ?x :S20O5M4R0Prop2 ?y2. ?x :S20O5M4R0Prop3 ?y3. ?x :S20O5M4R0Prop4 ?y4. }
+
+========== Query 49
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R1Prop1 ?y1. ?x :S20O5M4R1Prop2 ?y2. ?x :S20O5M4R1Prop3 ?y3. ?x :S20O5M4R1Prop4 ?y4. }
+
+========== Query 50
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R2Prop1 ?y1. ?x :S20O5M4R2Prop2 ?y2. ?x :S20O5M4R2Prop3 ?y3. ?x :S20O5M4R2Prop4 ?y4. }
+
+========== Query 51
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R3Prop1 ?y1. ?x :S20O5M4R3Prop2 ?y2. ?x :S20O5M4R3Prop3 ?y3. ?x :S20O5M4R3Prop4 ?y4. }
+
+========== Query 52
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R0Prop1 ?y1. ?x :S20O5M5R0Prop2 ?y2. ?x :S20O5M5R0Prop3 ?y3. ?x :S20O5M5R0Prop4 ?y4. }
+
+========== Query 53
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R1Prop1 ?y1. ?x :S20O5M5R1Prop2 ?y2. ?x :S20O5M5R1Prop3 ?y3. ?x :S20O5M5R1Prop4 ?y4. }
+
+========== Query 54
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R2Prop1 ?y1. ?x :S20O5M5R2Prop2 ?y2. ?x :S20O5M5R2Prop3 ?y3. ?x :S20O5M5R2Prop4 ?y4. }
+
+========== Query 55
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R3Prop1 ?y1. ?x :S20O5M5R3Prop2 ?y2. ?x :S20O5M5R3Prop3 ?y3. ?x :S20O5M5R3Prop4 ?y4. }
+
+========== Query 56
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R4Prop1 ?y1. ?x :S20O5M5R4Prop2 ?y2. ?x :S20O5M5R4Prop3 ?y3. ?x :S20O5M5R4Prop4 ?y4. }
+
+========== Query 57
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R0Prop1 ?y1. ?x :S20O5M6R0Prop2 ?y2. ?x :S20O5M6R0Prop3 ?y3. ?x :S20O5M6R0Prop4 ?y4. }
+
+========== Query 58
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R1Prop1 ?y1. ?x :S20O5M6R1Prop2 ?y2. ?x :S20O5M6R1Prop3 ?y3. ?x :S20O5M6R1Prop4 ?y4. }
+
+========== Query 59
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R2Prop1 ?y1. ?x :S20O5M6R2Prop2 ?y2. ?x :S20O5M6R2Prop3 ?y3. ?x :S20O5M6R2Prop4 ?y4. }
+
+========== Query 60
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R3Prop1 ?y1. ?x :S20O5M6R3Prop2 ?y2. ?x :S20O5M6R3Prop3 ?y3. ?x :S20O5M6R3Prop4 ?y4. }
+
+========== Query 61
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R4Prop1 ?y1. ?x :S20O5M6R4Prop2 ?y2. ?x :S20O5M6R4Prop3 ?y3. ?x :S20O5M6R4Prop4 ?y4. }
+
+========== Query 62
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R5Prop1 ?y1. ?x :S20O5M6R5Prop2 ?y2. ?x :S20O5M6R5Prop3 ?y3. ?x :S20O5M6R5Prop4 ?y4. }
+
+========== Query 63
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M1R0Prop1 ?y1. ?x :S20O0M1R0Prop2 ?y2. ?x :S20O0M1R0Prop3 ?y3. ?x :S20O0M1R0Prop4 ?y4. }
+
+========== Query 64
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M2R0Prop1 ?y1. ?x :S20O0M2R0Prop2 ?y2. ?x :S20O0M2R0Prop3 ?y3. ?x :S20O0M2R0Prop4 ?y4. }
+
+========== Query 65
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M2R1Prop1 ?y1. ?x :S20O0M2R1Prop2 ?y2. ?x :S20O0M2R1Prop3 ?y3. ?x :S20O0M2R1Prop4 ?y4. }
+
+========== Query 66
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R0Prop1 ?y1. ?x :S20O0M3R0Prop2 ?y2. ?x :S20O0M3R0Prop3 ?y3. ?x :S20O0M3R0Prop4 ?y4. }
+
+========== Query 67
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R1Prop1 ?y1. ?x :S20O0M3R1Prop2 ?y2. ?x :S20O0M3R1Prop3 ?y3. ?x :S20O0M3R1Prop4 ?y4. }
+
+========== Query 68
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M3R2Prop1 ?y1. ?x :S20O0M3R2Prop2 ?y2. ?x :S20O0M3R2Prop3 ?y3. ?x :S20O0M3R2Prop4 ?y4. }
+
+========== Query 69
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R0Prop1 ?y1. ?x :S20O0M4R0Prop2 ?y2. ?x :S20O0M4R0Prop3 ?y3. ?x :S20O0M4R0Prop4 ?y4. }
+
+========== Query 70
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R1Prop1 ?y1. ?x :S20O0M4R1Prop2 ?y2. ?x :S20O0M4R1Prop3 ?y3. ?x :S20O0M4R1Prop4 ?y4. }
+
+========== Query 71
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R2Prop1 ?y1. ?x :S20O0M4R2Prop2 ?y2. ?x :S20O0M4R2Prop3 ?y3. ?x :S20O0M4R2Prop4 ?y4. }
+
+========== Query 72
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M4R3Prop1 ?y1. ?x :S20O0M4R3Prop2 ?y2. ?x :S20O0M4R3Prop3 ?y3. ?x :S20O0M4R3Prop4 ?y4. }
+
+========== Query 73
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R0Prop1 ?y1. ?x :S20O0M5R0Prop2 ?y2. ?x :S20O0M5R0Prop3 ?y3. ?x :S20O0M5R0Prop4 ?y4. }
+
+========== Query 74
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R1Prop1 ?y1. ?x :S20O0M5R1Prop2 ?y2. ?x :S20O0M5R1Prop3 ?y3. ?x :S20O0M5R1Prop4 ?y4. }
+
+========== Query 75
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R2Prop1 ?y1. ?x :S20O0M5R2Prop2 ?y2. ?x :S20O0M5R2Prop3 ?y3. ?x :S20O0M5R2Prop4 ?y4. }
+
+========== Query 76
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R3Prop1 ?y1. ?x :S20O0M5R3Prop2 ?y2. ?x :S20O0M5R3Prop3 ?y3. ?x :S20O0M5R3Prop4 ?y4. }
+
+========== Query 77
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M5R4Prop1 ?y1. ?x :S20O0M5R4Prop2 ?y2. ?x :S20O0M5R4Prop3 ?y3. ?x :S20O0M5R4Prop4 ?y4. }
+
+========== Query 78
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R0Prop1 ?y1. ?x :S20O0M6R0Prop2 ?y2. ?x :S20O0M6R0Prop3 ?y3. ?x :S20O0M6R0Prop4 ?y4. }
+
+========== Query 79
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R1Prop1 ?y1. ?x :S20O0M6R1Prop2 ?y2. ?x :S20O0M6R1Prop3 ?y3. ?x :S20O0M6R1Prop4 ?y4. }
+
+========== Query 80
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R2Prop1 ?y1. ?x :S20O0M6R2Prop2 ?y2. ?x :S20O0M6R2Prop3 ?y3. ?x :S20O0M6R2Prop4 ?y4. }
+
+========== Query 81
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R3Prop1 ?y1. ?x :S20O0M6R3Prop2 ?y2. ?x :S20O0M6R3Prop3 ?y3. ?x :S20O0M6R3Prop4 ?y4. }
+
+========== Query 82
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R4Prop1 ?y1. ?x :S20O0M6R4Prop2 ?y2. ?x :S20O0M6R4Prop3 ?y3. ?x :S20O0M6R4Prop4 ?y4. }
+
+========== Query 83
+
+PREFIX sql: <http://sws.ifi.uio.no/vocab/sql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX : <http://www.semanticweb.org/tir/ontologies/2016/10/wisconsin-planning#>
+SELECT DISTINCT ?x ?y1 ?y2 ?y3 ?y4 WHERE { ?x :S20O0M6R5Prop1 ?y1. ?x :S20O0M6R5Prop2 ?y2. ?x :S20O0M6R5Prop3 ?y3. ?x :S20O0M6R5Prop4 ?y4. }
+
+========== Query 84
+

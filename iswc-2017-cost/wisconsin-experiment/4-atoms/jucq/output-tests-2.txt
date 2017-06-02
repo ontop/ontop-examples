@@ -1,0 +1,102 @@
+Doing ontop-16.sql
+
+real	35m9.654s
+user	31m1.736s
+sys	1m51.548s
+Doing ontop-17.sql
+
+real	17m0.912s
+user	15m6.048s
+sys	0m26.128s
+Doing ontop-32.sql
+
+real	33m33.498s
+user	30m1.684s
+sys	1m31.992s
+Doing ontop-37.sql
+./executeSql.sh: line 11:  8918 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	4m55.923s
+user	1m35.696s
+sys	0m35.836s
+Doing ontop-38.sql
+
+real	36m38.840s
+user	32m30.816s
+sys	1m56.652s
+Doing ontop-45.sql
+
+real	0m13.583s
+user	0m4.620s
+sys	0m0.128s
+Doing ontop-46.sql
+
+real	6m34.355s
+user	5m52.372s
+sys	0m8.560s
+Doing ontop-49.sql
+
+real	23m58.851s
+user	21m32.908s
+sys	1m8.624s
+Doing ontop-53.sql
+./executeSql.sh: line 11: 16593 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	4m52.570s
+user	1m39.532s
+sys	0m36.624s
+Doing ontop-54.sql
+
+real	21m11.656s
+user	18m36.948s
+sys	1m4.768s
+Doing ontop-58.sql
+./executeSql.sh: line 11: 19290 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	5m7.473s
+user	1m33.100s
+sys	0m36.868s
+Doing ontop-59.sql
+./executeSql.sh: line 11: 19839 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	5m6.472s
+user	1m35.232s
+sys	0m38.048s
+Doing ontop-60.sql
+
+real	22m28.033s
+user	19m24.812s
+sys	1m8.088s
+Doing ontop-70.sql
+
+real	30m1.565s
+user	27m1.760s
+sys	1m18.592s
+Doing ontop-74.sql
+./executeSql.sh: line 11: 25847 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	5m4.242s
+user	1m38.008s
+sys	0m39.936s
+Doing ontop-75.sql
+
+real	27m37.518s
+user	24m44.496s
+sys	0m56.496s
+Doing ontop-79.sql
+./executeSql.sh: line 11: 29262 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	5m17.523s
+user	1m33.276s
+sys	0m36.192s
+Doing ontop-80.sql
+./executeSql.sh: line 11: 29814 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	4m42.629s
+user	1m20.136s
+sys	0m28.844s
+Doing ontop-81.sql
+
+real	32m44.315s
+user	29m13.776s
+sys	1m13.816s

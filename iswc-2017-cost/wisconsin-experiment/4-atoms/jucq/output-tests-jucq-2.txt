@@ -1,0 +1,427 @@
+bDoing jucq-10.sql
+
+real	0m48.283s
+user	0m1.676s
+sys	0m0.088s
+Doing jucq-11.sql
+
+real	17m23.810s
+user	15m4.208s
+sys	0m28.136s
+Doing jucq-12.sql
+
+real	7m43.536s
+user	6m5.968s
+sys	0m8.536s
+Doing jucq-13.sql
+
+real	3m19.035s
+user	1m56.488s
+sys	0m2.924s
+Doing jucq-14.sql
+
+real	1m41.794s
+user	0m24.040s
+sys	0m0.984s
+Doing jucq-15.sql
+
+real	1m17.734s
+user	0m1.696s
+sys	0m0.080s
+Doing jucq-16.sql
+
+real	35m45.876s
+user	31m3.752s
+sys	1m31.772s
+Doing jucq-17.sql
+
+real	18m6.875s
+user	14m56.700s
+sys	0m38.204s
+Doing jucq-18.sql
+
+real	8m20.717s
+user	6m5.824s
+sys	0m8.560s
+Doing jucq-19.sql
+
+real	4m9.588s
+user	2m12.404s
+sys	0m3.100s
+Doing jucq-1.sql
+
+real	0m4.199s
+user	0m1.652s
+sys	0m0.016s
+Doing jucq-20.sql
+
+real	2m22.766s
+user	0m28.320s
+sys	0m1.048s
+Doing jucq-21.sql
+
+real	1m52.626s
+user	0m1.684s
+sys	0m0.100s
+Doing jucq-22.sql
+
+real	0m6.027s
+user	0m3.040s
+sys	0m0.068s
+Doing jucq-23.sql
+
+real	1m2.268s
+user	0m45.944s
+sys	0m0.984s
+Doing jucq-24.sql
+
+real	0m15.730s
+user	0m3.328s
+sys	0m0.096s
+Doing jucq-25.sql
+
+real	4m51.200s
+user	4m3.032s
+sys	0m8.756s
+Doing jucq-26.sql
+
+real	1m21.993s
+user	0m47.292s
+sys	0m1.064s
+Doing jucq-27.sql
+
+real	0m35.557s
+user	0m3.240s
+sys	0m0.124s
+Doing jucq-28.sql
+
+real	14m7.090s
+user	12m12.800s
+sys	0m24.916s
+Doing jucq-29.sql
+
+real	5m5.414s
+user	3m51.584s
+sys	0m5.148s
+Doing jucq-2.sql
+
+real	0m35.505s
+user	0m23.116s
+sys	0m0.880s
+Doing jucq-30.sql
+
+real	1m50.130s
+user	0m48.372s
+sys	0m2.408s
+Doing jucq-31.sql
+
+real	1m2.049s
+user	0m3.196s
+sys	0m0.244s
+Doing jucq-32.sql
+
+real	34m2.500s
+user	29m57.756s
+sys	1m17.632s
+Doing jucq-33.sql
+
+real	14m39.731s
+user	12m11.828s
+sys	0m18.956s
+Doing jucq-34.sql
+
+real	5m44.991s
+user	3m54.560s
+sys	0m6.060s
+Doing jucq-35.sql
+
+real	2m31.158s
+user	0m48.188s
+sys	0m2.020s
+Doing jucq-36.sql
+
+real	1m42.078s
+user	0m3.296s
+sys	0m0.160s
+Doing jucq-37.sql
+./executeSql.sh: line 11:  4696 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	7m53.517s
+user	1m59.648s
+sys	0m57.280s
+Doing jucq-38.sql
+
+real	35m17.266s
+user	29m57.788s
+sys	1m5.152s
+Doing jucq-39.sql
+
+real	15m40.446s
+user	12m13.576s
+sys	0m17.932s
+Doing jucq-3.sql
+
+real	0m13.814s
+user	0m1.736s
+sys	0m0.052s
+Doing jucq-40.sql
+
+real	7m0.326s
+user	4m18.156s
+sys	0m6.724s
+Doing jucq-41.sql
+
+real	3m26.387s
+user	0m48.220s
+sys	0m1.944s
+Doing jucq-42.sql
+
+real	2m32.748s
+user	0m3.396s
+sys	0m0.172s
+Doing jucq-43.sql
+
+real	0m8.008s
+user	0m4.464s
+sys	0m0.100s
+Doing jucq-44.sql
+
+real	1m31.134s
+user	1m10.808s
+sys	0m1.652s
+Doing jucq-45.sql
+
+real	0m19.003s
+user	0m4.716s
+sys	0m0.148s
+Doing jucq-46.sql
+
+real	7m4.707s
+user	6m3.616s
+sys	0m8.532s
+Doing jucq-47.sql
+
+real	1m52.065s
+user	1m8.736s
+sys	0m1.668s
+Doing jucq-48.sql
+
+real	0m42.049s
+user	0m4.708s
+sys	0m0.200s
+Doing jucq-49.sql
+
+real	20m51.227s
+user	18m21.112s
+sys	0m30.404s
+Doing jucq-4.sql
+
+real	2m27.987s
+user	1m55.644s
+sys	0m2.376s
+Doing jucq-50.sql
+
+real	7m19.183s
+user	5m46.968s
+sys	0m8.672s
+Doing jucq-51.sql
+
+real	2m28.844s
+user	1m12.300s
+sys	0m2.916s
+Doing jucq-52.sql
+
+real	1m16.837s
+user	0m5.020s
+sys	0m0.248s
+Doing jucq-53.sql
+out of memory
+
+real	6m7.179s
+user	1m41.432s
+sys	0m49.356s
+Doing jucq-54.sql
+
+real	21m35.692s
+user	18m19.584s
+sys	0m27.080s
+Doing jucq-55.sql
+
+real	8m11.525s
+user	5m48.552s
+sys	0m8.652s
+Doing jucq-56.sql
+
+real	3m29.459s
+user	1m20.140s
+sys	0m2.864s
+Doing jucq-57.sql
+
+real	2m5.159s
+user	0m4.800s
+sys	0m0.276s
+Doing jucq-58.sql
+./executeSql.sh: line 11: 21480 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	7m49.034s
+user	1m58.340s
+sys	0m57.988s
+Doing jucq-59.sql
+out of memory
+
+real	7m37.279s
+user	1m38.140s
+sys	0m40.668s
+Doing jucq-5.sql
+
+real	0m53.326s
+user	0m23.292s
+sys	0m0.584s
+Doing jucq-60.sql
+
+real	22m57.686s
+user	18m23.252s
+sys	0m40.860s
+Doing jucq-61.sql
+
+real	10m22.419s
+user	6m56.596s
+sys	0m9.880s
+Doing jucq-62.sql
+
+real	4m42.454s
+user	1m22.828s
+sys	0m3.080s
+Doing jucq-63.sql
+
+real	3m13.197s
+user	0m4.740s
+sys	0m0.332s
+Doing jucq-64.sql
+
+real	0m9.804s
+user	0m5.888s
+sys	0m0.160s
+Doing jucq-65.sql
+
+real	1m55.507s
+user	1m31.420s
+sys	0m3.436s
+Doing jucq-66.sql
+
+real	0m22.674s
+user	0m6.216s
+sys	0m0.212s
+Doing jucq-67.sql
+
+real	8m59.269s
+user	7m43.072s
+sys	0m17.380s
+Doing jucq-68.sql
+
+real	2m26.447s
+user	1m34.888s
+sys	0m2.096s
+Doing jucq-69.sql
+
+real	0m49.313s
+user	0m6.312s
+sys	0m0.232s
+Doing jucq-6.sql
+
+real	0m26.933s
+user	0m1.672s
+sys	0m0.052s
+Doing jucq-70.sql
+
+real	27m51.255s
+user	24m24.700s
+sys	1m1.860s
+Doing jucq-71.sql
+
+real	10m44.225s
+user	8m49.032s
+sys	0m11.632s
+Doing jucq-72.sql
+
+real	3m8.130s
+user	1m36.256s
+sys	0m4.960s
+Doing jucq-73.sql
+
+real	1m32.623s
+user	0m6.320s
+sys	0m0.364s
+Doing jucq-74.sql
+./executeSql.sh: line 11: 26707 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	7m27.701s
+user	1m57.852s
+sys	0m43.904s
+Doing jucq-75.sql
+
+real	29m25.939s
+user	24m27.024s
+sys	1m3.880s
+Doing jucq-76.sql
+
+real	10m38.813s
+user	7m48.020s
+sys	0m13.076s
+Doing jucq-77.sql
+
+real	4m28.655s
+user	1m52.020s
+sys	0m3.816s
+Doing jucq-78.sql
+
+real	2m31.676s
+user	0m6.336s
+sys	0m0.368s
+Doing jucq-79.sql
+./executeSql.sh: line 11: 28913 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	8m30.190s
+user	2m0.480s
+sys	0m52.532s
+Doing jucq-7.sql
+
+real	7m26.199s
+user	6m5.080s
+sys	0m8.428s
+Doing jucq-80.sql
+./executeSql.sh: line 11: 29587 Killed                  PGOPTIONS='--statement-timeout=60min' PGPASSWORD=postgres psql -U postgres -h localhost --dbname=ontowis -f $FILE > /dev/null
+
+real	8m54.328s
+user	1m57.580s
+sys	0m42.928s
+Doing jucq-81.sql
+
+real	30m51.247s
+user	24m36.584s
+sys	1m6.176s
+Doing jucq-82.sql
+
+real	12m1.797s
+user	7m54.468s
+sys	0m21.344s
+Doing jucq-83.sql
+
+real	5m38.898s
+user	1m35.596s
+sys	0m4.336s
+Doing jucq-84.sql
+
+real	3m51.068s
+user	0m6.356s
+sys	0m0.336s
+Doing jucq-8.sql
+
+real	2m51.525s
+user	1m56.060s
+sys	0m2.816s
+Doing jucq-9.sql
+
+real	1m12.437s
+user	0m24.236s
+sys	0m0.932s

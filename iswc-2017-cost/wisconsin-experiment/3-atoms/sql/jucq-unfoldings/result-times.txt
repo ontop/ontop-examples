@@ -1,0 +1,420 @@
+Doing jucq-10.sql
+
+real	0m33.427s
+user	0m1.268s
+sys	0m0.060s
+Doing jucq-11.sql
+
+real	3m12.268s
+user	2m12.368s
+sys	0m3.076s
+Doing jucq-12.sql
+
+real	2m4.214s
+user	1m8.924s
+sys	0m1.724s
+Doing jucq-13.sql
+
+real	1m21.676s
+user	0m29.920s
+sys	0m1.068s
+Doing jucq-14.sql
+
+real	1m3.234s
+user	0m9.368s
+sys	0m0.340s
+Doing jucq-15.sql
+
+real	0m52.912s
+user	0m1.352s
+sys	0m0.028s
+Doing jucq-16.sql
+
+real	5m22.628s
+user	3m48.528s
+sys	0m5.536s
+Doing jucq-17.sql
+
+real	3m36.350s
+user	2m13.316s
+sys	0m3.204s
+Doing jucq-18.sql
+
+real	2m30.005s
+user	1m9.912s
+sys	0m2.084s
+Doing jucq-19.sql
+
+real	1m48.938s
+user	0m31.312s
+sys	0m1.028s
+Doing jucq-1.sql
+
+real	0m2.897s
+user	0m1.200s
+sys	0m0.012s
+Doing jucq-20.sql
+
+real	1m30.557s
+user	0m9.072s
+sys	0m0.392s
+Doing jucq-21.sql
+
+real	1m19.884s
+user	0m1.392s
+sys	0m0.088s
+Doing jucq-22.sql
+
+real	0m4.273s
+user	0m2.320s
+sys	0m0.028s
+Doing jucq-23.sql
+
+real	0m27.254s
+user	0m17.396s
+sys	0m0.712s
+Doing jucq-24.sql
+
+real	0m11.173s
+user	0m2.464s
+sys	0m0.112s
+Doing jucq-25.sql
+
+real	1m22.000s
+user	0m57.476s
+sys	0m1.604s
+Doing jucq-26.sql
+
+real	0m40.172s
+user	0m18.008s
+sys	0m0.696s
+Doing jucq-27.sql
+
+real	0m24.270s
+user	0m2.656s
+sys	0m0.064s
+Doing jucq-28.sql
+
+real	3m9.775s
+user	2m20.372s
+sys	0m3.580s
+Doing jucq-29.sql
+
+real	1m41.346s
+user	0m57.320s
+sys	0m1.360s
+Doing jucq-2.sql
+
+real	0m16.266s
+user	0m8.652s
+sys	0m0.164s
+Doing jucq-30.sql
+
+real	1m0.470s
+user	0m17.940s
+sys	0m0.724s
+Doing jucq-31.sql
+
+real	0m44.155s
+user	0m2.508s
+sys	0m0.084s
+Doing jucq-32.sql
+
+real	5m51.388s
+user	4m26.476s
+sys	0m9.372s
+Doing jucq-33.sql
+
+real	3m30.847s
+user	2m16.632s
+sys	0m3.308s
+Doing jucq-34.sql
+
+real	2m11.603s
+user	1m2.468s
+sys	0m2.188s
+Doing jucq-35.sql
+
+real	1m31.889s
+user	0m18.572s
+sys	0m0.700s
+Doing jucq-36.sql
+
+real	1m13.237s
+user	0m2.472s
+sys	0m0.132s
+Doing jucq-37.sql
+
+real	10m10.249s
+user	7m54.796s
+sys	0m10.604s
+Doing jucq-38.sql
+
+real	6m24.837s
+user	4m29.256s
+sys	0m11.192s
+Doing jucq-39.sql
+
+real	4m10.258s
+user	2m20.120s
+sys	0m4.312s
+Doing jucq-3.sql
+
+real	0m8.410s
+user	0m1.368s
+sys	0m0.032s
+Doing jucq-40.sql
+
+real	2m48.743s
+user	1m2.972s
+sys	0m2.128s
+Doing jucq-41.sql
+
+real	2m9.220s
+user	0m18.436s
+sys	0m0.796s
+Doing jucq-42.sql
+
+real	1m48.458s
+user	0m2.412s
+sys	0m0.096s
+Doing jucq-43.sql
+
+real	0m5.569s
+user	0m3.364s
+sys	0m0.052s
+Doing jucq-44.sql
+
+real	0m38.213s
+user	0m26.540s
+sys	0m0.532s
+Doing jucq-45.sql
+
+real	0m13.488s
+user	0m3.532s
+sys	0m0.128s
+Doing jucq-46.sql
+
+real	1m56.052s
+user	1m25.800s
+sys	0m2.000s
+Doing jucq-47.sql
+
+real	0m53.657s
+user	0m26.808s
+sys	0m1.116s
+Doing jucq-48.sql
+
+real	0m29.675s
+user	0m3.544s
+sys	0m0.120s
+Doing jucq-49.sql
+
+real	4m25.979s
+user	3m23.832s
+sys	0m5.556s
+Doing jucq-4.sql
+
+real	0m48.298s
+user	0m29.508s
+sys	0m0.672s
+Doing jucq-50.sql
+
+real	2m19.759s
+user	1m25.888s
+sys	0m1.724s
+Doing jucq-51.sql
+
+real	1m20.650s
+user	0m27.384s
+sys	0m0.992s
+Doing jucq-52.sql
+
+real	0m56.531s
+user	0m3.604s
+sys	0m0.204s
+Doing jucq-53.sql
+
+real	8m25.848s
+user	6m37.120s
+sys	0m9.308s
+Doing jucq-54.sql
+
+real	4m59.621s
+user	3m25.384s
+sys	0m5.204s
+Doing jucq-55.sql
+
+real	2m54.481s
+user	1m29.236s
+sys	0m3.352s
+Doing jucq-56.sql
+
+real	1m59.040s
+user	0m26.912s
+sys	0m1.188s
+Doing jucq-57.sql
+
+real	1m32.581s
+user	0m3.780s
+sys	0m0.180s
+Doing jucq-58.sql
+
+real	14m45.005s
+user	11m37.404s
+sys	0m24.256s
+Doing jucq-59.sql
+
+real	9m26.122s
+user	6m46.792s
+sys	0m15.872s
+Doing jucq-5.sql
+
+real	0m26.709s
+user	0m9.328s
+sys	0m0.360s
+Doing jucq-60.sql
+
+real	5m57.813s
+user	3m38.088s
+sys	0m6.732s
+Doing jucq-61.sql
+
+real	3m49.502s
+user	1m31.172s
+sys	0m3.824s
+Doing jucq-62.sql
+
+real	2m52.090s
+user	0m26.868s
+sys	0m1.180s
+Doing jucq-63.sql
+
+real	2m23.207s
+user	0m3.584s
+sys	0m0.252s
+Doing jucq-64.sql
+
+real	0m6.951s
+user	0m4.516s
+sys	0m0.088s
+Doing jucq-65.sql
+
+real	0m54.964s
+user	0m40.688s
+sys	0m1.288s
+Doing jucq-66.sql
+
+real	0m16.154s
+user	0m4.636s
+sys	0m0.164s
+Doing jucq-67.sql
+
+real	2m35.129s
+user	1m59.880s
+sys	0m4.644s
+Doing jucq-68.sql
+
+real	1m7.864s
+user	0m35.696s
+sys	0m1.484s
+Doing jucq-69.sql
+
+real	0m35.305s
+user	0m4.644s
+sys	0m0.176s
+Doing jucq-6.sql
+
+real	0m18.595s
+user	0m1.220s
+sys	0m0.072s
+Doing jucq-70.sql
+
+real	5m44.683s
+user	4m29.856s
+sys	0m6.288s
+Doing jucq-71.sql
+
+real	3m13.898s
+user	2m8.492s
+sys	0m2.740s
+Doing jucq-72.sql
+
+real	1m39.418s
+user	0m35.476s
+sys	0m1.408s
+Doing jucq-73.sql
+
+real	1m6.524s
+user	0m4.848s
+sys	0m0.256s
+Doing jucq-74.sql
+
+real	12m6.458s
+user	9m53.656s
+sys	0m12.812s
+Doing jucq-75.sql
+
+real	6m56.147s
+user	5m0.368s
+sys	0m7.300s
+Doing jucq-76.sql
+
+real	3m44.237s
+user	1m59.644s
+sys	0m6.336s
+Doing jucq-77.sql
+
+real	2m26.392s
+user	0m35.864s
+sys	0m1.416s
+Doing jucq-78.sql
+
+real	1m49.282s
+user	0m4.920s
+sys	0m0.200s
+Doing jucq-79.sql
+
+real	19m6.627s
+user	15m24.704s
+sys	0m22.404s
+Doing jucq-7.sql
+
+real	1m44.022s
+user	1m7.736s
+sys	0m1.696s
+Doing jucq-80.sql
+
+real	11m56.905s
+user	8m51.868s
+sys	0m14.136s
+Doing jucq-81.sql
+
+real	7m28.079s
+user	4m38.168s
+sys	0m8.028s
+Doing jucq-82.sql
+
+real	4m40.330s
+user	1m59.928s
+sys	0m5.024s
+Doing jucq-83.sql
+
+real	3m27.675s
+user	0m36.120s
+sys	0m1.480s
+Doing jucq-84.sql
+
+real	2m45.668s
+user	0m4.744s
+sys	0m0.272s
+Doing jucq-8.sql
+
+real	1m6.641s
+user	0m33.364s
+sys	0m0.620s
+Doing jucq-9.sql
+
+real	0m42.490s
+user	0m9.052s
+sys	0m0.272s
