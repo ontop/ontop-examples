@@ -1,0 +1,342 @@
+/* 1 */
+{
+    "_id" : "journals/ior/HallLP01",
+    "title" : "Scheduling with Fixed Delivery Dates.",
+    "year" : 2001,
+    "pages" : "134-144",
+    "in" : "Operations Research",
+    "url" : "http://dx.doi.org/10.1287/opre.49.1.134.11192",
+    "authors" : [ 
+        {
+            "_id" : "Nicholas_G._Hall",
+            "name" : "Nicholas G. Hall"
+        }, 
+        {
+            "_id" : "'Maseka_Lesaoana",
+            "name" : "'Maseka Lesaoana"
+        }, 
+        {
+            "_id" : "Chris_N._Potts",
+            "name" : "Chris N. Potts"
+        }
+    ],
+    "type" : "article"
+}
+
+/* 2 */
+{
+    "_id" : "journals/saem/MunapoLNK15",
+    "title" : "A transportation branch and bound algorithm for solving the generalized assignment problem.",
+    "year" : 2015,
+    "pages" : "217-223",
+    "in" : "Int. J. Systems Assurance Engineering and Management",
+    "url" : "http://dx.doi.org/10.1007/s13198-015-0343-9",
+    "authors" : [ 
+        {
+            "_id" : "Elias_Munapo",
+            "name" : "Elias Munapo"
+        }, 
+        {
+            "_id" : "'Maseka_Lesaoana",
+            "name" : "'Maseka Lesaoana"
+        }, 
+        {
+            "_id" : "Philimon_Nyamugure",
+            "name" : "Philimon Nyamugure"
+        }, 
+        {
+            "_id" : "Santosh_Kumar",
+            "name" : "Santosh Kumar"
+        }
+    ],
+    "type" : "article"
+}
+
+/* 3 */
+{
+    "_id" : "journals/bmcbi/CaiYTC11",
+    "title" : "MicroSyn: A user friendly tool for detection of microsynteny in a gene family.",
+    "year" : 2011,
+    "pages" : "79",
+    "in" : "BMC Bioinformatics",
+    "url" : "http://dx.doi.org/10.1186/1471-2105-12-79",
+    "authors" : [ 
+        {
+            "_id" : "Bin_Cai",
+            "name" : "Bin Cai"
+        }, 
+        {
+            "_id" : "Xiaohan_Yang",
+            "name" : "Xiaohan Yang"
+        }, 
+        {
+            "_id" : "Gerald_A._Tuskan",
+            "name" : "Gerald A. Tuskan"
+        }, 
+        {
+            "_id" : "(Max)_Zong-Ming_Cheng",
+            "name" : "(Max) Zong-Ming Cheng"
+        }
+    ],
+    "type" : "article"
+}
+
+/* 4 */
+{
+    "_id" : "journals/bmcbi/XuZHZYRSSYGSDSBBCHLDSY09",
+    "title" : "Comparative genome analysis of lignin biosynthesis gene families across the plant kingdom.",
+    "year" : 2009,
+    "pages" : "3",
+    "in" : "BMC Bioinformatics",
+    "url" : "http://dx.doi.org/10.1186/1471-2105-10-S11-S3",
+    "authors" : [ 
+        {
+            "_id" : "Zhanyou_Xu",
+            "name" : "Zhanyou Xu"
+        }, 
+        {
+            "_id" : "Dandan_Zhang",
+            "name" : "Dandan Zhang"
+        }, 
+        {
+            "_id" : "Jun_Hu",
+            "name" : "Jun Hu"
+        }, 
+        {
+            "_id" : "Xin_Zhou",
+            "name" : "Xin Zhou"
+        }, 
+        {
+            "_id" : "Xia_Ye_0002",
+            "name" : "Xia Ye"
+        }, 
+        {
+            "_id" : "Kristen_L._Reichel",
+            "name" : "Kristen L. Reichel"
+        }, 
+        {
+            "_id" : "Nathan_R._Stewart",
+            "name" : "Nathan R. Stewart"
+        }, 
+        {
+            "_id" : "Ryan_D._Syrenne",
+            "name" : "Ryan D. Syrenne"
+        }, 
+        {
+            "_id" : "Xiaohan_Yang",
+            "name" : "Xiaohan Yang"
+        }, 
+        {
+            "_id" : "Peng_Gao",
+            "name" : "Peng Gao"
+        }, 
+        {
+            "_id" : "Weibing_Shi",
+            "name" : "Weibing Shi"
+        }, 
+        {
+            "_id" : "Crissa_Doeppke",
+            "name" : "Crissa Doeppke"
+        }, 
+        {
+            "_id" : "Robert_W._Sykes",
+            "name" : "Robert W. Sykes"
+        }, 
+        {
+            "_id" : "Jason_N._Burris",
+            "name" : "Jason N. Burris"
+        }, 
+        {
+            "_id" : "Joseph_J._Bozell",
+            "name" : "Joseph J. Bozell"
+        }, 
+        {
+            "_id" : "(Max)_Zong-Ming_Cheng",
+            "name" : "(Max) Zong-Ming Cheng"
+        }, 
+        {
+            "_id" : "Douglas_G._Hayes",
+            "name" : "Douglas G. Hayes"
+        }, 
+        {
+            "_id" : "Nicole_Labbe",
+            "name" : "Nicole Labbe"
+        }, 
+        {
+            "_id" : "Mark_Davis",
+            "name" : "Mark Davis"
+        }, 
+        {
+            "_id" : "C._Neal_Stewart_Jr.",
+            "name" : "C. Neal Stewart Jr."
+        }, 
+        {
+            "_id" : "Joshua_S._Yuan",
+            "name" : "Joshua S. Yuan"
+        }
+    ],
+    "type" : "article"
+}
+
+/* 5 */
+{
+    "_id" : "conf/cibcb/BaiK12",
+    "title" : "Sequence learning: analysis and solutions for sparse data in high dimensional spaces.",
+    "year" : 2012,
+    "pages" : "298-305",
+    "proceedings" : "conf/cibcb/2012",
+    "booktitle" : "CIBCB",
+    "url" : "http://dx.doi.org/10.1109/CIBCB.2012.6217244",
+    "authors" : [ 
+        {
+            "_id" : "(Zhou)_Bryan_Bai",
+            "name" : "(Zhou) Bryan Bai"
+        }, 
+        {
+            "_id" : "Stefan_C._Kremer",
+            "name" : "Stefan C. Kremer"
+        }
+    ],
+    "type" : "inproceedings"
+}
+
+/* 6 */
+{
+    "_id" : "conf/bibm/BaiK11",
+    "title" : "Regularization of sequence data for machine learning.",
+    "year" : 2011,
+    "pages" : "19-25",
+    "proceedings" : "conf/bibm/2011w",
+    "booktitle" : "BIBM Workshops",
+    "url" : "http://dx.doi.org/10.1109/BIBMW.2011.6112350",
+    "authors" : [ 
+        {
+            "_id" : "(Zhou)_Bryan_Bai",
+            "name" : "(Zhou) Bryan Bai"
+        }, 
+        {
+            "_id" : "Stefan_C._Kremer",
+            "name" : "Stefan C. Kremer"
+        }
+    ],
+    "type" : "inproceedings"
+}
+
+/* 7 */
+{
+    "_id" : "conf/icnc/LunMLY10",
+    "title" : "An intelligent and automatic detective system for pore structure of a new environment-friendly board.",
+    "year" : 2010,
+    "pages" : "3269-3273",
+    "proceedings" : "conf/icnc/2010",
+    "booktitle" : "ICNC",
+    "url" : "http://dx.doi.org/10.1109/ICNC.2010.5583874",
+    "authors" : [ 
+        {
+            "_id" : "A_Lun",
+            "name" : "A Lun"
+        }, 
+        {
+            "_id" : "Yan_Ma",
+            "name" : "Yan Ma"
+        }, 
+        {
+            "_id" : "Yixing_Liu",
+            "name" : "Yixing Liu"
+        }, 
+        {
+            "_id" : "Haipeng_Yu",
+            "name" : "Haipeng Yu"
+        }
+    ],
+    "type" : "inproceedings"
+}
+
+/* 8 */
+{
+    "_id" : "journals/ijbis/SubiyaktoAKP16",
+    "title" : "Measurement of the information system project success of the higher education institutions in Indonesia: a pilot study.",
+    "year" : 2016,
+    "pages" : "229-247",
+    "in" : "IJBIS",
+    "url" : "http://dx.doi.org/10.1504/IJBIS.2016.10000261",
+    "authors" : [ 
+        {
+            "_id" : "A'ang_Subiyakto",
+            "name" : "A'ang Subiyakto"
+        }, 
+        {
+            "_id" : "Abdul_Rahman_Ahlan",
+            "name" : "Abdul Rahman Ahlan"
+        }, 
+        {
+            "_id" : "Mira_Kartiwi",
+            "name" : "Mira Kartiwi"
+        }, 
+        {
+            "_id" : "Syopiansyah_Jaya_Putra",
+            "name" : "Syopiansyah Jaya Putra"
+        }
+    ],
+    "type" : "article"
+}
+
+/* 9 */
+{
+    "_id" : "conf/ngmast/IbrahimFAS15",
+    "title" : "User Experience Study on Folktales Mobile Application for Children's Education.",
+    "year" : 2015,
+    "pages" : "353-358",
+    "proceedings" : "conf/ngmast/2015",
+    "booktitle" : "NGMAST",
+    "url" : "http://dx.doi.org/10.1109/NGMAST.2015.73",
+    "authors" : [ 
+        {
+            "_id" : "Norshahila_Ibrahim",
+            "name" : "Norshahila Ibrahim"
+        }, 
+        {
+            "_id" : "Wan_Fatimah",
+            "name" : "Wan Fatimah"
+        }, 
+        {
+            "_id" : "Wan_Ahmad",
+            "name" : "Wan Ahmad"
+        }, 
+        {
+            "_id" : "A'fza_Shafie",
+            "name" : "A'fza Shafie"
+        }
+    ],
+    "type" : "inproceedings"
+}
+
+/* 10 */
+{
+    "_id" : "conf/cicsyn/RahimSTH11",
+    "title" : "A Non-invasive Method to Measure the Sweetness of Malaysian Papaya Quantitatively Using NIR Full-transmittance Technique - A Preliminary Study.",
+    "year" : 2011,
+    "pages" : "379-384",
+    "proceedings" : "conf/cicsyn/2011",
+    "booktitle" : "CICSyN",
+    "url" : "http://dx.doi.org/10.1109/CICSyN.2011.85",
+    "authors" : [ 
+        {
+            "_id" : "A'zraa_Afhzan_Ab_Rahim",
+            "name" : "A'zraa Afhzan Ab Rahim"
+        }, 
+        {
+            "_id" : "Muhammad_Syafiq_Abdullah_Sawal",
+            "name" : "Muhammad Syafiq Abdullah Sawal"
+        }, 
+        {
+            "_id" : "Mazidah_Tajjudin",
+            "name" : "Mazidah Tajjudin"
+        }, 
+        {
+            "_id" : "Ili_Shairah_Abdul_Halim",
+            "name" : "Ili Shairah Abdul Halim"
+        }
+    ],
+    "type" : "inproceedings"
+}

@@ -1,0 +1,49 @@
+{
+  "constraints": {
+    "non-unique-functional": [
+      {
+        "collection": "authors",
+        "determinants": [
+          "publications.article.dblp_key"
+        ],
+        "dependents": [
+          "publications.article.year",
+          "publications.article.title",
+          "publications.article.pages",
+          "publications.article.in",
+          "publications.article.url"
+        ]
+      },
+      {
+        "collection": "authors",
+        "determinants": [
+          "publications.inproceedings.dblp_key"
+        ],
+        "dependents": [
+          "publications.inproceedings.year",
+          "publications.inproceedings.title",
+          "publications.inproceedings.pages",
+          "publications.inproceedings.proceedings",
+          "publications.inproceedings.booktitle",
+          "publications.inproceedings.url"
+        ]
+      },
+      {
+        "collection": "authors",
+        "determinants": [
+          "publications.incollection.dblp_key"
+        ],
+        "dependents": [
+          "publications.incollection.year",
+          "publications.incollection.title",
+          "publications.incollection.pages",
+          "publications.incollection.proceedings",
+          "publications.incollection.booktitle",
+          "publications.incollection.url"
+        ]
+      }
+    ],
+    "unique": [
+    ]
+  }
+}
