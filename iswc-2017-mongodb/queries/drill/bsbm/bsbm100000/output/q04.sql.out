@@ -1,6 +1,0 @@
-DriverManager.getConnection("jdbc:drill:drillbit=obdalin.inf.unibz.it")
-    trying org.apache.drill.jdbc.Driver
-getConnection returning org.apache.drill.jdbc.Driver
-time1 = 24651 ms
-#answers = 0
-overall time = 24651 ms

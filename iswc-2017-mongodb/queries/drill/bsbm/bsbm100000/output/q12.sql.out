@@ -1,7 +1,0 @@
-DriverManager.getConnection("jdbc:drill:drillbit=obdalin.inf.unibz.it")
-    trying org.apache.drill.jdbc.Driver
-getConnection returning org.apache.drill.jdbc.Driver
-time1 = 1311 ms
-http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product1174; "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer20681; foreswear; http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor12/Offer20681/; 4; 2128.35; http://www.vendor12.com/; autobahnen overexpanded; 2008-07-13T00:00:00Z
-#answers = 1
-overall time = 9528 ms
