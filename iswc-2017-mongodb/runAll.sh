@@ -7,13 +7,13 @@ USAGE="Usage: `basename $0`"
 
 numberOfRuns=2
 
-virtuosoExec="virtuoso/virtuoso-1.0-SNAPSHOT-jar-with-dependencies.jar"
-#virtuosoExec="virtuoso/target/virtuoso-1.0-SNAPSHOT-jar-with-dependencies.jar"
-virtuosoEndPoint="http://localhost:8890/sparql"
-#virtuosoEndPoint="http://obdalin.inf.unibz.it:8890/sparql"
+#virtuosoExec="virtuoso/virtuoso-1.0-SNAPSHOT-jar-with-dependencies.jar"
+virtuosoExec="virtuoso/target/virtuoso-1.0-SNAPSHOT-jar-with-dependencies.jar"
+#virtuosoEndPoint="http://localhost:8890/sparql"
+virtuosoEndPoint="http://obdalin.inf.unibz.it:8890/sparql"
 
-ontopMongoExec="ontop-mongo/ontop-mongo-benchmark-1.0-SNAPSHOT-jar-with-dependencies.jar"
-#ontopMongoExec="ontop-mongo-benchmark/target/ontop-mongo-benchmark-1.0-SNAPSHOT-jar-with-dependencies.jar"
+#ontopMongoExec="ontop-mongo/ontop-mongo-benchmark-1.0-SNAPSHOT-jar-with-dependencies.jar"
+ontopMongoExec="ontop-mongo-benchmark/target/ontop-mongo-benchmark-1.0-SNAPSHOT-jar-with-dependencies.jar"
 morphExec=""
 drillExec=""
 
@@ -27,7 +27,7 @@ drillExec=""
 #ontopMongoOutputDir:$6
 #virtuosoGraph:$7
 #morphMappingDir:$8
-#ontopMongoMappingDir:$9
+#ontopMongoMappingFile:$9
 #ontopMongoPropertyFile:$10
 #ontopMongoConstraintsFile:$11
 #ontopMongoOntologyFile:$12
@@ -35,7 +35,7 @@ drillExec=""
 runDataset (){
 
 	#Run Virtuoso 
-	./run.sh -v -g $7 -u $virtuosoEndPoint $virtuosoExec $1 $3 $numberOfRuns
+	#./run.sh -v -g $7 -u $virtuosoEndPoint $virtuosoExec $1 $3 $numberOfRuns
 
 		
 	#Run Ontop-mongo
@@ -72,12 +72,12 @@ command="$command $(pwd)/data/awards/eval/drill"
 command="$command $(pwd)/data/awards/eval/ontop-mongo"
 #virtuosoGraph
 command="$command http://awards.org"
-#morphMappingDir
-command="$command $(pwd)/data/awards/mapping/morph"
-#ontopMongoMappingDir
-command="$command $(pwd)/data/awards/mapping/ontop-mongo"
+#morphMappingFile
+command="$command $(pwd)/data/awards/mapping/morph/awards-mapping.ttl"
+#ontopMongoMappingFile
+command="$command $(pwd)/data/awards/mapping/ontop-mongo/mapping.json"
 ##ontopMongoPropertyFile
-command="$command $(pwd)/data/awards/properties.json"
+command="$command $(pwd)/data/awards/properties"
 ##ontopMongoConstraintFile
 command="$command noFile"
 ##ontopMongoOntologyFile
