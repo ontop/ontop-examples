@@ -1,6 +1,6 @@
 #! /bin/sh
 
-USAGE="Usage: `basename $0` [-dhmnv] [-c constraintsFile] [-g graph uri] [-p propertyFile] [-t ontologyFile] [-u source url] exe qDir oDir numberOfRuns
+USAGE="Usage: `basename $0` [-dhmnv] [-a mappingFile] [-c constraintsFile] [-g graph uri] [-p propertyFile] [-t ontologyFile] [-u source url] exe qDir oDir numberOfRuns
 
 Options:
   -d			  	run Drill
@@ -26,10 +26,8 @@ Arguments:
 "
 
 
-
-
 # Parse command line options.
-while getopts a:c:dg:hmn:p:t:uv OPT; do
+while getopts a:c:dg:hmnp:t:u:v OPT; do
     case "$OPT" in
         h)
             echo "$USAGE"
@@ -74,12 +72,14 @@ while getopts a:c:dg:hmn:p:t:uv OPT; do
     esac
 done
 
+
+
 # Remove the switches
 shift `expr $OPTIND - 1`
 
 # Non-option arguments
-if [[ $# -ne 4 ]]; then
-    echo "Invalid number of arguments">&2
+if [ $# -ne 4 ]; then
+    echo "Invalid number of arguments: $#">&2
 	echo $@
     echo "$USAGE" >&2
     exit 1
@@ -89,6 +89,8 @@ executable=$1
 queriesDir=$2
 outputDir=$3
 numberOfRuns=$4
+ontologyFile=0
+constraintsFile=0
 
 case "$system" in
         drill)
@@ -104,10 +106,10 @@ case "$system" in
 			#args: [-o owlFile] [-c constraintsFile] queriesDir outputFile propertyFile mappingFile numberOfruns  
 			outputFile="${outputDir}/output.tsv"
 			options="" 
-			if[[$ontologyFile]]; then
+			if [ $ontologyFile -ne 0 ]; then
 				options=" -o $ontologyFile"  		
 			fi	
-			if[[$constraintsFile]]; then
+			if [ $constraintsFile -ne 0 ]; then
 				options=" -c $constraintsFile"  		
 			fi	
 			command="java -jar $options $executable $queriesDir $outputFile $propertyFile $mappingFile $numberOfRuns"
@@ -116,7 +118,7 @@ case "$system" in
 			;;
 		virtuoso)
 			#jar
-			#args: queriesDir outputFile endPoinrURL graphURI numberOfruns 
+			#args: queriesDir outputFile endPointURL graphURI numberOfruns 
 			outputFile="${outputDir}/output.tsv"
 			java -jar $executable $queriesDir $outputFile $sourceURL $graphURI $numberOfRuns
 			exit 0

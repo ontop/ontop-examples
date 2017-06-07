@@ -8,9 +8,12 @@ USAGE="Usage: `basename $0`"
 numberOfRuns=2
 
 virtuosoExec="virtuoso/virtuoso-1.0-SNAPSHOT-jar-with-dependencies.jar"
+#virtuosoExec="virtuoso/target/virtuoso-1.0-SNAPSHOT-jar-with-dependencies.jar"
 virtuosoEndPoint="http://localhost:8890/sparql"
+#virtuosoEndPoint="http://obdalin.inf.unibz.it:8890/sparql"
 
 ontopMongoExec="ontop-mongo/ontop-mongo-benchmark-1.0-SNAPSHOT-jar-with-dependencies.jar"
+#ontopMongoExec="ontop-mongo-benchmark/target/ontop-mongo-benchmark-1.0-SNAPSHOT-jar-with-dependencies.jar"
 morphExec=""
 drillExec=""
 
@@ -28,17 +31,19 @@ drillExec=""
 #ontopMongoPropertyFile:$10
 #ontopMongoConstraintsFile:$11
 #ontopMongoOntologyFile:$12
-rundataset (){
+
+runDataset (){
 
 	#Run Virtuoso 
 	./run.sh -v -g $7 -u $virtuosoEndPoint $virtuosoExec $1 $3 $numberOfRuns
-	
+
+		
 	#Run Ontop-mongo
-	options="-n -a $ontopMongoMappingDir -p $ontopMongoPropertyFile" 
-	if[[$11 -eq "noFile"]]; then
+	options="-n -a $9 -p $10" 
+	if [ "$11" != noFile ]; then
 		options="$options -c $11"  		
-	fi	
-	if[[$12 -eq "noFile"]]; then
+	fi
+	if [ "$12" != noFile ]; then
 		options="$options -o $12"  		
 	fi
 	command="./run.sh $options $ontopMongoExec $1 $6 $numberOfRuns"
@@ -72,6 +77,8 @@ command="$command $(pwd)/data/awards/mapping/morph"
 #ontopMongoMappingDir
 command="$command $(pwd)/data/awards/mapping/ontop-mongo"
 ##ontopMongoPropertyFile
+command="$command $(pwd)/data/awards/properties.json"
+##ontopMongoConstraintFile
 command="$command noFile"
 ##ontopMongoOntologyFile
 command="$command noFile"
