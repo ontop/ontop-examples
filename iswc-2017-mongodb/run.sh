@@ -1,5 +1,7 @@
 #! /bin/sh
 
+# Runs one of ontop-mongo, drill, morph or virtuoso, in the conditions used for the ISWC 2017 mongo submission.
+
 USAGE="Usage: `basename $0` [-dhmnv] [-a mappingFile] [-c constraintsFile] [-g graph uri] [-p propertyFile] [-t ontologyFile] [-u source url] exe qDir oDir numberOfRuns
 
 Options:
@@ -14,7 +16,7 @@ Options:
   -g			  	queried graph uri (mandatory for virtuoso)
   -p			  	properties JSON file (mandatory for ontop-mongo)
   -t			  	onTology file (for ontop-mongo)
-  -u			  	source Url (mandatory for all systems but ontop-mongo)
+  -u			  	source Url (mandatory for virtuoso)
 
 
 Arguments:
@@ -25,8 +27,10 @@ Arguments:
   numberOfRuns		integer 
 "
 
+ontologyFilePresent=false
+constraintsFilePresent=false
 
-# Parse command line options.
+# Parse command line options
 while getopts a:c:dg:hmnp:t:u:v OPT; do
     case "$OPT" in
         h)
@@ -47,6 +51,7 @@ while getopts a:c:dg:hmnp:t:u:v OPT; do
             ;;
         c)
             constraintsFile=$OPTARG
+			constraintsFilePresent=true
             ;;
         u)
             sourceURL=$OPTARG
@@ -56,6 +61,7 @@ while getopts a:c:dg:hmnp:t:u:v OPT; do
             ;;
         t)
             ontologyFile=$OPTARG
+			ontologyFilePresent=true
             ;;
         g)
             graphURI=$OPTARG
@@ -64,7 +70,6 @@ while getopts a:c:dg:hmnp:t:u:v OPT; do
             mappingFile=$OPTARG
             ;;
         \?)
-            # getopts issues an error message
             echo "unknown option" >&2
             echo "$USAGE" >&2
             exit 1
@@ -74,7 +79,7 @@ done
 
 
 
-# Remove the switches
+# Remove switches
 shift `expr $OPTIND - 1`
 
 # Non-option arguments
@@ -89,33 +94,43 @@ executable=$1
 queriesDir=$2
 outputDir=$3
 numberOfRuns=$4
-ontologyFile=0
-constraintsFile=0
 
 case "$system" in
         drill)
-            echo "TODO: implement"
+			if [ ! -e $outputDir ]; then  
+				mkdir $outputDir	
+			fi
+			for file in $queriesDir/*.sql
+			do
+				echo "$file"
+				outputFile=$outputDir/$(basename "$file").out
+				timeout 2000 java -jar $executable $file > $outputFile
+			done
             exit 0
             ;;
+
         morph)
             echo "TODO: implement"
             exit 0
             ;;
+
 		ontop-mongo)
 			#jar
-			#args: [-o owlFile] [-c constraintsFile] queriesDir outputFile propertyFile mappingFile numberOfruns  
+			#args: [-t owlFile] [-c constraintsFile] queriesDir outputFile propertyFile mappingFile numberOfruns  
 			outputFile="${outputDir}/output.tsv"
 			options="" 
-			if [ $ontologyFile -ne 0 ]; then
-				options=" -o $ontologyFile"  		
+			if [ "$ontologyFilePresent" = true ]; then
+				options=" -t $ontologyFile"  		
 			fi	
-			if [ $constraintsFile -ne 0 ]; then
+			if [ "$constraintsFilePresent" = true ]; then
 				options=" -c $constraintsFile"  		
-			fi	
-			command="java -jar $options $executable $queriesDir $outputFile $propertyFile $mappingFile $numberOfRuns"
+			fi		
+			command="java -jar $executable $options $queriesDir $outputFile $propertyFile $mappingFile $numberOfRuns"
+			echo $command
 			eval "$command"
 			exit 0
 			;;
+
 		virtuoso)
 			#jar
 			#args: queriesDir outputFile endPointURL graphURI numberOfruns 
@@ -123,6 +138,7 @@ case "$system" in
 			java -jar $executable $queriesDir $outputFile $sourceURL $graphURI $numberOfRuns
 			exit 0
 			;;
+
         \?)
             echo "Unknown system" >&2
             echo "$USAGE" >&2
