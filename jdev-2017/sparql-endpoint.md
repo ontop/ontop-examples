@@ -45,8 +45,7 @@ SELECT DISTINCT ?prof ?lastName {
 }
 ```
 
-
-
+[Next: Primary keys](primary-keys.md)
 
 
 
