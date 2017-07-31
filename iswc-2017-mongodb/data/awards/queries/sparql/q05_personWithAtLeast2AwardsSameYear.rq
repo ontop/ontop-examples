@@ -1,0 +1,9 @@
+PREFIX : <http://awards.org/> 
+SELECT ?firstName ?lastName ?awName1 ?awName2 ?y 
+WHERE { 
+ ?x :hasReceived ?aw1 , ?aw2 ;
+ :hasFirstName ?firstName ; :hasLastName ?lastName . 
+ ?aw1 :receivedIn ?y ; :hasTitle ?awName1 .
+ ?aw2 :receivedIn ?y ; :hasTitle ?awName2 .
+ FILTER (?aw1 != ?aw2)
+}

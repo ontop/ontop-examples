@@ -2,7 +2,7 @@
 
 # Runs one of ontop-mongo, drill, morph or virtuoso, in the conditions used for the ISWC 2017 mongo submission.
 
-USAGE="Usage: `basename $0` [-dhmnv] [-a mappingFile] [-c constraintsFile] [-g graph uri] [-p propertyFile] [-t ontologyFile] [-u source url] exe qDir oDir numberOfRuns
+USAGE="Usage: `basename $0` [-dhmnv] [-a mappingFile] [-c constraintsFile] [-g graph uri] [-p propertyFile] [-t ontologyFile] [-u source url] [-i queryTimeOut] exe qDir oDir numberOfRuns
 
 Options:
   -d			  	run Drill
@@ -17,6 +17,7 @@ Options:
   -p			  	properties JSON file (mandatory for ontop-mongo)
   -t			  	onTology file (for ontop-mongo)
   -u			  	source Url (mandatory for virtuoso)
+  -i			  	query tImeOut (mandatory for ontop-mongo)
 
 
 Arguments:
@@ -24,14 +25,15 @@ Arguments:
   exe			  	executable
   qDir				queries directory
   oDir				output directory
-  numberOfRuns		integer 
+  numberOfRuns		integer
+  queryTimeOut		integer
 "
 
 ontologyFilePresent=false
 constraintsFilePresent=false
 
 # Parse command line options
-while getopts a:c:dg:hmnp:t:u:v OPT; do
+while getopts a:c:dg:hi:mnp:t:u:v OPT; do
     case "$OPT" in
         h)
             echo "$USAGE"
@@ -69,6 +71,9 @@ while getopts a:c:dg:hmnp:t:u:v OPT; do
         a)
             mappingFile=$OPTARG
             ;;
+        i)
+            queryTimeOut=$OPTARG
+            ;;
         \?)
             echo "unknown option" >&2
             echo "$USAGE" >&2
@@ -94,6 +99,7 @@ executable=$1
 queriesDir=$2
 outputDir=$3
 numberOfRuns=$4
+queryTimeOut=$4
 
 case "$system" in
         drill)
@@ -116,7 +122,7 @@ case "$system" in
 
 		ontop-mongo)
 			#jar
-			#args: [-t owlFile] [-c constraintsFile] queriesDir outputFile propertyFile mappingFile numberOfruns  
+			#args: [-t owlFile] [-c constraintsFile] queriesDir outputFile propertyFile mappingFile numberOfruns queryTimeout 
 			outputFile="${outputDir}/output.tsv"
 			options="" 
 			if [ "$ontologyFilePresent" = true ]; then
@@ -125,7 +131,7 @@ case "$system" in
 			if [ "$constraintsFilePresent" = true ]; then
 				options=" -c $constraintsFile"  		
 			fi		
-			command="java -jar $executable $options $queriesDir $outputFile $propertyFile $mappingFile $numberOfRuns"
+			command="java -jar $executable $options $queriesDir $outputFile $propertyFile $mappingFile $numberOfRuns $queryTimeOut"
 			echo $command
 			eval "$command"
 			exit 0

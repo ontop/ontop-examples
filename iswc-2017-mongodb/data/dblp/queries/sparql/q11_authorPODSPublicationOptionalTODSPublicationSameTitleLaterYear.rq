@@ -1,0 +1,17 @@
+PREFIX : <http://dblp.l3s.de/d2r/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+SELECT ?title ?year1 ?year2 ?name1
+WHERE {
+{ ?x a :Author ; foaf:name ?name1 .
+ ?publ1 a :ConferencePaper ; dc:creator ?x ;
+ dc:title ?title ; dcterms:issued ?year1 ; :appearsIn "PODS".
+}
+OPTIONAL {
+ ?publ2 a :JournalArticle ; dc:creator ?x ;
+ dc:title ?title ; dcterms:issued ?year2 ; :appearsIn "ACM Trans. Database Syst." .
+ FILTER (?year2 > ?year1)
+}
+}

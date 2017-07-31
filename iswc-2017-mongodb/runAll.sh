@@ -27,20 +27,21 @@ wd=`dirname $0`
 #ontopMongoPropertyFile:$10
 #ontopMongoConstraintsFile:$11
 #ontopMongoOntologyFile:$12
-#runVirtuoso:$13
-#runOntopMongo:$14
-#runDrill:$15
-#runMorph:$16
+#queryTimeOut:$13
+#runVirtuoso:$14
+#runOntopMongo:$15
+#runDrill:$16
+#runMorph:$17
 runDataset (){
 
 	#Run Virtuoso 
-	if [ "$13" = true ]; then
+	if [ "$14" = true ]; then
 		$wd/run.sh -v -g $7 -u $virtuosoEndPoint $virtuosoExec $1 $3 $numberOfRuns
 	fi
 		
 	#Run Ontop-mongo
-	if [ "$14" = true ]; then
-		options="-n -a $9 -p $10" 
+	if [ "$15" = true ]; then
+		options="-n -a $9 -p $10 -i $13" 
 		if [ "$11" != noFile ]; then
 			options="$options -c $11"  		
 		fi
@@ -52,7 +53,7 @@ runDataset (){
 	fi
 
 	#Run Drill
-	if [ "$15" = true ]; then
+	if [ "$16" = true ]; then
 		$wd/run.sh -d $drillExec $2 $5 $numberOfRuns
 	fi	
 		
@@ -87,14 +88,16 @@ command="$command $wd/data/awards/properties"
 command="$command noFile"
 #ontopMongoOntologyFile
 command="$command $wd/data/awards/awards.ttl"
+#queryTimeOut
+command="$command 500"
 #runVirtuoso
-command="$command true" 
+command="$command false" 
 #runOntopMongo
 command="$command true"
 #runDrill
-command="$command true"
+command="$command false"
 #runMorph
-command="$command true"
+command="$command false"
 
 eval "$command"
 }
@@ -125,14 +128,16 @@ command="$command $wd/data/dblp/authors/properties"
 command="$command $wd/data/dblp/authors/constraints.json"
 #ontopMongoOntologyFile
 command="$command noFile"
+#queryTimeOut
+command="$command 500"
 #runVirtuoso
-command="$command true" 
+command="$command false" 
 #runOntopMongo
 command="$command true"
 #runDrill
-command="$command true"
+command="$command false"
 #runMorph
-command="$command true"
+command="$command false"
 
 eval "$command"
 }
@@ -163,12 +168,14 @@ command="$command $wd/data/dblp/publications/properties"
 command="$wd/data/dblp/publications/constraints.json"
 #ontopMongoOntologyFile
 command="$command noFile"
+#queryTimeOut
+command="$command 500"
 #runVirtuoso
 command="$command false" 
 #runOntopMongo
 command="$command true"
 #runDrill
-command="$command true"
+command="$command false"
 #runMorph
 command="$command false"
 
@@ -201,12 +208,14 @@ command="$command $wd/data/dblp/authors-publications/properties"
 command="$wd/data/dblp/authors-publications/constraints.json"
 #ontopMongoOntologyFile
 command="$command noFile"
+#queryTimeOut
+command="$command 500"
 #runVirtuoso
 command="$command false" 
 #runOntopMongo
 command="$command true"
 #runDrill
-command="$command true"
+command="$command false"
 #runMorph
 command="$command false"
 
@@ -248,14 +257,16 @@ command="$command $wd/data/bsbm/properties-$size"
 command="$wd/data/dblp/authors-publications/constraints.json"
 #ontopMongoOntologyFile
 command="$command noFile"
+#queryTimeOut
+command="$command 500"
 #runVirtuoso
-command="$command true" 
+command="$command false" 
 #runOntopMongo
 command="$command true"
 #runDrill
-command="$command true"
+command="$command false"
 #runMorph
-command="$command true"
+command="$command false"
 
 eval "$command"
 }
