@@ -230,7 +230,7 @@ runDBLP (){
 
 runBSBM (){
 
-size=$1
+$size=$1
 
 command="runDataset"  
 #sparqlQueriesDir
@@ -248,13 +248,13 @@ command="$command $wd/data/bsbm/eval/ontop-mongo"
 #virtuosoGraph
 command="$command http://bsbm$size.org"
 #morphMappingFile
-command="$command $wd/data/bsbm/mapping/morph/bsbm-mapping.ttl"
+command="$command $wd/data/bsbm/mapping/morph/awards-mapping.ttl"
 #ontopMongoMappingFile
 command="$command $wd/data/bsbm/mapping/ontop-mongo/mapping.json"
 #ontopMongoPropertyFile
 command="$command $wd/data/bsbm/properties-$size"
 #ontopMongoConstraintFile
-command="$command $wd/data/bsbm/constraints.json"
+command="$wd/data/dblp/authors-publications/constraints.json"
 #ontopMongoOntologyFile
 command="$command noFile"
 #queryTimeOut
@@ -267,7 +267,7 @@ command="$command true"
 command="$command false"
 #runMorph
 command="$command false"
-echo $command
+
 eval "$command"
 }
 
@@ -283,8 +283,7 @@ runAllBSBM () {
 	runBSBM 1000000 
 }	
 
-runBSBM 10000
-#runAwards
+runAwards
 #runDBLP
 #runAllBSBM
 
