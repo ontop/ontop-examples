@@ -3,7 +3,7 @@
 # Single file to run all systems over all datasets, with all arguments hard-coded.
 # Alternatively, use run.sh for a specific system/dataset/set of arguments.
 
-numberOfRuns=1
+numberOfRuns=10
 
 #virtuosoEndPoint="http://obdalin.inf.unibz.it:8890/sparql"
 virtuosoEndPoint="http://localhost:8890/sparql"
@@ -119,9 +119,9 @@ command="$command $wd/data/dblp/authors/eval/ontop-mongo"
 #virtuosoGraph
 command="$command http://dblp.org"
 #morphMappingFile
-command="$command $wd/data/dblp/authors/mapping/morph/dblp-mapping-aithors.ttl"
+command="$command $wd/data/dblp/authors/mapping/morph/dblp-mapping-authors.ttl"
 #ontopMongoMappingFile
-command="$command $wd/data/dblp/authors/mapping/ontop-mongo/mapping.json"
+command="$command $wd/data/dblp/authors/mapping/ontop-mongo/dblp-mapping-authors.json"
 #ontopMongoPropertyFile
 command="$command $wd/data/dblp/authors/properties"
 #ontopMongoConstraintFile
@@ -161,7 +161,7 @@ command="$command http://dblp.org"
 #morphMappingFile
 command="$command $wd/data/dblp/publications/mapping/morph/dblp-mapping-publications.ttl"
 #ontopMongoMappingFile
-command="$command $wd/data/dblp/publications/mapping/ontop-mongo/mapping.json"
+command="$command $wd/data/dblp/publications/mapping/ontop-mongo/dblp-mapping-publications.json"
 #ontopMongoPropertyFile
 command="$command $wd/data/dblp/publications/properties"
 #ontopMongoConstraintFile
@@ -201,7 +201,7 @@ command="$command http://dblp.org"
 #morphMappingFile
 command="$command $wd/data/dblp/authors-publications/mapping/morph/dblp-mapping-authors-publications.ttl"
 #ontopMongoMappingFile
-command="$command $wd/data/dblp/authors-publications/mapping/ontop-mongo/mapping.json"
+command="$command $wd/data/dblp/authors-publications/mapping/ontop-mongo/dblp-mapping-ap.json"
 #ontopMongoPropertyFile
 command="$command $wd/data/dblp/authors-publications/properties"
 #ontopMongoConstraintFile
@@ -283,7 +283,7 @@ runAllBSBM () {
 	runBSBM 1000000 
 }	
 
-runAwards
+#runAwards
 #runDBLP
 #runAllBSBM
 

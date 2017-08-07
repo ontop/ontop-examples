@@ -15,7 +15,7 @@
 
 @prefix : <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/mapping/>
 
-#"target": "bsbm-inst:dataFromProducer/Product{_id} a bsbm:Product ; bsbm:producer bsbm-inst:dataFromProducer/Producer{producer.producerId} ; dc:publisher bsbm-inst:dataFromProducer/Producer{producer.producerId} ; rdfs:label {productName}^^xsd:string ; foaf:name {productName}^^xsd:string ; bsbm:type bsbm-inst:ProductType{type.typeId} ; bsbm:productFeature bsbm:ProductFeature{features.#.featureId} ; bsbm:productPropertyNumeric1 {properties.numeric1}^^xsd:integer ; bsbm:productPropertyNumeric2 {properties.numeric2}^^xsd:integer ; bsbm:productPropertyNumeric3 {properties.numeric3}^^xsd:integer ; bsbm:productPropertyNumeric4 {properties.numeric4}^^xsd:integer ; bsbm:productPropertyNumeric5 {properties.numeric5}^^xsd:integer ; bsbm:productPropertyNumeric6 {properties.numeric6}^^xsd:integer ; bsbm:productPropertyTextual1 {properties.textual1}^^xsd:string ; bsbm:productPropertyTextual2 {properties.textual2}^^xsd:string ; bsbm:productPropertyTextual3 {properties.textual3}^^xsd:string ; bsbm:productPropertyTextual4 {properties.textual4}^^xsd:string ; bsbm:productPropertyTextual5 {properties.textual5}^^xsd:string ; bsbm:productPropertyTextual6 {properties.textual6}^^xsd:string ; rdfs:comment {comment}^^xsd:string. "
+#"target": "bsbm-inst:dataFromProducer/Product{_id} a bsbm:Product ; bsbm:producer bsbm-inst:dataFromProducer/Producer{producer.producerId} ; dc:publisher bsbm-inst:dataFromProducer/Producer{producer.producerId} ; rdfs:label {productName}^^xsd:string ; foaf:name {productName}^^xsd:string ; bsbm:type bsbm-inst:ProductType{type.typeId} ; bsbm:productFeature bsbm-inst:ProductFeature{features.#.featureId} ; bsbm:productPropertyNumeric1 {properties.numeric1}^^xsd:integer ; bsbm:productPropertyNumeric2 {properties.numeric2}^^xsd:integer ; bsbm:productPropertyNumeric3 {properties.numeric3}^^xsd:integer ; bsbm:productPropertyNumeric4 {properties.numeric4}^^xsd:integer ; bsbm:productPropertyNumeric5 {properties.numeric5}^^xsd:integer ; bsbm:productPropertyNumeric6 {properties.numeric6}^^xsd:integer ; bsbm:productPropertyTextual1 {properties.textual1}^^xsd:string ; bsbm:productPropertyTextual2 {properties.textual2}^^xsd:string ; bsbm:productPropertyTextual3 {properties.textual3}^^xsd:string ; bsbm:productPropertyTextual4 {properties.textual4}^^xsd:string ; bsbm:productPropertyTextual5 {properties.textual5}^^xsd:string ; bsbm:productPropertyTextual6 {properties.textual6}^^xsd:string ; rdfs:comment {comment}^^xsd:string. "
 
 :source_products xrr:query "db.products.find({})"; rml:iterator "$" ; xrr:uniqueRef "_id" .
 
@@ -82,7 +82,7 @@
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productFeature;
 	 	rr:objectMap [ 
-     	rr:template "bsbm:ProductFeature{$.features[*].featureId}";
+     	rr:template "bsbm-inst:ProductFeature{$.features[*].featureId}";
      	rr:termType rr:IRI ]
 	].
 
@@ -246,12 +246,12 @@
 	 	rr:objectMap [ xrr:reference "$.type.label" ]
 	].	
 	
-#  "target": "bsbm:ProductFeature{features.#.featureId} a bsbm:ProductFeature ; rdfs:label {features.#.description}^^xsd:string ; rdfs:comment {features.#.comment}^^xsd:string . "*/
+#  "target": "bsbm-inst:ProductFeature{features.#.featureId} a bsbm:ProductFeature ; rdfs:label {features.#.description}^^xsd:string ; rdfs:comment {features.#.comment}^^xsd:string . "*/
 :source_features xrr:query "db.products.find({})"; rml:iterator "$.features.*" .
 	
 <#Feature_Feature>
 	xrr:logicalSource :source_features ;
-	rr:subjectMap [ rr:template "bsbm:ProductFeature{$.featureId}"];
+	rr:subjectMap [ rr:template "bsbm-inst:ProductFeature{$.featureId}"];
 	rr:predicateObjectMap [
 	    rr:predicate rdf:type;
 	    rr:objectMap [
@@ -263,7 +263,7 @@
 
 <#Feature_label>
  	xrr:logicalSource :source_features ;
- 	rr:subjectMap [ rr:template "bsbm:ProductFeature{$.featureId}"];
+ 	rr:subjectMap [ rr:template "bsbm-inst:ProductFeature{$.featureId}"];
  	rr:predicateObjectMap [
      	rr:predicate rdfs:label;
 	 	rr:objectMap [ xrr:reference "$.description" ]
@@ -271,7 +271,7 @@
 	
 <#Feature_comment>
  	xrr:logicalSource :source_features ;
- 	rr:subjectMap [ rr:template "bsbm:ProductFeature{$.featureId}"];
+ 	rr:subjectMap [ rr:template "bsbm-inst:ProductFeature{$.featureId}"];
  	rr:predicateObjectMap [
      	rr:predicate rdfs:comment;
 	 	rr:objectMap [ xrr:reference "$.comment" ]
