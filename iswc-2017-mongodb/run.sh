@@ -110,7 +110,7 @@ case "$system" in
 			do
 				echo "$file"
 				outputFile=$outputDir/$(basename "$file").out
-				timeout 2000 java -jar $executable $file > $outputFile
+				timeout 5000 java -jar $executable $file > $outputFile
 			done
             exit 0
             ;;
