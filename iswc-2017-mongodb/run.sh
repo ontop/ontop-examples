@@ -1,6 +1,22 @@
-#! /bin/sh
+#! /bin/bash
 
 # Runs one of ontop-mongo, drill, morph or virtuoso, in the conditions used for the ISWC 2017 mongo submission.
+
+# Output: a single tsv file with format
+#	filename1	ms
+#	filename2	ms
+# ...
+# where ms is the averaged execution time over the number or runs
+
+#Specific values for ms:
+# -1: out of memory
+# -2: timeout 
+# -3: unsupported query
+
+
+
+
+
 
 USAGE="Usage: `basename $0` [-dhmnv] [-a mappingFile] [-c constraintsFile] [-g graph uri] [-p propertyFile] [-t ontologyFile] [-u source url] [-i queryTimeOut] exe qDir oDir numberOfRuns
 
@@ -28,6 +44,13 @@ Arguments:
   numberOfRuns		integer
   queryTimeOut		integer
 "
+
+
+
+
+
+
+
 
 ontologyFilePresent=false
 constraintsFilePresent=false
@@ -101,29 +124,88 @@ outputDir=$3
 numberOfRuns=$4
 queryTimeOut=$4
 
+
+if [ ! -e $outputDir ]; then  
+	mkdir $outputDir	
+fi
+outputFile="${outputDir}/output.tsv"
+rm -f $outputFile
+
+
+executeQuery(){
+
+case "$system" in
+	drill)
+		# capture both stdout and stderr
+		output=$(timeout 5000 java -jar $executable $1 2>&1)
+		ms=$(echo "$output" | grep "overall time" | cut -d' ' -f 4) 
+		if [ "$ms" != "" ] 
+		then
+			echo $ms
+		else
+			s=$(echo "$output" | grep "UNSUPPORTED")
+			if [ "$s" != "" ] 
+			then
+				echo "-3"
+			fi	
+		fi
+		exit 0
+		;;
+	morph)
+
+	\?)
+		echo "Unexpected system" >&2
+		echo "$USAGE" >&2
+		exit 1
+	;;
+esac	
+}
+
+executeQueries(){
+
+	declare -A map
+
+	for file in $queriesDir/*.sql
+	do
+		map[$(basename $file)]=0; 
+	done
+
+	for i in $(seq 1 $numberOfRuns)
+	do
+		echo "Starting run $i ..."
+		for file in $queriesDir/*.sql
+		do	
+			bsn=$(basename $file)
+			echo "Executing query $bsn ..."
+			res=$(executeQuery $file)
+			echo $res
+			map[$bsn]=$((${map[$bsn]}+$res))
+		done
+	done
+
+	for key in "${!map[@]}"
+   	do 
+		avg=$(echo "scale=2;${map[$key]}/$numberOfRuns" | bc)
+		echo -e "$key\t"$avg >> $outputFile
+   	done
+}
+
+
+
+
 case "$system" in
         drill)
-			if [ ! -e $outputDir ]; then  
-				mkdir $outputDir	
-			fi
-			for file in $queriesDir/*.sql
-			do
-				echo "$file"
-				outputFile=$outputDir/$(basename "$file").out
-				timeout 5000 java -jar $executable $file > $outputFile
-			done
+			executeQueries
             exit 0
-            ;;
-
+			;;
         morph)
-            echo "TODO: implement"
+			executeQueries
             exit 0
             ;;
 
 		ontop-mongo)
 			#jar
 			#args: [-t owlFile] [-c constraintsFile] queriesDir outputFile propertyFile mappingFile numberOfruns queryTimeout 
-			outputFile="${outputDir}/output.tsv"
 			options="" 
 			if [ "$ontologyFilePresent" = true ]; then
 				options=" -t $ontologyFile"  		
@@ -140,13 +222,12 @@ case "$system" in
 		virtuoso)
 			#jar
 			#args: queriesDir outputFile endPointURL graphURI numberOfruns 
-			outputFile="${outputDir}/output.tsv"
 			java -jar $executable $queriesDir $outputFile $sourceURL $graphURI $numberOfRuns
 			exit 0
 			;;
 
         \?)
-            echo "Unknown system" >&2
+            echo "Unexpected system" >&2
             echo "$USAGE" >&2
             exit 1
             ;;
