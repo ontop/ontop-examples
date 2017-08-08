@@ -165,7 +165,7 @@ command="$command $wd/data/dblp/publications/mapping/ontop-mongo/dblp-mapping-pu
 #ontopMongoPropertyFile
 command="$command $wd/data/dblp/publications/properties"
 #ontopMongoConstraintFile
-command="$wd/data/dblp/publications/constraints.json"
+command="$command $wd/data/dblp/publications/constraints.json"
 #ontopMongoOntologyFile
 command="$command noFile"
 #queryTimeOut
@@ -205,7 +205,7 @@ command="$command $wd/data/dblp/authors-publications/mapping/ontop-mongo/dblp-ma
 #ontopMongoPropertyFile
 command="$command $wd/data/dblp/authors-publications/properties"
 #ontopMongoConstraintFile
-command="$wd/data/dblp/authors-publications/constraints.json"
+command="$command $wd/data/dblp/authors-publications/constraints.json"
 #ontopMongoOntologyFile
 command="$command noFile"
 #queryTimeOut
@@ -224,13 +224,13 @@ eval "$command"
 
 runDBLP (){
 	runDBLPAuthors
-	runDBLPPublications
-	runDBLPAP
+#	runDBLPPublications
+#	runDBLPAP
 }
 
 runBSBM (){
 
-$size=$1
+size=$1
 
 command="runDataset"  
 #sparqlQueriesDir
@@ -244,7 +244,7 @@ command="$command $wd/data/bsbm/eval/morph"
 #drillOutputDir
 command="$command $wd/data/bsbm/eval/drill"
 #ontopMongoOutputDir
-command="$command $wd/data/bsbm/eval/ontop-mongo"
+command="$command $wd/data/bsbm/eval/ontop-mongo/$size"
 #virtuosoGraph
 command="$command http://bsbm$size.org"
 #morphMappingFile
@@ -254,7 +254,7 @@ command="$command $wd/data/bsbm/mapping/ontop-mongo/mapping.json"
 #ontopMongoPropertyFile
 command="$command $wd/data/bsbm/properties-$size"
 #ontopMongoConstraintFile
-command="$wd/data/dblp/authors-publications/constraints.json"
+command="$command $wd/data/bsbm/constraints.json"
 #ontopMongoOntologyFile
 command="$command noFile"
 #queryTimeOut
@@ -279,12 +279,12 @@ runDBLP () {
 
 runAllBSBM () {
 	runBSBM 10000 
-	runBSBM 100000 
-	runBSBM 1000000 
+#	runBSBM 100000 
+#	runBSBM 1000000 
 }	
 
 #runAwards
 #runDBLP
-#runAllBSBM
+runAllBSBM
 
 # EOF
