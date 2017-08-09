@@ -27,7 +27,7 @@ Options:
   -n			  	run oNtop-mongo 
   -v			  	run Virtuoso 
 
-  -a				mApping file (for ontop-mongo and morph)
+  -a				mApping file (for ontop-mongo)
   -c			  	constraints JSON file (for ontop-mongo)
   -g			  	queried graph uri (mandatory for virtuoso)
   -p			  	properties JSON file (mandatory for ontop-mongo)
@@ -126,14 +126,13 @@ queryTimeOut=$4
 
 
 if [ ! -e $outputDir ]; then  
-	mkdir $outputDir	
+	mkdir -p $outputDir	
 fi
 outputFile="${outputDir}/output.tsv"
 rm -f $outputFile
 
 
 executeQuery(){
-
 case "$system" in
 	drill)
 		# capture both stdout and stderr
@@ -142,17 +141,29 @@ case "$system" in
 		if [ "$ms" != "" ] 
 		then
 			echo $ms
-		else
-			s=$(echo "$output" | grep "UNSUPPORTED")
-			if [ "$s" != "" ] 
-			then
-				echo "-3"
-			fi	
+		elif [ $(echo "$output" | grep -c "OutOfMemoryError")  -ne 0 ]
+		then	
+			echo "-1"
+		elif [ $(echo "$output" | grep -c "UNSUPPORTED")  -ne 0 ]
+		then	
+			echo "-3"
 		fi
 		exit 0
 		;;
 	morph)
-
+		# capture both stdout and stderr
+		output=$( java -jar $executable --configFile $propertyFile -m $mappingFile -q $1 2>&1)
+		#output=$( java -jar $executable --configFile $propertyFile -m $mappingFile -q $1)
+	    ms=$( echo "$output" | grep "Overall SPARQL query processing time" | awk '{print $13}' | sed -n "s/\([0-9]*\)ms./\1/p" )
+		if [ "$ms" != "" ] 
+		then
+			echo $ms
+		elif [ $(echo "$output" | grep -c "OutOfMemoryError")  -ne 0 ]
+		then	
+			echo "-1"
+		fi
+		exit 0
+		;;
 	\?)
 		echo "Unexpected system" >&2
 		echo "$USAGE" >&2
@@ -165,7 +176,7 @@ executeQueries(){
 
 	declare -A map
 
-	for file in $queriesDir/*.sql
+	for file in $queriesDir/*
 	do
 		map[$(basename $file)]=0; 
 	done
@@ -173,7 +184,7 @@ executeQueries(){
 	for i in $(seq 1 $numberOfRuns)
 	do
 		echo "Starting run $i ..."
-		for file in $queriesDir/*.sql
+		for file in $queriesDir/*
 		do	
 			bsn=$(basename $file)
 			echo "Executing query $bsn ..."
