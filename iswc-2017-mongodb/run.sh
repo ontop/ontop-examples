@@ -153,7 +153,6 @@ case "$system" in
 	morph)
 		# capture both stdout and stderr
 		output=$( java -jar $executable --configFile $propertyFile -m $mappingFile -q $1 2>&1)
-		#output=$( java -jar $executable --configFile $propertyFile -m $mappingFile -q $1)
 	    ms=$( echo "$output" | grep "Overall SPARQL query processing time" | awk '{print $13}' | sed -n "s/\([0-9]*\)ms./\1/p" )
 		if [ "$ms" != "" ] 
 		then
@@ -189,7 +188,6 @@ executeQueries(){
 			bsn=$(basename $file)
 			echo "Executing query $bsn ..."
 			res=$(executeQuery $file)
-			echo $res
 			map[$bsn]=$((${map[$bsn]}+$res))
 		done
 	done
@@ -226,7 +224,7 @@ case "$system" in
 			fi		
 			command="java -jar $executable $options $queriesDir $outputFile $propertyFile $mappingFile $numberOfRuns $queryTimeOut"
 			echo $command
-			eval "$command"
+			eval "$command" 2>&1
 			exit 0
 			;;
 
