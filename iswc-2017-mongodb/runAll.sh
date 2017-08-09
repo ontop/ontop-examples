@@ -83,7 +83,7 @@ command="$command $wd/data/awards/mapping/morph/awards-mapping.ttl"
 #ontopMongoMappingFile
 command="$command $wd/data/awards/mapping/ontop-mongo/mapping.json"
 #ontopMongoPropertyFile
-command="$command $wd/data/awards/properties"
+command="$command $wd/data/awards/prop/ontop-mongo/properties"
 #ontopMongoConstraintFile
 command="$command noFile"
 #ontopMongoOntologyFile
@@ -123,7 +123,7 @@ command="$command $wd/data/dblp/authors/mapping/morph/dblp-mapping-authors.ttl"
 #ontopMongoMappingFile
 command="$command $wd/data/dblp/authors/mapping/ontop-mongo/dblp-mapping-authors.json"
 #ontopMongoPropertyFile
-command="$command $wd/data/dblp/authors/properties"
+command="$command $wd/data/dblp/authors/prop/ontop-mongo/properties"
 #ontopMongoConstraintFile
 command="$command $wd/data/dblp/authors/constraints.json"
 #ontopMongoOntologyFile
@@ -163,7 +163,7 @@ command="$command $wd/data/dblp/publications/mapping/morph/dblp-mapping-publicat
 #ontopMongoMappingFile
 command="$command $wd/data/dblp/publications/mapping/ontop-mongo/dblp-mapping-publications.json"
 #ontopMongoPropertyFile
-command="$command $wd/data/dblp/publications/properties"
+command="$command $wd/data/dblp/publications/prop/ontop-mongo/properties"
 #ontopMongoConstraintFile
 command="$command $wd/data/dblp/publications/constraints.json"
 #ontopMongoOntologyFile
@@ -203,7 +203,7 @@ command="$command $wd/data/dblp/authors-publications/mapping/morph/dblp-mapping-
 #ontopMongoMappingFile
 command="$command $wd/data/dblp/authors-publications/mapping/ontop-mongo/dblp-mapping-ap.json"
 #ontopMongoPropertyFile
-command="$command $wd/data/dblp/authors-publications/properties"
+command="$command $wd/data/dblp/authors-publications/prop/ontop-mongo/properties"
 #ontopMongoConstraintFile
 command="$command $wd/data/dblp/authors-publications/constraints.json"
 #ontopMongoOntologyFile
@@ -238,13 +238,13 @@ command="$command $wd/data/bsbm/queries/sparql"
 #drillQueriesDir
 command="$command $wd/data/bsbm/queries/drill"
 #virtuosoOutputDir
-command="$command $wd/data/bsbm/eval/virtuoso"
+command="$command $wd/data/bsbm/$size/eval/virtuoso"
 #morphOutputDir
-command="$command $wd/data/bsbm/eval/morph"
+command="$command $wd/data/bsbm/$size/eval/morph"
 #drillOutputDir
-command="$command $wd/data/bsbm/eval/drill"
+command="$command $wd/data/bsbm/$size/eval/drill"
 #ontopMongoOutputDir
-command="$command $wd/data/bsbm/eval/ontop-mongo/$size"
+command="$command $wd/data/bsbm/$size/eval/ontop-mongo/"
 #virtuosoGraph
 command="$command http://bsbm$size.org"
 #morphMappingFile
@@ -252,7 +252,7 @@ command="$command $wd/data/bsbm/mapping/morph/awards-mapping.ttl"
 #ontopMongoMappingFile
 command="$command $wd/data/bsbm/mapping/ontop-mongo/mapping.json"
 #ontopMongoPropertyFile
-command="$command $wd/data/bsbm/properties-$size"
+command="$command $wd/data/bsbm/$size/prop/ontop-mongo/properties"
 #ontopMongoConstraintFile
 command="$command $wd/data/bsbm/constraints.json"
 #ontopMongoOntologyFile
