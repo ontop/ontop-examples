@@ -9,9 +9,11 @@ numberOfRuns=10
 virtuosoEndPoint="http://localhost:8890/sparql"
 
 virtuosoExec="virtuoso/virtuoso-1.0-SNAPSHOT-jar-with-dependencies.jar"
-ontopMongoExec="ontop-mongo/ontop-mongo-benchmark-1.0-SNAPSHOT.jar"
 drillExec="drill/drill-sql-runner-all-1.0-SNAPSHOT.jar"
 morphExec="morph/morph-xr2rml-dist-1.0-SNAPSHOT-jar-with-dependencies.jar"
+ontopMongoFullExec="ontop-mongo/full/ontop-mongo-benchmark-1.0-SNAPSHOT.jar"
+ontopMongoRAExec="ontop-mongo/RA/ontop-mongo-benchmark-1.0-SNAPSHOT.jar"
+ontopMongoNaiveExec="ontop-mongo/naive/ontop-mongo-benchmark-1.0-SNAPSHOT.jar"
 
 wd=`dirname $0`
 
@@ -30,9 +32,11 @@ wd=`dirname $0`
 #ontopMongoOntologyFile:$13
 #queryTimeOut:$14
 #runVirtuoso:$15
-#runOntopMongo:$16
-#runDrill:$17
-#runMorph:$18
+#runDrill:$16
+#runMorph:$17
+#runOntopMongoFull:$18
+#runOntopMongoRA:$19
+#runOntopMongoNaive:$20
 runDataset (){
 
 	#Run Virtuoso 
@@ -41,7 +45,7 @@ runDataset (){
 	fi
 		
 	#Run Ontop-mongo
-	if [ "$16" = true ]; then
+	if [ "$18" = true -o "$19" = true -o "$20" = true ]; then
 		options="-n -a $8 -p $10 -i $14" 
 		if [ "$12" != noFile ]; then
 			options="$options -c $12"  		
@@ -49,17 +53,28 @@ runDataset (){
 		if [ "$13" != noFile ]; then
 			options="$options -t $13"  		
 		fi
-		command="$wd/run.sh $options $ontopMongoExec $1 $6 $numberOfRuns"
-		eval "$command"
+
+		if [ "$18" = true ]; then
+			command="$wd/run.sh $options $ontopMongoFullExec $1 $6/full $numberOfRuns"
+			eval "$command"
+		fi
+		if [ "$19" = true ]; then
+			command="$wd/run.sh $options $ontopMongoRAExec $1 $6/RA $numberOfRuns"
+			eval "$command"
+		fi
+		if [ "$20" = true ]; then
+			command="$wd/run.sh $options $ontopMongoNaiveExec $1 $6/naive $numberOfRuns"
+			eval "$command"
+		fi
 	fi
 
 	#Run Drill
-	if [ "$17" = true ]; then
+	if [ "$16" = true ]; then
 		$wd/run.sh -d $drillExec $2 $5 $numberOfRuns
 	fi	
 		
 	#Run Morph	
-	if [ "$18" = true ]; then
+	if [ "$17" = true ]; then
 		$wd/run.sh -m -p $11 -a $9 $morphExec $1 $4 $numberOfRuns
 	fi	
 
@@ -98,11 +113,15 @@ command="$command $wd/data/awards/awards.ttl"
 command="$command 500"
 #runVirtuoso
 command="$command false" 
-#runOntopMongo
-command="$command false"
 #runDrill
 command="$command false"
 #runMorph
+command="$command false"
+#runOntopMongoFull
+command="$command false"
+#runOntopMongoRA
+command="$command false"
+#runOntopMongoNaive
 command="$command true"
 
 eval "$command"
@@ -142,12 +161,16 @@ command="$command noFile"
 command="$command 500"
 #runVirtuoso
 command="$command false" 
-#runOntopMongo
-command="$command false"
 #runDrill
 command="$command false"
 #runMorph
 command="$command true"
+#runOntopMongo
+command="$command false"
+#runOntopMongoRA
+command="$command false"
+#runOntopMongoNaive
+command="$command false"
 
 eval "$command"
 }
@@ -187,11 +210,15 @@ command="$command noFile"
 command="$command 500"
 #runVirtuoso
 command="$command false" 
-#runOntopMongo
-command="$command true"
 #runDrill
 command="$command false"
 #runMorph
+command="$command false"
+#runOntopMongo
+command="$command true"
+#runOntopMongoRA
+command="$command false"
+#runOntopMongoNaive
 command="$command false"
 
 eval "$command"
@@ -209,8 +236,8 @@ runAllBSBM () {
 #	runBSBM 1000000 
 }	
 
-#runAwards
-runAllDBLP
+runAwards
+#runAllDBLP
 #runAllBSBM
 
 # EOF
