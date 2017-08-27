@@ -12,4 +12,4 @@ WHERE {
 FILTER (?value1 = 831)
 } 
 ORDER BY ?label 
-LIMIT 10 ;
+LIMIT 10 

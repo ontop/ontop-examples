@@ -1,0 +1,9 @@
+PREFIX : <http://awards.org/> 
+SELECT ?fn ?ln ?y 
+WHERE { 
+ { ?sc1 a :Female ; :hasOccupation "computer scientist" ;
+   :hasFirstName ?fn ; :hasLastName ?ln . }
+ OPTIONAL
+ { ?sc1 :hasReceived ?aw1 .
+   ?aw1 :receivedIn ?y ; :hasTitle "Turing Award" . }
+}

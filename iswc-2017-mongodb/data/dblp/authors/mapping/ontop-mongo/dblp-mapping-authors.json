@@ -1,0 +1,51 @@
+{
+    "prefixes": {
+        "xsd:" : "http://www.w3.org/2001/XMLSchema#",
+        "rdfs:" : "http://www.w3.org/2000/01/rdf-schema#",
+        ":" : "http://dblp.l3s.de/d2r/",
+        "foaf:" : "http://xmlns.com/foaf/0.1/",
+        "swrc:" : "http://swrc.ontoware.org/ontology#",
+        "dcterms:" : "http://purl.org/dc/terms/",
+        "dc:" : "http://purl.org/dc/elements/1.1/"
+
+    },
+    "mappings": [
+        {
+            "mappingId": "Author",
+            "source": {
+                "collection": "authors",
+                "criteria": {
+
+                }
+            },
+            "target": ":authors/{_id} a :Author ; a foaf:Agent ; foaf:name {name}^^xsd:string ; foaf:homepage {homepage}^^xsd:string . "
+        },
+        {
+            "mappingId": "Journal papers",
+            "source": {
+                "collection": "authors",
+                "criteria": {
+                }
+            },
+            "target": ":journals/{publications.article.#.dblp_key} a swrc:Journal ; a :JournalArticle ; a :Publication ; dc:creator :authors/{_id} ; dc:title {publications.article.#.title}^^xsd:string ; dcterms:issued {publications.article.#.year}^^xsd:integer ; :appearsIn {publications.article.#.in}^^xsd:string ; swrc:pages {publications.article.#.pages}^^xsd:string ; foaf:homepage {publications.article.#.url}^^xsd:string . "
+        },
+        {
+            "mappingId": "Conference papers",
+            "source": {
+                "collection": "authors",
+                "criteria": {
+                }
+            },
+            "target": ":inproceedings/{publications.inproceedings.#.dblp_key} a swrc:Conference ; a :ConferencePaper ; a :Publication ; dc:creator :authors/{_id} ; dc:title {publications.inproceedings.#.title}^^xsd:string ; dcterms:issued {publications.inproceedings.#.year}^^xsd:integer ; swrc:pages {publications.inproceedings.#.pages}^^xsd:string ; foaf:homepage {publications.inproceedings.#.url}^^xsd:string ; dcterms:partOf :proceedings/{publications.inproceedings.#.proceedings} ; :inProceedingsOf {publications.inproceedings.#.booktitle}^^xsd:string . :proceedings/{publications.inproceedings.#.proceedings} a :Proceedings ; dc:title {publications.inproceedings.#.booktitle}^^xsd:string . "
+        },
+        {
+            "mappingId": "Collections",
+            "source": {
+                "collection": "authors",
+                "criteria": {
+                }
+            },
+            "target": ":collections/{publications.incollection.#.dblp_key} a swrc:Collection ; a :BookChapter ; a :Publication ; dc:creator :authors/{_id} ; dc:title {publications.incollection.#.title}^^xsd:string ; dcterms:issued {publications.incollection.#.year}^^xsd:integer ; swrc:pages {publications.incollection.#.pages}^^xsd:string ; foaf:homepage {publications.incollection.#.url}^^xsd:string ; dcterms:partOf :books/{publications.incollection.#.proceedings} . :books/{publications.incollection.#.proceedings} a :Book ; dc:title {publications.incollection.#.booktitle}^^xsd:string . "
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+mongo.url = mongodb://localhost/bsbm10000
+mongo.user =
+mongo.password =
+

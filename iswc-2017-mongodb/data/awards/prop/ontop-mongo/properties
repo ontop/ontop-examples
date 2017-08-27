@@ -1,0 +1,3 @@
+mongo.url = mongodb://localhost:8080/awards_20170306
+mongo.user =
+mongo.password =

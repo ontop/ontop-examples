@@ -1,5 +1,0 @@
-PREFIX : <http://awards.org/> 
-SELECT ?x ?y 
-WHERE { ?x a :Award ; :receivedIn ?y .
-FILTER ((?y > 1989) && (?y < 2001))
-}

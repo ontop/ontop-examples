@@ -1,0 +1,84 @@
+DriverManager.getConnection("jdbc:drill:drillbit=obdalin.inf.unibz.it")
+    trying org.apache.drill.jdbc.Driver
+getConnection returning org.apache.drill.jdbc.Driver
+time1 = 1257 ms
+Dustin; Hoffman
+Dustin; Hoffman
+Sean; Penn
+Sean; Penn
+Katharine; Hepburn
+Katharine; Hepburn
+Katharine; Hepburn
+Katharine; Hepburn
+Katharine; Hepburn
+Katharine; Hepburn
+Katharine; Hepburn
+Katharine; Hepburn
+Katharine; Hepburn
+Katharine; Hepburn
+Katharine; Hepburn
+Katharine; Hepburn
+Bette; Davis
+Bette; Davis
+Jessica; Lange
+Jessica; Lange
+Tom; Hanks
+Tom; Hanks
+Marlon; Brando
+Marlon; Brando
+Jodie; Foster
+Jodie; Foster
+Jack; Lemmon
+Jack; Lemmon
+Alan; Arkin
+Alan; Arkin
+Gene; Hackman
+Gene; Hackman
+Meryl; Streep
+Meryl; Streep
+Meryl; Streep
+Meryl; Streep
+Meryl; Streep
+Meryl; Streep
+Kevin; Spacey
+Kevin; Spacey
+Robert De; Niro
+Robert De; Niro
+Jack; Nicholson
+Jack; Nicholson
+Jack; Nicholson
+Jack; Nicholson
+Jack; Nicholson
+Jack; Nicholson
+Hilary; Swank
+Hilary; Swank
+Helen; Hayes
+Helen; Hayes
+Dianne; Wiest
+Dianne; Wiest
+Denzel; Washington
+Denzel; Washington
+Spencer; Tracy
+Spencer; Tracy
+Gary; Cooper
+Gary; Cooper
+Fredric; March
+Fredric; March
+Jason; Robards
+Jason; Robards
+Jane; Fonda
+Jane; Fonda
+Sally; Field
+Sally; Field
+Shelley; Winters
+Shelley; Winters
+Walter; Brennan
+Walter; Brennan
+Walter; Brennan
+Walter; Brennan
+Walter; Brennan
+Walter; Brennan
+Melvyn; Douglas
+Melvyn; Douglas
+#answers = 78
+overall time = 2489 ms

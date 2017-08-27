@@ -1,0 +1,11 @@
+PREFIX : <http://awards.org/> 
+SELECT DISTINCT ?awName 
+WHERE { 
+ ?sc1 :hasReceived ?aw1 .
+ ?aw1 :receivedIn ?y ; :hasTitle ?awName .
+ ?sc2 :hasReceived ?aw2 .
+ ?aw2 :receivedIn ?y ; :hasTitle ?awName .
+ ?sc3 :hasReceived ?aw3 .
+ ?aw3 :receivedIn ?y ; :hasTitle ?awName .
+ FILTER ((?y > 2010) && (?sc1 != ?sc2) && (?sc1 != ?sc3) && (?sc2 != ?sc3))
+}
