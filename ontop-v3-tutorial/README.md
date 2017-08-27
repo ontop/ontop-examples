@@ -1,7 +1,5 @@
-Tutorial "Mapping Management and Expressive Ontologies in Ontology-Based Data Access"
+Tutorial "Ontology-Based Data Access with Ontop v3"
 =====================================================================================================
-
-http://ontop.inf.unibz.it/ekaw-2016-tutorial/
 
 Sessions:
 
