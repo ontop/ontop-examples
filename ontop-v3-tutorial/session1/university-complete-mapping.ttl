@@ -1,0 +1,329 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix :      <http://example.org/voc#> .
+@prefix obda:  <https://w3id.org/obda/vocabulary#> .
+@prefix ex:    <http://example.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<urn:uni2-course_1>  a         rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT * FROM \"uni2\".\"course\""
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://example.org/uni2/university" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  :isGivenAt
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:template  "{topic}" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  :title
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:class     :Course ;
+                                 rr:template  "http://example.org/uni2/course/{cid}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:uni2-associate-prof>
+        a                rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "SELECT * FROM \"uni2\".\"person\"\nWHERE \"status\" = 8"
+                         ] ;
+        rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     :AssociateProfessor ;
+                           rr:template  "http://example.org/uni2/person/{pid}" ;
+                           rr:termType  rr:IRI
+                         ] .
+
+<urn:uni1-teaching>  a         rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT * FROM \"uni1\".\"teaching\""
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://example.org/uni1/course/{c_id}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  :teaches
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://example.org/uni1/academic/{a_id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:uni2-assistantProfessor>
+        a                rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "SELECT * FROM \"uni2\".\"person\"\nWHERE \"status\" = 9"
+                         ] ;
+        rr:subjectMap    [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:class     :AssistantProfessor ;
+                           rr:template  "http://example.org/uni2/person/{pid}" ;
+                           rr:termType  rr:IRI
+                         ] .
+
+<urn:uni1-PostDoc>  a    rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "SELECT * FROM \"uni1\".\"academic\"\nWHERE \"position\" = 9"
+                         ] ;
+        rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     :PostDoc ;
+                           rr:template  "http://example.org/uni1/academic/{a_id}" ;
+                           rr:termType  rr:IRI
+                         ] .
+
+<urn:uni1-academic_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT * FROM \"uni1\".\"academic\""
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:template  "{first_name}" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  foaf:firstName
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:template  "{last_name}" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  foaf:lastName
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     :FacultyMember ;
+                                 rr:template  "http://example.org/uni1/academic/{a_id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:uni2-postDoc>  a    rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "SELECT * FROM \"uni2\".\"person\"\nWHERE \"status\" = 3"
+                         ] ;
+        rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     :PostDoc ;
+                           rr:template  "http://example.org/uni2/person/{pid}" ;
+                           rr:termType  rr:IRI
+                         ] .
+
+<urn:uni1-AssociateProfessor>
+        a                rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "SELECT * FROM \"uni1\".\"academic\"\nWHERE \"position\" = 2"
+                         ] ;
+        rr:subjectMap    [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:class     :AssociateProfessor ;
+                           rr:template  "http://example.org/uni1/academic/{a_id}" ;
+                           rr:termType  rr:IRI
+                         ] .
+
+<urn:uni2-fullProfessor>
+        a                rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "SELECT * FROM \"uni2\".\"person\"\nWHERE \"status\" = 7"
+                         ] ;
+        rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     :FullProfessor ;
+                           rr:template  "http://example.org/uni2/person/{pid}" ;
+                           rr:termType  rr:IRI
+                         ] .
+
+<urn:uni1-course_1>  a         rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT * FROM \"uni1\".\"course\""
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://example.org/uni1/university" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  :isGivenAt
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "title" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  :title
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     :Course ;
+                                 rr:template  "http://example.org/uni1/course/{c_id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:uni2-registration>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT *\nFROM \"uni2\".\"registration\""
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://example.org/uni2/course/{cid}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  :attends
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://example.org/uni2/person/{pid}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:uni1-student_1>  a        rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT * FROM \"uni1\".\"student\""
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:template  "{last_name}" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  foaf:lastName
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:template  "{first_name}" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  foaf:firstName
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:class     :Student ;
+                                 rr:template  "http://example.org/uni1/student/{s_id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:uni1-fullProfessor>
+        a                rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "SELECT * FROM \"uni1\".\"academic\"\nWHERE \"position\" = 1"
+                         ] ;
+        rr:subjectMap    [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:class     :FullProfessor ;
+                           rr:template  "http://example.org/uni1/academic/{a_id}" ;
+                           rr:termType  rr:IRI
+                         ] .
+
+<urn:uni2-lecturer>  a         rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT * FROM \"uni2\".\"course\""
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://example.org/uni2/course/{cid}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  :givesLecture
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://example.org/uni2/person/{lecturer}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:uni2-person_1>  a         rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT * FROM \"uni2\".\"person\""
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:template  "{fname}" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  foaf:firstName
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:template  "{lname}" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  foaf:lastName
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:class     foaf:Person ;
+                                 rr:template  "http://example.org/uni2/person/{pid}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:uni1-registration>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT *\nFROM \"uni1\".\"course-registration\""
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://example.org/uni1/course/{c_id}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  :attends
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://example.org/uni1/student/{s_id}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:uni2-lab-teacher>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "SELECT * FROM \"uni2\".\"course\""
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://example.org/uni2/course/{cid}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  :givesLab
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://example.org/uni2/person/{lab_teacher}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:uni2-graduate>  a   rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "SELECT * FROM \"uni2\".\"person\"\nWHERE \"status\" = 2"
+                         ] ;
+        rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     :GraduateStudent ;
+                           rr:template  "http://example.org/uni2/person/{pid}" ;
+                           rr:termType  rr:IRI
+                         ] .
+
+<urn:uni2-undergraduate>
+        a                rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "SELECT * FROM \"uni2\".\"person\"\nWHERE \"status\" = 1"
+                         ] ;
+        rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     :UndergraduateStudent ;
+                           rr:template  "http://example.org/uni2/person/{pid}" ;
+                           rr:termType  rr:IRI
+                         ] .
+
+<urn:uni1-externalTeacher>
+        a                rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "SELECT * FROM \"uni1\".\"academic\"\nWHERE \"position\" = 8"
+                         ] ;
+        rr:subjectMap    [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:class     :ExternalTeacher ;
+                           rr:template  "http://example.org/uni1/academic/{a_id}" ;
+                           rr:termType  rr:IRI
+                         ] .

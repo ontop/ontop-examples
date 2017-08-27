@@ -1,0 +1,465 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/voc#attends
+<http://example.org/voc#attends> rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/voc#givesLab
+<http://example.org/voc#givesLab> rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/voc#givesLecture
+<http://example.org/voc#givesLecture> rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/voc#isGivenAt
+<http://example.org/voc#isGivenAt> rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/voc#teaches
+<http://example.org/voc#teaches> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/voc#title
+<http://example.org/voc#title> rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/firstName
+<http://xmlns.com/foaf/0.1/firstName> rdf:type owl:DatatypeProperty .
+
+
+###  http://xmlns.com/foaf/0.1/lastName
+<http://xmlns.com/foaf/0.1/lastName> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/voc#AssistantProfessor
+<http://example.org/voc#AssistantProfessor> rdf:type owl:Class .
+
+
+###  http://example.org/voc#AssociateProfessor
+<http://example.org/voc#AssociateProfessor> rdf:type owl:Class .
+
+
+###  http://example.org/voc#Course
+<http://example.org/voc#Course> rdf:type owl:Class .
+
+
+###  http://example.org/voc#ExternalTeacher
+<http://example.org/voc#ExternalTeacher> rdf:type owl:Class .
+
+
+###  http://example.org/voc#FacultyMember
+<http://example.org/voc#FacultyMember> rdf:type owl:Class .
+
+
+###  http://example.org/voc#FullProfessor
+<http://example.org/voc#FullProfessor> rdf:type owl:Class .
+
+
+###  http://example.org/voc#GraduateStudent
+<http://example.org/voc#GraduateStudent> rdf:type owl:Class .
+
+
+###  http://example.org/voc#PostDoc
+<http://example.org/voc#PostDoc> rdf:type owl:Class .
+
+
+###  http://example.org/voc#Student
+<http://example.org/voc#Student> rdf:type owl:Class .
+
+
+###  http://example.org/voc#UndergraduateStudent
+<http://example.org/voc#UndergraduateStudent> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/uni1/university
+<http://example.org/uni1/university> rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/uni1/academic/1
+<http://example.org/uni1/academic/1> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/voc#FacultyMember> ,
+                                              <http://example.org/voc#FullProfessor> ;
+                                     <http://example.org/voc#teaches> <http://example.org/uni1/course/1234> ,
+                                                                      <http://example.org/uni1/course/1235> ;
+                                     <http://xmlns.com/foaf/0.1/firstName> "Anna"^^xsd:string ;
+                                     <http://xmlns.com/foaf/0.1/lastName> "Chambers"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/10
+<http://example.org/uni1/academic/10> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#ExternalTeacher> ,
+                                               <http://example.org/voc#FacultyMember> ;
+                                      <http://xmlns.com/foaf/0.1/firstName> "Udi"^^xsd:string ;
+                                      <http://xmlns.com/foaf/0.1/lastName> "Heinrike"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/11
+<http://example.org/uni1/academic/11> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#FacultyMember> ,
+                                               <http://example.org/voc#PostDoc> ;
+                                      <http://xmlns.com/foaf/0.1/firstName> "Alvena"^^xsd:string ;
+                                      <http://xmlns.com/foaf/0.1/lastName> "Merry"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/12
+<http://example.org/uni1/academic/12> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#FacultyMember> ,
+                                               <http://example.org/voc#FullProfessor> ;
+                                      <http://example.org/voc#teaches> <http://example.org/uni1/course/1500> ,
+                                                                       <http://example.org/uni1/course/1501> ;
+                                      <http://xmlns.com/foaf/0.1/firstName> "Kyler"^^xsd:string ;
+                                      <http://xmlns.com/foaf/0.1/lastName> "Josephina"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/13
+<http://example.org/uni1/academic/13> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#AssociateProfessor> ,
+                                               <http://example.org/voc#FacultyMember> ;
+                                      <http://example.org/voc#teaches> <http://example.org/uni1/course/1502> ;
+                                      <http://xmlns.com/foaf/0.1/firstName> "Gerard"^^xsd:string ;
+                                      <http://xmlns.com/foaf/0.1/lastName> "Cosimo"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/14
+<http://example.org/uni1/academic/14> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#FacultyMember> ;
+                                      <http://example.org/voc#teaches> <http://example.org/uni1/course/1501> ;
+                                      <http://xmlns.com/foaf/0.1/firstName> "Karine"^^xsd:string ;
+                                      <http://xmlns.com/foaf/0.1/lastName> "Attilio"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/2
+<http://example.org/uni1/academic/2> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/voc#FacultyMember> ,
+                                              <http://example.org/voc#PostDoc> ;
+                                     <http://example.org/voc#teaches> <http://example.org/uni1/course/1234> ,
+                                                                      <http://example.org/uni1/course/1500> ;
+                                     <http://xmlns.com/foaf/0.1/firstName> "Edward"^^xsd:string ;
+                                     <http://xmlns.com/foaf/0.1/lastName> "May"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/3
+<http://example.org/uni1/academic/3> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/voc#ExternalTeacher> ,
+                                              <http://example.org/voc#FacultyMember> ;
+                                     <http://example.org/voc#teaches> <http://example.org/uni1/course/1235> ;
+                                     <http://xmlns.com/foaf/0.1/firstName> "Rachel"^^xsd:string ;
+                                     <http://xmlns.com/foaf/0.1/lastName> "Ward"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/4
+<http://example.org/uni1/academic/4> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/voc#AssociateProfessor> ,
+                                              <http://example.org/voc#FacultyMember> ;
+                                     <http://example.org/voc#teaches> <http://example.org/uni1/course/1236> ;
+                                     <http://xmlns.com/foaf/0.1/firstName> "Priscilla"^^xsd:string ;
+                                     <http://xmlns.com/foaf/0.1/lastName> "Hildr"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/5
+<http://example.org/uni1/academic/5> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/voc#FacultyMember> ;
+                                     <http://xmlns.com/foaf/0.1/firstName> "Zlata"^^xsd:string ;
+                                     <http://xmlns.com/foaf/0.1/lastName> "Richmal"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/6
+<http://example.org/uni1/academic/6> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/voc#FacultyMember> ;
+                                     <http://xmlns.com/foaf/0.1/firstName> "Nathaniel"^^xsd:string ;
+                                     <http://xmlns.com/foaf/0.1/lastName> "Abolfazl"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/7
+<http://example.org/uni1/academic/7> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/voc#FacultyMember> ;
+                                     <http://example.org/voc#teaches> <http://example.org/uni1/course/1501> ;
+                                     <http://xmlns.com/foaf/0.1/firstName> "Sergei"^^xsd:string ;
+                                     <http://xmlns.com/foaf/0.1/lastName> "Elian"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/8
+<http://example.org/uni1/academic/8> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/voc#FacultyMember> ;
+                                     <http://example.org/voc#teaches> <http://example.org/uni1/course/1236> ;
+                                     <http://xmlns.com/foaf/0.1/firstName> "Alois"^^xsd:string ;
+                                     <http://xmlns.com/foaf/0.1/lastName> "Jayant"^^xsd:string .
+
+
+###  http://example.org/uni1/academic/9
+<http://example.org/uni1/academic/9> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/voc#FacultyMember> ;
+                                     <http://example.org/voc#teaches> <http://example.org/uni1/course/1236> ;
+                                     <http://xmlns.com/foaf/0.1/firstName> "Torborg"^^xsd:string ;
+                                     <http://xmlns.com/foaf/0.1/lastName> "Chernobog"^^xsd:string .
+
+
+###  http://example.org/uni1/course/1234
+<http://example.org/uni1/course/1234> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#Course> ;
+                                      <http://example.org/voc#isGivenAt> <http://example.org/uni1/university> ;
+                                      <http://example.org/voc#title> "Linear Algebra" .
+
+
+###  http://example.org/uni1/course/1235
+<http://example.org/uni1/course/1235> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#Course> ;
+                                      <http://example.org/voc#isGivenAt> <http://example.org/uni1/university> ;
+                                      <http://example.org/voc#title> "Analysis" .
+
+
+###  http://example.org/uni1/course/1236
+<http://example.org/uni1/course/1236> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#Course> ;
+                                      <http://example.org/voc#isGivenAt> <http://example.org/uni1/university> ;
+                                      <http://example.org/voc#title> "Operating Systems" .
+
+
+###  http://example.org/uni1/course/1500
+<http://example.org/uni1/course/1500> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#Course> ;
+                                      <http://example.org/voc#isGivenAt> <http://example.org/uni1/university> ;
+                                      <http://example.org/voc#title> "Data Mining" .
+
+
+###  http://example.org/uni1/course/1501
+<http://example.org/uni1/course/1501> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#Course> ;
+                                      <http://example.org/voc#isGivenAt> <http://example.org/uni1/university> ;
+                                      <http://example.org/voc#title> "Theory of Computing" .
+
+
+###  http://example.org/uni1/course/1502
+<http://example.org/uni1/course/1502> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/voc#Course> ;
+                                      <http://example.org/voc#isGivenAt> <http://example.org/uni1/university> ;
+                                      <http://example.org/voc#title> "Research Methods" .
+
+
+###  http://example.org/uni1/student/1
+<http://example.org/uni1/student/1> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/voc#Student> ;
+                                    <http://example.org/voc#attends> <http://example.org/uni1/course/1234> ,
+                                                                     <http://example.org/uni1/course/1235> ,
+                                                                     <http://example.org/uni1/course/1236> ;
+                                    <http://xmlns.com/foaf/0.1/firstName> "Mary"^^xsd:string ;
+                                    <http://xmlns.com/foaf/0.1/lastName> "Smith"^^xsd:string .
+
+
+###  http://example.org/uni1/student/2
+<http://example.org/uni1/student/2> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/voc#Student> ;
+                                    <http://example.org/voc#attends> <http://example.org/uni1/course/1234> ,
+                                                                     <http://example.org/uni1/course/1235> ;
+                                    <http://xmlns.com/foaf/0.1/firstName> "John"^^xsd:string ;
+                                    <http://xmlns.com/foaf/0.1/lastName> "Doe"^^xsd:string .
+
+
+###  http://example.org/uni1/student/3
+<http://example.org/uni1/student/3> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/voc#Student> ;
+                                    <http://example.org/voc#attends> <http://example.org/uni1/course/1234> ,
+                                                                     <http://example.org/uni1/course/1236> ;
+                                    <http://xmlns.com/foaf/0.1/firstName> "Franck"^^xsd:string ;
+                                    <http://xmlns.com/foaf/0.1/lastName> "Combs"^^xsd:string .
+
+
+###  http://example.org/uni1/student/4
+<http://example.org/uni1/student/4> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/voc#Student> ;
+                                    <http://example.org/voc#attends> <http://example.org/uni1/course/1500> ,
+                                                                     <http://example.org/uni1/course/1501> ;
+                                    <http://xmlns.com/foaf/0.1/firstName> "Billy"^^xsd:string ;
+                                    <http://xmlns.com/foaf/0.1/lastName> "Hinkley"^^xsd:string .
+
+
+###  http://example.org/uni1/student/5
+<http://example.org/uni1/student/5> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/voc#Student> ;
+                                    <http://example.org/voc#attends> <http://example.org/uni1/course/1500> ,
+                                                                     <http://example.org/uni1/course/1502> ;
+                                    <http://xmlns.com/foaf/0.1/firstName> "Alison"^^xsd:string ;
+                                    <http://xmlns.com/foaf/0.1/lastName> "Robards"^^xsd:string .
+
+
+###  http://example.org/uni2/university
+<http://example.org/uni2/university> rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/uni2/course/1
+<http://example.org/uni2/course/1> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#Course> ;
+                                   <http://example.org/voc#isGivenAt> <http://example.org/uni2/university> ;
+                                   <http://example.org/voc#title> "Information security"^^xsd:string .
+
+
+###  http://example.org/uni2/course/2
+<http://example.org/uni2/course/2> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#Course> ;
+                                   <http://example.org/voc#isGivenAt> <http://example.org/uni2/university> ;
+                                   <http://example.org/voc#title> "Software factory"^^xsd:string .
+
+
+###  http://example.org/uni2/course/3
+<http://example.org/uni2/course/3> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#Course> ;
+                                   <http://example.org/voc#isGivenAt> <http://example.org/uni2/university> ;
+                                   <http://example.org/voc#title> "Software process management"^^xsd:string .
+
+
+###  http://example.org/uni2/course/4
+<http://example.org/uni2/course/4> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#Course> ;
+                                   <http://example.org/voc#isGivenAt> <http://example.org/uni2/university> ;
+                                   <http://example.org/voc#title> "Introduction to programming"^^xsd:string .
+
+
+###  http://example.org/uni2/course/5
+<http://example.org/uni2/course/5> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#Course> ;
+                                   <http://example.org/voc#isGivenAt> <http://example.org/uni2/university> ;
+                                   <http://example.org/voc#title> "Discrete mathematics and logic"^^xsd:string .
+
+
+###  http://example.org/uni2/course/6
+<http://example.org/uni2/course/6> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#Course> ;
+                                   <http://example.org/voc#isGivenAt> <http://example.org/uni2/university> ;
+                                   <http://example.org/voc#title> "Intelligent Systems"^^xsd:string .
+
+
+###  http://example.org/uni2/person/1
+<http://example.org/uni2/person/1> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#AssociateProfessor> ,
+                                            <http://xmlns.com/foaf/0.1/Person> ;
+                                   <http://example.org/voc#givesLecture> <http://example.org/uni2/course/1> ,
+                                                                         <http://example.org/uni2/course/5> ;
+                                   <http://xmlns.com/foaf/0.1/firstName> "Zak"^^xsd:string ;
+                                   <http://xmlns.com/foaf/0.1/lastName> "Lane"^^xsd:string .
+
+
+###  http://example.org/uni2/person/10
+<http://example.org/uni2/person/10> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/voc#UndergraduateStudent> ,
+                                             <http://xmlns.com/foaf/0.1/Person> ;
+                                    <http://example.org/voc#attends> <http://example.org/uni2/course/4> ;
+                                    <http://xmlns.com/foaf/0.1/firstName> "Larry"^^xsd:string ;
+                                    <http://xmlns.com/foaf/0.1/lastName> "Alfaro"^^xsd:string .
+
+
+###  http://example.org/uni2/person/11
+<http://example.org/uni2/person/11> rdf:type owl:NamedIndividual ,
+                                             <http://xmlns.com/foaf/0.1/Person> ;
+                                    <http://xmlns.com/foaf/0.1/firstName> "John"^^xsd:string ;
+                                    <http://xmlns.com/foaf/0.1/lastName> "Sims"^^xsd:string .
+
+
+###  http://example.org/uni2/person/2
+<http://example.org/uni2/person/2> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#UndergraduateStudent> ,
+                                            <http://xmlns.com/foaf/0.1/Person> ;
+                                   <http://example.org/voc#attends> <http://example.org/uni2/course/1> ,
+                                                                    <http://example.org/uni2/course/5> ;
+                                   <http://xmlns.com/foaf/0.1/firstName> "Mattie"^^xsd:string ;
+                                   <http://xmlns.com/foaf/0.1/lastName> "Moses"^^xsd:string .
+
+
+###  http://example.org/uni2/person/3
+<http://example.org/uni2/person/3> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#GraduateStudent> ,
+                                            <http://xmlns.com/foaf/0.1/Person> ;
+                                   <http://example.org/voc#attends> <http://example.org/uni2/course/2> ,
+                                                                    <http://example.org/uni2/course/3> ;
+                                   <http://example.org/voc#givesLab> <http://example.org/uni2/course/1> ;
+                                   <http://xmlns.com/foaf/0.1/firstName> "Céline"^^xsd:string ;
+                                   <http://xmlns.com/foaf/0.1/lastName> "Mendez"^^xsd:string .
+
+
+###  http://example.org/uni2/person/4
+<http://example.org/uni2/person/4> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#AssistantProfessor> ,
+                                            <http://xmlns.com/foaf/0.1/Person> ;
+                                   <http://example.org/voc#givesLab> <http://example.org/uni2/course/6> ;
+                                   <http://xmlns.com/foaf/0.1/firstName> "Rachel"^^xsd:string ;
+                                   <http://xmlns.com/foaf/0.1/lastName> "Ward"^^xsd:string .
+
+
+###  http://example.org/uni2/person/5
+<http://example.org/uni2/person/5> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#PostDoc> ,
+                                            <http://xmlns.com/foaf/0.1/Person> ;
+                                   <http://example.org/voc#givesLab> <http://example.org/uni2/course/2> ;
+                                   <http://xmlns.com/foaf/0.1/firstName> "Alvena"^^xsd:string ;
+                                   <http://xmlns.com/foaf/0.1/lastName> "Merry"^^xsd:string .
+
+
+###  http://example.org/uni2/person/6
+<http://example.org/uni2/person/6> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#FullProfessor> ,
+                                            <http://xmlns.com/foaf/0.1/Person> ;
+                                   <http://xmlns.com/foaf/0.1/firstName> "Victor"^^xsd:string ;
+                                   <http://xmlns.com/foaf/0.1/lastName> "Scott"^^xsd:string .
+
+
+###  http://example.org/uni2/person/7
+<http://example.org/uni2/person/7> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#AssociateProfessor> ,
+                                            <http://xmlns.com/foaf/0.1/Person> ;
+                                   <http://example.org/voc#givesLecture> <http://example.org/uni2/course/3> ,
+                                                                         <http://example.org/uni2/course/4> ,
+                                                                         <http://example.org/uni2/course/6> ;
+                                   <http://xmlns.com/foaf/0.1/firstName> "Kellie"^^xsd:string ;
+                                   <http://xmlns.com/foaf/0.1/lastName> "Griffin"^^xsd:string .
+
+
+###  http://example.org/uni2/person/8
+<http://example.org/uni2/person/8> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#AssistantProfessor> ,
+                                            <http://xmlns.com/foaf/0.1/Person> ;
+                                   <http://example.org/voc#givesLab> <http://example.org/uni2/course/3> ,
+                                                                     <http://example.org/uni2/course/5> ;
+                                   <http://example.org/voc#givesLecture> <http://example.org/uni2/course/2> ;
+                                   <http://xmlns.com/foaf/0.1/firstName> "Sueann"^^xsd:string ;
+                                   <http://xmlns.com/foaf/0.1/lastName> "Samora"^^xsd:string .
+
+
+###  http://example.org/uni2/person/9
+<http://example.org/uni2/person/9> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/voc#GraduateStudent> ,
+                                            <http://xmlns.com/foaf/0.1/Person> ;
+                                   <http://example.org/voc#attends> <http://example.org/uni2/course/2> ;
+                                   <http://example.org/voc#givesLab> <http://example.org/uni2/course/4> ;
+                                   <http://xmlns.com/foaf/0.1/firstName> "Billy"^^xsd:string ;
+                                   <http://xmlns.com/foaf/0.1/lastName> "Hinkley"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.2.5) https://github.com/owlcs/owlapi
