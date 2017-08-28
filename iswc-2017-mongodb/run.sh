@@ -122,7 +122,6 @@ executable=$1
 queriesDir=$2
 outputDir=$3
 numberOfRuns=$4
-queryTimeOut=$4
 
 
 if [ ! -e $outputDir ]; then  
