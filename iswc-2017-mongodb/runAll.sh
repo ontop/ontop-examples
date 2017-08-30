@@ -70,12 +70,12 @@ runDataset (){
 
 	#Run Drill
 	if [ "$16" = true ]; then
-		$wd/run.sh -d $drillExec $2 $5 $numberOfRuns
+		$wd/run.sh -d -i $14 $drillExec $2 $5 $numberOfRuns
 	fi	
 		
 	#Run Morph	
 	if [ "$17" = true ]; then
-		$wd/run.sh -m -p $11 -a $9 $morphExec $1 $4 $numberOfRuns
+		$wd/run.sh -m -p $11 -a $9 -i $14 $morphExec $1 $4 $numberOfRuns
 	fi	
 
 }
@@ -116,13 +116,13 @@ command="$command false"
 #runDrill
 command="$command false"
 #runMorph
-command="$command false"
+command="$command true"
 #runOntopMongoFull
 command="$command false"
 #runOntopMongoRA
 command="$command false"
 #runOntopMongoNaive
-command="$command true"
+command="$command false"
 
 eval "$command"
 }

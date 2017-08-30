@@ -18,7 +18,7 @@
 
 
 
-USAGE="Usage: `basename $0` [-dhmnv] [-a mappingFile] [-c constraintsFile] [-g graph uri] [-p propertyFile] [-t ontologyFile] [-u source url] [-i queryTimeOut] exe qDir oDir numberOfRuns
+USAGE="Usage: `basename $0` [-dhmnv] [-a mappingFile] [-c constraintsFile] [-g graph uri] [-p propertyFile] [-t ontologyFile] [-u source url] [-i databaseTimeout] exe qDir oDir numberOfRuns
 
 Options:
   -d			  	run Drill
@@ -42,7 +42,7 @@ Arguments:
   qDir				queries directory
   oDir				output directory
   numberOfRuns		integer
-  queryTimeOut		integer
+  databaseTimeout		integer
 "
 
 
@@ -95,7 +95,9 @@ while getopts a:c:dg:hi:mnp:t:u:v OPT; do
             mappingFile=$OPTARG
             ;;
         i)
-            queryTimeOut=$OPTARG
+            databaseTimeout=$OPTARG
+			# used in addition for morph (timeout due to materialization, not to the source)
+			processTimeout=$(echo "$databaseTimeout * 1.1" | bc) 
             ;;
         \?)
             echo "unknown option" >&2
@@ -135,7 +137,7 @@ executeQuery(){
 case "$system" in
 	drill)
 		# capture both stdout and stderr
-		output=$(timeout 5000 java -jar $executable $1 2>&1)
+		output=$(timeout $processTimeout java -jar $executable $1 2>&1 || ([ $? -eq 124 ] && echo " Error:query timed out"))
 		ms=$(echo "$output" | grep "overall time" | cut -d' ' -f 4) 
 		if [ "$ms" != "" ] 
 		then
@@ -143,6 +145,9 @@ case "$system" in
 		elif [ $(echo "$output" | grep -c "OutOfMemoryError")  -ne 0 ]
 		then	
 			echo "-1"
+		elif [ $(echo "$output" | grep -c "Error:query timed out")  -ne 0 ]
+		then	
+			echo "-2"
 		elif [ $(echo "$output" | grep -c "UNSUPPORTED")  -ne 0 ]
 		then	
 			echo "-3"
@@ -151,7 +156,7 @@ case "$system" in
 		;;
 	morph)
 		# capture both stdout and stderr
-		output=$( java -jar $executable --configFile $propertyFile -m $mappingFile -q $1 2>&1)
+		output=$(timeout $processTimeout java -jar $executable --configFile $propertyFile -m $mappingFile -q $1 2>&1 || ([ $? -eq 124 ] && echo " Error:query timed out"))
 	    ms=$( echo "$output" | grep "Overall SPARQL query processing time" | awk '{print $13}' | sed -n "s/\([0-9]*\)ms./\1/p" )
 		if [ "$ms" != "" ] 
 		then
@@ -159,6 +164,12 @@ case "$system" in
 		elif [ $(echo "$output" | grep -c "OutOfMemoryError")  -ne 0 ]
 		then	
 			echo "-1"
+		elif [ $(echo "$output" | grep -c "Error:query timed out")  -ne 0 ]
+		then	
+			echo "-2"
+		elif [ $(echo "$output" | grep -c "MorphException: Target queries not set in")  -ne 0 ]
+		then	
+			echo "-3"
 		fi
 		exit 0
 		;;
@@ -171,7 +182,6 @@ esac
 }
 
 executeQueries(){
-
 	declare -A map
 
 	for file in $queriesDir/*
@@ -187,6 +197,7 @@ executeQueries(){
 			bsn=$(basename $file)
 			echo "Executing query $bsn ..."
 			res=$(executeQuery $file)
+			echo $res
 			map[$bsn]=$((${map[$bsn]}+$res))
 		done
 	done
@@ -213,7 +224,7 @@ case "$system" in
 
 		ontop-mongo)
 			#jar
-			#args: [-t owlFile] [-c constraintsFile] queriesDir outputFile propertyFile mappingFile numberOfruns queryTimeout 
+			#args: [-t owlFile] [-c constraintsFile] queriesDir outputFile propertyFile mappingFile numberOfruns databaseTimeout 
 			options="" 
 			if [ "$ontologyFilePresent" = true ]; then
 				options=" -t $ontologyFile"  		
@@ -221,7 +232,7 @@ case "$system" in
 			if [ "$constraintsFilePresent" = true ]; then
 				options=" -c $constraintsFile"  		
 			fi		
-			command="java -jar $executable $options $queriesDir $outputFile $propertyFile $mappingFile $numberOfRuns $queryTimeOut"
+			command="java -jar $executable $options $queriesDir $outputFile $propertyFile $mappingFile $numberOfRuns $databaseTimeout"
 			echo $command
 			eval "$command" 2>&1
 			exit 0
