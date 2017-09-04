@@ -7,6 +7,7 @@ numberOfRuns=10
 
 #virtuosoEndPoint="http://obdalin.inf.unibz.it:8890/sparql"
 virtuosoEndPoint="http://localhost:8890/sparql"
+drillHost="localhost"
 
 virtuosoExec="virtuoso/virtuoso-1.0-SNAPSHOT-jar-with-dependencies.jar"
 drillExec="drill/drill-sql-runner-all-1.0-SNAPSHOT.jar"
@@ -70,7 +71,7 @@ runDataset (){
 
 	#Run Drill
 	if [ "$16" = true ]; then
-		$wd/run.sh -d -i $14 $drillExec $2 $5 $numberOfRuns
+		$wd/run.sh -d -i $14 -u $drillHost $drillExec $2 $5 $numberOfRuns
 	fi	
 		
 	#Run Morph	
@@ -82,6 +83,9 @@ runDataset (){
 
 
 runAwards (){
+
+echo "Running Awards ..." 	
+
 command="runDataset"  
 #sparqlQueriesDir
 command="$command $wd/data/awards/queries/sparql"
@@ -114,9 +118,9 @@ command="$command 500"
 #runVirtuoso
 command="$command false" 
 #runDrill
-command="$command false"
-#runMorph
 command="$command true"
+#runMorph
+command="$command false"
 #runOntopMongoFull
 command="$command false"
 #runOntopMongoRA
@@ -129,6 +133,8 @@ eval "$command"
 
 runDBLP (){
 config="$1"
+
+echo "Running DBLP $config ..." 	
 
 command="runDataset"  
 #sparqlQueriesDir
@@ -162,9 +168,9 @@ command="$command 500"
 #runVirtuoso
 command="$command false" 
 #runDrill
-command="$command false"
-#runMorph
 command="$command true"
+#runMorph
+command="$command false"
 #runOntopMongo
 command="$command false"
 #runOntopMongoRA
@@ -178,6 +184,8 @@ eval "$command"
 runBSBM (){
 
 size=$1
+
+echo "Running BSBM $size ..." 	
 
 command="runDataset"  
 #sparqlQueriesDir
@@ -236,8 +244,8 @@ runAllBSBM () {
 #	runBSBM 1000000 
 }	
 
-runAwards
-#runAllDBLP
+#runAwards
+runAllDBLP
 #runAllBSBM
 
 # EOF

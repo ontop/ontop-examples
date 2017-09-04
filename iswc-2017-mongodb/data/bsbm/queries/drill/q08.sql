@@ -1,3 +1,5 @@
+-- UNSUPPORTED
+
 -- ans1(reviewerName,rating1,reviewDate,rating2,review,rating3,rating4,reviewer,title)
 -- CONSTRUCT [reviewerName, rating1, reviewDate, rating2, review, rating3, rating4, reviewer, title] [review/URI("http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{}_{}","7",rev_reviewIdm4), reviewer/URI("http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{}",rev_reviewer_personIdm7), rating1/http://www.w3.org/2001/XMLSchema#integer(rev_rating1m11), rating2/http://www.w3.org/2001/XMLSchema#integer(rev_rating2m12), rating3/http://www.w3.org/2001/XMLSchema#integer(rev_rating3m6), rating4/http://www.w3.org/2001/XMLSchema#integer(rev_rating4m10), title/http://www.w3.org/2001/XMLSchema#string(rev_titlem1), reviewDate/http://www.w3.org/2001/XMLSchema#date(rev_datem39)]
 --    LJ EQ(rev_reviewIdm4,rev_reviewIdm4f5)

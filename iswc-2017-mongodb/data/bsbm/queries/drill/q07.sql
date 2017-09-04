@@ -1,3 +1,5 @@
+-- UNSUPPORTED
+
 -- CONSTRUCT [offer, productLabel, rating1, rating2, price, vendor, review, reviewer, revTitle, revName, vendorTitle] [offer/URI("http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{}",off_offerIdm5), rating1/http://www.w3.org/2001/XMLSchema#integer(rev_rating1m11), rating2/http://www.w3.org/2001/XMLSchema#integer(rev_rating2m12), review/URI("http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{}_{}","7",rev_reviewIdm4), vendorTitle/http://www.w3.org/2001/XMLSchema#string(off_vendor_namem5), productLabel/http://www.w3.org/2001/XMLSchema#string(productNamem42), revTitle/http://www.w3.org/2001/XMLSchema#string(rev_titlem1), vendor/URI("http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{}",off_vendor_vendorIdm5), reviewer/URI("http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{}",rev_reviewer_personIdm7)]
 --    LJ
 --       LJ

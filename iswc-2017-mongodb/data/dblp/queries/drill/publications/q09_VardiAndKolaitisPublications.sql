@@ -1,4 +1,4 @@
---we do not support it now
+-- UNSUPPORTED
 
 -- SELECT
 --   `author_1`['name'] AS name,
