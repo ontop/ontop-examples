@@ -1,13 +1,13 @@
 @prefix xrr: <http://i3s.unice.fr/xr2rml#> .
 @prefix rr:  <http://www.w3.org/ns/r2rml#> .
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ex: <http://ex.org/bios/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-@prefix ex:  <http://ex.org/awards/>
-@prefix :  <http://awards.org/>
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:  <http://ex.org/awards/> .
+@prefix :  <http://awards.org/> .
 
 #"target": "ex:person/{_id} a :Person ; :hasFirstName {name.first}^^xsd:string ; :hasLastName {name.last}^^xsd:string ; :bornInYear {birth.year}^^xsd:integer ; :bornInMonth {birth.month}^^xsd:integer ; :bornOnDay {birth.day}^^xsd:integer ; :bornIn {bornIn}^^xsd:string ; :diedInYear {death.year}^^xsd:integer ; :diedInMonth {death.month}^^xsd:integer ; :diedOnDay {death.day}^^xsd:integer ; :hasReceived ex:person/{_id}/award/{awards.#} ; :hasOccupation {occupation.$}^^xsd:string . "
 

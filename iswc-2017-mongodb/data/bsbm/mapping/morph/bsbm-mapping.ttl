@@ -1,19 +1,19 @@
 @prefix xrr: <http://i3s.unice.fr/xr2rml#> .
 @prefix rr:  <http://www.w3.org/ns/r2rml#> .
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ex: <http://ex.org/bios/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
-@prefix bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
-@prefix dc: <http://purl.org/dc/elements/1.1/>
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-@prefix foaf: <http://xmlns.com/foaf/0.1/>
-@prefix iso3166: <http://downlode.org/rdf/iso-3166/countries#>
-@prefix rev: <http://purl.org/stuff/rev#>
+@prefix bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/> .
+@prefix bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix iso3166: <http://downlode.org/rdf/iso-3166/countries#> .
+@prefix rev: <http://purl.org/stuff/rev#> .
 
-@prefix : <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/mapping/>
+@prefix : <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/mapping/> .
 
 #"target": "bsbm-inst:dataFromProducer/Product{_id} a bsbm:Product ; bsbm:producer bsbm-inst:dataFromProducer/Producer{producer.producerId} ; dc:publisher bsbm-inst:dataFromProducer/Producer{producer.producerId} ; rdfs:label {productName}^^xsd:string ; foaf:name {productName}^^xsd:string ; bsbm:type bsbm-inst:ProductType{type.typeId} ; bsbm:productFeature bsbm-inst:ProductFeature{features.#.featureId} ; bsbm:productPropertyNumeric1 {properties.numeric1}^^xsd:integer ; bsbm:productPropertyNumeric2 {properties.numeric2}^^xsd:integer ; bsbm:productPropertyNumeric3 {properties.numeric3}^^xsd:integer ; bsbm:productPropertyNumeric4 {properties.numeric4}^^xsd:integer ; bsbm:productPropertyNumeric5 {properties.numeric5}^^xsd:integer ; bsbm:productPropertyNumeric6 {properties.numeric6}^^xsd:integer ; bsbm:productPropertyTextual1 {properties.textual1}^^xsd:string ; bsbm:productPropertyTextual2 {properties.textual2}^^xsd:string ; bsbm:productPropertyTextual3 {properties.textual3}^^xsd:string ; bsbm:productPropertyTextual4 {properties.textual4}^^xsd:string ; bsbm:productPropertyTextual5 {properties.textual5}^^xsd:string ; bsbm:productPropertyTextual6 {properties.textual6}^^xsd:string ; rdfs:comment {comment}^^xsd:string. "
 
