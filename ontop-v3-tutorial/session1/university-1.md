@@ -116,7 +116,7 @@ Ontology: classes and properties
 Mappings
 --------
 
-1. Go to the "Ontop mapping" tab
+1. Go to the "Window" - "Tabs" - "Ontop mapping" tab
 2. Test the already defined connection configuration using the “Test Connection” button
 3. Switch to the “Mapping Manager” tab in the ontop mappings tab
 4. You should see a first mapping assertion called *uni1-student*
@@ -209,9 +209,10 @@ Then proceed in a similar way for the other positions (assistant professor, post
 
 ### SPARQL
 
-1. Select Ontop in the “Reasoner” menu
-2. Start the reasoner
-3. Run the following query:
+1. Go to the "Window" - "Tabs" - "Ontop SPARQL" tab
+2. Select Ontop in the “Reasoner” menu
+3. Start the reasoner
+4. Run the following query in "ontop query editor":
 
 ```sparql
 PREFIX : <http://example.org/voc#>
