@@ -21,7 +21,7 @@
 
 <#Product_Product>
     xrr:logicalSource :source_products ;
-    rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+    rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
@@ -32,27 +32,27 @@
 
 <#Product_producer>
     xrr:logicalSource :source_products ;
-    rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+    rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
     rr:predicateObjectMap [
         rr:predicate bsbm:producer;
         rr:objectMap [
-          rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}";
+          rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{$.producer.producerId}";
           rr:termType rr:IRI ]
    ].
    
 <#Product_publisher>
    xrr:logicalSource :source_products ;
-   rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+   rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
    rr:predicateObjectMap [
        rr:predicate dc:publisher;
        rr:objectMap [
-         rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}";
+         rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{$.producer.producerId}";
          rr:termType rr:IRI ]
   ].
   
 <#Product_label>
  	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate rdfs:label;
 	 	rr:objectMap [ xrr:reference "$.productName" ]
@@ -60,7 +60,7 @@
 
 <#Product_name>
  	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate foaf:name;
 	 	rr:objectMap [ xrr:reference "$.productName" ]
@@ -68,27 +68,27 @@
 
 <#Product_type>
  	xrr:logicalSource :source_products ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:type;
 	 	rr:objectMap [ 
-     	rr:template "bsbm-inst:ProductType{$.type.typeId}";
+     	rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{$.type.typeId}";
      	rr:termType rr:IRI ]
 	].
 
 <#Product_feature>
  	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productFeature;
 	 	rr:objectMap [ 
-     	rr:template "bsbm-inst:ProductFeature{$.features[*].featureId}";
+     	rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{$.features[*].featureId}";
      	rr:termType rr:IRI ]
 	].
 
 <#Product_productPropertyNumeric1>
  	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
 	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyNumeric1;
 	 	rr:objectMap [ xrr:reference "$.properties.numeric1" ]
@@ -96,7 +96,7 @@
 
 <#Product_productPropertyNumeric2>
  	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyNumeric2;
 	 	rr:objectMap [ xrr:reference "$.properties.numeric2" ]
@@ -104,7 +104,7 @@
 
 <#Product_productPropertyNumeric3>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyNumeric3;
 	 	rr:objectMap [ xrr:reference "$.properties.numeric3" ]
@@ -112,7 +112,7 @@
 	
 <#Product_productPropertyNumeric4>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyNumeric4;
 	 	rr:objectMap [ xrr:reference "$.properties.numeric4" ]
@@ -120,7 +120,7 @@
    
 <#Product_productPropertyNumeric5>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyNumeric5;
 	 	rr:objectMap [ xrr:reference "$.properties.numeric5" ]
@@ -128,7 +128,7 @@
 	
 <#Product_productPropertyNumeric6>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyNumeric6;
 	 	rr:objectMap [ xrr:reference "$.properties.numeric6" ]
@@ -136,7 +136,7 @@
 	
 <#Product_productPropertyTextual1>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyTextual1;
 	 	rr:objectMap [ xrr:reference "$.properties.textual1" ]
@@ -144,7 +144,7 @@
 	
 <#Product_productPropertyTextual2>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyTextual2;
 	 	rr:objectMap [ xrr:reference "$.properties.textual2" ]
@@ -152,7 +152,7 @@
 
 <#Product_productPropertyTextual3>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyTextual3;
 	 	rr:objectMap [ xrr:reference "$.properties.textual3" ]
@@ -160,7 +160,7 @@
 
 <#Product_productPropertyTextual4>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyTextual4;
 	 	rr:objectMap [ xrr:reference "$.properties.textual4" ]
@@ -168,7 +168,7 @@
 	
 <#Product_productPropertyTextual5>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyTextual5;
 	 	rr:objectMap [ xrr:reference "$.properties.textual5" ]
@@ -176,7 +176,7 @@
 
 <#Product_productPropertyTextual6>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:productPropertyTextual6;
 	 	rr:objectMap [ xrr:reference "$.properties.textual6" ]
@@ -184,7 +184,7 @@
 	
 <#Product_comment>
 	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Product{_id}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate rdfs:comment;
 	 	rr:objectMap [ xrr:reference "$.comment" ]
@@ -194,7 +194,7 @@
 
 <#Producer_Producer>
     xrr:logicalSource :source_products ;
-    rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}"];
+    rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{$.producer.producerId}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
@@ -205,7 +205,7 @@
 	
 <#Producer_label>
  	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{$.producer.producerId}"];
  	rr:predicateObjectMap [
      	rr:predicate rdfs:label;
 	 	rr:objectMap [ xrr:reference "$.producer.name" ]
@@ -213,7 +213,7 @@
 
 <#Producer_name>
  	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{$.producer.producerId}"];
  	rr:predicateObjectMap [
      	rr:predicate foaf:name;
 	 	rr:objectMap [ xrr:reference "$.producer.name" ]
@@ -221,7 +221,7 @@
 	
 <#Producer_country>
  	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{$.producer.producerId}"];
  	rr:predicateObjectMap [
      	rr:predicate bsbm:country;
 	 	rr:objectMap [ 
@@ -231,7 +231,7 @@
 
 <#Producer_homepage>
  	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:dataFromProducer/Producer{$.producer.producerId}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{$.producer.producerId}"];
  	rr:predicateObjectMap [
      	rr:predicate foaf:homepage;
 	 	rr:objectMap [ xrr:reference "$.producer.homepage" ]
@@ -240,7 +240,7 @@
 #    "target": "bsbm-inst:ProductType{type.typeId} rdfs:label {type.label} . "
 <#ProductType_label>
  	xrr:logicalSource :source_products ;
- 	rr:subjectMap [ rr:template "bsbm-inst:ProductType{$.type.typeId}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{$.type.typeId}"];
  	rr:predicateObjectMap [
      	rr:predicate rdfs:label;
 	 	rr:objectMap [ xrr:reference "$.type.label" ]
@@ -251,7 +251,7 @@
 	
 <#Feature_Feature>
 	xrr:logicalSource :source_features ;
-	rr:subjectMap [ rr:template "bsbm-inst:ProductFeature{$.featureId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{$.featureId}"];
 	rr:predicateObjectMap [
 	    rr:predicate rdf:type;
 	    rr:objectMap [
@@ -263,7 +263,7 @@
 
 <#Feature_label>
  	xrr:logicalSource :source_features ;
- 	rr:subjectMap [ rr:template "bsbm-inst:ProductFeature{$.featureId}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{$.featureId}"];
  	rr:predicateObjectMap [
      	rr:predicate rdfs:label;
 	 	rr:objectMap [ xrr:reference "$.description" ]
@@ -271,7 +271,7 @@
 	
 <#Feature_comment>
  	xrr:logicalSource :source_features ;
- 	rr:subjectMap [ rr:template "bsbm-inst:ProductFeature{$.featureId}"];
+ 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{$.featureId}"];
  	rr:predicateObjectMap [
      	rr:predicate rdfs:comment;
 	 	rr:objectMap [ xrr:reference "$.comment" ]
@@ -282,7 +282,7 @@
 :source_offers xrr:query "db.products.find({})"; rml:iterator "$.offers.*" .
 <#Offer_Offer>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate rdf:type;
 	    rr:objectMap [
@@ -293,7 +293,7 @@
 
 <#Offer_price>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:price;
 	rr:objectMap [ xrr:reference "$.price" ]
@@ -301,7 +301,7 @@
 	
 <#Offer_validFrom>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:validFrom;
 	rr:objectMap [ xrr:reference "$.timeSpan.from" ]
@@ -309,7 +309,7 @@
 	
 <#Offer_validTo>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:validTo;
 	rr:objectMap [ xrr:reference "$.timeSpan.to" ]
@@ -317,7 +317,7 @@
 	
 <#Offer_deliveryDays>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:deliveryDays;
 	rr:objectMap [ xrr:reference "$.deliveryDays" ]
@@ -325,7 +325,7 @@
 	
 <#Offer_offerWebpage>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:offerWebpage;
 	rr:objectMap [ xrr:reference "$.offerWebpage" ]
@@ -333,31 +333,31 @@
 	
 <#Offer_product>
 	xrr:logicalSource :source_products ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offers[*].offerId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offers[*].offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:product;
  	rr:objectMap [ 
- 	rr:template "bsbm-inst:dataFromProducer/Product{_id}";
+ 	rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}";
  	rr:termType rr:IRI ]
 	].	
 	
 <#Offer_dataFromVendor>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:dataFromVendor;
  	rr:objectMap [ 
- 	rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}";
+ 	rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{$.vendor.vendorId}";
  	rr:termType rr:IRI ]	
 	].
 			
 <#Offer_publisher>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Offer{$.offerId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate dc:publisher;
  	rr:objectMap [ 
- 	rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}";
+ 	rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{$.vendor.vendorId}";
  	rr:termType rr:IRI ]
 	].	
 	
@@ -365,7 +365,7 @@
 
 <#Vendor_Vendor>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{$.vendor.vendorId}"];
 	rr:predicateObjectMap [
 	    rr:predicate rdf:type;
 	    rr:objectMap [
@@ -376,7 +376,7 @@
 	
 <#Vendor_label>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{$.vendor.vendorId}"];
 	rr:predicateObjectMap [
 	    rr:predicate rdfs:label;
 	rr:objectMap [ xrr:reference "$.vendor.name" ]
@@ -384,7 +384,7 @@
 	
 <#Vendor_name>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{$.vendor.vendorId}"];
 	rr:predicateObjectMap [
 	    rr:predicate foaf:name;
 	rr:objectMap [ xrr:reference "$.vendor.name" ]
@@ -392,7 +392,7 @@
 	
 <#Vendor_homepage>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{$.vendor.vendorId}"];
 	rr:predicateObjectMap [
 	    rr:predicate foaf:homepage;
 	rr:objectMap [ xrr:reference "$.vendor.homepage" ]
@@ -400,7 +400,7 @@
 	
 <#Vendor_country>
 	xrr:logicalSource :source_offers ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromVendor/Vendor{$.vendor.vendorId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{$.vendor.vendorId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:country;
  	rr:objectMap [ 
@@ -413,7 +413,7 @@
 :source_reviews xrr:query "db.products.find({})"; rml:iterator "$.reviews.*" .
 <#Review_country>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate rdf:type;
 	    rr:objectMap [
@@ -424,7 +424,7 @@
 	
 <#Review_reviewDate>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:reviewDate;
 	rr:objectMap [ xrr:reference "$.date" ]
@@ -432,7 +432,7 @@
 	
 <#Review_title>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate dc:title;
 	rr:objectMap [ xrr:reference "$.title" ]
@@ -440,7 +440,7 @@
 	
 <#Review_text>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate rev:text;
 	rr:objectMap [ xrr:reference "$.content" ]
@@ -448,7 +448,7 @@
 	
 <#Review_rating1>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:rating1;
 	rr:objectMap [ xrr:reference "$.rating1" ]
@@ -456,7 +456,7 @@
 		
 <#Review_rating2>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:rating2;
 	rr:objectMap [ xrr:reference "$.rating2" ]
@@ -464,7 +464,7 @@
 	
 <#Review_rating3>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:rating3;
 	rr:objectMap [ xrr:reference "$.rating3" ]
@@ -472,7 +472,7 @@
 	
 <#Review_rating4>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:rating4;
 	rr:objectMap [ xrr:reference "$.rating4" ]
@@ -480,21 +480,21 @@
 	
 <#Review_reviewFor>
 	xrr:logicalSource :source_products ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviews[*].reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviews[*].reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:reviewFor;
  	rr:objectMap [ 
- 	rr:template "bsbm-inst:dataFromProducer/Product{_id}";
+ 	rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{_id}";
  	rr:termType rr:IRI ]
 	].	
 
 <#Review_reviewer>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Review{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:reviewer;
  	rr:objectMap [ 
- 	rr:template "bsbm-inst:dataFromRatingSite/Reviewer{$.reviewer.personId}";
+ 	rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{$.reviewer.personId}";
  	rr:termType rr:IRI ]
 	].
 	
@@ -502,7 +502,7 @@
 
 <#Reviewer_Reviewer>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Reviewer{$.reviewer.personId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{$.reviewer.personId}"];
 	rr:predicateObjectMap [
 	    rr:predicate rdf:type;
 	    rr:objectMap [
@@ -513,7 +513,7 @@
 
 <#Reviewer_name>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Reviewer{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate foaf:name;
 	rr:objectMap [ xrr:reference "$.reviewer.name" ]
@@ -521,7 +521,7 @@
 	
 <#Reviewer_country>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "bsbm-inst:dataFromRatingSite/Reviewer{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{$.reviewId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:country;
  	rr:objectMap [ 

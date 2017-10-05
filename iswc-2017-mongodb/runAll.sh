@@ -9,12 +9,12 @@ numberOfRuns=10
 virtuosoEndPoint="http://localhost:8890/sparql"
 drillHost="localhost"
 
-virtuosoExec="virtuoso/virtuoso-1.0-SNAPSHOT-jar-with-dependencies.jar"
-drillExec="drill/drill-sql-runner-all-1.0-SNAPSHOT.jar"
-morphExec="morph/morph-xr2rml-dist-1.0-SNAPSHOT-jar-with-dependencies.jar"
-ontopMongoFullExec="ontop-mongo/full/ontop-mongo-benchmark-1.0-SNAPSHOT.jar"
-ontopMongoRAExec="ontop-mongo/RA/ontop-mongo-benchmark-1.0-SNAPSHOT.jar"
-ontopMongoNaiveExec="ontop-mongo/naive/ontop-mongo-benchmark-1.0-SNAPSHOT.jar"
+virtuosoExec="exec/virtuoso/virtuoso-1.0-SNAPSHOT-jar-with-dependencies.jar"
+drillExec="exec/drill/drill-sql-runner-all-1.0-SNAPSHOT.jar"
+morphExec="exec/morph/morph-xr2rml-dist-1.0-SNAPSHOT-jar-with-dependencies.jar"
+ontopMongoFullExec="exec/ontop-mongo/full/ontop-mongo-benchmark-1.0-SNAPSHOT.jar"
+ontopMongoRAExec="exec/ontop-mongo/RA/ontop-mongo-benchmark-1.0-SNAPSHOT.jar"
+ontopMongoSeqExec="exec/ontop-mongo/seq/ontop-mongo-benchmark-1.0-SNAPSHOT.jar"
 
 wd=`dirname $0`
 
@@ -37,7 +37,7 @@ wd=`dirname $0`
 #runMorph:$17
 #runOntopMongoFull:$18
 #runOntopMongoRA:$19
-#runOntopMongoNaive:$20
+#runOntopMongoSeq:$20
 runDataset (){
 
 	#Run Virtuoso 
@@ -64,7 +64,7 @@ runDataset (){
 			eval "$command"
 		fi
 		if [ "$20" = true ]; then
-			command="$wd/run.sh $options $ontopMongoNaiveExec $1 $6/naive $numberOfRuns"
+			command="$wd/run.sh $options $ontopMongoSeqExec $1 $6/seq $numberOfRuns"
 			eval "$command"
 		fi
 	fi
@@ -118,14 +118,14 @@ command="$command 500"
 #runVirtuoso
 command="$command false" 
 #runDrill
-command="$command true"
+command="$command false"
 #runMorph
 command="$command false"
 #runOntopMongoFull
-command="$command false"
+command="$command true"
 #runOntopMongoRA
 command="$command false"
-#runOntopMongoNaive
+#runOntopMongoSeq
 command="$command false"
 
 eval "$command"
@@ -175,7 +175,7 @@ command="$command false"
 command="$command false"
 #runOntopMongoRA
 command="$command false"
-#runOntopMongoNaive
+#runOntopMongoSeq
 command="$command false"
 
 eval "$command"
@@ -191,7 +191,7 @@ command="runDataset"
 #sparqlQueriesDir
 command="$command $wd/data/bsbm/queries/sparql"
 #drillQueriesDir
-command="$command $wd/data/bsbm/queries/drill"
+command="$command $wd/data/bsbm/queries/drill/$size"
 #virtuosoOutputDir
 command="$command $wd/data/bsbm/$size/eval/virtuoso"
 #morphOutputDir
@@ -201,7 +201,7 @@ command="$command $wd/data/bsbm/$size/eval/drill"
 #ontopMongoOutputDir
 command="$command $wd/data/bsbm/$size/eval/ontop-mongo/"
 #virtuosoGraph
-command="$command http://bsbm$size.org"
+command="$command http://bsbm$size-ontop.org"
 #ontopMongoMappingFile
 command="$command $wd/data/bsbm/mapping/ontop-mongo/mapping.json"
 #morphMappingFile
@@ -217,16 +217,16 @@ command="$command noFile"
 #queryTimeOut
 command="$command 500"
 #runVirtuoso
-command="$command false" 
+command="$command true" 
 #runDrill
 command="$command false"
 #runMorph
 command="$command false"
 #runOntopMongo
-command="$command true"
+command="$command false"
 #runOntopMongoRA
 command="$command false"
-#runOntopMongoNaive
+#runOntopMongoSeq
 command="$command false"
 
 eval "$command"
@@ -244,8 +244,8 @@ runAllBSBM () {
 #	runBSBM 1000000 
 }	
 
-#runAwards
-runAllDBLP
+runAwards
+#runAllDBLP
 #runAllBSBM
 
 # EOF

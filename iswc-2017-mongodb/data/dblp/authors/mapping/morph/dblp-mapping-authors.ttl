@@ -19,7 +19,7 @@
 
 <#Author_Author>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":authors/{_id}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/authors/{_id}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
@@ -30,7 +30,7 @@
 
 <#Author_Agent>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":authors/{_id}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/authors/{_id}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
@@ -42,7 +42,7 @@
 <#Author_name>
     a rr:TriplesMap;
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":authors/{_id}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/authors/{_id}"];
     rr:predicateObjectMap [
         rr:predicate foaf:name;
         rr:objectMap [ xrr:reference "$.name" ]
@@ -51,7 +51,7 @@
 <#Author_homepage>
     a rr:TriplesMap;
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":authors/{_id}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/authors/{_id}"];
     rr:predicateObjectMap [
         rr:predicate foaf:homepage;
         rr:objectMap [ xrr:reference "$.homepage" ]
@@ -64,7 +64,7 @@
 
 <#Journal1>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":journals/{$.publications.article[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{$.publications.article[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;        
         rr:objectMap [ rr:constant swrc:Journal; rr:termType rr:IRI]
@@ -73,7 +73,7 @@
 
 <#Journal_JournalArticle>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":journals/{$.publications.article[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{$.publications.article[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [ rr:constant :JournalArticle; rr:termType rr:IRI]
@@ -81,7 +81,7 @@
 
 <#Journal_Publication>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":journals/{$.publications.article[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{$.publications.article[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [ rr:constant :Publication; rr:termType rr:IRI]
@@ -89,17 +89,17 @@
 
 <#Journal_creator>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":journals/{publications.article[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{publications.article[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dc:creator;
-        rr:objectMap [ rr:template ":authors/{_id}"; rr:termType rr:IRI]
+        rr:objectMap [ rr:template "http://dblp.l3s.de/d2r/authors/{_id}"; rr:termType rr:IRI]
     ].
     
 :source_journal xrr:query "db.authors.find({})"; rml:iterator "$.publications.article.*" ; xrr:uniqueRef "dblp_key".
 
 <#Journal_titler>
     xrr:logicalSource :source_journal ;
-    rr:subjectMap [ rr:template ":journals/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dc:title;
         rr:objectMap [ xrr:reference "$.title" ]
@@ -107,7 +107,7 @@
 
 <#Journal_issued>
     xrr:logicalSource :source_journal ;
-    rr:subjectMap [ rr:template ":journals/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dcterms:issued;
         rr:objectMap [ xrr:reference "$.year" ]
@@ -116,7 +116,7 @@
 <#Journal_appearsIn>
     xrr:logicalSource :source_journal ;
     
-    rr:subjectMap [ rr:template ":journals/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate :appearsIn;
         rr:objectMap [ xrr:reference "$.in" ]
@@ -124,14 +124,14 @@
 
 <#Journal_pages>
     xrr:logicalSource :source_journal ;
-    rr:subjectMap [ rr:template ":journals/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate swrc:pages;
         rr:objectMap [ xrr:reference "$.pages" ]
     ].
 <#Journal_homepage>
     xrr:logicalSource :source_journal ;
-    rr:subjectMap [ rr:template ":journals/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate foaf:homepage;
         rr:objectMap [ xrr:reference "$.url" ]
@@ -141,7 +141,7 @@
 
 <#Conference1>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":inproceedings/{publications.inproceedings[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{publications.inproceedings[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;        
         rr:objectMap [ rr:constant swrc:Conference; rr:termType rr:IRI]
@@ -150,7 +150,7 @@
 
 <#Conference_ConferencePaper>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":inproceedings/{publications.inproceedings[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{publications.inproceedings[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [ rr:constant :ConferencePaper; rr:termType rr:IRI]
@@ -158,7 +158,7 @@
 
 <#Conference_Publication>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":inproceedings/{publications.inproceedings[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{publications.inproceedings[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [ rr:constant :Publication; rr:termType rr:IRI]
@@ -166,17 +166,17 @@
 
 <#Conference_creator>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":inproceedings/{publications.inproceedings[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{publications.inproceedings[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dc:creator;
-        rr:objectMap [ rr:template ":authors/{_id}"; rr:termType rr:IRI]
+        rr:objectMap [ rr:template "http://dblp.l3s.de/d2r/authors/{_id}"; rr:termType rr:IRI]
     ].
     
 :source_inproceedings xrr:query "db.authors.find({})"; rml:iterator "$.publications.inproceedings.*" ; xrr:uniqueRef "dblp_key".
 
 <#Conference_titler>
     xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template ":inproceedings/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dc:title;
         rr:objectMap [ xrr:reference "$.title" ]
@@ -184,7 +184,7 @@
 
 <#Conference_issued>
     xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template ":inproceedings/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dcterms:issued;
         rr:objectMap [ xrr:reference "$.year" ]
@@ -192,7 +192,7 @@
 
 <#Conference_appearsIn>
     xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template ":inproceedings/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate :appearsIn;
         rr:objectMap [ xrr:reference "$.in" ]
@@ -200,14 +200,14 @@
 
 <#Conference_pages>
     xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template ":inproceedings/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate swrc:pages;
         rr:objectMap [ xrr:reference "$.pages" ]
     ].
 <#Conference_homepage>
     xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template ":inproceedings/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate foaf:homepage;
         rr:objectMap [ xrr:reference "$.url" ]
@@ -215,15 +215,15 @@
 
 <#inproceedings_partOf>
     xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template ":inproceedings/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dcterms:partOf;
-        rr:objectMap [ rr:template ":proceedings/{$.proceedings}"; rr:termType rr:IRI]
+        rr:objectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{$.proceedings}"; rr:termType rr:IRI]
     ].    
     
 <#Proceedings>
     xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template ":proceedings/{$.proceedings}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{$.proceedings}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [ rr:constant :Proceedings; rr:termType rr:IRI]        
@@ -231,7 +231,7 @@
 
 <#Proceedings_title>
     xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template ":proceedings/{$.proceedings}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{$.proceedings}"];
     rr:predicateObjectMap [
         rr:predicate dc:title;
         rr:objectMap [ xrr:reference "$.booktitle" ]
@@ -241,7 +241,7 @@
 
 <#collection1>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":collections/{publications.inproceedings[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{publications.inproceedings[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;        
         rr:objectMap [ rr:constant swrc:Collection; rr:termType rr:IRI]
@@ -250,7 +250,7 @@
 
 <#collection_ConferencePaper>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":collections/{publications.inproceedings[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{publications.inproceedings[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [ rr:constant :BookChapter; rr:termType rr:IRI]
@@ -258,7 +258,7 @@
 
 <#collection_Publication>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":collections/{publications.inproceedings[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{publications.inproceedings[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [ rr:constant :Publication; rr:termType rr:IRI]
@@ -266,17 +266,17 @@
 
 <#collection_creator>
     xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template ":collections/{publications.inproceedings[*].dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{publications.inproceedings[*].dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dc:creator;
-        rr:objectMap [ rr:template ":authors/{_id}"; rr:termType rr:IRI]
+        rr:objectMap [ rr:template "http://dblp.l3s.de/d2r/authors/{_id}"; rr:termType rr:IRI]
     ].
     
 :source_incollection xrr:query "db.authors.find({})"; rml:iterator "$.publications.incollection.*" ; xrr:uniqueRef "dblp_key".
 
 <#collection_titler>
     xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template ":collections/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dc:title;
         rr:objectMap [ xrr:reference "$.title" ]
@@ -284,7 +284,7 @@
 
 <#collection_issued>
     xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template ":collections/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dcterms:issued;
         rr:objectMap [ xrr:reference "$.year" ]
@@ -292,7 +292,7 @@
 
 <#collection_appearsIn>
     xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template ":collections/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate :appearsIn;
         rr:objectMap [ xrr:reference "$.in" ]
@@ -300,14 +300,14 @@
 
 <#collection_pages>
     xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template ":collections/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate swrc:pages;
         rr:objectMap [ xrr:reference "$.pages" ]
     ].
 <#collection_homepage>
     xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template ":collections/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate foaf:homepage;
         rr:objectMap [ xrr:reference "$.url" ]
@@ -315,15 +315,15 @@
 
 <#collection_partOf>
     xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template ":collections/{dblp_key}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{dblp_key}"];
     rr:predicateObjectMap [
         rr:predicate dcterms:partOf;
-        rr:objectMap [ rr:template ":proceedings/{$.proceedings}"; rr:termType rr:IRI]
+        rr:objectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{$.proceedings}"; rr:termType rr:IRI]
     ].    
     
 <#Book>
     xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template ":proceedings/{$.proceedings}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{$.proceedings}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [ rr:constant :Book; rr:termType rr:IRI]        
@@ -331,7 +331,7 @@
 
 <#Book_title>
     xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template ":proceedings/{$.proceedings}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{$.proceedings}"];
     rr:predicateObjectMap [
         rr:predicate dc:title;
         rr:objectMap [ xrr:reference "$.booktitle" ]

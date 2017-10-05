@@ -1,0 +1,71 @@
+prefix xrr: <http://i3s.unice.fr/xr2rml#>
+prefix rr:  <http://www.w3.org/ns/r2rml#>
+prefix rml: <http://semweb.mmlab.be/ns/rml#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix ex: <http://ex.org/bios/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+prefix bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+prefix bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+prefix dc: <http://purl.org/dc/elements/1.1/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix iso3166: <http://downlode.org/rdf/iso-3166/countries#>
+prefix rev: <http://purl.org/stuff/rev#>
+
+
+SELECT *
+WHERE {
+#?x a bsbm:Product .
+#?x bsbm:producer ?producer .
+#?x dc:publisher ?publisher .
+#?x rdfs:label ?plabel .
+#?x foaf:name ?pname .
+#?x bsbm:type ?type .
+#?x bsbm:productFeature ?feature .
+#?x bsbm:productPropertyNumeric1 ?ppn1 .
+#?x bsbm:productPropertyNumeric6 ?ppn6 .
+#?x bsbm:productPropertyTextual4 ?ppt4 .
+#?x rdfs:comment ?comment
+
+#?p a bsbm:Producer .
+#?p rdfs:label ?prlabel .
+#?p foaf:name ?prname .
+#?p bsbm:country ?country .
+#?p foaf:homepage ?hpage .
+
+#?f a bsbm:ProductFeature .
+#?f rdfs:label ?prlabel .
+#?f rdfs:comment ?prcomment .
+
+#?o a bsbm:Offer .
+#?o bsbm:price ?price .
+#?o bsbm:validFrom ?cf .
+#?o bsbm:validTo ?vd .
+#?o bsbm:deliveryDays ?deliveryDays .
+#?o bsbm:offerWebpage ?offerWebpage .
+#?o bsbm:product ?oproduct .
+#?o bsbm:dataFromVendor ?dataFromVendor .
+#?o dc:publisher ?opublisher .
+
+#?v a bsbm:Vendor .
+#?v rdfs:label ?vlabel .
+#?v foaf:name ?vname .
+#?v foaf:homepage ?vhomepage .
+#?v bsbm:country ?vcountry .
+
+#?r a bsbm:Review .
+#?r bsbm:reviewDate ?reviewDate .
+#?r dc:title ?title .
+#?r rev:text ?text .
+#?r bsbm:rating1 ?rating1 .
+#?r bsbm:rating4 ?rating4 .
+#?r bsbm:reviewFor ?rf .
+#?r bsbm:reviewer ?rr .
+
+?reviewer a foaf:Person .
+?reviewer foaf:name ?reviewername .
+?reviewer bsbm:country ?reviewercountry .
+}
+
+LIMIT 100

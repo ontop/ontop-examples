@@ -1,0 +1,3560 @@
+To override log4j configuration add JVM option: -Dlog4j.configuration=file:/home/.../your_log4j.properties
+Loading log4j configuration: jar:file:/Users/xiao/src/morph-xr2rml/morph-xr2rml-dist/target/morph-xr2rml-dist-1.0-SNAPSHOT-jar-with-dependencies.jar!/xr2rml-log4j.properties
+2017-05-12 23:30:17 INFO  [main] (MorphRunner.scala:57) - properties Directory = /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph
+2017-05-12 23:30:17 INFO  [main] (MorphRunner.scala:58) - properties File      = output/q05.rq.properties
+Reading configuration file : /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/output/q05.rq.properties
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:118) - Server active = false
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:121) - Server port number = 8080
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:124) - Output file = result.txt
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:144) - Output RDF syntax = TURTLE
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:153) - Output SPARQL result syntax = TURTLE
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:156) - Display result on std output = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:159) - Jena mode = memory
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:162) - SPARQL Query Optimization = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:165) - Optimization - Self join elimination = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:168) - Optimization - Self union elimination = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:171) - Optimization - Propagate conditions from a joined query = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:174) - Optimization - Reorder STG = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:177) - Optimization - Subquery elimination = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:180) - Optimization - Trans join subquery elimination = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:183) - Optimization - Trans stg subquery elimination = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:186) - Optimization - Subquery as view = false
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:189) - Cache the result of student.queries for join evaluation (non Relational DBs) = false
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:196) - RunnerFactory = fr.unice.i3s.morph.xr2rml.mongo.engine.MorphMongoRunnerFactory
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:199) - Remove Strange Chars From Literal Column = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:202) - URL-encode reserved chars IRI tempalte string = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:205) - URL-encode reserved chars in database values = true
+2017-05-12 23:30:17 INFO  [main] (MorphProperties.scala:208) - String transformation = None
+2017-05-12 23:30:18 INFO  [main] (R2RMLMappingDocument.scala:225) - Parsing mapping document /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/dblp-mapping-authors.ttl
+2017-05-12 23:30:18 INFO  [main] (MorphBaseRunner.scala:59) - ****************************************************************************************************************
+2017-05-12 23:30:18 INFO  [main] (MorphBaseRunner.scala:60) - Running query translation. Content-type: null
+2017-05-12 23:30:18 INFO  [main] (SparqlUtility.scala:224) - Request Accept: null. Negotiated: (application/sparql-results+xml,XML)
+2017-05-12 23:30:19 INFO  [main] (SparqlQueryRewriter.scala:97) - SPARQL graph pattern:
+(distinct
+  (project (?name ?paper)
+    (bgp
+      (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/Author>)
+      (triple ?x <http://xmlns.com/foaf/0.1/name> ?name)
+      (triple ?paper <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/JournalArticle>)
+      (triple ?paper <http://purl.org/dc/elements/1.1/creator> ?x)
+    )))
+
+2017-05-12 23:30:19 INFO  [main] (MorphMongoQueryTranslator.scala:84) - Triple pattern bindings computation time = 74ms.
+2017-05-12 23:30:19 INFO  [main] (MorphMongoQueryTranslator.scala:85) - Triple pattern bindings:
+   Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+   Binding(?paper @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+   Binding(?paper @dc:creator ?x -> Journal_creator)
+2017-05-12 23:30:19 WARN  [main] (MorphMongoQueryTranslator.scala:219) - SPARQL DISTINCT ignored in query translation.
+2017-05-12 23:30:19 INFO  [main] (MorphMongoQueryTranslator.scala:113) - 
+-------------------------------------------------------------------------
+------------------ Abstract query BEFORE optimization: ------------------
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x)
+  where  : Set(NotNull(_id)) }
+] INNER JOIN [
+[{ Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x, $.name AS ?name)
+  where  : Set(NotNull(_id), NotNull($.name)) }
+] INNER JOIN [
+[{ Binding(?paper @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set($.publications.article[*].dblp_key AS ?paper)
+  where  : Set(NotNull($.publications.article[*].dblp_key)) }
+] INNER JOIN [
+{ Binding(?paper @dc:creator ?x -> Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(publications.article[*].dblp_key AS ?paper, _id AS ?x)
+  where  : Set(NotNull(publications.article[*].dblp_key), NotNull(_id)) }
+] ON Set(?paper)
+] ON Set(?x)
+] ON Set(?x)
+2017-05-12 23:30:19 INFO  [main] (MorphMongoQueryTranslator.scala:115) - 
+------------------ Abstract query AFTER optimization: -------------------
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+   Binding(?paper @dc:creator ?x -> Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x, $.name AS ?name, publications.article[*].dblp_key AS ?paper)
+  where  : Set(NotNull(_id), NotNull($.name), NotNull(publications.article[*].dblp_key)) }
+] INNER JOIN [
+{ Binding(?paper @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set($.publications.article[*].dblp_key AS ?paper)
+  where  : Set(NotNull($.publications.article[*].dblp_key)) }
+] ON Set(?paper)
+-------------------------------------------------------------------------
+2017-05-12 23:30:19 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 23:30:19 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [publications.article[*].dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:19 INFO  [main] (MorphBaseQueryTranslator.scala:107) - Query translation time (including bindings) = 173ms.
+2017-05-12 23:30:19 INFO  [main] (MorphBaseRunner.scala:90) - SPARQL Query = 
+PREFIX  :     <http://dblp.l3s.de/d2r/>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX  dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT DISTINCT  ?name ?paper
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :Author .
+    ?x foaf:name ?name .
+    ?paper <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :JournalArticle .
+    ?paper dc:creator ?x
+  }
+
+2017-05-12 23:30:19 INFO  [main] (MorphBaseRunner.scala:91) - ------------------ Abstract Query ------------------ = 
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+   Binding(?paper @dc:creator ?x -> Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x, $.name AS ?name, publications.article[*].dblp_key AS ?paper)
+  where  : Set(NotNull(_id), NotNull($.name), NotNull(publications.article[*].dblp_key)) }
+] INNER JOIN [
+{ Binding(?paper @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set($.publications.article[*].dblp_key AS ?paper)
+  where  : Set(NotNull($.publications.article[*].dblp_key)) }
+] ON Set(?paper)
+2017-05-12 23:30:19 INFO  [main] (MorphBaseRunner.scala:92) - ------------------ Concrete Query ------------------ = 
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+   Binding(?paper @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: authors. Query: {'name': {$exists: true, $ne: null}}. Projection: {}] }
+] INNER JOIN [
+{ Binding(?paper @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'dblp_key': {$exists: true, $ne: null}}}}. Projection: {}] }
+] ON Set(?paper)
+2017-05-12 23:30:19 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 23:30:19 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+   Binding(?paper @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: authors. Query: {'name': {$exists: true, $ne: null}}. Projection: {}] }
+] INNER JOIN [
+{ Binding(?paper @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'dblp_key': {$exists: true, $ne: null}}}}. Projection: {}] }
+] ON Set(?paper)
+2017-05-12 23:30:19 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'name': {$exists: true, $ne: null}}. Projection: {}] with limit None
+2017-05-12 23:30:19 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 5 result(s), 5 result(s) after applying the iterator, in: 338 ms.
+2017-05-12 23:30:19 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 5 RDF triples for binding
+ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+2017-05-12 23:30:19 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 5 RDF triples for binding
+ Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+2017-05-12 23:30:19 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 376 RDF triples for binding
+ Binding(?paper @dc:creator ?x -> Journal_creator)
+2017-05-12 23:30:19 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 386 RDF triples for all binding in 175 ms.
+2017-05-12 23:30:19 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'dblp_key': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:19 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 4 result(s), 4 result(s) after applying the iterator, in: 212 ms.
+2017-05-12 23:30:19 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 376 RDF triples for binding
+ Binding(?paper @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+2017-05-12 23:30:19 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 376 RDF triples for all binding in 55 ms.
+2017-05-12 23:30:19 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?paper)
+2017-05-12 23:30:20 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 735 triples + 10 triples with no shared variable, in 68 ms.
+2017-05-12 23:30:20 WARN  [main] (MorphMongoDataTranslator.scala:229) - Duration of query execution and generation of triples = 872 ms.
+2017-05-12 23:30:20 INFO  [main] (MorphMongoQueryProcessor.scala:139) - Result set contains 376 triples.
+2017-05-12 23:30:20 INFO  [main] (MorphMongoQueryProcessor.scala:140) - Tabular result set:
+-------------------------------------------------------------------------------------
+| name                  | paper                                                     |
+=====================================================================================
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftods%2FKimelfeldK14>                |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fbsl%2FHellaKL96>                    |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fsigmod%2FBertossiCGKTZ05>           |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjar%2FHermannK99>                   |
+| "Phokion G. Kolaitis" | <:journals/journals%2Feccc%2FECCC-TR00-082>               |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftcs%2FFaginKMP05>                   |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjcss%2FKolaitisP91>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fcorr%2FAfratiKV15>                  |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fsigmod%2FKolaitisLS11>              |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fcorr%2FCateHK15>                    |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fsiamcomp%2FGopalanKMP09>            |
+| "Phokion G. Kolaitis" | <:journals/journals%2Feccc%2FGopalanKMP06>                |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fbsl%2FHalpernHIKVV01>               |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftods%2FFaginKPT08>                  |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjcss%2FBarlandKT98>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjcss%2FCreignouKZ08>                |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fpvldb%2FCateCKT09>                  |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftcs%2FAfratiK00>                    |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fiandc%2FHermannK00>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftods%2FCateDK13>                    |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fmst%2FKirousisK04>                  |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fcorr%2Fabs-cs-0609072>              |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftods%2FAlexeCKT11>                  |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftods%2FBurdickFKPT16>               |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fpvldb%2FAlexeCKT11>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjcss%2FKolaitisV95>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Feccc%2FECCC-TR05-119>               |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftocl%2FKolaitis05>                  |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fpvldb%2FKolaitisPT13>               |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftods%2FFaginKP05>                   |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fsigmod%2FKorthBFGKMO08>             |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fdam%2FBaileyDK07>                   |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fcorr%2FKirousisK15>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fapal%2FHellaKL97>                   |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjcss%2FKolaitisT95>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjcss%2FKolaitisV00>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fmst%2FCateFK15>                     |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftods%2FFaginKPT05>                  |
+| "Phokion G. Kolaitis" | <:journals/journals%2Feccc%2FFederK06>                    |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fiandc%2FKolaitisT94>                |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fapal%2FKolaitisV95>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjsyml%2FKolaitis79>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjcss%2FChaudhuriK97>                |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjodsn%2FCateHK16>                   |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjacm%2FKolaitisV04>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjacm%2FKolaitisK13>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fiandc%2FKirousisK03>                |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjacm%2FKolaitisP90>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftods%2FFaginKPT11>                  |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fcorr%2Fabs-0903-1953>               |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjacm%2FAtseriasDK06>                |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjacm%2FWigdersonK15>                |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjsc%2FHermannK95>                   |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fcacm%2FKolaitis11>                  |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fiandc%2FKolaitisV90>                |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftods%2FFuxmanKMT06>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fcacm%2FCateK10>                     |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fbsl%2FGradelKV97>                   |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fiandc%2FKolaitisV92>                |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftcs%2FDurandHK05>                   |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fiandc%2FKolaitis91>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Feccc%2FKolaitisK09>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjacm%2FFaginKK11>                   |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fipl%2FKolaitisP12>                  |
+| "Phokion G. Kolaitis" | <:journals/journals%2Fjacm%2FGottlobKS04>                 |
+| "Phokion G. Kolaitis" | <:journals/journals%2Ftods%2FKolaitisF04>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FBryantGHV09>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi10e>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fdagstuhl-reports%2FMehlhornVH12>    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Frsa%2FMooreIDV07>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fabs-1109-6346>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi12>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FBalkanVT15>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FHalpernV89>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftocl%2FKupfermanV01>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FChakrabortyMV14>             |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FHarelKV02>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fdagstuhl-reports%2FRehofV14>        |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi11f>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FGrumbergVSA12>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fabs-1003-1179>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi11c>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FBordeauxKNV14>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fpvldb%2FCalvaneseGLV12>             |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fendm%2FGiunchigliaNTV01>            |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi11e>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjacm%2FKupfermanVW00>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FVardiW94>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fijgt%2FFaginGHV99>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FLiZPV15>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi13b>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FHardinKSV01>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftcs%2FPitermanV03>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fapal%2FKupfermanSV06>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FChakrabortyMMV15>            |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi08>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FPlakuKV09>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fabs-1112-6275>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FRamakrishnanSUV93>           |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftods%2FKuperV93>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fipl%2FVardi89>                      |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi12a>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi14a>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi09c>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FChocklerKV06>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi15e>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Figpl%2FVardi98>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FLi0PVH14>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fbsl%2FHalpernHIKVV01>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsigmod%2FRossCGJBV99>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FAminofLMSV13>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjsyml%2FFaginHV92>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftcs%2FCalvaneseGV05>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi09e>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Facr%2FFaginKUV86>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FMogaveroMPV16>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FCalvaneseGLV02>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fconstraints%2FCoarfaDASV03>         |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi09>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fmima%2FFaginHMV97>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsttt%2FChocklerKV06>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fabs-1302-2675>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi16d>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fdagstuhl-manifestos%2FKreikerTVW11> |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fipl%2FVardi90>                      |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fcs-LO-9809003>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi12b>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi09d>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fijfcs%2FFriedgutKV06>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsoftware%2FVardi88>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Flmcs%2FEtessamiKVY08>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi15a>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsttt%2FLustigV13>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjsyml%2FVardi97>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcjtcs%2FFeigenbaumKVV99>            |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftcs%2FBeeriV85>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsiamcomp%2FFederV98>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjair%2FPistoreV07>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi15>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsiglog%2FAlurHV15>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftrob%2FPlakuKV10>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi17>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FCourcoubetisVWY92>           |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi14>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftocl%2FMogaveroMPV14>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fabs-0810-5728>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FLiP0YVH13>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjacm%2FBeeriV84>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fentcs%2FArmoniFFHPV05>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi10a>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fconstraints%2FIvriiMMV16>           |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi13e>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjair%2FBordeauxKNV11>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcsur%2FAbiteboulKMSV96>             |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi10c>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi10>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FKennedyV02>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi11b>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FVardi96>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi10b>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi11d>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi11a>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi13a>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi10d>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FKolaitisV95>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FNainLV14>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftcs%2FCalvaneseGLV07>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FFaginSV95>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjlp%2FVardi91>                      |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi14c>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsigmod%2FBeeriV81>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Famai%2FKupfermanPV16>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FFislerV02>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsttt%2FKupfermanV03>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fbsl%2FKupfermanV99>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Featcs%2FAcetoHKTV16>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fdc%2FFaginHMV97>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcjtcs%2FVardi96>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FChakrabortyMV13>             |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FMeelVCFSFIM15>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fentcs%2FVardi02>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjalc%2FPeledVY02>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FSebastianiSTV07>             |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi15d>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FBryantGSV10>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fabs-1110-6183>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsttt%2FPlakuKV13>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FKupfermanVW01>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjlp%2FHillebrandKMV95>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FCalvaneseGLV15>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi14d>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fabs-1304-1584>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi09a>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fcs-LO-0208033>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FKupfermanV01>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fipl%2FVardi84>                      |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi16c>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FMeydenV13>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Featcs%2FVardi85>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjacm%2FGrahamMV86>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsiamcomp%2FHalpernMV04>             |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FKolaitisV00>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FKupfermanPV12>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FKestenPV01>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi16b>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi09b>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardiV13>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsiamcomp%2FBeeriV84>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FFogartyKVW15>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FTabakovRV12>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftocl%2FKupfermanV05>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FVardi84>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Featcs%2FVardi16>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi13>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FLiZZPV16>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Flmcs%2FBonattiLMV08>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FVardi86>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fabs-1202-1309>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FChaudhuriV97>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FKupfermanPV09>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi13d>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjancl%2FPanSV06>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Facta%2FMakowskyV86>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FVardiHAK12>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FTsaiFVT14>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftrob%2FLahijanianMFKKV16>           |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftcs%2FSistlaVW87>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FChakrabortyFMSV14>           |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi13c>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FLiP0VH14>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsoftware%2FVardi88a>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsttt%2FSebastianiTV11>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fgeb%2FOshersonV06>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsigmod%2FCalvaneseGLV03>            |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi12c>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FMogaveroMV15>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcjtcs%2FKupfermanV98>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardiG15>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi15b>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Featcs%2FGaifmanV85>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftcs%2FKuperV93>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FChatterjee0V15>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi12e>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjacm%2FFaginHV91>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi08b>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi14b>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjacm%2FCosmadakisKV90>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2FChatterjee0NV14>             |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FCalvaneseGLV13>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FEtessamiVW02>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjolpe%2FWienerKV09>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi08a>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsiamcomp%2FChandraV85>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fapal%2FVardi91>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi12d>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftcs%2FAbiteboulVV95>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FCookKV12>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FKolaitisV90>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi15c>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjacm%2FGaifmanMSV93>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjar%2FPanV05>                       |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsttt%2FRozierV10>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsiamcomp%2FBarceloRV16>             |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fbsl%2FGradelKV97>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjacm%2FFaginHV92>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FKolaitisV92>                |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftcs%2FKupfermanV05>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fentcs%2FFraerKFV99>                 |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftods%2FMaierUV84>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi16e>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ffmsd%2FKwiatkowskaVBB16>            |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fipl%2FVardi81>                      |
+| "Moshe Y. Vardi"      | <:journals/journals%2Ftoplas%2FKupfermanV00>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Flogcom%2FMogaveroMV16>              |
+| "Moshe Y. Vardi"      | <:journals/journals%2Facta%2FVardi83>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjcss%2FVardiW86>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fjacm%2FAbiteboulVV97>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi16>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fapal%2FFaginHMV99>                  |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi11>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcorr%2Fabs-0809-0360>               |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fipl%2FFaginV83>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fiandc%2FBeeriV84>                   |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fai%2FFaginHV95>                     |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fcacm%2FVardi16a>                    |
+| "Moshe Y. Vardi"      | <:journals/journals%2Fsigmod%2FAbiteboulHVGHHRUVH05>      |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FCalvaneseDM14>               |
+| "Diego Calvanese"     | <:journals/journals%2Fai%2FArenasBCR16>                   |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FAbiteboulABBCDH17>           |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FCalvaneseDLMMT16>            |
+| "Diego Calvanese"     | <:journals/journals%2Fsemweb%2FCalvaneseL13>              |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2Fabs-1003-1179>               |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FHaririCMGMF14>               |
+| "Diego Calvanese"     | <:journals/journals%2Fjucs%2FCaliCM09>                    |
+| "Diego Calvanese"     | <:journals/journals%2Fpvldb%2FCalvaneseGLV12>             |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FBienvenuCOS14>               |
+| "Diego Calvanese"     | <:journals/journals%2Fwww%2FCalvaneseCS01>                |
+| "Diego Calvanese"     | <:journals/journals%2Fai%2FBerardiCG05>                   |
+| "Diego Calvanese"     | <:journals/journals%2Fnis%2FCalvaneseGR99>                |
+| "Diego Calvanese"     | <:journals/journals%2Fjcss%2FCalvaneseGLR12>              |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FBotoevaCCRX16>               |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FBotoevaCSSSX15>              |
+| "Diego Calvanese"     | <:journals/journals%2Ftcs%2FCalvaneseGV05>                |
+| "Diego Calvanese"     | <:journals/journals%2Fjcss%2FCalvaneseGLV02>              |
+| "Diego Calvanese"     | <:journals/journals%2Fdagstuhl-reports%2FCalvaneseHT13>   |
+| "Diego Calvanese"     | <:journals/journals%2Fis%2FCalvaneseGLLR08>               |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2Fabs-cs-0507067>              |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FCalvaneseMET14>              |
+| "Diego Calvanese"     | <:journals/journals%2Fjair%2FArtaleCKZ09>                 |
+| "Diego Calvanese"     | <:journals/journals%2Fijcis%2FBerardiCGLM05>              |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2Fabs-1105-5452>               |
+| "Diego Calvanese"     | <:journals/journals%2Fiandc%2FCalvaneseEO14>              |
+| "Diego Calvanese"     | <:journals/journals%2Feaai%2FCalvaneseLMRRR16>            |
+| "Diego Calvanese"     | <:journals/journals%2Fia%2FCalvaneseG06>                  |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2Fabs-1304-6442>               |
+| "Diego Calvanese"     | <:journals/journals%2Fijcis%2FCalvaneseGLNR01>            |
+| "Diego Calvanese"     | <:journals/journals%2Fis%2FCalvaneseDNRT06>               |
+| "Diego Calvanese"     | <:journals/journals%2Fjair%2FCalvaneseOSS13>              |
+| "Diego Calvanese"     | <:journals/journals%2Fws%2FCalvaneseKT15>                 |
+| "Diego Calvanese"     | <:journals/journals%2Fjar%2FCalvaneseGLLR07>              |
+| "Diego Calvanese"     | <:journals/journals%2Fsttt%2FMontaliC16>                  |
+| "Diego Calvanese"     | <:journals/journals%2Fdebu%2FCaliCGL02>                   |
+| "Diego Calvanese"     | <:journals/journals%2Fnis%2FCalvaneseGL99>                |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2Fabs-cs-0507059>              |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FAhmetajCOS14>                |
+| "Diego Calvanese"     | <:journals/journals%2Ftcs%2FCalvaneseGLV07>               |
+| "Diego Calvanese"     | <:journals/journals%2Fdebu%2FCalvaneseGLMP08>             |
+| "Diego Calvanese"     | <:journals/journals%2Ftocl%2FCalvaneseGL08>               |
+| "Diego Calvanese"     | <:journals/journals%2Flogcom%2FCalvaneseGL99>             |
+| "Diego Calvanese"     | <:journals/journals%2Fjair%2FHaririCMGMF13>               |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FCalvaneseGLV15>              |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2Fabs-1304-5810>               |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FCalvaneseKRXZ17>             |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FCalvaneseMS15>               |
+| "Diego Calvanese"     | <:journals/journals%2Fsigact%2FCalvanese15>               |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FLantiXC16>                   |
+| "Diego Calvanese"     | <:journals/journals%2Fjcss%2FKharlamovZC13>               |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FArtaleCKZ14>                 |
+| "Diego Calvanese"     | <:journals/journals%2Fis%2FCaliCGL04>                     |
+| "Diego Calvanese"     | <:journals/journals%2Fia%2FCadoliCGM13>                   |
+| "Diego Calvanese"     | <:journals/journals%2Fsigmod%2FCalvaneseGLV03>            |
+| "Diego Calvanese"     | <:journals/journals%2Fjar%2FOrtizCE08>                    |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2Fabs-1203-0024>               |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FAhmetiCP14>                  |
+| "Diego Calvanese"     | <:journals/journals%2Fdke%2FQueraltACT12>                 |
+| "Diego Calvanese"     | <:journals/journals%2Fjcss%2FCalvaneseGLV13>              |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FHaririCMSS13>                |
+| "Diego Calvanese"     | <:journals/journals%2Fsemweb%2FCalvaneseGLLPRRRS11>       |
+| "Diego Calvanese"     | <:journals/journals%2FsLogica%2FThorneC12>                |
+| "Diego Calvanese"     | <:journals/journals%2Fai%2FCalvaneseGLLR13>               |
+| "Diego Calvanese"     | <:journals/journals%2Fsemweb%2FCalvaneseCKKLRR17>         |
+| "Diego Calvanese"     | <:journals/journals%2Faim%2FCalvaneseG05>                 |
+| "Diego Calvanese"     | <:journals/journals%2Fibmsj%2FLanfranchiPPC03>            |
+| "Diego Calvanese"     | <:journals/journals%2Fjair%2FCalvaneseLN99>               |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FCalvaneseOSS14>              |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FCalvaneseKSVZ13>             |
+| "Diego Calvanese"     | <:journals/journals%2Fcorr%2FCalvaneseCMS14>              |
+| "Alessandro Artale"   | <:journals/journals%2Fcorr%2Fabs-1209-5571>               |
+| "Alessandro Artale"   | <:journals/journals%2Flogcom%2FArtaleDFF04>               |
+| "Alessandro Artale"   | <:journals/journals%2Famai%2FArtalePS07>                  |
+| "Alessandro Artale"   | <:journals/journals%2Fcorr%2FArtaleKRZ13>                 |
+| "Alessandro Artale"   | <:journals/journals%2Faiedam%2FArtaleF99>                 |
+| "Alessandro Artale"   | <:journals/journals%2Fjair%2FArtaleCKZ09>                 |
+| "Alessandro Artale"   | <:journals/journals%2Fjancl%2FArtaleL04>                  |
+| "Alessandro Artale"   | <:journals/journals%2Famai%2FArtaleF00>                   |
+| "Alessandro Artale"   | <:journals/journals%2Fcorr%2Fabs-1304-5185>               |
+| "Alessandro Artale"   | <:journals/journals%2Fcorr%2FArtaleF16>                   |
+| "Alessandro Artale"   | <:journals/journals%2Fdke%2FArtaleFGP96>                  |
+| "Alessandro Artale"   | <:journals/journals%2Ftocl%2FArtaleKRZ14>                 |
+| "Alessandro Artale"   | <:journals/journals%2Fjair%2FArtaleF98>                   |
+| "Alessandro Artale"   | <:journals/journals%2Ftkde%2FArtaleCS96>                  |
+| "Alessandro Artale"   | <:journals/journals%2Fcorr%2FArtaleCKZ14>                 |
+| "Alessandro Artale"   | <:journals/journals%2Fao%2FKeetA08>                       |
+| "Alessandro Artale"   | <:journals/journals%2Fdke%2FQueraltACT12>                 |
+| "Alessandro Artale"   | <:journals/journals%2Famai%2FArtale06>                    |
+| "Alessandro Artale"   | <:journals/journals%2Fcorr%2Fabs-1105-5446>               |
+-------------------------------------------------------------------------------------
+
+2017-05-12 23:30:20 WARN  [main] (MorphMongoQueryProcessor.scala:146) - Time for late SPARQL query evaluation = 219ms.
+2017-05-12 23:30:20 INFO  [main] (MorphBaseRunner.scala:104) - Query response output file: /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/result.txt
+2017-05-12 23:30:20 WARN  [main] (MorphBaseRunner.scala:111) - Overall SPARQL query processing time = 1279ms.
+2017-05-12 23:30:20 WARN  [main] (MorphBaseRunner.scala:112) - **********************DONE****************************
+2017-05-12 23:30:20 INFO  [main] (MorphRunner.scala:74) - Query result:
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="name"/>
+    <variable name="paper"/>
+  </head>
+  <results>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FKimelfeldK14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fbsl%2FHellaKL96</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsigmod%2FBertossiCGKTZ05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjar%2FHermannK99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Feccc%2FECCC-TR00-082</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FFaginKMP05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FKolaitisP91</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FAfratiKV15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsigmod%2FKolaitisLS11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCateHK15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsiamcomp%2FGopalanKMP09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Feccc%2FGopalanKMP06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fbsl%2FHalpernHIKVV01</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FFaginKPT08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FBarlandKT98</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FCreignouKZ08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fpvldb%2FCateCKT09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FAfratiK00</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FHermannK00</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FCateDK13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fmst%2FKirousisK04</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-cs-0609072</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FAlexeCKT11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FBurdickFKPT16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fpvldb%2FAlexeCKT11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FKolaitisV95</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Feccc%2FECCC-TR05-119</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftocl%2FKolaitis05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fpvldb%2FKolaitisPT13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FFaginKP05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsigmod%2FKorthBFGKMO08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdam%2FBaileyDK07</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FKirousisK15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fapal%2FHellaKL97</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FKolaitisT95</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FKolaitisV00</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fmst%2FCateFK15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FFaginKPT05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Feccc%2FFederK06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FKolaitisT94</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fapal%2FKolaitisV95</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjsyml%2FKolaitis79</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FChaudhuriK97</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjodsn%2FCateHK16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FKolaitisV04</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FKolaitisK13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FKirousisK03</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FKolaitisP90</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FFaginKPT11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-0903-1953</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FAtseriasDK06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FWigdersonK15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjsc%2FHermannK95</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FKolaitis11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FKolaitisV90</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FFuxmanKMT06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FCateK10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fbsl%2FGradelKV97</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FKolaitisV92</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FDurandHK05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FKolaitis91</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Feccc%2FKolaitisK09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FFaginKK11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fipl%2FKolaitisP12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FGottlobKS04</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Phokion G. Kolaitis</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FKolaitisF04</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FBryantGHV09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi10e</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdagstuhl-reports%2FMehlhornVH12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Frsa%2FMooreIDV07</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1109-6346</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FBalkanVT15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FHalpernV89</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftocl%2FKupfermanV01</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FChakrabortyMV14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FHarelKV02</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdagstuhl-reports%2FRehofV14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi11f</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FGrumbergVSA12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1003-1179</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi11c</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FBordeauxKNV14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fpvldb%2FCalvaneseGLV12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fendm%2FGiunchigliaNTV01</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi11e</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FKupfermanVW00</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FVardiW94</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fijgt%2FFaginGHV99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FLiZPV15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi13b</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FHardinKSV01</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FPitermanV03</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fapal%2FKupfermanSV06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FChakrabortyMMV15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FPlakuKV09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1112-6275</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FRamakrishnanSUV93</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FKuperV93</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fipl%2FVardi89</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi12a</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi14a</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi09c</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FChocklerKV06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi15e</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Figpl%2FVardi98</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FLi0PVH14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fbsl%2FHalpernHIKVV01</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsigmod%2FRossCGJBV99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FAminofLMSV13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjsyml%2FFaginHV92</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FCalvaneseGV05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi09e</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Facr%2FFaginKUV86</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FMogaveroMPV16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FCalvaneseGLV02</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fconstraints%2FCoarfaDASV03</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fmima%2FFaginHMV97</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsttt%2FChocklerKV06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1302-2675</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi16d</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdagstuhl-manifestos%2FKreikerTVW11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fipl%2FVardi90</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fcs-LO-9809003</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi12b</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi09d</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fijfcs%2FFriedgutKV06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsoftware%2FVardi88</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Flmcs%2FEtessamiKVY08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi15a</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsttt%2FLustigV13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjsyml%2FVardi97</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcjtcs%2FFeigenbaumKVV99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FBeeriV85</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsiamcomp%2FFederV98</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjair%2FPistoreV07</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsiglog%2FAlurHV15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftrob%2FPlakuKV10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi17</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FCourcoubetisVWY92</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftocl%2FMogaveroMPV14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-0810-5728</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FLiP0YVH13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FBeeriV84</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fentcs%2FArmoniFFHPV05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi10a</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fconstraints%2FIvriiMMV16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi13e</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjair%2FBordeauxKNV11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcsur%2FAbiteboulKMSV96</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi10c</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FKennedyV02</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi11b</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FVardi96</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi10b</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi11d</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi11a</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi13a</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi10d</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FKolaitisV95</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FNainLV14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FCalvaneseGLV07</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FFaginSV95</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjlp%2FVardi91</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi14c</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsigmod%2FBeeriV81</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Famai%2FKupfermanPV16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FFislerV02</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsttt%2FKupfermanV03</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fbsl%2FKupfermanV99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Featcs%2FAcetoHKTV16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdc%2FFaginHMV97</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcjtcs%2FVardi96</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FChakrabortyMV13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FMeelVCFSFIM15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fentcs%2FVardi02</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjalc%2FPeledVY02</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FSebastianiSTV07</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi15d</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FBryantGSV10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1110-6183</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsttt%2FPlakuKV13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FKupfermanVW01</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjlp%2FHillebrandKMV95</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCalvaneseGLV15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi14d</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1304-1584</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi09a</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fcs-LO-0208033</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FKupfermanV01</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fipl%2FVardi84</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi16c</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FMeydenV13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Featcs%2FVardi85</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FGrahamMV86</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsiamcomp%2FHalpernMV04</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FKolaitisV00</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FKupfermanPV12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FKestenPV01</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi16b</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi09b</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardiV13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsiamcomp%2FBeeriV84</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FFogartyKVW15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FTabakovRV12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftocl%2FKupfermanV05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FVardi84</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Featcs%2FVardi16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FLiZZPV16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Flmcs%2FBonattiLMV08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FVardi86</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1202-1309</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FChaudhuriV97</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FKupfermanPV09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi13d</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjancl%2FPanSV06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Facta%2FMakowskyV86</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FVardiHAK12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FTsaiFVT14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftrob%2FLahijanianMFKKV16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FSistlaVW87</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FChakrabortyFMSV14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi13c</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FLiP0VH14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsoftware%2FVardi88a</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsttt%2FSebastianiTV11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fgeb%2FOshersonV06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsigmod%2FCalvaneseGLV03</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi12c</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FMogaveroMV15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcjtcs%2FKupfermanV98</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardiG15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi15b</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Featcs%2FGaifmanV85</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FKuperV93</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FChatterjee0V15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi12e</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FFaginHV91</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi08b</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi14b</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FCosmadakisKV90</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FChatterjee0NV14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FCalvaneseGLV13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FEtessamiVW02</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjolpe%2FWienerKV09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi08a</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsiamcomp%2FChandraV85</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fapal%2FVardi91</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi12d</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FAbiteboulVV95</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FCookKV12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FKolaitisV90</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi15c</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FGaifmanMSV93</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjar%2FPanV05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsttt%2FRozierV10</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsiamcomp%2FBarceloRV16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fbsl%2FGradelKV97</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FFaginHV92</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FKolaitisV92</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FKupfermanV05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fentcs%2FFraerKFV99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftods%2FMaierUV84</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi16e</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ffmsd%2FKwiatkowskaVBB16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fipl%2FVardi81</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftoplas%2FKupfermanV00</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Flogcom%2FMogaveroMV16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Facta%2FVardi83</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FVardiW86</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjacm%2FAbiteboulVV97</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fapal%2FFaginHMV99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-0809-0360</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fipl%2FFaginV83</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FBeeriV84</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fai%2FFaginHV95</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcacm%2FVardi16a</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsigmod%2FAbiteboulHVGHHRUVH05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCalvaneseDM14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fai%2FArenasBCR16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FAbiteboulABBCDH17</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCalvaneseDLMMT16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsemweb%2FCalvaneseL13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1003-1179</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FHaririCMGMF14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjucs%2FCaliCM09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fpvldb%2FCalvaneseGLV12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FBienvenuCOS14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fwww%2FCalvaneseCS01</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fai%2FBerardiCG05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fnis%2FCalvaneseGR99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FCalvaneseGLR12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FBotoevaCCRX16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FBotoevaCSSSX15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FCalvaneseGV05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FCalvaneseGLV02</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdagstuhl-reports%2FCalvaneseHT13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fis%2FCalvaneseGLLR08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-cs-0507067</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCalvaneseMET14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjair%2FArtaleCKZ09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fijcis%2FBerardiCGLM05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1105-5452</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fiandc%2FCalvaneseEO14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Feaai%2FCalvaneseLMRRR16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fia%2FCalvaneseG06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1304-6442</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fijcis%2FCalvaneseGLNR01</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fis%2FCalvaneseDNRT06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjair%2FCalvaneseOSS13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fws%2FCalvaneseKT15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjar%2FCalvaneseGLLR07</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsttt%2FMontaliC16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdebu%2FCaliCGL02</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fnis%2FCalvaneseGL99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-cs-0507059</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FAhmetajCOS14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftcs%2FCalvaneseGLV07</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdebu%2FCalvaneseGLMP08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftocl%2FCalvaneseGL08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Flogcom%2FCalvaneseGL99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjair%2FHaririCMGMF13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCalvaneseGLV15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1304-5810</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCalvaneseKRXZ17</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCalvaneseMS15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsigact%2FCalvanese15</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FLantiXC16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FKharlamovZC13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FArtaleCKZ14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fis%2FCaliCGL04</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fia%2FCadoliCGM13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsigmod%2FCalvaneseGLV03</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjar%2FOrtizCE08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1203-0024</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FAhmetiCP14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdke%2FQueraltACT12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjcss%2FCalvaneseGLV13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FHaririCMSS13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsemweb%2FCalvaneseGLLPRRRS11</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2FsLogica%2FThorneC12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fai%2FCalvaneseGLLR13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fsemweb%2FCalvaneseCKKLRR17</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Faim%2FCalvaneseG05</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fibmsj%2FLanfranchiPPC03</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjair%2FCalvaneseLN99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCalvaneseOSS14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCalvaneseKSVZ13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FCalvaneseCMS14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1209-5571</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Flogcom%2FArtaleDFF04</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Famai%2FArtalePS07</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FArtaleKRZ13</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Faiedam%2FArtaleF99</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjair%2FArtaleCKZ09</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjancl%2FArtaleL04</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Famai%2FArtaleF00</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1304-5185</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FArtaleF16</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdke%2FArtaleFGP96</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftocl%2FArtaleKRZ14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fjair%2FArtaleF98</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Ftkde%2FArtaleCS96</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2FArtaleCKZ14</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fao%2FKeetA08</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fdke%2FQueraltACT12</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Famai%2FArtale06</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+      <binding name="paper">
+        <uri>:journals/journals%2Fcorr%2Fabs-1105-5446</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+2017-05-12 23:30:20 INFO  [main] (MorphRunner.scala:79) - Treatment completed, exiting.

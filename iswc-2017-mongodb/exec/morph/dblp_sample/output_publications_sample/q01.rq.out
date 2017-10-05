@@ -1,0 +1,3246 @@
+To override log4j configuration add JVM option: -Dlog4j.configuration=file:/home/.../your_log4j.properties
+Loading log4j configuration: jar:file:/Users/xiao/src/morph-xr2rml/morph-xr2rml-dist/target/morph-xr2rml-dist-1.0-SNAPSHOT-jar-with-dependencies.jar!/xr2rml-log4j.properties
+2017-05-12 16:24:39 INFO  [main] (MorphRunner.scala:57) - properties Directory = /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph
+2017-05-12 16:24:39 INFO  [main] (MorphRunner.scala:58) - properties File      = output/q01.rq.properties
+Reading configuration file : /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/output/q01.rq.properties
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:118) - Server active = false
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:121) - Server port number = 8080
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:124) - Output file = result.txt
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:144) - Output RDF syntax = TURTLE
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:153) - Output SPARQL result syntax = TURTLE
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:156) - Display result on std output = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:159) - Jena mode = memory
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:162) - SPARQL Query Optimization = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:165) - Optimization - Self join elimination = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:168) - Optimization - Self union elimination = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:171) - Optimization - Propagate conditions from a joined query = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:174) - Optimization - Reorder STG = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:177) - Optimization - Subquery elimination = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:180) - Optimization - Trans join subquery elimination = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:183) - Optimization - Trans stg subquery elimination = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:186) - Optimization - Subquery as view = false
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:189) - Cache the result of student.queries for join evaluation (non Relational DBs) = false
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:196) - RunnerFactory = fr.unice.i3s.morph.xr2rml.mongo.engine.MorphMongoRunnerFactory
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:199) - Remove Strange Chars From Literal Column = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:202) - URL-encode reserved chars IRI tempalte string = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:205) - URL-encode reserved chars in database values = true
+2017-05-12 16:24:39 INFO  [main] (MorphProperties.scala:208) - String transformation = None
+2017-05-12 16:24:39 INFO  [main] (R2RMLMappingDocument.scala:225) - Parsing mapping document /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/dblp-mapping-publications.ttl
+2017-05-12 16:24:41 INFO  [main] (MorphBaseRunner.scala:59) - ****************************************************************************************************************
+2017-05-12 16:24:41 INFO  [main] (MorphBaseRunner.scala:60) - Running query translation. Content-type: null
+2017-05-12 16:24:41 INFO  [main] (SparqlUtility.scala:224) - Request Accept: null. Negotiated: (application/sparql-results+xml,XML)
+2017-05-12 16:24:41 INFO  [main] (SparqlQueryRewriter.scala:97) - SPARQL graph pattern:
+(distinct
+  (project (?x)
+    (bgp (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/Author>))))
+
+2017-05-12 16:24:41 INFO  [main] (MorphMongoQueryTranslator.scala:84) - Triple pattern bindings computation time = 8ms.
+2017-05-12 16:24:41 INFO  [main] (MorphMongoQueryTranslator.scala:85) - Triple pattern bindings:
+   Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+2017-05-12 16:24:41 WARN  [main] (MorphMongoQueryTranslator.scala:219) - SPARQL DISTINCT ignored in query translation.
+2017-05-12 16:24:41 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 16:24:41 INFO  [main] (MorphBaseQueryTranslator.scala:107) - Query translation time (including bindings) = 239ms.
+2017-05-12 16:24:41 INFO  [main] (MorphBaseRunner.scala:90) - SPARQL Query = 
+PREFIX  :     <http://dblp.l3s.de/d2r/>
+
+SELECT DISTINCT  ?x
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :Author}
+
+2017-05-12 16:24:41 INFO  [main] (MorphBaseRunner.scala:91) - ------------------ Abstract Query ------------------ = 
+{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+  from   : db.publications.find({}), Iterator: Some($.authors.*)
+  project: Set(_id AS ?x)
+  where  : Set(NotNull(_id)) }
+2017-05-12 16:24:41 INFO  [main] (MorphBaseRunner.scala:92) - ------------------ Concrete Query ------------------ = 
+{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+ MongoDBQuery[Collection: publications. Query: {}. Projection: {}] }
+2017-05-12 16:24:41 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {}. Projection: {}] with limit None
+2017-05-12 16:24:42 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 1059 result(s), 3264 result(s) after applying the iterator, in: 782 ms.
+2017-05-12 16:24:43 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 3264 RDF triples for binding
+ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+2017-05-12 16:24:43 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 3264 RDF triples for all binding in 1020 ms.
+2017-05-12 16:24:43 WARN  [main] (MorphMongoDataTranslator.scala:229) - Duration of query execution and generation of triples = 1861 ms.
+2017-05-12 16:24:43 INFO  [main] (MorphMongoQueryProcessor.scala:139) - Result set contains 527 triples.
+2017-05-12 16:24:44 INFO  [main] (MorphMongoQueryProcessor.scala:140) - Tabular result set:
+--------------------------------------------
+| x                                        |
+============================================
+| <:authors/Kun_Qian>                      |
+| <:authors/Alon_Flaisher>                 |
+| <:authors/Enrico_Giunchiglia>            |
+| <:authors/Alifah_Syamsiyah>              |
+| <:authors/Yonit_Kesten>                  |
+| <:authors/Karin_Greimel>                 |
+| <:authors/Irene_Teinemaa>                |
+| <:authors/Guido_Sciavicco>               |
+| <:authors/Roni_Wiener>                   |
+| <:authors/Jianwen_Li>                    |
+| <:authors/Le_Gruenwald>                  |
+| <:authors/Luca_Aceto>                    |
+| <:authors/Marco_Pistore>                 |
+| <:authors/Harry_G._Mairson>              |
+| <:authors/Domenico_Ursino>               |
+| <:authors/Pietro_Della_Peruta>           |
+| <:authors/David_Toman>                   |
+| <:authors/Marta_Kwiatkowska>             |
+| <:authors/Pietro_Babighian>              |
+| <:authors/Georges_Gonthier>              |
+| <:authors/Swastik_Kopparty>              |
+| <:authors/Massimo_Mecella>               |
+| <:authors/Tomer_Kanza>                   |
+| <:authors/Ülari_Laurson>                 |
+| <:authors/Richard_L._Halpert>            |
+| <:authors/Youssef_Hamadi>                |
+| <:authors/Barukh_Ziv>                    |
+| <:authors/Matthew_Horridge>              |
+| <:authors/Daniele_Braga>                 |
+| <:authors/Thomas_Lukasiewicz>            |
+| <:authors/Camilo_Thorne>                 |
+| <:authors/Thomas_Raffill>                |
+| <:authors/Axel_Legay>                    |
+| <:authors/Scott_Huddleston>              |
+| <:authors/Sheila_A._Greibach>            |
+| <:authors/Enrico_Franconi>               |
+| <:authors/Paolo_Traverso>                |
+| <:authors/Neil_Immerman>                 |
+| <:authors/Cristina_Baroglio>             |
+| <:authors/Gio_Wiederhold>                |
+| <:authors/Elio_Damaggio>                 |
+| <:authors/Roman_Kontchakov>              |
+| <:authors/Marc_H._Graham>                |
+| <:authors/A._Prasad_Sistla>              |
+| <:authors/Ehud_Friedgut>                 |
+| <:authors/David_L._Martin_0001>          |
+| <:authors/Matteo_Baldoni>                |
+| <:authors/Fabio_Mogavero>                |
+| <:authors/Dirk_Van_Gucht>                |
+| <:authors/Bruno_Zanuttini>               |
+| <:authors/Limor_Fix>                     |
+| <:authors/Jonathan_Shalev>               |
+| <:authors/Ahmed_Bouajjani>               |
+| <:authors/Dmitriy_Zheleznyakov>          |
+| <:authors/Stavros_S._Cosmadakis>         |
+| <:authors/Paolo_Merialdo>                |
+| <:authors/Magdalena_Ortiz>               |
+| <:authors/Arnaud_Durand_0001>            |
+| <:authors/Michal_Armoni>                 |
+| <:authors/Eli_Singerman>                 |
+| <:authors/Fabio_Somenzi>                 |
+| <:authors/Claudio_Masolo>                |
+| <:authors/Ralf_Möller>                   |
+| <:authors/Paolo_Felli>                   |
+| <:authors/Yakir_Vizel>                   |
+| <:authors/Patrick_Porter>                |
+| <:authors/Alin_Deutsch>                  |
+| <:authors/Moshe_Y._Vardi>                |
+| <:authors/Larry_J._Stockmeyer>           |
+| <:authors/Rod_Downey>                    |
+| <:authors/Demetrios_D._Demopoulos>       |
+| <:authors/Bernardo_Magnini>              |
+| <:authors/Marc_Herbstritt>               |
+| <:authors/Jeffrey_M._Dudek>              |
+| <:authors/P._S._Thiagarajan>             |
+| <:authors/Elena_Botoeva>                 |
+| <:authors/Morteza_Lahijanian>            |
+| <:authors/Emanuel_Sallinger>             |
+| <:authors/Bruno_Crispo>                  |
+| <:authors/Daniel_J._Rosenkrantz>         |
+| <:authors/Gaëlle_Fontaine>               |
+| <:authors/Reinhard_Pichler>              |
+| <:authors/Laura_Chiticariu>              |
+| <:authors/Thom_W._Frühwirth>             |
+| <:authors/Philip_A._Bernstein>           |
+| <:authors/Antonio_Perrone>               |
+| <:authors/Carsten_Lutz>                  |
+| <:authors/Dan_Suciu>                     |
+| <:authors/Florian_Zuleger>               |
+| <:authors/Paris_C._Kanellakis>           |
+| <:authors/Özgür_L._Özçep>                |
+| <:authors/Jasmin_Fisher>                 |
+| <:authors/Antonio_Di_Stasio>             |
+| <:authors/Phokion_G._Kolaitis>           |
+| <:authors/Julia_Stoyanovich>             |
+| <:authors/Maria_Amalfi>                  |
+| <:authors/Wil_M._P._van_der_Aalst>       |
+| <:authors/Peter_Haase_0001>              |
+| <:authors/Costas_Courcoubetis>           |
+| <:authors/Helmut_Veith>                  |
+| <:authors/Hadas_Kress-Gazit>             |
+| <:authors/Mahesh_Viswanathan_0001>       |
+| <:authors/Anmol_V._Singh>                |
+| <:authors/M._Toiati>                     |
+| <:authors/Parikshit_Gopalan>             |
+| <:authors/Rüdiger_Ehlers>                |
+| <:authors/Roy_Armoni>                    |
+| <:authors/Mantas_Simkus>                 |
+| <:authors/Kristin_Y._Rozier>             |
+| <:authors/Eran_Talmor>                   |
+| <:authors/Barbara_Jobstmann>             |
+| <:authors/Randal_E._Bryant>              |
+| <:authors/Luciano_Baresi>                |
+| <:authors/Mihalis_Yannakakis>            |
+| <:authors/Olivier_Serre>                 |
+| <:authors/Christian_Neuenstadt>          |
+| <:authors/Ayca_Balkan>                   |
+| <:authors/Kurt_Mehlhorn>                 |
+| <:authors/Stefano_Tonetta>               |
+| <:authors/Tomer_Kotek>                   |
+| <:authors/H._V._Jagadish>                |
+| <:authors/Jane_Cleland-Huang>            |
+| <:authors/Sasha_Rubin>                   |
+| <:authors/Kenneth_A._Ross>               |
+| <:authors/Cristian_Coarfa>               |
+| <:authors/Doron_A._Peled>                |
+| <:authors/S._Rodger>                     |
+| <:authors/Claire_David>                  |
+| <:authors/Stavros_Tripakis>              |
+| <:authors/Dmitry_Tsarkov>                |
+| <:authors/Michele_Melchiori>             |
+| <:authors/Rui_Zhang>                     |
+| <:authors/Alisa_Kovtunova>               |
+| <:authors/Elem_Guzel_Kalayci>            |
+| <:authors/Miguel_Romero_0001>            |
+| <:authors/Ronald_Fagin>                  |
+| <:authors/Sampath_Kannan>                |
+| <:authors/Amit_Bhatia>                   |
+| <:authors/Martin_Otto_0001>              |
+| <:authors/Aniello_Murano>                |
+| <:authors/Alex_S._Taylor>                |
+| <:authors/Ralf_Molitor>                  |
+| <:authors/Lucian_Popa>                   |
+| <:authors/Giorgio_Delzanno>              |
+| <:authors/Heribert_Vollmer>              |
+| <:authors/Rajeev_Alur>                   |
+| <:authors/Nicole_Schweikardt>            |
+| <:authors/Yueling_Zhang>                 |
+| <:authors/Mariano_Rodriguez>             |
+| <:authors/Dmitry_Solomakhin>             |
+| <:authors/Lyle_Brenner>                  |
+| <:authors/Oscar_Romero_0001>             |
+| <:authors/Andreas_Tiemeyer>              |
+| <:authors/L._Pichetti>                   |
+| <:authors/Jouko_A._Väänänen>             |
+| <:authors/Evgeny_Sherkhonov>             |
+| <:authors/Wolfgang_Fischl>               |
+| <:authors/Riccardo_Rosati>               |
+| <:authors/Sam_Bourton>                   |
+| <:authors/Sergio_Greco>                  |
+| <:authors/Keliang_He>                    |
+| <:authors/Doron_Bustan>                  |
+| <:authors/Domenico_Saccà>                |
+| <:authors/Alberto_Abelló>                |
+| <:authors/D._Sivakumar>                  |
+| <:authors/Francesco_Guerra_0001>         |
+| <:authors/Marco_Cadoli>                  |
+| <:authors/Randy_Batsell>                 |
+| <:authors/Marcelo_Arenas>                |
+| <:authors/Yinbo_Yao>                     |
+| <:authors/Ken_Kennedy>                   |
+| <:authors/Yael_Zbar>                     |
+| <:authors/Dag_Hovland>                   |
+| <:authors/Pietro_Liuzzo>                 |
+| <:authors/Lauri_Hella>                   |
+| <:authors/Giuseppe_Perelli>              |
+| <:authors/Avner_Landver>                 |
+| <:authors/David_Benque>                  |
+| <:authors/Robert_P._Kurshan>             |
+| <:authors/Piero_A._Bonatti>              |
+| <:authors/Benjamin_Cogrel>               |
+| <:authors/Mark_Guzdial>                  |
+| <:authors/Marcelo_Glusman>               |
+| <:authors/Tova_Milo>                     |
+| <:authors/Elisabetta_Grazzini>           |
+| <:authors/Matthias_Jarke>                |
+| <:authors/Daniel_J._Fremont>             |
+| <:authors/Andrey_Rybalchenko>            |
+| <:authors/Jin_Yang>                      |
+| <:authors/Mary_F._Fernández>             |
+| <:authors/Davide_Lanti>                  |
+| <:authors/Shqiponja_Ahmetaj>             |
+| <:authors/Swarat_Chaudhuri>              |
+| <:authors/Renée_J._Miller>               |
+| <:authors/Carlo_Strapparava>             |
+| <:authors/Michael_Meier>                 |
+| <:authors/Parke_Godfrey>                 |
+| <:authors/Sergey_Egorov>                 |
+| <:authors/Jan_Chomicki>                  |
+| <:authors/Leonid_Libkin>                 |
+| <:authors/Arild_Waaler>                  |
+| <:authors/Sumit_Nain>                    |
+| <:authors/Gerd_G._Hillebrand>            |
+| <:authors/Meghyn_Bienvenu>               |
+| <:authors/Milenko_Mosurovic>             |
+| <:authors/Dietrich_Kuske>                |
+| <:authors/Alessandro_Provetti>           |
+| <:authors/Laurent_Juban>                 |
+| <:authors/Enela_Pema>                    |
+| <:authors/Erik_Vee>                      |
+| <:authors/Mikhail_Soutchanski>           |
+| <:authors/Fausto_Giunchiglia>            |
+| <:authors/Yoram_Moses>                   |
+| <:authors/Wolfgang_Thomas>               |
+| <:authors/Víctor_Dalmau>                 |
+| <:authors/Elitza_N._Maneva>              |
+| <:authors/C._Maria_Keet>                 |
+| <:authors/Andrzej_Tarlecki>              |
+| <:authors/Anuj_Dawar>                    |
+| <:authors/Jean_Paul_Ballerini>           |
+| <:authors/Mattia_Palmieri>               |
+| <:authors/Simona_Colucci>                |
+| <:authors/Delbert_D._Bailey>             |
+| <:authors/Zurab_Khasidashvili>           |
+| <:authors/Kuldeep_S._Meel>               |
+| <:authors/Sriram_Sankaranarayanan>       |
+| <:authors/Clare_Dixon>                   |
+| <:authors/Jasmine_Novak>                 |
+| <:authors/Shufang_Zhu>                   |
+| <:authors/Timea_Bagosi>                  |
+| <:authors/Giorgio_Terracina>             |
+| <:authors/Lijun_Zhang_0001>              |
+| <:authors/Rakesh_Mistry>                 |
+| <:authors/Riccardo_Torlone>              |
+| <:authors/Michele_Stawowy>               |
+| <:authors/Jakob_Rehof>                   |
+| <:authors/Marlon_Dumas>                  |
+| <:authors/Jeffrey_D._Ullman>             |
+| <:authors/Raffaella_Bernardi>            |
+| <:authors/Angelo_Montanari>              |
+| <:authors/Alexander_Ivrii>               |
+| <:authors/Axel_Polleres>                 |
+| <:authors/Alfonso_San_Miguel_Aguirre>    |
+| <:authors/Guoqiang_Pan>                  |
+| <:authors/Michael_Schmidt_0002>          |
+| <:authors/Domenico_Fabio_Savo>           |
+| <:authors/Anna_Formica>                  |
+| <:authors/Andrey_Rivkin>                 |
+| <:authors/Elena_Cardillo>                |
+| <:authors/Rob_Gerth>                     |
+| <:authors/Marco_Montali>                 |
+| <:authors/Alan_Nash>                     |
+| <:authors/Zvi_Terem>                     |
+| <:authors/Andrea_Acciarri>               |
+| <:authors/Paolo_Naggar>                  |
+| <:authors/Fabio_Patrizi>                 |
+| <:authors/Albert_Atserias>               |
+| <:authors/Andrea_Calì>                   |
+| <:authors/Stefano_Spaccapietra>          |
+| <:authors/Thomas_Schwentick>             |
+| <:authors/Anna_Queralt>                  |
+| <:authors/Kim_B._Bruce>                  |
+| <:authors/Erich_Grädel>                  |
+| <:authors/David_Maier>                   |
+| <:authors/Alessandro_Artale>             |
+| <:authors/Walied_Othman>                 |
+| <:authors/Gila_Kamhi>                    |
+| <:authors/Dejan_Nickovic>                |
+| <:authors/Yih-Kuen_Tsay>                 |
+| <:authors/Sonia_Bergamaschi>             |
+| <:authors/Yannis_Vassiliou>              |
+| <:authors/Martin_Grohe>                  |
+| <:authors/Roderick_Bloem>                |
+| <:authors/R._Verma>                      |
+| <:authors/Luigi_Dragone>                 |
+| <:authors/Wim_Martens>                   |
+| <:authors/Michele_Missikoff>             |
+| <:authors/Robert_Harper>                 |
+| <:authors/Jan_Van_den_Bussche>           |
+| <:authors/Christine_Parent>              |
+| <:authors/Ranan_Fraer>                   |
+| <:authors/Avi_Wigderson>                 |
+| <:authors/Francesca_Bonin>               |
+| <:authors/Cristopher_Moore>              |
+| <:authors/Maurizio_Lenzerini>            |
+| <:authors/Joseph_Y._Halpern>             |
+| <:authors/Silvana_Castano>               |
+| <:authors/Samin_Ishtiaq>                 |
+| <:authors/Eric_Koskinen>                 |
+| <:authors/Claudio_Eccher>                |
+| <:authors/Edward_L._Wimmers>             |
+| <:authors/Domenico_Lembo>                |
+| <:authors/Juan_L._Reutter>               |
+| <:authors/Guohui_Xiao>                   |
+| <:authors/Ming-Hsien_Tsai>               |
+| <:authors/Joost-Pieter_Katoen>           |
+| <:authors/M._Tamer_Özsu>                 |
+| <:authors/Diego_Calvanese>               |
+| <:authors/Caitlin_Cockerton>             |
+| <:authors/Erion_Plaku>                   |
+| <:authors/Georg_Gottlob>                 |
+| <:authors/Jim_Gray>                      |
+| <:authors/Marco_Daniele>                 |
+| <:authors/Stéphane_Lafortune>            |
+| <:authors/Lucas_M._Tabajara>             |
+| <:authors/Mindaugas_Slusnys>             |
+| <:authors/Foto_N._Afrati>                |
+| <:authors/Matthew_R._Maly>               |
+| <:authors/Jifeng_He>                     |
+| <:authors/Avi_Puder>                     |
+| <:authors/Spyros_Ligoudistianos>         |
+| <:authors/Davide_Bresolin>               |
+| <:authors/Ron_van_der_Meyden>            |
+| <:authors/Letizia_Tanca>                 |
+| <:authors/Lina_Lubyte>                   |
+| <:authors/Ronald_H._Hardin>              |
+| <:authors/Antonella_Poggi>               |
+| <:authors/Valerie_King>                  |
+| <:authors/Gabriel_M._Kuper>              |
+| <:authors/Thomas_Wilke>                  |
+| <:authors/Filippo_Cacace>                |
+| <:authors/Giuseppe_Santucci>             |
+| <:authors/Ernesto_Jiménez-Ruiz>          |
+| <:authors/Ehud_Y._Shapiro>               |
+| <:authors/Francesco_M._Donini>           |
+| <:authors/Alexander_Novakovsky>          |
+| <:authors/Armando_Tacchella>             |
+| <:authors/Lefteris_M._Kirousis>          |
+| <:authors/Sankar_Gurumurthy>             |
+| <:authors/Amir_Pnueli>                   |
+| <:authors/Sanjit_A._Seshia>              |
+| <:authors/Haim_Gaifman>                  |
+| <:authors/Miki_Hermann>                  |
+| <:authors/Doron_Keren>                   |
+| <:authors/Bogdan_Alexe>                  |
+| <:authors/Maurizio_Vincini>              |
+| <:authors/Dmitry_Korchemny>              |
+| <:authors/Wang_Chiew_Tan>                |
+| <:authors/Dror_Fried>                    |
+| <:authors/Michael_Zakharyaschev>         |
+| <:authors/Reinhard_Wilhelm>              |
+| <:authors/Tamarah_Arons>                 |
+| <:authors/Alessandro_Campi>              |
+| <:authors/Mauricio_A._Hernández>         |
+| <:authors/Claudio_Sartori_0001>          |
+| <:authors/Sela_Mador-Haim>               |
+| <:authors/Herman_Lam>                    |
+| <:authors/Alex_Thomo>                    |
+| <:authors/Thorsten_Liebig>               |
+| <:authors/Guillem_Rull>                  |
+| <:authors/Alessandro_Mosca>              |
+| <:authors/Corey_Fisher>                  |
+| <:authors/Markus_Lohrey>                 |
+| <:authors/Giorgio_Stefanoni>             |
+| <:authors/Werner_Nutt>                   |
+| <:authors/Evgeny_Kharlamov>              |
+| <:authors/Gabriel_Istrate>               |
+| <:authors/Yannis_E._Ioannidis>           |
+| <:authors/Geguang_Pu>                    |
+| <:authors/Carlo_A._Furia>                |
+| <:authors/Fabio_Vernacotola>             |
+| <:authors/P._Madhusudan>                 |
+| <:authors/Francesca_Spezzano>            |
+| <:authors/Christos_H._Papadimitriou>     |
+| <:authors/Eyal_Yardeni>                  |
+| <:authors/Balder_ten_Cate>               |
+| <:authors/Michael_Stonebraker>           |
+| <:authors/Ognjen_Savkovic>               |
+| <:authors/Yehoshua_Sagiv>                |
+| <:authors/Valerio_Santarelli>            |
+| <:authors/Thomas_A._Henzinger>           |
+| <:authors/Nadia_Creignou>                |
+| <:authors/Marco_Ruzzi>                   |
+| <:authors/Olaf_Noppens>                  |
+| <:authors/Orna_Grumberg>                 |
+| <:authors/Vladislav_Ryzhikov>            |
+| <:authors/Deian_Tabakov>                 |
+| <:authors/Michael_Wessel>                |
+| <:authors/Ashok_K._Chandra>              |
+| <:authors/George_Katsirelos>             |
+| <:authors/Yazmin_Angélica_Ibáñez-García> |
+| <:authors/Riccardo_De_Masellis>          |
+| <:authors/Yael_Abarbanel>                |
+| <:authors/John_Geanakoplos>              |
+| <:authors/Ian_Barland>                   |
+| <:authors/Ismail_Ilkan_Ceylan>           |
+| <:authors/Roberto_Sebastiani>            |
+| <:authors/Ian_Horrocks>                  |
+| <:authors/Michael_Fisher>                |
+| <:authors/Thomas_Ball>                   |
+| <:authors/Lydia_E._Kavraki>              |
+| <:authors/Manolis_Koubarakis>            |
+| <:authors/G._Marrella>                   |
+| <:authors/Roberto_Micalizio>             |
+| <:authors/Kerkko_Luosto>                 |
+| <:authors/Michael_A._Harrison>           |
+| <:authors/Daniele_Nardi>                 |
+| <:authors/Mikhail_Roshchin>              |
+| <:authors/Fady_Copty>                    |
+| <:authors/Alessandro_Solimando>          |
+| <:authors/Andrei_A._Krokhin>             |
+| <:authors/Lucas_Bordeaux>                |
+| <:authors/Yoad_Lustig>                   |
+| <:authors/Sharad_Malik>                  |
+| <:authors/Michael_J._Franklin>           |
+| <:authors/Alexander_Borgida>             |
+| <:authors/Pierre_Wolper>                 |
+| <:authors/Shaull_Almagor>                |
+| <:authors/Nina_Narodytska>               |
+| <:authors/Pablo_Barceló>                 |
+| <:authors/Raghu_Ramakrishnan>            |
+| <:authors/Seong-Whan_Lee>                |
+| <:authors/Tamir_Heyman>                  |
+| <:authors/Nir_Piterman>                  |
+| <:authors/Tomás_Feder>                   |
+| <:authors/Babak_Bagheri_Hariri>          |
+| <:authors/Steffen_Lamparter>             |
+| <:authors/Andrew_Tomkins>                |
+| <:authors/Luca_Pazzi>                    |
+| <:authors/Eyke_Hüllermeier>              |
+| <:authors/Angelos_Vasilakopoulos>        |
+| <:authors/Sean_Bechhofer>                |
+| <:authors/Ernest_Teniente>               |
+| <:authors/Sven_Hartmann>                 |
+| <:authors/Jonathan_Panttaja>             |
+| <:authors/Marko_Luther>                  |
+| <:authors/Giovanni_Soda>                 |
+| <:authors/Joan_Feigenbaum>               |
+| <:authors/Lenore_D._Zuck>                |
+| <:authors/Ellis_Horowitz>                |
+| <:authors/Umeshwar_Dayal>                |
+| <:authors/José_Remesal>                  |
+| <:authors/Orna_Bernholtz>                |
+| <:authors/Joseph_Sifakis>                |
+| <:authors/Spyros_Tsavachidis>            |
+| <:authors/Stefano_Ceri>                  |
+| <:authors/Martin_Giese>                  |
+| <:authors/Ahmet_Soylu>                   |
+| <:authors/Toni_Mancini>                  |
+| <:authors/Byron_Cook>                    |
+| <:authors/Devika_Subramanian>            |
+| <:authors/Dana_Fisman>                   |
+| <:authors/A._Frank_Mayadas>              |
+| <:authors/Michael_Mishaeli>              |
+| <:authors/Federica_Mandreoli>            |
+| <:authors/Samson_Abramsky>               |
+| <:authors/Josef_Hardi>                   |
+| <:authors/Ariel_Fuxman>                  |
+| <:authors/Victor_Vianu>                  |
+| <:authors/Gösta_Grahne>                  |
+| <:authors/Andrei_A._Bulatov>             |
+| <:authors/Sonali_Dutta>                  |
+| <:authors/Catriel_Beeri>                 |
+| <:authors/Andreas_Podelski>              |
+| <:authors/Domenico_Carbotta>             |
+| <:authors/Supratik_Chakraborty>          |
+| <:authors/Tiziana_Catarci>               |
+| <:authors/Seth_Fogarty>                  |
+| <:authors/Amitai_Irron>                  |
+| <:authors/Roni_Rosner>                   |
+| <:authors/Paulo_Tabuada>                 |
+| <:authors/Fabrizio_Maria_Maggi>          |
+| <:authors/Daniel_N._Osherson>            |
+| <:authors/Tommaso_Di_Noia>               |
+| <:authors/Ravi_Kumar_0001>               |
+| <:authors/Thomas_Hubauer>                |
+| <:authors/Andrea_Ferrara>                |
+| <:authors/Sandeep_K._Shukla>             |
+| <:authors/Guido_Vetere>                  |
+| <:authors/Serge_Abiteboul>               |
+| <:authors/Surajit_Chaudhuri>             |
+| <:authors/Elad_Elster>                   |
+| <:authors/Benjamin_Aminof>               |
+| <:authors/Domenico_Beneventano>          |
+| <:authors/Benny_Kimelfeld>               |
+| <:authors/Ario_Santoso>                  |
+| <:authors/Henry_A._Kautz>                |
+| <:authors/Frank_Wolter>                  |
+| <:authors/Orna_Kupferman>                |
+| <:authors/Evren_Sirin>                   |
+| <:authors/Kousha_Etessami>               |
+| <:authors/T._Nordtveit>                  |
+| <:authors/Kathryn_S._McKinley>           |
+| <:authors/Paola_Inverardi>               |
+| <:authors/Jianwen_Su>                    |
+| <:authors/Fatih_Turkmen>                 |
+| <:authors/Herald_Kllapi>                 |
+| <:authors/Davide_Martinenghi>            |
+| <:authors/Benjamin_J._McMahan>           |
+| <:authors/Frank_Neven>                   |
+| <:authors/Kathi_Fisler>                  |
+| <:authors/David_Harel>                   |
+| <:authors/Sarah_Komla-Ebri>              |
+| <:authors/Filip_Murlak>                  |
+| <:authors/Panos_Vassiliadis>             |
+| <:authors/Zijiang_Yang>                  |
+| <:authors/Elem_Güzel_Kalayci>            |
+| <:authors/Alberto_O._Mendelzon>          |
+| <:authors/William_Aspray>                |
+| <:authors/Albin_Ahmeti>                  |
+| <:authors/Massimo_Narizzano>             |
+| <:authors/Leopoldo_E._Bertossi>          |
+| <:authors/Douglas_Burdick>               |
+| <:authors/Montserrat_Estañol>            |
+| <:authors/Nicola_Guarino>                |
+| <:authors/Daniel_Leivant>                |
+| <:authors/Maxim_Haddad>                  |
+| <:authors/A-Youn_Park>                   |
+| <:authors/Daniela_Berardi>               |
+| <:authors/Boris_Ginsburg>                |
+| <:authors/Calisto_Zuzarte>               |
+| <:authors/Hana_Chockler>                 |
+| <:authors/Francesca_Cesarini>            |
+| <:authors/Madhukar_N._Thakur>            |
+| <:authors/Johan_W._Klüwer>               |
+| <:authors/Laurent_Doyen_0001>            |
+| <:authors/Krishnendu_Chatterjee>         |
+| <:authors/Florian_Daniel>                |
+| <:authors/Giovanni_Lanfranchi>           |
+| <:authors/Silvio_Salza>                  |
+| <:authors/Stefano_Trisolini>             |
+| <:authors/Giuseppe_De_Giacomo>           |
+| <:authors/Thomas_Eiter>                  |
+| <:authors/Luigi_Palopoli>                |
+| <:authors/Ke_Yi>                         |
+| <:authors/Vadim_Savenkov>                |
+| <:authors/Alexey_Gotsman>                |
+--------------------------------------------
+
+2017-05-12 16:24:44 WARN  [main] (MorphMongoQueryProcessor.scala:146) - Time for late SPARQL query evaluation = 257ms.
+2017-05-12 16:24:44 INFO  [main] (MorphBaseRunner.scala:104) - Query response output file: /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/result.txt
+2017-05-12 16:24:44 WARN  [main] (MorphBaseRunner.scala:111) - Overall SPARQL query processing time = 2373ms.
+2017-05-12 16:24:44 WARN  [main] (MorphBaseRunner.scala:112) - **********************DONE****************************
+2017-05-12 16:24:44 INFO  [main] (MorphRunner.scala:74) - Query result:
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="x"/>
+  </head>
+  <results>
+    <result>
+      <binding name="x">
+        <uri>:authors/Kun_Qian</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alon_Flaisher</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Enrico_Giunchiglia</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alifah_Syamsiyah</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yonit_Kesten</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Karin_Greimel</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Irene_Teinemaa</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Guido_Sciavicco</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Roni_Wiener</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jianwen_Li</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Le_Gruenwald</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Luca_Aceto</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marco_Pistore</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Harry_G._Mairson</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Domenico_Ursino</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Pietro_Della_Peruta</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/David_Toman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marta_Kwiatkowska</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Pietro_Babighian</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Georges_Gonthier</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Swastik_Kopparty</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Massimo_Mecella</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Tomer_Kanza</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ülari_Laurson</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Richard_L._Halpert</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Youssef_Hamadi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Barukh_Ziv</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Matthew_Horridge</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Daniele_Braga</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Thomas_Lukasiewicz</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Camilo_Thorne</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Thomas_Raffill</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Axel_Legay</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Scott_Huddleston</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sheila_A._Greibach</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Enrico_Franconi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Paolo_Traverso</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Neil_Immerman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Cristina_Baroglio</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Gio_Wiederhold</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Elio_Damaggio</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Roman_Kontchakov</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marc_H._Graham</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/A._Prasad_Sistla</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ehud_Friedgut</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/David_L._Martin_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Matteo_Baldoni</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Fabio_Mogavero</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dirk_Van_Gucht</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Bruno_Zanuttini</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Limor_Fix</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jonathan_Shalev</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ahmed_Bouajjani</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dmitriy_Zheleznyakov</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Stavros_S._Cosmadakis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Paolo_Merialdo</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Magdalena_Ortiz</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Arnaud_Durand_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michal_Armoni</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Eli_Singerman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Fabio_Somenzi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Claudio_Masolo</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ralf_Möller</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Paolo_Felli</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yakir_Vizel</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Patrick_Porter</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alin_Deutsch</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Larry_J._Stockmeyer</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Rod_Downey</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Demetrios_D._Demopoulos</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Bernardo_Magnini</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marc_Herbstritt</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jeffrey_M._Dudek</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/P._S._Thiagarajan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Elena_Botoeva</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Morteza_Lahijanian</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Emanuel_Sallinger</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Bruno_Crispo</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Daniel_J._Rosenkrantz</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Gaëlle_Fontaine</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Reinhard_Pichler</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Laura_Chiticariu</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Thom_W._Frühwirth</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Philip_A._Bernstein</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Antonio_Perrone</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Carsten_Lutz</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dan_Suciu</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Florian_Zuleger</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Paris_C._Kanellakis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Özgür_L._Özçep</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jasmin_Fisher</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Antonio_Di_Stasio</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Julia_Stoyanovich</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Maria_Amalfi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Wil_M._P._van_der_Aalst</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Peter_Haase_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Costas_Courcoubetis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Helmut_Veith</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Hadas_Kress-Gazit</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mahesh_Viswanathan_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Anmol_V._Singh</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/M._Toiati</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Parikshit_Gopalan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Rüdiger_Ehlers</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Roy_Armoni</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mantas_Simkus</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Kristin_Y._Rozier</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Eran_Talmor</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Barbara_Jobstmann</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Randal_E._Bryant</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Luciano_Baresi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mihalis_Yannakakis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Olivier_Serre</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Christian_Neuenstadt</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ayca_Balkan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Kurt_Mehlhorn</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Stefano_Tonetta</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Tomer_Kotek</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/H._V._Jagadish</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jane_Cleland-Huang</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sasha_Rubin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Kenneth_A._Ross</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Cristian_Coarfa</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Doron_A._Peled</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/S._Rodger</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Claire_David</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Stavros_Tripakis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dmitry_Tsarkov</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michele_Melchiori</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Rui_Zhang</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alisa_Kovtunova</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Elem_Guzel_Kalayci</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Miguel_Romero_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ronald_Fagin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sampath_Kannan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Amit_Bhatia</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Martin_Otto_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Aniello_Murano</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alex_S._Taylor</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ralf_Molitor</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Lucian_Popa</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Giorgio_Delzanno</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Heribert_Vollmer</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Rajeev_Alur</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Nicole_Schweikardt</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yueling_Zhang</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mariano_Rodriguez</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dmitry_Solomakhin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Lyle_Brenner</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Oscar_Romero_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andreas_Tiemeyer</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/L._Pichetti</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jouko_A._Väänänen</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Evgeny_Sherkhonov</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Wolfgang_Fischl</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Riccardo_Rosati</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sam_Bourton</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sergio_Greco</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Keliang_He</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Doron_Bustan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Domenico_Saccà</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alberto_Abelló</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/D._Sivakumar</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Francesco_Guerra_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marco_Cadoli</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Randy_Batsell</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marcelo_Arenas</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yinbo_Yao</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ken_Kennedy</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yael_Zbar</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dag_Hovland</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Pietro_Liuzzo</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Lauri_Hella</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Giuseppe_Perelli</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Avner_Landver</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/David_Benque</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Robert_P._Kurshan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Piero_A._Bonatti</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Benjamin_Cogrel</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mark_Guzdial</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marcelo_Glusman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Tova_Milo</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Elisabetta_Grazzini</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Matthias_Jarke</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Daniel_J._Fremont</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andrey_Rybalchenko</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jin_Yang</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mary_F._Fernández</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Davide_Lanti</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Shqiponja_Ahmetaj</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Swarat_Chaudhuri</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Renée_J._Miller</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Carlo_Strapparava</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michael_Meier</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Parke_Godfrey</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sergey_Egorov</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jan_Chomicki</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Leonid_Libkin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Arild_Waaler</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sumit_Nain</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Gerd_G._Hillebrand</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Meghyn_Bienvenu</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Milenko_Mosurovic</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dietrich_Kuske</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alessandro_Provetti</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Laurent_Juban</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Enela_Pema</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Erik_Vee</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mikhail_Soutchanski</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Fausto_Giunchiglia</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yoram_Moses</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Wolfgang_Thomas</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Víctor_Dalmau</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Elitza_N._Maneva</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/C._Maria_Keet</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andrzej_Tarlecki</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Anuj_Dawar</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jean_Paul_Ballerini</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mattia_Palmieri</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Simona_Colucci</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Delbert_D._Bailey</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Zurab_Khasidashvili</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Kuldeep_S._Meel</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sriram_Sankaranarayanan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Clare_Dixon</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jasmine_Novak</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Shufang_Zhu</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Timea_Bagosi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Giorgio_Terracina</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Lijun_Zhang_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Rakesh_Mistry</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Riccardo_Torlone</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michele_Stawowy</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jakob_Rehof</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marlon_Dumas</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jeffrey_D._Ullman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Raffaella_Bernardi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Angelo_Montanari</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alexander_Ivrii</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Axel_Polleres</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alfonso_San_Miguel_Aguirre</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Guoqiang_Pan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michael_Schmidt_0002</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Domenico_Fabio_Savo</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Anna_Formica</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andrey_Rivkin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Elena_Cardillo</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Rob_Gerth</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marco_Montali</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alan_Nash</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Zvi_Terem</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andrea_Acciarri</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Paolo_Naggar</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Fabio_Patrizi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Albert_Atserias</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andrea_Calì</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Stefano_Spaccapietra</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Thomas_Schwentick</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Anna_Queralt</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Kim_B._Bruce</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Erich_Grädel</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/David_Maier</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alessandro_Artale</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Walied_Othman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Gila_Kamhi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dejan_Nickovic</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yih-Kuen_Tsay</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sonia_Bergamaschi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yannis_Vassiliou</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Martin_Grohe</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Roderick_Bloem</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/R._Verma</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Luigi_Dragone</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Wim_Martens</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michele_Missikoff</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Robert_Harper</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jan_Van_den_Bussche</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Christine_Parent</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ranan_Fraer</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Avi_Wigderson</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Francesca_Bonin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Cristopher_Moore</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Maurizio_Lenzerini</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Joseph_Y._Halpern</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Silvana_Castano</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Samin_Ishtiaq</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Eric_Koskinen</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Claudio_Eccher</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Edward_L._Wimmers</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Domenico_Lembo</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Juan_L._Reutter</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Guohui_Xiao</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ming-Hsien_Tsai</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Joost-Pieter_Katoen</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/M._Tamer_Özsu</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Diego_Calvanese</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Caitlin_Cockerton</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Erion_Plaku</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Georg_Gottlob</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jim_Gray</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marco_Daniele</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Stéphane_Lafortune</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Lucas_M._Tabajara</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mindaugas_Slusnys</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Foto_N._Afrati</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Matthew_R._Maly</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jifeng_He</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Avi_Puder</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Spyros_Ligoudistianos</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Davide_Bresolin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ron_van_der_Meyden</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Letizia_Tanca</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Lina_Lubyte</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ronald_H._Hardin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Antonella_Poggi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Valerie_King</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Gabriel_M._Kuper</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Thomas_Wilke</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Filippo_Cacace</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Giuseppe_Santucci</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ernesto_Jiménez-Ruiz</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ehud_Y._Shapiro</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Francesco_M._Donini</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alexander_Novakovsky</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Armando_Tacchella</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Lefteris_M._Kirousis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sankar_Gurumurthy</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Amir_Pnueli</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sanjit_A._Seshia</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Haim_Gaifman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Miki_Hermann</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Doron_Keren</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Bogdan_Alexe</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Maurizio_Vincini</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dmitry_Korchemny</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Wang_Chiew_Tan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dror_Fried</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michael_Zakharyaschev</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Reinhard_Wilhelm</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Tamarah_Arons</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alessandro_Campi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mauricio_A._Hernández</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Claudio_Sartori_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sela_Mador-Haim</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Herman_Lam</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alex_Thomo</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Thorsten_Liebig</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Guillem_Rull</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alessandro_Mosca</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Corey_Fisher</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Markus_Lohrey</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Giorgio_Stefanoni</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Werner_Nutt</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Evgeny_Kharlamov</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Gabriel_Istrate</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yannis_E._Ioannidis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Geguang_Pu</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Carlo_A._Furia</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Fabio_Vernacotola</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/P._Madhusudan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Francesca_Spezzano</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Christos_H._Papadimitriou</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Eyal_Yardeni</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Balder_ten_Cate</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michael_Stonebraker</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ognjen_Savkovic</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yehoshua_Sagiv</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Valerio_Santarelli</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Thomas_A._Henzinger</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Nadia_Creignou</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marco_Ruzzi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Olaf_Noppens</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Orna_Grumberg</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Vladislav_Ryzhikov</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Deian_Tabakov</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michael_Wessel</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ashok_K._Chandra</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/George_Katsirelos</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yazmin_Angélica_Ibáñez-García</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Riccardo_De_Masellis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yael_Abarbanel</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/John_Geanakoplos</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ian_Barland</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ismail_Ilkan_Ceylan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Roberto_Sebastiani</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ian_Horrocks</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michael_Fisher</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Thomas_Ball</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Lydia_E._Kavraki</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Manolis_Koubarakis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/G._Marrella</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Roberto_Micalizio</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Kerkko_Luosto</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michael_A._Harrison</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Daniele_Nardi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Mikhail_Roshchin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Fady_Copty</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alessandro_Solimando</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andrei_A._Krokhin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Lucas_Bordeaux</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Yoad_Lustig</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sharad_Malik</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michael_J._Franklin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alexander_Borgida</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Pierre_Wolper</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Shaull_Almagor</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Nina_Narodytska</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Pablo_Barceló</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Raghu_Ramakrishnan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Seong-Whan_Lee</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Tamir_Heyman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Nir_Piterman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Tomás_Feder</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Babak_Bagheri_Hariri</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Steffen_Lamparter</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andrew_Tomkins</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Luca_Pazzi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Eyke_Hüllermeier</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Angelos_Vasilakopoulos</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sean_Bechhofer</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ernest_Teniente</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sven_Hartmann</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jonathan_Panttaja</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Marko_Luther</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Giovanni_Soda</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Joan_Feigenbaum</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Lenore_D._Zuck</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ellis_Horowitz</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Umeshwar_Dayal</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/José_Remesal</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Orna_Bernholtz</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Joseph_Sifakis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Spyros_Tsavachidis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Stefano_Ceri</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Martin_Giese</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ahmet_Soylu</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Toni_Mancini</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Byron_Cook</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Devika_Subramanian</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Dana_Fisman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/A._Frank_Mayadas</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Michael_Mishaeli</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Federica_Mandreoli</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Samson_Abramsky</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Josef_Hardi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ariel_Fuxman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Victor_Vianu</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Gösta_Grahne</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andrei_A._Bulatov</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sonali_Dutta</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Catriel_Beeri</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andreas_Podelski</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Domenico_Carbotta</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Supratik_Chakraborty</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Tiziana_Catarci</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Seth_Fogarty</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Amitai_Irron</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Roni_Rosner</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Paulo_Tabuada</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Fabrizio_Maria_Maggi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Daniel_N._Osherson</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Tommaso_Di_Noia</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ravi_Kumar_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Thomas_Hubauer</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Andrea_Ferrara</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sandeep_K._Shukla</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Guido_Vetere</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Serge_Abiteboul</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Surajit_Chaudhuri</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Elad_Elster</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Benjamin_Aminof</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Domenico_Beneventano</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Benny_Kimelfeld</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ario_Santoso</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Henry_A._Kautz</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Frank_Wolter</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Orna_Kupferman</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Evren_Sirin</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Kousha_Etessami</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/T._Nordtveit</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Kathryn_S._McKinley</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Paola_Inverardi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Jianwen_Su</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Fatih_Turkmen</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Herald_Kllapi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Davide_Martinenghi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Benjamin_J._McMahan</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Frank_Neven</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Kathi_Fisler</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/David_Harel</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Sarah_Komla-Ebri</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Filip_Murlak</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Panos_Vassiliadis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Zijiang_Yang</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Elem_Güzel_Kalayci</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alberto_O._Mendelzon</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/William_Aspray</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Albin_Ahmeti</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Massimo_Narizzano</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Leopoldo_E._Bertossi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Douglas_Burdick</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Montserrat_Estañol</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Nicola_Guarino</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Daniel_Leivant</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Maxim_Haddad</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/A-Youn_Park</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Daniela_Berardi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Boris_Ginsburg</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Calisto_Zuzarte</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Hana_Chockler</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Francesca_Cesarini</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Madhukar_N._Thakur</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Johan_W._Klüwer</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Laurent_Doyen_0001</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Krishnendu_Chatterjee</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Florian_Daniel</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Giovanni_Lanfranchi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Silvio_Salza</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Stefano_Trisolini</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Giuseppe_De_Giacomo</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Thomas_Eiter</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Luigi_Palopoli</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Ke_Yi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Vadim_Savenkov</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alexey_Gotsman</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+2017-05-12 16:24:44 INFO  [main] (MorphRunner.scala:79) - Treatment completed, exiting.

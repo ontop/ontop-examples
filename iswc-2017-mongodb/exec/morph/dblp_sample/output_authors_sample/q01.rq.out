@@ -1,0 +1,114 @@
+To override log4j configuration add JVM option: -Dlog4j.configuration=file:/home/.../your_log4j.properties
+Loading log4j configuration: jar:file:/Users/xiao/src/morph-xr2rml/morph-xr2rml-dist/target/morph-xr2rml-dist-1.0-SNAPSHOT-jar-with-dependencies.jar!/xr2rml-log4j.properties
+2017-05-12 23:30:05 INFO  [main] (MorphRunner.scala:57) - properties Directory = /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph
+2017-05-12 23:30:05 INFO  [main] (MorphRunner.scala:58) - properties File      = output/q01.rq.properties
+Reading configuration file : /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/output/q01.rq.properties
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:118) - Server active = false
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:121) - Server port number = 8080
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:124) - Output file = result.txt
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:144) - Output RDF syntax = TURTLE
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:153) - Output SPARQL result syntax = TURTLE
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:156) - Display result on std output = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:159) - Jena mode = memory
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:162) - SPARQL Query Optimization = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:165) - Optimization - Self join elimination = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:168) - Optimization - Self union elimination = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:171) - Optimization - Propagate conditions from a joined query = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:174) - Optimization - Reorder STG = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:177) - Optimization - Subquery elimination = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:180) - Optimization - Trans join subquery elimination = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:183) - Optimization - Trans stg subquery elimination = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:186) - Optimization - Subquery as view = false
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:189) - Cache the result of student.queries for join evaluation (non Relational DBs) = false
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:196) - RunnerFactory = fr.unice.i3s.morph.xr2rml.mongo.engine.MorphMongoRunnerFactory
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:199) - Remove Strange Chars From Literal Column = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:202) - URL-encode reserved chars IRI tempalte string = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:205) - URL-encode reserved chars in database values = true
+2017-05-12 23:30:05 INFO  [main] (MorphProperties.scala:208) - String transformation = None
+2017-05-12 23:30:06 INFO  [main] (R2RMLMappingDocument.scala:225) - Parsing mapping document /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/dblp-mapping-authors.ttl
+2017-05-12 23:30:07 INFO  [main] (MorphBaseRunner.scala:59) - ****************************************************************************************************************
+2017-05-12 23:30:07 INFO  [main] (MorphBaseRunner.scala:60) - Running query translation. Content-type: null
+2017-05-12 23:30:07 INFO  [main] (SparqlUtility.scala:224) - Request Accept: null. Negotiated: (application/sparql-results+xml,XML)
+2017-05-12 23:30:07 INFO  [main] (SparqlQueryRewriter.scala:97) - SPARQL graph pattern:
+(distinct
+  (project (?x)
+    (bgp (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/Author>))))
+
+2017-05-12 23:30:07 INFO  [main] (MorphMongoQueryTranslator.scala:84) - Triple pattern bindings computation time = 8ms.
+2017-05-12 23:30:07 INFO  [main] (MorphMongoQueryTranslator.scala:85) - Triple pattern bindings:
+   Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+2017-05-12 23:30:07 WARN  [main] (MorphMongoQueryTranslator.scala:219) - SPARQL DISTINCT ignored in query translation.
+2017-05-12 23:30:07 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 23:30:07 INFO  [main] (MorphBaseQueryTranslator.scala:107) - Query translation time (including bindings) = 162ms.
+2017-05-12 23:30:07 INFO  [main] (MorphBaseRunner.scala:90) - SPARQL Query = 
+PREFIX  :     <http://dblp.l3s.de/d2r/>
+
+SELECT DISTINCT  ?x
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :Author}
+
+2017-05-12 23:30:07 INFO  [main] (MorphBaseRunner.scala:91) - ------------------ Abstract Query ------------------ = 
+{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x)
+  where  : Set(NotNull(_id)) }
+2017-05-12 23:30:07 INFO  [main] (MorphBaseRunner.scala:92) - ------------------ Concrete Query ------------------ = 
+{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+ MongoDBQuery[Collection: authors. Query: {}. Projection: {}] }
+2017-05-12 23:30:07 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {}. Projection: {}] with limit None
+2017-05-12 23:30:07 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 5 result(s), 5 result(s) after applying the iterator, in: 398 ms.
+2017-05-12 23:30:07 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 5 RDF triples for binding
+ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+2017-05-12 23:30:07 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 5 RDF triples for all binding in 40 ms.
+2017-05-12 23:30:07 WARN  [main] (MorphMongoDataTranslator.scala:229) - Duration of query execution and generation of triples = 441 ms.
+2017-05-12 23:30:08 INFO  [main] (MorphMongoQueryProcessor.scala:139) - Result set contains 5 triples.
+2017-05-12 23:30:08 INFO  [main] (MorphMongoQueryProcessor.scala:140) - Tabular result set:
+----------------------------------
+| x                              |
+==================================
+| <:authors/Phokion_G._Kolaitis> |
+| <:authors/Moshe_Y._Vardi>      |
+| <:authors/Diego_Calvanese>     |
+| <:authors/Alessandro_Artale>   |
+| <:authors/A-Youn_Park>         |
+----------------------------------
+
+2017-05-12 23:30:08 WARN  [main] (MorphMongoQueryProcessor.scala:146) - Time for late SPARQL query evaluation = 218ms.
+2017-05-12 23:30:08 INFO  [main] (MorphBaseRunner.scala:104) - Query response output file: /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/result.txt
+2017-05-12 23:30:08 WARN  [main] (MorphBaseRunner.scala:111) - Overall SPARQL query processing time = 838ms.
+2017-05-12 23:30:08 WARN  [main] (MorphBaseRunner.scala:112) - **********************DONE****************************
+2017-05-12 23:30:08 INFO  [main] (MorphRunner.scala:74) - Query result:
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="x"/>
+  </head>
+  <results>
+    <result>
+      <binding name="x">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Diego_Calvanese</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Alessandro_Artale</uri>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/A-Youn_Park</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+2017-05-12 23:30:08 INFO  [main] (MorphRunner.scala:79) - Treatment completed, exiting.

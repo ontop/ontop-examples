@@ -143,7 +143,7 @@ case "$system" in
 	drill)
 		# check for non translated (because unsupported) queries
 		queryString=`cat $1`
-		if [ $(hasSubString "$queryString" "we do not support") ]
+		if [ $(hasSubString "$queryString" "UNSUPPORTED") ]
 		then
 			echo "-3"
 		# toDo: debug these queries
@@ -204,10 +204,10 @@ esac
 
 executeQueries(){
 	declare -A map
-
+	
 	for file in $queriesDir/*
 	do
-		map[$(basename $file)]=0; 
+		map[$(basename $file)]=0
 	done
 
 	for i in $(seq 1 $numberOfRuns)
@@ -216,8 +216,14 @@ executeQueries(){
 		for file in $queriesDir/*
 		do	
 			bsn=$(basename $file)
-			echo "Executing query $bsn ..."
-			res=$(executeQuery $file)
+			#Do not evaluate again a query which has timedout twice
+			cumTimeOut=$(( ($i-1) * -2 ))
+			if [ $i -gt 2 ] && [ $cumTimeOut -eq ${map[$bsn]} ];then
+				res=-2;
+			else
+				echo "Executing query $bsn ..."
+				res=$(executeQuery $file)
+			fi	
 			echo $res
 			map[$bsn]=$((${map[$bsn]}+$res))
 		done

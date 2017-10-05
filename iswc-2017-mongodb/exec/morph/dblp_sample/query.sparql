@@ -1,0 +1,37 @@
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema>
+prefix : <http://dblp.l3s.de/d2r/>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix swrc: <http://swrc.ontoware.org/ontology#>
+prefix dcterms: <http://purl.org/dc/terms/>
+prefix dc: <http://purl.org/dc/elements/1.1/>
+
+
+SELECT *
+WHERE {
+    #?a a :Author .
+    #?a a foaf:Agent .
+    ?a foaf:name ?name .
+    ?a foaf:homepage ?ah.
+
+    ?j dc:creator ?a.
+
+    ?j a swrc:Journal .
+    #?j a :JournalArticle .
+    #?j a :ConferencePaper .
+    #?j a swrc:Collection .
+    #?j a :BookChapter .
+
+    #?j a :Publication .
+    #?j dc:creator ?a.
+    ?j dc:title ?t.
+    #?j dcterms:issued ?i.
+    #?j :appearsIn ?in.
+    ?j swrc:pages ?p.
+    ?j foaf:homepage ?h.
+    #?x :hasCoauthor ?y.
+    #?j dcterms:partOf ?b.
+    #?b a :Proceedings .
+    #?b dc:title ?title .
+}
+#LIMIT 100

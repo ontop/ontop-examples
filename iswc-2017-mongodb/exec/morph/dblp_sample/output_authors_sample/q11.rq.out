@@ -1,0 +1,1356 @@
+To override log4j configuration add JVM option: -Dlog4j.configuration=file:/home/.../your_log4j.properties
+Loading log4j configuration: jar:file:/Users/xiao/src/morph-xr2rml/morph-xr2rml-dist/target/morph-xr2rml-dist-1.0-SNAPSHOT-jar-with-dependencies.jar!/xr2rml-log4j.properties
+2017-05-12 23:30:46 INFO  [main] (MorphRunner.scala:57) - properties Directory = /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph
+2017-05-12 23:30:46 INFO  [main] (MorphRunner.scala:58) - properties File      = output/q11.rq.properties
+Reading configuration file : /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/output/q11.rq.properties
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:118) - Server active = false
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:121) - Server port number = 8080
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:124) - Output file = result.txt
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:144) - Output RDF syntax = TURTLE
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:153) - Output SPARQL result syntax = TURTLE
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:156) - Display result on std output = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:159) - Jena mode = memory
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:162) - SPARQL Query Optimization = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:165) - Optimization - Self join elimination = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:168) - Optimization - Self union elimination = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:171) - Optimization - Propagate conditions from a joined query = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:174) - Optimization - Reorder STG = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:177) - Optimization - Subquery elimination = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:180) - Optimization - Trans join subquery elimination = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:183) - Optimization - Trans stg subquery elimination = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:186) - Optimization - Subquery as view = false
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:189) - Cache the result of student.queries for join evaluation (non Relational DBs) = false
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:196) - RunnerFactory = fr.unice.i3s.morph.xr2rml.mongo.engine.MorphMongoRunnerFactory
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:199) - Remove Strange Chars From Literal Column = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:202) - URL-encode reserved chars IRI tempalte string = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:205) - URL-encode reserved chars in database values = true
+2017-05-12 23:30:47 INFO  [main] (MorphProperties.scala:208) - String transformation = None
+2017-05-12 23:30:47 INFO  [main] (R2RMLMappingDocument.scala:225) - Parsing mapping document /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/dblp-mapping-authors.ttl
+2017-05-12 23:30:48 INFO  [main] (MorphBaseRunner.scala:59) - ****************************************************************************************************************
+2017-05-12 23:30:48 INFO  [main] (MorphBaseRunner.scala:60) - Running query translation. Content-type: null
+2017-05-12 23:30:48 INFO  [main] (SparqlUtility.scala:224) - Request Accept: null. Negotiated: (application/sparql-results+xml,XML)
+2017-05-12 23:30:48 INFO  [main] (SparqlQueryRewriter.scala:97) - SPARQL graph pattern:
+(distinct
+  (project (?x ?y ?title ?year ?venue)
+    (join
+      (bgp
+        (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/Author>)
+        (triple ?x <http://xmlns.com/foaf/0.1/name> "Moshe Y. Vardi")
+        (triple ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/Author>)
+        (triple ?y <http://xmlns.com/foaf/0.1/name> "Phokion G. Kolaitis")
+        (triple ?publ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/Publication>)
+        (triple ?publ <http://purl.org/dc/elements/1.1/creator> ?x)
+        (triple ?publ <http://purl.org/dc/elements/1.1/creator> ?y)
+        (triple ?publ <http://purl.org/dc/elements/1.1/title> ?title)
+        (triple ?publ <http://purl.org/dc/terms/issued> ?year)
+      )
+      (union
+        (bgp (triple ?publ <http://dblp.l3s.de/d2r/appearsIn> ?venue))
+        (bgp
+          (triple ?publ <http://purl.org/dc/terms/partOf> ?proceedings)
+          (triple ?proceedings <http://purl.org/dc/elements/1.1/title> ?venue)
+        )))))
+
+2017-05-12 23:30:49 INFO  [main] (MorphMongoQueryTranslator.scala:84) - Triple pattern bindings computation time = 207ms.
+2017-05-12 23:30:49 INFO  [main] (MorphMongoQueryTranslator.scala:85) - Triple pattern bindings:
+   Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> 
+      Conference_Publication,
+      Journal_Publication,
+      collection_Publication)
+   Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?publ @http://purl.org/dc/terms/issued ?year -> 
+      Conference_issued,
+      Journal_issued,
+      collection_issued)
+   Binding(?publ @dc:creator ?y -> 
+      Conference_creator,
+      Journal_creator,
+      collection_creator)
+   Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> 
+      collection_partOf,
+      inproceedings_partOf)
+   Binding(?publ @dc:creator ?x -> 
+      Conference_creator,
+      Journal_creator,
+      collection_creator)
+   Binding(?publ @dc:title ?title -> 
+      Conference_titler,
+      Journal_titler,
+      collection_titler)
+   Binding(?y @http://xmlns.com/foaf/0.1/name "Phokion G. Kolaitis" -> Author_name)
+   Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> 
+      Journal_appearsIn,
+      Conference_appearsIn,
+      collection_appearsIn)
+   Binding(?x @http://xmlns.com/foaf/0.1/name "Moshe Y. Vardi" -> Author_name)
+   Binding(?proceedings @dc:title ?venue -> 
+      Book_title,
+      Proceedings_title)
+2017-05-12 23:30:49 WARN  [main] (MorphMongoQueryTranslator.scala:219) - SPARQL DISTINCT ignored in query translation.
+2017-05-12 23:30:49 INFO  [main] (MorphMongoQueryTranslator.scala:113) - 
+-------------------------------------------------------------------------
+------------------ Abstract query BEFORE optimization: ------------------
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x)
+  where  : Set(NotNull(_id)) }
+] INNER JOIN [
+[{ Binding(?x @http://xmlns.com/foaf/0.1/name "Moshe Y. Vardi" -> Author_name)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x)
+  where  : Set(NotNull(_id), Equals($.name, Moshe Y. Vardi)) }
+] INNER JOIN [
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?y)
+  where  : Set(NotNull(_id)) }
+] INNER JOIN [
+[{ Binding(?y @http://xmlns.com/foaf/0.1/name "Phokion G. Kolaitis" -> Author_name)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?y)
+  where  : Set(NotNull(_id), Equals($.name, Phokion G. Kolaitis)) }
+] INNER JOIN [
+[[{ Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> Conference_Publication)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(publications.inproceedings[*].dblp_key AS ?publ)
+  where  : Set(NotNull(publications.inproceedings[*].dblp_key)) }
+] UNION [
+{ Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> Journal_Publication)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set($.publications.article[*].dblp_key AS ?publ)
+  where  : Set(NotNull($.publications.article[*].dblp_key)) }
+]
+] INNER JOIN [
+[[{ Binding(?publ @dc:creator ?x -> Conference_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(publications.inproceedings[*].dblp_key AS ?publ, _id AS ?x)
+  where  : Set(NotNull(publications.inproceedings[*].dblp_key), NotNull(_id)) }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(publications.article[*].dblp_key AS ?publ, _id AS ?x)
+  where  : Set(NotNull(publications.article[*].dblp_key), NotNull(_id)) }
+]
+] INNER JOIN [
+[[{ Binding(?publ @dc:creator ?y -> Conference_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(publications.inproceedings[*].dblp_key AS ?publ, _id AS ?y)
+  where  : Set(NotNull(publications.inproceedings[*].dblp_key), NotNull(_id)) }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(publications.article[*].dblp_key AS ?publ, _id AS ?y)
+  where  : Set(NotNull(publications.article[*].dblp_key), NotNull(_id)) }
+]
+] INNER JOIN [
+[[{ Binding(?publ @dc:title ?title -> Conference_titler)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.title)) }
+] UNION [
+{ Binding(?publ @dc:title ?title -> Journal_titler)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?publ, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.title)) }
+] UNION [
+{ Binding(?publ @dc:title ?title -> collection_titler)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.title)) }
+]
+] INNER JOIN [
+[[{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.year AS ?year)
+  where  : Set(NotNull(dblp_key), NotNull($.year)) }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?publ, $.year AS ?year)
+  where  : Set(NotNull(dblp_key), NotNull($.year)) }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.year AS ?year)
+  where  : Set(NotNull(dblp_key), NotNull($.year)) }
+]
+] INNER JOIN [
+[{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?publ, $.in AS ?venue)
+  where  : Set(NotNull(dblp_key), NotNull($.in)) }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.in AS ?venue)
+  where  : Set(NotNull(dblp_key), NotNull($.in)) }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.in AS ?venue)
+  where  : Set(NotNull(dblp_key), NotNull($.in)) }
+] UNION [
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.proceedings AS ?proceedings)
+  where  : Set(NotNull(dblp_key), NotNull($.proceedings)) }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.proceedings AS ?proceedings)
+  where  : Set(NotNull(dblp_key), NotNull($.proceedings)) }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set($.proceedings AS ?proceedings, $.booktitle AS ?venue)
+  where  : Set(NotNull($.proceedings), NotNull($.booktitle)) }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set($.proceedings AS ?proceedings, $.booktitle AS ?venue)
+  where  : Set(NotNull($.proceedings), NotNull($.booktitle)) }
+]
+] ON Set(?proceedings)
+]
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?y)
+] ON Set(?y)
+] ON Set(?x)
+] ON Set(?x)
+2017-05-12 23:30:49 INFO  [main] (MorphMongoQueryTranslator.scala:115) - 
+------------------ Abstract query AFTER optimization: -------------------
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name "Moshe Y. Vardi" -> Author_name)
+   Binding(?publ @dc:creator ?x -> 
+      Conference_creator,
+      Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x, publications.inproceedings[*].dblp_key AS ?publ, publications.article[*].dblp_key AS ?publ)
+  where  : Set(NotNull(_id), Equals($.name, Moshe Y. Vardi), Or(And(NotNull(publications.inproceedings[*].dblp_key), NotNull(_id)), And(NotNull(publications.article[*].dblp_key), NotNull(_id)))) }
+] INNER JOIN [
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?y @http://xmlns.com/foaf/0.1/name "Phokion G. Kolaitis" -> Author_name)
+   Binding(?publ @dc:creator ?y -> 
+      Conference_creator,
+      Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?y, publications.inproceedings[*].dblp_key AS ?publ, publications.article[*].dblp_key AS ?publ)
+  where  : Set(NotNull(_id), Equals($.name, Phokion G. Kolaitis), Or(And(NotNull(publications.inproceedings[*].dblp_key), NotNull(_id)), And(NotNull(publications.article[*].dblp_key), NotNull(_id)))) }
+] INNER JOIN [
+[{ Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> 
+      Conference_Publication,
+      Journal_Publication)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(publications.inproceedings[*].dblp_key AS ?publ, $.publications.article[*].dblp_key AS ?publ)
+  where  : Set(Or(NotNull(publications.inproceedings[*].dblp_key), NotNull($.publications.article[*].dblp_key))) }
+] INNER JOIN [
+[[{ Binding(?publ @dc:title ?title -> Conference_titler)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.title)) }
+] UNION [
+{ Binding(?publ @dc:title ?title -> Journal_titler)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?publ, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.title)) }
+] UNION [
+{ Binding(?publ @dc:title ?title -> collection_titler)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.title)) }
+]
+] INNER JOIN [
+[[{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.year AS ?year)
+  where  : Set(NotNull(dblp_key), NotNull($.year)) }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?publ, $.year AS ?year)
+  where  : Set(NotNull(dblp_key), NotNull($.year)) }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.year AS ?year)
+  where  : Set(NotNull(dblp_key), NotNull($.year)) }
+]
+] INNER JOIN [
+[{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?publ, $.in AS ?venue)
+  where  : Set(NotNull(dblp_key), NotNull($.in)) }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.in AS ?venue)
+  where  : Set(NotNull(dblp_key), NotNull($.in)) }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.in AS ?venue)
+  where  : Set(NotNull(dblp_key), NotNull($.in)) }
+] UNION [
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.proceedings AS ?proceedings)
+  where  : Set(NotNull(dblp_key), NotNull($.proceedings)) }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.proceedings AS ?proceedings)
+  where  : Set(NotNull(dblp_key), NotNull($.proceedings)) }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set($.proceedings AS ?proceedings, $.booktitle AS ?venue)
+  where  : Set(NotNull($.proceedings), NotNull($.booktitle)) }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set($.proceedings AS ?proceedings, $.booktitle AS ?venue)
+  where  : Set(NotNull($.proceedings), NotNull($.booktitle)) }
+]
+] ON Set(?proceedings)
+]
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+-------------------------------------------------------------------------
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [publications.inproceedings[*].dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [publications.article[*].dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (MongoQueryNode.scala:174) - Removing OR node due to NOT_SUPPORTED element: $or: [{UNSUPPORTED}, {UNSUPPORTED}]
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [publications.inproceedings[*].dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [publications.article[*].dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (MongoQueryNode.scala:174) - Removing OR node due to NOT_SUPPORTED element: $or: [{UNSUPPORTED}, {UNSUPPORTED}]
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [publications.inproceedings[*].dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (MongoQueryNode.scala:174) - Removing OR node due to NOT_SUPPORTED element: $or: [{UNSUPPORTED}, {'publications.article': {$elemMatch: {'dblp_key': {$exists: true, $ne: null}}}}]
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:49 INFO  [main] (MorphBaseQueryTranslator.scala:107) - Query translation time (including bindings) = 447ms.
+2017-05-12 23:30:49 INFO  [main] (MorphBaseRunner.scala:90) - SPARQL Query = 
+PREFIX  :     <http://dblp.l3s.de/d2r/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX  dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT DISTINCT  ?x ?y ?title ?year ?venue
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :Author .
+    ?x foaf:name "Moshe Y. Vardi" .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :Author .
+    ?y foaf:name "Phokion G. Kolaitis" .
+    ?publ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :Publication .
+    ?publ dc:creator ?x .
+    ?publ dc:creator ?y .
+    ?publ dc:title ?title .
+    ?publ dcterms:issued ?year
+    {   { ?publ :appearsIn ?venue}
+      UNION
+        { ?publ dcterms:partOf ?proceedings .
+          ?proceedings dc:title ?venue
+        }
+    }
+  }
+
+2017-05-12 23:30:49 INFO  [main] (MorphBaseRunner.scala:91) - ------------------ Abstract Query ------------------ = 
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name "Moshe Y. Vardi" -> Author_name)
+   Binding(?publ @dc:creator ?x -> 
+      Conference_creator,
+      Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x, publications.inproceedings[*].dblp_key AS ?publ, publications.article[*].dblp_key AS ?publ)
+  where  : Set(NotNull(_id), Equals($.name, Moshe Y. Vardi), Or(And(NotNull(publications.inproceedings[*].dblp_key), NotNull(_id)), And(NotNull(publications.article[*].dblp_key), NotNull(_id)))) }
+] INNER JOIN [
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?y @http://xmlns.com/foaf/0.1/name "Phokion G. Kolaitis" -> Author_name)
+   Binding(?publ @dc:creator ?y -> 
+      Conference_creator,
+      Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?y, publications.inproceedings[*].dblp_key AS ?publ, publications.article[*].dblp_key AS ?publ)
+  where  : Set(NotNull(_id), Equals($.name, Phokion G. Kolaitis), Or(And(NotNull(publications.inproceedings[*].dblp_key), NotNull(_id)), And(NotNull(publications.article[*].dblp_key), NotNull(_id)))) }
+] INNER JOIN [
+[{ Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> 
+      Conference_Publication,
+      Journal_Publication)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(publications.inproceedings[*].dblp_key AS ?publ, $.publications.article[*].dblp_key AS ?publ)
+  where  : Set(Or(NotNull(publications.inproceedings[*].dblp_key), NotNull($.publications.article[*].dblp_key))) }
+] INNER JOIN [
+[[{ Binding(?publ @dc:title ?title -> Conference_titler)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.title)) }
+] UNION [
+{ Binding(?publ @dc:title ?title -> Journal_titler)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?publ, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.title)) }
+] UNION [
+{ Binding(?publ @dc:title ?title -> collection_titler)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.title)) }
+]
+] INNER JOIN [
+[[{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.year AS ?year)
+  where  : Set(NotNull(dblp_key), NotNull($.year)) }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?publ, $.year AS ?year)
+  where  : Set(NotNull(dblp_key), NotNull($.year)) }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.year AS ?year)
+  where  : Set(NotNull(dblp_key), NotNull($.year)) }
+]
+] INNER JOIN [
+[{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?publ, $.in AS ?venue)
+  where  : Set(NotNull(dblp_key), NotNull($.in)) }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.in AS ?venue)
+  where  : Set(NotNull(dblp_key), NotNull($.in)) }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.in AS ?venue)
+  where  : Set(NotNull(dblp_key), NotNull($.in)) }
+] UNION [
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set(dblp_key AS ?publ, $.proceedings AS ?proceedings)
+  where  : Set(NotNull(dblp_key), NotNull($.proceedings)) }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set(dblp_key AS ?publ, $.proceedings AS ?proceedings)
+  where  : Set(NotNull(dblp_key), NotNull($.proceedings)) }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+  from   : db.authors.find({}), Iterator: Some($.publications.incollection.*)
+  project: Set($.proceedings AS ?proceedings, $.booktitle AS ?venue)
+  where  : Set(NotNull($.proceedings), NotNull($.booktitle)) }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+  from   : db.authors.find({}), Iterator: Some($.publications.inproceedings.*)
+  project: Set($.proceedings AS ?proceedings, $.booktitle AS ?venue)
+  where  : Set(NotNull($.proceedings), NotNull($.booktitle)) }
+]
+] ON Set(?proceedings)
+]
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+2017-05-12 23:30:49 INFO  [main] (MorphBaseRunner.scala:92) - ------------------ Concrete Query ------------------ = 
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name "Moshe Y. Vardi" -> Author_name)
+   Binding(?publ @dc:creator ?x -> 
+      Conference_creator,
+      Journal_creator)
+ MongoDBQuery[Collection: authors. Query: {'name': {$eq: 'Moshe Y. Vardi'}}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?y @http://xmlns.com/foaf/0.1/name "Phokion G. Kolaitis" -> Author_name)
+   Binding(?publ @dc:creator ?y -> 
+      Conference_creator,
+      Journal_creator)
+ MongoDBQuery[Collection: authors. Query: {'name': {$eq: 'Phokion G. Kolaitis'}}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> 
+      Conference_Publication,
+      Journal_Publication)
+ MongoDBQuery[Collection: authors. Query: {}. Projection: {}] }
+] INNER JOIN [
+[[{ Binding(?publ @dc:title ?title -> Conference_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> Journal_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> collection_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[[{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] ON Set(?proceedings)
+]
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name "Moshe Y. Vardi" -> Author_name)
+   Binding(?publ @dc:creator ?x -> 
+      Conference_creator,
+      Journal_creator)
+ MongoDBQuery[Collection: authors. Query: {'name': {$eq: 'Moshe Y. Vardi'}}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?y @http://xmlns.com/foaf/0.1/name "Phokion G. Kolaitis" -> Author_name)
+   Binding(?publ @dc:creator ?y -> 
+      Conference_creator,
+      Journal_creator)
+ MongoDBQuery[Collection: authors. Query: {'name': {$eq: 'Phokion G. Kolaitis'}}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> 
+      Conference_Publication,
+      Journal_Publication)
+ MongoDBQuery[Collection: authors. Query: {}. Projection: {}] }
+] INNER JOIN [
+[[{ Binding(?publ @dc:title ?title -> Conference_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> Journal_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> collection_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[[{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] ON Set(?proceedings)
+]
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+2017-05-12 23:30:49 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'name': {$eq: 'Moshe Y. Vardi'}}. Projection: {}] with limit None
+2017-05-12 23:30:49 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 1 result(s), 1 result(s) after applying the iterator, in: 288 ms.
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 1 RDF triples for binding
+ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 1 RDF triples for binding
+ Binding(?x @http://xmlns.com/foaf/0.1/name "Moshe Y. Vardi" -> Author_name)
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 331 RDF triples for binding
+ Binding(?publ @dc:creator ?x -> 
+      Conference_creator,
+      Journal_creator)
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 220 RDF triples for binding
+ Binding(?publ @dc:creator ?x -> 
+      Conference_creator,
+      Journal_creator)
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 553 RDF triples for all binding in 162 ms.
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?y @http://xmlns.com/foaf/0.1/name "Phokion G. Kolaitis" -> Author_name)
+   Binding(?publ @dc:creator ?y -> 
+      Conference_creator,
+      Journal_creator)
+ MongoDBQuery[Collection: authors. Query: {'name': {$eq: 'Phokion G. Kolaitis'}}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> 
+      Conference_Publication,
+      Journal_Publication)
+ MongoDBQuery[Collection: authors. Query: {}. Projection: {}] }
+] INNER JOIN [
+[[{ Binding(?publ @dc:title ?title -> Conference_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> Journal_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> collection_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[[{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] ON Set(?proceedings)
+]
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+2017-05-12 23:30:49 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'name': {$eq: 'Phokion G. Kolaitis'}}. Projection: {}] with limit None
+2017-05-12 23:30:49 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 1 result(s), 1 result(s) after applying the iterator, in: 35 ms.
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 1 RDF triples for binding
+ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 1 RDF triples for binding
+ Binding(?y @http://xmlns.com/foaf/0.1/name "Phokion G. Kolaitis" -> Author_name)
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 99 RDF triples for binding
+ Binding(?publ @dc:creator ?y -> 
+      Conference_creator,
+      Journal_creator)
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 66 RDF triples for binding
+ Binding(?publ @dc:creator ?y -> 
+      Conference_creator,
+      Journal_creator)
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 167 RDF triples for all binding in 25 ms.
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 23:30:49 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[{ Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> 
+      Conference_Publication,
+      Journal_Publication)
+ MongoDBQuery[Collection: authors. Query: {}. Projection: {}] }
+] INNER JOIN [
+[[{ Binding(?publ @dc:title ?title -> Conference_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> Journal_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> collection_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[[{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] ON Set(?proceedings)
+]
+] ON Set(?publ)
+] ON Set(?publ)
+] ON Set(?publ)
+2017-05-12 23:30:49 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {}. Projection: {}] with limit None
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 5 result(s), 5 result(s) after applying the iterator, in: 162 ms.
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 733 RDF triples for binding
+ Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> 
+      Conference_Publication,
+      Journal_Publication)
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 376 RDF triples for binding
+ Binding(?publ @rdf:type http://dblp.l3s.de/d2r/Publication -> 
+      Conference_Publication,
+      Journal_Publication)
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 1109 RDF triples for all binding in 126 ms.
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[[{ Binding(?publ @dc:title ?title -> Conference_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> Journal_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> collection_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[[{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] ON Set(?proceedings)
+]
+] ON Set(?publ)
+] ON Set(?publ)
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryUnion.scala:170) - ===============================================================================
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryUnion.scala:171) - Generating RDF triples from union query:
+[{ Binding(?publ @dc:title ?title -> Conference_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> Journal_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:title ?title -> collection_titler)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 5 result(s), 733 result(s) after applying the iterator, in: 90 ms.
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 733 RDF triples for binding
+ Binding(?publ @dc:title ?title -> Conference_titler)
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 733 RDF triples for all binding in 274 ms.
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 4 result(s), 376 result(s) after applying the iterator, in: 68 ms.
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 376 RDF triples for binding
+ Binding(?publ @dc:title ?title -> Journal_titler)
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 376 RDF triples for all binding in 91 ms.
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'title': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 4 result(s), 11 result(s) after applying the iterator, in: 55 ms.
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 11 RDF triples for binding
+ Binding(?publ @dc:title ?title -> collection_titler)
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 11 RDF triples for all binding in 4 ms.
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryUnion.scala:195) - Union computed 1120 triples, in 590 ms.
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[[{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] ON Set(?proceedings)
+]
+] ON Set(?publ)
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryUnion.scala:170) - ===============================================================================
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryUnion.scala:171) - Generating RDF triples from union query:
+[{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 5 result(s), 733 result(s) after applying the iterator, in: 53 ms.
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 733 RDF triples for binding
+ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Conference_issued)
+2017-05-12 23:30:50 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 733 RDF triples for all binding in 122 ms.
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:50 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 4 result(s), 376 result(s) after applying the iterator, in: 44 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 376 RDF triples for binding
+ Binding(?publ @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 376 RDF triples for all binding in 65 ms.
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'year': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 4 result(s), 11 result(s) after applying the iterator, in: 39 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 11 RDF triples for binding
+ Binding(?publ @http://purl.org/dc/terms/issued ?year -> collection_issued)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 11 RDF triples for all binding in 3 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryUnion.scala:195) - Union computed 1120 triples, in 329 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryUnion.scala:170) - ===============================================================================
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryUnion.scala:171) - Generating RDF triples from union query:
+[{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] ON Set(?proceedings)
+]
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 4 result(s), 376 result(s) after applying the iterator, in: 46 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 376 RDF triples for binding
+ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Journal_appearsIn)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 376 RDF triples for all binding in 74 ms.
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 2 result(s), 573 result(s) after applying the iterator, in: 34 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 3 RDF triples for binding
+ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> Conference_appearsIn)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 3 RDF triples for all binding in 118 ms.
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'in': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 0 result(s), 0 result(s) after applying the iterator, in: 2 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 0 RDF triples for binding
+ Binding(?publ @http://dblp.l3s.de/d2r/appearsIn ?venue -> collection_appearsIn)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 0 RDF triples for all binding in 0 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+] ON Set(?proceedings)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryUnion.scala:170) - ===============================================================================
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryUnion.scala:171) - Generating RDF triples from union query:
+[{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 4 result(s), 11 result(s) after applying the iterator, in: 40 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 11 RDF triples for binding
+ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> collection_partOf)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 11 RDF triples for all binding in 3 ms.
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 5 result(s), 733 result(s) after applying the iterator, in: 29 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 730 RDF triples for binding
+ Binding(?publ @http://purl.org/dc/terms/partOf ?proceedings -> inproceedings_partOf)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 730 RDF triples for all binding in 123 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryUnion.scala:195) - Union computed 741 triples, in 198 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryUnion.scala:170) - ===============================================================================
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryUnion.scala:171) - Generating RDF triples from union query:
+[{ Binding(?proceedings @dc:title ?venue -> Book_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+] UNION [
+{ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+ MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] }
+]
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.incollection': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 0 result(s), 0 result(s) after applying the iterator, in: 2 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 0 RDF triples for binding
+ Binding(?proceedings @dc:title ?venue -> Book_title)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 0 RDF triples for all binding in 0 ms.
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.inproceedings': {$elemMatch: {'proceedings': {$exists: true, $ne: null}, 'booktitle': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:51 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 5 result(s), 733 result(s) after applying the iterator, in: 38 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 668 RDF triples for binding
+ Binding(?proceedings @dc:title ?venue -> Proceedings_title)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 668 RDF triples for all binding in 146 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryUnion.scala:195) - Union computed 668 triples, in 187 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?proceedings)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 1085 triples + 0 triples with no shared variable, in 86 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryUnion.scala:195) - Union computed 1464 triples, in 751 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?publ)
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 1988 triples + 452 triples with no shared variable, in 65 ms.
+2017-05-12 23:30:51 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?publ)
+2017-05-12 23:30:52 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 2982 triples + 452 triples with no shared variable, in 106 ms.
+2017-05-12 23:30:52 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?publ)
+2017-05-12 23:30:52 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 3976 triples + 452 triples with no shared variable, in 148 ms.
+2017-05-12 23:30:52 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?publ)
+2017-05-12 23:30:52 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 780 triples + 454 triples with no shared variable, in 33 ms.
+2017-05-12 23:30:52 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?publ)
+2017-05-12 23:30:52 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 102 triples + 456 triples with no shared variable, in 25 ms.
+2017-05-12 23:30:52 WARN  [main] (MorphMongoDataTranslator.scala:229) - Duration of query execution and generation of triples = 2874 ms.
+2017-05-12 23:30:52 INFO  [main] (MorphMongoQueryProcessor.scala:139) - Result set contains 17 triples.
+2017-05-12 23:30:52 INFO  [main] (MorphMongoQueryProcessor.scala:140) - Tabular result set:
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| x                         | y                              | title                                                                     | year | venue                        |
+================================================================================================================================================================================
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "Infinitary Logics and 0-1 Laws"                                          | 1992 | "Inf. Comput."               |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "Constraint Propagation as a Proof System."                               | 2004 | "CP"                         |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "Fixpoint Logic vs. Infinitary Logic in Finite-Model Theory"              | 1992 | "LICS"                       |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "A Logical Approach to Constraint Satisfaction."                          | 2008 | "Complexity of Constraints"  |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "0-1 Laws for Infinitary Logics (Preliminary Report)"                     | 1990 | "LICS"                       |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "Infinitary Logic for Computer Science."                                  | 1992 | "ICALP"                      |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "0-1 Laws and Decision Problems for Fragments of Second-Order Logic"      | 1988 | "LICS"                       |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "0-1 Laws for Fragments of Existential Second-Order Logic: A Survey."     | 2000 | "MFCS"                       |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "Panel: logic in the computer science curriculum."                        | 1998 | "SIGCSE"                     |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "On the Expressive Power of Variable-Confined Logics."                    | 1996 | "LICS"                       |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "The Decision Problem for the Probabilities of Higher-Order Properties"   | 1987 | "STOC"                       |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "0-1 Laws and Decision Problems for Fragments of Second-Order Logic"      | 1990 | "Inf. Comput."               |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "Conjunctive-Query Containment and Constraint Satisfaction."              | 2000 | "J. Comput. Syst. Sci."      |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "On the Expressive Power of Datalog: Tools and a Case Study."             | 1995 | "J. Comput. Syst. Sci."      |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "On the unusual effectiveness of logic in computer science."              | 2001 | "Bulletin of Symbolic Logic" |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "Constraint Satisfaction, Bounded Treewidth, and Finite-Variable Logics." | 2002 | "CP"                         |
+| <:authors/Moshe_Y._Vardi> | <:authors/Phokion_G._Kolaitis> | "On the decision problem for two-variable first-order logic."             | 1997 | "Bulletin of Symbolic Logic" |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2017-05-12 23:30:52 WARN  [main] (MorphMongoQueryProcessor.scala:146) - Time for late SPARQL query evaluation = 157ms.
+2017-05-12 23:30:52 INFO  [main] (MorphBaseRunner.scala:104) - Query response output file: /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/result.txt
+2017-05-12 23:30:52 WARN  [main] (MorphBaseRunner.scala:111) - Overall SPARQL query processing time = 3493ms.
+2017-05-12 23:30:52 WARN  [main] (MorphBaseRunner.scala:112) - **********************DONE****************************
+2017-05-12 23:30:52 INFO  [main] (MorphRunner.scala:74) - Query result:
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="x"/>
+    <variable name="y"/>
+    <variable name="title"/>
+    <variable name="year"/>
+    <variable name="venue"/>
+  </head>
+  <results>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>Infinitary Logics and 0-1 Laws</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1992</literal>
+      </binding>
+      <binding name="venue">
+        <literal>Inf. Comput.</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>Constraint Propagation as a Proof System.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">2004</literal>
+      </binding>
+      <binding name="venue">
+        <literal>CP</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>Fixpoint Logic vs. Infinitary Logic in Finite-Model Theory</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1992</literal>
+      </binding>
+      <binding name="venue">
+        <literal>LICS</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>A Logical Approach to Constraint Satisfaction.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">2008</literal>
+      </binding>
+      <binding name="venue">
+        <literal>Complexity of Constraints</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>0-1 Laws for Infinitary Logics (Preliminary Report)</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1990</literal>
+      </binding>
+      <binding name="venue">
+        <literal>LICS</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>Infinitary Logic for Computer Science.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1992</literal>
+      </binding>
+      <binding name="venue">
+        <literal>ICALP</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>0-1 Laws and Decision Problems for Fragments of Second-Order Logic</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1988</literal>
+      </binding>
+      <binding name="venue">
+        <literal>LICS</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>0-1 Laws for Fragments of Existential Second-Order Logic: A Survey.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">2000</literal>
+      </binding>
+      <binding name="venue">
+        <literal>MFCS</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>Panel: logic in the computer science curriculum.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1998</literal>
+      </binding>
+      <binding name="venue">
+        <literal>SIGCSE</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>On the Expressive Power of Variable-Confined Logics.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1996</literal>
+      </binding>
+      <binding name="venue">
+        <literal>LICS</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>The Decision Problem for the Probabilities of Higher-Order Properties</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1987</literal>
+      </binding>
+      <binding name="venue">
+        <literal>STOC</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>0-1 Laws and Decision Problems for Fragments of Second-Order Logic</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1990</literal>
+      </binding>
+      <binding name="venue">
+        <literal>Inf. Comput.</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>Conjunctive-Query Containment and Constraint Satisfaction.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">2000</literal>
+      </binding>
+      <binding name="venue">
+        <literal>J. Comput. Syst. Sci.</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>On the Expressive Power of Datalog: Tools and a Case Study.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1995</literal>
+      </binding>
+      <binding name="venue">
+        <literal>J. Comput. Syst. Sci.</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>On the unusual effectiveness of logic in computer science.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">2001</literal>
+      </binding>
+      <binding name="venue">
+        <literal>Bulletin of Symbolic Logic</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>Constraint Satisfaction, Bounded Treewidth, and Finite-Variable Logics.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">2002</literal>
+      </binding>
+      <binding name="venue">
+        <literal>CP</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="x">
+        <uri>:authors/Moshe_Y._Vardi</uri>
+      </binding>
+      <binding name="y">
+        <uri>:authors/Phokion_G._Kolaitis</uri>
+      </binding>
+      <binding name="title">
+        <literal>On the decision problem for two-variable first-order logic.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1997</literal>
+      </binding>
+      <binding name="venue">
+        <literal>Bulletin of Symbolic Logic</literal>
+      </binding>
+    </result>
+  </results>
+</sparql>
+2017-05-12 23:30:52 INFO  [main] (MorphRunner.scala:79) - Treatment completed, exiting.

@@ -1,0 +1,309 @@
+To override log4j configuration add JVM option: -Dlog4j.configuration=file:/home/.../your_log4j.properties
+Loading log4j configuration: jar:file:/Users/xiao/src/morph-xr2rml/morph-xr2rml-dist/target/morph-xr2rml-dist-1.0-SNAPSHOT-jar-with-dependencies.jar!/xr2rml-log4j.properties
+2017-05-12 23:30:21 INFO  [main] (MorphRunner.scala:57) - properties Directory = /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph
+2017-05-12 23:30:21 INFO  [main] (MorphRunner.scala:58) - properties File      = output/q06.rq.properties
+Reading configuration file : /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/output/q06.rq.properties
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:118) - Server active = false
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:121) - Server port number = 8080
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:124) - Output file = result.txt
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:144) - Output RDF syntax = TURTLE
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:153) - Output SPARQL result syntax = TURTLE
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:156) - Display result on std output = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:159) - Jena mode = memory
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:162) - SPARQL Query Optimization = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:165) - Optimization - Self join elimination = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:168) - Optimization - Self union elimination = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:171) - Optimization - Propagate conditions from a joined query = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:174) - Optimization - Reorder STG = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:177) - Optimization - Subquery elimination = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:180) - Optimization - Trans join subquery elimination = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:183) - Optimization - Trans stg subquery elimination = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:186) - Optimization - Subquery as view = false
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:189) - Cache the result of student.queries for join evaluation (non Relational DBs) = false
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:196) - RunnerFactory = fr.unice.i3s.morph.xr2rml.mongo.engine.MorphMongoRunnerFactory
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:199) - Remove Strange Chars From Literal Column = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:202) - URL-encode reserved chars IRI tempalte string = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:205) - URL-encode reserved chars in database values = true
+2017-05-12 23:30:21 INFO  [main] (MorphProperties.scala:208) - String transformation = None
+2017-05-12 23:30:21 INFO  [main] (R2RMLMappingDocument.scala:225) - Parsing mapping document /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/dblp-mapping-authors.ttl
+2017-05-12 23:30:22 INFO  [main] (MorphBaseRunner.scala:59) - ****************************************************************************************************************
+2017-05-12 23:30:22 INFO  [main] (MorphBaseRunner.scala:60) - Running query translation. Content-type: null
+2017-05-12 23:30:22 INFO  [main] (SparqlUtility.scala:224) - Request Accept: null. Negotiated: (application/sparql-results+xml,XML)
+2017-05-12 23:30:22 INFO  [main] (SparqlQueryRewriter.scala:97) - SPARQL graph pattern:
+(slice _ 1000
+  (distinct
+    (project (?name ?title ?year)
+      (bgp
+        (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/Author>)
+        (triple ?x <http://xmlns.com/foaf/0.1/name> ?name)
+        (triple ?journ1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/JournalArticle>)
+        (triple ?journ1 <http://purl.org/dc/elements/1.1/creator> ?x)
+        (triple ?journ1 <http://purl.org/dc/terms/issued> ?year)
+        (triple ?journ1 <http://purl.org/dc/elements/1.1/title> ?title)
+        (triple ?journ1 <http://dblp.l3s.de/d2r/appearsIn> "Artif. Intell.")
+      ))))
+
+2017-05-12 23:30:23 INFO  [main] (MorphMongoQueryTranslator.scala:84) - Triple pattern bindings computation time = 376ms.
+2017-05-12 23:30:23 INFO  [main] (MorphMongoQueryTranslator.scala:85) - Triple pattern bindings:
+   Binding(?journ1 @http://dblp.l3s.de/d2r/appearsIn "Artif. Intell." -> Journal_appearsIn)
+   Binding(?journ1 @dc:title ?title -> Journal_titler)
+   Binding(?journ1 @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+   Binding(?journ1 @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+   Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?journ1 @dc:creator ?x -> Journal_creator)
+   Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+2017-05-12 23:30:23 WARN  [main] (MorphMongoQueryTranslator.scala:219) - SPARQL DISTINCT ignored in query translation.
+2017-05-12 23:30:23 INFO  [main] (MorphMongoQueryTranslator.scala:113) - 
+-------------------------------------------------------------------------
+------------------ Abstract query BEFORE optimization: ------------------
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x)
+  where  : Set(NotNull(_id)) }
+] INNER JOIN [
+[{ Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x, $.name AS ?name)
+  where  : Set(NotNull(_id), NotNull($.name)) }
+] INNER JOIN [
+[{ Binding(?journ1 @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set($.publications.article[*].dblp_key AS ?journ1)
+  where  : Set(NotNull($.publications.article[*].dblp_key)) }
+] INNER JOIN [
+[{ Binding(?journ1 @dc:creator ?x -> Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(publications.article[*].dblp_key AS ?journ1, _id AS ?x)
+  where  : Set(NotNull(publications.article[*].dblp_key), NotNull(_id)) }
+] INNER JOIN [
+[{ Binding(?journ1 @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?journ1, $.year AS ?year)
+  where  : Set(NotNull(dblp_key), NotNull($.year)) }
+] INNER JOIN [
+[{ Binding(?journ1 @dc:title ?title -> Journal_titler)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?journ1, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.title)) }
+] INNER JOIN [
+{ Binding(?journ1 @http://dblp.l3s.de/d2r/appearsIn "Artif. Intell." -> Journal_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?journ1)
+  where  : Set(NotNull(dblp_key), Equals($.in, Artif. Intell.)) }
+] ON Set(?journ1)
+] ON Set(?journ1)
+] ON Set(?journ1)
+] ON Set(?journ1)
+] ON Set(?x)
+] ON Set(?x)
+LIMIT 1000
+2017-05-12 23:30:23 INFO  [main] (MorphMongoQueryTranslator.scala:115) - 
+------------------ Abstract query AFTER optimization: -------------------
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+   Binding(?journ1 @dc:creator ?x -> Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x, $.name AS ?name, publications.article[*].dblp_key AS ?journ1)
+  where  : Set(NotNull(_id), NotNull($.name), NotNull(publications.article[*].dblp_key)) }
+] INNER JOIN [
+[{ Binding(?journ1 @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set($.publications.article[*].dblp_key AS ?journ1)
+  where  : Set(NotNull($.publications.article[*].dblp_key)) }
+] INNER JOIN [
+{ Binding(?journ1 @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+   Binding(?journ1 @dc:title ?title -> Journal_titler)
+   Binding(?journ1 @http://dblp.l3s.de/d2r/appearsIn "Artif. Intell." -> Journal_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?journ1, $.year AS ?year, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.year), NotNull($.title), Equals($.in, Artif. Intell.)) }
+] ON Set(?journ1)
+] ON Set(?journ1)
+LIMIT 1000
+-------------------------------------------------------------------------
+2017-05-12 23:30:23 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 23:30:23 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [publications.article[*].dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:23 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [dblp_key] did not match any rule. It is ignored.
+2017-05-12 23:30:23 INFO  [main] (MorphBaseQueryTranslator.scala:107) - Query translation time (including bindings) = 607ms.
+2017-05-12 23:30:23 INFO  [main] (MorphBaseRunner.scala:90) - SPARQL Query = 
+PREFIX  :     <http://dblp.l3s.de/d2r/>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX  dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT DISTINCT  ?name ?title ?year
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :Author .
+    ?x foaf:name ?name .
+    ?journ1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :JournalArticle .
+    ?journ1 dc:creator ?x .
+    ?journ1 dcterms:issued ?year .
+    ?journ1 dc:title ?title .
+    ?journ1 :appearsIn "Artif. Intell."
+  }
+LIMIT   1000
+
+2017-05-12 23:30:23 INFO  [main] (MorphBaseRunner.scala:91) - ------------------ Abstract Query ------------------ = 
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+   Binding(?journ1 @dc:creator ?x -> Journal_creator)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set(_id AS ?x, $.name AS ?name, publications.article[*].dblp_key AS ?journ1)
+  where  : Set(NotNull(_id), NotNull($.name), NotNull(publications.article[*].dblp_key)) }
+] INNER JOIN [
+[{ Binding(?journ1 @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+  from   : db.authors.find({}), Iterator: Some($)
+  project: Set($.publications.article[*].dblp_key AS ?journ1)
+  where  : Set(NotNull($.publications.article[*].dblp_key)) }
+] INNER JOIN [
+{ Binding(?journ1 @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+   Binding(?journ1 @dc:title ?title -> Journal_titler)
+   Binding(?journ1 @http://dblp.l3s.de/d2r/appearsIn "Artif. Intell." -> Journal_appearsIn)
+  from   : db.authors.find({}), Iterator: Some($.publications.article.*)
+  project: Set(dblp_key AS ?journ1, $.year AS ?year, $.title AS ?title)
+  where  : Set(NotNull(dblp_key), NotNull($.year), NotNull($.title), Equals($.in, Artif. Intell.)) }
+] ON Set(?journ1)
+] ON Set(?journ1)
+LIMIT 1000
+2017-05-12 23:30:23 INFO  [main] (MorphBaseRunner.scala:92) - ------------------ Concrete Query ------------------ = 
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+   Binding(?journ1 @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: authors. Query: {'name': {$exists: true, $ne: null}}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?journ1 @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'dblp_key': {$exists: true, $ne: null}}}}. Projection: {}] }
+] INNER JOIN [
+{ Binding(?journ1 @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+   Binding(?journ1 @dc:title ?title -> Journal_titler)
+   Binding(?journ1 @http://dblp.l3s.de/d2r/appearsIn "Artif. Intell." -> Journal_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}, 'title': {$exists: true, $ne: null}, 'in': {$eq: 'Artif. Intell.'}}}}. Projection: {}] }
+] ON Set(?journ1)
+] ON Set(?journ1)
+LIMIT 1000
+2017-05-12 23:30:23 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 23:30:23 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+   Binding(?journ1 @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: authors. Query: {'name': {$exists: true, $ne: null}}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?journ1 @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'dblp_key': {$exists: true, $ne: null}}}}. Projection: {}] }
+] INNER JOIN [
+{ Binding(?journ1 @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+   Binding(?journ1 @dc:title ?title -> Journal_titler)
+   Binding(?journ1 @http://dblp.l3s.de/d2r/appearsIn "Artif. Intell." -> Journal_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}, 'title': {$exists: true, $ne: null}, 'in': {$eq: 'Artif. Intell.'}}}}. Projection: {}] }
+] ON Set(?journ1)
+] ON Set(?journ1)
+LIMIT 1000
+2017-05-12 23:30:23 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'name': {$exists: true, $ne: null}}. Projection: {}] with limit None
+2017-05-12 23:30:24 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 5 result(s), 5 result(s) after applying the iterator, in: 996 ms.
+2017-05-12 23:30:24 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 5 RDF triples for binding
+ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+2017-05-12 23:30:24 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 5 RDF triples for binding
+ Binding(?x @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+2017-05-12 23:30:24 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 376 RDF triples for binding
+ Binding(?journ1 @dc:creator ?x -> Journal_creator)
+2017-05-12 23:30:24 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 386 RDF triples for all binding in 421 ms.
+2017-05-12 23:30:24 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 23:30:24 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[{ Binding(?journ1 @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'dblp_key': {$exists: true, $ne: null}}}}. Projection: {}] }
+] INNER JOIN [
+{ Binding(?journ1 @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+   Binding(?journ1 @dc:title ?title -> Journal_titler)
+   Binding(?journ1 @http://dblp.l3s.de/d2r/appearsIn "Artif. Intell." -> Journal_appearsIn)
+ MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}, 'title': {$exists: true, $ne: null}, 'in': {$eq: 'Artif. Intell.'}}}}. Projection: {}] }
+] ON Set(?journ1)
+2017-05-12 23:30:24 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'dblp_key': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 23:30:25 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 4 result(s), 4 result(s) after applying the iterator, in: 459 ms.
+2017-05-12 23:30:25 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 376 RDF triples for binding
+ Binding(?journ1 @rdf:type http://dblp.l3s.de/d2r/JournalArticle -> Journal_JournalArticle)
+2017-05-12 23:30:25 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 376 RDF triples for all binding in 85 ms.
+2017-05-12 23:30:25 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: authors. Query: {'publications.article': {$elemMatch: {'year': {$exists: true, $ne: null}, 'title': {$exists: true, $ne: null}, 'in': {$eq: 'Artif. Intell.'}}}}. Projection: {}] with limit None
+2017-05-12 23:30:25 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 2 result(s), 291 result(s) after applying the iterator, in: 283 ms.
+2017-05-12 23:30:25 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 291 RDF triples for binding
+ Binding(?journ1 @http://purl.org/dc/terms/issued ?year -> Journal_issued)
+2017-05-12 23:30:26 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 291 RDF triples for binding
+ Binding(?journ1 @dc:title ?title -> Journal_titler)
+2017-05-12 23:30:26 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 291 RDF triples for binding
+ Binding(?journ1 @http://dblp.l3s.de/d2r/appearsIn "Artif. Intell." -> Journal_appearsIn)
+2017-05-12 23:30:26 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 873 RDF triples for all binding in 773 ms.
+2017-05-12 23:30:26 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?journ1)
+2017-05-12 23:30:26 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 1132 triples + 0 triples with no shared variable, in 448 ms.
+2017-05-12 23:30:26 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?journ1)
+2017-05-12 23:30:26 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 1432 triples + 10 triples with no shared variable, in 229 ms.
+2017-05-12 23:30:27 WARN  [main] (MorphMongoDataTranslator.scala:229) - Duration of query execution and generation of triples = 3856 ms.
+2017-05-12 23:30:27 INFO  [main] (MorphMongoQueryProcessor.scala:139) - Result set contains 4 triples.
+2017-05-12 23:30:27 INFO  [main] (MorphMongoQueryProcessor.scala:140) - Tabular result set:
+-------------------------------------------------------------------------------------------
+| name              | title                                                        | year |
+===========================================================================================
+| "Moshe Y. Vardi"  | "A Nonstandard Approach to the Logical Omniscience Problem." | 1995 |
+| "Diego Calvanese" | "Knowledge base exchange: The case of OWL 2 QL."             | 2016 |
+| "Diego Calvanese" | "Reasoning on UML class diagrams."                           | 2005 |
+| "Diego Calvanese" | "Data complexity of query answering in description logics."  | 2013 |
+-------------------------------------------------------------------------------------------
+
+2017-05-12 23:30:27 WARN  [main] (MorphMongoQueryProcessor.scala:146) - Time for late SPARQL query evaluation = 184ms.
+2017-05-12 23:30:27 INFO  [main] (MorphBaseRunner.scala:104) - Query response output file: /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/result.txt
+2017-05-12 23:30:27 WARN  [main] (MorphBaseRunner.scala:111) - Overall SPARQL query processing time = 4706ms.
+2017-05-12 23:30:27 WARN  [main] (MorphBaseRunner.scala:112) - **********************DONE****************************
+2017-05-12 23:30:27 INFO  [main] (MorphRunner.scala:74) - Query result:
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="name"/>
+    <variable name="title"/>
+    <variable name="year"/>
+  </head>
+  <results>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+      <binding name="title">
+        <literal>A Nonstandard Approach to the Logical Omniscience Problem.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">1995</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="title">
+        <literal>Knowledge base exchange: The case of OWL 2 QL.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">2016</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="title">
+        <literal>Reasoning on UML class diagrams.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">2005</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Diego Calvanese</literal>
+      </binding>
+      <binding name="title">
+        <literal>Data complexity of query answering in description logics.</literal>
+      </binding>
+      <binding name="year">
+        <literal datatype="http://www.w3.org/2001/XMLSchema#integer">2013</literal>
+      </binding>
+    </result>
+  </results>
+</sparql>
+2017-05-12 23:30:27 INFO  [main] (MorphRunner.scala:79) - Treatment completed, exiting.

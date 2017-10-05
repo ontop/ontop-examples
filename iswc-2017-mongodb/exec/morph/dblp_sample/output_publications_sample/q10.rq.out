@@ -1,0 +1,1506 @@
+To override log4j configuration add JVM option: -Dlog4j.configuration=file:/home/.../your_log4j.properties
+Loading log4j configuration: jar:file:/Users/xiao/src/morph-xr2rml/morph-xr2rml-dist/target/morph-xr2rml-dist-1.0-SNAPSHOT-jar-with-dependencies.jar!/xr2rml-log4j.properties
+2017-05-12 16:25:33 INFO  [main] (MorphRunner.scala:57) - properties Directory = /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph
+2017-05-12 16:25:33 INFO  [main] (MorphRunner.scala:58) - properties File      = output/q10.rq.properties
+Reading configuration file : /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/output/q10.rq.properties
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:118) - Server active = false
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:121) - Server port number = 8080
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:124) - Output file = result.txt
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:144) - Output RDF syntax = TURTLE
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:153) - Output SPARQL result syntax = TURTLE
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:156) - Display result on std output = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:159) - Jena mode = memory
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:162) - SPARQL Query Optimization = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:165) - Optimization - Self join elimination = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:168) - Optimization - Self union elimination = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:171) - Optimization - Propagate conditions from a joined query = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:174) - Optimization - Reorder STG = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:177) - Optimization - Subquery elimination = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:180) - Optimization - Trans join subquery elimination = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:183) - Optimization - Trans stg subquery elimination = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:186) - Optimization - Subquery as view = false
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:189) - Cache the result of student.queries for join evaluation (non Relational DBs) = false
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:196) - RunnerFactory = fr.unice.i3s.morph.xr2rml.mongo.engine.MorphMongoRunnerFactory
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:199) - Remove Strange Chars From Literal Column = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:202) - URL-encode reserved chars IRI tempalte string = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:205) - URL-encode reserved chars in database values = true
+2017-05-12 16:25:33 INFO  [main] (MorphProperties.scala:208) - String transformation = None
+2017-05-12 16:25:33 INFO  [main] (R2RMLMappingDocument.scala:225) - Parsing mapping document /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/dblp-mapping-publications.ttl
+2017-05-12 16:25:34 INFO  [main] (MorphBaseRunner.scala:59) - ****************************************************************************************************************
+2017-05-12 16:25:34 INFO  [main] (MorphBaseRunner.scala:60) - Running query translation. Content-type: null
+2017-05-12 16:25:34 INFO  [main] (SparqlUtility.scala:224) - Request Accept: null. Negotiated: (application/sparql-results+xml,XML)
+2017-05-12 16:25:34 INFO  [main] (SparqlQueryRewriter.scala:97) - SPARQL graph pattern:
+(distinct
+  (project (?name)
+    (filter (!= ?x ?y)
+      (bgp
+        (triple ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/Author>)
+        (triple ?x <http://xmlns.com/foaf/0.1/name> "Diego Calvanese")
+        (triple ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dblp.l3s.de/d2r/Author>)
+        (triple ?y <http://xmlns.com/foaf/0.1/name> ?name)
+        (triple ?publ <http://purl.org/dc/elements/1.1/creator> ?x)
+        (triple ?publ <http://purl.org/dc/elements/1.1/creator> ?y)
+      ))))
+
+2017-05-12 16:25:34 INFO  [main] (MorphMongoQueryTranslator.scala:84) - Triple pattern bindings computation time = 113ms.
+2017-05-12 16:25:34 INFO  [main] (MorphMongoQueryTranslator.scala:85) - Triple pattern bindings:
+   Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?publ @dc:creator ?y -> 
+      Journal_creator,
+      inproceedings_creator,
+      Book_creator)
+   Binding(?publ @dc:creator ?x -> 
+      Journal_creator,
+      inproceedings_creator,
+      Book_creator)
+   Binding(?y @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+   Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+   Binding(?x @http://xmlns.com/foaf/0.1/name "Diego Calvanese" -> Author_name)
+2017-05-12 16:25:34 WARN  [main] (MorphMongoQueryTranslator.scala:219) - SPARQL DISTINCT ignored in query translation.
+2017-05-12 16:25:34 WARN  [main] (MorphMongoQueryTranslator.scala:211) - SPARQL Filter ignored in query translation.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [authors[*]._id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [authors[*]._id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [proceedings] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [authors[*]._id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [authors[*]._id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [_id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [authors[*]._id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [proceedings] did not match any rule. It is ignored.
+2017-05-12 16:25:34 WARN  [main] (JsonPathToMongoTranslator.scala:464) - JSONPath expression [authors[*]._id] did not match any rule. It is ignored.
+2017-05-12 16:25:34 INFO  [main] (MorphBaseQueryTranslator.scala:107) - Query translation time (including bindings) = 261ms.
+2017-05-12 16:25:34 INFO  [main] (MorphBaseRunner.scala:90) - SPARQL Query = 
+PREFIX  :     <http://dblp.l3s.de/d2r/>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX  dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT DISTINCT  ?name
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :Author .
+    ?x foaf:name "Diego Calvanese" .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :Author .
+    ?y foaf:name ?name .
+    ?publ dc:creator ?x .
+    ?publ dc:creator ?y
+    FILTER ( ?x != ?y )
+  }
+
+2017-05-12 16:25:34 INFO  [main] (MorphBaseRunner.scala:91) - ------------------ Abstract Query ------------------ = 
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+  from   : db.publications.find({}), Iterator: Some($.authors.*)
+  project: Set(_id AS ?x)
+  where  : Set(NotNull(_id)) }
+] INNER JOIN [
+[{ Binding(?x @http://xmlns.com/foaf/0.1/name "Diego Calvanese" -> Author_name)
+  from   : db.publications.find({}), Iterator: Some($.authors.*)
+  project: Set(_id AS ?x)
+  where  : Set(NotNull(_id), Equals($.name, Diego Calvanese)) }
+] INNER JOIN [
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+  from   : db.publications.find({}), Iterator: Some($.authors.*)
+  project: Set(_id AS ?y)
+  where  : Set(NotNull(_id)) }
+] INNER JOIN [
+[{ Binding(?y @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+  from   : db.publications.find({}), Iterator: Some($.authors.*)
+  project: Set(_id AS ?y, $.name AS ?name)
+  where  : Set(NotNull(_id), NotNull($.name)) }
+] INNER JOIN [
+[[{ Binding(?publ @dc:creator ?x -> Journal_creator)
+  from   : db.publications.find({'type' : 'article'}), Iterator: Some($)
+  project: Set(_id AS ?publ, authors[*]._id AS ?x)
+  where  : Set(NotNull(_id), NotNull(authors[*]._id)) }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> inproceedings_creator)
+  from   : db.publications.find({'type' : 'inproceedings'}), Iterator: Some($)
+  project: Set(_id AS ?publ, authors[*]._id AS ?x)
+  where  : Set(NotNull(_id), NotNull(authors[*]._id)) }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> Book_creator)
+  from   : db.publications.find({'type' : 'incollection'}), Iterator: Some($)
+  project: Set(proceedings AS ?publ, authors[*]._id AS ?x)
+  where  : Set(NotNull(proceedings), NotNull(authors[*]._id)) }
+]
+] INNER JOIN [
+[{ Binding(?publ @dc:creator ?y -> Journal_creator)
+  from   : db.publications.find({'type' : 'article'}), Iterator: Some($)
+  project: Set(_id AS ?publ, authors[*]._id AS ?y)
+  where  : Set(NotNull(_id), NotNull(authors[*]._id)) }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> inproceedings_creator)
+  from   : db.publications.find({'type' : 'inproceedings'}), Iterator: Some($)
+  project: Set(_id AS ?publ, authors[*]._id AS ?y)
+  where  : Set(NotNull(_id), NotNull(authors[*]._id)) }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> Book_creator)
+  from   : db.publications.find({'type' : 'incollection'}), Iterator: Some($)
+  project: Set(proceedings AS ?publ, authors[*]._id AS ?y)
+  where  : Set(NotNull(proceedings), NotNull(authors[*]._id)) }
+]
+] ON Set(?publ)
+] ON Set(?y)
+] ON Set(?y)
+] ON Set(?x)
+] ON Set(?x)
+2017-05-12 16:25:34 INFO  [main] (MorphBaseRunner.scala:92) - ------------------ Concrete Query ------------------ = 
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+ MongoDBQuery[Collection: publications. Query: {}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?x @http://xmlns.com/foaf/0.1/name "Diego Calvanese" -> Author_name)
+ MongoDBQuery[Collection: publications. Query: {'authors': {$elemMatch: {'name': {$eq: 'Diego Calvanese'}}}}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+ MongoDBQuery[Collection: publications. Query: {}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?y @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+ MongoDBQuery[Collection: publications. Query: {'authors': {$elemMatch: {'name': {$exists: true, $ne: null}}}}. Projection: {}] }
+] INNER JOIN [
+[[{ Binding(?publ @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @dc:creator ?y -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] ON Set(?publ)
+] ON Set(?y)
+] ON Set(?y)
+] ON Set(?x)
+] ON Set(?x)
+2017-05-12 16:25:34 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 16:25:34 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[{ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+ MongoDBQuery[Collection: publications. Query: {}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?x @http://xmlns.com/foaf/0.1/name "Diego Calvanese" -> Author_name)
+ MongoDBQuery[Collection: publications. Query: {'authors': {$elemMatch: {'name': {$eq: 'Diego Calvanese'}}}}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+ MongoDBQuery[Collection: publications. Query: {}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?y @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+ MongoDBQuery[Collection: publications. Query: {'authors': {$elemMatch: {'name': {$exists: true, $ne: null}}}}. Projection: {}] }
+] INNER JOIN [
+[[{ Binding(?publ @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @dc:creator ?y -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] ON Set(?publ)
+] ON Set(?y)
+] ON Set(?y)
+] ON Set(?x)
+] ON Set(?x)
+2017-05-12 16:25:34 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {}. Projection: {}] with limit None
+2017-05-12 16:25:35 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 1059 result(s), 3264 result(s) after applying the iterator, in: 651 ms.
+2017-05-12 16:25:36 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 3264 RDF triples for binding
+ Binding(?x @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+2017-05-12 16:25:36 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 3264 RDF triples for all binding in 661 ms.
+2017-05-12 16:25:36 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 16:25:36 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[{ Binding(?x @http://xmlns.com/foaf/0.1/name "Diego Calvanese" -> Author_name)
+ MongoDBQuery[Collection: publications. Query: {'authors': {$elemMatch: {'name': {$eq: 'Diego Calvanese'}}}}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+ MongoDBQuery[Collection: publications. Query: {}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?y @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+ MongoDBQuery[Collection: publications. Query: {'authors': {$elemMatch: {'name': {$exists: true, $ne: null}}}}. Projection: {}] }
+] INNER JOIN [
+[[{ Binding(?publ @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @dc:creator ?y -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] ON Set(?publ)
+] ON Set(?y)
+] ON Set(?y)
+] ON Set(?x)
+2017-05-12 16:25:36 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {'authors': {$elemMatch: {'name': {$eq: 'Diego Calvanese'}}}}. Projection: {}] with limit None
+2017-05-12 16:25:36 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 317 result(s), 1272 result(s) after applying the iterator, in: 60 ms.
+2017-05-12 16:25:36 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 1272 RDF triples for binding
+ Binding(?x @http://xmlns.com/foaf/0.1/name "Diego Calvanese" -> Author_name)
+2017-05-12 16:25:36 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 1272 RDF triples for all binding in 241 ms.
+2017-05-12 16:25:36 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 16:25:36 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[{ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+ MongoDBQuery[Collection: publications. Query: {}. Projection: {}] }
+] INNER JOIN [
+[{ Binding(?y @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+ MongoDBQuery[Collection: publications. Query: {'authors': {$elemMatch: {'name': {$exists: true, $ne: null}}}}. Projection: {}] }
+] INNER JOIN [
+[[{ Binding(?publ @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @dc:creator ?y -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] ON Set(?publ)
+] ON Set(?y)
+] ON Set(?y)
+2017-05-12 16:25:36 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {}. Projection: {}] with limit None
+2017-05-12 16:25:36 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 1059 result(s), 3264 result(s) after applying the iterator, in: 108 ms.
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 3264 RDF triples for binding
+ Binding(?y @rdf:type http://dblp.l3s.de/d2r/Author -> Author_Author)
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 3264 RDF triples for all binding in 535 ms.
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[{ Binding(?y @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+ MongoDBQuery[Collection: publications. Query: {'authors': {$elemMatch: {'name': {$exists: true, $ne: null}}}}. Projection: {}] }
+] INNER JOIN [
+[[{ Binding(?publ @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @dc:creator ?y -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] ON Set(?publ)
+] ON Set(?y)
+2017-05-12 16:25:37 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {'authors': {$elemMatch: {'name': {$exists: true, $ne: null}}}}. Projection: {}] with limit None
+2017-05-12 16:25:37 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 1059 result(s), 3264 result(s) after applying the iterator, in: 110 ms.
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 3264 RDF triples for binding
+ Binding(?y @http://xmlns.com/foaf/0.1/name ?name -> Author_name)
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 3264 RDF triples for all binding in 333 ms.
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryInnerJoin.scala:223) - ===============================================================================
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryInnerJoin.scala:224) - Generating RDF triples from the inner join query:
+[[{ Binding(?publ @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] INNER JOIN [
+[{ Binding(?publ @dc:creator ?y -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+] ON Set(?publ)
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryUnion.scala:170) - ===============================================================================
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryUnion.scala:171) - Generating RDF triples from union query:
+[{ Binding(?publ @dc:creator ?x -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?x -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+2017-05-12 16:25:37 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] with limit None
+2017-05-12 16:25:37 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 359 result(s), 359 result(s) after applying the iterator, in: 46 ms.
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 1032 RDF triples for binding
+ Binding(?publ @dc:creator ?x -> Journal_creator)
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 1032 RDF triples for all binding in 83 ms.
+2017-05-12 16:25:37 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] with limit None
+2017-05-12 16:25:37 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 689 result(s), 689 result(s) after applying the iterator, in: 61 ms.
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 2180 RDF triples for binding
+ Binding(?publ @dc:creator ?x -> inproceedings_creator)
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 2180 RDF triples for all binding in 165 ms.
+2017-05-12 16:25:37 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] with limit None
+2017-05-12 16:25:37 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 11 result(s), 11 result(s) after applying the iterator, in: 4 ms.
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 52 RDF triples for binding
+ Binding(?publ @dc:creator ?x -> Book_creator)
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 52 RDF triples for all binding in 4 ms.
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryUnion.scala:195) - Union computed 3264 triples, in 373 ms.
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryUnion.scala:170) - ===============================================================================
+2017-05-12 16:25:37 INFO  [main] (AbstractQueryUnion.scala:171) - Generating RDF triples from union query:
+[{ Binding(?publ @dc:creator ?y -> Journal_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> inproceedings_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] }
+] UNION [
+{ Binding(?publ @dc:creator ?y -> Book_creator)
+ MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] }
+]
+2017-05-12 16:25:37 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {'type':'article', }. Projection: {}] with limit None
+2017-05-12 16:25:37 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 359 result(s), 359 result(s) after applying the iterator, in: 33 ms.
+2017-05-12 16:25:38 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 1032 RDF triples for binding
+ Binding(?publ @dc:creator ?y -> Journal_creator)
+2017-05-12 16:25:38 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 1032 RDF triples for all binding in 105 ms.
+2017-05-12 16:25:38 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {'type':'inproceedings', }. Projection: {}] with limit None
+2017-05-12 16:25:38 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 689 result(s), 689 result(s) after applying the iterator, in: 50 ms.
+2017-05-12 16:25:38 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 2180 RDF triples for binding
+ Binding(?publ @dc:creator ?y -> inproceedings_creator)
+2017-05-12 16:25:38 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 2180 RDF triples for all binding in 206 ms.
+2017-05-12 16:25:38 INFO  [main] (MorphMongoDataSourceReader.scala:84) - Executing query: MongoDBQuery[Collection: publications. Query: {'type':'incollection', }. Projection: {}] with limit None
+2017-05-12 16:25:38 INFO  [main] (MorphMongoDataSourceReader.scala:113) - Query returned 11 result(s), 11 result(s) after applying the iterator, in: 4 ms.
+2017-05-12 16:25:38 INFO  [main] (AbstractQueryAtomicMongo.scala:476) - Atomic query generated 52 RDF triples for binding
+ Binding(?publ @dc:creator ?y -> Book_creator)
+2017-05-12 16:25:38 INFO  [main] (AbstractQueryAtomicMongo.scala:483) - Atomic query generated 52 RDF triples for all binding in 4 ms.
+2017-05-12 16:25:38 INFO  [main] (AbstractQueryUnion.scala:195) - Union computed 3264 triples, in 406 ms.
+2017-05-12 16:25:38 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?publ)
+2017-05-12 16:25:38 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 3254 triples + 0 triples with no shared variable, in 532 ms.
+2017-05-12 16:25:38 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?y)
+2017-05-12 16:25:39 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 2616 triples + 1056 triples with no shared variable, in 662 ms.
+2017-05-12 16:25:39 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?y)
+2017-05-12 16:25:40 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 3034 triples + 1056 triples with no shared variable, in 525 ms.
+2017-05-12 16:25:40 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?x)
+2017-05-12 16:25:40 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 589 triples + 3034 triples with no shared variable, in 73 ms.
+2017-05-12 16:25:40 INFO  [main] (AbstractQueryInnerJoin.scala:257) - Inner join on variable(s) Set(?x)
+2017-05-12 16:25:40 INFO  [main] (AbstractQueryInnerJoin.scala:290) - Inner join computed 631 triples + 3034 triples with no shared variable, in 110 ms.
+2017-05-12 16:25:40 WARN  [main] (MorphMongoDataTranslator.scala:229) - Duration of query execution and generation of triples = 5461 ms.
+2017-05-12 16:25:41 INFO  [main] (MorphMongoQueryProcessor.scala:139) - Result set contains 177 triples.
+2017-05-12 16:25:41 INFO  [main] (MorphMongoQueryProcessor.scala:140) - Tabular result set:
+-----------------------------------
+| name                            |
+===================================
+| "Alifah Syamsiyah"              |
+| "Irene Teinemaa"                |
+| "Domenico Ursino"               |
+| "Pietro Della Peruta"           |
+| "David Toman"                   |
+| "Massimo Mecella"               |
+| "Ülari Laurson"                 |
+| "Matthew Horridge"              |
+| "Daniele Braga"                 |
+| "Thomas Lukasiewicz"            |
+| "Camilo Thorne"                 |
+| "Enrico Franconi"               |
+| "Cristina Baroglio"             |
+| "Elio Damaggio"                 |
+| "Roman Kontchakov"              |
+| "Matteo Baldoni"                |
+| "Dmitriy Zheleznyakov"          |
+| "Paolo Merialdo"                |
+| "Magdalena Ortiz"               |
+| "Ralf Möller"                   |
+| "Paolo Felli"                   |
+| "Alin Deutsch"                  |
+| "Moshe Y. Vardi"                |
+| "Elena Botoeva"                 |
+| "Emanuel Sallinger"             |
+| "Reinhard Pichler"              |
+| "Antonio Perrone"               |
+| "Dan Suciu"                     |
+| "Florian Zuleger"               |
+| "Özgür L. Özçep"                |
+| "Julia Stoyanovich"             |
+| "Wil M. P. van der Aalst"       |
+| "Peter Haase"                   |
+| "Helmut Veith"                  |
+| "Mantas Simkus"                 |
+| "Christian Neuenstadt"          |
+| "Tomer Kotek"                   |
+| "Claire David"                  |
+| "Dmitry Tsarkov"                |
+| "Michele Melchiori"             |
+| "Elem Guzel Kalayci"            |
+| "Ralf Molitor"                  |
+| "Giorgio Delzanno"              |
+| "Dmitry Solomakhin"             |
+| "Mariano Rodriguez"             |
+| "Oscar Romero"                  |
+| "Evgeny Sherkhonov"             |
+| "Riccardo Rosati"               |
+| "Wolfgang Fischl"               |
+| "Alberto Abelló"                |
+| "Francesco Guerra"              |
+| "Marco Cadoli"                  |
+| "Marcelo Arenas"                |
+| "Dag Hovland"                   |
+| "Pietro Liuzzo"                 |
+| "Benjamin Cogrel"               |
+| "Tova Milo"                     |
+| "Matthias Jarke"                |
+| "Davide Lanti"                  |
+| "Shqiponja Ahmetaj"             |
+| "Michael Meier"                 |
+| "Leonid Libkin"                 |
+| "Arild Waaler"                  |
+| "Meghyn Bienvenu"               |
+| "Mikhail Soutchanski"           |
+| "C. Maria Keet"                 |
+| "Mattia Palmieri"               |
+| "Simona Colucci"                |
+| "Timea Bagosi"                  |
+| "Giorgio Terracina"             |
+| "Riccardo Torlone"              |
+| "Michele Stawowy"               |
+| "Marlon Dumas"                  |
+| "Raffaella Bernardi"            |
+| "Axel Polleres"                 |
+| "Michael Schmidt"               |
+| "Domenico Fabio Savo"           |
+| "Andrey Rivkin"                 |
+| "Elena Cardillo"                |
+| "Marco Montali"                 |
+| "Andrea Acciarri"               |
+| "Paolo Naggar"                  |
+| "Fabio Patrizi"                 |
+| "Andrea Calì"                   |
+| "Thomas Schwentick"             |
+| "Anna Queralt"                  |
+| "Alessandro Artale"             |
+| "Yannis Vassiliou"              |
+| "Luigi Dragone"                 |
+| "Wim Martens"                   |
+| "Francesca Bonin"               |
+| "Maurizio Lenzerini"            |
+| "Silvana Castano"               |
+| "Claudio Eccher"                |
+| "Domenico Lembo"                |
+| "Guohui Xiao"                   |
+| "Mindaugas Slusnys"             |
+| "Spyros Ligoudistianos"         |
+| "Lina Lubyte"                   |
+| "Antonella Poggi"               |
+| "Ernesto Jiménez-Ruiz"          |
+| "Giuseppe Santucci"             |
+| "Francesco M. Donini"           |
+| "Michael Zakharyaschev"         |
+| "Maurizio Vincini"              |
+| "Alessandro Campi"              |
+| "Guillem Rull"                  |
+| "Thorsten Liebig"               |
+| "Alessandro Mosca"              |
+| "Giorgio Stefanoni"             |
+| "Werner Nutt"                   |
+| "Evgeny Kharlamov"              |
+| "Yannis E. Ioannidis"           |
+| "Fabio Vernacotola"             |
+| "Ognjen Savkovic"               |
+| "Valerio Santarelli"            |
+| "Marco Ruzzi"                   |
+| "Olaf Noppens"                  |
+| "Vladislav Ryzhikov"            |
+| "Michael Wessel"                |
+| "Yazmin Angélica Ibáñez-García" |
+| "Riccardo De Masellis"          |
+| "Ismail Ilkan Ceylan"           |
+| "Ian Horrocks"                  |
+| "Manolis Koubarakis"            |
+| "Roberto Micalizio"             |
+| "Daniele Nardi"                 |
+| "Mikhail Roshchin"              |
+| "Alessandro Solimando"          |
+| "Alexander Borgida"             |
+| "Pablo Barceló"                 |
+| "Babak Bagheri Hariri"          |
+| "Steffen Lamparter"             |
+| "Eyke Hüllermeier"              |
+| "Sean Bechhofer"                |
+| "Ernest Teniente"               |
+| "Sven Hartmann"                 |
+| "Marko Luther"                  |
+| "José Remesal"                  |
+| "Martin Giese"                  |
+| "Stefano Ceri"                  |
+| "Ahmet Soylu"                   |
+| "Toni Mancini"                  |
+| "Josef Hardi"                   |
+| "Victor Vianu"                  |
+| "Domenico Carbotta"             |
+| "Tiziana Catarci"               |
+| "Fabrizio Maria Maggi"          |
+| "Tommaso Di Noia"               |
+| "Thomas Hubauer"                |
+| "Serge Abiteboul"               |
+| "Guido Vetere"                  |
+| "Benny Kimelfeld"               |
+| "Ario Santoso"                  |
+| "Evren Sirin"                   |
+| "T. Nordtveit"                  |
+| "Jianwen Su"                    |
+| "Herald Kllapi"                 |
+| "Davide Martinenghi"            |
+| "Frank Neven"                   |
+| "Filip Murlak"                  |
+| "Sarah Komla-Ebri"              |
+| "Panos Vassiliadis"             |
+| "Elem Güzel Kalayci"            |
+| "Albin Ahmeti"                  |
+| "Montserrat Estañol"            |
+| "Nicola Guarino"                |
+| "Maxim Haddad"                  |
+| "Daniela Berardi"               |
+| "Johan W. Klüwer"               |
+| "Giovanni Lanfranchi"           |
+| "Florian Daniel"                |
+| "Stefano Trisolini"             |
+| "Giuseppe De Giacomo"           |
+| "Thomas Eiter"                  |
+| "Ke Yi"                         |
+| "Vadim Savenkov"                |
+-----------------------------------
+
+2017-05-12 16:25:41 WARN  [main] (MorphMongoQueryProcessor.scala:146) - Time for late SPARQL query evaluation = 750ms.
+2017-05-12 16:25:41 INFO  [main] (MorphBaseRunner.scala:104) - Query response output file: /Users/xiao/Development/obda-mongo/ontop-mongo/src/test/resources/dblp/morph/result.txt
+2017-05-12 16:25:41 WARN  [main] (MorphBaseRunner.scala:111) - Overall SPARQL query processing time = 6491ms.
+2017-05-12 16:25:41 WARN  [main] (MorphBaseRunner.scala:112) - **********************DONE****************************
+2017-05-12 16:25:41 INFO  [main] (MorphRunner.scala:74) - Query result:
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="name"/>
+  </head>
+  <results>
+    <result>
+      <binding name="name">
+        <literal>Alifah Syamsiyah</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Irene Teinemaa</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Domenico Ursino</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Pietro Della Peruta</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>David Toman</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Massimo Mecella</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ülari Laurson</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Matthew Horridge</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Daniele Braga</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Thomas Lukasiewicz</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Camilo Thorne</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Enrico Franconi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Cristina Baroglio</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Elio Damaggio</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Roman Kontchakov</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Matteo Baldoni</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Dmitriy Zheleznyakov</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Paolo Merialdo</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Magdalena Ortiz</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ralf Möller</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Paolo Felli</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alin Deutsch</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Moshe Y. Vardi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Elena Botoeva</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Emanuel Sallinger</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Reinhard Pichler</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Antonio Perrone</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Dan Suciu</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Florian Zuleger</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Özgür L. Özçep</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Julia Stoyanovich</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Wil M. P. van der Aalst</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Peter Haase</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Helmut Veith</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Mantas Simkus</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Christian Neuenstadt</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Tomer Kotek</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Claire David</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Dmitry Tsarkov</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Michele Melchiori</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Elem Guzel Kalayci</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ralf Molitor</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Giorgio Delzanno</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Dmitry Solomakhin</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Mariano Rodriguez</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Oscar Romero</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Evgeny Sherkhonov</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Riccardo Rosati</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Wolfgang Fischl</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alberto Abelló</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Francesco Guerra</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Marco Cadoli</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Marcelo Arenas</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Dag Hovland</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Pietro Liuzzo</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Benjamin Cogrel</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Tova Milo</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Matthias Jarke</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Davide Lanti</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Shqiponja Ahmetaj</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Michael Meier</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Leonid Libkin</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Arild Waaler</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Meghyn Bienvenu</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Mikhail Soutchanski</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>C. Maria Keet</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Mattia Palmieri</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Simona Colucci</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Timea Bagosi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Giorgio Terracina</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Riccardo Torlone</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Michele Stawowy</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Marlon Dumas</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Raffaella Bernardi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Axel Polleres</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Michael Schmidt</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Domenico Fabio Savo</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Andrey Rivkin</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Elena Cardillo</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Marco Montali</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Andrea Acciarri</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Paolo Naggar</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Fabio Patrizi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Andrea Calì</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Thomas Schwentick</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Anna Queralt</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Artale</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Yannis Vassiliou</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Luigi Dragone</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Wim Martens</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Francesca Bonin</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Maurizio Lenzerini</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Silvana Castano</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Claudio Eccher</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Domenico Lembo</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Guohui Xiao</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Mindaugas Slusnys</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Spyros Ligoudistianos</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Lina Lubyte</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Antonella Poggi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ernesto Jiménez-Ruiz</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Giuseppe Santucci</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Francesco M. Donini</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Michael Zakharyaschev</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Maurizio Vincini</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Campi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Guillem Rull</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Thorsten Liebig</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Mosca</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Giorgio Stefanoni</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Werner Nutt</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Evgeny Kharlamov</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Yannis E. Ioannidis</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Fabio Vernacotola</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ognjen Savkovic</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Valerio Santarelli</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Marco Ruzzi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Olaf Noppens</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Vladislav Ryzhikov</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Michael Wessel</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Yazmin Angélica Ibáñez-García</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Riccardo De Masellis</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ismail Ilkan Ceylan</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ian Horrocks</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Manolis Koubarakis</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Roberto Micalizio</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Daniele Nardi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Mikhail Roshchin</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alessandro Solimando</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Alexander Borgida</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Pablo Barceló</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Babak Bagheri Hariri</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Steffen Lamparter</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Eyke Hüllermeier</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Sean Bechhofer</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ernest Teniente</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Sven Hartmann</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Marko Luther</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>José Remesal</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Martin Giese</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Stefano Ceri</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ahmet Soylu</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Toni Mancini</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Josef Hardi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Victor Vianu</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Domenico Carbotta</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Tiziana Catarci</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Fabrizio Maria Maggi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Tommaso Di Noia</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Thomas Hubauer</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Serge Abiteboul</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Guido Vetere</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Benny Kimelfeld</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ario Santoso</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Evren Sirin</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>T. Nordtveit</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Jianwen Su</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Herald Kllapi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Davide Martinenghi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Frank Neven</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Filip Murlak</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Sarah Komla-Ebri</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Panos Vassiliadis</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Elem Güzel Kalayci</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Albin Ahmeti</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Montserrat Estañol</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Nicola Guarino</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Maxim Haddad</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Daniela Berardi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Johan W. Klüwer</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Giovanni Lanfranchi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Florian Daniel</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Stefano Trisolini</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Giuseppe De Giacomo</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Thomas Eiter</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Ke Yi</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="name">
+        <literal>Vadim Savenkov</literal>
+      </binding>
+    </result>
+  </results>
+</sparql>
+2017-05-12 16:25:41 INFO  [main] (MorphRunner.scala:79) - Treatment completed, exiting.
