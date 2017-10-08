@@ -122,11 +122,11 @@ command="$command false"
 #runMorph
 command="$command false"
 #runOntopMongoFull
-command="$command true"
+command="$command false"
 #runOntopMongoRA
 command="$command false"
 #runOntopMongoSeq
-command="$command false"
+command="$command true"
 
 eval "$command"
 }
@@ -189,7 +189,7 @@ echo "Running BSBM $size ..."
 
 command="runDataset"  
 #sparqlQueriesDir
-command="$command $wd/data/bsbm/queries/sparql"
+command="$command $wd/data/bsbm/queries/sparql/$size"
 #drillQueriesDir
 command="$command $wd/data/bsbm/queries/drill/$size"
 #virtuosoOutputDir
@@ -205,7 +205,7 @@ command="$command http://bsbm$size-ontop.org"
 #ontopMongoMappingFile
 command="$command $wd/data/bsbm/mapping/ontop-mongo/mapping.json"
 #morphMappingFile
-command="$command $wd/data/bsbm/mapping/morph/awards-mapping.ttl"
+command="$command $wd/data/bsbm/mapping/morph/bsbm-mapping.ttl"
 #ontopMongoPropertyFile
 command="$command $wd/data/bsbm/$size/prop/ontop-mongo/properties"
 #morphPropertyFile
