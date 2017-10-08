@@ -15,7 +15,7 @@
 
 <#Person_Person>
     xrr:logicalSource :source_persons ;
-    rr:subjectMap [ rr:template "ex:person/{_id}"];
+    rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
     rr:predicateObjectMap [
         rr:predicate rdf:type;
         rr:objectMap [
@@ -26,7 +26,7 @@
 	
 <#Person_hasFirstName>
     xrr:logicalSource :source_persons ;
-    rr:subjectMap [ rr:template "ex:person/{_id}"];
+    rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
  	rr:predicateObjectMap [
      	rr:predicate :hasFirstName;
 	 	rr:objectMap [ xrr:reference "$.name.first" ]
@@ -34,7 +34,7 @@
    
 <#Person_hasLastName>
    xrr:logicalSource :source_persons ;
-   rr:subjectMap [ rr:template "ex:person/{_id}"];
+   rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
    rr:predicateObjectMap [
     	rr:predicate :hasLastName;
  	rr:objectMap [ xrr:reference "$.name.last" ]
@@ -42,7 +42,7 @@
   
 <#Person_bornInYear>
  	xrr:logicalSource :source_persons ;
- 	rr:subjectMap [ rr:template "ex:person/{_id}"];
+ 	rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
 	rr:predicateObjectMap [
   		rr:predicate :bornInYear;
 	rr:objectMap [ xrr:reference "$.birth.year" ]
@@ -50,7 +50,7 @@
 
 <#Person_bornInMonth>
  	xrr:logicalSource :source_persons ;
- 	rr:subjectMap [ rr:template "ex:person/{_id}"];
+ 	rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
 	rr:predicateObjectMap [
   		rr:predicate :bornInMonth;
 	rr:objectMap [ xrr:reference "$.birth.month" ]
@@ -58,7 +58,7 @@
 
 <#Person_bornOnDay>
  	xrr:logicalSource :source_persons ;
- 	rr:subjectMap [ rr:template "ex:person/{_id}"];
+ 	rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
 	rr:predicateObjectMap [
   		rr:predicate :bornOnDay;
 	rr:objectMap [ xrr:reference "$.birth.day" ]
@@ -66,7 +66,7 @@
 
 <#Person_bornIn>
  	xrr:logicalSource :source_persons ;
- 	rr:subjectMap [ rr:template "ex:person/{_id}"];
+ 	rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
 	rr:predicateObjectMap [
   		rr:predicate :bornIn;
 	rr:objectMap [ xrr:reference "$.bornIn" ]
@@ -74,7 +74,7 @@
   
 <#Person_diedInYear>
  	xrr:logicalSource :source_persons ;
- 	rr:subjectMap [ rr:template "ex:person/{_id}"];
+ 	rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
 	rr:predicateObjectMap [
   		rr:predicate :diedInYear;
 	rr:objectMap [ xrr:reference "$.death.year" ]
@@ -82,7 +82,7 @@
 
 <#Person_diedInMonth>
  	xrr:logicalSource :source_persons ;
- 	rr:subjectMap [ rr:template "ex:person/{_id}"];
+ 	rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
 	rr:predicateObjectMap [
   		rr:predicate :diedInMonth;
 	rr:objectMap [ xrr:reference "$.death.month" ]
@@ -90,7 +90,7 @@
 
 <#Person_diedOnDay>
  	xrr:logicalSource :source_persons ;
- 	rr:subjectMap [ rr:template "ex:person/{_id}"];
+ 	rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
 	rr:predicateObjectMap [
   		rr:predicate :diedOnDay;
 	rr:objectMap [ xrr:reference "$.death.day" ]
@@ -98,17 +98,17 @@
   
 <#Person_hasReceived>
    xrr:logicalSource :source_persons ;
-   rr:subjectMap [ rr:template "ex:person/{_id}"];
+   rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
    rr:predicateObjectMap [
        rr:predicate :hasReceived;
        rr:objectMap [
-         rr:template "ex:person/award/{$.awards[*].id}";
+         rr:template "http://ex.org/bios/person/award/{$.awards[*].id}";
          rr:termType rr:IRI ]
   ].
   
 <#Person_hasOccupation>
  xrr:logicalSource :source_persons ;
- rr:subjectMap [ rr:template "ex:person/{_id}"];
+ rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
  rr:predicateObjectMap [
      rr:predicate :hasOccupation;
  	rr:objectMap [ xrr:reference "$.occupation[*]" ]
@@ -120,7 +120,7 @@
 
 <#Female_Female>
  xrr:logicalSource :source_females ;
- rr:subjectMap [ rr:template "ex:person/{_id}"];
+ rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
  rr:predicateObjectMap [
      rr:predicate rdf:type;
      rr:objectMap [
@@ -135,7 +135,7 @@
 
 <#Male_Male>
 xrr:logicalSource :source_males ;
-rr:subjectMap [ rr:template "ex:person/{_id}"];
+rr:subjectMap [ rr:template "http://ex.org/bios/person/{_id}"];
 rr:predicateObjectMap [
   rr:predicate rdf:type;
   rr:objectMap [
@@ -149,7 +149,7 @@ rr:predicateObjectMap [
 
 <#Award_Award>
 xrr:logicalSource :source_awards ;
-rr:subjectMap [ rr:template "ex:person/award/{$.id}"];
+rr:subjectMap [ rr:template "http://ex.org/bios/person/award/{$.id}"];
 rr:predicateObjectMap [
     rr:predicate rdf:type;
     rr:objectMap [
@@ -160,7 +160,7 @@ rr:predicateObjectMap [
 
 <#Award_receivedIn>
  	xrr:logicalSource :source_awards ;
- 	rr:subjectMap [ rr:template  "ex:person/award/{$.id}"];
+ 	rr:subjectMap [ rr:template "http://ex.org/bios/person/award/{$.id}"];
 	rr:predicateObjectMap [
   		rr:predicate :receivedIn;
 	rr:objectMap [ xrr:reference "$.year" ]
@@ -168,7 +168,7 @@ rr:predicateObjectMap [
 
 <#Award_hasTitle>
  	xrr:logicalSource :source_awards ;
- 	rr:subjectMap [ rr:template  "ex:person/award/{$.id}"];
+ 	rr:subjectMap [ rr:template "http://ex.org/bios/person/award/{$.id}"];
 	rr:predicateObjectMap [
   		rr:predicate :hasTitle;
 	rr:objectMap [ xrr:reference "$.award" ]

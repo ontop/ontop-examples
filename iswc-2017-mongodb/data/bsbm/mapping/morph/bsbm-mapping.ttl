@@ -225,7 +225,7 @@
  	rr:predicateObjectMap [
      	rr:predicate bsbm:country;
 	 	rr:objectMap [ 
-	 	rr:template "iso3166:{$.producer.country}";
+	 	rr:template "http://downlode.org/rdf/iso-3166/countries#{$.producer.country}";
 	 	rr:termType rr:IRI ]
 	].	
 
@@ -404,7 +404,7 @@
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:country;
  	rr:objectMap [ 
- 	rr:template "iso3166:{$.vendor.country}";
+ 	rr:template "http://downlode.org/rdf/iso-3166/countries#{$.vendor.country}";
  	rr:termType rr:IRI ]
 	].
 	
@@ -525,7 +525,7 @@
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:country;
  	rr:objectMap [ 
- 	rr:template "iso3166:{$.reviewer.country}";
+ 	rr:template "http://downlode.org/rdf/iso-3166/countries#{$.reviewer.country}";
  	rr:termType rr:IRI ]
 
 	].	
