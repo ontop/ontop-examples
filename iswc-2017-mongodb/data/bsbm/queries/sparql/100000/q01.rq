@@ -5,7 +5,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT DISTINCT ?product ?label 
 WHERE {
 ?product rdfs:label ?label .
-?product bsbm:type bsbm-inst:ProductType1940 .
+?product bsbm:type bsbm-inst:ProductType1174 .
 ?product bsbm:productFeature bsbm-inst:ProductFeature52 .
 ?product bsbm:productFeature bsbm-inst:ProductFeature55 .
 ?product bsbm:productPropertyNumeric1 ?value1 . 

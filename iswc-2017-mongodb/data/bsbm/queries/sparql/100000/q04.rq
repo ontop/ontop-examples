@@ -7,18 +7,18 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 SELECT ?product ?label 
 WHERE { 
     { ?product rdfs:label ?label . 
-      ?product bsbm:type bsbm-inst:ProductType2623 . 
+      ?product bsbm:type bsbm-inst:ProductType1459 . 
       ?product bsbm:productFeature bsbm-inst:ProductFeature66 .
       ?product bsbm:productFeature bsbm-inst:ProductFeature68 .
       ?product bsbm:productPropertyNumeric1 ?p1 . 
     FILTER ( ?p1 > 500 ) 
 } UNION { 
       ?product rdfs:label ?label . 
-      ?product bsbm:type bsbm-inst:ProductType2623 . 
+      ?product bsbm:type bsbm-inst:ProductType1459 . 
       ?product bsbm:productFeature bsbm-inst:ProductFeature66 .
       ?product bsbm:productFeature bsbm-inst:ProductFeature67 .
       ?product bsbm:productPropertyNumeric2 ?p2 . 
-    FILTER ( ?p2> 10 ) }} 
+    FILTER ( ?p2> 50 ) }} 
 ORDER BY ?label 
 LIMIT 10
 
