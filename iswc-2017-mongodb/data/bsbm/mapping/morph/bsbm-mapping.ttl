@@ -304,7 +304,7 @@
 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:validFrom;
-	rr:objectMap [ xrr:reference "$.timeSpan.from" ]
+	rr:objectMap [ xrr:reference "$.timeSpan.from" ; rr:datatype xsd:dateTime ]
 	].
 	
 <#Offer_validTo>
@@ -312,7 +312,7 @@
 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:validTo;
-	rr:objectMap [ xrr:reference "$.timeSpan.to" ]
+	rr:objectMap [ xrr:reference "$.timeSpan.to" ; rr:datatype xsd:dateTime ]
 	].
 	
 <#Offer_deliveryDays>
@@ -345,7 +345,7 @@
 	xrr:logicalSource :source_offers ;
 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{$.offerId}"];
 	rr:predicateObjectMap [
-	    rr:predicate bsbm:dataFromVendor;
+	    rr:predicate bsbm:vendor;
  	rr:objectMap [ 
  	rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{$.vendor.vendorId}";
  	rr:termType rr:IRI ]	
@@ -492,7 +492,7 @@
 	xrr:logicalSource :source_reviews ;
 	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{$.reviewId}"];
 	rr:predicateObjectMap [
-	    rr:predicate bsbm:reviewer;
+	    rr:predicate rev:reviewer;
  	rr:objectMap [ 
  	rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{$.reviewer.personId}";
  	rr:termType rr:IRI ]
