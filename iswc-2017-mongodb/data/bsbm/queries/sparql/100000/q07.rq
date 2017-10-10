@@ -18,7 +18,7 @@ WHERE {
       ?vendor bsbm:country <http://downlode.org/rdf/iso-3166/countries#JP>. 
       ?offer dc:publisher ?vendor .  
       ?offer bsbm:validTo ?date . 
-    FILTER (?date > "2007-05-23T10:20:13Z")
+    FILTER (?date > "2007-05-23T10:20:13Z"^^xsd:dateTime)
  } 
   OPTIONAL {  
       ?review bsbm:reviewFor bsbm-inst-prod:Product7 . 

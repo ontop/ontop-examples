@@ -513,7 +513,7 @@
 
 <#Reviewer_name>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{$.reviewer.personId}"];
 	rr:predicateObjectMap [
 	    rr:predicate foaf:name;
 	rr:objectMap [ xrr:reference "$.reviewer.name" ]
@@ -521,7 +521,7 @@
 	
 <#Reviewer_country>
 	xrr:logicalSource :source_reviews ;
-	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{$.reviewId}"];
+	rr:subjectMap [ rr:template "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{$.reviewer.personId}"];
 	rr:predicateObjectMap [
 	    rr:predicate bsbm:country;
  	rr:objectMap [ 

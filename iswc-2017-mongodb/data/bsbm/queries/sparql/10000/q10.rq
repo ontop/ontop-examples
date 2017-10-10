@@ -15,6 +15,6 @@ WHERE {
   FILTER (?deliveryDays < 5) 
     ?offer bsbm:price ?price . 
     ?offer bsbm:validTo ?date . 
-  FILTER (?date > "2007-03-05T00:00:00Z" ) }
+  FILTER (?date > "2007-03-05T00:00:00Z"^^xsd:dateTime) }
 ORDER BY ?price 
 LIMIT 10
