@@ -17,7 +17,7 @@
 
                 }
             },
-            "target": ":authors/{authors.#._id} a :Author ; a foaf:Agent ; foaf:name {authors.#.name}^^xsd:string ; foaf:homepage {authors.#.homepage}^^xsd:string . "
+            "target": ":authors/{authors.#._id} a :Author ; foaf:name {authors.#.name}^^xsd:string ; foaf:homepage {authors.#.homepage}^^xsd:string . "
         },
         {
             "mappingId": "Journal publications",
@@ -27,7 +27,7 @@
                     "type" : "article"
                 }
             },
-            "target": ":journals/{_id} a swrc:Journal ; a :JournalArticle ; a :Publication ; dc:creator :authors/{authors.#._id} ; dc:title {title}^^xsd:string ; dcterms:issued {year}^^xsd:integer ; swrc:pages {pages}^^xsd:string ; :appearsIn {in}^^xsd:string ; foaf:homepage {url}^^xsd:string . "
+            "target": ":journals/{_id}  a :JournalArticle ; a :Publication ; dc:creator :authors/{authors.#._id} ; dc:title {title}^^xsd:string ; dcterms:issued {year}^^xsd:integer ; swrc:pages {pages}^^xsd:string ; :appearsIn {in}^^xsd:string ; foaf:homepage {url}^^xsd:string . "
         },
         {
             "mappingId": "Conference publications",
@@ -37,7 +37,7 @@
                     "type" : "inproceedings"
                 }
             },
-            "target": ":inproceedings/{_id} a swrc:Conference ; a :ConferencePaper ; a :Publication ; dc:creator :authors/{authors.#._id} ; dc:title {title}^^xsd:string ; dcterms:issued {year}^^xsd:integer ; swrc:pages {pages}^^xsd:string ; foaf:homepage {url}^^xsd:string ; dcterms:partOf :proceedings/{proceedings} . :proceedings/{proceedings} a :Proceedings ; dc:title {booktitle}^^xsd:string . "
+            "target": ":inproceedings/{_id}  a :ConferencePaper ; a :Publication ; dc:creator :authors/{authors.#._id} ; dc:title {title}^^xsd:string ; dcterms:issued {year}^^xsd:integer ; swrc:pages {pages}^^xsd:string ; foaf:homepage {url}^^xsd:string ;  :appearsIn {booktitle}^^xsd:string . "
         },
 	    {
             "mappingId": "Book chapters",
@@ -47,7 +47,7 @@
                     "type" : "incollection"
                 }
             },
-            "target": ":collections/{_id} a swrc:Collection ; a :BookChapter ; a :Publication ; dc:creator :authors/{authors.#._id} ; dc:title {title}^^xsd:string ; dcterms:issued {year}^^xsd:integer ; swrc:pages {pages}^^xsd:string ; foaf:homepage {url}^^xsd:string ; dcterms:partOf :books/{proceedings} ; :chapterIn :books/{proceedings} . :books/{proceedings} a :Book ; dc:title {booktitle}^^xsd:string . "
+            "target": ":collections/{_id}  a :BookChapter ; a :Publication ; dc:creator :authors/{authors.#._id} ; dc:title {title}^^xsd:string ; dcterms:issued {year}^^xsd:integer ; swrc:pages {pages}^^xsd:string ; foaf:homepage {url}^^xsd:string ; :appearIn {booktitle}^^xsd:string . "
         }
     ]
 }

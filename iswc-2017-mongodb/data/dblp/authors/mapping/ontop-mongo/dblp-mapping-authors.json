@@ -18,7 +18,7 @@
 
                 }
             },
-            "target": ":authors/{_id} a :Author ; a foaf:Agent ; foaf:name {name}^^xsd:string ; foaf:homepage {homepage}^^xsd:string . "
+            "target": ":authors/{_id} a :Author ; foaf:name {name}^^xsd:string ; foaf:homepage {homepage}^^xsd:string . "
         },
         {
             "mappingId": "Journal papers",
@@ -27,7 +27,7 @@
                 "criteria": {
                 }
             },
-            "target": ":journals/{publications.article.#.dblp_key} a swrc:Journal ; a :JournalArticle ; a :Publication ; dc:creator :authors/{_id} ; dc:title {publications.article.#.title}^^xsd:string ; dcterms:issued {publications.article.#.year}^^xsd:integer ; :appearsIn {publications.article.#.in}^^xsd:string ; swrc:pages {publications.article.#.pages}^^xsd:string ; foaf:homepage {publications.article.#.url}^^xsd:string . "
+            "target": ":journals/{publications.article.#.dblp_key} a :JournalArticle ; a :Publication ; dc:creator :authors/{_id} ; dc:title {publications.article.#.title}^^xsd:string ; dcterms:issued {publications.article.#.year}^^xsd:integer ; :appearsIn {publications.article.#.in}^^xsd:string ; swrc:pages {publications.article.#.pages}^^xsd:string ; foaf:homepage {publications.article.#.url}^^xsd:string . "
         },
         {
             "mappingId": "Conference papers",
@@ -36,7 +36,7 @@
                 "criteria": {
                 }
             },
-            "target": ":inproceedings/{publications.inproceedings.#.dblp_key} a swrc:Conference ; a :ConferencePaper ; a :Publication ; dc:creator :authors/{_id} ; dc:title {publications.inproceedings.#.title}^^xsd:string ; dcterms:issued {publications.inproceedings.#.year}^^xsd:integer ; swrc:pages {publications.inproceedings.#.pages}^^xsd:string ; foaf:homepage {publications.inproceedings.#.url}^^xsd:string ; dcterms:partOf :proceedings/{publications.inproceedings.#.proceedings} ; :inProceedingsOf {publications.inproceedings.#.booktitle}^^xsd:string . :proceedings/{publications.inproceedings.#.proceedings} a :Proceedings ; dc:title {publications.inproceedings.#.booktitle}^^xsd:string . "
+            "target": ":inproceedings/{publications.inproceedings.#.dblp_key} a :ConferencePaper ; a :Publication ; dc:creator :authors/{_id} ; dc:title {publications.inproceedings.#.title}^^xsd:string ; dcterms:issued {publications.inproceedings.#.year}^^xsd:integer ; swrc:pages {publications.inproceedings.#.pages}^^xsd:string ; foaf:homepage {publications.inproceedings.#.url}^^xsd:string ;  :appearsIn {publications.inproceedings.#.booktitle}^^xsd:string . "
         },
         {
             "mappingId": "Collections",
@@ -45,7 +45,7 @@
                 "criteria": {
                 }
             },
-            "target": ":collections/{publications.incollection.#.dblp_key} a swrc:Collection ; a :BookChapter ; a :Publication ; dc:creator :authors/{_id} ; dc:title {publications.incollection.#.title}^^xsd:string ; dcterms:issued {publications.incollection.#.year}^^xsd:integer ; swrc:pages {publications.incollection.#.pages}^^xsd:string ; foaf:homepage {publications.incollection.#.url}^^xsd:string ; dcterms:partOf :books/{publications.incollection.#.proceedings} . :books/{publications.incollection.#.proceedings} a :Book ; dc:title {publications.incollection.#.booktitle}^^xsd:string . "
+            "target": ":collections/{publications.incollection.#.dblp_key} a :BookChapter ; a :Publication ; dc:creator :authors/{_id} ; dc:title {publications.incollection.#.title}^^xsd:string ; dcterms:issued {publications.incollection.#.year}^^xsd:integer ; swrc:pages {publications.incollection.#.pages}^^xsd:string ; foaf:homepage {publications.incollection.#.url}^^xsd:string ; :appearsIn {publications.incollection.#.booktitle}^^xsd:string . "
         }
     ]
 }

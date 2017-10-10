@@ -28,17 +28,6 @@
         ]
     ].
 
-<#Author_Agent>
-    xrr:logicalSource :source_author ;
-    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/authors/{_id}"];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [
-           rr:constant foaf:Agent;
-           rr:termType rr:IRI
-        ]
-    ].
-
 <#Author_name>
     a rr:TriplesMap;
     xrr:logicalSource :source_author ;
@@ -62,14 +51,6 @@
 :source_journal xrr:query """db.publications.find({'type' : 'article'})"""; 
 rml:iterator "$" ; 
 xrr:uniqueRef "_id" .
-
-<#Article_swrc_Journal>
-    xrr:logicalSource :source_journal ;
-    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{_id}"];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [ rr:constant swrc:Journal; rr:termType rr:IRI]
-    ].
 
 <#Article_JournalArticle>
     xrr:logicalSource :source_journal ;
@@ -111,8 +92,6 @@ xrr:uniqueRef "_id" .
         rr:objectMap [ xrr:reference "$.pages" ]
     ].
 
-
-# empty!
 <#Article_appearsIn>
     xrr:logicalSource :source_journal ;
     rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/journals/{_id}"];
@@ -143,15 +122,6 @@ xrr:uniqueRef "_id" .
 # ":inproceedings/{_id} a swrc:Conference ; a :ConferencePaper ; a :Publication ; dc:title {title}^^xsd:string ; dcterms:issued {year}^^xsd:integer ; swrc:pages {pages}^^xsd:string ; foaf:homepage {url}^^xsd:string ; dcterms:partOf :proceedings/{proceedings} . :proceedings/{proceedings} a :Proceedings ; dc:title {booktitle}^^xsd:string . "
 
 :source_inproceedings xrr:query """db.publications.find({'type' : 'inproceedings'})"""; rml:iterator "$" ; xrr:uniqueRef "_id".
-
-<#inproceedings_swrc_Conference>
-    xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{_id}"];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [ rr:constant swrc:Conference; rr:termType rr:IRI]
-    ].
-
 
 <#inproceedings_ConferencePaper>
     xrr:logicalSource :source_inproceedings ;
@@ -202,34 +172,17 @@ xrr:uniqueRef "_id" .
         rr:objectMap [ xrr:reference "$.url" ]
     ].
     
-<#inproceedings_partOf>
+<#inproceedings_appearsIn>
     xrr:logicalSource :source_inproceedings ;
     rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{_id}"];
     rr:predicateObjectMap [
-        rr:predicate dcterms:partOf;
-        rr:objectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{$.proceedings}"; rr:termType rr:IRI]
-    ].    
-    
-<#Proceedings>
-    xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{$.proceedings}"];
-    rr:predicateObjectMap [
-        rr:predicate dcterms:partOf;
-        rr:objectMap [ rr:constant :Proceedings; rr:termType rr:IRI]        
-    ].   
-
-<#proceedings_title>
-    xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{$.proceedings}"];
-    rr:predicateObjectMap [
-        rr:predicate dc:title;
+        rr:predicate :appearsIn;
         rr:objectMap [ xrr:reference "$.booktitle" ]
     ].    
-
-### CHECK!!!
+    
 <#inproceedings_creator>
     xrr:logicalSource :source_inproceedings ;
-    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{_id}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/inproceedings/{_id}"];
     rr:predicateObjectMap [
         rr:predicate dc:creator;
         rr:objectMap [ rr:template "http://dblp.l3s.de/d2r/authors/{authors[*]._id}"; rr:termType rr:IRI]
@@ -239,15 +192,6 @@ xrr:uniqueRef "_id" .
 # ":collections/{_id} a swrc:Collection ; a :BookChapter ; a :Publication ; dc:title {title}^^xsd:string ; dcterms:issued {year}^^xsd:integer ; swrc:pages {pages}^^xsd:string ; foaf:homepage {url}^^xsd:string ; dcterms:partOf :books/{proceedings} ; :chapterIn :books/{proceedings} . :books/{proceedings} a :Book ; dc:title {booktitle}^^xsd:string . "    
 
 :source_incollection xrr:query """db.publications.find({'type' : 'incollection'})"""; rml:iterator "$" .
-
-<#collections_swrc_Conference>
-    xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{_id}"];
-    rr:predicateObjectMap [
-        rr:predicate rdf:type;
-        rr:objectMap [ rr:constant swrc:Collection; rr:termType rr:IRI]
-    ].
-
 
 <#collections_BookChapter>
     xrr:logicalSource :source_incollection ;
@@ -298,34 +242,17 @@ xrr:uniqueRef "_id" .
         rr:objectMap [ xrr:reference "$.url" ]
     ].
     
-<#collections_partOf>
+<#collections_appearsIn>
     xrr:logicalSource :source_incollection ;
     rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{_id}"];
     rr:predicateObjectMap [
-        rr:predicate dcterms:partOf;
-        rr:objectMap [ rr:template "http://dblp.l3s.de/d2r/proceedings/{$.proceedings}"; rr:termType rr:IRI]
+        rr:predicate :appearsIn;
+        rr:objectMap [ xrr:reference "$.booktitle" ]
     ].    
     
-<#Book>
+<#collections_creator>
     xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/books/{$.proceedings}"];
-    rr:predicateObjectMap [
-        rr:predicate dcterms:partOf;
-        rr:objectMap [ rr:constant :Book; rr:termType rr:IRI]        
-    ].   
-
-<#Book_title>
-    xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/books/{$.proceedings}"];
-    rr:predicateObjectMap [
-        rr:predicate dc:title;
-        rr:objectMap [ xrr:reference "$.booktitle" ]
-    ].  
-    
-### CHECK SUBJECT !!!
-<#Book_creator>
-    xrr:logicalSource :source_incollection ;
-    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/books/{proceedings}"];
+    rr:subjectMap [ rr:template "http://dblp.l3s.de/d2r/collections/{_id}"];
     rr:predicateObjectMap [
         rr:predicate dc:creator;
         rr:objectMap [ rr:template "http://dblp.l3s.de/d2r/authors/{authors[*]._id}"; rr:termType rr:IRI]
