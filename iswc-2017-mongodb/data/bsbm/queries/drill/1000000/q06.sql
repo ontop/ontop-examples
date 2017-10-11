@@ -4,6 +4,6 @@ SELECT  'http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProduc
 FROM
  `mongo`.`bsbm1000000`.`products` as `products`
 
-WHERE ILIKE(`productName`, '%annin%')
+WHERE ILIKE(`productName`, '%infe%')
 ORDER BY `productLabel`
 LIMIT 5

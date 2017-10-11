@@ -19,7 +19,7 @@ WHERE
  `products2`.`properties`['numeric2'] > 50 AND `products2`.`type`['typeId'] = 162
  )t2
 WHERE
-(`t2`.`featuresf3`['featureId'] = 695  AND  `t2`.`featuresf4`['featureId'] = 52 )
+(`t2`.`featuresf3`['featureId'] = 53  AND  `t2`.`featuresf4`['featureId'] = 52 )
 UNION
 SELECT
 `t1`.`productName` as `productName`,
@@ -39,7 +39,7 @@ WHERE
 
 )t1
 WHERE
-(`t1`.`featuresf5`['featureId'] = 689  AND  `t1`.`featuresf6`['featureId'] = 52 )
+(`t1`.`featuresf5`['featureId'] = 55  AND  `t1`.`featuresf6`['featureId'] = 52 )
 )
 
 

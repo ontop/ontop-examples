@@ -16,10 +16,10 @@ FROM
  `mongo`.`bsbm1000000`.`products` as `products2`
 
 WHERE
- `products2`.`properties`['numeric2'] > 50 AND `products2`.`type`['typeId'] = 162
+ `products2`.`properties`['numeric2'] > 10 AND `products2`.`type`['typeId'] = 2623
  )t2
 WHERE
-(`t2`.`featuresf3`['featureId'] = 695  AND  `t2`.`featuresf4`['featureId'] = 52 )
+(`t2`.`featuresf3`['featureId'] = 66  AND  `t2`.`featuresf4`['featureId'] = 67 )
 UNION
 SELECT
 `t1`.`productName` as `productName`,
@@ -35,11 +35,11 @@ FROM
  `mongo`.`bsbm1000000`.`products` as `products1`
 
 WHERE
- `products1`.`properties`['numeric1'] > 500 AND `products1`.`type`['typeId'] = 162
+ `products1`.`properties`['numeric1'] > 500 AND `products1`.`type`['typeId'] = 2623
 
 )t1
 WHERE
-(`t1`.`featuresf5`['featureId'] = 689  AND  `t1`.`featuresf6`['featureId'] = 52 )
+(`t1`.`featuresf5`['featureId'] = 66  AND  `t1`.`featuresf6`['featureId'] = 68 )
 )
 
 

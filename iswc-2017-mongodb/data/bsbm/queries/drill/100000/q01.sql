@@ -9,6 +9,6 @@ productName AS label
       productName,
       properties
     FROM mongo.`bsbm100000`.`products`
-    WHERE `type`['typeId']=162 AND properties['numeric1']=831
+    WHERE `type`['typeId']=1174 AND properties['numeric1']=831
 ) t
 WHERE t.feature_1.featureId=52 AND t.feature_2.featureId=55

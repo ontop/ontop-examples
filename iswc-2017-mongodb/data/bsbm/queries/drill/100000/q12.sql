@@ -10,5 +10,5 @@ productName as productName
 FROM
  `mongo`.`bsbm100000`.`products` as `products`
 )t
-WHERE `offers`['offerId'] = 20681
+WHERE `offers`['offerId'] = 5300215
 
