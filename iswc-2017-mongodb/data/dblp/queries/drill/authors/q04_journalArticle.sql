@@ -12,4 +12,4 @@ FROM (
     FLATTEN(`authors`.`publications`.`article`) AS `articles`
   FROM mongo.`dblp_authors`.`authors` as `authors`
 ) t
-LIMIT 1000
+LIMIT 50000

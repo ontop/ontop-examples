@@ -1,3 +1,4 @@
 PREFIX : <http://awards.org/> 
 SELECT DISTINCT ?x 
 WHERE { ?x a :Award . }
+LIMIT 50000

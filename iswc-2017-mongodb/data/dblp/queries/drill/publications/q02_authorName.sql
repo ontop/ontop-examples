@@ -6,4 +6,4 @@ FROM (
     FLATTEN(`authors`) AS `author`
   FROM mongo.`dblp_publications`.`publications`
 ) t
-LIMIT 5000
+LIMIT 50000

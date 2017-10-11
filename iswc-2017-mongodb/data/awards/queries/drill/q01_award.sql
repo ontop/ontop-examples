@@ -7,3 +7,4 @@ SELECT 'http://ex.org/awards/person/' || `t`.`fawards`['id'] || `t`.`fawards`['a
 FROM
 (SELECT FLATTEN(`awards`) as `fawards`
 FROM `mongo`.`awards_20170306`.`awards` as `awards`) t
+LIMIT 50000

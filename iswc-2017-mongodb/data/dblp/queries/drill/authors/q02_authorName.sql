@@ -8,4 +8,4 @@
     `name`
   FROM mongo.`dblp_authors`.`authors`
 
-LIMIT 5000
+LIMIT 50000

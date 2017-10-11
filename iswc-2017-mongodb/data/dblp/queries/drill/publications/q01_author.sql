@@ -4,4 +4,4 @@ SELECT 'http://dblp.l3s.de/d2r/authors/' || `author`['_id'] AS x FROM (
     FLATTEN(`authors`) AS `author`
   FROM mongo.`dblp_publications`.`publications`
 ) t
-LIMIT 5000
+LIMIT 50000

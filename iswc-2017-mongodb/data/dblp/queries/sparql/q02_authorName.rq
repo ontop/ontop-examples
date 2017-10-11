@@ -5,4 +5,4 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 
 SELECT ?name 
 WHERE { ?x a :Author ; foaf:name ?name . 
-} LIMIT 5000
+} LIMIT 50000

@@ -7,4 +7,4 @@ FROM (
   FROM mongo.`dblp_ap`.`publications`
   WHERE `type`='article'
 ) t
-LIMIT 1000
+LIMIT 50000
