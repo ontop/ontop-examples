@@ -1,4 +1,0 @@
-PREFIX : <http://dblp.l3s.de/d2r/>
-SELECT ?x 
-WHERE { ?x a :Author .
-} LIMIT 50000

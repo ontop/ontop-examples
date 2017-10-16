@@ -1,5 +1,0 @@
-mongo.url = mongodb://obdalin.inf.unibz.it/dblp_ap
-#mongo.url = mongodb://localhost/dblp_ap
-mongo.user =
-mongo.password =
-
