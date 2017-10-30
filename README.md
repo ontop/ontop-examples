@@ -1,7 +1,7 @@
 ontop-examples
 ==============
 
-This repository contains the supplemental materials  for Ontop related publications/tutorials:
+This repository contains the supplemental materials of publications/tutorials about Ontop:
 
 - [AAAI 2017 Paper](aaai-2017-MTL-datalog)
 - [EKAW 2016 Tutorial](ekaw-tutorial-2016)
