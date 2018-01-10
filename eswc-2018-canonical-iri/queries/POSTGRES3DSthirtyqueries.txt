@@ -1,0 +1,100 @@
+0 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . }LIMIT 1000
+1 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :R1 ?w1 . }LIMIT 1000
+2 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :R1 ?w1 . ?x :R2 ?w2 . }LIMIT 1000
+3 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :R2 ?w2 . ?x :R3 ?w3 . }LIMIT 1000
+4 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :R3 ?w3 . ?x :R4 ?w4 . }LIMIT 1000
+5 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S1 ?y1 . Filter( ?y1 < 1000 ) }
+6 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S1 ?y1 . ?x :R1 ?w1 . Filter( ?y1 < 1000 ) }
+7 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S1 ?y1 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y1 < 1000 ) }
+8 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S1 ?y1 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y1 < 1000 ) }
+9 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S1 ?y1 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y1 < 1000 ) }
+10 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S1 ?y1 . ?x :S2 ?y2 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+11 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R1 ?w1 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+12 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+13 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+14 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+15 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S2 ?y2 . ?x :S3 ?y3 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+16 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R1 ?w1 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+17 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+18 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+19 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+20 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S3 ?y3 . ?x :S4 ?y4 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+21 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R1 ?w1 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+22 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+23 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+24 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A1 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+25 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . }LIMIT 1000
+26 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :R1 ?w1 . }LIMIT 1000
+27 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :R1 ?w1 . ?x :R2 ?w2 . }LIMIT 1000
+28 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :R2 ?w2 . ?x :R3 ?w3 . }LIMIT 1000
+29 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :R3 ?w3 . ?x :R4 ?w4 . }LIMIT 1000
+30 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S1 ?y1 . Filter( ?y1 < 1000 ) }
+31 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S1 ?y1 . ?x :R1 ?w1 . Filter( ?y1 < 1000 ) }
+32 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S1 ?y1 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y1 < 1000 ) }
+33 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S1 ?y1 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y1 < 1000 ) }
+34 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S1 ?y1 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y1 < 1000 ) }
+35 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S1 ?y1 . ?x :S2 ?y2 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+36 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R1 ?w1 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+37 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+38 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+39 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+40 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S2 ?y2 . ?x :S3 ?y3 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+41 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R1 ?w1 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+42 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+43 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+44 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+45 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S3 ?y3 . ?x :S4 ?y4 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+46 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R1 ?w1 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+47 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+48 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+49 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A2 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+50 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . }LIMIT 1000
+51 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :R1 ?w1 . }LIMIT 1000
+52 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :R1 ?w1 . ?x :R2 ?w2 . }LIMIT 1000
+53 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :R2 ?w2 . ?x :R3 ?w3 . }LIMIT 1000
+54 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :R3 ?w3 . ?x :R4 ?w4 . }LIMIT 1000
+55 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S1 ?y1 . Filter( ?y1 < 1000 ) }
+56 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S1 ?y1 . ?x :R1 ?w1 . Filter( ?y1 < 1000 ) }
+57 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S1 ?y1 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y1 < 1000 ) }
+58 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S1 ?y1 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y1 < 1000 ) }
+59 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S1 ?y1 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y1 < 1000 ) }
+60 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S1 ?y1 . ?x :S2 ?y2 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+61 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R1 ?w1 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+62 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+63 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+64 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+65 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S2 ?y2 . ?x :S3 ?y3 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+66 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R1 ?w1 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+67 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+68 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+69 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+70 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S3 ?y3 . ?x :S4 ?y4 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+71 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R1 ?w1 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+72 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+73 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+74 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A3 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+75 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . }LIMIT 1000
+76 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :R1 ?w1 . }LIMIT 1000
+77 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :R1 ?w1 . ?x :R2 ?w2 . }LIMIT 1000
+78 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :R2 ?w2 . ?x :R3 ?w3 . }LIMIT 1000
+79 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :R3 ?w3 . ?x :R4 ?w4 . }LIMIT 1000
+80 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S1 ?y1 . Filter( ?y1 < 1000 ) }
+81 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S1 ?y1 . ?x :R1 ?w1 . Filter( ?y1 < 1000 ) }
+82 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S1 ?y1 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y1 < 1000 ) }
+83 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S1 ?y1 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y1 < 1000 ) }
+84 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S1 ?y1 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y1 < 1000 ) }
+85 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S1 ?y1 . ?x :S2 ?y2 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+86 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R1 ?w1 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+87 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+88 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+89 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S1 ?y1 . ?x :S2 ?y2 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y1 < 1000 ) Filter( ?y2 < 1000 ) }
+90 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S2 ?y2 . ?x :S3 ?y3 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+91 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R1 ?w1 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+92 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+93 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+94 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S2 ?y2 . ?x :S3 ?y3 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y2 < 1000 ) Filter( ?y3 < 1000 ) }
+95 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S3 ?y3 . ?x :S4 ?y4 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+96 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R1 ?w1 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+97 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R1 ?w1 . ?x :R2 ?w2 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+98 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R2 ?w2 . ?x :R3 ?w3 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
+99 & PREFIX :	<http://www.example.org/> SELECT *  WHERE {?x a :A4 . ?x :S3 ?y3 . ?x :S4 ?y4 . ?x :R3 ?w3 . ?x :R4 ?w4 . Filter( ?y3 < 1000 ) Filter( ?y4 < 1000 ) }
