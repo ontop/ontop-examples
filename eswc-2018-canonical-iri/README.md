@@ -14,7 +14,9 @@ We provide :
 
 To test the Ontop system use [CanonicalIRIOntowis.jar](CanonicalIRIOntowis.jar) and the folder [resources](resources).
 
-To create the database use the sql files in the folder [tables](tables).
+To create the database Wisconsin refers to the Wisconsin benchmark. 
+To create the canonical linking tables use the sql files in the folder [tables](tables).
+
 Modify the obda files in [resources] so that they will connect to your database.
 
 Add the project parameters to the jar as follows:
@@ -47,7 +49,7 @@ In particular
 
  `java -jar -Xmx20G CanonicalIRIOntowis.jar --POSTGRES3DSsixty 1 `
 
-The results will be provided in [resources/results](resources/results) .
+
 
 
 
