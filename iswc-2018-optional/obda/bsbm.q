@@ -191,13 +191,12 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX iso3166: <http://downlode.org/rdf/iso-3166/countries#>
 PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
 
-SELECT ?id ?review_text ?lang
+SELECT ?pid ?review_text ?lang
  {
- 	?review a bsbm:Review .	
- 	?x bsbm:productId ?id .
- 	FILTER (?id < 1000)
-	 
 	?product a bsbm:Product .
+	?product bsbm:productId ?pid .
+ 	FILTER (?id < 1000)
+	
     OPTIONAL {
 	  ?review bsbm:reviewFor ?product .
           ?review rev:text ?review_text .
@@ -228,11 +227,11 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX iso3166: <http://downlode.org/rdf/iso-3166/countries#>
 PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
 
-SELECT ?id ?review_text ?lang
+SELECT ?pid ?review_text ?lang
  {
-  	?review a bsbm:Review .	
-  	?x bsbm:productId ?id .
-  	FILTER (?id < 1000)
+	?product a bsbm:Product .
+	?product bsbm:productId ?pid .
+ 	FILTER (?id < 1000)	
 	 
  	?product a bsbm:Product .
      OPTIONAL {
@@ -271,9 +270,12 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX iso3166: <http://downlode.org/rdf/iso-3166/countries#>
 PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
 
-SELECT ?id ?review_text ?lang
+SELECT ?pid ?review_text ?lang
  {
 	?product a bsbm:Product .
+	?product bsbm:productId ?pid .
+ 	FILTER (?id < 1000)
+	
     OPTIONAL {
 	  ?review bsbm:reviewFor ?product .
           ?review rev:text ?review_text.
@@ -300,4 +302,3 @@ SELECT ?id ?review_text ?lang
     }
 	FILTER (Bound(?review))
 }
-LIMIT 100
