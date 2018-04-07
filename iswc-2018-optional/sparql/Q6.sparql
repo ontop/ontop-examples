@@ -1,0 +1,18 @@
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX rev: <http://purl.org/stuff/rev#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX bsbm-inst-product: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product>
+
+
+SELECT ?review ?rating
+WHERE {
+	?review a bsbm:Review .	
+	?x bsbm:productId ?id .
+	FILTER (?id < 1000)
+	?review bsbm:reviewFor ?x .
+	
+	OPTIONAL { ?review bsbm:rating1 ?rating . }
+	OPTIONAL { ?review bsbm:rating2 ?rating . }
+	OPTIONAL { ?review bsbm:rating3 ?rating . }
+}
