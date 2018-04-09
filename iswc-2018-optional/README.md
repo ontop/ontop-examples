@@ -1,7 +1,7 @@
 Supplementary materials for the ISWC 2018 submission "Efficient Handling of SPARQL OPTIONAL for OBDA"
 --------------------------------------------------------------------------------------------------
 
-This repository contains the supplemental materials  for ISWC 2018 .
+This repository contains the supplemental materials  for ISWC 2018.
 We provide :
 
 - The [OBDA Specification](obda) (including ontologies, mapping in Ontop format)
