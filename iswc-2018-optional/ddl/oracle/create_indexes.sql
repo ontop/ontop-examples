@@ -1,5 +1,3 @@
-CREATE INDEX offer_product_idx ON "offer" ("product")  TABLESPACE users;
-
 CREATE INDEX offer_producer_idx ON "offer" ("producer");
 CREATE INDEX offer_vendor_idx ON "offer" ("vendor");
 
