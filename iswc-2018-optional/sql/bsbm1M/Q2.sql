@@ -2,7 +2,8 @@ SELECT *
 FROM (
 SELECT
    CONCAT('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product', producttypeproductVIEW0.product) AS product,
-   productVIEW2.label AS label
+   productVIEW2.label AS label,
+   CONCAT('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType', producttypeproductVIEW0.producttype) AS type
 FROM
     producttypeproduct producttypeproductVIEW0
                 JOIN

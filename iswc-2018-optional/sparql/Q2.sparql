@@ -12,10 +12,10 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX iso3166: <http://downlode.org/rdf/iso-3166/countries#>
 PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
 
-SELECT ?product ?label
+SELECT ?product ?label ?type
 WHERE {
   ?product rdfs:label ?label .
-  # ?product bsbm:type bsbm-inst:ProductType24 .
+  ?product bsbm:type ?type .
   ?product bsbm:productFeature bsbm-inst:ProductFeature78 .
   ?product bsbm:productPropertyNumeric1 ?p1 .
   FILTER ( ?p1 > 500 )
@@ -27,3 +27,4 @@ WHERE {
   }
   FILTER (!bound(?testVar))
 }
+

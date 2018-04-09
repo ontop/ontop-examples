@@ -7,7 +7,10 @@
 -- Two random numbers between 1 and 500
 
 
-SELECT p.nr, p.label
+SELECT
+    CONCAT('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product', p.nr) AS product,
+   label,
+   CONCAT('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType', ptp.productType) AS type
 FROM product p, producttypeproduct ptp
 WHERE p.nr=ptp.product
 --	AND productType=24 -- @ProductType@
