@@ -1,1391 +1,863 @@
-<urn:Product4>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "label" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www.w3.org/2000/01/rdf-schema#label>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix :      <http://obda.inf.unibz.it/ontop/benchmark/bsbm.owl#> .
+@prefix rev:   <http://purl.org/stuff/rev#> .
+@prefix obda:  <https://w3id.org/obda/vocabulary#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bsbm:  <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix iso3166: <http://downlode.org/rdf/iso-3166/countries#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
-<urn:Person3>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, name, mbox_sha1sum, country, publisher, publishDate from person"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/RatingSite{publisher}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/publisher>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Product4>  a              rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "label" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rdfs:label
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Person2_1>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, name, mbox_sha1sum, country, publisher, publishDate from person"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://downlode.org/rdf/iso-3166/countries#{country}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "mbox_sha1sum" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://xmlns.com/foaf/0.1/mbox_sha1sum>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "name" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://xmlns.com/foaf/0.1/name>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Person3>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, name, mbox_sha1sum, country, publisher, publishDate from person"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/RatingSite{publisher}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  dc:publisher
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Review4>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{product}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewFor>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Person2_1>  a             rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, name, mbox_sha1sum, country, publisher, publishDate from person"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://downlode.org/rdf/iso-3166/countries#{country}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  bsbm:country
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "mbox_sha1sum" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  foaf:mbox_sha1sum
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "name" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  foaf:name
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:Review4>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{product}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  bsbm:reviewFor
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
 <urn:Product_Feature5>
-        a       <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, publisher, publishDate from productfeature"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "publishDate" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/date>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, publisher, publishDate from productfeature"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "publishDate" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  dc:date
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Producer3>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from producer"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "homepage" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://xmlns.com/foaf/0.1/homepage>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Producer3>  a             rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from producer"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "homepage" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  foaf:homepage
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Producer2_1>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from producer"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "label" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www.w3.org/2000/01/rdf-schema#label>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "comment" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www.w3.org/2000/01/rdf-schema#comment>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Vendor4>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://downlode.org/rdf/iso-3166/countries#{country}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  bsbm:country
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Product_Type5>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, parent, publisher, publishDate from producttype"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "publishDate" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/date>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Producer2_1>  a           rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from producer"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "label" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rdfs:label
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "comment" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rdfs:comment
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Vendor4>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://downlode.org/rdf/iso-3166/countries#{country}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Product_Type5>  a         rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, parent, publisher, publishDate from producttype"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "publishDate" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  dc:date
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Review7>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "text" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/stuff/rev#text>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Review7>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "text" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rev:text
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
 <urn:Product_Feature>
-        a       <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, publisher, publishDate from productfeature"
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#class>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductFeature> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+        a                rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select nr, label, comment, publisher, publishDate from productfeature"
+                         ] ;
+        rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     bsbm:ProductFeature ;
+                           rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{nr}" ;
+                           rr:termType  rr:IRI
+                         ] .
 
-<urn:Producer6>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from producer"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "publishDate" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/date>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Producer6>  a             rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from producer"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "publishDate" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  dc:date
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Review2>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "title" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/title>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Review2>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "title" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  dc:title
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
 <urn:Product_Type2_1>
-        a       <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, parent, publisher, publishDate from producttype"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "label" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www.w3.org/2000/01/rdf-schema#label>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "comment" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www.w3.org/2000/01/rdf-schema#comment>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, parent, publisher, publishDate from producttype"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "label" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rdfs:label
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "comment" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rdfs:comment
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
 <urn:Product_Feature3>
-        a       <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, publisher, publishDate from productfeature"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "comment" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www.w3.org/2000/01/rdf-schema#comment>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, publisher, publishDate from productfeature"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "comment" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rdfs:comment
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Product_1>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "nr" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productId>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#class>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Product> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Product_1>  a             rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "nr" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productId
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:class     bsbm:Product ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Product_Type3>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, parent, publisher, publishDate from producttype"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution{publisher}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/publisher>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Product_Type3>  a         rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, parent, publisher, publishDate from producttype"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution{publisher}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  dc:publisher
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Product5>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "comment" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www.w3.org/2000/01/rdf-schema#comment>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Product5>  a              rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "comment" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rdfs:comment
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Person4>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, name, mbox_sha1sum, country, publisher, publishDate from person"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "publishDate" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/date>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Person4>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, name, mbox_sha1sum, country, publisher, publishDate from person"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "publishDate" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  dc:date
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Review5>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{person}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/stuff/rev#reviewer>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Review5>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{person}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  rev:reviewer
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Vendor2_1>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "comment" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www.w3.org/2000/01/rdf-schema#comment>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "label" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www.w3.org/2000/01/rdf-schema#label>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Vendor2_1>  a             rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "comment" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rdfs:comment
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "label" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rdfs:label
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Producer4>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from producer"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://downlode.org/rdf/iso-3166/countries#{country}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/country>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Producer4>  a             rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from producer"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://downlode.org/rdf/iso-3166/countries#{country}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  bsbm:country
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Vendor5>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor{nr}/Vendor{nr}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/publisher>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Vendor5>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor{nr}/Vendor{nr}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  dc:publisher
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Producer>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from producer"
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#class>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Producer> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Producer>  a        rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from producer"
+                         ] ;
+        rr:subjectMap    [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:class     bsbm:Producer ;
+                           rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{nr}" ;
+                           rr:termType  rr:IRI
+                         ] .
 
-<urn:Person>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, name, mbox_sha1sum, country, publisher, publishDate from person"
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#class>
-                          <http://xmlns.com/foaf/0.1/Person> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Person>  a          rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select nr, name, mbox_sha1sum, country, publisher, publishDate from person"
+                         ] ;
+        rr:subjectMap    [ a            rr:SubjectMap , rr:TermMap ;
+                           rr:class     foaf:Person ;
+                           rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Reviewer{nr}" ;
+                           rr:termType  rr:IRI
+                         ] .
 
 <urn:Product_has_Product_Type>
-        a       <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select product.producer as product_producer, product.nr as product_nr, producttypeproduct.productType from product, producttypeproduct where product.nr = producttypeproduct.product"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{productType}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/type>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{product_nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select product.producer as product_producer, product.nr as product_nr, producttypeproduct.productType from product, producttypeproduct where product.nr = producttypeproduct.product"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{productType}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  bsbm:type
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{product_nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Review8>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "publishDate" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/date>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Review8>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "publishDate" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  dc:date
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Product3>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{producer}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/publisher>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Product3>  a              rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{producer}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  dc:publisher
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Vendor>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#class>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Vendor> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Vendor>  a          rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
+                         ] ;
+        rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     bsbm:Vendor ;
+                           rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
+                           rr:termType  rr:IRI
+                         ] .
 
 <urn:Product_Feature4>
-        a       <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, publisher, publishDate from productfeature"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution{publisher}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/publisher>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, publisher, publishDate from productfeature"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/StandardizationInstitution{publisher}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  dc:publisher
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Product_Type4>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, parent, publisher, publishDate from producttype"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{parent}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/subClassOf>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Product_Type4>  a         rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, parent, publisher, publishDate from producttype"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{parent}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  bsbm:subClassOf
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Vendor3>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "homepage" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://xmlns.com/foaf/0.1/homepage>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Vendor3>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "homepage" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  foaf:homepage
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Review>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#class>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Review> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Review>  a          rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
+                         ] ;
+        rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     bsbm:Review ;
+                           rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
+                           rr:termType  rr:IRI
+                         ] .
 
-<urn:Review6>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/RatingSite{publisher}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/publisher>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Review6>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/RatingSite{publisher}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  dc:publisher
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Product_Type>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, parent, publisher, publishDate from producttype"
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#class>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/ProductType> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Product_Type>  a    rr:TriplesMap ;
+        rr:logicalTable  [ a            rr:R2RMLView ;
+                           rr:sqlQuery  "select nr, label, comment, parent, publisher, publishDate from producttype"
+                         ] ;
+        rr:subjectMap    [ a            rr:TermMap , rr:SubjectMap ;
+                           rr:class     bsbm:ProductType ;
+                           rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType{nr}" ;
+                           rr:termType  rr:IRI
+                         ] .
 
-<urn:Vendor6>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "publishDate" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/date>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Vendor6>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, homepage, country, publisher, publishDate from vendor"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "publishDate" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  dc:date
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Review3_1>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "rating4" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating4>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "rating3" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating3>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "rating2" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating2>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "rating1" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/rating1>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#SubjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Review1>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "reviewDate" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:reviewDate
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Review1>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "reviewDate" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/reviewDate>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Review3_1>  a             rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, product, producer, person, reviewDate, title, text, language, rating1, rating2, rating3, rating4, publisher, publishDate from review"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "rating1" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:rating1
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "rating2" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:rating2
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "rating4" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:rating4
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "rating3" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:rating3
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromRatingSite/Review{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
 <urn:Product_Feature2>
-        a       <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, publisher, publishDate from productfeature"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "label" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www.w3.org/2000/01/rdf-schema#label>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, publisher, publishDate from productfeature"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "label" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  rdfs:label
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Offer_1>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, product, producer, vendor, price, validFrom, validTo, deliveryDays, offerWebpage, publisher, publishDate from offer"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{product}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/product>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "price" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/price>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "publishDate" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/date>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "deliveryDays" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/deliveryDays>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "validTo" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validTo>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{vendor}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/publisher>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{vendor}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/vendor>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "offerWebpage" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/offerWebpage>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "validFrom" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/validFrom>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#class>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/Offer> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Offer_1>  a               rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, product, producer, vendor, price, validFrom, validTo, deliveryDays, offerWebpage, publisher, publishDate from offer"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "validFrom" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:validFrom
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "validTo" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:validTo
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{vendor}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  bsbm:vendor
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Vendor{vendor}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  dc:publisher
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "price" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:price
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "offerWebpage" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:offerWebpage
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "deliveryDays" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:deliveryDays
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{product}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  bsbm:product
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "publishDate" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  dc:date
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:class     bsbm:Offer ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromVendor/Offer{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
-<urn:Product2_1>  a  <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "publishDate" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://purl.org/dc/elements/1.1/date>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyNum1" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric1>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyTex4" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual4>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyNum6" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric6>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyNum4" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric4>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyTex3" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual3>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyTex2" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual2>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyNum2" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric2>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyTex5" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual5>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyNum3" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric3>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyTex1" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual1>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{producer}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/producer>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyNum5" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyNumeric5>
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#ObjectMap> , <http://www.w3.org/ns/r2rml#TermMap> ;
-                            <http://www.w3.org/ns/r2rml#column>
-                                    "propertyTex6" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#Literal>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productPropertyTextual6>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+<urn:Product2_1>  a            rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "propertyNum2" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyNumeric2
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "propertyNum4" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyNumeric4
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "propertyTex4" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyTextual4
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "propertyNum1" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyNumeric1
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "propertyTex5" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyTextual5
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "propertyTex2" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyTextual2
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "propertyNum5" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyNumeric5
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "propertyNum3" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyNumeric3
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Producer{producer}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  bsbm:producer
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "propertyTex3" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyTextual3
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "propertyNum6" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyNumeric6
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "propertyTex1" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyTextual1
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "publishDate" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  dc:date
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "propertyTex6" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  bsbm:productPropertyTextual6
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
 
 <urn:Product_has_Product_Feature>
-        a       <http://www.w3.org/ns/r2rml#TriplesMap> ;
-        <http://www.w3.org/ns/r2rml#logicalTable>
-                [ a       <http://www.w3.org/ns/r2rml#R2RMLView> ;
-                  <http://www.w3.org/ns/r2rml#sqlQuery>
-                          "select product.producer as product_producer, product.nr as product_nr, productfeatureproduct.productFeature as feature_product from product, productfeatureproduct where product.nr = productfeatureproduct.product"
-                ] ;
-        <http://www.w3.org/ns/r2rml#predicateObjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
-                  <http://www.w3.org/ns/r2rml#objectMap>
-                          [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#ObjectMap> ;
-                            <http://www.w3.org/ns/r2rml#template>
-                                    "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{feature_product}" ;
-                            <http://www.w3.org/ns/r2rml#termType>
-                                    <http://www.w3.org/ns/r2rml#IRI>
-                          ] ;
-                  <http://www.w3.org/ns/r2rml#predicate>
-                          <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/productFeature>
-                ] ;
-        <http://www.w3.org/ns/r2rml#subjectMap>
-                [ a       <http://www.w3.org/ns/r2rml#TermMap> , <http://www.w3.org/ns/r2rml#SubjectMap> ;
-                  <http://www.w3.org/ns/r2rml#template>
-                          "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{product_nr}" ;
-                  <http://www.w3.org/ns/r2rml#termType>
-                          <http://www.w3.org/ns/r2rml#IRI>
-                ] .
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select product.producer as product_producer, product.nr as product_nr, productfeatureproduct.productFeature as feature_product from product, productfeatureproduct where product.nr = productfeatureproduct.product"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductFeature{feature_product}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  bsbm:productFeature
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:template  "http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product{product_nr}" ;
+                                 rr:termType  rr:IRI
+                               ] .
