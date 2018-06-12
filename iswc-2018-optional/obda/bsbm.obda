@@ -74,51 +74,51 @@ mappingId	Product5
 target		bsbm-inst:dataFromProducer/Product{nr} rdfs:comment {comment} . 
 source		select nr, label, comment, producer, propertyNum1, propertyNum2, propertyNum3, propertyNum4, propertyNum5, propertyNum6, propertyTex1, propertyTex2, propertyTex3, propertyTex4, propertyTex5, publisher, propertyTex6, publishDate from product
 
-mappingId	Product has Product Feature
+mappingId	Product_has_Product_Feature
 target		bsbm-inst:dataFromProducer/Product{product_nr} bsbm:productFeature bsbm-inst:ProductFeature{feature_product} . 
 source		select product.producer as product_producer, product.nr as product_nr, productfeatureproduct.productFeature as feature_product from product, productfeatureproduct where product.nr = productfeatureproduct.product
 
-mappingId	Product has Product Type
+mappingId	Product_has_Product_Type
 target		bsbm-inst:dataFromProducer/Product{product_nr} bsbm:type bsbm-inst:ProductType{productType} . 
 source		select product.producer as product_producer, product.nr as product_nr, producttypeproduct.productType from product, producttypeproduct where product.nr = producttypeproduct.product
 
-mappingId	Product Feature
+mappingId	Product_Feature
 target		bsbm-inst:ProductFeature{nr} a bsbm:ProductFeature . 
 source		select nr, label, comment, publisher, publishDate from productfeature
 
-mappingId	Product Feature2
+mappingId	Product_Feature2
 target		bsbm-inst:ProductFeature{nr} rdfs:label {label} . 
 source		select nr, label, comment, publisher, publishDate from productfeature
 
-mappingId	Product Feature3
+mappingId	Product_Feature3
 target		bsbm-inst:ProductFeature{nr} rdfs:comment {comment} . 
 source		select nr, label, comment, publisher, publishDate from productfeature
 
-mappingId	Product Feature4
+mappingId	Product_Feature4
 target		bsbm-inst:ProductFeature{nr} dc:publisher bsbm-inst:StandardizationInstitution{publisher} . 
 source		select nr, label, comment, publisher, publishDate from productfeature
 
-mappingId	Product Feature5
+mappingId	Product_Feature5
 target		bsbm-inst:ProductFeature{nr} dc:date {publishDate} . 
 source		select nr, label, comment, publisher, publishDate from productfeature
 
-mappingId	Product Type
+mappingId	Product_Type
 target		bsbm-inst:ProductType{nr} a bsbm:ProductType . 
 source		select nr, label, comment, parent, publisher, publishDate from producttype
 
-mappingId	Product Type2
+mappingId	Product_Type2
 target		bsbm-inst:ProductType{nr} rdfs:label {label} ; rdfs:comment {comment} . 
 source		select nr, label, comment, parent, publisher, publishDate from producttype
 
-mappingId	Product Type3
+mappingId	Product_Type3
 target		bsbm-inst:ProductType{nr} dc:publisher bsbm-inst:StandardizationInstitution{publisher} . 
 source		select nr, label, comment, parent, publisher, publishDate from producttype
 
-mappingId	Product Type4
+mappingId	Product_Type4
 target		bsbm-inst:ProductType{nr} bsbm:subClassOf bsbm-inst:ProductType{parent} . 
 source		select nr, label, comment, parent, publisher, publishDate from producttype
 
-mappingId	Product Type5
+mappingId	Product_Type5
 target		bsbm-inst:ProductType{nr} dc:date {publishDate} . 
 source		select nr, label, comment, parent, publisher, publishDate from producttype
 

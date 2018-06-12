@@ -302,3 +302,41 @@ SELECT ?pid ?review_text ?lang
     }
 	FILTER (Bound(?review))
 }
+
+[QueryItem="Q11"]
+PREFIX : <http://obda.inf.unibz.it/ontop/benchmark/bsbm.owl#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rev: <http://purl.org/stuff/rev#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX obda: <https://w3id.org/obda/vocabulary#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX iso3166: <http://downlode.org/rdf/iso-3166/countries#>
+PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
+
+SELECT ?rn ?pn ?text ?homepage
+WHERE {
+   ?r rev:reviewer ?rr .
+   ?rr foaf:name ?name .
+   ?r bsbm:reviewFor ?product .
+   ?product rdfs:label ?pn .
+   ?product bsbm:productId ?pid .
+   FILTER (?id < 1000)
+   OPTIONAL {
+     ?product bsbm:producer ?pr .
+     ?pr bsbm:country ?c .
+     ?rr bsbm:country ?c .
+     ?pr foaf:homepage ?homepage .
+   }
+   OPTIONAL {
+     ?o bsbm:product ?product .
+     ?o bsbsm:vendor ?v .
+     ?v bsbm:country ?c .
+     ?rr bsbm:country ?c .
+     ?v foaf:homepage ?homepage .
+   }
+}

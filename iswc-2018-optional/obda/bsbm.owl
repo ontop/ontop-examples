@@ -98,10 +98,10 @@
         <DataProperty abbreviatedIRI="rdfs:label"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="bsbm:productPropertyNumeric6"/>
+        <DataProperty abbreviatedIRI="bsbm:productPropertyTextual3"/>
     </Declaration>
     <Declaration>
-        <DataProperty abbreviatedIRI="bsbm:productPropertyTextual3"/>
+        <DataProperty abbreviatedIRI="bsbm:productPropertyNumeric6"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="dc:publisher"/>
