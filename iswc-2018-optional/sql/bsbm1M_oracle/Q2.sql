@@ -1,8 +1,5 @@
-SELECT *
-FROM (
-       SELECT
-       CONCAT('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product', producttypeproductVIEW0."product"
-       ) AS product,
+SELECT
+   CONCAT('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/dataFromProducer/Product', producttypeproductVIEW0."product") AS product,
    productVIEW2."label" AS label,
    CONCAT('http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/ProductType', producttypeproductVIEW0."productType") AS type
        FROM
@@ -35,6 +32,5 @@ FROM (
          QontopSubquery5View.v2 IS NULL AND
          productVIEW2."label" IS NOT NULL AND
          productVIEW2."propertyNum3" IS NOT NULL AND
-         productVIEW2."propertyNum1" IS NOT NULL
-     ) SUB_QVIEW;
+         productVIEW2."propertyNum1" IS NOT NULL;
 
