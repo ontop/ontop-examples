@@ -10,6 +10,7 @@ Requirements
 
 * [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 * Protégé bundle with Ontop from [SourceForge](https://sourceforge.net/projects/ontop4obda/files/ontop-3.0.0-beta-2/)
+* Tomact bundle for Ontop SPARQL endpoint [SourceForge](https://sourceforge.net/projects/ontop4obda/files/ontop-3.0.0-beta-2/)
 * [H2 with preloaded datasets](../h2.zip)
 
 
