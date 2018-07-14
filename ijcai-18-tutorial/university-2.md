@@ -129,7 +129,7 @@ We can now run the previous SPARQL queries and observe that the results combine
 entries from the two datasets.
 
 For instance
-```
+```sparql
 PREFIX : <http://example.org/voc#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
