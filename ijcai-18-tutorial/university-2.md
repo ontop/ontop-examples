@@ -128,5 +128,15 @@ And so on for the graduate students, the professors, etc.
 We can now run the previous SPARQL queries and observe that the results combine
 entries from the two datasets.
 
+For instance
+```sparql
+PREFIX : <http://example.org/voc#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT * {
+  ?prof a :Student ; foaf:lastName ?ln.
+}
+```
+
 
 [Next: SPARQL endpoint](sparql-endpoint.md)

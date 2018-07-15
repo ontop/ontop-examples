@@ -42,8 +42,8 @@ Procedure:
 PREFIX : <http://example.org/voc#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-SELECT DISTINCT ?prof ?lastName {
-  ?prof a :FullProfessor ; foaf:lastName ?lastName .
+SELECT DISTINCT * {
+  ?prof a :Student ; foaf:lastName ?ln.
 }
 ```
 
