@@ -7,9 +7,9 @@ This repository contains the supplemental materials of publications/tutorials ab
 - [Ontop tutorial](ontop-v3-tutorial)
 
 ## Tutorials at scientific events:
-- [AIxIA 2018 Tutorial](aixia-tutorial-2018)
-- [CIKM 2018 Tutorial](cikm-tutorial-2018)
-- [IJCAI 2018 Tutorial](ijcai-tutorial-2018)
+- [AIxIA 2018 Tutorial](aixia-2018-tutorial)
+- [CIKM 2018 Tutorial](cikm-2018-tutorial)
+- [IJCAI 2018 Tutorial](ijcai-18-tutorial)
 - [JDEV 2017](jdev-2017)
 - [EKAW 2016 Tutorial](ekaw-tutorial-2016)
 
