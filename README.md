@@ -17,7 +17,7 @@ This repository contains the supplemental materials of publications/tutorials ab
 ## Papers
 - [ISWC 2018 Paper](iswc-2018-optional)
 - [CIKM 20189 demo](cikm-2018-temporal-obda)
-- [JAIR 2018 Paper](jair-2018-MTL-datalog)
+- [JAIR 2018 Paper](jair-2017-MTL-datalog)
 - [AAAI 2017 Paper](aaai-2017-MTL-datalog)
 - [BLINK 2016 Paper](blink-2016-vig)
 - [AAAI 2016 Paper](aaai-2016-ontoprox)
