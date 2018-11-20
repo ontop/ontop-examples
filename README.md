@@ -3,8 +3,22 @@ ontop-examples
 
 This repository contains the supplemental materials of publications/tutorials about Ontop:
 
-- [AAAI 2017 Paper](aaai-2017-MTL-datalog)
+## General Tutorial of Ontop:
+- [Ontop tutorial](ontop-v3-tutorial)
+
+## Tutorials at scientific events:
+- [AIxIA 2018 Tutorial](aixia-tutorial-2018)
+- [CIKM 2018 Tutorial](cikm-tutorial-2018)
+- [IJCAI 2018 Tutorial](ijcai-tutorial-2018)
+- [JDEV 2017](jdev-2017)
 - [EKAW 2016 Tutorial](ekaw-tutorial-2016)
+
+
+## Papers
+- [ISWC 2018 Paper](iswc-2018-optional)
+- [CIKM 20189 demo](cikm-2018-temporal-obda)
+- [JAIR 2018 Paper](jair-2018-MTL-datalog)
+- [AAAI 2017 Paper](aaai-2017-MTL-datalog)
 - [BLINK 2016 Paper](blink-2016-vig)
 - [AAAI 2016 Paper](aaai-2016-ontoprox)
 - [SWJ 2015 Article](swj-2015)
