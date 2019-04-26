@@ -5,7 +5,7 @@ SPARQL endpoint deployment
 
 Procedure: 
 
-1. Download and unzip the Tomcat bundle [ontop-tomcat-bundle.zip](https://sourceforge.net/projects/ontop4obda/files/ontop-3.0.0-beta-1/)
+1. Download and unzip the Tomcat bundle [ontop-tomcat-bundle.zip](https://sourceforge.net/projects/ontop4obda/files/ontop-3.0.0-beta-2/)
 2. Copy the driver file of H2 `h2-1.4.196.jar` to the `lib` directory of tomcat  
 3. Start tomcat from the *bin folder* using the commands: 
 	* On Mac/Linux: using the terminal run `sh catalina.sh run`.
