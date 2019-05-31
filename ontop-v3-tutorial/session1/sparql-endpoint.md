@@ -47,9 +47,20 @@ SELECT DISTINCT ?prof ?lastName {
 }
 ```
 
+## Querying the SPARQL endpoint with curl 
 
+```console
+curl  -H 'Accept: application/json' \
+-G http://localhost:8080/rdf4j-server/repositories/Session1Repo \
+--data-urlencode query='
+PREFIX : <http://example.org/voc#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
-
+SELECT DISTINCT ?prof ?lastName {
+  ?prof a :FullProfessor ; foaf:lastName ?lastName .
+}
+'
+```
 
 
 
