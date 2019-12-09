@@ -1,0 +1,1998 @@
+
+   Database Connection Information
+
+ Database server        = DB2/LINUXX8664 10.5.5
+ SQL authorization ID   = DB2INST1
+ Local database alias   = WISC
+
+DB20000I  The SQL command completed successfully.
+
+DB2 Universal Database Version 10.5, 5622-044 (c) Copyright IBM Corp. 1991, 2012
+Licensed Material - Program Property of IBM
+IBM DB2 Universal Database SQL and XQUERY Explain Tool
+
+DB2 Universal Database Version 10.5, 5622-044 (c) Copyright IBM Corp. 1991, 2012
+Licensed Material - Program Property of IBM
+IBM DB2 Universal Database SQL and XQUERY Explain Tool
+
+******************** DYNAMIC ***************************************
+
+==================== STATEMENT ==========================================
+
+	Isolation Level          = Cursor Stability
+	Blocking                 = Block Unambiguous Cursors
+	Query Optimization Class = 5
+
+	Partition Parallel       = No
+	Intra-Partition Parallel = No
+
+	SQL Path                 = "SYSIBM", "SYSFUN", "SYSPROC", "SYSIBMADM", 
+                                   "DB2INST1"
+
+
+Statement:
+  
+  SELECT * 
+  FROM 
+     (SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS 
+             T1V0, QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRING4" AS 
+             T1V2, QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1"
+             AS T2V1, QVIEW2."STRING4" AS T2V2 
+     FROM WISC."T10_1M" QVIEW1, WISC."T11_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU1" IS NOT NULL AND QVIEW1."STRING4" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU1" IS NOT NULL AND QVIEW2.
+             "STRING4" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRING4" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T10_1M" QVIEW1, WISC."T8_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU1" IS NOT NULL AND QVIEW1."STRING4" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRING4" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T10_1M" QVIEW1, WISC."T5_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU1" IS NOT NULL AND QVIEW1."STRING4" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRING4" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T10_1M" QVIEW1, WISC."T2_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU1" IS NOT NULL AND QVIEW1."STRING4" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRING4" AS T2V2 
+     FROM WISC."T7_1M" QVIEW1, WISC."T11_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU1" IS NOT NULL AND QVIEW2.
+             "STRING4" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T7_1M" QVIEW1, WISC."T8_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T7_1M" QVIEW1, WISC."T5_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T7_1M" QVIEW1, WISC."T2_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRING4" AS T2V2 
+     FROM WISC."T4_1M" QVIEW1, WISC."T11_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU1" IS NOT NULL AND QVIEW2.
+             "STRING4" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T4_1M" QVIEW1, WISC."T8_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T4_1M" QVIEW1, WISC."T5_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T4_1M" QVIEW1, WISC."T2_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRING4" AS T2V2 
+     FROM WISC."T1_1M" QVIEW1, WISC."T11_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU1" IS NOT NULL AND QVIEW2.
+             "STRING4" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T1_1M" QVIEW1, WISC."T8_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T1_1M" QVIEW1, WISC."T5_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW1."EVENONEPERCENT" AS T1V0,
+             QVIEW1."STRINGU1" AS T1V1, QVIEW1."STRINGU2" AS T1V2, 
+             QVIEW2."EVENONEPERCENT" AS T2V0, QVIEW2."STRINGU1" AS 
+             T2V1, QVIEW2."STRINGU2" AS T2V2 
+     FROM WISC."T1_1M" QVIEW1, WISC."T2_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL )F_1, 
+     (SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS 
+             T3V0, QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRING4" AS 
+             T3V2 
+     FROM WISC."T10_1M" QVIEW1, WISC."T12_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU1" IS NOT NULL AND QVIEW1."STRING4" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU1" IS NOT NULL AND QVIEW2.
+             "STRING4" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T10_1M" QVIEW1, WISC."T9_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU1" IS NOT NULL AND QVIEW1."STRING4" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T10_1M" QVIEW1, WISC."T6_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU1" IS NOT NULL AND QVIEW1."STRING4" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T10_1M" QVIEW1, WISC."T3_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU1" IS NOT NULL AND QVIEW1."STRING4" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRING4" AS T3V2 
+     FROM WISC."T7_1M" QVIEW1, WISC."T12_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU1" IS NOT NULL AND QVIEW2.
+             "STRING4" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T7_1M" QVIEW1, WISC."T9_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T7_1M" QVIEW1, WISC."T6_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T7_1M" QVIEW1, WISC."T3_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRING4" AS T3V2 
+     FROM WISC."T4_1M" QVIEW1, WISC."T12_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU1" IS NOT NULL AND QVIEW2.
+             "STRING4" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T4_1M" QVIEW1, WISC."T9_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T4_1M" QVIEW1, WISC."T6_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T4_1M" QVIEW1, WISC."T3_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRING4" AS T3V2 
+     FROM WISC."T1_1M" QVIEW1, WISC."T12_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU1" IS NOT NULL AND QVIEW2.
+             "STRING4" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T1_1M" QVIEW1, WISC."T9_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T1_1M" QVIEW1, WISC."T6_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL 
+     UNION 
+     SELECT QVIEW1."UNIQUE2" AS T0V0, QVIEW2."EVENONEPERCENT" AS T3V0,
+             QVIEW2."STRINGU1" AS T3V1, QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T1_1M" QVIEW1, WISC."T3_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=0)AND 
+             (QVIEW2."ONEPERCENT" < 20))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL )F_2 
+  WHERE F_1.T0V0=F_2.T0V0
+
+
+Section Code Page = 1208
+
+Estimated Cost = 3749565.500000
+Estimated Cardinality = 16330122240.000000
+
+(
+|  Access Table Name = WISC.T5_1M  ID = 2,9
+|  |  Index Scan:  Name = SYSIBM.SQL180628114643630  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T1_1M  ID = 2,5
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114317970  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T8_1M  ID = 2,12
+|  |  Index Scan:  Name = SYSIBM.SQL180628114647040  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T1_1M  ID = 2,5
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114317970  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T11_1M  ID = 2,15
+|  |  Index Scan:  Name = SYSIBM.SQL180628114911660  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T1_1M  ID = 2,5
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114317970  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T2_1M  ID = 2,6
+|  |  Index Scan:  Name = SYSIBM.SQL180628114428740  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T4_1M  ID = 2,8
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114631820  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T5_1M  ID = 2,9
+|  |  Index Scan:  Name = SYSIBM.SQL180628114643630  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T4_1M  ID = 2,8
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114631820  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T8_1M  ID = 2,12
+|  |  Index Scan:  Name = SYSIBM.SQL180628114647040  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T4_1M  ID = 2,8
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114631820  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T11_1M  ID = 2,15
+|  |  Index Scan:  Name = SYSIBM.SQL180628114911660  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T4_1M  ID = 2,8
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114631820  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T2_1M  ID = 2,6
+|  |  Index Scan:  Name = SYSIBM.SQL180628114428740  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T7_1M  ID = 2,11
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114645910  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T5_1M  ID = 2,9
+|  |  Index Scan:  Name = SYSIBM.SQL180628114643630  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T7_1M  ID = 2,11
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114645910  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T8_1M  ID = 2,12
+|  |  Index Scan:  Name = SYSIBM.SQL180628114647040  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T7_1M  ID = 2,11
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114645910  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T11_1M  ID = 2,15
+|  |  Index Scan:  Name = SYSIBM.SQL180628114911660  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T7_1M  ID = 2,11
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114645910  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T10_1M  ID = 2,14
+|  |  Index Scan:  Name = SYSIBM.SQL180628114649340  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(3948), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Nested Loop Join
+|  |  Access Table Name = WISC.T2_1M  ID = 2,6
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114428740  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 3
+|  |  |  Single Record
+|  |  |  Fully Qualified Unique Key
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 1
+|  |  |  |  Start Key: Inclusive Value
+|  |  |  |  |  1: ? 
+|  |  |  |  Stop Key: Inclusive Value
+|  |  |  |  |  1: ? 
+|  |  |  Data Prefetch: Sequential(52660), Readahead
+|  |  |  Index Prefetch: Sequential(3947), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T10_1M  ID = 2,14
+|  |  Index Scan:  Name = SYSIBM.SQL180628114649340  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(3948), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Nested Loop Join
+|  |  Access Table Name = WISC.T5_1M  ID = 2,9
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114643630  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 3
+|  |  |  Single Record
+|  |  |  Fully Qualified Unique Key
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 1
+|  |  |  |  Start Key: Inclusive Value
+|  |  |  |  |  1: ? 
+|  |  |  |  Stop Key: Inclusive Value
+|  |  |  |  |  1: ? 
+|  |  |  Data Prefetch: Sequential(52660), Readahead
+|  |  |  Index Prefetch: Sequential(3947), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T10_1M  ID = 2,14
+|  |  Index Scan:  Name = SYSIBM.SQL180628114649340  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(3948), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Nested Loop Join
+|  |  Access Table Name = WISC.T8_1M  ID = 2,12
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114647040  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 3
+|  |  |  Single Record
+|  |  |  Fully Qualified Unique Key
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 1
+|  |  |  |  Start Key: Inclusive Value
+|  |  |  |  |  1: ? 
+|  |  |  |  Stop Key: Inclusive Value
+|  |  |  |  |  1: ? 
+|  |  |  Data Prefetch: Sequential(52660), Readahead
+|  |  |  Index Prefetch: Sequential(3947), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T10_1M  ID = 2,14
+|  |  Index Scan:  Name = SYSIBM.SQL180628114649340  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(3948), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Nested Loop Join
+|  |  Access Table Name = WISC.T11_1M  ID = 2,15
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114911660  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 3
+|  |  |  Single Record
+|  |  |  Fully Qualified Unique Key
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 1
+|  |  |  |  Start Key: Inclusive Value
+|  |  |  |  |  1: ? 
+|  |  |  |  Stop Key: Inclusive Value
+|  |  |  |  |  1: ? 
+|  |  |  Data Prefetch: Sequential(52660), Readahead
+|  |  |  Index Prefetch: Sequential(3947), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+UNION
+|  Access Table Name = WISC.T2_1M  ID = 2,6
+|  |  Index Scan:  Name = SYSIBM.SQL180628114428740  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+|  Merge Join
+|  |  Early Out: Single Match Per Outer Row
+|  |  Access Table Name = WISC.T1_1M  ID = 2,5
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114317970  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+)
+Insert Into Sorted Temp Table  ID = t1
+|  #Columns = 7
+|  #Sort Key Columns = 7
+|  |  Key 1: (Ascending)
+|  |  Key 2: (Ascending)
+|  |  Key 3: (Ascending)
+|  |  Key 4: (Ascending)
+|  |  Key 5: (Ascending)
+|  |  Key 6: (Ascending)
+|  |  Key 7: (Ascending)
+|  Sortheap Allocation Parameters:
+|  |  #Rows     = 639751.000000
+|  |  Row Width = 156
+|  Piped
+|  Duplicate Elimination
+|  Compressed
+Access Temp Table  ID = t1
+|  #Columns = 7
+|  Relation Scan
+|  |  Prefetch: Eligible
+Merge Join
+|  (
+|  |  Access Table Name = WISC.T6_1M  ID = 2,10
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114644770  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T1_1M  ID = 2,5
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114317970  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T9_1M  ID = 2,13
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114648200  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T1_1M  ID = 2,5
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114317970  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T12_1M  ID = 2,16
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114912800  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T1_1M  ID = 2,5
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114317970  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T3_1M  ID = 2,7
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114630680  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T4_1M  ID = 2,8
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114631820  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T6_1M  ID = 2,10
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114644770  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T4_1M  ID = 2,8
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114631820  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T9_1M  ID = 2,13
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114648200  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T4_1M  ID = 2,8
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114631820  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T12_1M  ID = 2,16
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114912800  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T4_1M  ID = 2,8
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114631820  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T3_1M  ID = 2,7
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114630680  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T7_1M  ID = 2,11
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114645910  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T6_1M  ID = 2,10
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114644770  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T7_1M  ID = 2,11
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114645910  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T9_1M  ID = 2,13
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114648200  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T7_1M  ID = 2,11
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114645910  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T12_1M  ID = 2,16
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114912800  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T7_1M  ID = 2,11
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114645910  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T10_1M  ID = 2,14
+|  |  |  #Columns = 1
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  May participate in Scan Sharing structures
+|  |  |  Scan may start anywhere and wrap, for completion
+|  |  |  Fast scan, for purposes of scan sharing management
+|  |  |  Scan can be throttled in scan sharing management
+|  |  |  Relation Scan
+|  |  |  |  Prefetch: Eligible
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  |  |  Insert Into Integer Sorted Temp Table  ID = t2
+|  |  |  |  |  #Columns = 1
+|  |  |  |  |  #Sort Key Columns = 1
+|  |  |  |  |  |  Key 1: UNIQUE2 (Ascending)
+|  |  |  |  |  Sortheap Allocation Parameters:
+|  |  |  |  |  |  #Rows     = 188584.000000
+|  |  |  |  |  |  Row Width = 8
+|  |  Integer Sorted Temp Table Completion  ID = t2
+|  |  Access Temp Table  ID = t2
+|  |  |  #Columns = 1
+|  |  |  Relation Scan
+|  |  |  |  Prefetch: Eligible
+|  |  Nested Loop Join
+|  |  |  Access Table Name = WISC.T3_1M  ID = 2,7
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114630680  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 3
+|  |  |  |  Single Record
+|  |  |  |  Fully Qualified Unique Key
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 1
+|  |  |  |  |  Start Key: Inclusive Value
+|  |  |  |  |  |  1: ? 
+|  |  |  |  |  Stop Key: Inclusive Value
+|  |  |  |  |  |  1: ? 
+|  |  |  |  Data Prefetch: Sequential(52660), Readahead
+|  |  |  |  Index Prefetch: Sequential(3947), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T10_1M  ID = 2,14
+|  |  |  #Columns = 1
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  May participate in Scan Sharing structures
+|  |  |  Scan may start anywhere and wrap, for completion
+|  |  |  Fast scan, for purposes of scan sharing management
+|  |  |  Scan can be throttled in scan sharing management
+|  |  |  Relation Scan
+|  |  |  |  Prefetch: Eligible
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  |  |  Insert Into Integer Sorted Temp Table  ID = t3
+|  |  |  |  |  #Columns = 1
+|  |  |  |  |  #Sort Key Columns = 1
+|  |  |  |  |  |  Key 1: UNIQUE2 (Ascending)
+|  |  |  |  |  Sortheap Allocation Parameters:
+|  |  |  |  |  |  #Rows     = 188584.000000
+|  |  |  |  |  |  Row Width = 8
+|  |  Integer Sorted Temp Table Completion  ID = t3
+|  |  Access Temp Table  ID = t3
+|  |  |  #Columns = 1
+|  |  |  Relation Scan
+|  |  |  |  Prefetch: Eligible
+|  |  Nested Loop Join
+|  |  |  Access Table Name = WISC.T6_1M  ID = 2,10
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114644770  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 3
+|  |  |  |  Single Record
+|  |  |  |  Fully Qualified Unique Key
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 1
+|  |  |  |  |  Start Key: Inclusive Value
+|  |  |  |  |  |  1: ? 
+|  |  |  |  |  Stop Key: Inclusive Value
+|  |  |  |  |  |  1: ? 
+|  |  |  |  Data Prefetch: Sequential(52660), Readahead
+|  |  |  |  Index Prefetch: Sequential(3947), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T10_1M  ID = 2,14
+|  |  |  #Columns = 1
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  May participate in Scan Sharing structures
+|  |  |  Scan may start anywhere and wrap, for completion
+|  |  |  Fast scan, for purposes of scan sharing management
+|  |  |  Scan can be throttled in scan sharing management
+|  |  |  Relation Scan
+|  |  |  |  Prefetch: Eligible
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  |  |  Insert Into Integer Sorted Temp Table  ID = t4
+|  |  |  |  |  #Columns = 1
+|  |  |  |  |  #Sort Key Columns = 1
+|  |  |  |  |  |  Key 1: UNIQUE2 (Ascending)
+|  |  |  |  |  Sortheap Allocation Parameters:
+|  |  |  |  |  |  #Rows     = 188584.000000
+|  |  |  |  |  |  Row Width = 8
+|  |  Integer Sorted Temp Table Completion  ID = t4
+|  |  Access Temp Table  ID = t4
+|  |  |  #Columns = 1
+|  |  |  Relation Scan
+|  |  |  |  Prefetch: Eligible
+|  |  Nested Loop Join
+|  |  |  Access Table Name = WISC.T9_1M  ID = 2,13
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114648200  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 3
+|  |  |  |  Single Record
+|  |  |  |  Fully Qualified Unique Key
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 1
+|  |  |  |  |  Start Key: Inclusive Value
+|  |  |  |  |  |  1: ? 
+|  |  |  |  |  Stop Key: Inclusive Value
+|  |  |  |  |  |  1: ? 
+|  |  |  |  Data Prefetch: Sequential(52660), Readahead
+|  |  |  |  Index Prefetch: Sequential(3947), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T10_1M  ID = 2,14
+|  |  |  #Columns = 1
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  May participate in Scan Sharing structures
+|  |  |  Scan may start anywhere and wrap, for completion
+|  |  |  Fast scan, for purposes of scan sharing management
+|  |  |  Scan can be throttled in scan sharing management
+|  |  |  Relation Scan
+|  |  |  |  Prefetch: Eligible
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  |  |  Insert Into Integer Sorted Temp Table  ID = t5
+|  |  |  |  |  #Columns = 1
+|  |  |  |  |  #Sort Key Columns = 1
+|  |  |  |  |  |  Key 1: UNIQUE2 (Ascending)
+|  |  |  |  |  Sortheap Allocation Parameters:
+|  |  |  |  |  |  #Rows     = 188584.000000
+|  |  |  |  |  |  Row Width = 8
+|  |  Integer Sorted Temp Table Completion  ID = t5
+|  |  Access Temp Table  ID = t5
+|  |  |  #Columns = 1
+|  |  |  Relation Scan
+|  |  |  |  Prefetch: Eligible
+|  |  Nested Loop Join
+|  |  |  Access Table Name = WISC.T12_1M  ID = 2,16
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114912800  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 3
+|  |  |  |  Single Record
+|  |  |  |  Fully Qualified Unique Key
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 1
+|  |  |  |  |  Start Key: Inclusive Value
+|  |  |  |  |  |  1: ? 
+|  |  |  |  |  Stop Key: Inclusive Value
+|  |  |  |  |  |  1: ? 
+|  |  |  |  Data Prefetch: Sequential(52660), Readahead
+|  |  |  |  Index Prefetch: Sequential(3947), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  UNION
+|  |  Access Table Name = WISC.T3_1M  ID = 2,7
+|  |  |  Index Scan:  Name = SYSIBM.SQL180628114630680  ID = 1
+|  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  Index Columns:
+|  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  #Columns = 4
+|  |  |  Skip Inserted Rows
+|  |  |  Avoid Locking Committed Data
+|  |  |  Currently Committed for Cursor Stability
+|  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  #Key Columns = 0
+|  |  |  |  Start Key: Beginning of Index
+|  |  |  |  Stop Key: End of Index
+|  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  Lock Intents
+|  |  |  |  Table: Intent Share
+|  |  |  |  Row  : Next Key Share
+|  |  |  Sargable Predicate(s)
+|  |  |  |  #Predicates = 2
+|  |  Merge Join
+|  |  |  Early Out: Single Match Per Outer Row
+|  |  |  Access Table Name = WISC.T1_1M  ID = 2,5
+|  |  |  |  Index Scan:  Name = SYSIBM.SQL180628114317970  ID = 1
+|  |  |  |  |  Regular Index (Not Clustered)
+|  |  |  |  |  Index Columns:
+|  |  |  |  |  |  1: UNIQUE2 (Ascending)
+|  |  |  |  #Columns = 1
+|  |  |  |  Skip Inserted Rows
+|  |  |  |  Avoid Locking Committed Data
+|  |  |  |  Currently Committed for Cursor Stability
+|  |  |  |  Evaluate Predicates Before Locking for Key
+|  |  |  |  #Key Columns = 0
+|  |  |  |  |  Start Key: Beginning of Index
+|  |  |  |  |  Stop Key: End of Index
+|  |  |  |  Data Prefetch: Sequential(0), Readahead
+|  |  |  |  Index Prefetch: Sequential(4167), Readahead
+|  |  |  |  Lock Intents
+|  |  |  |  |  Table: Intent Share
+|  |  |  |  |  Row  : Next Key Share
+|  |  |  |  Sargable Predicate(s)
+|  |  |  |  |  #Predicates = 2
+|  )
+|  Insert Into Sorted Temp Table  ID = t6
+|  |  #Columns = 4
+|  |  #Sort Key Columns = 4
+|  |  |  Key 1: (Ascending)
+|  |  |  Key 2: (Ascending)
+|  |  |  Key 3: (Ascending)
+|  |  |  Key 4: (Ascending)
+|  |  Sortheap Allocation Parameters:
+|  |  |  #Rows     = 638145.000000
+|  |  |  Row Width = 80
+|  |  Piped
+|  |  Duplicate Elimination
+|  Access Temp Table  ID = t6
+|  |  #Columns = 4
+|  |  Relation Scan
+|  |  |  Prefetch: Eligible
+Return Data to Application
+|  #Columns = 11
+
+End of section
+
+
+Optimizer Plan:
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Rows   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Operator 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  (ID)   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Cost   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1.63301e+10 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                RETURN    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ( 1)     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              3.74957e+06 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |       
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              1.63301e+10 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                MSJOIN    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ( 2)     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              3.74957e+06 
+                                                                                                                                                                                                                                                                                                                                                                                                                                 /-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------/           \----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+                                                                                                                                                                                                                                                                                                                                                                                                                        639750                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * 
+                                                                                                                                                                                                                                                                                                                                                                                                                        TBSCAN                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |       
+                                                                                                                                                                                                                                                                                                                                                                                                                         ( 3)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               638144    
+                                                                                                                                                                                                                                                                                                                                                                                                                      1.90823e+06                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           TBSCAN    
+                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  (99)     
+                                                                                                                                                                                                                                                                                                                                                                                                                        639750                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            1.84075e+06 
+                                                                                                                                                                                                                                                                                                                                                                                                                         SORT                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |       
+                                                                                                                                                                                                                                                                                                                                                                                                                         ( 4)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               638144    
+                                                                                                                                                                                                                                                                                                                                                                                                                      1.88316e+06                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            SORT     
+                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  (100)    
+                                                                                                                                                                                                                                                                                                                                                                                                                        639750                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            1.82341e+06 
+                                                                                                                                                                                                                                                                                                                                                                                                                         UNION                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |       
+                                                                                                                                                                                                                                                                                                                                                                                                                         ( 5)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               638144    
+                                                                                                                                                                                                                                                                                                                                                                                                                      1.69243e+06                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            UNION    
+                           +---------------------------------------------------+-------------------------------------------------+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------+------------------------+--------------------------------------------------+--------------------------------------------------+----------------------------------------------------+---------------------------------------------------+--------------------------------------------------+--------------------------------------------------+-------------------------------------------------+                                                                                                                                                                                                                                                                                                                                                                                                                  (101)    
+                         40474.8                                             41595                                             40474.8                                            40087.3                                            40376.4                                            41493.9                                            40376.4                                            40087.3                                            40376.4                                            41493.9                                            40376.4                                              37622.4                                             37893.8                                            38942.5                                            37893.8                                           40185                                                                                                                                                                                                                                                                                                                                                                                                             1.69164e+06 
+                         MSJOIN                                              MSJOIN                                            MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                               NLJOIN                                              NLJOIN                                             NLJOIN                                             NLJOIN                                            MSJOIN                                               +--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+----------------------------------------------+---+--------------------------------------------------+--------------------------------------------------+--------------------------------------------------+------------------------------------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------------------+
+                          ( 6)                                                (12)                                              (18)                                               (24)                                               (30)                                               (36)                                               (42)                                               (48)                                               (54)                                               (60)                                               (66)                                                 (72)                                                (77)                                               (82)                                               (87)                                              (92)                                              40474.8                                            40474.8                                            40474.8                                            40797.3                                            40376.4                                            40376.4                                            40376.4                                            40797.3                                            40376.4                                            40376.4                                            40376.4                              38288.7                              37893.8                              37893.8                              37893.8                                         40896.7 
+                         107104                                              107105                                            107104                                             107103                                             107097                                             107098                                             107097                                             107103                                             107097                                             107098                                             107097                                               101804                                              101804                                             101804                                             101804                                            107110                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                                             MSJOIN                               NLJOIN                               NLJOIN                               NLJOIN                               NLJOIN                                          MSJOIN  
+                     /--/       \--------\                             /----/      \--------\                              /--/       \--------\                              /--/       \--------\                              /--/       \--------\                             /---/       \--------\                              /--/       \--------\                              /--/       \--------\                              /--/       \--------\                             /---/       \--------\                              /--/       \--------\                              /----/       \---------\                             /---/       \--------\                             /---/       \--------\                             /---/       \--------\                             /--/      \--------\                                    (102)                                              (108)                                              (114)                                              (120)                                              (126)                                              (132)                                              (138)                                              (144)                                              (150)                                              (156)                                              (162)                                (168)                                (174)                                (180)                                (186)                                           (192)  
+              200939                      *                      206500                      *                      200939                      *                      199500                      *                      200939                      *                      206500                      *                      200939                      *                      199500                      *                      200939                      *                      206500                      *                      200939                      *                      188584                         *                     188584                       *                     188584                       *                     188584                       *                     199500                     *                                  107104                                             107104                                             107104                                             107104                                             107097                                             107097                                             107097                                             107104                                             107097                                             107097                                             107097                               101608                               101609                               101609                               101609                                          107111  
+               FETCH                     |                       FETCH                      |                        FETCH                     |                        FETCH                     |                        FETCH                     |                       FETCH                      |                        FETCH                     |                        FETCH                     |                        FETCH                     |                       FETCH                      |                        FETCH                     |                        FETCH                      /-/ \-\                   FETCH                    /-/ \-\                   FETCH                    /-/ \-\                   FETCH                    /-/ \-\                   FETCH                    |                               /--/       \--------\                              /--/       \--------\                              /--/       \--------\                              /--/       \--------\                              /--/       \--------\                              /--/       \--------\                              /--/       \--------\                              /--/       \--------\                              /--/       \--------\                              /--/       \--------\                              /--/       \--------\                 /-/       \------\                   /-/       \------\                   /-/       \------\                   /-/       \------\                             /--/       \-------\
+               ( 7)                    201429                     (13)                    201429                     (19)                    201429                     (25)                    200939                     (31)                    200939                     (37)                    200939                     (43)                    200939                     (49)                    200939                     (55)                    200939                     (61)                    200939                     (67)                    200939                     (73)                   1          1e+06              (78)                 1          1e+06              (83)                 1          1e+06              (88)                 1          1e+06              (93)                   201429                     200939                      *                      200939                      *                      200939                      *                      203033                      *                      200939                      *                      200939                      *                      200939                      *                      203033                      *                      200939                      *                      200939                      *                      200939                      *         188584                   *           188584                   *           188584                   *           188584                   *                     203033                     * 
+              53531.5                   FETCH                    53532                     FETCH                    53531.5                   FETCH                    53538.2                   FETCH                    53531.5                   FETCH                    53532                     FETCH                    53531.5                   FETCH                    53538.2                   FETCH                    53531.5                   FETCH                    53532                     FETCH                    53531.5                   FETCH                    50444.8              IXSCAN        Table:            50444.8            IXSCAN        Table:            50444.8            IXSCAN        Table:            50444.8            IXSCAN        Table:            53538.2                  FETCH                      FETCH                     |                        FETCH                     |                        FETCH                     |                        FETCH                     |                        FETCH                     |                        FETCH                     |                        FETCH                     |                        FETCH                     |                        FETCH                     |                        FETCH                     |                        FETCH                     |          TBSCAN                /-/ \-\        TBSCAN                /-/ \-\        TBSCAN                /-/ \-\        TBSCAN                /-/ \-\                   FETCH                    |     
+             /       \                  (10)                    /      \                   (16)                    /       \                  (22)                    /       \                  (28)                    /       \                  (34)                    /      \                   (40)                    /       \                  (46)                    /       \                  (52)                    /       \                  (58)                    /      \                   (64)                    /       \                  (70)                    /       \              (76)         WISC             /       \            (81)         WISC             /       \            (86)         WISC             /       \            (91)         WISC             /       \                 (96)                       (103)                   201429                     (109)                   201429                     (115)                   201429                     (121)                   200939                     (127)                   200939                     (133)                   200939                     (139)                   200939                     (145)                   200939                     (151)                   200939                     (157)                   200939                     (163)                   200939        (169)            1          1e+06    (175)            1          1e+06    (181)            1          1e+06    (187)            1          1e+06              (193)                  201429  
+        1e+06        1e+06             53538.3             1e+06        1e+06             53538.3             1e+06        1e+06             53538.3             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5            941664        941664        13.5441       T2_1M         941664   941664        13.5441       T5_1M         941664   941664        13.5441       T8_1M         941664   941664        13.5441       T11_1M         1e+06   1e+06              53538.3                    53531.5                   FETCH                    53531.5                   FETCH                    53531.5                   FETCH                    53538.4                   FETCH                    53531.5                   FETCH                    53531.5                   FETCH                    53531.5                   FETCH                    53538.4                   FETCH                    53531.5                   FETCH                    53531.5                   FETCH                    53531.5                   FETCH       50249.3        IXSCAN        Table:  50249.3        IXSCAN        Table:  50249.3        IXSCAN        Table:  50249.3        IXSCAN        Table:            53538.4                  FETCH  
+       IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:          |                         IXSCAN   Table:          |                         IXSCAN   Table:          |                         IXSCAN   Table:          |                         IXSCAN   Table:            /       \                  /       \                  (106)                   /       \                  (112)                   /       \                  (118)                   /       \                  (124)                   /       \                  (130)                   /       \                  (136)                   /       \                  (142)                   /       \                  (148)                   /       \                  (154)                   /       \                  (160)                   /       \                  (166)         |             (173)        WISC      |             (179)        WISC      |             (185)        WISC      |             (191)        WISC             /       \                 (196)  
+        ( 8)         WISC           1e+06   1e+06          (14)         WISC           1e+06   1e+06          (20)         WISC           1e+06   1e+06          (26)         WISC           1e+06   1e+06          (32)         WISC           1e+06   1e+06          (38)         WISC           1e+06   1e+06          (44)         WISC           1e+06   1e+06          (50)         WISC           1e+06   1e+06          (56)         WISC           1e+06   1e+06          (62)         WISC           1e+06   1e+06          (68)         WISC           1e+06   1e+06          (74)         WISC          1e+06                        (79)    WISC          1e+06                        (84)    WISC          1e+06                        (89)    WISC          1e+06                        (94)    WISC           1e+06     1e+06          1e+06        1e+06             53538.3             1e+06        1e+06             53538.3             1e+06        1e+06             53538.3             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5             1e+06        1e+06             53531.5      188584         13.5441       T3_1M   188584         13.5441       T6_1M   188584         13.5441       T9_1M   188584         13.5441       T12_1M         1e+06   1e+06              53538.3 
+       4131.76       T5_1M         IXSCAN   Table:        4131.76       T8_1M         IXSCAN   Table:        4131.76       T11_1M        IXSCAN   Table:        4138.49       T2_1M         IXSCAN   Table:        4131.76       T5_1M         IXSCAN   Table:        4131.76       T8_1M         IXSCAN   Table:        4131.76       T11_1M        IXSCAN   Table:        4138.49       T2_1M         IXSCAN   Table:        4131.76       T5_1M         IXSCAN   Table:        4131.76       T8_1M         IXSCAN   Table:        4131.76       T11_1M        IXSCAN   Table:        3922.02       T10_1M  Index:                            3922.02  T10_1M  Index:                            3922.02  T10_1M  Index:                            3922.02  T10_1M  Index:                            4138.49  T2_1M         IXSCAN     Table:        IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \           IXSCAN        Table:           /       \      SORT            |                    SORT            |                    SORT            |                    SORT            |                         IXSCAN   Table:            /       \
+         |                          (11)    WISC            |                          (17)    WISC            |                          (23)    WISC            |                          (29)    WISC            |                          (35)    WISC            |                          (41)    WISC            |                          (47)    WISC            |                          (53)    WISC            |                          (59)    WISC            |                          (65)    WISC            |                          (71)    WISC            |                   SYSIBM                              |              SYSIBM                              |              SYSIBM                              |              SYSIBM                              |                     (97)      WISC           (104)        WISC           1e+06   1e+06          (110)        WISC           1e+06   1e+06          (116)        WISC           1e+06   1e+06          (122)        WISC           1e+06   1e+06          (128)        WISC           1e+06   1e+06          (134)        WISC           1e+06   1e+06          (140)        WISC           1e+06   1e+06          (146)        WISC           1e+06   1e+06          (152)        WISC           1e+06   1e+06          (158)        WISC           1e+06   1e+06          (164)        WISC           1e+06   1e+06    (170)         1e+06                  (176)         1e+06                  (182)         1e+06                  (188)         1e+06                        (194)   WISC           1e+06     1e+06  
+       1e+06                       4138.49  T1_1M         1e+06                       4138.49  T1_1M         1e+06                       4138.49  T1_1M         1e+06                       4131.76  T4_1M         1e+06                       4131.76  T4_1M         1e+06                       4131.76  T4_1M         1e+06                       4131.76  T4_1M         1e+06                       4131.76  T7_1M         1e+06                       4131.76  T7_1M         1e+06                       4131.76  T7_1M         1e+06                       4131.76  T7_1M         947347                SQL180628114428740                947347           SQL180628114643630                947347           SQL180628114647040                947347           SQL180628114911660                1e+06                  4138.49    T1_1M         4131.76       T6_1M         IXSCAN   Table:        4131.76       T9_1M         IXSCAN   Table:        4131.76       T12_1M        IXSCAN   Table:        4138.49       T3_1M         IXSCAN   Table:        4131.76       T6_1M         IXSCAN   Table:        4131.76       T9_1M         IXSCAN   Table:        4131.76       T12_1M        IXSCAN   Table:        4138.49       T3_1M         IXSCAN   Table:        4131.76       T6_1M         IXSCAN   Table:        4131.76       T9_1M         IXSCAN   Table:        4131.76       T12_1M        IXSCAN   Table:  49638.7  Index:                      49638.7  Index:                      49638.7  Index:                      49638.7  Index:                            4138.49  T3_1M         IXSCAN     Table: 
+ Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                                                  Index:                                             Index:                                             Index:                                             Index:                         |                        |                          (107)   WISC            |                          (113)   WISC            |                          (119)   WISC            |                          (125)   WISC            |                          (131)   WISC            |                          (137)   WISC            |                          (143)   WISC            |                          (149)   WISC            |                          (155)   WISC            |                          (161)   WISC            |                          (167)   WISC      |      SYSIBM                        |      SYSIBM                        |      SYSIBM                        |      SYSIBM                              |                     (197)     WISC   
+ SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                                                  SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                       1e+06                    1e+06                       4138.49  T1_1M         1e+06                       4138.49  T1_1M         1e+06                       4138.49  T1_1M         1e+06                       4131.76  T4_1M         1e+06                       4131.76  T4_1M         1e+06                       4131.76  T4_1M         1e+06                       4131.76  T4_1M         1e+06                       4131.76  T7_1M         1e+06                       4131.76  T7_1M         1e+06                       4131.76  T7_1M         1e+06                       4131.76  T7_1M   188584   SQL180628114630680          188584   SQL180628114644770          188584   SQL180628114648200          188584   SQL180628114912800                1e+06                  4138.49    T1_1M  
+ SQL180628114643630          Index:                 SQL180628114647040          Index:                 SQL180628114911660          Index:                 SQL180628114428740          Index:                 SQL180628114643630          Index:                 SQL180628114647040          Index:                 SQL180628114911660          Index:                 SQL180628114428740          Index:                 SQL180628114643630          Index:                 SQL180628114647040          Index:                 SQL180628114911660          Index:                 SQL180628114649340                                      SQL180628114649340                                 SQL180628114649340                                 SQL180628114649340                                 SQL180628114428740     Index:                   Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              Index:                              |              TBSCAN                               TBSCAN                               TBSCAN                               TBSCAN                               Index:                         |          
+                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                                                                                                                                                                                                                                         SYSIBM                   SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06            SYSIBM                            1e+06             (171)                                (177)                                (183)                                (189)                               SYSIBM                       1e+06        
+                             SQL180628114317970                                 SQL180628114317970                                 SQL180628114317970                                 SQL180628114631820                                 SQL180628114631820                                 SQL180628114631820                                 SQL180628114631820                                 SQL180628114645910                                 SQL180628114645910                                 SQL180628114645910                                 SQL180628114645910                                                                                                                                                                                                                                             SQL180628114317970       SQL180628114644770          Index:                 SQL180628114648200          Index:                 SQL180628114912800          Index:                 SQL180628114630680          Index:                 SQL180628114644770          Index:                 SQL180628114648200          Index:                 SQL180628114912800          Index:                 SQL180628114630680          Index:                 SQL180628114644770          Index:                 SQL180628114648200          Index:                 SQL180628114912800          Index:                 45470.3                              45470.3                              45470.3                              45470.3                              SQL180628114630680     Index:             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                                             SYSIBM                   |                                    |                                    |                                    |                                                         SYSIBM             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               SQL180628114317970                                 SQL180628114317970                                 SQL180628114317970                                 SQL180628114631820                                 SQL180628114631820                                 SQL180628114631820                                 SQL180628114631820                                 SQL180628114645910                                 SQL180628114645910                                 SQL180628114645910                                 SQL180628114645910     941664                               941664                               941664                               941664                                                      SQL180628114317970 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Table:                               Table:                               Table:                               Table: 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    WISC                                 WISC                                 WISC                                 WISC   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    T10_1M                               T10_1M                               T10_1M                               T10_1M 
+
+
+
+DB20000I  The SQL command completed successfully.

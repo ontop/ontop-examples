@@ -1,0 +1,100 @@
+
+SQL*Plus: Release 12.1.0.2.0 Production on Fri Aug 24 09:19:22 2018
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Fri Aug 24 2018 09:19:10 +00:00
+
+Connected to:
+Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production
+
+
+Explained.
+
+SQL> 
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+Plan hash value: 313372845
+
+--------------------------------------------------------------------------------
+---------
+
+| Id  | Operation		| Name	| Rows	| Bytes |TempSpc| Cost (%CPU)| T
+ime	|
+
+--------------------------------------------------------------------------------
+---------
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT	|	|   221K|    82M|	| 57473   (1)| 0 0:00:03 |
+
+|*  1 |  HASH JOIN		|	|   221K|    82M|    27M| 57473   (1)| 0
+0:00:03 |
+
+|   2 |   VIEW			|	|   200K|    25M|	| 23299   (1)| 0
+0:00:01 |
+
+|   3 |    HASH UNIQUE		|	|   200K|    24M|    26M| 23299   (1)| 0
+0:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*  4 |     HASH JOIN RIGHT SEMI|	|   200K|    24M|  3912K| 17664   (1)| 0
+0:00:01 |
+
+|*  5 |      TABLE ACCESS FULL	| T1_1M |   200K|  1562K|	|  8242   (1)| 0
+0:00:01 |
+
+|*  6 |      TABLE ACCESS FULL	| T3_1M |   200K|    22M|	|  8001   (1)| 0
+0:00:01 |
+
+|   7 |   VIEW			|	|   221K|    53M|	| 29997   (1)| 0
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+0:00:02 |
+
+|   8 |    HASH UNIQUE		|	|   221K|    49M|    54M| 29997   (1)| 0
+0:00:02 |
+
+|*  9 |     HASH JOIN		|	|   221K|    49M|    24M| 18705   (1)| 0
+0:00:01 |
+
+|* 10 |      TABLE ACCESS FULL	| T1_1M |   200K|    22M|	|  8243   (1)| 0
+0:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 11 |      TABLE ACCESS FULL	| T2_1M |   200K|    22M|	|  8001   (1)| 0
+0:00:01 |
+
+--------------------------------------------------------------------------------
+---------
+
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   1 - access("F_1"."T0V0"="F_2"."T0V0")
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+   4 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+   5 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+   6 - filter("QVIEW2"."ONEPERCENT"<20 AND "QVIEW2"."ONEPERCENT">=0)
+   9 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  10 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+  11 - filter("QVIEW2"."ONEPERCENT"<20 AND "QVIEW2"."ONEPERCENT">=0)
+
+Note
+-----
+   - dynamic statistics used: dynamic sampling (level=2)
+   - 2 Sql Plan Directives used for this statement
+
+34 rows selected.
+
+SQL> Disconnected from Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production

@@ -1,0 +1,38 @@
+HOW TO USE:
+- Replace the definitions in cost-estimator-krishnamurty.py with the constants below. Notice that, for your specific installation, the calibration constants are will be most likely different.
+
+-- db2
+cdb = 4240.5 # Cost of accessing the db
+ct = 0.007  # Cost of retrieving one tuple from db
+cj = 0.009  # Cost of joining two tuples
+cu = 0.114  # Cost for the hash in the unique
+cm = 0.014  # Cost of materializing one tuple
+csorttwotuples = 0 # Cost of accessing a tuple and sort it
+c_opt = -1.842 # Constant to understand the optimization of the union w.r.t. duplicates
+
+-- mssql
+cdb = 118.333
+ct = 0.006  
+cj = 0.002  
+cu = 0.006  
+cm = 0.014  
+csorttwotuples = 0.001
+c_opt = -0.053 
+
+-- oracle
+cdb = 12.38
+ct = 0.18  
+cj = 0.06  
+cu = 0.03  
+cm = 0.00108  
+csorttwotuples = 0.00008
+c_opt = 1
+
+-- postgres
+cdb = 957 
+ct = 0.021 
+cj = 0.0084 
+cu = 0.02 
+cm = 0.07 
+csorttwotuples = 0.002 
+c_opt = 0.05

@@ -1,0 +1,1147 @@
+
+SQL*Plus: Release 12.1.0.2.0 Production on Fri Aug 24 09:17:05 2018
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Fri Aug 24 2018 09:16:57 +00:00
+
+Connected to:
+Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production
+
+
+Explained.
+
+SQL> 
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+Plan hash value: 2652203588
+
+--------------------------------------------------------------------------------
+-----------------------------
+
+| Id  | Operation		    | Name		    | Rows  | Bytes |Tem
+pSpc| Cost (%CPU)| Time     |
+
+--------------------------------------------------------------------------------
+-----------------------------
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT	    |			    |	250G|	 88T| |  2080K (34)| 00:01:22 |
+
+|*  1 |  HASH JOIN		    |			    |	250G|	 88T|
+696M|  2080K (34)| 00:01:22 |
+
+|   2 |   VIEW			    |			    |  5000K|	638M|
+    |	571K  (1)| 00:00:23 |
+
+|   3 |    SORT UNIQUE		    |			    |  5000K|	600M|
+651M|	571K  (1)| 00:00:23 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|   4 |     UNION-ALL		    |			    |	    |	    |
+    |		 |	    |
+
+|*  5 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17118   (1)| 00:00:01 |
+
+|*  6 |       VIEW		    | index$_join$_053	    |	200K|  1562K|
+    |  7696   (1)| 00:00:01 |
+
+|*  7 |        HASH JOIN	    |			    |	    |	    |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |		 |	    |
+
+|*  8 | 	INDEX RANGE SCAN    | T13_1M_ONEPERCENT_IDX |	200K|  1562K|
+    |  3348   (1)| 00:00:01 |
+
+|   9 | 	INDEX FAST FULL SCAN| SYS_C0010288	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 10 |       TABLE ACCESS FULL     | T15_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 11 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17118   (1)| 00:00:01 |
+
+|* 12 |       VIEW		    | index$_join$_055	    |	200K|  1562K|
+    |  7696   (1)| 00:00:01 |
+
+|* 13 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 14 | 	INDEX RANGE SCAN    | T13_1M_ONEPERCENT_IDX |	200K|  1562K|
+    |  3348   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|  15 | 	INDEX FAST FULL SCAN| SYS_C0010288	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 16 |       TABLE ACCESS FULL     | T12_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 17 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17118   (1)| 00:00:01 |
+
+|* 18 |       VIEW		    | index$_join$_057	    |	200K|  1562K|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  7696   (1)| 00:00:01 |
+
+|* 19 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 20 | 	INDEX RANGE SCAN    | T13_1M_ONEPERCENT_IDX |	200K|  1562K|
+    |  3348   (1)| 00:00:01 |
+
+|  21 | 	INDEX FAST FULL SCAN| SYS_C0010288	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 22 |       TABLE ACCESS FULL     | T9_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 23 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17118   (1)| 00:00:01 |
+
+|* 24 |       VIEW		    | index$_join$_059	    |	200K|  1562K|
+    |  7696   (1)| 00:00:01 |
+
+|* 25 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|* 26 | 	INDEX RANGE SCAN    | T13_1M_ONEPERCENT_IDX |	200K|  1562K|
+    |  3348   (1)| 00:00:01 |
+
+|  27 | 	INDEX FAST FULL SCAN| SYS_C0010288	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 28 |       TABLE ACCESS FULL     | T6_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 29 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+912K| 17118   (1)| 00:00:01 |
+
+|* 30 |       VIEW		    | index$_join$_061	    |	200K|  1562K|
+    |  7696   (1)| 00:00:01 |
+
+|* 31 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 32 | 	INDEX RANGE SCAN    | T13_1M_ONEPERCENT_IDX |	200K|  1562K|
+    |  3348   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|  33 | 	INDEX FAST FULL SCAN| SYS_C0010288	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 34 |       TABLE ACCESS FULL     | T3_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 35 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17126   (1)| 00:00:01 |
+
+|* 36 |       VIEW		    | index$_join$_063	    |	200K|  1562K|
+    |  7704   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|* 37 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 38 | 	INDEX RANGE SCAN    | T10_1M_ONEPERCENT_IDX |	200K|  1562K|
+    |  3356   (1)| 00:00:01 |
+
+|  39 | 	INDEX FAST FULL SCAN| SYS_C0010237	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 40 |       TABLE ACCESS FULL     | T15_1M		    |	200K|	 22M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  8001   (1)| 00:00:01 |
+
+|* 41 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17126   (1)| 00:00:01 |
+
+|* 42 |       VIEW		    | index$_join$_065	    |	200K|  1562K|
+    |  7704   (1)| 00:00:01 |
+
+|* 43 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 44 | 	INDEX RANGE SCAN    | T10_1M_ONEPERCENT_IDX |	200K|  1562K|
+    |  3356   (1)| 00:00:01 |
+
+|  45 | 	INDEX FAST FULL SCAN| SYS_C0010237	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 46 |       TABLE ACCESS FULL     | T12_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 47 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17126   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|* 48 |       VIEW		    | index$_join$_067	    |	200K|  1562K|
+    |  7704   (1)| 00:00:01 |
+
+|* 49 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 50 | 	INDEX RANGE SCAN    | T10_1M_ONEPERCENT_IDX |	200K|  1562K|
+    |  3356   (1)| 00:00:01 |
+
+|  51 | 	INDEX FAST FULL SCAN| SYS_C0010237	    |	200K|  1562K|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  2354   (1)| 00:00:01 |
+
+|* 52 |       TABLE ACCESS FULL     | T9_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 53 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17126   (1)| 00:00:01 |
+
+|* 54 |       VIEW		    | index$_join$_069	    |	200K|  1562K|
+    |  7704   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 55 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 56 | 	INDEX RANGE SCAN    | T10_1M_ONEPERCENT_IDX |	200K|  1562K|
+    |  3356   (1)| 00:00:01 |
+
+|  57 | 	INDEX FAST FULL SCAN| SYS_C0010237	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 58 |       TABLE ACCESS FULL     | T6_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|* 59 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17126   (1)| 00:00:01 |
+
+|* 60 |       VIEW		    | index$_join$_071	    |	200K|  1562K|
+    |  7704   (1)| 00:00:01 |
+
+|* 61 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 62 | 	INDEX RANGE SCAN    | T10_1M_ONEPERCENT_IDX |	200K|  1562K|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  3356   (1)| 00:00:01 |
+
+|  63 | 	INDEX FAST FULL SCAN| SYS_C0010237	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 64 |       TABLE ACCESS FULL     | T3_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 65 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17116   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 66 |       VIEW		    | index$_join$_073	    |	200K|  1562K|
+    |  7694   (1)| 00:00:01 |
+
+|* 67 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 68 | 	INDEX RANGE SCAN    | T7_1M_ONEPERCENT_IDX  |	200K|  1562K|
+    |  3346   (1)| 00:00:01 |
+
+|  69 | 	INDEX FAST FULL SCAN| SYS_C0010186	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|* 70 |       TABLE ACCESS FULL     | T15_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 71 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17116   (1)| 00:00:01 |
+
+|* 72 |       VIEW		    | index$_join$_075	    |	200K|  1562K|
+    |  7694   (1)| 00:00:01 |
+
+|* 73 |        HASH JOIN	    |			    |	    |	    |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |		 |	    |
+
+|* 74 | 	INDEX RANGE SCAN    | T7_1M_ONEPERCENT_IDX  |	200K|  1562K|
+    |  3346   (1)| 00:00:01 |
+
+|  75 | 	INDEX FAST FULL SCAN| SYS_C0010186	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 76 |       TABLE ACCESS FULL     | T12_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 77 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17116   (1)| 00:00:01 |
+
+|* 78 |       VIEW		    | index$_join$_077	    |	200K|  1562K|
+    |  7694   (1)| 00:00:01 |
+
+|* 79 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 80 | 	INDEX RANGE SCAN    | T7_1M_ONEPERCENT_IDX  |	200K|  1562K|
+    |  3346   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|  81 | 	INDEX FAST FULL SCAN| SYS_C0010186	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 82 |       TABLE ACCESS FULL     | T9_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 83 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17116   (1)| 00:00:01 |
+
+|* 84 |       VIEW		    | index$_join$_079	    |	200K|  1562K|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  7694   (1)| 00:00:01 |
+
+|* 85 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 86 | 	INDEX RANGE SCAN    | T7_1M_ONEPERCENT_IDX  |	200K|  1562K|
+    |  3346   (1)| 00:00:01 |
+
+|  87 | 	INDEX FAST FULL SCAN| SYS_C0010186	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 88 |       TABLE ACCESS FULL     | T6_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 89 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17116   (1)| 00:00:01 |
+
+|* 90 |       VIEW		    | index$_join$_081	    |	200K|  1562K|
+    |  7694   (1)| 00:00:01 |
+
+|* 91 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|* 92 | 	INDEX RANGE SCAN    | T7_1M_ONEPERCENT_IDX  |	200K|  1562K|
+    |  3346   (1)| 00:00:01 |
+
+|  93 | 	INDEX FAST FULL SCAN| SYS_C0010186	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|* 94 |       TABLE ACCESS FULL     | T3_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|* 95 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+912K| 17109   (1)| 00:00:01 |
+
+|* 96 |       VIEW		    | index$_join$_083	    |	200K|  1562K|
+    |  7687   (1)| 00:00:01 |
+
+|* 97 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|* 98 | 	INDEX RANGE SCAN    | T4_1M_ONEPERCENT_IDX  |	200K|  1562K|
+    |  3339   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|  99 | 	INDEX FAST FULL SCAN| SYS_C0010135	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|*100 |       TABLE ACCESS FULL     | T15_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*101 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17109   (1)| 00:00:01 |
+
+|*102 |       VIEW		    | index$_join$_085	    |	200K|  1562K|
+    |  7687   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*103 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|*104 | 	INDEX RANGE SCAN    | T4_1M_ONEPERCENT_IDX  |	200K|  1562K|
+    |  3339   (1)| 00:00:01 |
+
+| 105 | 	INDEX FAST FULL SCAN| SYS_C0010135	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|*106 |       TABLE ACCESS FULL     | T12_1M		    |	200K|	 22M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  8001   (1)| 00:00:01 |
+
+|*107 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17109   (1)| 00:00:01 |
+
+|*108 |       VIEW		    | index$_join$_087	    |	200K|  1562K|
+    |  7687   (1)| 00:00:01 |
+
+|*109 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|*110 | 	INDEX RANGE SCAN    | T4_1M_ONEPERCENT_IDX  |	200K|  1562K|
+    |  3339   (1)| 00:00:01 |
+
+| 111 | 	INDEX FAST FULL SCAN| SYS_C0010135	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|*112 |       TABLE ACCESS FULL     | T9_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*113 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17109   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*114 |       VIEW		    | index$_join$_089	    |	200K|  1562K|
+    |  7687   (1)| 00:00:01 |
+
+|*115 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|*116 | 	INDEX RANGE SCAN    | T4_1M_ONEPERCENT_IDX  |	200K|  1562K|
+    |  3339   (1)| 00:00:01 |
+
+| 117 | 	INDEX FAST FULL SCAN| SYS_C0010135	    |	200K|  1562K|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  2354   (1)| 00:00:01 |
+
+|*118 |       TABLE ACCESS FULL     | T6_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*119 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17109   (1)| 00:00:01 |
+
+|*120 |       VIEW		    | index$_join$_091	    |	200K|  1562K|
+    |  7687   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|*121 |        HASH JOIN	    |			    |	    |	    |
+    |		 |	    |
+
+|*122 | 	INDEX RANGE SCAN    | T4_1M_ONEPERCENT_IDX  |	200K|  1562K|
+    |  3339   (1)| 00:00:01 |
+
+| 123 | 	INDEX FAST FULL SCAN| SYS_C0010135	    |	200K|  1562K|
+    |  2354   (1)| 00:00:01 |
+
+|*124 |       TABLE ACCESS FULL     | T3_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*125 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17665   (1)| 00:00:01 |
+
+|*126 |       TABLE ACCESS FULL     | T1_1M		    |	200K|  1562K|
+    |  8242   (1)| 00:00:01 |
+
+|*127 |       TABLE ACCESS FULL     | T15_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*128 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+912K| 17665   (1)| 00:00:01 |
+
+|*129 |       TABLE ACCESS FULL     | T1_1M		    |	200K|  1562K|
+    |  8242   (1)| 00:00:01 |
+
+|*130 |       TABLE ACCESS FULL     | T12_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*131 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17664   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|*132 |       TABLE ACCESS FULL     | T1_1M		    |	200K|  1562K|
+    |  8242   (1)| 00:00:01 |
+
+|*133 |       TABLE ACCESS FULL     | T9_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*134 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17665   (1)| 00:00:01 |
+
+|*135 |       TABLE ACCESS FULL     | T1_1M		    |	200K|  1562K|
+    |  8242   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*136 |       TABLE ACCESS FULL     | T6_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*137 |      HASH JOIN RIGHT SEMI   |			    |	200K|	 24M|  3
+912K| 17664   (1)| 00:00:01 |
+
+|*138 |       TABLE ACCESS FULL     | T1_1M		    |	200K|  1562K|
+    |  8242   (1)| 00:00:01 |
+
+|*139 |       TABLE ACCESS FULL     | T3_1M		    |	200K|	 22M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  8001   (1)| 00:00:01 |
+
+| 140 |   VIEW			    |			    |  5000K|  1215M|
+    |	718K  (1)| 00:00:29 |
+
+| 141 |    SORT UNIQUE		    |			    |  5000K|  1125M|  1
+220M|	718K  (1)| 00:00:29 |
+
+| 142 |     UNION-ALL		    |			    |	    |	    |
+    |		 |	    |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|*143 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+|*144 |       TABLE ACCESS FULL     | T13_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*145 |       TABLE ACCESS FULL     | T14_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*146 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*147 |       TABLE ACCESS FULL     | T13_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*148 |       TABLE ACCESS FULL     | T11_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*149 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+|*150 |       TABLE ACCESS FULL     | T13_1M		    |	200K|	 22M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  8001   (1)| 00:00:01 |
+
+|*151 |       TABLE ACCESS FULL     | T8_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*152 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+|*153 |       TABLE ACCESS FULL     | T13_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|*154 |       TABLE ACCESS FULL     | T5_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*155 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+|*156 |       TABLE ACCESS FULL     | T13_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*157 |       TABLE ACCESS FULL     | T2_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*158 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18567   (1)| 00:00:01 |
+
+|*159 |       TABLE ACCESS FULL     | T10_1M		    |	200K|	 22M|
+    |  8105   (1)| 00:00:01 |
+
+|*160 |       TABLE ACCESS FULL     | T14_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*161 |      HASH JOIN		    |			    |	200K|	 45M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 24M| 18567   (1)| 00:00:01 |
+
+|*162 |       TABLE ACCESS FULL     | T10_1M		    |	200K|	 22M|
+    |  8105   (1)| 00:00:01 |
+
+|*163 |       TABLE ACCESS FULL     | T11_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*164 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18567   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|*165 |       TABLE ACCESS FULL     | T10_1M		    |	200K|	 22M|
+    |  8105   (1)| 00:00:01 |
+
+|*166 |       TABLE ACCESS FULL     | T8_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*167 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18567   (1)| 00:00:01 |
+
+|*168 |       TABLE ACCESS FULL     | T10_1M		    |	200K|	 22M|
+    |  8105   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*169 |       TABLE ACCESS FULL     | T5_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*170 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18567   (1)| 00:00:01 |
+
+|*171 |       TABLE ACCESS FULL     | T10_1M		    |	200K|	 22M|
+    |  8105   (1)| 00:00:01 |
+
+|*172 |       TABLE ACCESS FULL     | T2_1M		    |	200K|	 22M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  8001   (1)| 00:00:01 |
+
+|*173 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+|*174 |       TABLE ACCESS FULL     | T7_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*175 |       TABLE ACCESS FULL     | T14_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|*176 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+|*177 |       TABLE ACCESS FULL     | T7_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*178 |       TABLE ACCESS FULL     | T11_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*179 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18462   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*180 |       TABLE ACCESS FULL     | T7_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*181 |       TABLE ACCESS FULL     | T8_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*182 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+|*183 |       TABLE ACCESS FULL     | T7_1M		    |	200K|	 22M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  8001   (1)| 00:00:01 |
+
+|*184 |       TABLE ACCESS FULL     | T5_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*185 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18462   (1)| 00:00:01 |
+
+|*186 |       TABLE ACCESS FULL     | T7_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|*187 |       TABLE ACCESS FULL     | T2_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*188 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+|*189 |       TABLE ACCESS FULL     | T4_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*190 |       TABLE ACCESS FULL     | T14_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*191 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+|*192 |       TABLE ACCESS FULL     | T4_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*193 |       TABLE ACCESS FULL     | T11_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*194 |      HASH JOIN		    |			    |	200K|	 45M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 24M| 18463   (1)| 00:00:01 |
+
+|*195 |       TABLE ACCESS FULL     | T4_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*196 |       TABLE ACCESS FULL     | T8_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*197 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|*198 |       TABLE ACCESS FULL     | T4_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*199 |       TABLE ACCESS FULL     | T5_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*200 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18463   (1)| 00:00:01 |
+
+|*201 |       TABLE ACCESS FULL     | T4_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*202 |       TABLE ACCESS FULL     | T2_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*203 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18705   (1)| 00:00:01 |
+
+|*204 |       TABLE ACCESS FULL     | T1_1M		    |	200K|	 22M|
+    |  8243   (1)| 00:00:01 |
+
+|*205 |       TABLE ACCESS FULL     | T14_1M		    |	200K|	 22M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  8001   (1)| 00:00:01 |
+
+|*206 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18705   (1)| 00:00:01 |
+
+|*207 |       TABLE ACCESS FULL     | T1_1M		    |	200K|	 22M|
+    |  8243   (1)| 00:00:01 |
+
+|*208 |       TABLE ACCESS FULL     | T11_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|*209 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18705   (1)| 00:00:01 |
+
+|*210 |       TABLE ACCESS FULL     | T1_1M		    |	200K|	 22M|
+    |  8243   (1)| 00:00:01 |
+
+|*211 |       TABLE ACCESS FULL     | T8_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*212 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18705   (1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*213 |       TABLE ACCESS FULL     | T1_1M		    |	200K|	 22M|
+    |  8243   (1)| 00:00:01 |
+
+|*214 |       TABLE ACCESS FULL     | T5_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+|*215 |      HASH JOIN		    |			    |	200K|	 45M|
+ 24M| 18705   (1)| 00:00:01 |
+
+|*216 |       TABLE ACCESS FULL     | T1_1M		    |	200K|	 22M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+    |  8243   (1)| 00:00:01 |
+
+|*217 |       TABLE ACCESS FULL     | T2_1M		    |	200K|	 22M|
+    |  8001   (1)| 00:00:01 |
+
+--------------------------------------------------------------------------------
+-----------------------------
+
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+   1 - access("F_1"."T0V0"="F_2"."T0V0")
+   5 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+   6 - filter("QVIEW1"."ONEPERCENT">=0)
+   7 - access(ROWID=ROWID)
+   8 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  10 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  11 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  12 - filter("QVIEW1"."ONEPERCENT">=0)
+  13 - access(ROWID=ROWID)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+  14 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  16 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  17 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  18 - filter("QVIEW1"."ONEPERCENT">=0)
+  19 - access(ROWID=ROWID)
+  20 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  22 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  23 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  24 - filter("QVIEW1"."ONEPERCENT">=0)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+  25 - access(ROWID=ROWID)
+  26 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  28 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  29 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  30 - filter("QVIEW1"."ONEPERCENT">=0)
+  31 - access(ROWID=ROWID)
+  32 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  34 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  35 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+  36 - filter("QVIEW1"."ONEPERCENT">=0)
+  37 - access(ROWID=ROWID)
+  38 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  40 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  41 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  42 - filter("QVIEW1"."ONEPERCENT">=0)
+  43 - access(ROWID=ROWID)
+  44 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  46 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+  47 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  48 - filter("QVIEW1"."ONEPERCENT">=0)
+  49 - access(ROWID=ROWID)
+  50 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  52 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  53 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  54 - filter("QVIEW1"."ONEPERCENT">=0)
+  55 - access(ROWID=ROWID)
+  56 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+  58 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  59 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  60 - filter("QVIEW1"."ONEPERCENT">=0)
+  61 - access(ROWID=ROWID)
+  62 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  64 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  65 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  66 - filter("QVIEW1"."ONEPERCENT">=0)
+  67 - access(ROWID=ROWID)
+  68 - access("QVIEW1"."ONEPERCENT">=0)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+       filter("QVIEW1"."ONEPERCENT"<20)
+  70 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  71 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  72 - filter("QVIEW1"."ONEPERCENT">=0)
+  73 - access(ROWID=ROWID)
+  74 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  76 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  77 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  78 - filter("QVIEW1"."ONEPERCENT">=0)
+  79 - access(ROWID=ROWID)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+  80 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  82 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  83 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  84 - filter("QVIEW1"."ONEPERCENT">=0)
+  85 - access(ROWID=ROWID)
+  86 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  88 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  89 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  90 - filter("QVIEW1"."ONEPERCENT">=0)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+  91 - access(ROWID=ROWID)
+  92 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+  94 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+  95 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  96 - filter("QVIEW1"."ONEPERCENT">=0)
+  97 - access(ROWID=ROWID)
+  98 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+ 100 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 101 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 102 - filter("QVIEW1"."ONEPERCENT">=0)
+ 103 - access(ROWID=ROWID)
+ 104 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+ 106 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 107 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 108 - filter("QVIEW1"."ONEPERCENT">=0)
+ 109 - access(ROWID=ROWID)
+ 110 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+ 112 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 113 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 114 - filter("QVIEW1"."ONEPERCENT">=0)
+ 115 - access(ROWID=ROWID)
+ 116 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+ 118 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 119 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 120 - filter("QVIEW1"."ONEPERCENT">=0)
+ 121 - access(ROWID=ROWID)
+ 122 - access("QVIEW1"."ONEPERCENT">=0)
+       filter("QVIEW1"."ONEPERCENT"<20)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 124 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 125 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 126 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 127 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 128 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 129 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 130 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 131 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 132 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 133 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 134 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 135 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 136 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 137 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 138 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 139 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 143 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 144 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 145 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 146 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 147 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 148 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 149 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 150 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 151 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 152 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 153 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 154 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 155 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 156 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 157 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 158 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 159 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 160 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 161 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 162 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 163 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 164 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 165 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 166 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 167 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 168 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 169 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 170 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 171 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 172 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 173 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 174 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 175 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 176 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 177 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 178 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 179 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 180 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 181 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 182 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 183 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 184 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 185 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 186 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 187 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 188 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 189 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 190 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 191 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 192 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 193 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 194 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 195 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 196 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 197 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 198 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 199 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 200 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 201 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 202 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 203 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 204 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 205 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 206 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 207 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 208 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 209 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 210 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 211 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+ 212 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 213 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 214 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 215 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+ 216 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+ 217 - filter("QVIEW2"."ONEPERCENT"<25 AND "QVIEW2"."ONEPERCENT">=5)
+
+Note
+-----
+   - dynamic statistics used: dynamic sampling (level=2)
+   - 45 Sql Plan Directives used for this statement
+
+444 rows selected.
+
+SQL> Disconnected from Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production

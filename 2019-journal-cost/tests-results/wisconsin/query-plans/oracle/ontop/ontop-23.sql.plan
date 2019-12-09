@@ -1,0 +1,264 @@
+
+SQL*Plus: Release 12.1.0.2.0 Production on Fri Aug 24 08:42:42 2018
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Fri Aug 24 2018 08:42:41 +00:00
+
+Connected to:
+Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production
+
+
+Explained.
+
+SQL> 
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+Plan hash value: 3103887401
+
+--------------------------------------------------------------------------------
+-----------------------
+
+| Id  | Operation		 | Name 	      | Rows  | Bytes |TempSpc|
+Cost (%CPU)| Time     |
+
+--------------------------------------------------------------------------------
+-----------------------
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT	 |		      |   633K|   215M|       |
+  271K	(1)| 00:00:11 |
+
+|   1 |  SORT UNIQUE		 |		      |   633K|   215M|   226M|
+  271K	(1)| 00:00:11 |
+
+|   2 |   UNION-ALL		 |		      |       |       |       |
+	   |	      |
+
+|*  3 |    HASH JOIN		 |		      | 92410 |    31M|    21M|
+28778	(1)| 00:00:02 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*  4 |     HASH JOIN		 |		      | 92410 |    20M|    24M|
+18463	(1)| 00:00:01 |
+
+|*  5 |      TABLE ACCESS FULL	 | T4_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|*  6 |      TABLE ACCESS FULL	 | T5_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|*  7 |     TABLE ACCESS FULL	 | T6_1M	      |   200K|    22M|       |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 8001	(1)| 00:00:01 |
+
+|*  8 |    HASH JOIN		 |		      | 92410 |    31M|    21M|
+28778	(1)| 00:00:02 |
+
+|*  9 |     HASH JOIN		 |		      | 92410 |    20M|    24M|
+18463	(1)| 00:00:01 |
+
+|* 10 |      TABLE ACCESS FULL	 | T4_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 11 |      TABLE ACCESS FULL	 | T5_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|* 12 |     TABLE ACCESS FULL	 | T3_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|* 13 |    HASH JOIN		 |		      | 92410 |    31M|    21M|
+28778	(1)| 00:00:02 |
+
+|* 14 |     HASH JOIN		 |		      | 92410 |    20M|    24M|
+18463	(1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|* 15 |      TABLE ACCESS FULL	 | T4_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|* 16 |      TABLE ACCESS FULL	 | T2_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|* 17 |     TABLE ACCESS FULL	 | T6_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|* 18 |    HASH JOIN		 |		      | 92410 |    31M|    21M|
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+28778	(1)| 00:00:02 |
+
+|* 19 |     HASH JOIN		 |		      | 92410 |    20M|    24M|
+18463	(1)| 00:00:01 |
+
+|* 20 |      TABLE ACCESS FULL	 | T4_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|* 21 |      TABLE ACCESS FULL	 | T2_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 22 |     TABLE ACCESS FULL	 | T3_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|* 23 |    HASH JOIN		 |		      |   109K|    37M|    24M|
+29226	(1)| 00:00:02 |
+
+|* 24 |     TABLE ACCESS FULL	 | T6_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|* 25 |     HASH JOIN		 |		      |   109K|    24M|    24M|
+18705	(1)| 00:00:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|* 26 |      TABLE ACCESS FULL	 | T1_1M	      |   200K|    22M|       |
+ 8243	(1)| 00:00:01 |
+
+|* 27 |      TABLE ACCESS FULL	 | T2_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|* 28 |    HASH JOIN		 |		      |   109K|    37M|    24M|
+29226	(1)| 00:00:02 |
+
+|* 29 |     TABLE ACCESS FULL	 | T3_1M	      |   200K|    22M|       |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 8001	(1)| 00:00:01 |
+
+|* 30 |     HASH JOIN		 |		      |   109K|    24M|    24M|
+18705	(1)| 00:00:01 |
+
+|* 31 |      TABLE ACCESS FULL	 | T1_1M	      |   200K|    22M|       |
+ 8243	(1)| 00:00:01 |
+
+|* 32 |      TABLE ACCESS FULL	 | T2_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|* 33 |    HASH JOIN		 |		      | 43990 |    16M|    24M|
+49554	(1)| 00:00:02 |
+
+|* 34 |     TABLE ACCESS FULL	 | T5_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+|  35 |     VIEW		 | VW_JF_SET$9FF5666C |   219K|    56M|       |
+37409	(1)| 00:00:02 |
+
+|  36 |      SORT UNIQUE	 |		      |   219K|    49M|       |
+37409	(1)| 00:00:02 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|  37 |       UNION-ALL 	 |		      |       |       |       |
+	   |	      |
+
+|* 38 |        HASH JOIN	 |		      |   109K|    24M|    24M|
+18705	(1)| 00:00:01 |
+
+|* 39 | 	TABLE ACCESS FULL| T1_1M	      |   200K|    22M|       |
+ 8243	(1)| 00:00:01 |
+
+|* 40 | 	TABLE ACCESS FULL| T6_1M	      |   200K|    22M|       |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+ 8001	(1)| 00:00:01 |
+
+|* 41 |        HASH JOIN	 |		      |   109K|    24M|    24M|
+18705	(1)| 00:00:01 |
+
+|* 42 | 	TABLE ACCESS FULL| T1_1M	      |   200K|    22M|       |
+ 8243	(1)| 00:00:01 |
+
+|* 43 | 	TABLE ACCESS FULL| T3_1M	      |   200K|    22M|       |
+ 8001	(1)| 00:00:01 |
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+-----------------------
+
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   3 - access("QVIEW1"."UNIQUE2"="QVIEW3"."UNIQUE2")
+   4 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+   5 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+   6 - filter("QVIEW2"."ONEPERCENT"<30 AND "QVIEW2"."ONEPERCENT">=10)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+   7 - filter("QVIEW3"."ONEPERCENT"<30 AND "QVIEW3"."ONEPERCENT">=10)
+   8 - access("QVIEW1"."UNIQUE2"="QVIEW3"."UNIQUE2")
+   9 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  10 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+  11 - filter("QVIEW2"."ONEPERCENT"<30 AND "QVIEW2"."ONEPERCENT">=10)
+  12 - filter("QVIEW3"."ONEPERCENT"<30 AND "QVIEW3"."ONEPERCENT">=10)
+  13 - access("QVIEW1"."UNIQUE2"="QVIEW3"."UNIQUE2")
+  14 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  15 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+  16 - filter("QVIEW2"."ONEPERCENT"<30 AND "QVIEW2"."ONEPERCENT">=10)
+  17 - filter("QVIEW3"."ONEPERCENT"<30 AND "QVIEW3"."ONEPERCENT">=10)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+  18 - access("QVIEW1"."UNIQUE2"="QVIEW3"."UNIQUE2")
+  19 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  20 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+  21 - filter("QVIEW2"."ONEPERCENT"<30 AND "QVIEW2"."ONEPERCENT">=10)
+  22 - filter("QVIEW3"."ONEPERCENT"<30 AND "QVIEW3"."ONEPERCENT">=10)
+  23 - access("QVIEW1"."UNIQUE2"="QVIEW3"."UNIQUE2")
+  24 - filter("QVIEW3"."ONEPERCENT"<30 AND "QVIEW3"."ONEPERCENT">=10)
+  25 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  26 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+  27 - filter("QVIEW2"."ONEPERCENT"<30 AND "QVIEW2"."ONEPERCENT">=10)
+  28 - access("QVIEW1"."UNIQUE2"="QVIEW3"."UNIQUE2")
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+  29 - filter("QVIEW3"."ONEPERCENT"<30 AND "QVIEW3"."ONEPERCENT">=10)
+  30 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+  31 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+  32 - filter("QVIEW2"."ONEPERCENT"<30 AND "QVIEW2"."ONEPERCENT">=10)
+  33 - access("ITEM_1"="QVIEW2"."UNIQUE2")
+  34 - filter("QVIEW2"."ONEPERCENT"<30 AND "QVIEW2"."ONEPERCENT">=10)
+  38 - access("QVIEW1"."UNIQUE2"="QVIEW3"."UNIQUE2")
+  39 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+  40 - filter("QVIEW3"."ONEPERCENT"<30 AND "QVIEW3"."ONEPERCENT">=10)
+  41 - access("QVIEW1"."UNIQUE2"="QVIEW3"."UNIQUE2")
+  42 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+  43 - filter("QVIEW3"."ONEPERCENT"<30 AND "QVIEW3"."ONEPERCENT">=10)
+
+Note
+-----
+   - dynamic statistics used: dynamic sampling (level=2)
+   - 8 Sql Plan Directives used for this statement
+
+97 rows selected.
+
+SQL> Disconnected from Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production

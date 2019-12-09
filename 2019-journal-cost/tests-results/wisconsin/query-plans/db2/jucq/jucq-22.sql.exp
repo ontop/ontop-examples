@@ -1,0 +1,185 @@
+
+   Database Connection Information
+
+ Database server        = DB2/LINUXX8664 10.5.5
+ SQL authorization ID   = DB2INST1
+ Local database alias   = WISC
+
+DB20000I  The SQL command completed successfully.
+
+DB2 Universal Database Version 10.5, 5622-044 (c) Copyright IBM Corp. 1991, 2012
+Licensed Material - Program Property of IBM
+IBM DB2 Universal Database SQL and XQUERY Explain Tool
+
+DB2 Universal Database Version 10.5, 5622-044 (c) Copyright IBM Corp. 1991, 2012
+Licensed Material - Program Property of IBM
+IBM DB2 Universal Database SQL and XQUERY Explain Tool
+
+******************** DYNAMIC ***************************************
+
+==================== STATEMENT ==========================================
+
+	Isolation Level          = Cursor Stability
+	Blocking                 = Block Unambiguous Cursors
+	Query Optimization Class = 5
+
+	Partition Parallel       = No
+	Intra-Partition Parallel = No
+
+	SQL Path                 = "SYSIBM", "SYSFUN", "SYSPROC", "SYSIBMADM", 
+                                   "DB2INST1"
+
+
+Statement:
+  
+  SELECT * 
+  FROM 
+     (SELECT DISTINCT QVIEW1."UNIQUE2" AS T0V0, QVIEW1.
+             "EVENONEPERCENT" AS T1V0, QVIEW1."STRINGU1" AS T1V1, 
+             QVIEW1."STRINGU2" AS T1V2, QVIEW2."EVENONEPERCENT" AS 
+             T2V0, QVIEW2."STRINGU1" AS T2V1, QVIEW2."STRINGU2" AS 
+             T2V2 
+     FROM WISC."T1_1M" QVIEW1, WISC."T2_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=10)AND 
+             (QVIEW2."ONEPERCENT" < 30))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL )F_1, 
+     (SELECT DISTINCT QVIEW1."UNIQUE2" AS T0V0, QVIEW2.
+             "EVENONEPERCENT" AS T3V0, QVIEW2."STRINGU1" AS T3V1, 
+             QVIEW2."STRINGU2" AS T3V2 
+     FROM WISC."T1_1M" QVIEW1, WISC."T3_1M" QVIEW2 
+     WHERE ((QVIEW1."ONEPERCENT" >=0)AND (QVIEW1."ONEPERCENT" < 20))
+             AND QVIEW1."EVENONEPERCENT" IS NOT NULL AND QVIEW1.
+             "STRINGU2" IS NOT NULL AND QVIEW1."STRINGU1" IS NOT NULL 
+             AND QVIEW1."UNIQUE2" IS NOT NULL AND (QVIEW1."UNIQUE2" =
+             QVIEW2."UNIQUE2" )AND ((QVIEW2."ONEPERCENT" >=10)AND 
+             (QVIEW2."ONEPERCENT" < 30))AND QVIEW2."EVENONEPERCENT" 
+             IS NOT NULL AND QVIEW2."STRINGU2" IS NOT NULL AND QVIEW2.
+             "STRINGU1" IS NOT NULL )F_2 
+  WHERE F_1.T0V0=F_2.T0V0
+
+
+Section Code Page = 1208
+
+Estimated Cost = 160408.187500
+Estimated Cardinality = 9417.430664
+
+Access Table Name = WISC.T1_1M  ID = 2,5
+|  Index Scan:  Name = SYSIBM.SQL180628114317970  ID = 1
+|  |  Regular Index (Not Clustered)
+|  |  Index Columns:
+|  |  |  1: UNIQUE2 (Ascending)
+|  #Columns = 4
+|  Skip Inserted Rows
+|  Avoid Locking Committed Data
+|  Currently Committed for Cursor Stability
+|  Evaluate Predicates Before Locking for Key
+|  #Key Columns = 0
+|  |  Start Key: Beginning of Index
+|  |  Stop Key: End of Index
+|  Data Prefetch: Sequential(0), Readahead
+|  Index Prefetch: Sequential(4167), Readahead
+|  Lock Intents
+|  |  Table: Intent Share
+|  |  Row  : Next Key Share
+|  Sargable Predicate(s)
+|  |  #Predicates = 2
+Merge Join
+|  Early Out: Single Match Per Outer Row
+|  Access Table Name = WISC.T2_1M  ID = 2,6
+|  |  Index Scan:  Name = SYSIBM.SQL180628114428740  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 0
+|  |  |  Start Key: Beginning of Index
+|  |  |  Stop Key: End of Index
+|  |  Data Prefetch: Sequential(0), Readahead
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+Nested Loop Join
+|  Access Table Name = WISC.T3_1M  ID = 2,7
+|  |  Index Scan:  Name = SYSIBM.SQL180628114630680  ID = 1
+|  |  |  Regular Index (Not Clustered)
+|  |  |  Index Columns:
+|  |  |  |  1: UNIQUE2 (Ascending)
+|  |  #Columns = 4
+|  |  Single Record
+|  |  Fully Qualified Unique Key
+|  |  Skip Inserted Rows
+|  |  Avoid Locking Committed Data
+|  |  Currently Committed for Cursor Stability
+|  |  Evaluate Predicates Before Locking for Key
+|  |  #Key Columns = 1
+|  |  |  Start Key: Inclusive Value
+|  |  |  |  1: ? 
+|  |  |  Stop Key: Inclusive Value
+|  |  |  |  1: ? 
+|  |  Data Prefetch: Sequential(55587)
+|  |  Index Prefetch: Sequential(4167), Readahead
+|  |  Lock Intents
+|  |  |  Table: Intent Share
+|  |  |  Row  : Next Key Share
+|  |  Sargable Predicate(s)
+|  |  |  #Predicates = 2
+Return Data to Application
+|  #Columns = 11
+
+End of section
+
+
+Optimizer Plan:
+
+                                              Rows   
+                                            Operator 
+                                              (ID)   
+                                              Cost   
+                                                    
+                                            9417.43 
+                                            RETURN  
+                                             ( 1)   
+                                            160408  
+                                              |     
+                                            9417.43 
+                                            NLJOIN  
+                                             ( 2)   
+                                            160408  
+                                /----------/       \---------------\
+                         43508.6                                    * 
+                         MSJOIN                                  /-/ \-\
+                          ( 3)                               1          1e+06  
+                         107238                           IXSCAN        Table: 
+                     /--/       \--------\                 (10)         WISC   
+              201429                      *               13.5442       T3_1M  
+               FETCH                     |                  |          
+               ( 4)                    216000             1e+06        
+              53605.4                   FETCH       Index:             
+             /       \                  ( 7)        SYSIBM             
+        1e+06        1e+06             53597.1      SQL180628114630680 
+       IXSCAN        Table:           /       \
+        ( 5)         WISC           1e+06   1e+06  
+       4138.49       T1_1M         IXSCAN   Table: 
+         |                          ( 8)    WISC   
+       1e+06                       4138.49  T2_1M  
+ Index:                              |          
+ SYSIBM                            1e+06        
+ SQL180628114317970          Index:             
+                             SYSIBM             
+                             SQL180628114428740 
+
+
+
+DB20000I  The SQL command completed successfully.

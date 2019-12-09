@@ -1,0 +1,3280 @@
+INSERT INTO tuf_petreg_message VALUES ('STATPIPE', 
+940, 
+'Transportsystemtillatelse 5 overfrt til nytt Petroleumsregister med endringer iht. OEDs oversikt.', 
+'1997-08-06', 
+'Ny tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+1811, 
+'A/S Norske Shell har overdratt sin 5  andel i tillatelsen til Norske Shell Pipelines AS.', 
+'2002-05-28', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+2205, 
+'Tillatelsen er overdratt til interessentene i Gassled med virkning fra 01.01.2003.', 
+'2003-12-15', 
+'Andre meldinger', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+2206, 
+'Gassco har overtatt operatransvaret.', 
+'2003-12-15', 
+'Andre meldinger', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+2216, 
+'Tillatelsen er forlenget til 31.12.2028.', 
+'2003-12-16', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+5099, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-25', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+5114, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+5147, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+5406, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+5587, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+5808, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+5828, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+6060, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+6105, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+6129, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+6149, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+6613, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'STATPIPE', 
+'2013-05-08', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+6633, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('STATPIPE', 
+6653, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'STATPIPE', 
+'9999-12-31', 
+123940, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE OIL AS', 
+347, 
+'Pantsettelse av Cofranords andel i Norpipe A/S.Panthaver Sparebanken Nord-Norge.Pantobligasjon stor USD 12, ',
+'1989-11-01', 
+'Heftelse', 
+'NORPIPE OLJELEDNING', 
+'2013-05-08', 
+124133, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE OIL AS', 
+936, 
+'Transportsystemtillatelse 1 overfrt til nytt Petroleumsregister med endringer iht. OEDs oversikt.', 
+'1997-07-25', 
+'Ny tillatelse', 
+'NORPIPE OLJELEDNING', 
+'9999-12-31', 
+124133, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+5346, 
+'Tillatelsen innfrt i Petroleumsregisteret.', 
+'2010-03-24', 
+'Ny tillatelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+5347, 
+'Deltakerandel oppdater i henhold til Gassled Participant Agreement pr. 1.1.2009.', 
+'2010-03-24', 
+'Endring i tillatelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+5348, 
+'Mobil Development Norway A/S overdrar sin 4, ',
+'2010-03-24', 
+'Endring i tillatelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+5349, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-03-24', 
+'Endring i tillatelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+5404, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+5585, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+5806, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+5826, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+6058, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+6103, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+6127, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+6147, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+6611, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'NORPIPE GASSLEDNING', 
+'2013-05-08', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+6631, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORPIPE GASSRR', 
+6651, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'NORPIPE GASSLEDNING', 
+'9999-12-31', 
+124165, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+2185, 
+'Tillatelsen er registrert i petroleumsregisteret.', 
+'2003-11-04', 
+'Ny tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+5102, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-25', 
+'Endring i tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+5113, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+5146, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+5405, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+5586, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+5807, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+5827, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+6059, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+6104, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+6128, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+6148, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+6612, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'OSEBERG GASSTRANSPORT', 
+'2013-05-08', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+6632, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG GASSTRANSPORT', 
+6652, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'OSEBERG GASSTRANSPORT', 
+'9999-12-31', 
+124170, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+948, 
+'Transportsystemtillatelse 13 overfrt til nytt Petroleumsregister med endringer iht. OEDs oversikt.', 
+'1997-08-06', 
+'Ny tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+1810, 
+'Norfra har endret navn til Franpipe.', 
+'2002-05-28', 
+'Andre meldinger', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+1813, 
+'A/S Norske Shell har overdratt sin 1.2945  andel i tillatelsen til Norske Shell Pipelines AS.', 
+'2002-05-28', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+1856, 
+'Neste Petroleum AS har endret navn til Fortum Petroleum AS.', 
+'2002-09-02', 
+'Andre meldinger', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+1868, 
+'SDE overfrt til Petoro AS.', 
+'2002-10-09', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+2211, 
+'Tillatelsen er overdratt til interessentene i Gassled med virkning fra 01.01.2003.', 
+'2003-12-15', 
+'Andre meldinger', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+2212, 
+'Gassco har overtatt operatransvaret.', 
+'2003-12-15', 
+'Andre meldinger', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+2219, 
+'Tillatelsen er forlenget til 31.12.2028.', 
+'2003-12-16', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+5088, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-22', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+5112, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+5145, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+5397, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+5578, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+5798, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+5818, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+6050, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+6095, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+6119, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+6139, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+6603, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'FRANPIPE', 
+'2013-05-08', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+6623, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('FRANPIPE', 
+6643, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'FRANPIPE', 
+'9999-12-31', 
+124202, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+2183, 
+'Tillatelsen er registrert i petroleumsregisteret.', 
+'2003-11-03', 
+'Ny tillatelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+5101, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-25', 
+'Endring i tillatelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+5118, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+5153, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+5413, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+5593, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+5815, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+5835, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+6067, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+6112, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+6136, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+6156, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+6620, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'SGARD TRANSPORT', 
+'2013-05-08', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+6640, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SGARD TRANSPORT', 
+6660, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'SGARD TRANSPORT', 
+'9999-12-31', 
+124211, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+943, 
+'Transportsystemtillatelse 8 overfrt til nytt Petroleumsregister med endringer iht. OEDs oversikt.', 
+'1997-08-06', 
+'Ny tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+1812, 
+'A/S Norske Shell har overdratt sin 7  andel i tillatelsen til Norske Shell Pipelines AS.', 
+'2002-05-28', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+1871, 
+'SDE overfrt til Petoro AS.', 
+'2002-10-09', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+2207, 
+'Tillatelsen er overdratt til interessentene i Gassled med virkning fra 01.01.2003.', 
+'2003-12-15', 
+'Andre meldinger', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+2208, 
+'Gassco har overtatt operatransvaret.', 
+'2003-12-15', 
+'Andre meldinger', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+2217, 
+'Tillatelsen er forlenget til 31.12.2028.', 
+'2003-12-16', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+5094, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-25', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+5117, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+5150, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+5409, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+5590, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+5811, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+5831, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+6063, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+6108, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+6132, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+6152, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+6616, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'ZEEPIPE', 
+'2013-05-08', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+6636, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE', 
+6656, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'ZEEPIPE', 
+'9999-12-31', 
+124227, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+2181, 
+'Tillatelsen er registrert i petroleumsregisteret.', 
+'2003-11-03', 
+'Ny tillatelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+5095, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-25', 
+'Endring i tillatelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+5124, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+5151, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+5410, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+5591, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+5812, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+5832, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+6064, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+6109, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+6133, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+6153, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+6617, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'ZEEPIPE IIA', 
+'2013-05-08', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+6637, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-A', 
+6657, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'ZEEPIPE IIA', 
+'9999-12-31', 
+124244, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+2182, 
+'Tillatelsen er registrert i petroleumsregisteret.', 
+'2003-11-03', 
+'Ny tillatelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+5096, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-25', 
+'Endring i tillatelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+5125, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+5152, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+5411, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+5592, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+5813, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+5833, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+6065, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+6110, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+6134, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+6154, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+6618, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'ZEEPIPE IIB', 
+'2013-05-08', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+6638, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ZEEPIPE FASE II-B', 
+6658, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'ZEEPIPE IIB', 
+'9999-12-31', 
+124253, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+947, 
+'Transportsystemtillatelse 12 overfrt til nytt Petroleumsregister med endringer iht. OEDs oversikt.', 
+'1997-08-06', 
+'Ny tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+1866, 
+'SDE overfrt til Petoro AS.', 
+'2002-10-09', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+2209, 
+'Tillatelsen er overdratt til interessentene i Gassled med virkning fra 01.01.2003.', 
+'2003-12-15', 
+'Andre meldinger', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+2210, 
+'Gassco har overtatt operatransvaret.', 
+'2003-12-15', 
+'Andre meldinger', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+2218, 
+'Tillatelsen er forlenget til 31.12.2028.', 
+'2003-12-16', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+5086, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-22', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+5110, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+5143, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+5395, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+5576, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+5796, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+5816, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+6048, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+6093, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+6117, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+6137, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+6601, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'EUROPIPE I', 
+'2013-05-08', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+6621, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE', 
+6641, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'EUROPIPE I', 
+'9999-12-31', 
+124262, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+2186, 
+'Tillatelsen er registrert i petroleumsregisteret.', 
+'2003-11-04', 
+'Ny tillatelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+5100, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-25', 
+'Endring i tillatelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+5116, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+5149, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+5408, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+5589, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+5810, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+5830, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+6062, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+6107, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+6131, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+6151, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+6615, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'VESTERLED', 
+'2013-05-08', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+6635, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('VESTERLED', 
+6655, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'VESTERLED', 
+'9999-12-31', 
+124280, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('ULA', 
+941, 
+'Transportsystemtillatelse 6 overfrt til nytt Petroleumsregister med endringer iht. OEDs oversikt.', 
+'1997-08-06', 
+'Ny tillatelse', 
+'ULA OLJETRANSPORT', 
+'9999-12-31', 
+124285, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('HALTENPIPE', 
+946, 
+'Transportsystemtillatelse 11 overfrt til nytt Petroleumsregister med endringer iht. OEDs oversikt.', 
+'1997-08-06', 
+'Ny tillatelse', 
+'HALTENPIPE', 
+'9999-12-31', 
+124293, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('HALTENPIPE', 
+968, 
+'Den norske stats oljeselskap a.s andel er endret til 76, ',
+'1997-10-01', 
+'Endring i tillatelse', 
+'HALTENPIPE', 
+'9999-12-31', 
+124293, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('HALTENPIPE', 
+1500, 
+'Den norske stats oljeselskap a.s har endret navn til Statoil ASA.', 
+'2001-06-05', 
+'Andre meldinger', 
+'HALTENPIPE', 
+'9999-12-31', 
+124293, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('HALTENPIPE', 
+1501, 
+'SDE andeler overfrt til Statoil ASA med 7.187515.', 
+'2001-06-05', 
+'Endring i tillatelse', 
+'HALTENPIPE', 
+'9999-12-31', 
+124293, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('HALTENPIPE', 
+1855, 
+'Neste Petroleum AS har endret navn til Fortum Petroleum AS.', 
+'2002-09-02', 
+'Andre meldinger', 
+'HALTENPIPE', 
+'9999-12-31', 
+124293, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('HALTENPIPE', 
+1869, 
+'SDE overfrt til Petoro AS.', 
+'2002-10-09', 
+'Endring i tillatelse', 
+'HALTENPIPE', 
+'9999-12-31', 
+124293, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+942, 
+'Transportsystemtillatelse 7 overfrt til nytt Petroleumsregister med endringer iht. OEDs oversikt.', 
+'1997-08-06', 
+'Ny tillatelse', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+1870, 
+'SDE overfrt til Petoro AS.', 
+'2002-10-09', 
+'Endring i tillatelse', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6695, 
+'Saga Petroleum AS er innfusjonert i Norsk Hydro Produksjon AS med virkning fra 15.12.1999.', 
+'2012-12-11', 
+'Andre meldinger', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6696, 
+'Norsk Hydro Produksjon AS overfrer alle deltakerandeler i transportsystemtillatelsen til Norsk Hydro Petroleum AS som flge av fisjon med virkning fra 21.4.2007.', 
+'2012-12-11', 
+'Andre meldinger', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6697, 
+'Norsk Hydro Petroleum AS har endret navn til StatoilHydro Petroleum AS med virkning fra 1.10.2007.', 
+'2012-12-11', 
+'Andre meldinger', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6698, 
+'Elf Petroleum Norge AS har endret navn til TotalFinaElf Exploration Norge AS med virkning fra 11.7.2000.', 
+'2012-12-11', 
+'Andre meldinger', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6699, 
+'TotalFinaElf Exploration Norge AS har fusjonert med Total Norge AS med virkning fra 20.9.2001.', 
+'2012-12-11', 
+'Andre meldinger', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6700, 
+'Petoro AS overdrar en 2, ',
+'2012-12-11', 
+'Endring i tillatelse', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6701, 
+'Norske Conoco A/S endrer navn til Norske ConocoPhillips AS med virkning fra 22.3.2003.', 
+'2012-12-11', 
+'Andre meldinger', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6702, 
+'TotalFinaElf Exploration Norge AS har endret navn til Total E'+'@'+'P Norge AS med virkning fra 6.5.2003.', 
+'2012-12-11', 
+'Andre meldinger', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6703, 
+'Norske ConocoPhillips AS har besluttet  innfusjonere, ',
+'2012-12-11', 
+'Andre meldinger', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6704, 
+'StatoilHydro Petroleum AS har endret navn til Statoil Petroleum med virkning fra 2.11.2009.', 
+'2012-12-11', 
+'Andre meldinger', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6705, 
+'Mobil Development Norway AS har overdratt sin 4, ',
+'2012-12-11', 
+'Endring i tillatelse', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('OSEBERG TRANSPORT SYSTEM (OTS)', 
+6706, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 4, ',
+'2012-12-11', 
+'Endring i tillatelse', 
+'OSEBERG TRANSPORTSYSTEM', 
+'9999-12-31', 
+124301, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('SLEIPNER ST KONDENSAT', 
+945, 
+'Transportsystemtillatelse 10 overfrt til nytt Petroleumsregister med endringer iht. OEDs oversikt.', 
+'1997-08-06', 
+'Ny tillatelse', 
+'SLEIPNER KONDENSATRR', 
+'9999-12-31', 
+124340, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+5091, 
+'Tillatelsen innfrt i Petroleumsregisteret.', 
+'2010-01-25', 
+'Ny tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+5092, 
+'Kollsnes Gassbehandlingsanlegg er inkludert i Gassled med virkning fra 13.1.2004 i henhold til brev fra Olje- og energidepartementet med samme dato.', 
+'2010-01-25', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+5093, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-25', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+5122, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+5157, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+5400, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+5581, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+5802, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+5822, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+6054, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+6099, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+6123, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+6143, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+6607, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'KOLLSNES GASSANLEGG', 
+'2013-05-08', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+6627, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KOLLSNES GASSBEHANDLINGSANLEGG', 
+6647, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'KOLLSNES GASSANLEGG', 
+'9999-12-31', 
+124354, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN OLJETRANSPORT SYSTEM', 
+2671, 
+'Tillatelsen er registrert i petroleumsregisteret.', 
+'2005-08-02', 
+'Ny tillatelse', 
+'KVITEBJRN OLJERR', 
+'9999-12-31', 
+917586, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN OLJETRANSPORT SYSTEM', 
+2672, 
+'Statoil ASA har overdratt en 6.45 andel i tillatelsen til Enterprise Oil Norge AS.', 
+'2005-08-02', 
+'Endring i tillatelse', 
+'KVITEBJRN OLJERR', 
+'9999-12-31', 
+917586, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN OLJETRANSPORT SYSTEM', 
+5784, 
+'Tillatelsen er innfrt i petroleumsregisteret p grunnlag av St.prp.nr. 53 (1999-2000);', 
+'2011-05-13', 
+'Andre meldinger', 
+'KVITEBJRN OLJERR', 
+'9999-12-31', 
+917586, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN OLJETRANSPORT SYSTEM', 
+5785, 
+'Dok nr. 2671 er feil registrert, ',
+'2011-05-13', 
+'Andre meldinger', 
+'KVITEBJRN OLJERR', 
+'9999-12-31', 
+917586, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN OLJETRANSPORT SYSTEM', 
+5786, 
+'Fusjonen mellom Statoil ASA og Norsk Hydro ASAs olje og gass virksomhet ble gjennomfrt  1. oktober 2007. Statoil ASA skiftet som flge av fusjonen navn til StatoilHydro ASA. Hydros andeler var re', 
+'2011-05-13', 
+'Andre meldinger', 
+'KVITEBJRN OLJERR', 
+'9999-12-31', 
+917586, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN OLJETRANSPORT SYSTEM', 
+6377, 
+'Statoil Petroleum AS overdrar en 19  deltakerandel i transportsystemtillatelsen til Centrica Resources (Norge) AS med virkning fra 30.4.2012.', 
+'2012-05-04', 
+'Endring i tillatelse', 
+'KVITEBJRN OLJERR', 
+'9999-12-31', 
+917586, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+2666, 
+'Tillatelsen er registrert i petroleumsregisteret.', 
+'2005-07-14', 
+'Ny tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+2667, 
+'Enterprise Oil Norge AS har overdratt sin 6 andel i tillatelsen til Statoil ASA', 
+'2005-07-14', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+5103, 
+'Tillatelsen er inkludert i Gassled med virkning fra 1.1.2009, ',
+'2010-01-26', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+5104, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-26', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+5120, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+5155, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+5403, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+5584, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+5805, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+5825, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+6057, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+6102, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+6126, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+6146, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+6610, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'NORNE GASSTRANSPORT', 
+'2013-05-08', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+6630, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('NORNE GASSTRANSPORTSYSTEM', 
+6650, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'NORNE GASSTRANSPORT', 
+'9999-12-31', 
+1035984, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+5084, 
+'Tillatelsen innfrt i Petroleums registeret.', 
+'2010-01-22', 
+'Ny tillatelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+5085, 
+'Kvitebjrn Gasstransport system er inkludert i Gassled med virkning fra 1. januar 2009 ihht brev fra Finansdepartementet datert 17.12.2008.', 
+'2010-01-22', 
+'Endring i tillatelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+5121, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+5156, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+5401, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+5582, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+5803, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+5823, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+6055, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+6100, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+6124, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+6144, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+6608, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'KVITEBJRN GASSRR', 
+'2013-05-08', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+6628, 
+'Kvitebjrn gasstransport systemPantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'KVITEBJRN GASSRR', 
+'2013-05-08', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('KVITEBJRN GASSTRANSPORT SYSTEM', 
+6648, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'KVITEBJRN GASSRR', 
+'9999-12-31', 
+2417249, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+5082, 
+'Tillatelsen innfrt i Petroleumsregisteret.', 
+'2010-01-22', 
+'Ny tillatelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+5083, 
+'Langeled er inkludert i Gassled fra 1.9.2006 i henhold til overfringsavtale mellom Gassled og den norske stat 31.8.2006.', 
+'2010-01-22', 
+'Endring i tillatelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+5119, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+5154, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+5402, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+5583, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+5804, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+5824, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+6056, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+6101, 
+'Total E'+'@'+'P Norge AS overdrar sin 6, 
+102  deltakerandel i transportsystemtillatelsen til Silex Gas Norway AS med virkning fra 24.1.2012.', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+6125, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+6145, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+6609, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'LANGELED', 
+'2013-05-08', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+6629, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('LANGELED', 
+6649, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'LANGELED', 
+'9999-12-31', 
+2450169, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+949, 
+'Transportsystemtillatelse 14 overfrt til nytt Petroleumsregister med endringer iht. OEDs oversikt.', 
+'1997-08-06', 
+'Ny tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+1498, 
+'Den norske stats oljeselskap a.s har endret navn til Statoil ASA.', 
+'2001-06-05', 
+'Andre meldinger', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+1499, 
+'SDE andeler overfrt til Statoil ASA med 14.99.', 
+'2001-06-05', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+1814, 
+'A/S Norske Shell har overdratt sin 1.1812  andel i tillatelsen til Norske Shell Pipelines AS.', 
+'2002-05-28', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+1857, 
+'Neste Petroleum AS har endret navn til Fortum Petroleum AS.', 
+'2002-09-02', 
+'Andre meldinger', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+1867, 
+'SDE overfrt til Petoro AS.', 
+'2002-10-09', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+2213, 
+'Tillatelsen er overdratt til interessentene i Gassled med virkning fra 01.01.2003.', 
+'2003-12-15', 
+'Andre meldinger', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+2214, 
+'Gassco har overtatt operatransvaret.', 
+'2003-12-15', 
+'Andre meldinger', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+2220, 
+'Tillatelsen er forlenget til 31.12.2028.', 
+'2003-12-16', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+5087, 
+'Deltakerandeler oppdatert i henhold til Gassled participants agreement pr.1.1.2009.', 
+'2010-01-22', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+5111, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+5144, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+5396, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+5577, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+5797, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+5817, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+6049, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+6094, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+6118, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+6138, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+6602, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'EUROPIPE II', 
+'2013-05-08', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+6622, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('EUROPIPE II', 
+6642, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'EUROPIPE II', 
+'9999-12-31', 
+2454909, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+5080, 
+'Tillatelsen innfrt i Petroleumsregisteret.', 
+'2010-01-22', 
+'Ny tillatelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+5081, 
+'Tampen Link er inkludert i Gassled fra 30.8.2007 i henhold til overfringsavtale mellom Gassled og den norske stat samme dag.', 
+'2010-01-22', 
+'Endring i tillatelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+5115, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+5148, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+5407, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+5588, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+5809, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+5829, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+6061, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+6106, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+6130, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+6150, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+6614, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'TAMPEN LINK', 
+'2013-05-08', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+6634, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('TAMPEN LINK', 
+6654, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'TAMPEN LINK', 
+'9999-12-31', 
+3113815, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+2187, 
+'Tillatelsen er registrert i petroleumsregisteret.', 
+'2003-11-04', 
+'Ny tillatelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+5105, 
+'Deltakerandel oppdatert i henhold til Gassled Participants Agreement pr. 1.1.2009', 
+'2010-01-26', 
+'Endring i tillatelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+5123, 
+'Norske Shell Pipelines AS overdrar sin 3, ',
+'2010-02-01', 
+'Endring i tillatelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+5158, 
+'Mobil Development Norway AS overdrar sin 4, ',
+'2010-02-17', 
+'Endring i tillatelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+5399, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+5579, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+5800, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+5820, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+6052, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+6097, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+6121, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+6141, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+6605, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'KRST GASSANLEGG', 
+'2013-05-08', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+6625, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GASSBEHANDLINGSANLEGGENE P KRST', 
+6645, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'KRST GASSANLEGG', 
+'9999-12-31', 
+3471786, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+5393, 
+'Tillatelsen innfrt i Petroleumsregisteret.', 
+'2010-06-18', 
+'Ny tillatelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+5394, 
+'Ref. godkjennelse i brev fra Olje- og energidepartemente datert 27.5.2010 ifm. overdragelse av Gja Gas Pipeline til Gassled samt endring av eierandeler i Gassled med virkning fra 1.6.2010.', 
+'2010-06-18', 
+'Endring i tillatelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+5580, 
+'Deltakerandel i Gassled er justert med virkning fra og med 1.1.2011, ',
+'2011-01-04', 
+'Endring i tillatelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+5801, 
+'ExxonMobil Exploration and Production Norway AS overdrar sin 8, ',
+'2011-06-16', 
+'Endring i tillatelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+5821, 
+'Njord Gas Infrastructure AS pantsetter sin 8, ',
+'2011-06-16', 
+'Heftelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+6053, 
+'A/S Norske Shell overdrar sin 5, ',
+'2011-12-28', 
+'Endring i tillatelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+6098, 
+'Total E'+'@'+'P Norge AS overdrar sin 6', 
+'2012-01-24', 
+'Endring i tillatelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+6122, 
+'Statoil Petroleum AS overdrar en 23, ',
+'2012-01-31', 
+'Endring i tillatelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+6142, 
+'Solveig Gas Norway AS pantsetter sin 23, ',
+'2012-01-31', 
+'Heftelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+6606, 
+'Eni Norge AS overdrar sin 1, ',
+'2012-10-31', 
+'Endring i tillatelse', 
+'GJA GASSRR', 
+'2013-05-08', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+6626, 
+'Pantobligasjon plydende NOK 30 000 000 000, ',
+'2012-10-31', 
+'Sletting av heftelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');
+INSERT INTO tuf_petreg_message VALUES 
+('GJA GAS PIPELINE', 
+6646, 
+'Solveig Gas Norway AS pantsetter sin 24.756  deltakerandel i transportsystemtillatelsen til fordel for The Law Debenture Trust Corporation P.L.C. Frste prioritet panteobligasjon plydende NOK 30 0', 
+'2012-10-31', 
+'Heftelse', 
+'GJA GASSRR', 
+'9999-12-31', 
+4480765, 
+'2013-05-08');

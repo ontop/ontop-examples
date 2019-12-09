@@ -1,0 +1,81 @@
+
+SQL*Plus: Release 12.1.0.2.0 Production on Fri Aug 24 08:42:41 2018
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Fri Aug 24 2018 08:42:19 +00:00
+
+Connected to:
+Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production
+
+
+Explained.
+
+SQL> 
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+Plan hash value: 909707670
+
+--------------------------------------------------------------------------------
+------
+
+| Id  | Operation	     | Name  | Rows  | Bytes |TempSpc| Cost (%CPU)| Time
+     |
+
+--------------------------------------------------------------------------------
+------
+
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT     |	     |	 109K|	  37M|	     |
+37537   (1)| 00:00:02 |
+
+|   1 |  HASH UNIQUE	     |	     |	 109K|	  37M|	  39M| 37537   (1)| 00:0
+0:02 |
+
+|*  2 |   HASH JOIN	     |	     |	 109K|	  37M|	  24M| 29226   (1)| 00:0
+0:02 |
+
+|*  3 |    TABLE ACCESS FULL | T3_1M |	 200K|	  22M|	     |	8001   (1)| 00:0
+0:01 |
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+|*  4 |    HASH JOIN	     |	     |	 109K|	  24M|	  24M| 18705   (1)| 00:0
+0:01 |
+
+|*  5 |     TABLE ACCESS FULL| T1_1M |	 200K|	  22M|	     |	8243   (1)| 00:0
+0:01 |
+
+|*  6 |     TABLE ACCESS FULL| T2_1M |	 200K|	  22M|	     |	8001   (1)| 00:0
+0:01 |
+
+--------------------------------------------------------------------------------
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+------
+
+
+Predicate Information (identified by operation id):
+---------------------------------------------------
+
+   2 - access("QVIEW1"."UNIQUE2"="QVIEW3"."UNIQUE2")
+   3 - filter("QVIEW3"."ONEPERCENT"<30 AND "QVIEW3"."ONEPERCENT">=10)
+   4 - access("QVIEW1"."UNIQUE2"="QVIEW2"."UNIQUE2")
+   5 - filter("QVIEW1"."ONEPERCENT"<20 AND "QVIEW1"."ONEPERCENT">=0)
+   6 - filter("QVIEW2"."ONEPERCENT"<30 AND "QVIEW2"."ONEPERCENT">=10)
+
+PLAN_TABLE_OUTPUT
+--------------------------------------------------------------------------------
+
+Note
+-----
+   - dynamic statistics used: dynamic sampling (level=2)
+   - 2 Sql Plan Directives used for this statement
+
+27 rows selected.
+
+SQL> Disconnected from Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production

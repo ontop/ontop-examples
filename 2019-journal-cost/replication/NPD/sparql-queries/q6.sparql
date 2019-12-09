@@ -1,0 +1,14 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX npdv: <http://sws.ifi.uio.no/vocab/npd-v2#>
+
+SELECT DISTINCT *
+WHERE {
+   ?wc npdv:coreForWellbore ?x .
+   ?x rdf:type npdv:Wellbore .
+   ?x npdv:name ?wellbore .  
+
+   ?x npdv:wellboreCompletionYear ?year .
+   ?x npdv:drillingOperatorCompany ?y .
+   ?y npdv:name ?company .
+   ?wc npdv:coresTotalLength ?l .
+}

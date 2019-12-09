@@ -1,0 +1,4508 @@
+INSERT INTO "f_prod_totalt_NCS_month" VALUES (1971, 
+6, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1971, 
+7, 
+0.034000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.034000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1971, 
+8, 
+0.051000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.051000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1971, 
+9, 
+0.064000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.064000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1971, 
+10, 
+0.086000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.086000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1971, 
+11, 
+0.058000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.058000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1971, 
+12, 
+0.063000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.063000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+1, 
+0.047000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.047000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+2, 
+0.145000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.145000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+3, 
+0.173000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.173000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+4, 
+0.195000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.195000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+5, 
+0.199000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.199000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+6, 
+0.188000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.188000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+7, 
+0.203000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.203000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+8, 
+0.205000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.205000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+9, 
+0.173000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.173000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+10, 
+0.173000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.173000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+11, 
+0.101000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.101000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1972, 
+12, 
+0.125000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.125000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+1, 
+0.185000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.185000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+2, 
+0.119000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.119000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+3, 
+0.207000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.207000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+4, 
+0.136000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.136000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+5, 
+0.190000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.190000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+6, 
+0.190000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.190000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+7, 
+0.171000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.171000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+8, 
+0.180000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.180000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+9, 
+0.194000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.194000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+10, 
+0.189000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.189000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+11, 
+0.092000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.092000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1973, 
+12, 
+0.017000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.017000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+1, 
+0.009000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.009000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+2, 
+0.113000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.113000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+3, 
+0.083000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.083000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+4, 
+0.070000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.070000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+5, 
+0.124000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.124000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+6, 
+0.179000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.179000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+7, 
+0.247000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.247000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+8, 
+0.226000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.226000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+9, 
+0.237000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.237000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+10, 
+0.219000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.219000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+11, 
+0.280000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.280000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1974, 
+12, 
+0.227000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.227000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+1, 
+0.117000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.117000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+2, 
+0.342000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.342000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+3, 
+0.604000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.604000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+4, 
+0.718000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.718000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+5, 
+0.824000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.824000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+6, 
+1.045000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.045000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+7, 
+1.255000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.255000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+8, 
+1.074000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.074000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+9, 
+1.383000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.383000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+10, 
+1.291000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.291000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+11, 
+1.097000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.097000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1975, 
+12, 
+1.245000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.245000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+1, 
+1.298000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.298000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+2, 
+1.285000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.285000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+3, 
+1.320000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.320000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+4, 
+0.935000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.935000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+5, 
+0.830000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.830000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+6, 
+1.338000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.338000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+7, 
+1.568000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.568000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+8, 
+1.600000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.600000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+9, 
+1.477000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.477000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+10, 
+1.719000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.719000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+11, 
+1.143000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.143000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1976, 
+12, 
+1.713000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.713000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+1, 
+1.700000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.700000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+2, 
+1.494000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.494000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+3, 
+1.571000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.571000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+4, 
+1.128000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.128000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+5, 
+0.776000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.776000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+6, 
+0.997000, 
+0.000000, 
+0.000000, 
+0.000000, 
+0.997000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+7, 
+1.266000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.266000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+8, 
+1.386000, 
+0.000000, 
+0.000000, 
+0.000000, 
+1.386000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+9, 
+1.290000, 
+0.267000, 
+0.000000, 
+0.000000, 
+1.557000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+10, 
+1.547000, 
+0.695000, 
+0.000000, 
+0.000000, 
+2.242000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+11, 
+1.583000, 
+0.672000, 
+0.000000, 
+0.001000, 
+2.256000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1977, 
+12, 
+1.903000, 
+1.021000, 
+0.000000, 
+0.002000, 
+2.927000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+1, 
+1.954000, 
+1.150000, 
+0.000000, 
+0.001000, 
+3.106000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+2, 
+1.704000, 
+1.049000, 
+0.000000, 
+0.001000, 
+2.755000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+3, 
+1.760000, 
+1.019000, 
+0.000000, 
+0.002000, 
+2.782000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+4, 
+1.753000, 
+1.063000, 
+0.000000, 
+0.001000, 
+2.817000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+5, 
+1.674000, 
+0.847000, 
+0.000000, 
+0.001000, 
+2.523000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+6, 
+1.290000, 
+0.812000, 
+0.000000, 
+0.001000, 
+2.103000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+7, 
+1.767000, 
+0.989000, 
+0.000000, 
+0.001000, 
+2.757000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+8, 
+1.860000, 
+0.984000, 
+0.000000, 
+0.001000, 
+2.844000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+9, 
+1.742000, 
+1.385000, 
+0.000000, 
+0.002000, 
+3.128000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+10, 
+1.703000, 
+1.472000, 
+0.000000, 
+0.003000, 
+3.179000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+11, 
+1.719000, 
+1.663000, 
+0.000000, 
+0.003000, 
+3.385000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1978, 
+12, 
+1.718000, 
+1.768000, 
+0.000000, 
+0.003000, 
+3.488000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+1, 
+1.766000, 
+1.863000, 
+0.000000, 
+0.004000, 
+3.633000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+2, 
+1.613000, 
+1.626000, 
+0.000000, 
+0.004000, 
+3.243000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+3, 
+1.714000, 
+1.745000, 
+0.014000, 
+0.004000, 
+3.477000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+4, 
+1.859000, 
+1.621000, 
+0.051000, 
+0.004000, 
+3.534000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+5, 
+1.778000, 
+1.573000, 
+0.061000, 
+0.003000, 
+3.416000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+6, 
+1.640000, 
+1.083000, 
+0.066000, 
+0.003000, 
+2.792000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+7, 
+1.716000, 
+1.521000, 
+0.129000, 
+0.002000, 
+3.367000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+8, 
+1.889000, 
+1.722000, 
+0.162000, 
+0.003000, 
+3.776000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+9, 
+2.100000, 
+1.762000, 
+0.172000, 
+0.003000, 
+4.037000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+10, 
+1.656000, 
+1.685000, 
+0.103000, 
+0.005000, 
+3.449000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+11, 
+2.228000, 
+2.157000, 
+0.177000, 
+0.005000, 
+4.567000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1979, 
+12, 
+2.520000, 
+2.312000, 
+0.193000, 
+0.005000, 
+5.030000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+1, 
+2.638000, 
+2.437000, 
+0.217000, 
+0.005000, 
+5.298000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+2, 
+2.642000, 
+2.378000, 
+0.215000, 
+0.006000, 
+5.241000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+3, 
+2.572000, 
+2.378000, 
+0.200000, 
+0.006000, 
+5.155000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+4, 
+2.386000, 
+2.108000, 
+0.197000, 
+0.005000, 
+4.695000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+5, 
+2.538000, 
+2.069000, 
+0.226000, 
+0.003000, 
+4.837000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+6, 
+2.419000, 
+1.966000, 
+0.217000, 
+0.003000, 
+4.605000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+7, 
+1.213000, 
+1.383000, 
+0.102000, 
+0.004000, 
+2.701000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+8, 
+2.412000, 
+1.884000, 
+0.213000, 
+0.003000, 
+4.512000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+9, 
+2.195000, 
+1.939000, 
+0.198000, 
+0.003000, 
+4.336000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+10, 
+2.405000, 
+2.059000, 
+0.219000, 
+0.004000, 
+4.687000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+11, 
+2.312000, 
+2.195000, 
+0.221000, 
+0.003000, 
+4.732000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1980, 
+12, 
+2.487000, 
+2.291000, 
+0.217000, 
+0.004000, 
+4.999000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+1, 
+2.411000, 
+2.415000, 
+0.216000, 
+0.005000, 
+5.047000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+2, 
+2.201000, 
+2.202000, 
+0.199000, 
+0.005000, 
+4.608000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+3, 
+2.354000, 
+2.468000, 
+0.199000, 
+0.005000, 
+5.026000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+4, 
+2.213000, 
+2.316000, 
+0.206000, 
+0.004000, 
+4.739000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+5, 
+2.581000, 
+1.957000, 
+0.207000, 
+0.003000, 
+4.747000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+6, 
+2.536000, 
+1.858000, 
+0.194000, 
+0.003000, 
+4.590000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+7, 
+2.556000, 
+1.851000, 
+0.201000, 
+0.003000, 
+4.612000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+8, 
+1.590000, 
+1.080000, 
+0.070000, 
+0.003000, 
+2.744000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+9, 
+2.276000, 
+1.993000, 
+0.185000, 
+0.003000, 
+4.457000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+10, 
+1.976000, 
+2.151000, 
+0.157000, 
+0.004000, 
+4.289000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+11, 
+2.373000, 
+2.230000, 
+0.168000, 
+0.004000, 
+4.774000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1981, 
+12, 
+2.418000, 
+2.431000, 
+0.165000, 
+0.006000, 
+5.019000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+1, 
+2.551000, 
+2.579000, 
+0.188000, 
+0.006000, 
+5.324000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+2, 
+2.249000, 
+2.310000, 
+0.175000, 
+0.005000, 
+4.739000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+3, 
+2.487000, 
+2.563000, 
+0.213000, 
+0.005000, 
+5.268000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+4, 
+2.558000, 
+2.375000, 
+0.193000, 
+0.004000, 
+5.129000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+5, 
+2.325000, 
+1.891000, 
+0.155000, 
+0.003000, 
+4.374000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+6, 
+2.121000, 
+1.559000, 
+0.181000, 
+0.003000, 
+3.864000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+7, 
+2.390000, 
+1.476000, 
+0.197000, 
+0.002000, 
+4.066000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+8, 
+2.412000, 
+1.347000, 
+0.193000, 
+0.002000, 
+3.953000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+9, 
+2.089000, 
+1.446000, 
+0.189000, 
+0.002000, 
+3.726000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+10, 
+1.927000, 
+1.888000, 
+0.173000, 
+0.003000, 
+3.990000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+11, 
+2.636000, 
+2.212000, 
+0.212000, 
+0.004000, 
+5.064000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1982, 
+12, 
+2.784000, 
+2.313000, 
+0.217000, 
+0.005000, 
+5.319000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+1, 
+2.580000, 
+2.321000, 
+0.211000, 
+0.004000, 
+5.116000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+2, 
+2.778000, 
+2.102000, 
+0.190000, 
+0.005000, 
+5.074000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+3, 
+3.002000, 
+2.274000, 
+0.242000, 
+0.004000, 
+5.521000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+4, 
+2.945000, 
+2.049000, 
+0.235000, 
+0.003000, 
+5.232000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+5, 
+2.958000, 
+1.808000, 
+0.243000, 
+0.004000, 
+5.012000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+6, 
+2.993000, 
+1.553000, 
+0.226000, 
+0.002000, 
+4.774000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+7, 
+3.248000, 
+1.541000, 
+0.231000, 
+0.001000, 
+5.020000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+8, 
+2.771000, 
+1.538000, 
+0.221000, 
+0.002000, 
+4.532000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+9, 
+2.814000, 
+1.594000, 
+0.212000, 
+0.002000, 
+4.622000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+10, 
+3.147000, 
+2.114000, 
+0.221000, 
+0.003000, 
+5.486000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+11, 
+3.119000, 
+2.248000, 
+0.221000, 
+0.006000, 
+5.593000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1983, 
+12, 
+3.290000, 
+2.473000, 
+0.227000, 
+0.006000, 
+5.995000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+1, 
+3.387000, 
+2.487000, 
+0.231000, 
+0.005000, 
+6.109000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+2, 
+3.181000, 
+2.440000, 
+0.229000, 
+0.005000, 
+5.855000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+3, 
+3.205000, 
+2.661000, 
+0.239000, 
+0.006000, 
+6.110000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+4, 
+3.201000, 
+2.324000, 
+0.223000, 
+0.005000, 
+5.753000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+5, 
+3.508000, 
+2.204000, 
+0.237000, 
+0.005000, 
+5.954000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+6, 
+3.256000, 
+1.906000, 
+0.217000, 
+0.005000, 
+5.384000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+7, 
+3.242000, 
+1.558000, 
+0.206000, 
+0.001000, 
+5.007000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+8, 
+3.411000, 
+1.330000, 
+0.157000, 
+0.002000, 
+4.900000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+9, 
+3.484000, 
+1.733000, 
+0.213000, 
+0.010000, 
+5.439000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+10, 
+3.760000, 
+2.272000, 
+0.232000, 
+0.007000, 
+6.272000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+11, 
+3.631000, 
+2.454000, 
+0.224000, 
+0.006000, 
+6.315000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1984, 
+12, 
+3.827000, 
+2.595000, 
+0.233000, 
+0.007000, 
+6.662000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+1, 
+3.518000, 
+2.812000, 
+0.201000, 
+0.008000, 
+6.539000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+2, 
+3.158000, 
+2.484000, 
+0.209000, 
+0.008000, 
+5.859000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+3, 
+3.635000, 
+2.702000, 
+0.249000, 
+0.009000, 
+6.595000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+4, 
+3.555000, 
+2.519000, 
+0.234000, 
+0.008000, 
+6.317000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+5, 
+3.588000, 
+2.344000, 
+0.232000, 
+0.008000, 
+6.171000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+6, 
+3.050000, 
+1.825000, 
+0.208000, 
+0.005000, 
+5.088000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+7, 
+3.979000, 
+1.631000, 
+0.236000, 
+0.003000, 
+5.850000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+8, 
+3.841000, 
+1.644000, 
+0.223000, 
+0.003000, 
+5.710000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+9, 
+3.884000, 
+1.576000, 
+0.217000, 
+0.004000, 
+5.682000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+10, 
+4.211000, 
+1.827000, 
+0.277000, 
+0.006000, 
+6.322000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+11, 
+4.159000, 
+2.245000, 
+0.278000, 
+0.005000, 
+6.688000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1985, 
+12, 
+4.179000, 
+2.577000, 
+0.404000, 
+0.007000, 
+7.166000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+1, 
+4.161000, 
+2.599000, 
+0.341000, 
+0.006000, 
+7.107000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+2, 
+3.822000, 
+2.371000, 
+0.259000, 
+0.007000, 
+6.460000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+3, 
+4.177000, 
+2.594000, 
+0.349000, 
+0.009000, 
+7.130000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+4, 
+1.456000, 
+1.079000, 
+0.110000, 
+0.002000, 
+2.647000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+5, 
+3.830000, 
+2.181000, 
+0.338000, 
+0.005000, 
+6.353000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+6, 
+4.111000, 
+1.886000, 
+0.369000, 
+0.004000, 
+6.369000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+7, 
+4.462000, 
+2.007000, 
+0.357000, 
+0.001000, 
+6.825000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+8, 
+4.454000, 
+2.002000, 
+0.337000, 
+0.003000, 
+6.796000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+9, 
+3.990000, 
+1.934000, 
+0.296000, 
+0.006000, 
+6.226000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+10, 
+4.577000, 
+2.525000, 
+0.312000, 
+0.007000, 
+7.421000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+11, 
+4.714000, 
+2.417000, 
+0.348000, 
+0.006000, 
+7.484000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1986, 
+12, 
+5.018000, 
+2.496000, 
+0.429000, 
+0.006000, 
+7.949000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+1, 
+5.187000, 
+2.807000, 
+0.319000, 
+0.007000, 
+8.319000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+2, 
+4.383000, 
+2.460000, 
+0.329000, 
+0.005000, 
+7.176000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+3, 
+4.764000, 
+2.713000, 
+0.360000, 
+0.005000, 
+7.842000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+4, 
+4.884000, 
+2.417000, 
+0.383000, 
+0.006000, 
+7.690000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+5, 
+5.013000, 
+2.386000, 
+0.366000, 
+0.005000, 
+7.771000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+6, 
+3.982000, 
+2.105000, 
+0.320000, 
+0.004000, 
+6.411000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+7, 
+4.957000, 
+1.923000, 
+0.311000, 
+0.000000, 
+7.191000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+8, 
+3.776000, 
+1.215000, 
+0.110000, 
+0.002000, 
+5.103000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+9, 
+4.936000, 
+2.078000, 
+0.402000, 
+0.004000, 
+7.420000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+10, 
+5.309000, 
+2.530000, 
+0.371000, 
+0.005000, 
+8.214000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+11, 
+4.960000, 
+2.744000, 
+0.373000, 
+0.005000, 
+8.081000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1987, 
+12, 
+4.808000, 
+2.774000, 
+0.475000, 
+0.006000, 
+8.063000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+1, 
+5.424000, 
+2.709000, 
+0.372000, 
+0.006000, 
+8.511000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+2, 
+5.050000, 
+2.631000, 
+0.401000, 
+0.004000, 
+8.087000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+3, 
+5.589000, 
+2.700000, 
+0.405000, 
+0.005000, 
+8.700000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+4, 
+5.489000, 
+2.592000, 
+0.389000, 
+0.005000, 
+8.476000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+5, 
+5.314000, 
+2.245000, 
+0.371000, 
+0.005000, 
+7.935000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+6, 
+4.125000, 
+2.094000, 
+0.367000, 
+0.004000, 
+6.590000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+7, 
+5.586000, 
+2.031000, 
+0.400000, 
+0.001000, 
+8.019000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+8, 
+5.051000, 
+1.950000, 
+0.391000, 
+0.002000, 
+7.394000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+9, 
+5.576000, 
+1.911000, 
+0.384000, 
+0.003000, 
+7.873000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+10, 
+5.882000, 
+2.233000, 
+0.411000, 
+0.003000, 
+8.530000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+11, 
+5.713000, 
+2.549000, 
+0.427000, 
+0.004000, 
+8.693000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1988, 
+12, 
+5.923000, 
+2.684000, 
+0.528000, 
+0.004000, 
+9.139000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+1, 
+6.973000, 
+2.788000, 
+0.373000, 
+0.005000, 
+10.138000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+2, 
+5.799000, 
+2.559000, 
+0.389000, 
+0.005000, 
+8.751000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+3, 
+7.389000, 
+2.603000, 
+0.439000, 
+0.004000, 
+10.436000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+4, 
+7.461000, 
+2.517000, 
+0.381000, 
+0.004000, 
+10.363000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+5, 
+7.412000, 
+2.232000, 
+0.414000, 
+0.005000, 
+10.064000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+6, 
+6.589000, 
+2.082000, 
+0.348000, 
+0.005000, 
+9.024000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+7, 
+7.655000, 
+1.977000, 
+0.492000, 
+0.000000, 
+10.123000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+8, 
+7.651000, 
+2.109000, 
+0.421000, 
+0.003000, 
+10.184000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+9, 
+6.771000, 
+2.129000, 
+0.336000, 
+0.004000, 
+9.239000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+10, 
+7.638000, 
+2.508000, 
+0.415000, 
+0.003000, 
+10.565000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+11, 
+7.619000, 
+2.559000, 
+0.442000, 
+0.006000, 
+10.626000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1989, 
+12, 
+7.026000, 
+2.675000, 
+0.447000, 
+0.008000, 
+10.156000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+1, 
+7.754000, 
+2.656000, 
+0.373000, 
+0.006000, 
+10.789000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+2, 
+7.009000, 
+2.377000, 
+0.393000, 
+0.004000, 
+9.783000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+3, 
+7.936000, 
+2.497000, 
+0.418000, 
+0.004000, 
+10.856000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+4, 
+7.815000, 
+1.842000, 
+0.408000, 
+0.003000, 
+10.069000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+5, 
+8.185000, 
+1.804000, 
+0.376000, 
+0.002000, 
+10.367000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+6, 
+7.591000, 
+1.710000, 
+0.426000, 
+0.003000, 
+9.730000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+7, 
+7.065000, 
+1.605000, 
+0.340000, 
+0.004000, 
+9.013000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+8, 
+6.984000, 
+1.982000, 
+0.429000, 
+0.004000, 
+9.398000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+9, 
+7.628000, 
+2.031000, 
+0.391000, 
+0.003000, 
+10.053000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+10, 
+9.009000, 
+2.172000, 
+0.459000, 
+0.005000, 
+11.646000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+11, 
+8.869000, 
+2.349000, 
+0.460000, 
+0.005000, 
+11.683000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1990, 
+12, 
+8.699000, 
+2.455000, 
+0.537000, 
+0.005000, 
+11.696000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+1, 
+9.181000, 
+2.414000, 
+0.389000, 
+0.004000, 
+11.988000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+2, 
+8.320000, 
+2.229000, 
+0.407000, 
+0.005000, 
+10.962000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+3, 
+9.153000, 
+2.370000, 
+0.437000, 
+0.005000, 
+11.966000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+4, 
+8.869000, 
+2.221000, 
+0.428000, 
+0.006000, 
+11.525000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+5, 
+9.599000, 
+2.320000, 
+0.430000, 
+0.004000, 
+12.352000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+6, 
+8.498000, 
+1.965000, 
+0.413000, 
+0.004000, 
+10.879000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+7, 
+8.877000, 
+1.887000, 
+0.379000, 
+0.003000, 
+11.146000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+8, 
+7.052000, 
+0.883000, 
+0.102000, 
+0.007000, 
+8.045000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+9, 
+10.171000, 
+1.753000, 
+0.427000, 
+0.001000, 
+12.351000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+10, 
+9.471000, 
+2.228000, 
+0.488000, 
+0.005000, 
+12.192000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+11, 
+9.237000, 
+2.336000, 
+0.459000, 
+0.006000, 
+12.038000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1991, 
+12, 
+10.082000, 
+2.422000, 
+0.538000, 
+0.007000, 
+13.049000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+1, 
+10.759000, 
+2.418000, 
+0.365000, 
+0.008000, 
+13.549000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+2, 
+9.385000, 
+2.261000, 
+0.423000, 
+0.004000, 
+12.072000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+3, 
+10.538000, 
+2.335000, 
+0.408000, 
+0.007000, 
+13.288000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+4, 
+10.472000, 
+2.238000, 
+0.459000, 
+0.003000, 
+13.171000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+5, 
+9.523000, 
+1.934000, 
+0.378000, 
+0.004000, 
+11.839000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+6, 
+10.039000, 
+2.081000, 
+0.414000, 
+0.002000, 
+12.536000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+7, 
+10.527000, 
+2.014000, 
+0.412000, 
+0.004000, 
+12.956000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+8, 
+10.040000, 
+2.118000, 
+0.443000, 
+0.006000, 
+12.607000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+9, 
+9.845000, 
+1.990000, 
+0.322000, 
+0.001000, 
+12.158000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+10, 
+10.887000, 
+2.115000, 
+0.399000, 
+0.005000, 
+13.405000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+11, 
+10.697000, 
+2.070000, 
+0.410000, 
+0.006000, 
+13.183000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1992, 
+12, 
+11.288000, 
+2.260000, 
+0.527000, 
+0.004000, 
+14.079000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+1, 
+9.943000, 
+2.304000, 
+0.351000, 
+0.005000, 
+12.604000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+2, 
+9.514000, 
+2.063000, 
+0.405000, 
+0.002000, 
+11.984000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+3, 
+11.518000, 
+2.187000, 
+0.482000, 
+0.002000, 
+14.189000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+4, 
+11.232000, 
+1.975000, 
+0.433000, 
+0.006000, 
+13.646000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+5, 
+11.228000, 
+2.075000, 
+0.439000, 
+0.002000, 
+13.744000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+6, 
+9.534000, 
+1.459000, 
+0.322000, 
+0.001000, 
+11.316000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+7, 
+11.659000, 
+1.675000, 
+0.491000, 
+0.004000, 
+13.828000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+8, 
+11.066000, 
+1.643000, 
+0.411000, 
+0.003000, 
+13.122000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+9, 
+10.342000, 
+1.979000, 
+0.444000, 
+0.032000, 
+12.797000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+10, 
+12.041000, 
+2.403000, 
+0.562000, 
+0.110000, 
+15.116000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+11, 
+11.821000, 
+2.470000, 
+0.576000, 
+0.140000, 
+15.007000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1993, 
+12, 
+11.947000, 
+2.571000, 
+0.603000, 
+0.168000, 
+15.288000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+1, 
+12.078000, 
+2.524000, 
+0.593000, 
+0.178000, 
+15.373000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+2, 
+11.179000, 
+2.286000, 
+0.537000, 
+0.152000, 
+14.153000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+3, 
+12.239000, 
+2.342000, 
+0.578000, 
+0.144000, 
+15.303000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+4, 
+11.571000, 
+2.286000, 
+0.533000, 
+0.135000, 
+14.524000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+5, 
+12.456000, 
+2.174000, 
+0.597000, 
+0.188000, 
+15.415000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+6, 
+12.512000, 
+2.112000, 
+0.604000, 
+0.209000, 
+15.437000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+7, 
+12.609000, 
+2.038000, 
+0.529000, 
+0.163000, 
+15.339000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+8, 
+9.949000, 
+1.220000, 
+0.377000, 
+0.112000, 
+11.658000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+9, 
+11.920000, 
+2.129000, 
+0.595000, 
+0.251000, 
+14.896000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+10, 
+13.391000, 
+2.447000, 
+0.723000, 
+0.303000, 
+16.864000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+11, 
+12.913000, 
+2.574000, 
+0.716000, 
+0.290000, 
+16.492000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1994, 
+12, 
+13.465000, 
+2.710000, 
+0.740000, 
+0.279000, 
+17.193000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+1, 
+12.847000, 
+2.746000, 
+0.713000, 
+0.262000, 
+16.568000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+2, 
+11.450000, 
+2.195000, 
+0.649000, 
+0.252000, 
+14.546000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+3, 
+12.840000, 
+2.567000, 
+0.704000, 
+0.292000, 
+16.403000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+4, 
+12.868000, 
+2.211000, 
+0.662000, 
+0.266000, 
+16.007000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+5, 
+13.085000, 
+2.269000, 
+0.694000, 
+0.274000, 
+16.322000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+6, 
+11.571000, 
+2.226000, 
+0.666000, 
+0.274000, 
+14.736000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+7, 
+13.440000, 
+2.124000, 
+0.677000, 
+0.278000, 
+16.520000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+8, 
+12.363000, 
+1.929000, 
+0.515000, 
+0.142000, 
+14.949000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+9, 
+12.869000, 
+2.144000, 
+0.594000, 
+0.277000, 
+15.884000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+10, 
+14.560000, 
+2.090000, 
+0.682000, 
+0.308000, 
+17.640000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+11, 
+14.084000, 
+2.456000, 
+0.640000, 
+0.249000, 
+17.429000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1995, 
+12, 
+14.800000, 
+2.857000, 
+0.745000, 
+0.304000, 
+18.706000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+1, 
+14.803000, 
+2.898000, 
+0.739000, 
+0.309000, 
+18.750000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+2, 
+14.247000, 
+2.773000, 
+0.685000, 
+0.281000, 
+17.985000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+3, 
+14.212000, 
+2.983000, 
+0.716000, 
+0.298000, 
+18.209000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+4, 
+14.771000, 
+2.737000, 
+0.689000, 
+0.287000, 
+18.483000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+5, 
+14.250000, 
+2.806000, 
+0.678000, 
+0.283000, 
+18.018000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+6, 
+14.801000, 
+2.470000, 
+0.561000, 
+0.154000, 
+17.987000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+7, 
+15.360000, 
+2.908000, 
+0.694000, 
+0.301000, 
+19.263000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+8, 
+14.573000, 
+2.945000, 
+0.690000, 
+0.294000, 
+18.501000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+9, 
+14.390000, 
+3.419000, 
+0.615000, 
+0.326000, 
+18.750000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+10, 
+14.187000, 
+3.731000, 
+0.730000, 
+0.408000, 
+19.056000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+11, 
+14.699000, 
+3.740000, 
+0.709000, 
+0.409000, 
+19.557000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1996, 
+12, 
+15.209000, 
+3.997000, 
+0.726000, 
+0.433000, 
+20.365000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+1, 
+15.208000, 
+4.053000, 
+0.695000, 
+0.452000, 
+20.408000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+2, 
+13.797000, 
+3.587000, 
+0.635000, 
+0.412000, 
+18.430000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+3, 
+14.571000, 
+3.783000, 
+0.640000, 
+0.455000, 
+19.449000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+4, 
+15.456000, 
+3.093000, 
+0.677000, 
+0.443000, 
+19.669000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+5, 
+15.318000, 
+3.070000, 
+0.710000, 
+0.489000, 
+19.588000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+6, 
+13.749000, 
+3.052000, 
+0.650000, 
+0.479000, 
+17.930000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+7, 
+15.241000, 
+3.616000, 
+0.699000, 
+0.487000, 
+20.043000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+8, 
+13.989000, 
+2.828000, 
+0.569000, 
+0.259000, 
+17.645000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+9, 
+13.259000, 
+3.167000, 
+0.644000, 
+0.478000, 
+17.547000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+10, 
+15.241000, 
+3.941000, 
+0.704000, 
+0.469000, 
+20.355000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+11, 
+14.752000, 
+4.316000, 
+0.736000, 
+0.480000, 
+20.284000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1997, 
+12, 
+15.333000, 
+4.444000, 
+0.715000, 
+0.471000, 
+20.964000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+1, 
+15.644000, 
+4.289000, 
+0.769000, 
+0.472000, 
+21.173000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+2, 
+13.869000, 
+3.836000, 
+0.672000, 
+0.422000, 
+18.799000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+3, 
+14.827000, 
+3.762000, 
+0.725000, 
+0.470000, 
+19.783000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+4, 
+14.705000, 
+3.942000, 
+0.678000, 
+0.447000, 
+19.773000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+5, 
+13.870000, 
+3.139000, 
+0.666000, 
+0.481000, 
+18.156000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+6, 
+14.109000, 
+2.936000, 
+0.675000, 
+0.461000, 
+18.181000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+7, 
+14.803000, 
+3.280000, 
+0.685000, 
+0.443000, 
+19.211000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+8, 
+11.613000, 
+2.664000, 
+0.187000, 
+0.143000, 
+14.607000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+9, 
+13.082000, 
+3.331000, 
+0.605000, 
+0.464000, 
+17.483000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+10, 
+14.001000, 
+4.077000, 
+0.529000, 
+0.310000, 
+18.917000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+11, 
+13.861000, 
+4.302000, 
+0.587000, 
+0.451000, 
+19.201000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1998, 
+12, 
+14.360000, 
+4.631000, 
+0.613000, 
+0.483000, 
+20.086000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+1, 
+14.299000, 
+4.719000, 
+0.560000, 
+0.457000, 
+20.036000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+2, 
+12.771000, 
+4.170000, 
+0.580000, 
+0.420000, 
+17.941000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+3, 
+14.158000, 
+4.125000, 
+0.630000, 
+0.486000, 
+19.398000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+4, 
+13.481000, 
+3.990000, 
+0.586000, 
+0.447000, 
+18.505000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+5, 
+13.763000, 
+4.113000, 
+0.614000, 
+0.475000, 
+18.965000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+6, 
+12.715000, 
+3.105000, 
+0.536000, 
+0.336000, 
+16.692000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+7, 
+14.765000, 
+3.397000, 
+0.604000, 
+0.453000, 
+19.218000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+8, 
+13.459000, 
+3.378000, 
+0.542000, 
+0.459000, 
+17.837000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+9, 
+13.218000, 
+3.453000, 
+0.582000, 
+0.456000, 
+17.708000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+10, 
+14.593000, 
+4.094000, 
+0.558000, 
+0.488000, 
+19.733000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+11, 
+15.183000, 
+4.823000, 
+0.595000, 
+0.515000, 
+21.115000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(1999, 
+12, 
+16.284000, 
+5.112000, 
+0.605000, 
+0.523000, 
+22.525000, 
+0.000000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+1, 
+15.421000, 
+5.025000, 
+0.575000, 
+0.538000, 
+21.559000, 
+9.409000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+2, 
+14.916000, 
+4.637000, 
+0.553000, 
+0.448000, 
+20.554000, 
+9.300000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+3, 
+15.609000, 
+5.054000, 
+0.573000, 
+0.511000, 
+21.747000, 
+9.448000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+4, 
+14.057000, 
+4.080000, 
+0.585000, 
+0.481000, 
+19.203000, 
+8.872000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+5, 
+15.020000, 
+3.410000, 
+0.592000, 
+0.468000, 
+19.490000, 
+9.487000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+6, 
+13.854000, 
+2.992000, 
+0.615000, 
+0.463000, 
+17.924000, 
+8.540000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+7, 
+16.333000, 
+3.153000, 
+0.643000, 
+0.480000, 
+20.609000, 
+10.017000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+8, 
+14.740000, 
+2.830000, 
+0.425000, 
+0.229000, 
+18.224000, 
+8.579000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+9, 
+14.164000, 
+3.321000, 
+0.431000, 
+0.272000, 
+18.187000, 
+8.776000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+10, 
+15.522000, 
+4.386000, 
+0.641000, 
+0.500000, 
+21.049000, 
+9.211000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+11, 
+15.411000, 
+5.367000, 
+0.779000, 
+0.523000, 
+22.081000, 
+9.810000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2000, 
+12, 
+16.132000, 
+5.535000, 
+0.814000, 
+0.498000, 
+22.979000, 
+10.450000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+1, 
+15.969000, 
+5.177000, 
+0.934000, 
+0.553000, 
+22.633000, 
+10.798000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+2, 
+13.723000, 
+3.778000, 
+0.799000, 
+0.460000, 
+18.760000, 
+9.552000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+3, 
+15.278000, 
+4.250000, 
+0.993000, 
+0.527000, 
+21.048000, 
+10.724000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+4, 
+15.353000, 
+3.849000, 
+0.844000, 
+0.357000, 
+20.404000, 
+10.919000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+5, 
+14.427000, 
+3.889000, 
+0.889000, 
+0.472000, 
+19.677000, 
+10.475000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+6, 
+13.948000, 
+3.768000, 
+0.905000, 
+0.483000, 
+19.105000, 
+9.532000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+7, 
+15.990000, 
+4.563000, 
+1.022000, 
+0.565000, 
+22.139000, 
+11.033000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+8, 
+14.326000, 
+4.325000, 
+0.835000, 
+0.515000, 
+20.001000, 
+10.509000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+9, 
+14.829000, 
+4.218000, 
+0.719000, 
+0.409000, 
+20.176000, 
+10.396000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+10, 
+16.143000, 
+4.492000, 
+0.972000, 
+0.434000, 
+22.040000, 
+11.547000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+11, 
+14.914000, 
+5.631000, 
+0.995000, 
+0.445000, 
+21.985000, 
+10.522000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2001, 
+12, 
+15.984000, 
+6.098000, 
+1.018000, 
+0.446000, 
+23.545000, 
+11.776000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+1, 
+15.176000, 
+6.326000, 
+0.977000, 
+0.536000, 
+23.014000, 
+11.178000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+2, 
+14.022000, 
+5.341000, 
+0.926000, 
+0.475000, 
+20.763000, 
+10.387000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+3, 
+13.735000, 
+4.939000, 
+1.008000, 
+0.563000, 
+20.245000, 
+10.361000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+4, 
+15.059000, 
+5.789000, 
+0.963000, 
+0.588000, 
+22.399000, 
+11.384000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+5, 
+15.001000, 
+5.481000, 
+1.073000, 
+0.686000, 
+22.241000, 
+11.692000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+6, 
+13.916000, 
+4.860000, 
+0.980000, 
+0.542000, 
+20.297000, 
+11.169000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+7, 
+15.386000, 
+5.281000, 
+1.125000, 
+0.670000, 
+22.462000, 
+11.795000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+8, 
+14.271000, 
+4.141000, 
+0.859000, 
+0.687000, 
+19.958000, 
+10.190000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+9, 
+13.121000, 
+3.995000, 
+0.622000, 
+0.262000, 
+18.000000, 
+9.577000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+10, 
+14.753000, 
+6.018000, 
+1.045000, 
+0.752000, 
+22.569000, 
+11.710000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+11, 
+14.589000, 
+6.425000, 
+1.105000, 
+0.749000, 
+22.868000, 
+11.902000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2002, 
+12, 
+14.622000, 
+6.996000, 
+1.115000, 
+0.813000, 
+23.547000, 
+12.329000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+1, 
+14.510000, 
+7.088000, 
+0.985000, 
+0.823000, 
+23.406000, 
+12.283000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+2, 
+13.480000, 
+6.353000, 
+0.921000, 
+0.774000, 
+21.528000, 
+11.772000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+3, 
+14.790000, 
+7.137000, 
+1.153000, 
+1.025000, 
+24.105000, 
+12.856000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+4, 
+13.821000, 
+5.960000, 
+1.091000, 
+0.891000, 
+21.762000, 
+12.040000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+5, 
+13.980000, 
+5.374000, 
+1.088000, 
+0.832000, 
+21.273000, 
+12.989000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+6, 
+12.299000, 
+4.181000, 
+0.925000, 
+0.686000, 
+18.091000, 
+11.506000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+7, 
+13.998000, 
+5.685000, 
+1.082000, 
+0.909000, 
+21.674000, 
+13.307000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+8, 
+13.297000, 
+4.819000, 
+1.003000, 
+0.837000, 
+19.956000, 
+12.542000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+9, 
+12.831000, 
+5.420000, 
+0.914000, 
+0.641000, 
+19.806000, 
+12.369000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+10, 
+13.861000, 
+6.811000, 
+1.229000, 
+0.952000, 
+22.853000, 
+13.124000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+11, 
+13.985000, 
+7.197000, 
+1.235000, 
+0.971000, 
+23.389000, 
+13.348000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2003, 
+12, 
+14.623000, 
+7.690000, 
+1.251000, 
+0.973000, 
+24.538000, 
+13.875000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+1, 
+14.458000, 
+7.845000, 
+1.247000, 
+0.868000, 
+24.418000, 
+14.008000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+2, 
+13.744000, 
+7.178000, 
+1.096000, 
+0.780000, 
+22.799000, 
+13.038000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+3, 
+14.177000, 
+7.661000, 
+1.250000, 
+0.883000, 
+23.971000, 
+13.702000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+4, 
+13.700000, 
+6.414000, 
+0.960000, 
+0.806000, 
+21.880000, 
+13.201000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+5, 
+14.055000, 
+6.335000, 
+1.091000, 
+0.765000, 
+22.245000, 
+13.873000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+6, 
+13.765000, 
+5.677000, 
+1.101000, 
+0.747000, 
+21.290000, 
+14.221000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+7, 
+14.293000, 
+5.539000, 
+1.207000, 
+0.732000, 
+21.772000, 
+14.969000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+8, 
+12.511000, 
+4.124000, 
+0.656000, 
+0.336000, 
+17.627000, 
+13.543000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+9, 
+12.396000, 
+5.155000, 
+0.857000, 
+0.528000, 
+18.935000, 
+13.910000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+10, 
+13.787000, 
+6.970000, 
+1.381000, 
+0.739000, 
+22.876000, 
+15.113000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+11, 
+13.197000, 
+7.537000, 
+1.352000, 
+0.754000, 
+22.840000, 
+14.466000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2004, 
+12, 
+12.694000, 
+8.160000, 
+1.383000, 
+0.736000, 
+22.974000, 
+14.676000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+1, 
+12.643000, 
+7.737000, 
+1.375000, 
+0.716000, 
+22.471000, 
+14.550000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+2, 
+11.826000, 
+7.081000, 
+1.262000, 
+0.639000, 
+20.808000, 
+13.454000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+3, 
+13.388000, 
+7.952000, 
+1.449000, 
+0.704000, 
+23.493000, 
+15.280000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+4, 
+12.891000, 
+7.626000, 
+1.322000, 
+0.726000, 
+22.566000, 
+14.753000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+5, 
+13.056000, 
+7.214000, 
+1.179000, 
+0.681000, 
+22.130000, 
+14.798000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+6, 
+10.733000, 
+5.352000, 
+1.128000, 
+0.661000, 
+17.874000, 
+12.086000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+7, 
+12.684000, 
+6.174000, 
+1.266000, 
+0.642000, 
+20.765000, 
+14.068000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+8, 
+12.362000, 
+6.213000, 
+1.317000, 
+0.619000, 
+20.511000, 
+14.813000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+9, 
+12.125000, 
+6.567000, 
+1.237000, 
+0.553000, 
+20.482000, 
+14.708000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+10, 
+12.171000, 
+6.938000, 
+1.204000, 
+0.492000, 
+20.805000, 
+15.616000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+11, 
+11.873000, 
+7.887000, 
+1.441000, 
+0.707000, 
+21.909000, 
+15.176000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2005, 
+12, 
+12.385000, 
+8.349000, 
+1.553000, 
+0.812000, 
+23.099000, 
+15.579000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+1, 
+12.281000, 
+8.230000, 
+1.476000, 
+0.772000, 
+22.758000, 
+15.495000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+2, 
+10.845000, 
+7.490000, 
+1.380000, 
+0.787000, 
+20.501000, 
+13.335000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+3, 
+12.014000, 
+8.095000, 
+1.459000, 
+0.810000, 
+22.377000, 
+15.267000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+4, 
+10.608000, 
+7.190000, 
+1.314000, 
+0.849000, 
+19.962000, 
+13.929000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+5, 
+11.616000, 
+7.359000, 
+1.347000, 
+0.837000, 
+21.159000, 
+15.453000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+6, 
+10.703000, 
+5.656000, 
+1.130000, 
+0.583000, 
+18.073000, 
+12.354000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+7, 
+11.746000, 
+7.007000, 
+1.523000, 
+0.900000, 
+21.176000, 
+15.134000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+8, 
+11.095000, 
+7.006000, 
+1.452000, 
+0.847000, 
+20.399000, 
+13.339000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+9, 
+10.592000, 
+6.190000, 
+1.124000, 
+0.527000, 
+18.434000, 
+13.863000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+10, 
+11.481000, 
+6.845000, 
+1.407000, 
+0.247000, 
+19.980000, 
+13.736000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+11, 
+11.528000, 
+8.160000, 
+1.472000, 
+0.204000, 
+21.364000, 
+14.530000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2006, 
+12, 
+12.069000, 
+8.714000, 
+1.588000, 
+0.263000, 
+22.634000, 
+15.283000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+1, 
+11.694000, 
+8.082000, 
+1.551000, 
+0.261000, 
+21.588000, 
+15.455000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+2, 
+10.667000, 
+7.335000, 
+1.386000, 
+0.224000, 
+19.613000, 
+14.479000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+3, 
+11.508000, 
+7.546000, 
+1.359000, 
+0.245000, 
+20.658000, 
+16.119000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+4, 
+11.326000, 
+8.321000, 
+1.512000, 
+0.226000, 
+21.385000, 
+15.486000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+5, 
+10.470000, 
+6.858000, 
+1.383000, 
+0.250000, 
+18.961000, 
+14.768000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+6, 
+8.900000, 
+5.858000, 
+1.170000, 
+0.234000, 
+16.162000, 
+13.160000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+7, 
+11.221000, 
+6.441000, 
+1.375000, 
+0.220000, 
+19.257000, 
+15.471000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+8, 
+10.237000, 
+6.535000, 
+1.331000, 
+0.264000, 
+18.367000, 
+14.452000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+9, 
+10.173000, 
+6.607000, 
+1.050000, 
+0.247000, 
+18.076000, 
+14.381000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+10, 
+10.848000, 
+8.316000, 
+1.478000, 
+0.325000, 
+20.967000, 
+15.292000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+11, 
+10.550000, 
+8.768000, 
+1.516000, 
+0.330000, 
+21.165000, 
+15.267000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2007, 
+12, 
+10.682000, 
+9.035000, 
+1.499000, 
+0.300000, 
+21.516000, 
+16.180000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+1, 
+10.644000, 
+9.222000, 
+1.561000, 
+0.314000, 
+21.741000, 
+15.815000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+2, 
+9.701000, 
+9.197000, 
+1.444000, 
+0.348000, 
+20.690000, 
+14.888000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+3, 
+10.545000, 
+9.584000, 
+1.596000, 
+0.318000, 
+22.043000, 
+15.433000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+4, 
+9.695000, 
+8.579000, 
+1.398000, 
+0.341000, 
+20.013000, 
+13.189000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+5, 
+10.462000, 
+7.671000, 
+1.573000, 
+0.320000, 
+20.026000, 
+15.361000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+6, 
+9.253000, 
+7.007000, 
+1.334000, 
+0.268000, 
+17.862000, 
+12.336000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+7, 
+10.984000, 
+7.510000, 
+1.556000, 
+0.346000, 
+20.396000, 
+15.025000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+8, 
+9.840000, 
+6.012000, 
+1.319000, 
+0.296000, 
+17.467000, 
+13.578000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+9, 
+9.562000, 
+6.319000, 
+0.828000, 
+0.249000, 
+16.957000, 
+14.234000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+10, 
+10.727000, 
+8.864000, 
+1.424000, 
+0.283000, 
+21.298000, 
+15.565000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+11, 
+10.421000, 
+9.368000, 
+1.453000, 
+0.410000, 
+21.652000, 
+14.209000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2008, 
+12, 
+10.828000, 
+10.003000, 
+1.439000, 
+0.420000, 
+22.690000, 
+14.931000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+1, 
+10.390000, 
+10.473000, 
+1.412000, 
+0.409000, 
+22.683000, 
+14.857000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+2, 
+9.653000, 
+9.957000, 
+1.435000, 
+0.398000, 
+21.443000, 
+13.460000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+3, 
+10.602000, 
+9.816000, 
+1.553000, 
+0.418000, 
+22.389000, 
+14.865000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+4, 
+8.951000, 
+8.867000, 
+1.449000, 
+0.378000, 
+19.645000, 
+13.197000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+5, 
+8.915000, 
+7.959000, 
+1.341000, 
+0.399000, 
+18.614000, 
+12.393000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+6, 
+8.476000, 
+7.001000, 
+1.223000, 
+0.367000, 
+17.067000, 
+12.022000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+7, 
+10.217000, 
+8.158000, 
+1.472000, 
+0.373000, 
+20.220000, 
+13.882000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+8, 
+9.321000, 
+7.538000, 
+1.413000, 
+0.389000, 
+18.661000, 
+12.564000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+9, 
+8.939000, 
+7.340000, 
+1.250000, 
+0.260000, 
+17.790000, 
+11.776000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+10, 
+9.912000, 
+8.319000, 
+1.464000, 
+0.335000, 
+20.030000, 
+13.198000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+11, 
+9.815000, 
+9.185000, 
+1.479000, 
+0.326000, 
+20.805000, 
+13.730000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2009, 
+12, 
+9.859000, 
+10.209000, 
+1.458000, 
+0.370000, 
+21.896000, 
+13.914000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+1, 
+9.804000, 
+10.803000, 
+1.450000, 
+0.356000, 
+22.412000, 
+13.652000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+2, 
+8.720000, 
+9.836000, 
+1.357000, 
+0.357000, 
+20.271000, 
+12.289000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+3, 
+9.431000, 
+10.574000, 
+1.452000, 
+0.348000, 
+21.805000, 
+13.962000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+4, 
+9.001000, 
+8.626000, 
+1.380000, 
+0.386000, 
+19.393000, 
+13.586000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+5, 
+9.140000, 
+9.165000, 
+1.432000, 
+0.335000, 
+20.073000, 
+13.649000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+6, 
+7.309000, 
+8.411000, 
+1.257000, 
+0.382000, 
+17.358000, 
+11.470000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+7, 
+8.921000, 
+7.651000, 
+1.327000, 
+0.315000, 
+18.213000, 
+13.494000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+8, 
+7.946000, 
+6.115000, 
+0.883000, 
+0.222000, 
+15.166000, 
+12.622000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+9, 
+7.587000, 
+5.828000, 
+0.892000, 
+0.250000, 
+14.556000, 
+11.889000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+10, 
+9.198000, 
+9.417000, 
+1.381000, 
+0.412000, 
+20.408000, 
+14.279000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+11, 
+8.555000, 
+10.157000, 
+1.297000, 
+0.393000, 
+20.402000, 
+14.071000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2010, 
+12, 
+8.848000, 
+11.120000, 
+1.320000, 
+0.365000, 
+21.652000, 
+13.249000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+1, 
+8.983000, 
+10.466000, 
+1.345000, 
+0.339000, 
+21.134000, 
+13.378000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+2, 
+8.162000, 
+9.548000, 
+1.264000, 
+0.349000, 
+19.323000, 
+12.272000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+3, 
+8.561000, 
+10.306000, 
+1.258000, 
+0.394000, 
+20.518000, 
+13.299000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+4, 
+8.416000, 
+7.478000, 
+1.276000, 
+0.434000, 
+17.604000, 
+13.417000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+5, 
+7.603000, 
+6.358000, 
+1.298000, 
+0.341000, 
+15.599000, 
+12.020000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+6, 
+7.711000, 
+6.349000, 
+1.305000, 
+0.262000, 
+15.627000, 
+11.911000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+7, 
+8.406000, 
+7.313000, 
+1.427000, 
+0.366000, 
+17.512000, 
+13.695000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+8, 
+7.997000, 
+7.902000, 
+1.387000, 
+0.459000, 
+17.745000, 
+13.003000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+9, 
+7.349000, 
+7.463000, 
+1.381000, 
+0.398000, 
+16.590000, 
+12.494000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+10, 
+8.179000, 
+8.240000, 
+1.479000, 
+0.382000, 
+18.280000, 
+13.052000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+11, 
+7.979000, 
+9.752000, 
+1.367000, 
+0.438000, 
+19.536000, 
+12.984000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2011, 
+12, 
+8.208000, 
+10.523000, 
+1.514000, 
+0.390000, 
+20.634000, 
+13.303000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+1, 
+8.268000, 
+11.190000, 
+1.704000, 
+0.421000, 
+21.584000, 
+13.452000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+2, 
+7.680000, 
+10.715000, 
+1.603000, 
+0.407000, 
+20.404000, 
+12.812000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+3, 
+8.003000, 
+10.994000, 
+1.698000, 
+0.417000, 
+21.112000, 
+14.001000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+4, 
+7.855000, 
+9.450000, 
+1.559000, 
+0.425000, 
+19.290000, 
+13.568000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+5, 
+8.046000, 
+8.890000, 
+1.563000, 
+0.367000, 
+18.866000, 
+14.889000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+6, 
+7.108000, 
+8.526000, 
+1.356000, 
+0.403000, 
+17.393000, 
+12.067000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+7, 
+7.394000, 
+9.020000, 
+1.521000, 
+0.355000, 
+18.291000, 
+13.744000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+8, 
+7.442000, 
+8.138000, 
+1.347000, 
+0.303000, 
+17.230000, 
+13.448000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+9, 
+5.944000, 
+6.932000, 
+0.991000, 
+0.305000, 
+14.172000, 
+11.054000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+10, 
+7.306000, 
+10.021000, 
+1.336000, 
+0.387000, 
+19.050000, 
+13.232000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+11, 
+6.879000, 
+10.073000, 
+1.393000, 
+0.362000, 
+18.707000, 
+16.124000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2012, 
+12, 
+7.318000, 
+10.968000, 
+1.643000, 
+0.396000, 
+20.326000, 
+13.114000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2013, 
+1, 
+7.264000, 
+10.477000, 
+1.566000, 
+0.367000, 
+19.674000, 
+13.529000);
+INSERT INTO "f_prod_totalt_NCS_month" VALUES 
+(2013, 
+2, 
+6.446000, 
+8.795000, 
+1.338000, 
+0.277000, 
+16.856000, 
+10.179000);
