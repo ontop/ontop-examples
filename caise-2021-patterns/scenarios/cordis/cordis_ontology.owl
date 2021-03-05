@@ -1,0 +1,715 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://unics.cloud/ontology#"
+     xml:base="http://unics.cloud/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://unics.cloud/ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://unics.cloud/ontology#coordinator -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#coordinator">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#country -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#country">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecActivityType -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ecActivityType">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#EC-ActivityType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecCall -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ecCall">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#EC-Call"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecFrameworkProgram -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ecFrameworkProgram">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#EC-FrameworkProgram"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecFundingScheme -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ecFundingScheme">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#EC-FundingScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecParticipant -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ecParticipant">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecProgramme -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ecProgramme">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#EC-Programme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecProgramme-ancestorOrSelf -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ecProgramme-ancestorOrSelf">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Programme"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#EC-Programme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecProject -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ecProject">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#Organization"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecSubjectArea -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ecSubjectArea">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#EC-SubjectArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecTopic -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ecTopic">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#EC-Topic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ercGrant -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ercGrant">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#ERC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#ERC-Grant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ercPanel -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#ercPanel">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#ERC-Panel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#keyword -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#keyword">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#KeywordInProject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#nuts1 -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#nuts1">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#NUTS1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#nuts2 -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#nuts2">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#NUTS2"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#nuts3 -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#nuts3">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#NUTS3"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#organization -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#organization">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#partOf">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#ERC-Panel"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#NUTS"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#ERC-ResearchDomain"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#NUTS"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#principalInvestigator -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#principalInvestigator">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#roleInProject -->
+
+    <owl:ObjectProperty rdf:about="http://unics.cloud/ontology#roleInProject">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://unics.cloud/ontology#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://unics.cloud/ontology#acronym -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#acronym">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-Project"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#Organization"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#alpha2 -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#alpha2">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#alpha3 -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#alpha3">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#cityName -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#cityName">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#cordisRef -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#cordisRef">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecContribution -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#ecContribution">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecMaxContribution -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#ecMaxContribution">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecObjective -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#ecObjective">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#ecRef -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#ecRef">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#endingYear -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#endingYear">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#extendedName -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#extendedName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#Country"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-ActivityType"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-FrameworkProgram"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-Participant-Reified"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-Programme"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-SubjectArea"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-Topic"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#ERC-Grant"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#ERC-Panel"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#ERC-ResearchDomain"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#NUTS"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#Organization"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#Role"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#fullName -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#fullName">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#geoLat -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#geoLat">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#geoLong -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#geoLong">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#identifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-ActivityType"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-Programme"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#ERC-Grant"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#ERC-Panel"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#ERC-ResearchDomain"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#NUTS"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#picNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#picNumber">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#rcn -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#rcn">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#shortName -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#shortName">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-Call"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-FundingScheme"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-Programme"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-SubjectArea"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-Topic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#startingYear -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#startingYear">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#textualValue -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#textualValue">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#KeywordInProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#title -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#title">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#totalCost -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#totalCost">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#unicsId -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#unicsId">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#Country"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-Participant-Reified"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#EC-Project"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#Organization"/>
+                    <rdf:Description rdf:about="http://unics.cloud/ontology#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://unics.cloud/ontology#year -->
+
+    <owl:DatatypeProperty rdf:about="http://unics.cloud/ontology#year">
+        <rdfs:domain rdf:resource="http://unics.cloud/ontology#EC-Participant-Reified"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://unics.cloud/ontology#Country -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#Country"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#EC-ActivityType -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#EC-ActivityType"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#EC-Call -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#EC-Call"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#EC-FrameworkProgram -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#EC-FrameworkProgram"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#EC-FundingScheme -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#EC-FundingScheme"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#EC-Participant-Reified -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#EC-Participant-Reified">
+        <rdfs:subClassOf rdf:resource="http://unics.cloud/ontology#ProjectParticipant-Reified"/>
+    </owl:Class>
+    
+
+
+    <!-- http://unics.cloud/ontology#EC-Programme -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#EC-Programme"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#EC-Project -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#EC-Project">
+        <rdfs:subClassOf rdf:resource="http://unics.cloud/ontology#Project"/>
+    </owl:Class>
+    
+
+
+    <!-- http://unics.cloud/ontology#EC-SubjectArea -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#EC-SubjectArea"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#EC-Topic -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#EC-Topic"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#ERC-Grant -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#ERC-Grant"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#ERC-Panel -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#ERC-Panel"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#ERC-Project -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#ERC-Project">
+        <rdfs:subClassOf rdf:resource="http://unics.cloud/ontology#EC-Project"/>
+    </owl:Class>
+    
+
+
+    <!-- http://unics.cloud/ontology#ERC-ResearchDomain -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#ERC-ResearchDomain"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#KeywordInProject -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#KeywordInProject"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#NUTS -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#NUTS"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#NUTS1 -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#NUTS1">
+        <rdfs:subClassOf rdf:resource="http://unics.cloud/ontology#NUTS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://unics.cloud/ontology#NUTS2 -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#NUTS2">
+        <rdfs:subClassOf rdf:resource="http://unics.cloud/ontology#NUTS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://unics.cloud/ontology#NUTS3 -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#NUTS3">
+        <rdfs:subClassOf rdf:resource="http://unics.cloud/ontology#NUTS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://unics.cloud/ontology#Organization -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#Organization"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#Person -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#Person"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#Project -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#Project"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#ProjectParticipant-Reified -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#ProjectParticipant-Reified"/>
+    
+
+
+    <!-- http://unics.cloud/ontology#Role -->
+
+    <owl:Class rdf:about="http://unics.cloud/ontology#Role"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://unics.cloud/ontology#Coordinator -->
+
+    <owl:NamedIndividual rdf:about="http://unics.cloud/ontology#Coordinator">
+        <rdf:type rdf:resource="http://unics.cloud/ontology#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://unics.cloud/ontology#Participant -->
+
+    <owl:NamedIndividual rdf:about="http://unics.cloud/ontology#Participant">
+        <rdf:type rdf:resource="http://unics.cloud/ontology#Role"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

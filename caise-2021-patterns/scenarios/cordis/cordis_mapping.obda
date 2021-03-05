@@ -1,0 +1,602 @@
+[PrefixDeclaration]
+xsd:		http://www.w3.org/2001/XMLSchema#
+owl:		http://www.w3.org/2002/07/owl#
+owl2xml:	http://www.w3.org/2006/12/owl2-xml#
+quest:		http://obda.org/quest#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+dce:		http://purl.org/dc/elements/1.1/
+:			http://unics.cloud/ontology#
+
+[MappingDeclaration] @collection [[
+mappingId	cordis_project_member_vat
+target		:Organization-{orgid} :vat {org_vat} . 
+source		select q.orgid, q.org_vat
+			from unics_cordis.vat_numbers as q
+
+mappingId	NEW_project
+target		:Project-{p_id} a :EC-Project ; :unicsId {p_id} . 
+source		select 
+				p.unics_id as p_id
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_acronym
+target		:Project-{p_id} :acronym {p_acro} . 
+source		select 
+				p.unics_id as p_id,
+				p.acronym as p_acro
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_title
+target		:Project-{p_id} :title {p_tit} . 
+source		select 
+				p.unics_id as p_id,
+				p.title as p_tit
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_erc_grants
+target		:Project-{p_id} a :ERC-Project ; :ercGrant :ErcGrant-{ercg} . 
+source		select p.unics_id as p_id, ercc.erc_type as ercg
+			from 
+				unics_cordis.projects p
+					join
+				unics_cordis.erc_calls ercc
+					on ercc.ec_call=p.ec_call
+
+mappingId	NEW_erc_grant_type
+target		:ErcGrant-{erc_code} a :ERC-Grant ; :identifier {erc_code} ; :extendedName {erc_name} . 
+source		select egm.code as erc_code, egm.name as erc_name
+			from unics_cordis.erc_grants egm
+
+mappingId	NEW_project_call
+target		:Project-{p_id} :ecCall :EcCall-{ec_call} . 
+source		select 
+				p.unics_id as p_id,
+				p.ec_call as ec_call
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_ec_call
+target		:EcCall-{ec_call} a :EC-Call ; :shortName {ec_call} . 
+source		select ecc.ec_call as ec_call
+			from unics_cordis.ec_calls ecc
+
+mappingId	NEW_project_framework
+target		:Project-{p_id} :ecFrameworkProgram :ECFrameworkProgram-{framework_program} . 
+source		select 
+				p.unics_id as p_id,
+				p.framework_program as framework_program
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_ec_framework_program
+target		:ECFrameworkProgram-{framework_program} a :EC-FrameworkProgram ; :extendedName {framework_program} ; :shortName {framework_program} . 
+source		select 
+				efp.name as framework_program
+			from
+				unics_cordis.ec_framework_programs efp
+
+mappingId	NEW_project_funding_scheme
+target		:Project-{p_id} :ecFundingScheme :ECFundingScheme-{ec_fun_scheme} . 
+source		select 
+				p.unics_id as p_id,
+				p.ec_fund_scheme as ec_fun_scheme
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_funding_scheme
+target		:ECFundingScheme-{fs_code} a :EC-FundingScheme ; :shortName {fs_code} . 
+source		select 
+				fs.code as fs_code
+			from
+				unics_cordis.funding_schemes fs
+
+mappingId	NEW_project_cordisref
+target		:Project-{p_id} :cordisRef {cordis_ref} . 
+source		select 
+				p.unics_id as p_id,
+				p.cordis_ref as cordis_ref
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_ecref
+target		:Project-{p_id} :ecRef {ec_ref} . 
+source		select 
+				p.unics_id as p_id,
+				p.ec_ref as ec_ref
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_startdate
+target		:Project-{p_id} :startingDate {start_date} ; :startingYear {start_year} . 
+source		select 
+				p.unics_id as p_id,
+				p.start_date as start_date,
+				p.start_year as start_year
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_enddate
+target		:Project-{p_id} :endingDate {end_date} ; :endingYear {end_year} . 
+source		select 
+				p.unics_id as p_id,
+				p.end_date as end_date,
+				p.end_year as end_year
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_homepage
+target		:Project-{p_id} :url {homepage} . 
+source		select 
+				p.unics_id as p_id,
+				p.homepage as homepage
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_total_cost
+target		:Project-{p_id} :totalCost {total_cost}^^xsd:decimal . 
+source		select 
+				p.unics_id as p_id,
+				p.total_cost as total_cost
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_ec_max_contribution
+target		:Project-{p_id} :ecMaxContribution {max_contrib}^^xsd:decimal . 
+source		select 
+				p.unics_id as p_id,
+				p.ec_max_contribution as max_contrib
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_topic
+target		:Project-{p_id} :ecTopic :EcTopic-{p_topic} . 
+source		select 
+				p.unics_id as p_id,
+				p_t.topic as p_topic
+			from
+				unics_cordis.projects p
+					join
+				unics_cordis.project_topics p_t
+					on p_t.project=p.unics_id
+
+mappingId	NEW_topic
+target		:EcTopic-{ept_code} a :EC-Topic ; :identifier {ept_code} ; :shortName {ept_code} ; :extendedName {ept_title} . 
+source		select 
+				ept.code as ept_code,
+				ept.title as ept_title
+			from
+				unics_cordis.topics ept
+
+mappingId	NEW_project_programme
+target		:Project-{p_id} :ecProgramme :EcProgramme-{p_programme} . 
+source		select 
+				p.unics_id as p_id,
+				p_p.programme as p_programme
+			from
+				unics_cordis.projects p
+					join
+				unics_cordis.project_programmes p_p
+					on p_p.project=p.unics_id
+
+mappingId	NEW_programme
+target		:EcProgramme-{epp_code} a :EC-Programme ; :identifier {epp_code} ; :shortName {epp_shortTitle} ; :extendedName {epp_title} . 
+source		select 
+				epp.code as epp_code,
+				epp.title as epp_title,
+				epp.short_name as epp_shortTitle
+			from
+				unics_cordis.programmes epp
+
+mappingId	NEW_programme_partof_programme_reflexive
+target		:EcProgramme-{epp_code1} :ecProgramme-ancestorOrSelf :EcProgramme-{epp_code2} . 
+source		select 
+				po.programme1 as epp_code1,
+				po.programme2 as epp_code2
+			from
+				unics_cordis.programme_partof_programme po
+
+mappingId	NEW_project_objective
+target		:Project-{p_id} :ecObjective {p_obj} . 
+source		select 
+				p.unics_id as p_id,
+				p.objective p_obj
+			from
+				unics_cordis.projects p
+
+mappingId	NEW_project_panel
+target		:Project-{p_id} :ercPanel :ErcPanel-{p_panel} . 
+source		select 
+				p.unics_id as p_id,
+				p_p.panel as p_panel
+			from
+				unics_cordis.projects p
+					join
+				unics_cordis.project_erc_panels p_p
+					on p_p.project=p.unics_id
+
+mappingId	NEW_panel
+target		:ErcPanel-{pnl_code} a :ERC-Panel ; :identifier {pnl_code} ; :shortName {pnl_code} ; :extendedName {pnl_desc} . 
+source		select 
+				pnl.code as pnl_code,
+				pnl.description as pnl_desc
+			from
+				unics_cordis.erc_panels pnl
+
+mappingId	NEW_panel_domain
+target		:ErcPanel-{pnl_code} :ercResearchDomain :ErcResearchDomain-{dom_code} ; :partOf :ErcResearchDomain-{dom_code} . 
+source		select 
+				pnl.code as pnl_code,
+				pnl.part_of as dom_code
+			from
+				unics_cordis.erc_panels pnl
+
+mappingId	NEW_erc_domain_class
+target		:ErcResearchDomain-{dom_code} a :ERC-ResearchDomain ; :identifier {dom_code} ; :shortName {dom_code} ; :extendedName {dom_desc} . 
+source		select 
+				t.code as dom_code,
+				t.description as dom_desc
+			from
+				unics_cordis.erc_research_domains t
+
+mappingId	NEW_project_subject_area
+target		:Project-{p_id} :ecSubjectArea :EcSubjectArea-{p_subject_area} . 
+source		select 
+				p.unics_id as p_id,
+				p_sa.subject_area as p_subject_area
+			from
+				unics_cordis.projects p
+					join
+				unics_cordis.project_subject_areas p_sa
+					on p_sa.project=p.unics_id
+
+mappingId	NEW_eu_subject_area
+target		:EcSubjectArea-{p_subject_area} a :EC-SubjectArea ; :identifier {p_subject_area} ; :shortName {p_subject_area} ; :extendedName {sa_title} . 
+source		select 
+				sa.code as p_subject_area,
+				sa.title as sa_title
+			from
+				unics_cordis.subject_areas sa
+
+mappingId	NEW_university_projects
+target		:Organization-{uni_id} :ecProject :Project-{p_id} . 
+source		select 
+				pm.institution_id as uni_id,
+				pm.project as p_id
+			from
+				unics_cordis.project_members pm
+
+mappingId	NEW_project_principal_investigator
+target		:Project-{p_id} :principalInvestigator :Person-{p_pi}  . 
+source		select 
+				p.unics_id as p_id,
+				p.principal_investigator as p_pi
+			from
+				unics_cordis.projects p
+
+mappingId	M_person_class
+target		:Person-{p_id} a :Person ; :unicsId {p_id} . 
+source		select
+				p.unics_id as p_id
+			from
+				unics_cordis.people p
+
+mappingId	M_person_ln
+target		:Person-{p_id} :fullName {p_ln} . 
+source		select
+				p.unics_id as p_id,
+				p.full_name as p_ln
+			from
+				unics_cordis.people p
+
+mappingId	NEW_project_members
+target		:Project-{p_id} :ecParticipant :EcParticipant-{rowid} . 
+source		select 
+				pi.project as p_id,
+				pi.pic_number as m_id,
+				pi.member_role as m_role,
+				pi.unics_id as rowid
+			from
+				unics_cordis.project_members pi
+
+mappingId	NEW_participant_info
+target		:EcParticipant-{rowid} a :EC-Participant-Reified ; :picNumber {m_id} ; :ecContribution {ec_contrib} ; :ecProject :Project-{p_id} ; :extendedName {m_name} ; :rcn {rcn} ; :vat {vat} ; :unicsId {rowid} . 
+source		select 
+				pi.project as p_id,
+				pi.pic_number as m_id,
+				pi.ec_contribution as ec_contrib,
+				pi.unics_id as rowid,
+				pi.member_name as m_name,
+				pi.rcn as rcn,
+				pi.vat_number as vat
+			from
+				unics_cordis.project_members pi
+
+mappingId	NEW_participant_geo_lat_lng
+target		:EcParticipant-{rowid} :geoLat {lat} ; :geoLong {lng} . 
+source		select pi.unics_id as rowid, pi.latitude as lat, pi.longitude as lng
+			from 
+				unics_cordis.project_members pi
+
+mappingId	NEW_participant_year
+target		:EcParticipant-{rowid} :year {start_year} . 
+source		select 
+				p.start_year as start_year,
+				pi.unics_id as rowid
+			from
+				unics_cordis.project_members pi
+					join
+				unics_cordis.projects p
+					on p.unics_id = pi.project
+
+mappingId	NEW_participant_role
+target		:EcParticipant-{rowid} :roleInProject :RoleInProject-{role_in_proj} . 
+source		select 
+				pi.member_role as role_in_proj,
+				pi.unics_id as rowid
+			from
+				unics_cordis.project_members pi
+
+mappingId	NEW_role_in_project
+target		:RoleInProject-{role_in_proj} a :RoleInProject ; :extendedName {role_name} ; :shortName {role_in_proj} . 
+source		select 
+				pmr.code as role_in_proj, pmr.description as role_name
+			from
+				unics_cordis.project_member_roles pmr
+
+mappingId	NEW_participant_activity_type
+target		:EcParticipant-{rowid} :ecActivityType :ActivityType-{m_activity_type} . 
+source		select 
+				pi.activity_type as m_activity_type,
+				pi.unics_id as rowid
+			from
+				unics_cordis.project_members pi
+
+mappingId	NEW_participant_country
+target		:EcParticipant-{rowid} :country :Country-{m_country} . 
+source		select 
+				pi.project as rowid,
+				pi.country as m_country
+			from
+				unics_cordis.project_member_country pi
+
+mappingId	NEW_participant_city
+target		:EcParticipant-{rowid} :cityName {m_city} . 
+source		select 
+				pi.city as m_city,
+				pi.unics_id as rowid
+			from
+				unics_cordis.project_members pi
+
+mappingId	NEW_participant_nuts_3
+target		:EcParticipant-{rowid} :nuts3 :NUTS3-{nuts_code} . 
+source		select 
+				pi.nuts3_code as nuts_code,
+				pi.unics_id as rowid
+			from
+				unics_cordis.project_members pi
+
+mappingId	NEW_participant_nuts_2
+target		:EcParticipant-{rowid} :nuts2 :NUTS2-{nuts_code} . 
+source		select 
+				nh.nuts_2 as nuts_code,
+				pi.unics_id as rowid
+			from
+				unics_cordis.project_members pi
+					join
+				unics_cordis.nuts_hierarchy nh
+					on nh.nuts_3=pi.nuts3_code
+
+mappingId	NEW_participant_nuts_1
+target		:EcParticipant-{rowid} :nuts1 :NUTS1-{nuts_code} . 
+source		select 
+				nh.nuts_1 as nuts_code,
+				pi.unics_id as rowid
+			from
+				unics_cordis.project_members pi
+					join
+				unics_cordis.nuts_hierarchy nh
+					on nh.nuts_3=pi.nuts3_code
+
+mappingId	NEW_project_contribution_university
+target		:EcParticipant-{rowid} :organization :Organization-{uni_id} . 
+source		select 
+				pi.institution_id as uni_id,
+				pi.unics_id as rowid
+			from
+				unics_cordis.project_members pi
+
+mappingId	NEW_project_member_role_coordinator_university
+target		:Project-{p_id} :coordinator :Organization-{uni_id} . 
+source		select 
+				pi.project as p_id,
+				pi.institution_id as uni_id
+			from
+				unics_cordis.project_members pi
+					join
+				unics_cordis.project_member_roles pmr
+					on pmr.code=pi.member_role
+			where
+				pmr.description='Coordinator'
+
+mappingId	NEW_activitytype_class
+target		:ActivityType-{at_code} a :EC-ActivityType ; :identifier {at_code} ; :shortName {at_code} ; :extendedName {at_title} . 
+source		select
+				at.code as at_code,
+				at.description as at_title
+			from
+				unics_cordis.activity_types at
+
+mappingId	NEW_organization
+target		:Organization-{i_id} a :Organization . 
+source		select
+				i.unics_id as i_id
+			from
+				unics_common.institutions i
+
+mappingId	NEW_university_id
+target		:Organization-{i_id} :unicsId {i_id} . 
+source		select
+				i.unics_id as i_id
+			from
+				unics_common.institutions i
+
+mappingId	NEW_university_acronym
+target		:Organization-{i_id} :acronym {i_acronym} . 
+source		select
+				i.unics_id as i_id,
+				i.acronym as i_acronym
+			from
+				unics_common.institutions i
+
+mappingId	NEW_university_name
+target		:Organization-{i_id} :extendedName {i_name} . 
+source		select
+				un.unics_id as i_id,
+				un.name as i_name
+			from
+				unics_common.institutions un
+
+mappingId	NEW_university_db_pedia_url
+target		:Organization-{i_id} :dbpediaURL {i_dbpediaurl} . 
+source		select
+				i.unics_id as i_id,
+				i.db_pedia_url as i_dbpediaurl
+			from
+				unics_common.institutions i
+
+mappingId	NEW_university_wikidata_url
+target		:Organization-{i_id} :wikidataURL {i_wikidataurl} . 
+source		select
+				i.unics_id as i_id,
+				i.wikidata_url as i_wikidataurl
+			from
+				unics_common.institutions i
+
+mappingId	NEW_academicagent_nuts_3
+target		:Organization-{i_id} :nuts3 :NUTS3-{i_nuts_code} . 
+source		select
+				i.unics_id as i_id, 
+				i.nuts3_code as i_nuts_code
+			from
+				unics_common.institutions i
+
+mappingId	NEW_academicagent_nuts_2
+target		:Organization-{i_id} :nuts2 :NUTS2-{i_nuts_code} . 
+source		select
+				i.unics_id as i_id, 
+				nh.nuts_2 as i_nuts_code
+			from
+				unics_common.institutions i
+					join
+				unics_cordis.nuts_hierarchy nh
+					on nh.nuts_3=i.nuts3_code
+
+mappingId	NEW_academicagent_nuts_1
+target		:Organization-{i_id} :nuts1 :NUTS1-{i_nuts_code} . 
+source		select
+				i.unics_id as i_id, 
+				nh.nuts_1 as i_nuts_code
+			from
+				unics_common.institutions i
+					join
+				unics_cordis.nuts_hierarchy nh
+					on nh.nuts_3=i.nuts3_code
+
+mappingId	NEW_nuts3_partof_nuts2
+target		:NUTS3-{i_nuts_code_a} :partOf :NUTS2-{i_nuts_code_b} . 
+source		select
+				nh.nuts_3 as i_nuts_code_a,
+				nh.nuts_2 as i_nuts_code_b
+			from
+				unics_cordis.nuts_hierarchy nh
+
+mappingId	NEW_nuts2_partof_nuts1
+target		:NUTS2-{i_nuts_code_a} :partOf :NUTS1-{i_nuts_code_b} . 
+source		select
+				nh.nuts_2 as i_nuts_code_a,
+				nh.nuts_1 as i_nuts_code_b
+			from
+				unics_cordis.nuts_hierarchy nh
+
+mappingId	NEW_nuts3_class
+target		:NUTS3-{nuts_code} a :NUTS3 . 
+source		select
+				etu.nuts_code as nuts_code
+			from
+				unics_cordis.eu_territorial_units etu
+			where
+				etu.nuts_level=3
+
+mappingId	NEW_nuts2_class
+target		:NUTS2-{nuts_code} a :NUTS2 . 
+source		select 
+				etu.nuts_code as nuts_code
+			from
+				unics_cordis.eu_territorial_units etu
+			where
+				etu.nuts_level=2
+
+mappingId	NEW_nuts1_class
+target		:NUTS1-{nuts_code} a :NUTS1 . 
+source		select 
+				etu.nuts_code as nuts_code
+			from
+				unics_cordis.eu_territorial_units etu
+			where
+				etu.nuts_level=1
+
+mappingId	NEW_nuts3_name
+target		:NUTS3-{nuts_code} :shortName {nuts_code} ; :identifier {nuts_code} ; :extendedName {nuts_desc} . 
+source		select
+				etu.nuts_code as nuts_code,
+				etu.description as nuts_desc
+			from
+				unics_cordis.eu_territorial_units etu
+			where
+				etu.nuts_level=3
+
+mappingId	NEW_nuts2_name
+target		:NUTS2-{nuts_code} :shortName {nuts_code} ; :identifier {nuts_code} ; :extendedName {nuts_desc} . 
+source		select
+				etu.nuts_code as nuts_code,
+				etu.description as nuts_desc
+			from
+				unics_cordis.eu_territorial_units etu
+			where
+				etu.nuts_level=2
+
+mappingId	NEW_nuts1_name
+target		:NUTS1-{nuts_code} :shortName {nuts_code} ; :identifier {nuts_code} ; :extendedName {nuts_desc} . 
+source		select
+				etu.nuts_code as nuts_code,
+				etu.description as nuts_desc
+			from
+				unics_cordis.eu_territorial_units etu
+			where
+				etu.nuts_level=1
+
+mappingId	NEW_academicagent_country
+target		:Organization-{i_id} :country :Country-{c_id} . 
+source		select
+				i.unics_id as i_id, 
+				c.unics_id as c_id
+			from
+				unics_common.institutions i
+					join
+				unics_common.countries c
+					on c.unics_id=i.country_id
+
+mappingId	NEW_country_class
+target		:Country-{cou_id} a :Country ; :unicsId {cou_id} ; :extendedName {cou_name} ; :alpha2 {alpha2} ; :alpha3 {alpha3} . 
+source		select
+				cou.unics_id as cou_id,
+				cou.name as cou_name,
+				cou.alpha_2 as alpha2,
+				cou.alpha_3 as alpha3
+			from
+				unics_common.countries cou
+]]

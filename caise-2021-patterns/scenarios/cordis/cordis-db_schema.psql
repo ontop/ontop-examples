@@ -1,0 +1,1132 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.5.20
+-- Dumped by pg_dump version 11.8 (Ubuntu 11.8-1.pgdg18.04+1)
+
+-- Started on 2020-05-16 19:16:48 CEST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 8 (class 2615 OID 16385)
+-- Name: unics_common; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA unics_common;
+
+
+ALTER SCHEMA unics_common OWNER TO postgres;
+
+--
+-- TOC entry 9 (class 2615 OID 16386)
+-- Name: unics_cordis; Type: SCHEMA; Schema: -; Owner: postgres
+--
+
+CREATE SCHEMA unics_cordis;
+
+
+ALTER SCHEMA unics_cordis OWNER TO postgres;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 214 (class 1259 OID 18652)
+-- Name: docker_ready_check; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.docker_ready_check (
+    is_ready boolean
+);
+
+
+ALTER TABLE public.docker_ready_check OWNER TO postgres;
+
+--
+-- TOC entry 183 (class 1259 OID 16387)
+-- Name: countries; Type: TABLE; Schema: unics_common; Owner: postgres
+--
+
+CREATE TABLE unics_common.countries (
+    unics_id integer NOT NULL,
+    name text NOT NULL,
+    alpha_2 character varying(2) NOT NULL,
+    alpha_3 character varying(3) NOT NULL,
+    nuts_0 character varying(2)
+);
+
+
+ALTER TABLE unics_common.countries OWNER TO postgres;
+
+--
+-- TOC entry 184 (class 1259 OID 16393)
+-- Name: countries_unics_id_seq; Type: SEQUENCE; Schema: unics_common; Owner: postgres
+--
+
+CREATE SEQUENCE unics_common.countries_unics_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE unics_common.countries_unics_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2329 (class 0 OID 0)
+-- Dependencies: 184
+-- Name: countries_unics_id_seq; Type: SEQUENCE OWNED BY; Schema: unics_common; Owner: postgres
+--
+
+ALTER SEQUENCE unics_common.countries_unics_id_seq OWNED BY unics_common.countries.unics_id;
+
+
+--
+-- TOC entry 185 (class 1259 OID 16395)
+-- Name: institutions; Type: TABLE; Schema: unics_common; Owner: postgres
+--
+
+CREATE TABLE unics_common.institutions (
+    unics_id integer NOT NULL,
+    country_id integer,
+    name text NOT NULL,
+    nuts3_code text,
+    db_pedia_url text,
+    wikidata_url text,
+    grid_id text,
+    acronym text,
+    short_name text,
+    website text
+);
+
+
+ALTER TABLE unics_common.institutions OWNER TO postgres;
+
+--
+-- TOC entry 186 (class 1259 OID 16401)
+-- Name: institutions_unics_id_seq; Type: SEQUENCE; Schema: unics_common; Owner: postgres
+--
+
+CREATE SEQUENCE unics_common.institutions_unics_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE unics_common.institutions_unics_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2330 (class 0 OID 0)
+-- Dependencies: 186
+-- Name: institutions_unics_id_seq; Type: SEQUENCE OWNED BY; Schema: unics_common; Owner: postgres
+--
+
+ALTER SEQUENCE unics_common.institutions_unics_id_seq OWNED BY unics_common.institutions.unics_id;
+
+
+--
+-- TOC entry 187 (class 1259 OID 16403)
+-- Name: activity_types; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.activity_types (
+    code text NOT NULL,
+    description text
+);
+
+
+ALTER TABLE unics_cordis.activity_types OWNER TO postgres;
+
+--
+-- TOC entry 188 (class 1259 OID 16409)
+-- Name: projects; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.projects (
+    unics_id integer NOT NULL,
+    acronym text,
+    title text,
+    ec_call text,
+    ec_fund_scheme text,
+    cordis_ref text,
+    ec_ref text,
+    start_date date,
+    end_date date,
+    start_year integer,
+    end_year integer,
+    homepage text,
+    total_cost double precision,
+    ec_max_contribution double precision,
+    framework_program text,
+    objective text,
+    principal_investigator integer
+);
+
+
+ALTER TABLE unics_cordis.projects OWNER TO postgres;
+
+--
+-- TOC entry 189 (class 1259 OID 16415)
+-- Name: ec_calls; Type: MATERIALIZED VIEW; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE MATERIALIZED VIEW unics_cordis.ec_calls AS
+ SELECT DISTINCT p.ec_call
+   FROM unics_cordis.projects p
+  WHERE ((p.ec_call IS NOT NULL) AND (btrim(p.ec_call) <> ''::text))
+  WITH NO DATA;
+
+
+ALTER TABLE unics_cordis.ec_calls OWNER TO postgres;
+
+--
+-- TOC entry 190 (class 1259 OID 16422)
+-- Name: ec_framework_programs; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.ec_framework_programs (
+    name text NOT NULL
+);
+
+
+ALTER TABLE unics_cordis.ec_framework_programs OWNER TO postgres;
+
+--
+-- TOC entry 191 (class 1259 OID 16428)
+-- Name: erc_calls; Type: MATERIALIZED VIEW; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE MATERIALIZED VIEW unics_cordis.erc_calls AS
+ SELECT q.ec_call,
+    q.erc_type,
+    q.erc_type_name
+   FROM ( SELECT DISTINCT p.ec_call,
+                CASE
+                    WHEN (p.ec_call ~~* 'ERC-%-AdG%'::text) THEN 'ADG'::text
+                    WHEN (p.ec_call ~~* 'ERC-%-CoG%'::text) THEN 'COG'::text
+                    WHEN (p.ec_call ~~* 'ERC-%-PoC%'::text) THEN 'POC'::text
+                    WHEN (p.ec_call ~~* 'ERC-%-STG%'::text) THEN 'STG'::text
+                    WHEN (p.ec_call ~~* 'ERC-%-Sup%'::text) THEN 'SUP'::text
+                    WHEN (p.ec_call ~~* 'ERC-%-SyG%'::text) THEN 'SYG'::text
+                    ELSE NULL::text
+                END AS erc_type,
+                CASE
+                    WHEN (p.ec_call ~~* 'ERC-%-AdG%'::text) THEN 'ERC Advanced Grant'::text
+                    WHEN (p.ec_call ~~* 'ERC-%-CoG%'::text) THEN 'ERC Consolidator Grant'::text
+                    WHEN (p.ec_call ~~* 'ERC-%-PoC%'::text) THEN 'ERC Proof of Concept Grant'::text
+                    WHEN (p.ec_call ~~* 'ERC-%-STG%'::text) THEN 'ERC Starting Grant'::text
+                    WHEN (p.ec_call ~~* 'ERC-%-Sup%'::text) THEN 'ERC Support'::text
+                    WHEN (p.ec_call ~~* 'ERC-%-SyG%'::text) THEN 'ERC Synergy Grant'::text
+                    ELSE NULL::text
+                END AS erc_type_name
+           FROM unics_cordis.projects p
+          WHERE (p.ec_call ~~* 'ERC-%'::text)) q
+  WHERE ((q.erc_type IS NOT NULL) AND (q.erc_type_name IS NOT NULL))
+  WITH NO DATA;
+
+
+ALTER TABLE unics_cordis.erc_calls OWNER TO postgres;
+
+--
+-- TOC entry 192 (class 1259 OID 16436)
+-- Name: erc_grants; Type: MATERIALIZED VIEW; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE MATERIALIZED VIEW unics_cordis.erc_grants AS
+ SELECT DISTINCT erc_calls.erc_type AS code,
+    erc_calls.erc_type_name AS name
+   FROM unics_cordis.erc_calls
+  WITH NO DATA;
+
+
+ALTER TABLE unics_cordis.erc_grants OWNER TO postgres;
+
+--
+-- TOC entry 193 (class 1259 OID 16443)
+-- Name: erc_panels; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.erc_panels (
+    code text NOT NULL,
+    description text,
+    part_of text
+);
+
+
+ALTER TABLE unics_cordis.erc_panels OWNER TO postgres;
+
+--
+-- TOC entry 194 (class 1259 OID 16449)
+-- Name: erc_research_domains; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.erc_research_domains (
+    code text NOT NULL,
+    description text
+);
+
+
+ALTER TABLE unics_cordis.erc_research_domains OWNER TO postgres;
+
+--
+-- TOC entry 195 (class 1259 OID 16455)
+-- Name: eu_territorial_units; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.eu_territorial_units (
+    nuts_code text NOT NULL,
+    description text,
+    nuts_level integer,
+    nuts_version text
+);
+
+
+ALTER TABLE unics_cordis.eu_territorial_units OWNER TO postgres;
+
+--
+-- TOC entry 196 (class 1259 OID 16461)
+-- Name: funding_schemes; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.funding_schemes (
+    code text NOT NULL,
+    title text
+);
+
+
+ALTER TABLE unics_cordis.funding_schemes OWNER TO postgres;
+
+--
+-- TOC entry 197 (class 1259 OID 16467)
+-- Name: nuts_hierarchy; Type: MATERIALIZED VIEW; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE MATERIALIZED VIEW unics_cordis.nuts_hierarchy AS
+ SELECT etu.nuts_code AS nuts_3,
+    "substring"(etu.nuts_code, 1, 4) AS nuts_2,
+    "substring"(etu.nuts_code, 1, 3) AS nuts_1
+   FROM unics_cordis.eu_territorial_units etu
+  WHERE (length(etu.nuts_code) >= 5)
+  WITH NO DATA;
+
+
+ALTER TABLE unics_cordis.nuts_hierarchy OWNER TO postgres;
+
+--
+-- TOC entry 198 (class 1259 OID 16474)
+-- Name: people; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.people (
+    unics_id integer NOT NULL,
+    full_name text
+);
+
+
+ALTER TABLE unics_cordis.people OWNER TO postgres;
+
+--
+-- TOC entry 199 (class 1259 OID 16480)
+-- Name: people_unics_id_seq; Type: SEQUENCE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE SEQUENCE unics_cordis.people_unics_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE unics_cordis.people_unics_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2331 (class 0 OID 0)
+-- Dependencies: 199
+-- Name: people_unics_id_seq; Type: SEQUENCE OWNED BY; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER SEQUENCE unics_cordis.people_unics_id_seq OWNED BY unics_cordis.people.unics_id;
+
+
+--
+-- TOC entry 200 (class 1259 OID 16482)
+-- Name: programmes; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.programmes (
+    code text NOT NULL,
+    rcn text,
+    title text,
+    short_name text,
+    parent text
+);
+
+
+ALTER TABLE unics_cordis.programmes OWNER TO postgres;
+
+--
+-- TOC entry 201 (class 1259 OID 16488)
+-- Name: programme_partof_programme; Type: MATERIALIZED VIEW; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE MATERIALIZED VIEW unics_cordis.programme_partof_programme AS
+( WITH RECURSIVE transitive_closure(prog, parent) AS (
+         SELECT epp.code,
+            epp.parent
+           FROM unics_cordis.programmes epp
+        UNION ALL
+         SELECT tc.prog,
+            epp.parent
+           FROM (transitive_closure tc
+             JOIN unics_cordis.programmes epp ON ((epp.code = tc.parent)))
+        )
+ SELECT transitive_closure.prog AS programme1,
+    transitive_closure.parent AS programme2
+   FROM transitive_closure
+  WHERE (transitive_closure.parent IS NOT NULL))
+UNION ALL
+ SELECT epp.code AS programme1,
+    epp.code AS programme2
+   FROM unics_cordis.programmes epp
+  WITH NO DATA;
+
+
+ALTER TABLE unics_cordis.programme_partof_programme OWNER TO postgres;
+
+--
+-- TOC entry 202 (class 1259 OID 16496)
+-- Name: project_erc_panels; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.project_erc_panels (
+    project integer NOT NULL,
+    panel text NOT NULL
+);
+
+
+ALTER TABLE unics_cordis.project_erc_panels OWNER TO postgres;
+
+--
+-- TOC entry 203 (class 1259 OID 16502)
+-- Name: project_members; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.project_members (
+    unics_id integer NOT NULL,
+    project integer NOT NULL,
+    pic_number text,
+    rcn text,
+    member_name text,
+    activity_type text,
+    country text,
+    street text,
+    city text,
+    postal_code text,
+    ec_contribution double precision,
+    institution_id integer,
+    member_role text NOT NULL,
+    nuts3_code text,
+    member_short_name text,
+    department_name text,
+    vat_number character varying,
+    latitude numeric,
+    longitude numeric
+);
+
+
+ALTER TABLE unics_cordis.project_members OWNER TO postgres;
+
+--
+-- TOC entry 204 (class 1259 OID 16508)
+-- Name: project_member_country; Type: MATERIALIZED VIEW; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE MATERIALIZED VIEW unics_cordis.project_member_country AS
+ SELECT pm.unics_id AS project,
+    cou.unics_id AS country
+   FROM (unics_cordis.project_members pm
+     JOIN unics_common.countries cou ON (((cou.alpha_2)::text = pm.country)))
+  WHERE (pm.country <> ALL (ARRAY['UK'::text, 'EL'::text]))
+UNION ALL
+ SELECT pm.unics_id AS project,
+    cou.unics_id AS country
+   FROM (unics_cordis.project_members pm
+     JOIN unics_common.countries cou ON ((cou.name = 'United Kingdom'::text)))
+  WHERE (pm.country = 'UK'::text)
+UNION ALL
+ SELECT pm.unics_id AS project,
+    cou.unics_id AS country
+   FROM (unics_cordis.project_members pm
+     JOIN unics_common.countries cou ON ((cou.name = 'Greece'::text)))
+  WHERE (pm.country = 'EL'::text)
+  WITH NO DATA;
+
+
+ALTER TABLE unics_cordis.project_member_country OWNER TO postgres;
+
+--
+-- TOC entry 205 (class 1259 OID 16513)
+-- Name: project_member_roles; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.project_member_roles (
+    code text NOT NULL,
+    description text
+);
+
+
+ALTER TABLE unics_cordis.project_member_roles OWNER TO postgres;
+
+--
+-- TOC entry 206 (class 1259 OID 16519)
+-- Name: project_members_unics_id_seq; Type: SEQUENCE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE SEQUENCE unics_cordis.project_members_unics_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE unics_cordis.project_members_unics_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2332 (class 0 OID 0)
+-- Dependencies: 206
+-- Name: project_members_unics_id_seq; Type: SEQUENCE OWNED BY; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER SEQUENCE unics_cordis.project_members_unics_id_seq OWNED BY unics_cordis.project_members.unics_id;
+
+
+--
+-- TOC entry 207 (class 1259 OID 16521)
+-- Name: project_programmes; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.project_programmes (
+    project integer NOT NULL,
+    programme text NOT NULL
+);
+
+
+ALTER TABLE unics_cordis.project_programmes OWNER TO postgres;
+
+--
+-- TOC entry 208 (class 1259 OID 16527)
+-- Name: project_subject_areas; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.project_subject_areas (
+    project integer NOT NULL,
+    subject_area text NOT NULL
+);
+
+
+ALTER TABLE unics_cordis.project_subject_areas OWNER TO postgres;
+
+--
+-- TOC entry 209 (class 1259 OID 16533)
+-- Name: project_topics; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.project_topics (
+    project integer NOT NULL,
+    topic text NOT NULL
+);
+
+
+ALTER TABLE unics_cordis.project_topics OWNER TO postgres;
+
+--
+-- TOC entry 210 (class 1259 OID 16539)
+-- Name: projects_unics_id_seq; Type: SEQUENCE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE SEQUENCE unics_cordis.projects_unics_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE unics_cordis.projects_unics_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2333 (class 0 OID 0)
+-- Dependencies: 210
+-- Name: projects_unics_id_seq; Type: SEQUENCE OWNED BY; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER SEQUENCE unics_cordis.projects_unics_id_seq OWNED BY unics_cordis.projects.unics_id;
+
+
+--
+-- TOC entry 211 (class 1259 OID 16541)
+-- Name: subject_areas; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.subject_areas (
+    code text NOT NULL,
+    title text,
+    description text
+);
+
+
+ALTER TABLE unics_cordis.subject_areas OWNER TO postgres;
+
+--
+-- TOC entry 212 (class 1259 OID 16547)
+-- Name: topics; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.topics (
+    code text NOT NULL,
+    rcn text,
+    title text
+);
+
+
+ALTER TABLE unics_cordis.topics OWNER TO postgres;
+
+--
+-- TOC entry 213 (class 1259 OID 16553)
+-- Name: vat_numbers; Type: TABLE; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE TABLE unics_cordis.vat_numbers (
+    orgid integer NOT NULL,
+    org_vat text NOT NULL
+);
+
+
+ALTER TABLE unics_cordis.vat_numbers OWNER TO postgres;
+
+--
+-- TOC entry 2124 (class 2604 OID 16559)
+-- Name: countries unics_id; Type: DEFAULT; Schema: unics_common; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_common.countries ALTER COLUMN unics_id SET DEFAULT nextval('unics_common.countries_unics_id_seq'::regclass);
+
+
+--
+-- TOC entry 2125 (class 2604 OID 16560)
+-- Name: institutions unics_id; Type: DEFAULT; Schema: unics_common; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_common.institutions ALTER COLUMN unics_id SET DEFAULT nextval('unics_common.institutions_unics_id_seq'::regclass);
+
+
+--
+-- TOC entry 2127 (class 2604 OID 16561)
+-- Name: people unics_id; Type: DEFAULT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.people ALTER COLUMN unics_id SET DEFAULT nextval('unics_cordis.people_unics_id_seq'::regclass);
+
+
+--
+-- TOC entry 2128 (class 2604 OID 16562)
+-- Name: project_members unics_id; Type: DEFAULT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_members ALTER COLUMN unics_id SET DEFAULT nextval('unics_cordis.project_members_unics_id_seq'::regclass);
+
+
+--
+-- TOC entry 2126 (class 2604 OID 16563)
+-- Name: projects unics_id; Type: DEFAULT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.projects ALTER COLUMN unics_id SET DEFAULT nextval('unics_cordis.projects_unics_id_seq'::regclass);
+
+
+--
+-- TOC entry 2130 (class 2606 OID 18459)
+-- Name: countries countries_alpha_2_key; Type: CONSTRAINT; Schema: unics_common; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_common.countries
+    ADD CONSTRAINT countries_alpha_2_key UNIQUE (alpha_2);
+
+
+--
+-- TOC entry 2132 (class 2606 OID 18461)
+-- Name: countries countries_pkey; Type: CONSTRAINT; Schema: unics_common; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_common.countries
+    ADD CONSTRAINT countries_pkey PRIMARY KEY (unics_id);
+
+
+--
+-- TOC entry 2134 (class 2606 OID 18463)
+-- Name: institutions institutions_pkey; Type: CONSTRAINT; Schema: unics_common; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_common.institutions
+    ADD CONSTRAINT institutions_pkey PRIMARY KEY (unics_id);
+
+
+--
+-- TOC entry 2136 (class 2606 OID 18465)
+-- Name: activity_types activity_types_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.activity_types
+    ADD CONSTRAINT activity_types_pkey PRIMARY KEY (code);
+
+
+--
+-- TOC entry 2145 (class 2606 OID 18467)
+-- Name: ec_framework_programs ec_framework_programs_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.ec_framework_programs
+    ADD CONSTRAINT ec_framework_programs_pkey PRIMARY KEY (name);
+
+
+--
+-- TOC entry 2150 (class 2606 OID 18469)
+-- Name: erc_panels erc_panels_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.erc_panels
+    ADD CONSTRAINT erc_panels_pkey PRIMARY KEY (code);
+
+
+--
+-- TOC entry 2152 (class 2606 OID 18471)
+-- Name: erc_research_domains erc_research_domains_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.erc_research_domains
+    ADD CONSTRAINT erc_research_domains_pkey PRIMARY KEY (code);
+
+
+--
+-- TOC entry 2154 (class 2606 OID 18473)
+-- Name: eu_territorial_units eu_territorial_units_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.eu_territorial_units
+    ADD CONSTRAINT eu_territorial_units_pkey PRIMARY KEY (nuts_code);
+
+
+--
+-- TOC entry 2156 (class 2606 OID 18475)
+-- Name: funding_schemes funding_schemes_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.funding_schemes
+    ADD CONSTRAINT funding_schemes_pkey PRIMARY KEY (code);
+
+
+--
+-- TOC entry 2159 (class 2606 OID 18477)
+-- Name: people people_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.people
+    ADD CONSTRAINT people_pkey PRIMARY KEY (unics_id);
+
+
+--
+-- TOC entry 2161 (class 2606 OID 18479)
+-- Name: programmes programmes_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.programmes
+    ADD CONSTRAINT programmes_pkey PRIMARY KEY (code);
+
+
+--
+-- TOC entry 2164 (class 2606 OID 18481)
+-- Name: project_erc_panels project_erc_panels_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_erc_panels
+    ADD CONSTRAINT project_erc_panels_pkey PRIMARY KEY (project);
+
+
+--
+-- TOC entry 2170 (class 2606 OID 18483)
+-- Name: project_member_roles project_member_roles_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_member_roles
+    ADD CONSTRAINT project_member_roles_pkey PRIMARY KEY (code);
+
+
+--
+-- TOC entry 2167 (class 2606 OID 18485)
+-- Name: project_members project_members_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_members
+    ADD CONSTRAINT project_members_pkey PRIMARY KEY (unics_id);
+
+
+--
+-- TOC entry 2172 (class 2606 OID 18487)
+-- Name: project_programmes project_programmes_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_programmes
+    ADD CONSTRAINT project_programmes_pkey PRIMARY KEY (project, programme);
+
+
+--
+-- TOC entry 2174 (class 2606 OID 18489)
+-- Name: project_subject_areas project_subject_areas_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_subject_areas
+    ADD CONSTRAINT project_subject_areas_pkey PRIMARY KEY (project, subject_area);
+
+
+--
+-- TOC entry 2176 (class 2606 OID 18491)
+-- Name: project_topics project_topics_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_topics
+    ADD CONSTRAINT project_topics_pkey PRIMARY KEY (project, topic);
+
+
+--
+-- TOC entry 2138 (class 2606 OID 18493)
+-- Name: projects projects_cordis_ref_key; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.projects
+    ADD CONSTRAINT projects_cordis_ref_key UNIQUE (cordis_ref);
+
+
+--
+-- TOC entry 2140 (class 2606 OID 18495)
+-- Name: projects projects_ec_ref_key; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.projects
+    ADD CONSTRAINT projects_ec_ref_key UNIQUE (ec_ref);
+
+
+--
+-- TOC entry 2142 (class 2606 OID 18497)
+-- Name: projects projects_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.projects
+    ADD CONSTRAINT projects_pkey PRIMARY KEY (unics_id);
+
+
+--
+-- TOC entry 2178 (class 2606 OID 18499)
+-- Name: subject_areas subject_areas_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.subject_areas
+    ADD CONSTRAINT subject_areas_pkey PRIMARY KEY (code);
+
+
+--
+-- TOC entry 2180 (class 2606 OID 18501)
+-- Name: topics topics_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.topics
+    ADD CONSTRAINT topics_pkey PRIMARY KEY (code);
+
+
+--
+-- TOC entry 2182 (class 2606 OID 18503)
+-- Name: vat_numbers vat_numbers_pkey; Type: CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.vat_numbers
+    ADD CONSTRAINT vat_numbers_pkey PRIMARY KEY (orgid, org_vat);
+
+
+--
+-- TOC entry 2143 (class 1259 OID 18504)
+-- Name: ec_calls_ec_call_idx; Type: INDEX; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE UNIQUE INDEX ec_calls_ec_call_idx ON unics_cordis.ec_calls USING btree (ec_call);
+
+
+--
+-- TOC entry 2146 (class 1259 OID 18505)
+-- Name: erc_calls_ec_call_idx; Type: INDEX; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE UNIQUE INDEX erc_calls_ec_call_idx ON unics_cordis.erc_calls USING btree (ec_call);
+
+
+--
+-- TOC entry 2147 (class 1259 OID 18506)
+-- Name: erc_grants_code_idx; Type: INDEX; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE UNIQUE INDEX erc_grants_code_idx ON unics_cordis.erc_grants USING btree (code);
+
+
+--
+-- TOC entry 2148 (class 1259 OID 18507)
+-- Name: erc_grants_name_idx; Type: INDEX; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE UNIQUE INDEX erc_grants_name_idx ON unics_cordis.erc_grants USING btree (name);
+
+
+--
+-- TOC entry 2157 (class 1259 OID 18508)
+-- Name: nuts_hierarchy_nuts_3_idx; Type: INDEX; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE UNIQUE INDEX nuts_hierarchy_nuts_3_idx ON unics_cordis.nuts_hierarchy USING btree (nuts_3);
+
+
+--
+-- TOC entry 2162 (class 1259 OID 18509)
+-- Name: programme_partof_programme_programme1_programme2_idx; Type: INDEX; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE UNIQUE INDEX programme_partof_programme_programme1_programme2_idx ON unics_cordis.programme_partof_programme USING btree (programme1, programme2);
+
+
+--
+-- TOC entry 2168 (class 1259 OID 18510)
+-- Name: project_member_country_project_idx; Type: INDEX; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE UNIQUE INDEX project_member_country_project_idx ON unics_cordis.project_member_country USING btree (project);
+
+
+--
+-- TOC entry 2165 (class 1259 OID 18511)
+-- Name: project_members_institution_id_idx; Type: INDEX; Schema: unics_cordis; Owner: postgres
+--
+
+CREATE INDEX project_members_institution_id_idx ON unics_cordis.project_members USING btree (institution_id);
+
+
+--
+-- TOC entry 2183 (class 2606 OID 18512)
+-- Name: institutions institutions_country_id_fkey; Type: FK CONSTRAINT; Schema: unics_common; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_common.institutions
+    ADD CONSTRAINT institutions_country_id_fkey FOREIGN KEY (country_id) REFERENCES unics_common.countries(unics_id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2184 (class 2606 OID 18517)
+-- Name: institutions institutions_nuts3_code_fkey; Type: FK CONSTRAINT; Schema: unics_common; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_common.institutions
+    ADD CONSTRAINT institutions_nuts3_code_fkey FOREIGN KEY (nuts3_code) REFERENCES unics_cordis.eu_territorial_units(nuts_code) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2188 (class 2606 OID 18522)
+-- Name: erc_panels erc_panels_part_of_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.erc_panels
+    ADD CONSTRAINT erc_panels_part_of_fkey FOREIGN KEY (part_of) REFERENCES unics_cordis.erc_research_domains(code) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2189 (class 2606 OID 18527)
+-- Name: programmes programmes_parent_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.programmes
+    ADD CONSTRAINT programmes_parent_fkey FOREIGN KEY (parent) REFERENCES unics_cordis.programmes(code) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2190 (class 2606 OID 18532)
+-- Name: project_erc_panels project_erc_panels_panel_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_erc_panels
+    ADD CONSTRAINT project_erc_panels_panel_fkey FOREIGN KEY (panel) REFERENCES unics_cordis.erc_panels(code) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2191 (class 2606 OID 18537)
+-- Name: project_erc_panels project_erc_panels_project_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_erc_panels
+    ADD CONSTRAINT project_erc_panels_project_fkey FOREIGN KEY (project) REFERENCES unics_cordis.projects(unics_id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2192 (class 2606 OID 18542)
+-- Name: project_members project_members_activity_type_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_members
+    ADD CONSTRAINT project_members_activity_type_fkey FOREIGN KEY (activity_type) REFERENCES unics_cordis.activity_types(code) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2193 (class 2606 OID 18547)
+-- Name: project_members project_members_institution_id_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_members
+    ADD CONSTRAINT project_members_institution_id_fkey FOREIGN KEY (institution_id) REFERENCES unics_common.institutions(unics_id);
+
+
+--
+-- TOC entry 2194 (class 2606 OID 18552)
+-- Name: project_members project_members_member_role_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_members
+    ADD CONSTRAINT project_members_member_role_fkey FOREIGN KEY (member_role) REFERENCES unics_cordis.project_member_roles(code);
+
+
+--
+-- TOC entry 2195 (class 2606 OID 18557)
+-- Name: project_members project_members_nuts3_code_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_members
+    ADD CONSTRAINT project_members_nuts3_code_fkey FOREIGN KEY (nuts3_code) REFERENCES unics_cordis.eu_territorial_units(nuts_code) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2196 (class 2606 OID 18562)
+-- Name: project_members project_members_project_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_members
+    ADD CONSTRAINT project_members_project_fkey FOREIGN KEY (project) REFERENCES unics_cordis.projects(unics_id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2197 (class 2606 OID 18567)
+-- Name: project_programmes project_programmes_programme_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_programmes
+    ADD CONSTRAINT project_programmes_programme_fkey FOREIGN KEY (programme) REFERENCES unics_cordis.programmes(code) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2198 (class 2606 OID 18572)
+-- Name: project_programmes project_programmes_project_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_programmes
+    ADD CONSTRAINT project_programmes_project_fkey FOREIGN KEY (project) REFERENCES unics_cordis.projects(unics_id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2199 (class 2606 OID 18577)
+-- Name: project_subject_areas project_subject_areas_project_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_subject_areas
+    ADD CONSTRAINT project_subject_areas_project_fkey FOREIGN KEY (project) REFERENCES unics_cordis.projects(unics_id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2200 (class 2606 OID 18582)
+-- Name: project_subject_areas project_subject_areas_subject_area_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_subject_areas
+    ADD CONSTRAINT project_subject_areas_subject_area_fkey FOREIGN KEY (subject_area) REFERENCES unics_cordis.subject_areas(code) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2201 (class 2606 OID 18587)
+-- Name: project_topics project_topics_project_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_topics
+    ADD CONSTRAINT project_topics_project_fkey FOREIGN KEY (project) REFERENCES unics_cordis.projects(unics_id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2202 (class 2606 OID 18592)
+-- Name: project_topics project_topics_topic_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.project_topics
+    ADD CONSTRAINT project_topics_topic_fkey FOREIGN KEY (topic) REFERENCES unics_cordis.topics(code) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2185 (class 2606 OID 18597)
+-- Name: projects projects_ec_fund_scheme_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.projects
+    ADD CONSTRAINT projects_ec_fund_scheme_fkey FOREIGN KEY (ec_fund_scheme) REFERENCES unics_cordis.funding_schemes(code) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2186 (class 2606 OID 18602)
+-- Name: projects projects_framework_program_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.projects
+    ADD CONSTRAINT projects_framework_program_fkey FOREIGN KEY (framework_program) REFERENCES unics_cordis.ec_framework_programs(name) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2187 (class 2606 OID 18607)
+-- Name: projects projects_principal_investigator_fkey; Type: FK CONSTRAINT; Schema: unics_cordis; Owner: postgres
+--
+
+ALTER TABLE ONLY unics_cordis.projects
+    ADD CONSTRAINT projects_principal_investigator_fkey FOREIGN KEY (principal_investigator) REFERENCES unics_cordis.people(unics_id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- TOC entry 2328 (class 0 OID 0)
+-- Dependencies: 6
+-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2020-05-16 19:16:58 CEST
+
+--
+-- PostgreSQL database dump complete
+--
+
