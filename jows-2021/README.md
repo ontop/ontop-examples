@@ -5,11 +5,12 @@ This repository contains the supplemental materials for the JOWS 2021 paper.
 
 The LinkedGeoData project, develop branch, can be used to set up the required environment.
 https://github.com/GeoKnow/LinkedGeoData/tree/develop
-Additionally, here we provide :
+Additionally, here we provide and spotlight:
 
 [//]: # (TODO: Use the link to the specific date rather than latest)
 [//]: # (TODO: Add all the files, or keep queries with different location in same file?)
 - The [Ontop OBDA Specification](https://github.com/GeoKnow/LinkedGeoData/blob/develop/linkedgeodata-docker/lgd-ontop-web/lgd.obda) (including ontologies, mapping in Ontop format)
+- The [LinkedGeoData ontology](https://github.com/GeoKnow/LinkedGeoData/blob/develop/linkedgeodata-docker/lgd-ontop-web/lgd.owl) (owl)
 - The [Sparqlify Query Profile File](sparqlify%20profile%20files)
 - The [SPARQL queries](SPARQL%20queries), both Sparqlify and Ontop versions
 - The [Translated SQL queries](translated%20SQL%20queries), both Sparqlify and Ontop versions
@@ -53,7 +54,7 @@ Navigate
 $ cd /etc/sparqlify/profiles.d
 $ nano example.conf
 ```
-Copy the contents from [sparqlify query profile file](https://github.com/ontop/ontop-examples/blob/master/jows-2021/sparqlify%20profile%20files/lgd_example.conf).
+Copy the contents from [sparqlify query profile file](https://github.com/ontop/ontop-examples/blob/master/jows-2021/sparqlify%20profile%20file/lgd_example.conf).
 Continue with the respective query:
 ```
 $ cd lgd/LinkedGeoData/linkedgeodata-cli/bin
