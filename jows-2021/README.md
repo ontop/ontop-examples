@@ -20,8 +20,8 @@ The data used in the paper is retrieved from [Geofabrik](http://download.geofabr
 - [Italy](http://download.geofabrik.de/europe/italy-latest.osm.pbf)
 - [Germany](http://download.geofabrik.de/europe/germany-latest.osm.pbf)
 
-
-In order to run Ontop and Sparqlify (Docker)
+[//]: # (TODO: Mention that we need to use the specific version from LinkedGeoData --> Claus to create the tag)
+In order to run Ontop and Sparqlify with Docker:
 ```
 $ git clone https://github.com/GeoKnow/LinkedGeoData.git lgd
 $ cd lgd

@@ -10,8 +10,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.0452369 45.886548)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.0452369 45.886548)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -27,8 +27,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.1594185 46.6695547)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.1594185 46.6695547)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -44,8 +44,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.1257601 46.0664228)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.1257601 46.0664228)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -61,8 +61,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.3547801 46.4981125)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.3547801 46.4981125)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -78,8 +78,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(13.2358377 46.0634632)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(13.2358377 46.0634632)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -95,8 +95,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.0452369 45.886548)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.0452369 45.886548)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -112,8 +112,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.1594185 46.6695547)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.1594185 46.6695547)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -129,8 +129,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.1257601 46.0664228)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.1257601 46.0664228)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -146,8 +146,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.3547801 46.4981125)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.3547801 46.4981125)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -163,8 +163,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(13.2358377 46.0634632)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(13.2358377 46.0634632)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -180,8 +180,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.0452369 45.886548)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.0452369 45.886548)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -197,8 +197,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.1594185 46.6695547)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.1594185 46.6695547)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -214,8 +214,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.1257601 46.0664228)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.1257601 46.0664228)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -231,8 +231,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.3547801 46.4981125)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.3547801 46.4981125)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -248,8 +248,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(13.2358377 46.0634632)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(13.2358377 46.0634632)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -265,8 +265,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.0452369 45.886548)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.0452369 45.886548)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -282,8 +282,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.1594185 46.6695547)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.1594185 46.6695547)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -299,8 +299,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.1257601 46.0664228)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.1257601 46.0664228)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -316,8 +316,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.3547801 46.4981125)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.3547801 46.4981125)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -333,8 +333,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(13.2358377 46.0634632)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(13.2358377 46.0634632)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -350,8 +350,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.0452369 45.886548)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.0452369 45.886548)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -367,8 +367,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.1594185 46.6695547)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.1594185 46.6695547)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -384,8 +384,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.1257601 46.0664228)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.1257601 46.0664228)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -401,8 +401,8 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(11.3547801 46.4981125)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(11.3547801 46.4981125)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }
 
 
@@ -418,6 +418,6 @@ SELECT * WHERE {
     geo:hasGeometry/geo:asWKT ?ag ;
     rdfs:label ?name .
   FILTER(lang(?name) = "" || lang(?name) = "it")
-  BIND (geof:buffer('POINT(13.2358377 46.0634632)'^^geo:wktLiteral, 500, uom:metre) AS ?distance)
-  FILTER (geof:sfWithin(?ag, ?cg))
+  BIND (geof:buffer('POINT(13.2358377 46.0634632)'^^geo:wktLiteral, 500, uom:metre) AS ?bg)
+  FILTER (geof:sfWithin(?ag, ?bg))
 }

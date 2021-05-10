@@ -4,6 +4,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Bar;
@@ -23,6 +24,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Bar;
@@ -42,6 +44,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Bar;
@@ -61,6 +64,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Bar;
@@ -80,6 +84,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Bar;
@@ -99,6 +104,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Restaurant;
@@ -118,6 +124,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Restaurant;
@@ -137,6 +144,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Restaurant;
@@ -156,6 +164,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Restaurant;
@@ -175,6 +184,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Restaurant;
@@ -194,6 +204,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Bank;
@@ -213,6 +224,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Bank;
@@ -232,6 +244,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Bank;
@@ -251,6 +264,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Bank;
@@ -270,6 +284,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Bank;
@@ -289,6 +304,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Pharmacy;
@@ -308,6 +324,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Pharmacy;
@@ -327,6 +344,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Pharmacy;
@@ -346,6 +364,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Pharmacy;
@@ -365,6 +384,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Pharmacy;
@@ -384,6 +404,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Library;
@@ -403,6 +424,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Library;
@@ -422,6 +444,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Library;
@@ -441,6 +464,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Library;
@@ -460,6 +484,7 @@ PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
 PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
 PREFIX lgdo: <http://linkedgeodata.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 SELECT * WHERE {
   ?a a lgdo:Library;
