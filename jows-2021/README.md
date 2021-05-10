@@ -8,8 +8,8 @@ https://github.com/GeoKnow/LinkedGeoData/tree/develop
 Additionally, here we provide :
 
 [//]: # (TODO: Use the link to the specific date rather than latest)
+[//]: # (TODO: Add all the files, or keep queries with different location in same file?)
 - The [Ontop OBDA Specification](https://github.com/GeoKnow/LinkedGeoData/blob/develop/linkedgeodata-docker/lgd-ontop-web/lgd.obda) (including ontologies, mapping in Ontop format)
-  [//]: # (TODO: Add all the files, or keep queries with different location in same file?)
 - The [Sparqlify Query Profile Files](sparqlify%20profile%20files)
 - The [SPARQL queries](SPARQL%20queries), both Sparqlify and Ontop versions
 - The [Translated SQL queries](translated%20SQL%20queries), both Sparqlify and Ontop versions

@@ -1,0 +1,52 @@
+Prefix lgdo: <http://linkedgeodata.org/ontology/>
+Prefix geom: <http://geovocab.org/geometry#>
+Prefix ogc: <http://www.opengis.net/ont/geosparql#>
+Prefix owl: <http://www.w3.org/2002/07/owl#>
+Prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix bif: <http://www.openlinksw.com/schemas/bif#>
+
+Select * FROM <http://linkedgeodata.org>{
+  ?s a lgdo:Canal ;
+  rdfs:label ?l1 ;
+  geom:geometry [
+    ogc:asWKT ?ag
+  ] .
+
+  ?t a lgdo:Motorway ;
+  rdfs:label ?l2 ;
+  geom:geometry [
+    ogc:asWKT ?bg
+  ] .
+
+Filter(lang(?l1) = "" || lang(?l) = "it") .
+Filter(lang(?l2) = "" || lang(?l) = "it") .
+
+Filter(bif:st_intersects(?ag, ?bg)) .
+}
+
+
+Prefix lgdo: <http://linkedgeodata.org/ontology/>
+Prefix geom: <http://geovocab.org/geometry#>
+Prefix ogc: <http://www.opengis.net/ont/geosparql#>
+Prefix owl: <http://www.w3.org/2002/07/owl#>
+Prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix bif: <http://www.openlinksw.com/schemas/bif#>
+
+Select * FROM <http://linkedgeodata.org>{
+  ?s a lgdo:Canal ;
+  rdfs:label ?l1 ;
+  geom:geometry [
+    ogc:asWKT ?ag
+  ] .
+
+  ?t a lgdo:Motorway ;
+  rdfs:label ?l2 ;
+  geom:geometry [
+    ogc:asWKT ?bg
+  ] .
+
+Filter(lang(?l1) = "" || lang(?l) = "de") .
+Filter(lang(?l2) = "" || lang(?l) = "de") .
+
+Filter(bif:st_intersects(?ag, ?bg)) .
+}
