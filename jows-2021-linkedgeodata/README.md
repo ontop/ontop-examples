@@ -7,21 +7,18 @@ The LinkedGeoData project, develop branch, can be used to set up the required en
 https://github.com/GeoKnow/LinkedGeoData/tree/develop
 Additionally, here we provide and spotlight:
 
-[//]: # (TODO: Use the link to the specific date rather than latest)
-[//]: # (TODO: Add all the files, or keep queries with different location in same file?)
 - The [Ontop OBDA Specification](https://github.com/GeoKnow/LinkedGeoData/blob/develop/linkedgeodata-docker/lgd-ontop-web/lgd.obda) (including ontologies, mapping in Ontop format)
 - The [LinkedGeoData ontology](https://github.com/GeoKnow/LinkedGeoData/blob/develop/linkedgeodata-docker/lgd-ontop-web/lgd.owl) (owl)
 - The [Sparqlify Query Profile File](sparqlify%20profile%20files)
-- The [SPARQL queries](SPARQL%20queries), both Sparqlify and Ontop versions
-- The [Translated SQL queries](translated%20SQL%20queries), both Sparqlify and Ontop versions
+- The [SPARQL queries](SPARQL%20queries), via Sparqlify and via Ontop
+- The [Translated SQL queries](translated%20SQL%20queries), via Sparqlify and via Ontop
 
 The data used in the paper is retrieved from [Geofabrik](http://download.geofabrik.de/) and loaded via LinkedGeoData
 - [North-East Italy](http://download.geofabrik.de/europe/italy/nord-est-latest.osm.pbf)
 - [Italy](http://download.geofabrik.de/europe/italy-latest.osm.pbf)
 - [Germany](http://download.geofabrik.de/europe/germany-latest.osm.pbf)
 
-[//]: # (TODO: Mention that we need to use the specific version from LinkedGeoData --> Claus to create the tag)
-In order to run Ontop and Sparqlify with Docker:
+In order to run SPARQL via Ontop and Sparqlify with Docker:
 ```
 $ git clone https://github.com/GeoKnow/LinkedGeoData.git lgd
 $ cd lgd
@@ -38,8 +35,8 @@ $ cd ..
 $ docker-compose up
 ```
 Services should start up under these urls / ports:  
-**Sparql Endpoint**: http://localhost:8013/  
-**Ontop Endpoint**: http://localhost:8014/
+**SPARQL via Sparqlify Endpoint**: http://localhost:8013/sparql  
+**SPARQL via Ontop Endpoint**: http://localhost:8014/
 
 The above set-up works with the Monaco dataset, in order to test with 
 NorthEast Italy, Italy and Germany, replace the URL in the configuration
@@ -60,3 +57,17 @@ Continue with the respective query:
 $ cd lgd/LinkedGeoData/linkedgeodata-cli/bin
 $ sparqlify tool -P example -Q 'Prefix rdf: ........'
 ```
+
+### Description of the queries
+- Query 1: Find OSM entities of a given class within a predefined distance  
+  - Example: Find all bars within 100 metres of Point (longitude latitude)
+- Query 2: Find OSM entities of a given class within a predefined distance 
+  from a given DBpedia location  
+  - Example: Find all banks within 100 metres of Bolzano centre http://dbpedia.org/resource/Monaco
+- Query 3: Find OSM entities of a given class that intersectwith a given polygon  
+  - Example: Find all restaurants within polygon
+- Query 4: Find OSM entities of two given linestring classes that intersect  
+  - Example: Find all motorways and rivers that intersect in database
+- Query 5: Find OSM entities of a given class within a given polygon
+- Query 6: Find OSM entities of a given class that are contained in a given polygon
+- Query 7: Find OSM entities of a given class within a 500 metre buffer of a given location

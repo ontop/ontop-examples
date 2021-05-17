@@ -1,0 +1,76 @@
+CONSTRUCT [a, ag, aname, b, bg, bname] [a/RDF(http://linkedgeodata.org/triplify/node{}(BIGINTToTEXT(node_id1m258)),IRI), b/RDF(DB_IDX_4(v0,http://linkedgeodata.org/triplify/node{}(BIGINTToTEXT(node_id122m1)),http://linkedgeodata.org/triplify/node{}(BIGINTToTEXT(node_id416m2)),http://linkedgeodata.org/triplify/way{}(BIGINTToTEXT(way_id688m3)),http://linkedgeodata.org/triplify/way{}(BIGINTToTEXT(way_id982m4))),IRI), bg/RDF(v1,http://www.opengis.net/ont/geosparql#wktLiteral), bname/RDF(v1230m20,RDF_TYPE{1=xsd:string,0=@it}(v10)), ag/RDF(v2,http://www.opengis.net/ont/geosparql#wktLiteral), aname/RDF(v1230m358,RDF_TYPE{1=xsd:string,0=@it}(v6))]
+NATIVE [node_id122m1, node_id1m258, node_id416m2, v0, v1, v10, v1230m20, v1230m358, v2, v6, way_id688m3, way_id982m4]
+SELECT v89."node_id122m1" AS "node_id122m1", v89."node_id1m258" AS "node_id1m258", v89."node_id416m2" AS "node_id416m2", v89."v0" AS "v0", v89."v1" AS "v1", v89."v10" AS "v10", v89."v1230m20" AS "v1230m20", v89."v1230m358" AS "v1230m358", v89."v2" AS "v2", v89."v6" AS "v6", v89."way_id688m3" AS "way_id688m3", v89."way_id982m4" AS "way_id982m4"
+FROM (SELECT v21."node_id122m1" AS "node_id122m1", v21."node_id1m258" AS "node_id1m258", CAST(NULL AS BIGINT) AS "node_id416m2", 0 AS "v0", ST_ASTEXT(v21."geom2m20") AS "v1", 0 AS "v10", v21."v1230m20" AS "v1230m20", v21."v1230m358" AS "v1230m358", ST_ASTEXT(v21."geom2m33") AS "v2", v21."v6" AS "v6", CAST(NULL AS BIGINT) AS "way_id688m3", CAST(NULL AS BIGINT) AS "way_id982m4"
+FROM (SELECT DISTINCT v19."geom2m20" AS "geom2m20", v19."geom2m33" AS "geom2m33", v19."node_id122m1" AS "node_id122m1", v19."node_id1m258" AS "node_id1m258", v19."v1230m20" AS "v1230m20", v19."v1230m358" AS "v1230m358", v19."v6" AS "v6"
+FROM (SELECT v2."geom" AS "geom2m20", v1."geom" AS "geom2m33", v2."id" AS "node_id122m1", v1."id" AS "node_id1m258", v8."v" AS "v1230m20", v6."v1230m358" AS "v1230m358", 0 AS "v6"
+FROM "nodes" v1, "nodes" v2, "lgd_node_tags_resource_kv" v3, (SELECT DISTINCT v4."node_id" AS "node_id1m4", v4."v" AS "v1230m358"
+FROM "lgd_node_tags_text" v4
+WHERE (v4."node_id" IS NOT NULL AND v4."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v4."property" AND 'it' = v4."language")
+) v6, "lgd_node_tags_resource_kv" v7, "lgd_node_tags_text" v8
+WHERE (ST_INTERSECTS(v1."geom",v2."geom") AND v1."geom" IS NOT NULL AND v2."geom" IS NOT NULL AND v8."v" IS NOT NULL AND v1."id" = v3."node_id" AND v1."id" = v6."node_id1m4" AND v2."id" = v7."node_id" AND v2."id" = v8."node_id" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v3."property" AND 'http://linkedgeodata.org/ontology/Motorway' = v3."object" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v7."property" AND 'http://linkedgeodata.org/ontology/Canal' = v7."object" AND 'http://www.w3.org/2000/01/rdf-schema#label' = v8."property" AND 'it' = v8."language")
+UNION ALL 
+SELECT v11."geom" AS "geom2m20", v10."geom" AS "geom2m33", v11."id" AS "node_id122m1", v10."id" AS "node_id1m258", v17."v" AS "v1230m20", v15."v1230m358" AS "v1230m358", 1 AS "v6"
+FROM "nodes" v10, "nodes" v11, "lgd_node_tags_resource_kv" v12, (SELECT DISTINCT v13."node_id" AS "node_id1m17", v13."v" AS "v1230m358"
+FROM "lgd_node_tags_text" v13
+WHERE ((v13."node_id" IS NOT NULL AND v13."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v13."property" AND '' = v13."language") OR (v13."node_id" IS NOT NULL AND v13."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v13."property" AND 'botanical' = v13."language") OR (v13."node_id" IS NOT NULL AND v13."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v13."property" AND 'carnaval' = v13."language"))
+) v15, "lgd_node_tags_resource_kv" v16, "lgd_node_tags_text" v17
+WHERE (ST_INTERSECTS(v10."geom",v11."geom") AND v10."geom" IS NOT NULL AND v11."geom" IS NOT NULL AND v17."v" IS NOT NULL AND v10."id" = v12."node_id" AND v10."id" = v15."node_id1m17" AND v11."id" = v16."node_id" AND v11."id" = v17."node_id" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v12."property" AND 'http://linkedgeodata.org/ontology/Motorway' = v12."object" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v16."property" AND 'http://linkedgeodata.org/ontology/Canal' = v16."object" AND 'http://www.w3.org/2000/01/rdf-schema#label' = v17."property" AND 'it' = v17."language")
+) v19
+) v21
+UNION ALL 
+SELECT CAST(NULL AS BIGINT) AS "node_id122m1", v43."node_id1m258" AS "node_id1m258", v43."node_id416m2" AS "node_id416m2", 1 AS "v0", ST_ASTEXT(v43."geom2m20") AS "v1", 1 AS "v10", v43."v1230m20" AS "v1230m20", v43."v1230m358" AS "v1230m358", ST_ASTEXT(v43."geom2m33") AS "v2", v43."v6" AS "v6", CAST(NULL AS BIGINT) AS "way_id688m3", CAST(NULL AS BIGINT) AS "way_id982m4"
+FROM (SELECT DISTINCT v41."geom2m20" AS "geom2m20", v41."geom2m33" AS "geom2m33", v41."node_id1m258" AS "node_id1m258", v41."node_id416m2" AS "node_id416m2", v41."v1230m20" AS "v1230m20", v41."v1230m358" AS "v1230m358", v41."v6" AS "v6"
+FROM (SELECT v24."geom" AS "geom2m20", v23."geom" AS "geom2m33", v23."id" AS "node_id1m258", v24."id" AS "node_id416m2", v30."v" AS "v1230m20", v28."v1230m358" AS "v1230m358", 0 AS "v6"
+FROM "nodes" v23, "nodes" v24, "lgd_node_tags_resource_kv" v25, (SELECT DISTINCT v26."node_id" AS "node_id1m27", v26."v" AS "v1230m358"
+FROM "lgd_node_tags_text" v26
+WHERE (v26."node_id" IS NOT NULL AND v26."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v26."property" AND 'it' = v26."language")
+) v28, "lgd_node_tags_resource_kv" v29, "lgd_node_tags_text" v30
+WHERE (ST_INTERSECTS(v23."geom",v24."geom") AND v23."geom" IS NOT NULL AND v24."geom" IS NOT NULL AND ((v30."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v30."property" AND '' = v30."language") OR (v30."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v30."property" AND 'botanical' = v30."language") OR (v30."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v30."property" AND 'carnaval' = v30."language")) AND v23."id" = v25."node_id" AND v23."id" = v28."node_id1m27" AND v24."id" = v29."node_id" AND v24."id" = v30."node_id" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v25."property" AND 'http://linkedgeodata.org/ontology/Motorway' = v25."object" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v29."property" AND 'http://linkedgeodata.org/ontology/Canal' = v29."object")
+UNION ALL 
+SELECT v33."geom" AS "geom2m20", v32."geom" AS "geom2m33", v32."id" AS "node_id1m258", v33."id" AS "node_id416m2", v39."v" AS "v1230m20", v37."v1230m358" AS "v1230m358", 1 AS "v6"
+FROM "nodes" v32, "nodes" v33, "lgd_node_tags_resource_kv" v34, (SELECT DISTINCT v35."node_id" AS "node_id1m37", v35."v" AS "v1230m358"
+FROM "lgd_node_tags_text" v35
+WHERE ((v35."node_id" IS NOT NULL AND v35."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v35."property" AND '' = v35."language") OR (v35."node_id" IS NOT NULL AND v35."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v35."property" AND 'botanical' = v35."language") OR (v35."node_id" IS NOT NULL AND v35."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v35."property" AND 'carnaval' = v35."language"))
+) v37, "lgd_node_tags_resource_kv" v38, "lgd_node_tags_text" v39
+WHERE (ST_INTERSECTS(v32."geom",v33."geom") AND v32."geom" IS NOT NULL AND v33."geom" IS NOT NULL AND ((v39."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v39."property" AND '' = v39."language") OR (v39."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v39."property" AND 'botanical' = v39."language") OR (v39."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v39."property" AND 'carnaval' = v39."language")) AND v32."id" = v34."node_id" AND v32."id" = v37."node_id1m37" AND v33."id" = v38."node_id" AND v33."id" = v39."node_id" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v34."property" AND 'http://linkedgeodata.org/ontology/Motorway' = v34."object" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v38."property" AND 'http://linkedgeodata.org/ontology/Canal' = v38."object")
+) v41
+) v43
+UNION ALL 
+SELECT CAST(NULL AS BIGINT) AS "node_id122m1", v65."node_id1m258" AS "node_id1m258", CAST(NULL AS BIGINT) AS "node_id416m2", 2 AS "v0", ST_ASTEXT(v65."geom2m20") AS "v1", 0 AS "v10", v65."v1230m20" AS "v1230m20", v65."v1230m358" AS "v1230m358", ST_ASTEXT(v65."geom2m33") AS "v2", v65."v6" AS "v6", v65."way_id688m3" AS "way_id688m3", CAST(NULL AS BIGINT) AS "way_id982m4"
+FROM (SELECT DISTINCT v63."geom2m20" AS "geom2m20", v63."geom2m33" AS "geom2m33", v63."node_id1m258" AS "node_id1m258", v63."v1230m20" AS "v1230m20", v63."v1230m358" AS "v1230m358", v63."v6" AS "v6", v63."way_id688m3" AS "way_id688m3"
+FROM (SELECT v46."linestring" AS "geom2m20", v45."geom" AS "geom2m33", v45."id" AS "node_id1m258", v52."v" AS "v1230m20", v50."v1230m358" AS "v1230m358", 0 AS "v6", v46."id" AS "way_id688m3"
+FROM "nodes" v45, "ways" v46, "lgd_node_tags_resource_kv" v47, (SELECT DISTINCT v48."node_id" AS "node_id1m45", v48."v" AS "v1230m358"
+FROM "lgd_node_tags_text" v48
+WHERE (v48."node_id" IS NOT NULL AND v48."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v48."property" AND 'it' = v48."language")
+) v50, "lgd_way_tags_resource_kv" v51, "lgd_way_tags_text" v52
+WHERE (ST_INTERSECTS(v45."geom",v46."linestring") AND v45."geom" IS NOT NULL AND v46."linestring" IS NOT NULL AND v52."v" IS NOT NULL AND v45."id" = v47."node_id" AND v45."id" = v50."node_id1m45" AND v46."id" = v51."way_id" AND v46."id" = v52."way_id" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v47."property" AND 'http://linkedgeodata.org/ontology/Motorway' = v47."object" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v51."property" AND 'http://linkedgeodata.org/ontology/Canal' = v51."object" AND 'http://www.w3.org/2000/01/rdf-schema#label' = v52."property" AND 'it' = v52."language")
+UNION ALL 
+SELECT v55."linestring" AS "geom2m20", v54."geom" AS "geom2m33", v54."id" AS "node_id1m258", v61."v" AS "v1230m20", v59."v1230m358" AS "v1230m358", 1 AS "v6", v55."id" AS "way_id688m3"
+FROM "nodes" v54, "ways" v55, "lgd_node_tags_resource_kv" v56, (SELECT DISTINCT v57."node_id" AS "node_id1m57", v57."v" AS "v1230m358"
+FROM "lgd_node_tags_text" v57
+WHERE ((v57."node_id" IS NOT NULL AND v57."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v57."property" AND '' = v57."language") OR (v57."node_id" IS NOT NULL AND v57."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v57."property" AND 'botanical' = v57."language") OR (v57."node_id" IS NOT NULL AND v57."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v57."property" AND 'carnaval' = v57."language"))
+) v59, "lgd_way_tags_resource_kv" v60, "lgd_way_tags_text" v61
+WHERE (ST_INTERSECTS(v54."geom",v55."linestring") AND v54."geom" IS NOT NULL AND v55."linestring" IS NOT NULL AND v61."v" IS NOT NULL AND v54."id" = v56."node_id" AND v54."id" = v59."node_id1m57" AND v55."id" = v60."way_id" AND v55."id" = v61."way_id" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v56."property" AND 'http://linkedgeodata.org/ontology/Motorway' = v56."object" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v60."property" AND 'http://linkedgeodata.org/ontology/Canal' = v60."object" AND 'http://www.w3.org/2000/01/rdf-schema#label' = v61."property" AND 'it' = v61."language")
+) v63
+) v65
+UNION ALL 
+SELECT CAST(NULL AS BIGINT) AS "node_id122m1", v87."node_id1m258" AS "node_id1m258", CAST(NULL AS BIGINT) AS "node_id416m2", 3 AS "v0", ST_ASTEXT(v87."geom2m20") AS "v1", 1 AS "v10", v87."v1230m20" AS "v1230m20", v87."v1230m358" AS "v1230m358", ST_ASTEXT(v87."geom2m33") AS "v2", v87."v6" AS "v6", CAST(NULL AS BIGINT) AS "way_id688m3", v87."way_id982m4" AS "way_id982m4"
+FROM (SELECT DISTINCT v85."geom2m20" AS "geom2m20", v85."geom2m33" AS "geom2m33", v85."node_id1m258" AS "node_id1m258", v85."v1230m20" AS "v1230m20", v85."v1230m358" AS "v1230m358", v85."v6" AS "v6", v85."way_id982m4" AS "way_id982m4"
+FROM (SELECT v68."linestring" AS "geom2m20", v67."geom" AS "geom2m33", v67."id" AS "node_id1m258", v74."v" AS "v1230m20", v72."v1230m358" AS "v1230m358", 0 AS "v6", v68."id" AS "way_id982m4"
+FROM "nodes" v67, "ways" v68, "lgd_node_tags_resource_kv" v69, (SELECT DISTINCT v70."node_id" AS "node_id1m67", v70."v" AS "v1230m358"
+FROM "lgd_node_tags_text" v70
+WHERE (v70."node_id" IS NOT NULL AND v70."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v70."property" AND 'it' = v70."language")
+) v72, "lgd_way_tags_resource_kv" v73, "lgd_way_tags_text" v74
+WHERE (ST_INTERSECTS(v67."geom",v68."linestring") AND v67."geom" IS NOT NULL AND v68."linestring" IS NOT NULL AND ((v74."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v74."property" AND '' = v74."language") OR (v74."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v74."property" AND 'botanical' = v74."language") OR (v74."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v74."property" AND 'carnaval' = v74."language")) AND v67."id" = v69."node_id" AND v67."id" = v72."node_id1m67" AND v68."id" = v73."way_id" AND v68."id" = v74."way_id" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v69."property" AND 'http://linkedgeodata.org/ontology/Motorway' = v69."object" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v73."property" AND 'http://linkedgeodata.org/ontology/Canal' = v73."object")
+UNION ALL 
+SELECT v77."linestring" AS "geom2m20", v76."geom" AS "geom2m33", v76."id" AS "node_id1m258", v83."v" AS "v1230m20", v81."v1230m358" AS "v1230m358", 1 AS "v6", v77."id" AS "way_id982m4"
+FROM "nodes" v76, "ways" v77, "lgd_node_tags_resource_kv" v78, (SELECT DISTINCT v79."node_id" AS "node_id1m77", v79."v" AS "v1230m358"
+FROM "lgd_node_tags_text" v79
+WHERE ((v79."node_id" IS NOT NULL AND v79."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v79."property" AND '' = v79."language") OR (v79."node_id" IS NOT NULL AND v79."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v79."property" AND 'botanical' = v79."language") OR (v79."node_id" IS NOT NULL AND v79."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v79."property" AND 'carnaval' = v79."language"))
+) v81, "lgd_way_tags_resource_kv" v82, "lgd_way_tags_text" v83
+WHERE (ST_INTERSECTS(v76."geom",v77."linestring") AND v76."geom" IS NOT NULL AND v77."linestring" IS NOT NULL AND ((v83."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v83."property" AND '' = v83."language") OR (v83."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v83."property" AND 'botanical' = v83."language") OR (v83."v" IS NOT NULL AND 'http://www.w3.org/2000/01/rdf-schema#label' = v83."property" AND 'carnaval' = v83."language")) AND v76."id" = v78."node_id" AND v76."id" = v81."node_id1m77" AND v77."id" = v82."way_id" AND v77."id" = v83."way_id" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v78."property" AND 'http://linkedgeodata.org/ontology/Motorway' = v78."object" AND 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type' = v82."property" AND 'http://linkedgeodata.org/ontology/Canal' = v82."object")
+) v85
+) v87
+) v89
+
