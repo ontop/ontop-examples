@@ -58,7 +58,17 @@ $ cd lgd/LinkedGeoData/linkedgeodata-cli/bin
 $ sparqlify tool -P example -Q 'Prefix rdf: ........'
 ```
 
-### Description of the queries
+## Querying the SPARQL endpoint via Ontop with curl
+The query requests to the Ontop Endpoint can also be sent with the following command
+```
+curl --request POST \
+     --url http://localhost:8080/sparql \
+     --header 'accept: application/json' \
+     --header 'content-type: application/sparql-query' \
+     --data 'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  PREFIX geo: <http://www.opengis.net/ont/geosparql#>  PREFIX geof: <http://www.opengis.net/def/function/geosparql/>  PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>  PREFIX lgdo: <http://linkedgeodata.org/ontology/>  SELECT * WHERE { ?a a lgdo:Bank; geo:hasGeometry/geo:asWKT ?ag ; rdfs:label ?name . FILTER(lang(?name) = "" || lang(?name) = "fr") BIND (geof:distance('POINT(7.4156749 43.7347546)'^^geo:wktLiteral, ?ag, uom:degree) AS ?distance)  FILTER (?distance <= 0.1)}'
+```
+
+## Description of the queries
 - Query 1: Find OSM entities of a given class within a predefined distance  
   - Example: Find all bars within 100 metres of Point (longitude latitude)
 - Query 2: Find OSM entities of a given class within a predefined distance 
