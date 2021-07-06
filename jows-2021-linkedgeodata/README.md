@@ -25,13 +25,7 @@ $ cd lgd
 $ git checkout develop
 $ cd linkedgeodata-docker
 $ cp env.dist .env
-$ make create-resources
 $ make
-$ cd lgd-nominatim-sync
-$ make
-$ cd ..
-$ cd lgd-nominatim-web
-$ cd ..
 $ docker-compose up
 ```
 Services should start up under these urls / ports:  
