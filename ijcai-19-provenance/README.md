@@ -35,11 +35,11 @@ Follow the guide to install `provsql` as described in the `provsql/README.md` fi
 
 ## 1) Download the NPD dataset (PostgreSQL version)
 
-(or, alternatively, use the file provided within the `npd` folder)
-
 ~~~
 $> wget https://github.com/ontop/npd-benchmark/raw/master/data/postgres/npd.psql
 ~~~
+
+(or, alternatively, use the file provided within the `npd` folder)
 
 ## 2) Create the NPD dataset
 ### 2a) Create the DB
