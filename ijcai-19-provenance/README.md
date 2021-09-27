@@ -87,6 +87,6 @@ $> ./start-jetty.sh # jetty will be under localhost:8080
 
 ## 5) Create the NPD repository
 
-### 5a) Add the connection parameters to your `npd_prov` database into the .properties file in `/ontoprov-tutorial/npd/obda`
-### 5b) From the jetty homepage, click on the left "New repository" and provide the .owl, .obda, and .properties files
-## 5c) Use the `Query` menu to issue SPARQL queries to ontoprov, such as the query `npd/obda/query.sparql`. Provenance info will be contained in the `GRAPH` variables.
+- Add the connection parameters to your `npd_prov` database into the .properties file in `/ontoprov-tutorial/npd/obda`
+- From the jetty homepage, click on the left "New repository" and provide the .owl, .obda, and .properties files
+- Use the `Query` menu to issue SPARQL queries to ontoprov, such as the query `npd/obda/query.sparql`. Provenance info will be contained in the `GRAPH` variables.
