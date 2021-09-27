@@ -1,0 +1,30 @@
+# Setting up the database
+test: setup
+
+# Adding a provenance table
+test: add_provenance
+
+# Introducing a few semirings
+test: security formula counting
+
+# Test of various ProvSQL features and SQL language capabilities
+test: deterministic union_all union union_nary distinct group_by_provenance except unsupported_features
+
+# Adding probabilities
+test: probability_setup
+
+# Adding descriptions
+test: viewing_setup
+
+# Probability computation using internal methods
+test: possible_worlds monte_carlo
+
+# Probability computation using external software
+test: c2d d4 dsharp
+
+# Viewing circuit
+test: view_circuit
+test: view_circuit_multiple
+
+# Where-provenance
+test: where_provenance

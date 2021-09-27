@@ -1,0 +1,14 @@
+alter table "apaAreaGross" rename to "apaareagross";
+alter table "apaAreaNet" rename to "apaareanet";
+alter table "baaArea" rename to "baaarea";
+alter table "dscArea" rename to "dscarea";
+alter table "fclPoint" rename to "fclpoint";
+alter table "field_production_totalt_NCS_month" rename to "field_production_totalt_ncs_month";
+alter table "field_production_totalt_NCS_year" rename to "field_production_totalt_ncs_year";
+alter table "fldArea" rename to "fldarea";
+alter table "pipLine" rename to "pipline";
+alter table "prlArea" rename to "prlarea";
+alter table "prlAreaSplitByBlock" rename to "prlareasplitbyblock";
+alter table "seaArea" rename to "seaarea";
+alter table "seaMultiline" rename to "seamultiline";
+alter table "wlbPoint" rename to "wlbpoint";
