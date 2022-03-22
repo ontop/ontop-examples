@@ -1,0 +1,3 @@
+Link to data:
+
+http://wifo5-03.informatik.uni-mannheim.de/bizer/berlinsparqlbenchmark/

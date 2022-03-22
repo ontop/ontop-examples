@@ -1,0 +1,1 @@
+In "original-factpages", there is the original mapping and schema from which the NPD benchmark has been extracted, and that has been used for counting the applications of mapping patterns. Files in this folder, instead, refer to the current schema used in the NPD benchmark.

@@ -1,0 +1,260 @@
+[PrefixDeclaration]
+:		http://noi.example.org/ontology/odh#
+dc:		http://purl.org/dc/terms/
+geo:		http://www.opengis.net/ont/geosparql#
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+obda:		https://w3id.org/obda/vocabulary#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+schema:		http://schema.org/
+
+[MappingDeclaration] @collection [[
+mappingId	Campground
+target		:data/accommodation/{Id} a schema:Campground . 
+source		SELECT "Id"
+			FROM "v_accommodationsopen"
+			WHERE "AccoTypeId" = 'Camping'
+
+mappingId	LodgingBusiness
+target		:data/accommodation/{id} a schema:LodgingBusiness ; geo:asWKT "POINT ({longitude} {latitude})"^^geo:wktLiteral ; schema:email <{email}> ; schema:name {de_name}@de , {it_name}@it , {en_name}@en ; schema:telephone {de_phone} ; schema:faxNumber {de_fax} . 
+source		SELECT "Id" AS id, "Latitude" AS latitude, "Longitude" AS longitude, CONCAT('mailto:', "AccoDetail-de-Email") AS email, "AccoDetail-de-Name" AS de_name,  "AccoDetail-en-Name" AS en_name, "AccoDetail-it-Name" AS it_name, "AccoDetail-de-Phone" AS de_phone, "AccoDetail-de-Mobile"  AS mobile, "AccoDetail-de-Fax" AS  de_fax
+			FROM "v_accommodationsopen"
+
+mappingId	Lodging business - geo
+target		:data/geo/accommodation/{id} a schema:GeoCoordinates ; schema:latitude {latitude} ; schema:elevation {altitude} ; schema:longitude {longitude} . :data/accommodation/{id} schema:geo :data/geo/accommodation/{id} . 
+source		SELECT "Id" AS id, "Latitude" AS latitude, "Longitude" AS longitude, "Altitude" AS altitude
+			FROM "v_accommodationsopen"
+
+mappingId	LodgingBusiness - address
+target		:data/address/accommodation/{id} a schema:PostalAddress ; schema:streetAddress {de_street}@de , {it_street}@it , {en_street}@en ; schema:postalCode {de_zip} ; schema:addressLocality {de_city}@de , {it_city}@it , {en_city}@en . :data/accommodation/{id} schema:address :data/address/accommodation/{id} . 
+source		SELECT "Id" AS id,
+			"AccoDetail-de-City" AS de_city, "AccoDetail-de-Zip" AS de_zip, "AccoDetail-de-Street" AS de_street,
+			"AccoDetail-it-City" AS it_city, "AccoDetail-it-Street" AS it_street,
+			"AccoDetail-en-City" AS en_city, "AccoDetail-en-Street" AS en_street
+			FROM "v_accommodationsopen"
+
+mappingId	PensionHotel
+target		:data/accommodation/{id} a schema:Hotel . 
+source		SELECT "Id" AS id
+			FROM "v_accommodationsopen"
+			WHERE "AccoTypeId" = 'HotelPension'
+
+mappingId	Hostel
+target		:data/accommodation/{id} a schema:Hostel . 
+source		SELECT "Id" AS id
+			FROM "v_accommodationsopen"
+			WHERE "AccoTypeId" = 'Youth'
+
+mappingId	BedAndBreakfast
+target		:data/accommodation/{id} a schema:BedAndBreakfast . 
+source		SELECT "Id" AS id
+			FROM "v_accommodationsopen"
+			WHERE "AccoTypeId" = 'BedBreakfast'
+
+mappingId	POI
+target		:data/poi/{Id} a schema:Place ; rdfs:label {Shortname}^^xsd:string ; schema:name {Shortname}^^xsd:string ; geo:asWKT "POINT ({GpsPoints-position-Longitude} {GpsPoints-position-Latitude})"^^geo:wktLiteral . 
+source		SELECT "Id", "Shortname", "GpsPoints-position-Latitude", "GpsPoints-position-Longitude" FROM v_poisopen
+
+mappingId	Area
+target		:data/area/{Id} a schema:AdministrativeArea ; rdfs:label {Shortname}^^xsd:string ; schema:name {Shortname}^^xsd:string . 
+source		SELECT "Id", "Shortname" FROM v_areas
+
+mappingId	POI_Area
+target		:data/poi/{Id} schema:isPartOf :data/area/{data} . 
+source		SELECT "Id", "data" FROM "v_poisopen_AreaId";
+
+mappingId	POI-geo
+target		:data/poi/{Id} schema:geo :data/geo/poi/{Id} . :data/geo/poi/{Id} a schema:GeoCoordinates ; schema:longitude {GpsPoints-position-Longitude} ; schema:latitude {GpsPoints-position-Latitude} ; schema:elevation {GpsPoints-position-Altitude} . 
+source		SELECT "Id", "Shortname", "GpsPoints-position-Latitude", "GpsPoints-position-Longitude", "GpsPoints-position-Altitude" FROM v_poisopen
+
+mappingId	Accommodation
+target		:data/room/{Id} a schema:Accommodation ; schema:containedInPlace :data/accommodation/{A0RID} ; schema:name {AccoRoomDetail-it-Name}@it , {AccoRoomDetail-en-Name}@en , {AccoRoomDetail-de-Name}@de ; :numberOfUnits {RoomQuantity} ; schema:occupancy :data/occupancy/room/{Id} . 
+source		SELECT "Id", "A0RID", "AccoRoomDetail-en-Name", "AccoRoomDetail-de-Name", "AccoRoomDetail-it-Name", "RoomQuantity" FROM v_accommodationroomsopen
+
+mappingId	Room
+target		:data/room/{Id} a schema:Room . 
+source		SELECT "Id" FROM v_accommodationroomsopen
+			WHERE "Roomtype" = 'room'
+
+mappingId	Apartment
+target		:data/room/{Id} a schema:Apartment . 
+source		SELECT "Id" FROM v_accommodationroomsopen
+			WHERE "Roomtype" = 'apartment'
+
+mappingId	Camping pitch
+target		:data/room/{Id} a schema:CampingPitch . 
+source		SELECT "Id" FROM v_accommodationroomsopen
+			WHERE "Roomtype" = 'pitch' OR "Roomtype" = 'campsite'
+
+mappingId	Room occupancy
+target		:data/occupancy/room/{Id} a schema:QuantitativeValue ; schema:minValue {Roommin} ; schema:maxValue {Roommax} ; schema:unitCode "C62" . 
+source		SELECT "Id", "Roommin", "Roommax"
+			FROM v_accommodationroomsopen
+
+mappingId	Event EURAC NOI
+target		:data/event/euracnoi/{Id} a schema:Event ; schema:startDate {StartDate}^^xsd:dateTime ; schema:endDate {EndDate}^^xsd:dateTime ; schema:description {EventDescriptionIT}@it , {EventDescriptionDE}@de , {EventDescriptionEN}@en ; schema:location :data/location/euracnoi/{EventLocation}/{AnchorVenue} ; schema:organizer :data/organization/event/euracnoi/{Id} , :data/contact/event/euracnoi/{Id} . 
+source		SELECT "Id", "StartDate", "EndDate", "EventDescriptionIT", "EventDescriptionEN", "AnchorVenue", "EventLocation", "EventDescriptionDE"
+			FROM v_eventeuracnoi
+
+mappingId	Event Organization
+target		:data/organization/event/euracnoi/{Id} a schema:Organization ; schema:name {CompanyName} . 
+source		select "Id", "CompanyName"
+			from v_eventeuracnoi
+
+mappingId	Event Location
+target		:data/location/euracnoi/{EventLocation}/{AnchorVenue} a schema:MeetingRoom ; schema:name {AnchorVenue} ; schema:containedInPlace :data/place/euracnoi/{EventLocation} . 
+source		select "Id", "AnchorVenue", "EventLocation"
+			from v_eventeuracnoi
+
+mappingId	Event Contact Person
+target		:data/contact/event/euracnoi/{Id} a schema:Person ; schema:familyName {ContactLastName} ; schema:givenName {ContactFirstName} ; schema:email <{email}> ; schema:telephone {ContactPhone} ; schema:worksFor :data/organization/event/euracnoi/{Id} . 
+source		select "Id", "ContactFirstName", "ContactLastName", concat('mailto:',"ContactEmail") as email, "ContactPhone"
+			from v_eventeuracnoi
+
+mappingId	Event Organization - company address
+target		:data/address/organization/event/euracnoi/{Id} a schema:PostalAddress ; schema:streetAddress {CompanyAddressLine1} ; schema:postalCode {CompanyPostalCode} ; schema:addressLocality {CompanyCity} ; schema:addressCountry {CompanyCountry} . :data/organization/event/euracnoi/{Id} schema:address :data/address/organization/event/euracnoi/{Id} . 
+source		select "Id", "CompanyAddressLine1", "CompanyCity", "CompanyCountry", "CompanyPostalCode"
+			from v_eventeuracnoi
+
+mappingId	Caravan pitch
+target		:data/room/{Id} a :CaravanPitch . 
+source		SELECT "Id" FROM v_accommodationroomsopen
+			WHERE "Roomtype" = 'caravan'
+
+mappingId	SkiResort
+target		:data/skiResort/{Id} a schema:SkiResort ; rdfs:label {Detail-en-Header}^^xsd:string ; schema:name {Detail-en-Header}^^xsd:string ; geo:asWKT "POINT ({Longitude} {Latitude})"^^geo:wktLiteral ; schema:image <{SkiAreaMapURL}> ; schema:isPartOf :data/skiRegion/{SkiRegionId} ; schema:geo :data/geo/skiResort/{Id} . 
+source		SELECT "Id", "Shortname", "Detail-en-Header", "Longitude", "Latitude", "AltitudeTo", "SkiAreaMapURL", "SkiRegionId" FROM v_skiareasopen
+
+mappingId	SkiRegion
+target		:data/skiRegion/{Id} a :SkiRegion ; rdfs:label {Shortname}^^xsd:string ; schema:name {Shortname}^^xsd:string ; geo:asWKT "POINT ({Longitude} {Latitude})"^^geo:wktLiteral ; schema:elevation {Altitude}^^xsd:decimal . 
+source		SELECT "Id", "Shortname", "Longitude", "Latitude", "Altitude" FROM v_skiregionsopen
+
+mappingId	SkiResort_Area
+target		:data/skiResort/{Id} schema:isPartOf :data/area/{data} . 
+source		SELECT "Id", "data" FROM "v_skiareasopen_AreaId"
+
+mappingId	EntertainmentBusiness
+target		:data/poi/{Id} a schema:EntertainmentBusiness . 
+source		SELECT * FROM v_poisopen WHERE "Type" = 'Kunsthandwerker'
+
+mappingId	MedicalOrganization
+target		:data/poi/{Id} a schema:MedicalOrganization . 
+source		SELECT * FROM v_poisopen WHERE "Type" = 'Ärzte, Apotheken'
+
+mappingId	Theater
+target		:data/poi/{Id} a :Theater . 
+source		SELECT * FROM v_poisopen WHERE "SubType" = 'Theater'
+
+mappingId	Activity
+target		:data/Activity/{SubType} a :Activity ; rdfs:label {SubType}^^xsd:string ; schema:name {SubType}^^xsd:string ; :activityType {Type}^^xsd:string . 
+source		SELECT "Type", "SubType"
+			FROM v_smgpoisopen
+
+mappingId	Wine
+target		:data/wine/{Id} a :Wine ; rdfs:label {Shortname} ; schema:name {Shortname} ; :wineVintageYear {Vintage} ; :wineAwardYear {Awardyear} . 
+source		SELECT * FROM v_wines
+
+mappingId	WineAward
+target		:data/wine/{Id} a :Wine ; :receivesWineAward {data}^^xsd:string . 
+source		SELECT * FROM "v_wines_Awards"
+
+mappingId	Ski resort - geo
+target		:data/geo/skiResort/{Id} a schema:GeoCoordinates ; schema:latitude {Latitude} ; schema:elevation {AltitudeTo} ; schema:longitude {Longitude} . 
+source		SELECT "Id",  "Longitude", "Latitude", "AltitudeTo" FROM v_skiareasopen
+
+mappingId	Place EURAC NOI
+target		:data/place/euracnoi/{EventLocation} a schema:Place . 
+source		select "EventLocation"
+			from v_eventeuracnoi
+
+mappingId	Food establishments
+target		:data/gastronomy/{Id} a schema:FoodEstablishment ; geo:asWKT "POINT ({Longitude} {Latitude})"^^geo:wktLiteral ; schema:name {Detail-de-Title}@de , {Detail-it-Title}@it , {Detail-en-Title}@en ; schema:description {Detail-de-BaseText}@de , {Detail-it-BaseText}@it , {Detail-en-BaseText}@en ; schema:geo :data/geo/gastronomy/{Id} ; schema:address :data/address/gastronomy/{Id} ; schema:telephone {ContactInfos-de-Phonenumber} . 
+source		SELECT * FROM v_gastronomiesopen
+
+mappingId	Food establishments - geo
+target		:data/geo/gastronomy/{Id} a schema:GeoCoordinates ; schema:latitude {Latitude} ; schema:elevation {Altitude} ; schema:longitude {Longitude} . 
+source		SELECT * FROM v_gastronomiesopen
+
+mappingId	Food establishments - address
+target		:data/address/gastronomy/{Id} a schema:PostalAddress ; schema:streetAddress {ContactInfos-de-Address}@de , {ContactInfos-it-Address}@it , {ContactInfos-en-Address}@en ; schema:postalCode {ContactInfos-de-ZipCode} ; schema:addressLocality {ContactInfos-de-City}@de , {ContactInfos-it-City}@it , {ContactInfos-en-City}@en . 
+source		SELECT * FROM v_gastronomiesopen
+
+mappingId	Restaurants
+target		:data/gastronomy/{gastronomiesopen_Id} a schema:Restaurant . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Restaurant' OR "Shortname" = 'Gasthof'
+
+mappingId	Bar/pub
+target		:data/gastronomy/{gastronomiesopen_Id} a schema:BarOrPub . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Bar / Coffee Shop / Bistro' OR "Shortname" = 'Pub / Disco' OR "Shortname" = 'Braugarten'  OR "Shortname" = 'Apres Ski'
+
+mappingId	Fast food
+target		:data/gastronomy/{gastronomiesopen_Id} a schema:FastFoodRestaurant . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Schnellimbiss'
+
+mappingId	Winery
+target		:data/gastronomy/{gastronomiesopen_Id} a schema:Winery . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Vinothek / Weinhaus / Taverne'
+
+mappingId	Ice cream shops
+target		:data/gastronomy/{gastronomiesopen_Id} a schema:IceCreamShop . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Eisdiele'
+
+mappingId	Food establishments - URL
+target		:data/gastronomy/{Id} schema:sameAs <{url}> ; schema:url <{url}> . 
+source		SELECT "Id",  NULLIF("ContactInfos-de-Url", '') AS url FROM v_gastronomiesopen
+
+mappingId	Pizzeria
+target		:data/gastronomy/{gastronomiesopen_Id} a :Pizzeria . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Pizzeria'
+
+mappingId	Mountain restaurant
+target		:data/gastronomy/{gastronomiesopen_Id} a :MountainRestaurant . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Alm'
+
+mappingId	Skihütte
+target		:data/gastronomy/{gastronomiesopen_Id} a :SkiHütte . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Skihütte'
+
+mappingId	Mensa
+target		:data/gastronomy/{gastronomiesopen_Id} a :Canteen . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Mensa'
+
+mappingId	Après ski
+target		:data/gastronomy/{gastronomiesopen_Id} a :AprèsSki . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Apres Ski'
+
+mappingId	Jausenstation
+target		:data/gastronomy/{gastronomiesopen_Id} a :Jausenstation . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Jausenstation'
+
+mappingId	Après ski(0)
+target		:data/gastronomy/{gastronomiesopen_Id} a :BeerGarden . 
+source		SELECT *
+			FROM "v_gastronomiesopen_CategoryCodes"
+			WHERE "Shortname" = 'Braugarten'
+]]
+

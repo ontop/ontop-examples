@@ -1,0 +1,112 @@
+[PrefixDeclaration]
+:		http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#
+dc:		http://purl.org/dc/elements/1.1/
+sf:		http://www.opengis.net/ont/sf#
+geo:		http://www.opengis.net/ont/geosparql#
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+foaf:		http://xmlns.com/foaf/0.1/
+obda:		https://w3id.org/obda/vocabulary#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+skos:		http://www.w3.org/2004/02/skos/core#
+sosa:		http://www.w3.org/ns/sosa/
+vann:		http://purl.org/vocab/vann/
+terms:		http://purl.org/dc/terms/
+schema:		http://schema.org/
+
+[MappingDeclaration] @collection [[
+mappingId      municipality_geom
+target         :municipality/municipality={istat_code} :hasGeometryInWKT {wkt}^^xsd:string .
+source         SELECT istat_code, ST_AsText(geom) AS wkt FROM municipalities
+
+mappingId	municipality
+target		:municipality/municipality={istat_code} a :Municipality ; rdfs:label {name_i}@it , {name_d}@de ; :hasIStatCode {istat_code}^^xsd:integer . 
+source		SELECT istat_code, name_i, name_d FROM municipalities
+
+mappingId	observation_precipitation
+target		:obs_precip/{station_code}/{date} a sosa:Observation ; sosa:observedProperty :precipitation ; sosa:hasSimpleResult {precipitation_mm}^^xsd:float ; sosa:resultTime {date}^^xsd:dateTime . 
+source		SELECT station_code, date, precipitation_mm FROM meteo_measurements
+
+mappingId	observation_temperature_min
+target		:obs_temp_min/{station_code}/{date} a sosa:Observation ; sosa:observedProperty :minTemperature ; sosa:hasSimpleResult {temperature_min}^^xsd:float ; sosa:resultTime {date}^^xsd:dateTime . 
+source		SELECT station_code, date, temperature_min FROM meteo_measurements
+
+mappingId	observation_temperature_max
+target		:obs_temp_max/{station_code}/{date} a sosa:Observation ; sosa:observedProperty :maxTemperature ; sosa:hasSimpleResult {temperature_max}^^xsd:float ; sosa:resultTime {date}^^xsd:dateTime . 
+source		SELECT station_code, date, temperature_max FROM meteo_measurements
+
+mappingId	weather_station
+target		:weather_station/{scode} a :WeatherStation ; rdfs:label {name_d}@de , {name_i}@it , {name_e}@en ; sosa:hosts :precipitation_sensor/{scode}/precipitation , :min_temperature_sensor/{scode}/minTemperature , :max_temperature_sensor/{scode}/maxTemperature . 
+source		SELECT scode, name_d, name_i, name_e FROM meteo_stations
+
+mappingId	weather_station_defaultGeometry
+target		:weather_station/{scode} geo:defaultGeometry :weather_station_geom/{scode} . 
+source		SELECT scode FROM meteo_stations
+
+mappingId	weather_station_geom_wkt
+target		:weather_station_geom/{scode} a sf:Point ; geo:asWKT {wkt}^^xsd:string . 
+source		SELECT scode, ST_AsText(geom) AS wkt FROM meteo_stations
+
+mappingId	traffic_station
+target		:traffic_station/{trst_inter} a :TrafficStation ; :hasID {trst_inter} ; rdfs:label {trst_place}@it , {trst_pla00}@de ; :hasStreetSegmentID {trst_road_} ; :hasStreetName {trst_stree}@it , {trst_str00}@de ; :locatesInGrid :grid/{grid_id} ; sosa:hosts :traffic_volume_sensor/{trst_inter}/dailyTrafficVolume , :traffic_speed_sensor/{trst_inter}/dailyTrafficSpeed . 
+source		SELECT trst_inter, trst_place, trst_pla00, trst_road_, trst_stree, trst_str00, grid_id FROM traffic_counters
+
+mappingId	traffic_station_defaultGeometry
+target		:traffic_station/{trst_inter} geo:defaultGeometry :traffic_station_geom/{trst_inter} . 
+source		SELECT trst_inter FROM traffic_counters
+
+mappingId	traffic_station_geom_wkt
+target		:traffic_station_geom/{trst_inter} a sf:Point ; geo:asWKT {wkt}^^xsd:string . 
+source		SELECT trst_inter, ST_AsText(geom) AS wkt FROM traffic_counters
+
+mappingId	observation_traffic_volume
+target		:obs_traffic_volume/{station_code}/{date} a sosa:Observation ; sosa:observedProperty :dailyTrafficVolume ; sosa:hasSimpleResult {daily_volume}^^xsd:integer ; sosa:resultTime {date}^^xsd:dateTime . 
+source		SELECT station_code, date, daily_volume FROM traffic_volume
+
+mappingId	observation_traffic_speed
+target		:obs_traffic_speed/{station_code}/{date} a sosa:Observation ; sosa:observedProperty :dailyTrafficSpeed ; sosa:hasSimpleResult {speed}^^xsd:float ; sosa:resultTime {date}^^xsd:dateTime . 
+source		SELECT station_code, date, speed FROM traffic_speed
+
+mappingId	grid
+target		:grid/{id} a :Grid ; :hasID {id}^^xsd:integer ; :hasXmin {__xmin}^^xsd:double ; :hasXmax {__xmax}^^xsd:double ; :hasYmin {ymin}^^xsd:double ; :hasYmax {ymax}^^xsd:double ; sosa:hosts :precipitation_interpolator/{id}/gridPrecipitation . 
+source		SELECT id, __xmin, __xmax, ymin, ymax FROM grid_in_south_tyrol
+
+mappingId	grid_defaultGeometry
+target		:grid/{id} geo:defaultGeometry :grid_geom/{id} . 
+source		SELECT id FROM grid_in_south_tyrol
+
+mappingId	grid_geom_wkt
+target		:grid_geom/{id} a sf:Point ; geo:asWKT {wkt}^^xsd:string . 
+source		SELECT id, ST_AsText(geom) AS wkt FROM grid_in_south_tyrol
+
+mappingId	observation_grid_precipitation
+target		:obs_grid_precip/{id}/{date} a sosa:Observation ; sosa:observedProperty :gridPrecipitation ; sosa:hasSimpleResult {precipitation}^^xsd:float ; sosa:resultTime {date}^^xsd:dateTime . 
+source		SELECT id, date, precipitation FROM grids_precipitation
+
+mappingId	interpolator_precipitation
+target		:precipitation_interpolator/{id}/gridPrecipitation a :PrecipitationInterpolator ; sosa:observes :gridPrecipitation ; sosa:madeObservation :obs_grid_precip/{id}/{date} . 
+source		SELECT id, date FROM grids_precipitation
+
+mappingId	sensor_max_temperature
+target		:max_temperature_sensor/{station_code}/maxTemperature a :MaxTemperatureSensor ; sosa:observes :maxTemperature ; sosa:madeObservation :obs_temp_max/{station_code}/{date} . 
+source		SELECT station_code, date FROM meteo_measurements
+
+mappingId	sensor_min_temperature
+target		:min_temperature_sensor/{station_code}/minTemperature a :MinTemperatureSensor ; sosa:observes :minTemperature ; sosa:madeObservation :obs_temp_min/{station_code}/{date} . 
+source		SELECT station_code, date FROM meteo_measurements
+
+mappingId	sensor_precipitation
+target		:precipitation_sensor/{station_code}/precipitation a :PrecipitationSensor ; sosa:observes :precipitation ; sosa:madeObservation :obs_precip/{station_code}/{date} . 
+source		SELECT station_code, date FROM meteo_measurements
+
+mappingId	sensor_traffic_speed
+target		:traffic_speed_sensor/{station_code}/dailyTrafficSpeed a :TrafficSpeedSensor ; sosa:observes :dailyTrafficSpeed ; sosa:madeObservation :obs_traffic_speed/{station_code}/{date} . 
+source		SELECT station_code, date FROM traffic_speed
+
+mappingId	sensor_traffic_volume
+target		:traffic_volume_sensor/{station_code}/dailyTrafficVolume a :TrafficVolumeSensor ; sosa:observes :dailyTrafficVolume ; sosa:madeObservation :obs_traffic_volume/{station_code}/{date} . 
+source		SELECT station_code, date FROM traffic_volume
+]]
+

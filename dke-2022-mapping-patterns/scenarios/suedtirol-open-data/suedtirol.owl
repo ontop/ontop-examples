@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2"
+     xmlns:schema="http://schema.org/"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:geo="http://www.opengis.net/ont/geosparql#"
+     xmlns:sf="http://www.opengis.net/ont/sf#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sosa="http://www.w3.org/ns/sosa/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2">
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/ssn/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#belongsToFrazione -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#belongsToFrazione"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#belongsToMunicipality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#belongsToMunicipality"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasAddress"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasStreet -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasStreet"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#locatesInGrid -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#locatesInGrid"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasFrazioneCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasFrazioneCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Frazione"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasGeometryInWKT -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasGeometryInWKT"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasHouseNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasHouseNumber"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasID"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasIStatCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasIStatCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Municipality"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasPostcode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasPostcode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Address"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasStreetCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasStreetCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Street"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasStreetName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasStreetName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasStreetSegmentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasStreetSegmentID"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasXmax -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasXmax"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasXmin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasXmin"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasYmax -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasYmax"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasYmin -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#hasYmin"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#organizationType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#organizationType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#provenance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#provenance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Address -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Address">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#AdministrationUnit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#AdministrationUnit">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Agency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Agency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Area">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#CentralService -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#CentralService">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Department">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#DirezioneDidattica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#DirezioneDidattica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#EducationInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#District -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#District">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#AdministrationUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#EducationInstitution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#EducationInstitution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#School"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#External -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#External">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#FillingStation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#FillingStation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#POI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Frazione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Frazione">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#AdministrationUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Grid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Grid">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Healthcare -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Healthcare">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#POI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Intendenza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Intendenza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#EducationInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Interpolator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Interpolator">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#MaxTemperatureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#MaxTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#MinTemperatureSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#MinTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Municipality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Municipality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#AdministrationUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Museum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Museum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Office -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Office">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#POI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#POI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#POI">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Pharmacy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Pharmacy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#POI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#PrecipitationInterpolator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#PrecipitationInterpolator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Interpolator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#PrecipitationSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#PrecipitationSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Province -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Province">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#AdministrationUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Resort -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Resort">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#School -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#School">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#POI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Scuola -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Scuola">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#EducationInstitution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#ServicePoint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#ServicePoint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Street -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Street">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#AdministrationUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#TrafficSpeedSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#TrafficSpeedSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#TrafficStation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#TrafficStation">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#TrafficVolumeSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#TrafficVolumeSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#UnclassifiedOrganization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#UnclassifiedOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#WeatherStation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#WeatherStation">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#dailyTrafficSpeed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#dailyTrafficSpeed">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#dailyTrafficVolume -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#dailyTrafficVolume">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#gridPrecipitation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#gridPrecipitation">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#maxTemperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#maxTemperature">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#minTemperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#minTemperature">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#precipitation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ding/ontologies/2017/10/untitled-ontology-2#precipitation">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
