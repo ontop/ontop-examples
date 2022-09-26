@@ -1,0 +1,109 @@
+% !TeX spellcheck = en_US
+
+\newcommand{\surcheckmark}[1]{\parbox{.5cm}{\vspace{-.05cm}\cmark\hspace{-.025cm}$_{#1}$}\hspace{-.2cm}\,}
+
+\begin{table*}[tbp]
+        \centering
+        \caption{%
+        Academic systems selection. \emph{C.A.} = code availability; \emph{Sur} = mentioned by Table~\ref{Tab:SurveyWork} surveys; \emph{Het} = data heterogeneity; \emph{Sec} = data security; \emph{Cit.} = citations (2022/06/07);
+        \textbf{bold} = systems selected for our survey%
+%        Metadata of academic systems.
+%        ``C.A.'' denotes code availability.
+%        ``Sur'' denotes mentioning by a system comparison publication of Table~\ref{Tab:SurveyWork}.
+%        ``Het'' denotes data heterogeneity.
+%        ``Sec'' denotes data security.
+%        ``Cit.'' denotes the numbers of Google Scholar citations as of 07/06/2022.%
+        }
+        %\vspace{.1cm}
+        \small
+        \label{Tab:SelectedASystems}
+        %% CA, %D.H %, D.S/U/Q
+        \begin{mytabular}[1.18]{|>{\cellcolor{white}\bfseries}C{.8cm}||C{2.7cm}||C{0.6cm}||C{0.6cm}C{0.6cm}C{0.6cm}||C{0.6cm}||C{7.5cm}|}
+          \hhline{~|-||-||---||-||-|}
+          \multicolumn{1}{M|}{~}
+          \tabhead
+          & & & \multicolumn{3}{c||}{\textbf{Relevance}} & & \\
+          \multicolumn{1}{M|}{~}
+          & \multirow{-2}{*}{\textbf{System}} & \multirow{-2}{*}{\textbf{C.A.}} & Sur & Het & Sec & \multirow{-2}{*}{\textbf{\# Cit.}} & \multirow{-2}{*}{\textbf{Publications}} \\
+          % \hhline
+          \hhline{-::=::=::===::=::=:}
+          \tabbody
+
+          & \textbf{DARQ} & \cmark & \surcheckmark{12} & -- & -- & $>$500 &  ESWC 2008~\cite{DARQ}\\
+          & Mediator SAIL & -- & \surcheckmark{1} & -- & -- & 71 & IJWET 2005~\cite{DBLP:journals/ijwet/StuckenschmidtVBH05} \\
+          & Distributed SPARQL & -- & \surcheckmark{1} & -- & -- & 36 & ISWC 2008 (poster\&demos)~\cite{DBLP:conf/semweb/ZemanekS08} \\
+          & Networked Graphs & -- & \surcheckmark{1} & -- & -- & 133 & WWW 2008~\cite{DBLP:conf/www/SchenkS08} \\
+          \multirow{-5}{*}{\parbox{.8cm}{\centering $\le$ 2008}}\global\rownum=0\relax
+          & SemWIQ & -- & \surcheckmark{2} & -- & -- & 133 & ESWC 2008~\cite{DBLP:conf/esws/LangeggerWB08} \\
+          \hhline{:=::=::=::===::=::=:}
+
+          & \textbf{SPLENDID} & \cmark & \surcheckmark{16} & -- & -- & 307 &  COLD 2011~\cite{SPLENDID}\\
+          & FeDeRate & \cmark & \surcheckmark{1} & -- & -- & 74 &  BMC Bioinf. 2009~\cite{DBLP:journals/bmcbi/CheungFMPSZP09}\\
+          & Atlas & -- & \surcheckmark{1} & -- & -- & 53 &  Semant. Web 2010~\cite{DBLP:journals/ws/KaoudiKKMMP10}\\
+          & QTree & -- & \surcheckmark{1} & -- & -- & 259 &  WWW 2010~\cite{qtree2010www} \\ % need validation
+          & LDQPS & -- & \surcheckmark{2} & -- & -- & 149 &  ISWC 2010~\cite{DBLP:conf/semweb/LadwigT10}\\
+          & ANAPSID & \cmark & \surcheckmark{11} & -- & -- & 237 &  ISWC 2011~\cite{ANAPSID}\\
+          & ADERIS & -- & \surcheckmark{1} & -- & -- & 43 &  OTM 2011~\cite{lynden2011aderis}\\
+          & GDS & \cmark & \surcheckmark{1} & -- & -- & 3 &  \emph{tech.\ rep.\ U.\ Southampton 2011~\cite{gds2011techrep}}\\
+          & Min-Tree BGP & \cmark & \surcheckmark{1} & -- & -- & 24 &  JIST 2011~\cite{DBLP:conf/aswc/WangTD11} \\
+          & SIHJoin & -- & \surcheckmark{2} & -- & -- & 84 &  ESWC 2011~\cite{DBLP:conf/esws/LadwigT11}\\
+          \multirow{-11}{*}{\parbox{.8cm}{\centering 2009 -\newline 2011}}\global\rownum=1\relax
+          & SPARQL-DQP & \cmark & \surcheckmark{2} & -- & -- & 101 &  ESWC 2011~\cite{DBLP:conf/esws/ArandaAC11}\\
+          \hhline{:=::=::=::===::=::=:}
+
+          & \textbf{HiBISCuS} & \cmark & \surcheckmark{4} & -- & -- & 150 &  ESWC 2014~\cite{HiBISCus}\\
+          & Prasser et al. & -- & \surcheckmark{1} & -- & -- & 150 &  EDBT 2012~\cite{DBLP:conf/edbt/PrasserKK12}\\
+          & DISMED & \cmark & \surcheckmark{1} & -- & -- & 6 &  {IEEE} Trans. Inf. Technol. Biomed. 2012~\cite{DBLP:journals/titb/MoraEB12}\\
+          & WoDQA & \cmark & \surcheckmark{4} & -- & -- & 6 &  LDOW 2012~\cite{DBLP:conf/www/AkarHED12}\\
+          & GRANATUM & \cmark & \surcheckmark{4} & -- & -- & 113 &  ISWC 2014~\cite{granatum2014iswc}, JIST 2014~\cite{granatum2014jist}, OEDW@EKAW 2014~\cite{granatum2012oedw} \\ % ISWC 43, JIST 21, OEDW 39
+          & LHD & -- & \surcheckmark{5} & -- & -- & 54 &  LDOW 2013~\cite{DBLP:conf/www/WangTD13}\\
+          & FedSearch & -- & \surcheckmark{1} & -- & -- & 35 &  ISWC 2013~\cite{DBLP:conf/semweb/NikolovSH13}\\
+          & DAW & -- & \surcheckmark{4} & -- & -- & 95 &  ISWC 2013~\cite{DBLP:conf/semweb/SaleemNPDH13}\\
+          & SOUIN & \cmark & \surcheckmark{1} & -- & -- & 50 &  SIGMOD 2013~\cite{DBLP:conf/sigmod/Hartig13}\\
+          \multirow{-10}{*}{\parbox{.8cm}{\centering 2012 -\newline 2014}}\global\rownum=1\relax
+          & Avalance & -- & \surcheckmark{1} & -- & -- & 100 &  ISWC (posters\&demo) 2010~\cite{DBLP:conf/semweb/BascaB10}, J. Web Semant. 2014~\cite{DBLP:journals/ws/BascaB14}\\
+          \hhline{:=::=::=::===::=::=:}
+
+          & \textbf{FEDRA} & \cmark & \surcheckmark{2} & -- & -- & 40 &  ISWC 2015~\cite{FEDRA}\\
+          & \textbf{SemaGrow} & \cmark & \surcheckmark{5} & -- & -- & 70 &  SEMANTICS 2015~\cite{SemaGrow}\\
+          & oLinDa & \cmark & -- & -- & -- & 1 &  J. Inf. Data Manag. 2015~\cite{DBLP:journals/jidm/CunhaL15}\\
+          & \textbf{CloudMdsQL} & \cmark & \surcheckmark{2} & \cmark & -- & 159 & SIGMOD 2016~\cite{CloudMdsQL}, Distr. Parall. Datab. 2016~\cite{CloudMdsQLJ}, CLOSER 2016~\cite{DBLP:conf/closer/KolevBLVJPP16}\\
+          & \textbf{BigDAWG} & \cmark & \surcheckmark{2} & \cmark & -- & >500 & HPEC 2017~\cite{BigDAWGv1.0}, VLDB 2015~\cite{DBLP:journals/pvldb/ElmoreDSBCGHHKK15}, SIGMOD Record 2015~\cite{BigDAWG}, etc.\\
+          & SPARQL-LD & \cmark & -- & -- & -- & 45 & {\tiny TPDL 2016~\cite{DBLP:conf/ercimdl/FafaliosYT16}, ISWC (posters\&demo) 2016~\cite{DBLP:conf/semweb/FafaliosT15}, QuWeDa@ESWC 2018~\cite{DBLP:conf/esws/YannakisFT18}}\\
+          & FuhSen & \cmark & -- & -- & -- & 25 & WWW 2016~\cite{DBLP:conf/www/Collarana0A16}\\
+          & \textbf{Odyssey} & \cmark & \surcheckmark{2} & -- & -- & 50 & ISWC 2017~\cite{ODYSSEY}\\
+          & \textbf{SAFE} & \cmark & \surcheckmark{1} & -- & \cmark & 96 & J. Biom. Sem. 2017~\cite{SAFE}, SWAT5LS 2014~\cite{DBLP:conf/swat4ls/KhanSIMHNDS14} \\
+          & Lusail & -- & \surcheckmark{3} & -- & -- & 41 & VLDB 2017~\cite{LUSAIL}, SIGMOD 2017~\cite{DBLP:conf/sigmod/MansourAOAK17}, ICDE 2017~\cite{DBLP:conf/icde/AbdelazizMOAK17} \\
+          & \textbf{Myria} & \cmark & \surcheckmark{2} & -- & -- & 217 & CIDR 2017~\cite{Myria}, SIGMOD 2014~\cite{DBLP:conf/sigmod/HalperinACCKMORWWXBHS14} \\
+          & LILAC & \cmark & -- & -- & -- & 22 & J. Web Semant. 2017~\cite{DBLP:conf/www/Collarana0A16} \\
+          % & MULDER & \cmark & \surcheckmark{3} & -- & -- & 33 & DEXA 2017~\cite{MULDER} \\  % predecessor of ONTARIO, hence merged into the latter
+          & BioFed & -- & \surcheckmark{1} & -- & -- & 44 & J. Biomedical Semant. 2017~\cite{BioFed} \\
+          & \textbf{Comunica (TPF-Client)} & \cmark & \surcheckmark{1} & -- & -- & 393 & ISWC 2018~\cite{DBLP:conf/semweb/TaelmanHSV18}, J. Web Semant. 2016~\cite{DBLP:journals/ws/VerborghSHHVMHC16} \\
+          & \textbf{CostFed} & \cmark & \surcheckmark{4} & -- & -- & 40 & SEMANTiCS 2018~\cite{CostFed}, ISWC (posters\&demos) 2017~\cite{DBLP:conf/semweb/Potocki0SHVN17} \\
+          & BOUNCER & \cmark & -- & -- & \cmark & 6 & DEXA 2018~\cite{DBLP:conf/dexa/EndrisALVA18} \\
+          & SPARQL Micro-Services & \cmark & -- & -- & -- & 18 & LDOW@WWW 2018~\cite{DBLP:conf/www/MichelFG18} \\
+          & \textbf{PolyWeb} & \cmark & -- & \cmark & -- & 40 & IEEE Access 2019~\cite{PolyWeb}, Big Data 2017~\cite{PolyWebGit} \\
+          & \textbf{Ontario} & \cmark & -- & \cmark & -- & 65 & DEXA 2019~\cite{Ontario}, DEXA 2017~\cite{MULDER} \\ % dexa19 32, dexa17 33
+          & \textbf{SAGE} & \cmark & \surcheckmark{1} & -- & -- & 39 & WWW 2019~\cite{DBLP:conf/www/MinierSM19} \\
+          & \textbf{Squerall} & \cmark & -- & \cmark & -- & 58 & {\tiny ISWC 2019~\cite{Squerall}, WWW 2019~\cite{DBLP:conf/semweb/MamiGSJA019}, iiWAS 2019~\cite{DBLP:conf/iiwas/MamiGSJAL19}, ISWC (satellites) 2019~\cite{DBLP:conf/semweb/MamiGSJA019}} \\
+          & FMQO & \cmark & -- & -- & -- & 9 & APWeb 2019~\cite{DBLP:conf/apweb/Ge0X0Q19}, DASFAA 2018~\cite{DBLP:conf/dasfaa/00010OZ18} \\
+          & WimuQ & \cmark & \surcheckmark{1} & -- & -- & 6 & K-CAP 2019~\cite{DBLP:conf/kcap/ValdestilhasS019} \\
+          & SpecINT & \cmark & -- & -- & -- & 2 & Semant. Web 2019~\cite{DBLP:journals/semweb/ArsicSMRZ19a} \\
+          & LDaQ & \cmark & -- & -- & -- & 4 & SAC 2019~\cite{DBLP:conf/sac/FafaliosT19} \\
+          & Polystore++ & \cmark & -- & \cmark & -- & 2 & ICDCS 2019~\cite{DBLP:conf/icdcs/SinghalZNSO19} \\
+          \multirow{-27}{*}{\parbox{.8cm}{\centering 2015 -\newline 2019}}\global\rownum=0\relax
+          & SemKT & \cmark & -- & -- & -- & 8 & IEEE Big Data 2019~\cite{DBLP:conf/bigdataconf/AggourKCWGDHGV19} \\
+          \hhline{:=::=::=::===::=::=:}
+
+          & \textbf{Obi-Wan} & \cmark & -- & \cmark & -- & 25 & EDBT 2020~\cite{Obi-Wan}, VLDB 2020~\cite{Obi-Wan1} \\
+          & \textbf{Onto-Kit} & \cmark & -- & \cmark & -- & 6 & FGCS 2020~\cite{Onto-KIT} \\
+          \multirow{-3}{*}{\parbox{.8cm}{\centering $>$ 2020}}
+          & FLiQue & \cmark & -- & -- & -- & 1 & BDA 2020~\cite{moreau2020ensuring} \\
+          \hhline{|-||-||-||---||-||-|}
+        \end{mytabular}
+\end{table*}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

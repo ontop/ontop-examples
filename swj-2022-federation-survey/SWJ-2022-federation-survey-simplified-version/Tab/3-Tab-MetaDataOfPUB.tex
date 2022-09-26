@@ -1,0 +1,115 @@
+% !TeX spellcheck = en_US
+
+\begin{figure*}[p] % single float keeping table and plot together
+	\centering  
+	\makeatletter % required to enforce different caption formats of iosart2x class
+	\let\@makecaption\@maketablecaption
+	\let\@floatboxreset\@tableboxreset
+	\makeatother
+	\captionof{table}{Statistics of collected publications}
+	\label{Tab:MetadataOfAPUB}
+	%\caption{Statistic information of the referred publications, where J.Others and C.Others respectively denote the other journals and conference not mentioned in the table, and \textbf{Other} denotes preprints and technique reports.}
+	\small
+	\begin{mytabular}{|>{\cellcolor{white}\bfseries}C{1.25
+	cm}||L{3.1cm}||C{.6cm}||C{.55cm}||C{.55cm}||C{.55cm}||C{.55cm}||C{.55cm}||C{.55cm}||C{.55cm}||C{.55cm}||C{.55cm}||C{.55cm}||C{.55cm}||>{\cellcolor{\tableColorTotals}\bfseries}C{.55cm}|}	
+		%\begin{mytabular}{|>{\cellcolor{white}\bfseries}L{1.6cm}||L{5.9cm}||L{6.4cm}|}	
+		\hhline{~*{14}{|-|}}
+		\multicolumn{1}{M|}{~}
+		& \textbf{Venue} & \textbf{{\hspace{-.1cm}\tiny$\leq$}2010} &  \textbf{2011}  &  \textbf{2012}  &  \textbf{2013} &  \textbf{2014} & \textbf{2015} & \textbf{2016} & \textbf{2017} & \textbf{2018} & \textbf{2019} &  \textbf{2020} & \textbf{2021} & \textbf{\cellcolor{white}Total} \\
+		\hhline{-:*{14}{:=:}}
+		\tabbody
+ 
+		& J. Web Semant.                &  1 & -- & -- &  1 &  1 & -- &  1 &  2 &  2 & -- & -- & -- &   8 \\
+		& Semantic Web                  & -- & -- & -- & -- & -- &  1 &  1 & -- & -- &  1 & -- &  2 &   5 \\
+		& ACM Comput. Surv.             &  1 & -- & -- & -- & -- & -- & -- & -- &  1 &  2 & -- & -- &   4 \\
+		& IEEE Trans. Knowl. Data Eng.  & -- & -- & -- & -- & -- & -- & -- & -- & -- & -- & -- &  3 &   3 \\
+		& J. Biomed. Semant.            & -- & -- & -- & -- &  1 & -- & -- &  2 & -- & -- & -- & -- &   3 \\
+		& VLDB J.                       & -- & -- & -- & -- & -- &  1 &  1 & -- & -- & -- &  1 & -- &   3 \\ 
+		& Other journals                &  9 &  4 &  1 &  3 &  4 &  4 &  8 &  4 &  5 &  6 &  6 &  3 &  57 \\
+		\hhline{|~|*{13}{|>{\arrayrulecolor{gray!80}}->{\arrayrulecolor{black}}|}|~|}
+		
+		\rowcolor{\tableColorTotals}
+		\multirow{-8}{*}{\textbf{Journals}}
+		\gdef\setRowStyle{\baselineskip=1em\itshape\bfseries}\setRowStyle
+		\global\rownum=0\relax%bugfix 
+		& Total journals                & 11 &  4 &  1 &  4 &  6 &  6 & 11 &  8 &  8 &  9 &  7 &  8 &  83 \\
+		\hhline{*{15}{:=:}}
+		\gdef\setRowStyle{\baselineskip=1em\normalfont}
+
+		& ISWC                          &  3 &  3 &  3 &  3 &  2 &  2 &  1 &  2 &  1 &  1 &  1 &  1 &  23 \\
+		& ESWC                          &  3 &  3 &  2 &  1 &  1 &  2 & -- &  2 &  1 &  3 &  1 &  1 &  20 \\
+		& WWW                           &  2 & -- & -- & -- & -- &  1 &  1 & -- &  2 &  3 & -- & -- &   9 \\
+		& VLDB                          &  1 & -- & -- & -- & -- & -- &  3 &  1 & -- &  1 &  2 & -- &   8 \\
+		& SIGMOD                        & -- & -- & -- &  2 &  1 &  1 &  1 & -- &  1 &  1 & -- & -- &   7 \\
+		& DEXA                          & -- & -- & -- & -- & -- & -- & -- &  1 &  1 &  3 & -- & -- &   5 \\
+		& IEEE BigData                  & -- & -- & -- & -- & -- & -- &  1 &  2 & -- &  2 & -- & -- &   5 \\
+		& iiWAS                         & -- & -- & -- &  1 &  1 & -- & -- & -- & -- &  1 &  2 & -- &   5 \\
+		& SEMANTiCS                     &  1 & -- & -- & -- & -- &  1 & -- &  2 &  1 & -- & -- & -- &   5 \\
+		& ICDE                          &  1 & -- &  1 & -- &  1 & -- & -- &  1 & -- &  1 & -- & -- &   5 \\
+		& CIDR                          & -- & -- & -- & -- & -- &  1 & -- &  1 & -- & -- &  1 & -- &   3 \\
+		& EDBT                          & -- & -- &  2 & -- & -- & -- & -- & -- & -- & -- &  1 & -- &   3 \\
+		& Other conferences             &  3 &  2 &  3 &  3 &  3 &  2 &  4 &  4 &  9 &  7 &  4 &  1 &  45 \\
+		\hhline{|~|*{13}{|>{\arrayrulecolor{gray!80}}->{\arrayrulecolor{black}}|}|~|}
+
+		\rowcolor{\tableColorTotals}
+		\multirow{-14}{*}{\textbf{Conferences}}
+		\gdef\setRowStyle{\baselineskip=1em\itshape\bfseries}\setRowStyle
+		\global\rownum=0\relax%bugfix 
+		& Total conferences             & 14 &  8 & 11 & 10 &  9 & 10 & 11 & 16 & 16 & 23 & 12 &  3 & 143 \\
+		\hhline{*{15}{:=:}}
+		\gdef\setRowStyle{\baselineskip=1em\normalfont}
+
+		& PROFILES @ ISWC/ESWC          & -- & -- & -- & -- & -- & -- &  2 &  2 & -- & -- & -- & -- &   4 \\
+		& COLD @ ISWC                   & -- &  2 &  1 & -- & -- & -- & -- & -- & -- & -- & -- & -- &   3 \\
+		& LDOW @ WWW                    & -- & -- &  1 &  1 & -- & -- & -- & -- &  1 & -- & -- & -- &   3 \\
+		& QuWeDa @ ESWC/ISWC            & -- & -- & -- & -- & -- & -- & -- &  1 &  1 &  1 & -- & -- &   3 \\
+		& AMW                           & -- & -- & -- & -- &  1 &  1 & -- & -- & -- & -- & -- & -- &   2 \\
+		& Other workshops               &  2 &  1 &  2 &  3 & -- &  1 & -- &  1 & -- &  1 &  3 & -- &  14 \\
+		\hhline{|~|*{13}{|>{\arrayrulecolor{gray!80}}->{\arrayrulecolor{black}}|}|~|}
+
+		\rowcolor{\tableColorTotals}
+		\multirow{-7}{*}{\textbf{Workshops}}
+		\gdef\setRowStyle{\baselineskip=1em\itshape\bfseries}\setRowStyle
+		\global\rownum=0\relax%bugfix 
+		& Total workshops               &  2 &  3 &  4 &  4 &  1 &  2 &  2 &  4 &  2 &  2 &  3 & -- &  29 \\
+		\hhline{*{15}{:=:}}
+		\gdef\setRowStyle{\baselineskip=1em\normalfont}
+
+		& PhD theses                    & -- & -- & -- & -- & -- &  2 & -- &  2 &  1 &  2 &  7 &  1 &  15 \\
+		& Posters \&  demos             &  2 &  1 & -- &  1 &  1 &  2 &  1 &  3 & -- &  1 &  1 & -- &  13 \\ 
+		& Other (e.g., books, chapters) & -- &  2 &  1 & -- &  1 & -- & -- & -- &  2 & -- &  4 &  2 &  12 \\
+		\hhline{|~|*{13}{|>{\arrayrulecolor{gray!80}}->{\arrayrulecolor{black}}|}|~|}
+		
+		\rowcolor{\tableColorTotals}
+		\multirow{-4}{*}{\textbf{Others}}
+		\gdef\setRowStyle{\baselineskip=1em\itshape\bfseries}\setRowStyle
+		\global\rownum=0\relax%bugfix 
+		& Total other                   &  2 &  3 &  1 &  1 &  2 &  4 &  1 &  5 &  3 &  3 & 12 &  3 &  40 \\
+		\cline{1-1}
+		\hhline{>{\arrayrulecolor{white}}~|t>{\arrayrulecolor{black}}*{14}{:=:}}
+		%\multicolumn{2}{|c||}{ \cellcolor{gray!60} \textbf{Workshop}}   & 2 & 3 & 3 & 4 & 1 & 2 & 2 & 4 & 2 & 2 & 3 & 0 & \cellcolor{gray!60}\textbf{28} \\
+		%\multicolumn{2}{|c||}{ \cellcolor{gray!60} \textbf{PhDThesis}}  & 0 & 0 & 0 & 0 & 0 & 2 & 0 & 2 & 1 & 2 & 7 & 1 & \cellcolor{gray!60}\textbf{15}\\
+		%\multicolumn{2}{|c||}{ \cellcolor{gray!60} \textbf{Others}}     & 0 & 0 & 1 & 1 & 2 & 0 & 1 & 0 & 2 & 1 & 5 & 2 & \cellcolor{gray!60}\textbf{15}\\
+
+		\rowcolor{\tableColorTotals}
+		\multicolumn{1}{M|}{\cellcolor{white}}%
+		\gdef\setRowStyle{\baselineskip=1em\bfseries}%
+		& Total all venues              & 29 & 18 & 17 & 19 & 18 & 22 & 25 & 33 & 29 & 37 & 34 & 14 & 295 \\
+		\hhline{~|-||-||-||-||-||-||-||-||-||-||-||-||-||-|}
+	\end{mytabular}
+	\bigskip\medskip
+	
+	
+	\includegraphics[scale=.7]{Img/3-PubMetadata-pie.pdf}
+	\hfill
+	\includegraphics[scale=.7]{Img/3-PubMetadata-line.pdf}\\\smallskip
+	
+	\makeatletter % required to enforce different caption formats of iosart2x class
+	\let\@makecaption\@makefigurecaption
+	\let\@floatboxreset\@figureboxreset
+	\makeatother
+	\captionof{figure}{Number of publications by venue type, both overall (left pie chart) and by year (right stacked area chart).
+	%Statistic information of collected academic publications. The left pie chart describes the overall distributions of the considered academic publications. The right histogram illustrates the distribution of the publications year by year.
+	} 
+	\label{Img:PUBMetadata}
+\end{figure*}

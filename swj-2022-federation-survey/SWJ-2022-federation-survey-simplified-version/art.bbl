@@ -1,0 +1,5046 @@
+\begin{thebibliography}{295}
+% BibTex style file: ios1.bst, 2019-01-11
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1} \fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1} \fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{\textit{#1}}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1} \fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1} \fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1} \fi
+\ifx \bissue  \undefined \def \bissue#1{#1} \fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1} \fi
+\ifx \blpage  \undefined \def \blpage #1{#1} \fi
+\ifx \burl  \undefined \def \burl#1{#1} \fi
+\ifx \doiurl  \undefined \def \doiurl#1{#1} \fi
+\ifx \betal  \undefined \def \betal{et al.} \fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1} \fi
+\ifx \beditor  \undefined \def \beditor#1{#1} \fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1} \fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{\textit{#1}} \fi
+\ifx \bedition  \undefined \def \bedition#1{#1} \fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1} \fi
+\ifx \blocation  \undefined \def \blocation#1{#1} \fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1} \fi
+\ifx \bsnm \undefined \def \bsnm#1{#1} \fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1} \fi
+\ifx \bparticle \undefined \def \bparticle#1{#1} \fi
+\ifx \barticle \undefined \def \barticle#1{#1} \fi
+\ifx \botherref \undefined \def \botherref #1{#1} \fi
+\ifx \url \undefined \def \url#1{#1} \fi
+\ifx \bchapter \undefined \def \bchapter#1{#1} \fi
+\ifx \bbook \undefined \def \bbook#1{#1} \fi
+\ifx \bcomment \undefined \def \bcomment#1{#1} \fi
+\ifx \oauthor \undefined \def \oauthor#1{#1} \fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1} \fi
+\ifx \texttildelow  \undefined \def \texttildelow{\symbol{126}} \fi
+\def \endbibitem {}
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1} \fi
+
+\bibitem{DBLP:conf/apweb/Ge0X0Q19}
+\begin{bchapter}
+\bauthor{\binits{Q.}~\bsnm{Ge}},
+\bauthor{\binits{P.}~\bsnm{Peng}},
+\bauthor{\binits{Z.}~\bsnm{Xu}},
+\bauthor{\binits{L.}~\bsnm{Zou}} and
+\bauthor{\binits{Z.}~\bsnm{Qin}},
+\bctitle{{FMQO:} {A} Federated {RDF} System Supporting Multi-query
+  Optimization},
+in: \bbtitle{Web and Big Data - Third International Joint Conference,
+  APWeb-WAIM 2019, Chengdu, China, August 1-3, 2019, Proceedings, Part {II}},
+\beditor{\binits{J.}~\bsnm{Shao}},
+\beditor{\binits{M.L.}~\bsnm{Yiu}},
+\beditor{\binits{M.}~\bsnm{Toyoda}},
+\beditor{\binits{D.}~\bsnm{Zhang}},
+\beditor{\binits{W.}~\bsnm{Wang}} and
+\beditor{\binits{B.}~\bsnm{Cui}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11642},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{397}--\blpage{401}.
+doi:\doiurl{10.1007/978-3-030-26075-0\_30}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/icde/AbdelazizMOAK17}
+\begin{bchapter}
+\bauthor{\binits{I.}~\bsnm{Abdelaziz}},
+\bauthor{\binits{E.}~\bsnm{Mansour}},
+\bauthor{\binits{M.}~\bsnm{Ouzzani}},
+\bauthor{\binits{A.}~\bsnm{Aboulnaga}} and
+\bauthor{\binits{P.}~\bsnm{Kalnis}},
+\bctitle{Query Optimizations over Decentralized {RDF} Graphs},
+in: \bbtitle{33rd {IEEE} International Conference on Data Engineering, {ICDE}
+  2017, San Diego, CA, USA, April 19-22, 2017},
+\bpublisher{{IEEE} Computer Society},
+\byear{2017},
+pp.~\bfpage{139}--\blpage{142}.
+doi:\doiurl{10.1109/ICDE.2017.59}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/sigmod/MansourAOAK17}
+\begin{bchapter}
+\bauthor{\binits{E.}~\bsnm{Mansour}},
+\bauthor{\binits{I.}~\bsnm{Abdelaziz}},
+\bauthor{\binits{M.}~\bsnm{Ouzzani}},
+\bauthor{\binits{A.}~\bsnm{Aboulnaga}} and
+\bauthor{\binits{P.}~\bsnm{Kalnis}},
+\bctitle{A Demonstration of Lusail: Querying Linked Data at Scale},
+in: \bbtitle{Proceedings of the 2017 {ACM} International Conference on
+  Management of Data, {SIGMOD} Conference 2017 (Demonstrations), Chicago, IL,
+  USA, May 14-19, 2017},
+\beditor{\binits{S.}~\bsnm{Salihoglu}},
+\beditor{\binits{W.}~\bsnm{Zhou}},
+\beditor{\binits{R.}~\bsnm{Chirkova}},
+\beditor{\binits{J.}~\bsnm{Yang}} and
+\beditor{\binits{D.}~\bsnm{Suciu}}, eds,
+\bpublisher{{ACM}},
+\byear{2017},
+pp.~\bfpage{1603}--\blpage{1606}.
+doi:\doiurl{10.1145/3035918.3058731}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:journals/pvldb/ElmoreDSBCGHHKK15}
+\begin{barticle}
+\bauthor{\binits{A.J.}~\bsnm{Elmore}},
+\bauthor{\binits{J.}~\bsnm{Duggan}},
+\bauthor{\binits{M.}~\bsnm{Stonebraker}},
+\bauthor{\binits{M.}~\bsnm{Balazinska}},
+\bauthor{\binits{U.}~\bsnm{{\c{C}}etintemel}},
+\bauthor{\binits{V.}~\bsnm{Gadepally}},
+\bauthor{\binits{J.}~\bsnm{Heer}},
+\bauthor{\binits{B.}~\bsnm{Howe}},
+\bauthor{\binits{J.}~\bsnm{Kepner}},
+\bauthor{\binits{T.}~\bsnm{Kraska}},
+\bauthor{\binits{S.}~\bsnm{Madden}},
+\bauthor{\binits{D.}~\bsnm{Maier}},
+\bauthor{\binits{T.G.}~\bsnm{Mattson}},
+\bauthor{\binits{S.}~\bsnm{Papadopoulos}},
+\bauthor{\binits{J.}~\bsnm{Parkhurst}},
+\bauthor{\binits{N.}~\bsnm{Tatbul}},
+\bauthor{\binits{M.}~\bsnm{Vartak}} and
+\bauthor{\binits{S.}~\bsnm{Zdonik}},
+\batitle{A Demonstration of the BigDAWG Polystore System},
+\bjtitle{Proc. {VLDB} Endow.}
+\bvolume{8}(\bissue{12})
+(\byear{2015}),
+\bfpage{1908}--\blpage{1911}.
+doi:\doiurl{10.14778/2824032.2824098}.
+\url{http://www.vldb.org/pvldb/vol8/p1908-Elmore.pdf}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/ZemanekS08}
+\begin{bchapter}
+\bauthor{\binits{J.}~\bsnm{Zem{\'{a}}nek}} and
+\bauthor{\binits{S.}~\bsnm{Schenk}},
+\bctitle{Optimizing {SPARQL} Queries over Disparate {RDF} Data Sources through
+  Distributed Semi-Joins},
+in: \bbtitle{Proceedings of the Poster and Demonstration Session at the 7th
+  International Semantic Web Conference (ISWC), Karlsruhe, Germany, October 28,
+  2008},
+\beditor{\binits{C.}~\bsnm{Bizer}} and
+\beditor{\binits{A.}~\bsnm{Joshi}}, eds,
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{401},
+\bpublisher{CEUR-WS.org},
+\byear{2008}.
+\url{http://ceur-ws.org/Vol-401/iswc2008pd\_submission\_69.pdf}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{algosaibi2021high}
+\begin{barticle}
+\bauthor{\binits{A.A.}~\bsnm{Algosaibi}},
+\batitle{High-Performance Computing Based Approach for Improving Semantic-Based
+  Federated Data Processing},
+\bjtitle{Computer Science}
+\bvolume{16}(\bissue{1})
+(\byear{2021}),
+\bfpage{287}--\blpage{309}.
+\end{barticle}
+\endbibitem
+
+\bibitem{amanpartap2013comparative}
+\begin{botherref}
+\oauthor{\binits{P.}~\bsnm{Amanpartap~Singh}},
+\oauthor{\binits{J.S.}~\bsnm{Khaira}} \betal,
+A comparative review of extraction, transformation and loading tools,
+\textit{Database Systems Journal}
+\textbf{42}
+(2013).
+\end{botherref}
+\endbibitem
+
+\bibitem{arputhamary2014review}
+\begin{botherref}
+\oauthor{\binits{B.}~\bsnm{Arputhamary}} and
+\oauthor{\binits{L.}~\bsnm{Arockiam}},
+A review on big data integration,
+\textit{Int. J. Comput. Appl}
+(2014),
+21--26.
+\end{botherref}
+\endbibitem
+
+\bibitem{BigDAWG}
+\begin{barticle}
+\bauthor{\binits{J.}~\bsnm{Duggan}},
+\bauthor{\binits{A.J.}~\bsnm{Elmore}},
+\bauthor{\binits{M.}~\bsnm{Stonebraker}},
+\bauthor{\binits{M.}~\bsnm{Balazinska}},
+\bauthor{\binits{B.}~\bsnm{Howe}},
+\bauthor{\binits{J.}~\bsnm{Kepner}},
+\bauthor{\binits{S.}~\bsnm{Madden}},
+\bauthor{\binits{D.}~\bsnm{Maier}},
+\bauthor{\binits{T.}~\bsnm{Mattson}} and
+\bauthor{\binits{S.B.}~\bsnm{Zdonik}},
+\batitle{The {BigDAWG} Polystore System},
+\bjtitle{{SIGMOD} Record}
+\bvolume{44}(\bissue{2})
+(\byear{2015}),
+\bfpage{11}--\blpage{16}.
+doi:\doiurl{10.1145/2814710.2814713}.
+\end{barticle}
+\endbibitem
+
+\bibitem{bologa2011perspective}
+\begin{botherref}
+\oauthor{\binits{A.-R.}~\bsnm{Bologa}} and
+\oauthor{\binits{R.}~\bsnm{Bologa}},
+A Perspective on the Benefits of Data Virtualization Technology.,
+\textit{Informatica Economica}
+\textbf{15}(4)
+(2011).
+\end{botherref}
+\endbibitem
+
+\bibitem{butenuth2007integration}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Butenuth}},
+\bauthor{\binits{G.v.}~\bsnm{G{\"o}sseln}},
+\bauthor{\binits{M.}~\bsnm{Tiedge}},
+\bauthor{\binits{C.}~\bsnm{Heipke}},
+\bauthor{\binits{U.}~\bsnm{Lipeck}} and
+\bauthor{\binits{M.}~\bsnm{Sester}},
+\batitle{Integration of heterogeneous geospatial data in a federated database},
+\bjtitle{{ISPRS} Journal of Photogrammetry and Remote Sensing}
+\bvolume{62}(\bissue{5})
+(\byear{2007}),
+\bfpage{328}--\blpage{346}.
+\end{barticle}
+\endbibitem
+
+\bibitem{chaves2020exploiting}
+\begin{barticle}
+\bauthor{\binits{D.}~\bsnm{Chaves-Fraga}},
+\bauthor{\binits{F.}~\bsnm{Priyatna}},
+\bauthor{\binits{A.}~\bsnm{Alobaid}} and
+\bauthor{\binits{O.}~\bsnm{Corcho}},
+\batitle{Exploiting declarative mapping rules for generating {graphQL} servers
+  with morph-{graphQL}},
+\bjtitle{International Journal of Software Engineering and Knowledge
+  Engineering}
+\bvolume{30}(\bissue{06})
+(\byear{2020}),
+\bfpage{785}--\blpage{803}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/access/KhanZJGdS19}
+\begin{barticle}
+\bauthor{\binits{Y.}~\bsnm{Khan}},
+\bauthor{\binits{A.}~\bsnm{Zimmermann}},
+\bauthor{\binits{A.}~\bsnm{Jha}},
+\bauthor{\binits{V.}~\bsnm{Gadepally}},
+\bauthor{\binits{M.}~\bsnm{d'Aquin}} and
+\bauthor{\binits{R.}~\bsnm{Sahay}},
+\batitle{One Size Does Not Fit All: Querying Web Polystores},
+\bjtitle{{IEEE} Access}
+\bvolume{7}
+(\byear{2019}),
+\bfpage{9598}--\blpage{9617}.
+doi:\doiurl{10.1109/ACCESS.2018.2888601}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/aei/ShenHMNXDTPX10}
+\begin{barticle}
+\bauthor{\binits{W.}~\bsnm{Shen}},
+\bauthor{\binits{Q.}~\bsnm{Hao}},
+\bauthor{\binits{H.}~\bsnm{Mak}},
+\bauthor{\binits{J.}~\bsnm{Neelamkavil}},
+\bauthor{\binits{H.}~\bsnm{Xie}},
+\bauthor{\binits{J.}~\bsnm{Dickinson}},
+\bauthor{\binits{R.}~\bsnm{Thomas}},
+\bauthor{\binits{A.}~\bsnm{Pardasani}} and
+\bauthor{\binits{H.}~\bsnm{Xue}},
+\batitle{Systems integration and collaboration in architecture, engineering,
+  construction, and facilities management: {A} review},
+\bjtitle{Adv. Eng. Informatics}
+\bvolume{24}(\bissue{2})
+(\byear{2010}),
+\bfpage{196}--\blpage{207}.
+doi:\doiurl{10.1016/j.aei.2009.09.001}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/bib/LazarMTSCMSDBN13}
+\begin{barticle}
+\bauthor{\binits{C.}~\bsnm{Lazar}},
+\bauthor{\binits{S.}~\bsnm{Meganck}},
+\bauthor{\binits{J.}~\bsnm{Taminau}},
+\bauthor{\binits{D.}~\bsnm{Steenhoff}},
+\bauthor{\binits{A.}~\bsnm{Coletta}},
+\bauthor{\binits{C.}~\bsnm{Molter}},
+\bauthor{\binits{D.Y.W.}~\bsnm{Sol{\&apos;{\i}}s}},
+\bauthor{\binits{R.}~\bsnm{Duque}},
+\bauthor{\binits{H.}~\bsnm{Bersini}} and
+\bauthor{\binits{A.}~\bsnm{Now{\&apos;{e}}}},
+\batitle{Batch effect removal methods for microarray gene expression data
+  integration: a survey},
+\bjtitle{Briefings Bioinform.}
+\bvolume{14}(\bissue{4})
+(\byear{2013}),
+\bfpage{469}--\blpage{490}.
+doi:\doiurl{10.1093/bib/bbs037}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/bioinformatics/JuppMBBDGGGLRWMNPBJ14}
+\begin{barticle}
+\bauthor{\binits{S.}~\bsnm{Jupp}},
+\bauthor{\binits{J.}~\bsnm{Malone}},
+\bauthor{\binits{J.T.}~\bsnm{Bolleman}},
+\bauthor{\binits{M.}~\bsnm{Brandizi}},
+\bauthor{\binits{M.}~\bsnm{Davies}},
+\bauthor{\binits{L.J.}~\bsnm{Garcia}},
+\bauthor{\binits{A.}~\bsnm{Gaulton}},
+\bauthor{\binits{S.}~\bsnm{Gehant}},
+\bauthor{\binits{C.}~\bsnm{Laibe}},
+\bauthor{\binits{N.}~\bsnm{Redaschi}},
+\bauthor{\binits{S.M.}~\bsnm{Wimalaratne}},
+\bauthor{\binits{M.J.}~\bsnm{Martin}},
+\bauthor{\binits{N.L.}~\bsnm{Nov{\`{e}}re}},
+\bauthor{\binits{H.E.}~\bsnm{Parkinson}},
+\bauthor{\binits{E.}~\bsnm{Birney}} and
+\bauthor{\binits{A.M.}~\bsnm{Jenkinson}},
+\batitle{The {EBI} {RDF} platform: linked open data for the life sciences},
+\bjtitle{Bioinformatics}
+\bvolume{30}(\bissue{9})
+(\byear{2014}),
+\bfpage{1338}--\blpage{1339}.
+doi:\doiurl{10.1093/bioinformatics/btt765}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/biomedsem/HasnainMZSWZDR17}
+\begin{barticle}
+\bauthor{\binits{A.}~\bsnm{Hasnain}},
+\bauthor{\binits{Q.}~\bsnm{Mehmood}},
+\bauthor{\binits{S.S.}~\bsnm{e~Zainab}},
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{C.N.W.}~\bsnm{Jr.}},
+\bauthor{\binits{D.}~\bsnm{Zehra}},
+\bauthor{\binits{S.}~\bsnm{Decker}} and
+\bauthor{\binits{D.}~\bsnm{Rebholz{-}Schuhmann}},
+\batitle{{BioFed}: federated query processing over life sciences linked open
+  data},
+\bjtitle{J. Biomed. Semant.}
+\bvolume{8}(\bissue{1})
+(\byear{2017}),
+\bfpage{13:1}--\blpage{13:19}.
+doi:\doiurl{10.1186/s13326-017-0118-0}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/biomedsem/KhanSMHMRS17}
+\begin{barticle}
+\bauthor{\binits{Y.}~\bsnm{Khan}},
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{M.}~\bsnm{Mehdi}},
+\bauthor{\binits{A.}~\bsnm{Hogan}},
+\bauthor{\binits{Q.}~\bsnm{Mehmood}},
+\bauthor{\binits{D.}~\bsnm{Rebholz{-}Schuhmann}} and
+\bauthor{\binits{R.}~\bsnm{Sahay}},
+\batitle{{SAFE:} {SPARQL} Federation over {RDF} Data Cubes with Access
+  Control},
+\bjtitle{J. Biomed. Semant.}
+\bvolume{8}(\bissue{1})
+(\byear{2017}),
+\bfpage{5:1}--\blpage{5:22}.
+doi:\doiurl{10.1186/s13326-017-0112-6}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/biomedsem/SaleemPNIADD14}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{S.S.}~\bsnm{Padmanabhuni}},
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}},
+\bauthor{\binits{A.}~\bsnm{Iqbal}},
+\bauthor{\binits{J.S.}~\bsnm{Almeida}},
+\bauthor{\binits{S.}~\bsnm{Decker}} and
+\bauthor{\binits{H.F.}~\bsnm{Deus}},
+\batitle{TopFed: {TCGA} Tailored Federated Query Processing and Linking to
+  {LOD}},
+\bjtitle{J. Biomed. Semant.}
+\bvolume{5}
+(\byear{2014}),
+\bfpage{47}.
+doi:\doiurl{10.1186/2041-1480-5-47}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/bmcbi/CheungFMPSZP09}
+\begin{barticle}
+\bauthor{\binits{K.}~\bsnm{Cheung}},
+\bauthor{\binits{H.R.}~\bsnm{Frost}},
+\bauthor{\binits{M.S.}~\bsnm{Marshall}},
+\bauthor{\binits{E.}~\bsnm{Prud'hommeaux}},
+\bauthor{\binits{M.}~\bsnm{Samwald}},
+\bauthor{\binits{J.}~\bsnm{Zhao}} and
+\bauthor{\binits{A.}~\bsnm{Paschke}},
+\batitle{A journey to Semantic Web query federation in the life sciences},
+\bjtitle{{BMC} Bioinform.}
+\bvolume{10}(\bissue{{S--10}})
+(\byear{2009}),
+\bfpage{10}.
+doi:\doiurl{10.1186/1471-2105-10-S10-S10}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/bmcsb/Gomez-CabreroAMTMGBBCT14}
+\begin{barticle}
+\bauthor{\binits{D.}~\bsnm{Gomez{-}Cabrero}},
+\bauthor{\binits{I.}~\bsnm{Abugessaisa}},
+\bauthor{\binits{D.}~\bsnm{Maier}},
+\bauthor{\binits{A.E.}~\bsnm{Teschendorff}},
+\bauthor{\binits{M.}~\bsnm{Merkenschlager}},
+\bauthor{\binits{A.}~\bsnm{Gisel}},
+\bauthor{\binits{E.}~\bsnm{Ballestar}},
+\bauthor{\binits{E.}~\bsnm{Bongcam{-}Rudloff}},
+\bauthor{\binits{A.}~\bsnm{Conesa}} and
+\bauthor{\binits{J.}~\bsnm{Tegn{\'{e}}r}},
+\batitle{Data integration in the era of omics: current and future challenges},
+\bjtitle{{BMC} Syst. Biol.}
+\bvolume{8}(\bissue{{S--2}})
+(\byear{2014}),
+\bfpage{I1}.
+doi:\doiurl{10.1186/1752-0509-8-S2-I1}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/cacm/ParentS98}
+\begin{barticle}
+\bauthor{\binits{C.}~\bsnm{Parent}} and
+\bauthor{\binits{S.}~\bsnm{Spaccapietra}},
+\batitle{Issues and Approaches of Database Integration},
+\bjtitle{Commun. {ACM}}
+\bvolume{41}(\bissue{5})
+(\byear{1998}),
+\bfpage{166}--\blpage{178}.
+doi:\doiurl{10.1145/276404.276408}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/corr/abs-1807-07691}
+\begin{botherref}
+\oauthor{\binits{X.}~\bsnm{Zhang}},
+\oauthor{\binits{M.}~\bsnm{Zhang}},
+\oauthor{\binits{P.}~\bsnm{Peng}},
+\oauthor{\binits{J.}~\bsnm{Song}},
+\oauthor{\binits{Z.}~\bsnm{Feng}} and
+\oauthor{\binits{L.}~\bsnm{Zou}},
+gSMat: {A} Scalable Sparse Matrix-based Join for {SPARQL} Query Processing,
+\textit{{CoRR}}
+\textbf{abs/1807.07691}
+(2018).
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:journals/corr/abs-2005-11264}
+\begin{botherref}
+\oauthor{\binits{K.}~\bsnm{Bereta}},
+\oauthor{\binits{G.}~\bsnm{Papadakis}} and
+\oauthor{\binits{M.}~\bsnm{Koubarakis}},
+{OBDA} for the Web: Creating Virtual {RDF} Graphs On Top of Web Data Sources,
+\textit{CoRR}
+\textbf{abs/2005.11264}
+(2020).
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:journals/corr/abs-2009-10331}
+\begin{botherref}
+\oauthor{\binits{W.}~\bsnm{Ali}},
+\oauthor{\binits{M.}~\bsnm{Saleem}},
+\oauthor{\binits{B.}~\bsnm{Yao}},
+\oauthor{\binits{A.}~\bsnm{Hogan}} and
+\oauthor{\binits{A.N.}~\bsnm{Ngomo}},
+Storage, Indexing, Query Processing, and Benchmarking in Centralized and
+  Distributed {RDF} Engines: {A} Survey,
+\textit{CoRR}
+\textbf{abs/2009.10331}
+(2020).
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:journals/corr/abs-2102-03269}
+\begin{botherref}
+\oauthor{\binits{L.}~\bsnm{Heling}} and
+\oauthor{\binits{M.}~\bsnm{Acosta}},
+A Framework for Federated {SPARQL} Query Processing over Heterogeneous Linked
+  Data Fragments,
+\textit{CoRR}
+\textbf{abs/2102.03269}
+(2021).
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:journals/corr/MontoyaSMV14}
+\begin{botherref}
+\oauthor{\binits{G.}~\bsnm{Montoya}},
+\oauthor{\binits{H.}~\bsnm{Skaf{-}Molli}},
+\oauthor{\binits{P.}~\bsnm{Molli}} and
+\oauthor{\binits{M.}~\bsnm{Vidal}},
+Fedra: Query Processing for {SPARQL} Federations with Divergence,
+\textit{{CoRR}}
+\textbf{abs/1407.2899}
+(2014).
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:journals/corr/RakhmawatiUKHH13}
+\begin{botherref}
+\oauthor{\binits{N.A.}~\bsnm{Rakhmawati}},
+\oauthor{\binits{J.}~\bsnm{Umbrich}},
+\oauthor{\binits{M.}~\bsnm{Karnstedt}},
+\oauthor{\binits{A.}~\bsnm{Hasnain}} and
+\oauthor{\binits{M.}~\bsnm{Hausenblas}},
+Querying over Federated {SPARQL} Endpoints - {A} State of the Art Survey,
+\textit{CoRR}
+\textbf{abs/1306.1723}
+(2013).
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:journals/csur/IlyasBS08}
+\begin{barticle}
+\bauthor{\binits{I.F.}~\bsnm{Ilyas}},
+\bauthor{\binits{G.}~\bsnm{Beskales}} and
+\bauthor{\binits{M.A.}~\bsnm{Soliman}},
+\batitle{A survey of top-\emph{k} query processing techniques in relational
+  database systems},
+\bjtitle{{ACM} Comput. Surv.}
+\bvolume{40}(\bissue{4})
+(\byear{2008}),
+\bfpage{11:1}--\blpage{11:58}.
+doi:\doiurl{10.1145/1391729.1391730}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/csur/MountantonakisT19}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Mountantonakis}} and
+\bauthor{\binits{Y.}~\bsnm{Tzitzikas}},
+\batitle{Large-scale Semantic Integration of Linked Data: {A} Survey},
+\bjtitle{{ACM} Comput. Surv.}
+\bvolume{52}(\bissue{5})
+(\byear{2019}),
+\bfpage{103:1}--\blpage{103:40}.
+doi:\doiurl{10.1145/3345551}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/debu/WangHM18}
+\begin{barticle}
+\bauthor{\binits{X.}~\bsnm{Wang}},
+\bauthor{\binits{L.M.}~\bsnm{Haas}} and
+\bauthor{\binits{A.}~\bsnm{Meliou}},
+\batitle{Explaining Data Integration},
+\bjtitle{{IEEE} Data Eng. Bull.}
+\bvolume{41}(\bissue{2})
+(\byear{2018}),
+\bfpage{47}--\blpage{58}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/dpd/MountasserOHF21}
+\begin{barticle}
+\bauthor{\binits{I.}~\bsnm{Mountasser}},
+\bauthor{\binits{B.}~\bsnm{Ouhbi}},
+\bauthor{\binits{F.}~\bsnm{Hdioud}} and
+\bauthor{\binits{B.}~\bsnm{Frikh}},
+\batitle{Semantic-based Big Data integration framework using scalable
+  distributed ontology matching strategy},
+\bjtitle{Distributed Parallel Databases}
+\bvolume{39}(\bissue{4})
+(\byear{2021}),
+\bfpage{891}--\blpage{937}.
+doi:\doiurl{10.1007/s10619-021-07321-6}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/fcsc/Ozsu16}
+\begin{barticle}
+\bauthor{\binits{M.T.}~\bsnm{{\"O}zsu}},
+\batitle{A survey of {RDF} data management systems},
+\bjtitle{Frontiers Comput. Sci.}
+\bvolume{10}(\bissue{3})
+(\byear{2016}),
+\bfpage{418}--\blpage{432}.
+doi:\doiurl{10.1007/s11704-016-5554-y}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/fgcs/MasmoudiLZAK21}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Masmoudi}},
+\bauthor{\binits{S.B.A.B.}~\bsnm{Lamine}},
+\bauthor{\binits{H.B.}~\bsnm{Zghal}},
+\bauthor{\binits{B.}~\bsnm{Archim{\`{e}}de}} and
+\bauthor{\binits{M.}~\bsnm{Karray}},
+\batitle{Knowledge hypergraph-based approach for data integration and querying:
+  Application to Earth Observation},
+\bjtitle{Future Gener. Comput. Syst.}
+\bvolume{115}
+(\byear{2021}),
+\bfpage{720}--\blpage{740}.
+doi:\doiurl{10.1016/j.future.2020.09.029}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ijswis/Avila-Garzon20}
+\begin{barticle}
+\bauthor{\binits{C.}~\bsnm{Avila{-}Garzon}},
+\batitle{Applications, Methodologies, and Technologies for Linked Open Data:
+  {A} Systematic Literature Review},
+\bjtitle{Int. J. Semantic Web Inf. Syst.}
+\bvolume{16}(\bissue{3})
+(\byear{2020}),
+\bfpage{53}--\blpage{69}.
+doi:\doiurl{10.4018/IJSWIS.2020070104}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ijswis/SandeVDCM16}
+\begin{barticle}
+\bauthor{\binits{M.V.}~\bsnm{Sande}},
+\bauthor{\binits{R.}~\bsnm{Verborgh}},
+\bauthor{\binits{A.}~\bsnm{Dimou}},
+\bauthor{\binits{P.}~\bsnm{Colpaert}} and
+\bauthor{\binits{E.}~\bsnm{Mannens}},
+\batitle{Hypermedia-Based Discovery for Source Selection Using Low-Cost Linked
+  Data Interfaces},
+\bjtitle{Int. J. Semantic Web Inf. Syst.}
+\bvolume{12}(\bissue{3})
+(\byear{2016}),
+\bfpage{79}--\blpage{110}.
+doi:\doiurl{10.4018/IJSWIS.2016070103}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/isci/Ulusoy95}
+\begin{barticle}
+\bauthor{\binits{{\"{O}}.}~\bsnm{Ulusoy}},
+\batitle{Research Issues in Real-Time Database Systems},
+\bjtitle{Inf. Sci.}
+\bvolume{87}(\bissue{1--3})
+(\byear{1995}),
+\bfpage{123}--\blpage{151}.
+doi:\doiurl{10.1016/0020-0255(95)00130-1}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/isi/Gandon18}
+\begin{barticle}
+\bauthor{\binits{F.}~\bsnm{Gandon}},
+\batitle{A survey of the first 20 years of research on semantic Web and linked
+  data},
+\bjtitle{Ing{\&apos;{e}}nierie des Syst{\`{e}}mes d Inf.}
+\bvolume{23}(\bissue{3--4})
+(\byear{2018}),
+\bfpage{11}--\blpage{38}.
+doi:\doiurl{10.3166/isi.23.3-4.11-38}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/jdwm/OguzYEHD17}
+\begin{barticle}
+\bauthor{\binits{D.}~\bsnm{Oguz}},
+\bauthor{\binits{S.}~\bsnm{Yin}},
+\bauthor{\binits{B.}~\bsnm{Ergen{\c{c}}}},
+\bauthor{\binits{A.}~\bsnm{Hameurlain}} and
+\bauthor{\binits{O.}~\bsnm{Dikenelli}},
+\batitle{Extended Adaptive Join Operator with Bind-Bloom Join for Federated
+  {SPARQL} Queries},
+\bjtitle{Int. J. Data Warehous. Min.}
+\bvolume{13}(\bissue{3})
+(\byear{2017}),
+\bfpage{47}--\blpage{72}.
+doi:\doiurl{10.4018/IJDWM.2017070103}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/jidm/CunhaL15}
+\begin{barticle}
+\bauthor{\binits{D.R.B.}~\bsnm{Cunha}} and
+\bauthor{\binits{B.F.}~\bsnm{L{\'{o}}scio}},
+\batitle{An Approach for Query Decomposition on Federated {SPARQL} Query
+  Systems},
+\bjtitle{J. Inf. Data Manag.}
+\bvolume{6}(\bissue{2})
+(\byear{2015}),
+\bfpage{106}--\blpage{117}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/jlp/RamakrishnanU95}
+\begin{barticle}
+\bauthor{\binits{R.}~\bsnm{Ramakrishnan}} and
+\bauthor{\binits{J.D.}~\bsnm{Ullman}},
+\batitle{A survey of deductive database systems},
+\bjtitle{J. Log. Program.}
+\bvolume{23}(\bissue{2})
+(\byear{1995}),
+\bfpage{125}--\blpage{149}.
+doi:\doiurl{10.1016/0743-1066(94)00039-9}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ker/OguzEYDH15}
+\begin{barticle}
+\bauthor{\binits{D.}~\bsnm{Oguz}},
+\bauthor{\binits{B.}~\bsnm{Ergenc}},
+\bauthor{\binits{S.}~\bsnm{Yin}},
+\bauthor{\binits{O.}~\bsnm{Dikenelli}} and
+\bauthor{\binits{A.}~\bsnm{Hameurlain}},
+\batitle{Federated query processing on linked data: a qualitative survey and
+  open challenges},
+\bjtitle{Knowl. Eng. Rev.}
+\bvolume{30}(\bissue{5})
+(\byear{2015}),
+\bfpage{545}--\blpage{563}.
+doi:\doiurl{10.1017/S0269888915000107}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/nar/Gama-CastroSSLM16}
+\begin{barticle}
+\bauthor{\binits{S.}~\bsnm{Gama{-}Castro}},
+\bauthor{\binits{H.}~\bsnm{Salgado}},
+\bauthor{\binits{A.}~\bsnm{Santos{-}Zavaleta}},
+\bauthor{\binits{D.}~\bsnm{Ledezma{-}Tejeida}},
+\bauthor{\binits{L.}~\bsnm{Mu{\~{n}}iz{-}Rascado}},
+\bauthor{\binits{J.S.}~\bsnm{Garc{\'{i}}a{-}Sotelo}},
+\bauthor{\binits{K.}~\bsnm{Alquicira{-}Hern{\'{a}}ndez}},
+\bauthor{\binits{I.}~\bsnm{Mart{\'{i}}nez{-}Flores}},
+\bauthor{\binits{L.}~\bsnm{Pannier}},
+\bauthor{\binits{J.A.}~\bsnm{Castro{-}Mondrag{\'{o}}n}},
+\bauthor{\binits{A.}~\bsnm{Medina{-}Rivera}},
+\bauthor{\binits{H.}~\bsnm{Solano{-}Lira}},
+\bauthor{\binits{C.}~\bsnm{Bonavides{-}Mart{\'{i}}nez}},
+\bauthor{\binits{E.}~\bsnm{P{\'{e}}rez{-}Rueda}},
+\bauthor{\binits{S.}~\bsnm{Alquicira{-}Hern{\'{a}}ndez}},
+\bauthor{\binits{L.}~\bsnm{Porr{\'{o}}n{-}Sotelo}},
+\bauthor{\binits{A.}~\bsnm{L{\'{o}}pez{-}Fuentes}},
+\bauthor{\binits{A.}~\bsnm{Hern{\'{a}}ndez{-}Koutoucheva}},
+\bauthor{\binits{V.}~\bsnm{del Moral{-}Ch{\'{a}}vez}},
+\bauthor{\binits{F.}~\bsnm{Rinaldi}} and
+\bauthor{\binits{J.}~\bsnm{Collado{-}Vides}},
+\batitle{RegulonDB version 9.0: high-level integration of gene regulation,
+  coexpression, motif clustering and beyond},
+\bjtitle{Nucleic Acids Res.}
+\bvolume{44}(\bissue{Database--Issue})
+(\byear{2016}),
+\bfpage{133}--\blpage{143}.
+doi:\doiurl{10.1093/nar/gkv1156}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ojis/EkaputraSSKB17}
+\begin{barticle}
+\bauthor{\binits{F.J.}~\bsnm{Ekaputra}},
+\bauthor{\binits{M.}~\bsnm{Sabou}},
+\bauthor{\binits{E.}~\bsnm{Serral}},
+\bauthor{\binits{E.}~\bsnm{Kiesling}} and
+\bauthor{\binits{S.}~\bsnm{Biffl}},
+\batitle{Ontology-Based Data Integration in Multi-Disciplinary Engineering
+  Environments: {A} Review},
+\bjtitle{Open J. Inf. Syst.}
+\bvolume{4}(\bissue{1})
+(\byear{2017}),
+\bfpage{1}--\blpage{26}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/peerj-cs/FuscoA20}
+\begin{barticle}
+\bauthor{\binits{G.}~\bsnm{Fusco}} and
+\bauthor{\binits{L.}~\bsnm{Aversano}},
+\batitle{An approach for semantic integration of heterogeneous data sources},
+\bjtitle{PeerJ Comput. Sci.}
+\bvolume{6}
+(\byear{2020}),
+\bfpage{e254}.
+doi:\doiurl{10.7717/peerj-cs.254}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/pvldb/AbdelazizMOAK17}
+\begin{barticle}
+\bauthor{\binits{I.}~\bsnm{Abdelaziz}},
+\bauthor{\binits{E.}~\bsnm{Mansour}},
+\bauthor{\binits{M.}~\bsnm{Ouzzani}},
+\bauthor{\binits{A.}~\bsnm{Aboulnaga}} and
+\bauthor{\binits{P.}~\bsnm{Kalnis}},
+\batitle{Lusail: {A} System for Querying Linked Data at Scale},
+\bjtitle{Proc. {VLDB} Endow.}
+\bvolume{11}(\bissue{4})
+(\byear{2017}),
+\bfpage{485}--\blpage{498}.
+doi:\doiurl{10.1145/3186728.3164144}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/pvldb/AlotaibiCDLMY20}
+\begin{barticle}
+\bauthor{\binits{R.}~\bsnm{Alotaibi}},
+\bauthor{\binits{B.}~\bsnm{Cautis}},
+\bauthor{\binits{A.}~\bsnm{Deutsch}},
+\bauthor{\binits{M.}~\bsnm{Latrache}},
+\bauthor{\binits{I.}~\bsnm{Manolescu}} and
+\bauthor{\binits{Y.}~\bsnm{Yang}},
+\batitle{{ESTOCADA:} Towards Scalable Polystore Systems},
+\bjtitle{Proc. {VLDB} Endow.}
+\bvolume{13}(\bissue{12})
+(\byear{2020}),
+\bfpage{2949}--\blpage{2952}.
+doi:\doiurl{10.14778/3415478.3415516}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/pvldb/BonaqueCCGLMMRT16}
+\begin{barticle}
+\bauthor{\binits{R.}~\bsnm{Bonaque}},
+\bauthor{\binits{T.D.}~\bsnm{Cao}},
+\bauthor{\binits{B.}~\bsnm{Cautis}},
+\bauthor{\binits{F.}~\bsnm{Goasdou{\'{e}}}},
+\bauthor{\binits{J.}~\bsnm{Letelier}},
+\bauthor{\binits{I.}~\bsnm{Manolescu}},
+\bauthor{\binits{O.}~\bsnm{Mendoza}},
+\bauthor{\binits{S.}~\bsnm{Ribeiro}},
+\bauthor{\binits{X.}~\bsnm{Tannier}} and
+\bauthor{\binits{M.}~\bsnm{Thomazo}},
+\batitle{Mixed-instance querying: a lightweight integration architecture for
+  data journalism},
+\bjtitle{Proc. {VLDB} Endow.}
+\bvolume{9}(\bissue{13})
+(\byear{2016}),
+\bfpage{1513}--\blpage{1516}.
+doi:\doiurl{10.14778/3007263.3007297}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/pvldb/BuronGMM20}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Buron}},
+\bauthor{\binits{F.}~\bsnm{Goasdou{\'{e}}}},
+\bauthor{\binits{I.}~\bsnm{Manolescu}} and
+\bauthor{\binits{M.}~\bsnm{Mugnier}},
+\batitle{Obi-Wan: Ontology-Based {RDF} Integration of Heterogeneous Data},
+\bjtitle{Proc. {VLDB} Endow.}
+\bvolume{13}(\bissue{12})
+(\byear{2020}),
+\bfpage{2933}--\blpage{2936}.
+doi:\doiurl{10.14778/3415478.3415512}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/pvldb/SchatzlePSL16}
+\begin{barticle}
+\bauthor{\binits{A.}~\bsnm{Sch{\"{a}}tzle}},
+\bauthor{\binits{M.}~\bsnm{Przyjaciel{-}Zablocki}},
+\bauthor{\binits{S.}~\bsnm{Skilevic}} and
+\bauthor{\binits{G.}~\bsnm{Lausen}},
+\batitle{{S2RDF:} {RDF} Querying with {SPARQL} on Spark},
+\bjtitle{Proc. {VLDB} Endow.}
+\bvolume{9}(\bissue{10})
+(\byear{2016}),
+\bfpage{804}--\blpage{815}.
+doi:\doiurl{10.14778/2977797.2977806}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/pvldb/TanGPYSDSAK19}
+\begin{barticle}
+\bauthor{\binits{J.}~\bsnm{Tan}},
+\bauthor{\binits{T.M.}~\bsnm{Ghanem}},
+\bauthor{\binits{M.}~\bsnm{Perron}},
+\bauthor{\binits{X.}~\bsnm{Yu}},
+\bauthor{\binits{M.}~\bsnm{Stonebraker}},
+\bauthor{\binits{D.J.}~\bsnm{DeWitt}},
+\bauthor{\binits{M.}~\bsnm{Serafini}},
+\bauthor{\binits{A.}~\bsnm{Aboulnaga}} and
+\bauthor{\binits{T.}~\bsnm{Kraska}},
+\batitle{Choosing {A} Cloud {DBMS:} Architectures and Tradeoffs},
+\bjtitle{Proc. {VLDB} Endow.}
+\bvolume{12}(\bissue{12})
+(\byear{2019}),
+\bfpage{2170}--\blpage{2182}.
+doi:\doiurl{10.14778/3352063.3352133}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/semweb/ArsicSMRZ19a}
+\begin{barticle}
+\bauthor{\binits{B.}~\bsnm{Arsic}},
+\bauthor{\binits{M.}~\bsnm{{\DH}okic{-}Petrovic}},
+\bauthor{\binits{P.C.}~\bsnm{Spalevic}},
+\bauthor{\binits{I.Z.}~\bsnm{Milentijevic}},
+\bauthor{\binits{D.D.}~\bsnm{Rancic}} and
+\bauthor{\binits{M.}~\bsnm{Zivanovic}},
+\batitle{{SpecINT}: {A} framework for data integration over cheminformatics and
+  bioinformatics {RDF} repositories},
+\bjtitle{Semantic Web}
+\bvolume{10}(\bissue{4})
+(\byear{2019}),
+\bfpage{795}--\blpage{813}.
+doi:\doiurl{10.3233/SW-180327}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/semweb/Chaves-FragaRPV21}
+\begin{barticle}
+\bauthor{\binits{D.}~\bsnm{Chaves{-}Fraga}},
+\bauthor{\binits{E.}~\bsnm{Ruckhaus}},
+\bauthor{\binits{F.}~\bsnm{Priyatna}},
+\bauthor{\binits{M.}~\bsnm{Vidal}} and
+\bauthor{\binits{{\'{O}}.}~\bsnm{Corcho}},
+\batitle{Enhancing virtual ontology based access over tabular data with
+  {Morph-CSV}},
+\bjtitle{Semantic Web}
+\bvolume{12}(\bissue{6})
+(\byear{2021}),
+\bfpage{869}--\blpage{902}.
+doi:\doiurl{10.3233/SW-210432}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/semweb/QudusSNL21}
+\begin{barticle}
+\bauthor{\binits{U.}~\bsnm{Qudus}},
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}} and
+\bauthor{\binits{Y.}~\bsnm{Lee}},
+\batitle{An empirical evaluation of cost-based federated {SPARQL} query
+  processing engines},
+\bjtitle{Semantic Web}
+\bvolume{12}(\bissue{6})
+(\byear{2021}),
+\bfpage{843}--\blpage{868}.
+doi:\doiurl{10.3233/SW-200420}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/semweb/SaleemKHEN15}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{Y.}~\bsnm{Khan}},
+\bauthor{\binits{A.}~\bsnm{Hasnain}},
+\bauthor{\binits{I.}~\bsnm{Ermilov}} and
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}},
+\batitle{A fine-grained evaluation of {SPARQL} endpoint federation systems},
+\bjtitle{Semantic Web}
+\bvolume{7}(\bissue{5})
+(\byear{2016}),
+\bfpage{493}--\blpage{518}.
+doi:\doiurl{10.3233/SW-150186}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/semweb/Stolpe15}
+\begin{barticle}
+\bauthor{\binits{A.}~\bsnm{Stolpe}},
+\batitle{A logical characterisation of {SPARQL} federation},
+\bjtitle{Semantic Web}
+\bvolume{6}(\bissue{6})
+(\byear{2015}),
+\bfpage{565}--\blpage{584}.
+doi:\doiurl{10.3233/SW-140160}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/sigmod/Noy04}
+\begin{barticle}
+\bauthor{\binits{N.F.}~\bsnm{Noy}},
+\batitle{Semantic Integration: {A} Survey Of Ontology-Based Approaches},
+\bjtitle{{SIGMOD} Rec.}
+\bvolume{33}(\bissue{4})
+(\byear{2004}),
+\bfpage{65}--\blpage{70}.
+doi:\doiurl{10.1145/1041410.1041421}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/sigweb/LissandriniPHM20}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Lissandrini}},
+\bauthor{\binits{T.B.}~\bsnm{Pedersen}},
+\bauthor{\binits{K.}~\bsnm{Hose}} and
+\bauthor{\binits{D.}~\bsnm{Mottin}},
+\batitle{Knowledge graph exploration: where are we and where are we going?},
+\bjtitle{{SIGWEB} Newsl.}
+\bvolume{2020}(\bissue{Summer})
+(\byear{2020}),
+\bfpage{4:1}--\blpage{4:8}.
+doi:\doiurl{10.1145/3409481.3409485}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/tkde/PengGZOXZ21}
+\begin{barticle}
+\bauthor{\binits{P.}~\bsnm{Peng}},
+\bauthor{\binits{Q.}~\bsnm{Ge}},
+\bauthor{\binits{L.}~\bsnm{Zou}},
+\bauthor{\binits{M.T.}~\bsnm{{\"{O}}zsu}},
+\bauthor{\binits{Z.}~\bsnm{Xu}} and
+\bauthor{\binits{D.}~\bsnm{Zhao}},
+\batitle{Optimizing Multi-Query Evaluation in Federated {RDF} Systems},
+\bjtitle{{IEEE} Trans. Knowl. Data Eng.}
+\bvolume{33}(\bissue{4})
+(\byear{2021}),
+\bfpage{1692}--\blpage{1707}.
+doi:\doiurl{10.1109/TKDE.2019.2947050}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/tods/StefanidisKP11}
+\begin{barticle}
+\bauthor{\binits{K.}~\bsnm{Stefanidis}},
+\bauthor{\binits{G.}~\bsnm{Koutrika}} and
+\bauthor{\binits{E.}~\bsnm{Pitoura}},
+\batitle{A survey on representation, composition and application of preferences
+  in database systems},
+\bjtitle{{ACM} Trans. Database Syst.}
+\bvolume{36}(\bissue{3})
+(\byear{2011}),
+\bfpage{19:1}--\blpage{19:45}.
+doi:\doiurl{10.1145/2000824.2000829}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/vldb/KaoudiM15}
+\begin{barticle}
+\bauthor{\binits{Z.}~\bsnm{Kaoudi}} and
+\bauthor{\binits{I.}~\bsnm{Manolescu}},
+\batitle{{RDF} in the clouds: a survey},
+\bjtitle{{VLDB} J.}
+\bvolume{24}(\bissue{1})
+(\byear{2015}),
+\bfpage{67}--\blpage{91}.
+doi:\doiurl{10.1007/s00778-014-0364-z}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/vldb/KruseKCCNQ20}
+\begin{barticle}
+\bauthor{\binits{S.}~\bsnm{Kruse}},
+\bauthor{\binits{Z.}~\bsnm{Kaoudi}},
+\bauthor{\binits{B.}~\bsnm{Contreras{-}Rojas}},
+\bauthor{\binits{S.}~\bsnm{Chawla}},
+\bauthor{\binits{F.}~\bsnm{Naumann}} and
+\bauthor{\binits{J.}~\bsnm{Quian{\'{e}}{-}Ruiz}},
+\batitle{{RHEEMix} in the data jungle: a cost-based optimizer for
+  cross-platform systems},
+\bjtitle{{VLDB} J.}
+\bvolume{29}(\bissue{6})
+(\byear{2020}),
+\bfpage{1287}--\blpage{1310}.
+doi:\doiurl{10.1007/s00778-020-00612-x}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/vldb/PengZO0Z16}
+\begin{barticle}
+\bauthor{\binits{P.}~\bsnm{Peng}},
+\bauthor{\binits{L.}~\bsnm{Zou}},
+\bauthor{\binits{M.T.}~\bsnm{{\"{O}}zsu}},
+\bauthor{\binits{L.}~\bsnm{Chen}} and
+\bauthor{\binits{D.}~\bsnm{Zhao}},
+\batitle{Processing {SPARQL} queries over distributed {RDF} graphs},
+\bjtitle{{VLDB} J.}
+\bvolume{25}(\bissue{2})
+(\byear{2016}),
+\bfpage{243}--\blpage{268}.
+doi:\doiurl{10.1007/s00778-015-0415-0}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ws/0002HN18}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{A.}~\bsnm{Hasnain}} and
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}},
+\batitle{{LargeRDFBench}: {A} billion triples benchmark for {SPARQL} endpoint
+  federation},
+\bjtitle{J. Web Semant.}
+\bvolume{48}
+(\byear{2018}),
+\bfpage{85}--\blpage{125}.
+doi:\doiurl{10.1016/j.websem.2017.12.005}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ws/ArandaACP13}
+\begin{barticle}
+\bauthor{\binits{C.B.}~\bsnm{Aranda}},
+\bauthor{\binits{M.}~\bsnm{Arenas}},
+\bauthor{\binits{{\'{O}}.}~\bsnm{Corcho}} and
+\bauthor{\binits{A.}~\bsnm{Polleres}},
+\batitle{Federating queries in {SPARQL} 1.1: Syntax, semantics and evaluation},
+\bjtitle{J. Web Semant.}
+\bvolume{18}(\bissue{1})
+(\byear{2013}),
+\bfpage{1}--\blpage{17}.
+doi:\doiurl{10.1016/j.websem.2012.10.001}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ws/BascaB14}
+\begin{barticle}
+\bauthor{\binits{C.}~\bsnm{Basca}} and
+\bauthor{\binits{A.}~\bsnm{Bernstein}},
+\batitle{Querying a messy web of data with Avalanche},
+\bjtitle{J. Web Semant.}
+\bvolume{26}
+(\byear{2014}),
+\bfpage{1}--\blpage{28}.
+doi:\doiurl{10.1016/j.websem.2014.04.002}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ws/HalvorsenS18}
+\begin{barticle}
+\bauthor{\binits{J.}~\bsnm{Halvorsen}} and
+\bauthor{\binits{A.}~\bsnm{Stolpe}},
+\batitle{On the size of intermediate results in the federated processing of
+  {SPARQL} {BGPs}},
+\bjtitle{J. Web Semant.}
+\bvolume{51}
+(\byear{2018}),
+\bfpage{20}--\blpage{38}.
+doi:\doiurl{10.1016/j.websem.2018.06.001}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ws/MontoyaSMV17}
+\begin{barticle}
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{H.}~\bsnm{Skaf{-}Molli}},
+\bauthor{\binits{P.}~\bsnm{Molli}} and
+\bauthor{\binits{M.}~\bsnm{Vidal}},
+\batitle{Decomposing federated queries in presence of replicated fragments},
+\bjtitle{J. Web Semant.}
+\bvolume{42}
+(\byear{2017}),
+\bfpage{1}--\blpage{18}.
+doi:\doiurl{10.1016/j.websem.2016.12.001}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ws/KaoudiKKMMP10}
+\begin{barticle}
+\bauthor{\binits{Z.}~\bsnm{Kaoudi}},
+\bauthor{\binits{M.}~\bsnm{Koubarakis}},
+\bauthor{\binits{K.}~\bsnm{Kyzirakos}},
+\bauthor{\binits{I.}~\bsnm{Miliaraki}},
+\bauthor{\binits{M.}~\bsnm{Magiridou}} and
+\bauthor{\binits{A.}~\bsnm{Papadakis{-}Pesaresi}},
+\batitle{Atlas: Storing, updating and querying {RDF(S)} data on top of DHTs},
+\bjtitle{J. Web Semant.}
+\bvolume{8}(\bissue{4})
+(\byear{2010}),
+\bfpage{271}--\blpage{277}.
+doi:\doiurl{10.1016/j.websem.2010.07.001}.
+\end{barticle}
+\endbibitem
+
+\bibitem{HARE}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Acosta}},
+\bauthor{\binits{E.}~\bsnm{Simperl}},
+\bauthor{\binits{F.}~\bsnm{Fl{\"o}ck}} and
+\bauthor{\binits{M.-E.}~\bsnm{Vidal}},
+\batitle{Enhancing answer completeness of {SPARQL} queries via crowdsourcing},
+\bjtitle{J. Web Semantics}
+\bvolume{45}
+(\byear{2017}),
+\bfpage{41}--\blpage{62}.
+doi:\doiurl{10.1016/j.websem.2017.07.001}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ws/VerborghSHHVMHC16}
+\begin{barticle}
+\bauthor{\binits{R.}~\bsnm{Verborgh}},
+\bauthor{\binits{M.V.}~\bsnm{Sande}},
+\bauthor{\binits{O.}~\bsnm{Hartig}},
+\bauthor{\binits{J.V.}~\bsnm{Herwegen}},
+\bauthor{\binits{L.D.}~\bsnm{Vocht}},
+\bauthor{\binits{B.D.}~\bsnm{Meester}},
+\bauthor{\binits{G.}~\bsnm{Haesendonck}} and
+\bauthor{\binits{P.}~\bsnm{Colpaert}},
+\batitle{Triple Pattern Fragments: {A} low-cost knowledge graph interface for
+  the Web},
+\bjtitle{J. Web Semant.}
+\bvolume{37-38}
+(\byear{2016}),
+\bfpage{184}--\blpage{206}.
+doi:\doiurl{10.1016/j.websem.2016.03.003}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:series/sci/GorlitzS11}
+\begin{bchapter}
+\bauthor{\binits{O.}~\bsnm{G{\"{o}}rlitz}} and
+\bauthor{\binits{S.}~\bsnm{Staab}},
+\bctitle{Federated Data Management and Query Optimization for Linked Open
+  Data},
+in: \bbtitle{New Directions in Web Data Management 1},
+\bsertitle{Studies in Computational Intelligence},
+Vol.~\bseriesno{331},
+\byear{2011},
+pp.~\bfpage{109}--\blpage{137}.
+doi:\doiurl{10.1007/978-3-642-17551-0\_5}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{fafalios2019answering}
+\begin{barticle}
+\bauthor{\binits{P.}~\bsnm{Fafalios}} and
+\bauthor{\binits{Y.}~\bsnm{Tzitzikas}},
+\batitle{Answering {SPARQL} queries on the web of data through zero-knowledge
+  link traversal},
+\bjtitle{{ACM SIGAPP} Applied Computing Review}
+\bvolume{19}(\bissue{3})
+(\byear{2019}),
+\bfpage{18}--\blpage{32}.
+\end{barticle}
+\endbibitem
+
+\bibitem{golovnin2020data}
+\begin{botherref}
+\oauthor{\binits{O.}~\bsnm{Golovnin}},
+Data federation through on-demand queries in intelligent transport systems
+\textbf{1694}(1)
+(2020),
+012030,
+IOP Publishing.
+\end{botherref}
+\endbibitem
+
+\bibitem{heling2021framework}
+\begin{botherref}
+\oauthor{\binits{L.}~\bsnm{Heling}} and
+\oauthor{\binits{M.}~\bsnm{Acosta}},
+A Framework for Federated {SPARQL} Query Processing over Heterogeneous Linked
+  Data Fragments,
+\textit{arXiv preprint arXiv:2102.03269}
+(2021).
+\end{botherref}
+\endbibitem
+
+\bibitem{huang2017more}
+\begin{barticle}
+\bauthor{\binits{S.}~\bsnm{Huang}},
+\bauthor{\binits{K.}~\bsnm{Chaudhary}} and
+\bauthor{\binits{L.X.}~\bsnm{Garmire}},
+\batitle{More is better: recent progress in multi-omics data integration
+  methods},
+\bjtitle{Frontiers in genetics}
+\bvolume{8}
+(\byear{2017}),
+\bfpage{84}.
+\end{barticle}
+\endbibitem
+
+\bibitem{journals/JCS}
+\begin{botherref}
+\oauthor{\binits{A.Z.E.}~\bsnm{Qutaany}},
+\oauthor{\binits{A.H.E.}~\bsnm{Bastawissy}} and
+\oauthor{\binits{O.}~\bsnm{Hegazi}},
+{V-DIF}: Virtual data integration framework,
+\textit{International Journal of Computer Systems}
+\textbf{05}(05)
+(2018).
+\end{botherref}
+\endbibitem
+
+\bibitem{khan2019sparql}
+\begin{botherref}
+\oauthor{\binits{Y.}~\bsnm{Khan}} and
+\oauthor{\binits{R.}~\bsnm{Sahay}},
+{SPARQL} Query Federation over Biomedical Data,
+\textit{Insight Centre for Data Analytics, National University Literature}
+(2019).
+\end{botherref}
+\endbibitem
+
+\bibitem{lapatas2015data}
+\begin{barticle}
+\bauthor{\binits{V.}~\bsnm{Lapatas}},
+\bauthor{\binits{M.}~\bsnm{Stefanidakis}},
+\bauthor{\binits{R.C.}~\bsnm{Jimenez}},
+\bauthor{\binits{A.}~\bsnm{Via}} and
+\bauthor{\binits{M.V.}~\bsnm{Schneider}},
+\batitle{Data integration in biological research: an overview},
+\bjtitle{Journal of Biological Research-Thessaloniki}
+\bvolume{22}(\bissue{1})
+(\byear{2015}),
+\bfpage{1}--\blpage{16}.
+\end{barticle}
+\endbibitem
+
+\bibitem{largerdfbench}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{A.}~\bsnm{Hasnain}} and
+\bauthor{\binits{A.-C.}~\bsnm{Ngonga~Ngomo}},
+\batitle{{LargeRDFBench}: A Billion Triples Benchmark for {SPARQL} Endpoint
+  Federation},
+\bjtitle{{SSRN} Electronic Journal}
+(\byear{2018}).
+doi:\doiurl{10.2139/ssrn.3199316}.
+\end{barticle}
+\endbibitem
+
+\bibitem{mathivanan2019big}
+\begin{barticle}
+\bauthor{\binits{S.}~\bsnm{Mathivanan}} and
+\bauthor{\binits{P.}~\bsnm{Jayagopal}},
+\batitle{A big data virtualization role in agriculture: a comprehensive
+  review},
+\bjtitle{Walailak Journal of Science and Technology (WJST)}
+\bvolume{16}(\bissue{2})
+(\byear{2019}),
+\bfpage{55}--\blpage{70}.
+\end{barticle}
+\endbibitem
+
+\bibitem{messaoudi2016survey}
+\begin{barticle}
+\bauthor{\binits{C.}~\bsnm{Messaoudi}},
+\bauthor{\binits{R.}~\bsnm{Fissoune}} and
+\bauthor{\binits{H.}~\bsnm{Badir}},
+\batitle{A survey of semantic integration approaches in bioinformatics},
+\bjtitle{World Academy of Science, Engineering and Technology, International
+  Journal of Computer, Electrical, Automation, Control and Information
+  Engineering}
+\bvolume{10}(\bissue{12})
+(\byear{2016}),
+\bfpage{1924}--\blpage{1929}.
+\end{barticle}
+\endbibitem
+
+\bibitem{mountantonakis2019large}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Mountantonakis}} and
+\bauthor{\binits{Y.}~\bsnm{Tzitzikas}},
+\batitle{Large-scale semantic integration of linked data: A survey},
+\bjtitle{{ACM} Computing Surveys ({CSUR})}
+\bvolume{52}(\bissue{5})
+(\byear{2019}),
+\bfpage{1}--\blpage{40}.
+\end{barticle}
+\endbibitem
+
+\bibitem{prasser2018data}
+\begin{barticle}
+\bauthor{\binits{F.}~\bsnm{Prasser}},
+\bauthor{\binits{O.}~\bsnm{Kohlbacher}},
+\bauthor{\binits{U.}~\bsnm{Mansmann}},
+\bauthor{\binits{B.}~\bsnm{Bauer}} and
+\bauthor{\binits{K.A.}~\bsnm{Kuhn}},
+\batitle{Data integration for future medicine ({DIFUTURE})},
+\bjtitle{Methods of information in medicine}
+\bvolume{57}(\bissue{S 01})
+(\byear{2018}),
+\bfpage{e57}--\blpage{e65}.
+\end{barticle}
+\endbibitem
+
+\bibitem{rakhmawati2013holistic}
+\begin{bchapter}
+\bauthor{\binits{N.A.}~\bsnm{Rakhmawati}},
+\bctitle{An Holistic Evaluation of Federated {SPARQL} Query Engine},
+in: \bbtitle{Proc. of Information Systems International Conference (ISICO)},
+\byear{2013}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{rakhmawati2013interlinks}
+\begin{barticle}
+\bauthor{\binits{N.A.}~\bsnm{Rakhmawati}} \betal,
+\batitle{How interlinks influence federated over sparql endpoints},
+\bjtitle{International Journal of Internet and Distributed Systems}
+\bvolume{1}(\bissue{01})
+(\byear{2013}),
+\bfpage{1}.
+\end{barticle}
+\endbibitem
+
+\bibitem{rakhmawati2019dataset}
+\begin{barticle}
+\bauthor{\binits{N.A.}~\bsnm{Rakhmawati}} and
+\bauthor{\binits{L.N.}~\bsnm{Fadzilah}},
+\batitle{Dataset characteristics identification for federated sparql query},
+\bjtitle{Scientific Journal of Informatics}
+\bvolume{6}(\bissue{1})
+(\byear{2019}),
+\bfpage{23}--\blpage{33}.
+\end{barticle}
+\endbibitem
+
+\bibitem{ranjan2009comparative}
+\begin{botherref}
+\oauthor{\binits{V.}~\bsnm{Ranjan}},
+A comparative study between {ETL} (Extract, Transform, Load) and {ELT}
+  (Extract, Load and Transform) approach for loading data into data warehouse,
+\textit{MS Candidate in Computer Science at California State University, Chico,
+  CA}
+\textbf{95929}
+(2009).
+\end{botherref}
+\endbibitem
+
+\bibitem{sernadela2016knowledge}
+\begin{barticle}
+\bauthor{\binits{P.}~\bsnm{Sernadela}},
+\bauthor{\binits{P.}~\bsnm{Lopes}} and
+\bauthor{\binits{J.L.}~\bsnm{Oliveira}},
+\batitle{A knowledge federation architecture for rare disease patient
+  registries and biobanks},
+\bjtitle{J. Inf. Syst. Eng. Manag}
+\bvolume{1}(\bissue{1})
+(\byear{2016}),
+\bfpage{83}--\blpage{90}.
+\end{barticle}
+\endbibitem
+
+\bibitem{shi2021efficient}
+\begin{botherref}
+\oauthor{\binits{Y.}~\bsnm{Shi}},
+\oauthor{\binits{Y.}~\bsnm{Tong}},
+\oauthor{\binits{Y.}~\bsnm{Zeng}},
+\oauthor{\binits{Z.}~\bsnm{Zhou}},
+\oauthor{\binits{B.}~\bsnm{Ding}} and
+\oauthor{\binits{L.}~\bsnm{Chen}},
+Efficient Approximate Range Aggregation over Large-scale Spatial Data
+  Federation,
+\textit{{IEEE} Transactions on Knowledge and Data Engineering}
+(2021).
+\end{botherref}
+\endbibitem
+
+\bibitem{subramanian2020multi}
+\begin{barticle}
+\bauthor{\binits{I.}~\bsnm{Subramanian}},
+\bauthor{\binits{S.}~\bsnm{Verma}},
+\bauthor{\binits{S.}~\bsnm{Kumar}},
+\bauthor{\binits{A.}~\bsnm{Jere}} and
+\bauthor{\binits{K.}~\bsnm{Anamika}},
+\batitle{Multi-omics data integration, interpretation, and its application},
+\bjtitle{Bioinformatics and biology insights}
+\bvolume{14}
+(\byear{2020}),
+\bfpage{1}--\blpage{24}.
+doi:\doiurl{10.1177/1177932219899051}.
+\end{barticle}
+\endbibitem
+
+\bibitem{szabo2014data}
+\begin{botherref}
+\oauthor{\binits{P.}~\bsnm{Szabo}},
+Data Virtualization and Federation,
+\textit{Stone Bond Technologies}
+(2014).
+\end{botherref}
+\endbibitem
+
+\bibitem{van2012data}
+\begin{bbook}
+\bauthor{\binits{R.}~\bsnm{Van Der~Lans}},
+\bbtitle{Data Virtualization for business intelligence systems: revolutionizing
+  data integration for data warehouses},
+\bpublisher{Elsevier},
+\byear{2012}.
+\end{bbook}
+\endbibitem
+
+\bibitem{vidal2016selection}
+\begin{bchapter}
+\bauthor{\binits{M.-E.}~\bsnm{Vidal}},
+\bauthor{\binits{S.}~\bsnm{Castillo}},
+\bauthor{\binits{M.}~\bsnm{Acosta}},
+\bauthor{\binits{G.}~\bsnm{Montoya}} and
+\bauthor{\binits{G.}~\bsnm{Palma}},
+\bctitle{On the selection of {SPARQL} endpoints to efficiently execute
+  federated {SPARQL} queries},
+in: \bbtitle{Transactions on large-scale data-and knowledge-centered systems
+  XXV},
+\bpublisher{Springer},
+\byear{2016},
+pp.~\bfpage{109}--\blpage{149}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{wu2019selective}
+\begin{barticle}
+\bauthor{\binits{C.}~\bsnm{Wu}},
+\bauthor{\binits{F.}~\bsnm{Zhou}},
+\bauthor{\binits{J.}~\bsnm{Ren}},
+\bauthor{\binits{X.}~\bsnm{Li}},
+\bauthor{\binits{Y.}~\bsnm{Jiang}} and
+\bauthor{\binits{S.}~\bsnm{Ma}},
+\batitle{A selective review of multi-level omics data integration using
+  variable selection},
+\bjtitle{High-throughput}
+\bvolume{8}(\bissue{1})
+(\byear{2019}),
+\bfpage{4}.
+\end{barticle}
+\endbibitem
+
+\bibitem{wylot2018rdf}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Wylot}},
+\bauthor{\binits{M.}~\bsnm{Hauswirth}},
+\bauthor{\binits{P.}~\bsnm{Cudr{\'e}-Mauroux}} and
+\bauthor{\binits{S.}~\bsnm{Sakr}},
+\batitle{RDF data storage and query processing schemes: A survey},
+\bjtitle{{ACM} Computing Surveys ({CSUR})}
+\bvolume{51}(\bissue{4})
+(\byear{2018}),
+\bfpage{1}--\blpage{36}.
+\end{barticle}
+\endbibitem
+
+\bibitem{zhang2011data}
+\begin{botherref}
+\oauthor{\binits{Z.}~\bsnm{Zhang}},
+\oauthor{\binits{V.B.}~\bsnm{Bajic}},
+\oauthor{\binits{J.}~\bsnm{Yu}},
+\oauthor{\binits{K.-H.}~\bsnm{Cheung}} and
+\oauthor{\binits{J.P.}~\bsnm{Townsend}},
+Data integration in bioinformatics: current efforts and challenges,
+\textit{Bioinformatics-Trends and Methodologies}
+(2011),
+41--56.
+\end{botherref}
+\endbibitem
+
+\bibitem{montoya2016federated}
+\begin{barticle}
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{H.}~\bsnm{Skaf{-}Molli}},
+\bauthor{\binits{P.}~\bsnm{Molli}} and
+\bauthor{\binits{M.}~\bsnm{Vidal}},
+\batitle{Federated {SPARQL} Query Processing with Replicated Fragments},
+\bjtitle{{BDA} 2016 Gestion de Donn{\'{e}}es--Principes, Technologies et
+  Applications 32 e anniversaire 15-18 novembre 2016, Poitiers, Futuroscope}
+\bvolume{421}(\bissue{170,078})
+(\byear{2016}),
+\bfpage{39}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/pvldb/KarpathiotakisA16}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Karpathiotakis}},
+\bauthor{\binits{I.}~\bsnm{Alagiannis}} and
+\bauthor{\binits{A.}~\bsnm{Ailamaki}},
+\batitle{Fast Queries Over Heterogeneous Data Through Engine Customization},
+\bjtitle{Proc. {VLDB} Endow.}
+\bvolume{9}(\bissue{12})
+(\byear{2016}),
+\bfpage{972}--\blpage{983}.
+doi:\doiurl{10.14778/2994509.2994516}.
+\end{barticle}
+\endbibitem
+
+\bibitem{kolev2016cloudmdsql}
+\begin{barticle}
+\bauthor{\binits{B.}~\bsnm{Kolev}},
+\bauthor{\binits{P.}~\bsnm{Valduriez}},
+\bauthor{\binits{C.}~\bsnm{Bondiombouy}},
+\bauthor{\binits{R.}~\bsnm{Jim{\'e}nez-Peris}},
+\bauthor{\binits{R.}~\bsnm{Pau}} and
+\bauthor{\binits{J.}~\bsnm{Pereira}},
+\batitle{CloudMdsQL: querying heterogeneous cloud data stores with a common
+  language},
+\bjtitle{Distributed and parallel databases}
+\bvolume{34}(\bissue{4})
+(\byear{2016}),
+\bfpage{463}--\blpage{503}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/titb/MoraEB12}
+\begin{barticle}
+\bauthor{\binits{O.}~\bsnm{Mora}},
+\bauthor{\binits{G.}~\bsnm{Engelbrecht}} and
+\bauthor{\binits{J.}~\bsnm{Bisbal}},
+\batitle{A Service-Oriented Distributed Semantic Mediator: Integrating
+  Multiscale Biomedical Information},
+\bjtitle{{IEEE} Trans. Inf. Technol. Biomed.}
+\bvolume{16}(\bissue{6})
+(\byear{2012}),
+\bfpage{1296}--\blpage{1303}.
+doi:\doiurl{10.1109/TITB.2012.2215045}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ijwet/StuckenschmidtVBH05}
+\begin{barticle}
+\bauthor{\binits{H.}~\bsnm{Stuckenschmidt}},
+\bauthor{\binits{R.}~\bsnm{Vdovjak}},
+\bauthor{\binits{J.}~\bsnm{Broekstra}} and
+\bauthor{\binits{G.}~\bsnm{Houben}},
+\batitle{Towards distributed processing of {RDF} path queries},
+\bjtitle{Int. J. Web Eng. Technol.}
+\bvolume{2}(\bissue{2/3})
+(\byear{2005}),
+\bfpage{207}--\blpage{230}.
+doi:\doiurl{10.1504/IJWET.2005.008484}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:journals/ijon/AhnENZIK17}
+\begin{barticle}
+\bauthor{\binits{J.}~\bsnm{Ahn}},
+\bauthor{\binits{J.}~\bsnm{Eom}},
+\bauthor{\binits{S.}~\bsnm{Nam}},
+\bauthor{\binits{N.}~\bsnm{Zong}},
+\bauthor{\binits{D.}~\bsnm{Im}} and
+\bauthor{\binits{H.}~\bsnm{Kim}},
+\batitle{xStore: Federated temporal query processing for large scale {RDF}
+  triples on a cloud environment},
+\bjtitle{Neurocomputing}
+\bvolume{256}
+(\byear{2017}),
+\bfpage{5}--\blpage{12}.
+doi:\doiurl{10.1016/j.neucom.2016.03.116}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:conf/biostec/MartinAMBBVBCSTDK08}
+\begin{bchapter}
+\bauthor{\binits{L.}~\bsnm{Mart{\'{\i}}n}},
+\bauthor{\binits{A.}~\bsnm{Anguita}},
+\bauthor{\binits{V.}~\bsnm{Maojo}},
+\bauthor{\binits{E.}~\bsnm{Bonsma}},
+\bauthor{\binits{A.I.D.}~\bsnm{Bucur}},
+\bauthor{\binits{J.}~\bsnm{Vrijnsen}},
+\bauthor{\binits{M.}~\bsnm{Brochhausen}},
+\bauthor{\binits{C.}~\bsnm{Cocos}},
+\bauthor{\binits{H.}~\bsnm{Stenzhorn}},
+\bauthor{\binits{M.}~\bsnm{Tsiknakis}},
+\bauthor{\binits{M.}~\bsnm{Doerr}} and
+\bauthor{\binits{H.}~\bsnm{Kondylakis}},
+\bctitle{Ontology Based Integration of Distributed and Heterogeneous Data
+  Sources in {ACGT}},
+in: \bbtitle{Proceedings of the First International Conference on Health
+  Informatics, {HEALTHINF} 2008, Funchal, Madeira, Portugal, January 28-31,
+  2008, Volume 1},
+\beditor{\binits{L.}~\bsnm{Azevedo}} and
+\beditor{\binits{A.R.}~\bsnm{Londral}}, eds,
+\bpublisher{{INSTICC} - Institute for Systems and Technologies of Information,
+  Control and Communication},
+\byear{2008},
+pp.~\bfpage{301}--\blpage{306}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{acosta2011evaluating}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Acosta}} and
+\bauthor{\binits{M.-E.}~\bsnm{Vidal}},
+\bctitle{Evaluating adaptive query processing techniques for federations of
+  sparql endpoints},
+in: \bbtitle{10th International Semantic Web Conference ({ISWC}) Demo Session},
+\binstitute{Citeseer},
+\byear{2011}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{armbrust2015spark}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Armbrust}},
+\bauthor{\binits{R.S.}~\bsnm{Xin}},
+\bauthor{\binits{C.}~\bsnm{Lian}},
+\bauthor{\binits{Y.}~\bsnm{Huai}},
+\bauthor{\binits{D.}~\bsnm{Liu}},
+\bauthor{\binits{J.K.}~\bsnm{Bradley}},
+\bauthor{\binits{X.}~\bsnm{Meng}},
+\bauthor{\binits{T.}~\bsnm{Kaftan}},
+\bauthor{\binits{M.J.}~\bsnm{Franklin}},
+\bauthor{\binits{A.}~\bsnm{Ghodsi}} \betal,
+\bctitle{Spark {SQL}: Relational data processing in spark},
+in: \bbtitle{Proceedings of the 2015 {ACM SIGMOD} international conference on
+  management of data},
+\byear{2015},
+pp.~\bfpage{1383}--\blpage{1394}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{bogdanov2020big}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Bogdanov}},
+\bauthor{\binits{A.}~\bsnm{Degtyarev}},
+\bauthor{\binits{N.}~\bsnm{Shchegoleva}},
+\bauthor{\binits{V.}~\bsnm{Korkhov}} and
+\bauthor{\binits{V.}~\bsnm{Khvatov}},
+\bctitle{Big Data Virtualization: Why and How?},
+in: \bbtitle{Proceedings of the 4th International Workshop on Data Life Cycle
+  in Physics (DLC)},
+\bsertitle{{CEUR} Workshop Proceedings (2679)},
+\byear{2020},
+pp.~\bfpage{11}--\blpage{21}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{buron2018rewriting}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Buron}},
+\bauthor{\binits{F.}~\bsnm{Goasdou{\'e}}},
+\bauthor{\binits{I.}~\bsnm{Manolescu}} and
+\bauthor{\binits{M.-L.}~\bsnm{Mugnier}},
+\bctitle{Rewriting-Based Query Answering for Semantic Data Integration
+  Systems},
+in: \bbtitle{{BDA}: Gestion de Donn{\'e}es--Principes, Technologies et
+  Applications},
+\byear{2018}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{cheng2020fedqpl}
+\begin{bchapter}
+\bauthor{\binits{S.}~\bsnm{Cheng}} and
+\bauthor{\binits{O.}~\bsnm{Hartig}},
+\bctitle{{FedQPL}: A Language for Logical Query Plans over Heterogeneous
+  Federations of {RDF} Data Sources},
+in: \bbtitle{Proceedings of the 22nd International Conference on Information
+  Integration and Web-based Applications \& Services},
+\byear{2020},
+pp.~\bfpage{436}--\blpage{445}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{conf/SEMAPRO}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Katasonov}},
+\bctitle{DataBearings: An Efficient Semantic Approach to Data Virtualization
+  and Federation},
+in: \bbtitle{The Ninth International Conference on Advances in Semantic
+  Processing, {SEMAPRO} 2015},
+\byear{2015}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/adbis/HaiQZ18}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Hai}},
+\bauthor{\binits{C.}~\bsnm{Quix}} and
+\bauthor{\binits{C.}~\bsnm{Zhou}},
+\bctitle{Query Rewriting for Heterogeneous Data Lakes},
+in: \bbtitle{Advances in Databases and Information Systems - 22nd European
+  Conference, {ADBIS} 2018, Budapest, Hungary, September 2-5, 2018,
+  Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11019},
+\bpublisher{Springer},
+\byear{2018},
+pp.~\bfpage{35}--\blpage{49}.
+doi:\doiurl{10.1007/978-3-319-98398-1\_3}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/adbis/SawadogoSFFLD19}
+\begin{bchapter}
+\bauthor{\binits{P.N.}~\bsnm{Sawadogo}},
+\bauthor{\binits{{\'{E}}.}~\bsnm{Scholly}},
+\bauthor{\binits{C.}~\bsnm{Favre}},
+\bauthor{\binits{{\'{E}}.}~\bsnm{Ferey}},
+\bauthor{\binits{S.}~\bsnm{Loudcher}} and
+\bauthor{\binits{J.}~\bsnm{Darmont}},
+\bctitle{Metadata Systems for Data Lakes: Models and Features},
+in: \bbtitle{Proceedings of 1st International Workshop on BI and Big Data
+  Applications (BBIGAP) co-located with {ADBIS} 2019, Bled, Slovenia, September
+  8-11, 2019, Proceedings},
+\bsertitle{Communications in Computer and Information Science},
+Vol.~\bseriesno{1064},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{440}--\blpage{451}.
+doi:\doiurl{10.1007/978-3-030-30278-8\_43}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/amw/ArandaP14}
+\begin{bchapter}
+\bauthor{\binits{C.B.}~\bsnm{Aranda}} and
+\bauthor{\binits{A.}~\bsnm{Polleres}},
+\bctitle{Towards Equivalences for Federated {SPARQL} Queries},
+in: \bbtitle{Proceedings of the 8th Alberto Mendelzon Workshop on Foundations
+  of Data Management, Cartagena de Indias, Colombia, June 4-6, 2014},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1189},
+\bpublisher{{CEUR-WS}.org},
+\byear{2014}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/amw/ArandaUAD15}
+\begin{bchapter}
+\bauthor{\binits{C.B.}~\bsnm{Aranda}},
+\bauthor{\binits{M.}~\bsnm{Ugarte}},
+\bauthor{\binits{M.}~\bsnm{Arenas}} and
+\bauthor{\binits{M.}~\bsnm{Dumontier}},
+\bctitle{A Preliminary Investigation into {SPARQL} Query Complexity and
+  Federation in {Bio2RDF}},
+in: \bbtitle{Proceedings of the 9th Alberto Mendelzon International Workshop on
+  Foundations of Data Management, Lima, Peru, May 6 - 8, 2015},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1378},
+\bpublisher{CEUR-WS.org},
+\byear{2015}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/bigdata/YangCCN19}
+\begin{bchapter}
+\bauthor{\binits{F.}~\bsnm{Yang}},
+\bauthor{\binits{A.}~\bsnm{Crainiceanu}},
+\bauthor{\binits{Z.}~\bsnm{Chen}} and
+\bauthor{\binits{D.}~\bsnm{Needham}},
+\bctitle{Cluster-Based Join for Geographically Distributed Big {RDF} Data},
+in: \bbtitle{2019 {IEEE} International Congress on Big Data, BigData Congress
+  2019, Milan, Italy, July 8-13, 2019},
+\bpublisher{{IEEE}},
+\byear{2019},
+pp.~\bfpage{170}--\blpage{178}.
+doi:\doiurl{10.1109/BigDataCongress.2019.00037}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/bigdataconf/KharlamovMBBBJL16}
+\begin{bchapter}
+\bauthor{\binits{E.}~\bsnm{Kharlamov}},
+\bauthor{\binits{T.P.}~\bsnm{Mailis}},
+\bauthor{\binits{K.}~\bsnm{Bereta}},
+\bauthor{\binits{D.}~\bsnm{Bilidas}},
+\bauthor{\binits{S.}~\bsnm{Brandt}},
+\bauthor{\binits{E.}~\bsnm{Jim{\'{e}}nez{-}Ruiz}},
+\bauthor{\binits{S.}~\bsnm{Lamparter}},
+\bauthor{\binits{C.}~\bsnm{Neuenstadt}},
+\bauthor{\binits{{\"{O}}.L.}~\bsnm{{\"{O}}z{\c{c}}ep}},
+\bauthor{\binits{A.}~\bsnm{Soylu}},
+\bauthor{\binits{C.}~\bsnm{Svingos}},
+\bauthor{\binits{G.}~\bsnm{Xiao}},
+\bauthor{\binits{D.}~\bsnm{Zheleznyakov}},
+\bauthor{\binits{D.}~\bsnm{Calvanese}},
+\bauthor{\binits{I.}~\bsnm{Horrocks}},
+\bauthor{\binits{M.}~\bsnm{Giese}},
+\bauthor{\binits{Y.E.}~\bsnm{Ioannidis}},
+\bauthor{\binits{Y.}~\bsnm{Kotidis}},
+\bauthor{\binits{R.}~\bsnm{M{\"{o}}ller}} and
+\bauthor{\binits{A.}~\bsnm{Waaler}},
+\bctitle{A semantic approach to polystores},
+in: \bbtitle{2016 {IEEE} International Conference on Big Data {(IEEE} BigData
+  2016), Washington DC, USA, December 5-8, 2016},
+\bpublisher{{IEEE} Computer Society},
+\byear{2016},
+pp.~\bfpage{2565}--\blpage{2573}.
+doi:\doiurl{10.1109/BigData.2016.7840898}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/bigdataconf/TanCGM17}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Tan}},
+\bauthor{\binits{R.}~\bsnm{Chirkova}},
+\bauthor{\binits{V.}~\bsnm{Gadepally}} and
+\bauthor{\binits{T.G.}~\bsnm{Mattson}},
+\bctitle{Enabling query processing across heterogeneous data models: {A}
+  survey},
+in: \bbtitle{2017 {IEEE} International Conference on Big Data {(IEEE} BigData
+  2017), Boston, {MA}, {USA}, December 11-14, 2017},
+\bpublisher{{IEEE} Computer Society},
+\byear{2017},
+pp.~\bfpage{3211}--\blpage{3220}.
+doi:\doiurl{10.1109/BigData.2017.8258302}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/cidr/KarpathiotakisA15}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Karpathiotakis}},
+\bauthor{\binits{I.}~\bsnm{Alagiannis}},
+\bauthor{\binits{T.}~\bsnm{Heinis}},
+\bauthor{\binits{M.}~\bsnm{Branco}} and
+\bauthor{\binits{A.}~\bsnm{Ailamaki}},
+\bctitle{Just-In-Time Data Virtualization: Lightweight Data Management with
+  ViDa},
+in: \bbtitle{Seventh Biennial Conference on Innovative Data Systems Research,
+  {CIDR} 2015, Asilomar, CA, USA, January 4-7, 2015, Online Proceedings},
+\bpublisher{www.cidrdb.org},
+\byear{2015}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/cidr/QuamarST20}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Quamar}},
+\bauthor{\binits{J.}~\bsnm{Straube}} and
+\bauthor{\binits{Y.}~\bsnm{Tian}},
+\bctitle{Enabling Rich Queries Over Heterogeneous Data From Diverse Sources In
+  HealthCare},
+in: \bbtitle{10th Conference on Innovative Data Systems Research, {CIDR} 2020,
+  Amsterdam, The Netherlands, January 12-15, 2020, Online Proceedings},
+\bpublisher{www.cidrdb.org},
+\byear{2020}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/cidr/WangBBHHHHJMMMM17}
+\begin{bchapter}
+\bauthor{\binits{J.}~\bsnm{Wang}},
+\bauthor{\binits{T.}~\bsnm{Baker}},
+\bauthor{\binits{M.}~\bsnm{Balazinska}},
+\bauthor{\binits{D.}~\bsnm{Halperin}},
+\bauthor{\binits{B.}~\bsnm{Haynes}},
+\bauthor{\binits{B.}~\bsnm{Howe}},
+\bauthor{\binits{D.}~\bsnm{Hutchison}},
+\bauthor{\binits{S.}~\bsnm{Jain}},
+\bauthor{\binits{R.}~\bsnm{Maas}},
+\bauthor{\binits{P.}~\bsnm{Mehta}},
+\bauthor{\binits{D.}~\bsnm{Moritz}},
+\bauthor{\binits{B.}~\bsnm{Myers}},
+\bauthor{\binits{J.}~\bsnm{Ortiz}},
+\bauthor{\binits{D.}~\bsnm{Suciu}},
+\bauthor{\binits{A.}~\bsnm{Whitaker}} and
+\bauthor{\binits{S.}~\bsnm{Xu}},
+\bctitle{The Myria Big Data Management and Analytics System and Cloud
+  Services},
+in: \bbtitle{8th Biennial Conference on Innovative Data Systems Research,
+  {CIDR} 2017, Chaminade, {CA}, {USA}, January 8-11, 2017, Online Proceedings},
+\bpublisher{www.cidrdb.org},
+\byear{2017}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/cikm/LuHC18}
+\begin{bchapter}
+\bauthor{\binits{J.}~\bsnm{Lu}},
+\bauthor{\binits{I.}~\bsnm{Holubov{\'{a}}}} and
+\bauthor{\binits{B.}~\bsnm{Cautis}},
+\bctitle{Multi-model Databases and Tightly Integrated Polystores: Current
+  Practices, Comparisons, and Open Challenges},
+in: \bbtitle{Proceedings of the 27th {ACM} International Conference on
+  Information and Knowledge Management, {CIKM} 2018, Torino, Italy, October
+  22-26, 2018},
+\bpublisher{{ACM}},
+\byear{2018},
+pp.~\bfpage{2301}--\blpage{2302}.
+doi:\doiurl{10.1145/3269206.3274269}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/closer/KolevBLVJPP16}
+\begin{bchapter}
+\bauthor{\binits{B.}~\bsnm{Kolev}},
+\bauthor{\binits{C.}~\bsnm{Bondiombouy}},
+\bauthor{\binits{O.}~\bsnm{Levchenko}},
+\bauthor{\binits{P.}~\bsnm{Valduriez}},
+\bauthor{\binits{R.}~\bsnm{Jim{\'{e}}nez{-}Peris}},
+\bauthor{\binits{R.}~\bsnm{Pau}} and
+\bauthor{\binits{J.}~\bsnm{Pereira}},
+\bctitle{Design and Implementation of the {CloudMdsQL} Multistore System},
+in: \bbtitle{{CLOSER} 2016 - Proceedings of the 6th International Conference on
+  Cloud Computing and Services Science, Volume 1, Rome, Italy, April 23-25,
+  2016},
+\bpublisher{SciTePress},
+\byear{2016},
+pp.~\bfpage{352}--\blpage{359}.
+doi:\doiurl{10.5220/0005923803520359}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dagstuhl/BertossiB05}
+\begin{bchapter}
+\bauthor{\binits{L.E.}~\bsnm{Bertossi}} and
+\bauthor{\binits{L.}~\bsnm{Bravo}},
+\bctitle{Consistent Query Answers in Virtual Data Integration Systems},
+in: \bbtitle{Inconsistency Tolerance [result from a Dagstuhl seminar]},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{3300},
+\bpublisher{Springer},
+\byear{2005},
+pp.~\bfpage{42}--\blpage{83}.
+doi:\doiurl{10.1007/978-3-540-30597-2\_3}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dasfaa/00010OZ18}
+\begin{bchapter}
+\bauthor{\binits{P.}~\bsnm{Peng}},
+\bauthor{\binits{L.}~\bsnm{Zou}},
+\bauthor{\binits{M.T.}~\bsnm{{\"{O}}zsu}} and
+\bauthor{\binits{D.}~\bsnm{Zhao}},
+\bctitle{Multi-query Optimization in Federated {RDF} Systems},
+in: \bbtitle{Database Systems for Advanced Applications - 23rd International
+  Conference, {DASFAA} 2018, Gold Coast, QLD, Australia, May 21-24, 2018,
+  Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{10827},
+\bpublisher{Springer},
+\byear{2018},
+pp.~\bfpage{745}--\blpage{765}.
+doi:\doiurl{10.1007/978-3-319-91452-7\_48}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dexa/EndrisGLMVA17}
+\begin{bchapter}
+\bauthor{\binits{K.M.}~\bsnm{Endris}},
+\bauthor{\binits{M.}~\bsnm{Galkin}},
+\bauthor{\binits{I.}~\bsnm{Lytra}},
+\bauthor{\binits{M.N.}~\bsnm{Mami}},
+\bauthor{\binits{M.}~\bsnm{Vidal}} and
+\bauthor{\binits{S.}~\bsnm{Auer}},
+\bctitle{{MULDER:} Querying the Linked Data Web by Bridging {RDF} Molecule
+  Templates},
+in: \bbtitle{Database and Expert Systems Applications - 28th International
+  Conference, {DEXA} 2017, Lyon, France, August 28-31, 2017, Proceedings, Part
+  {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{10438},
+\bpublisher{Springer},
+\byear{2017},
+pp.~\bfpage{3}--\blpage{18}.
+doi:\doiurl{10.1007/978-3-319-64468-4\_1}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dexa/EndrisRVA19}
+\begin{bchapter}
+\bauthor{\binits{K.M.}~\bsnm{Endris}},
+\bauthor{\binits{P.D.}~\bsnm{Rohde}},
+\bauthor{\binits{M.}~\bsnm{Vidal}} and
+\bauthor{\binits{S.}~\bsnm{Auer}},
+\bctitle{Ontario: Federated Query Processing Against a Semantic Data Lake},
+in: \bbtitle{Database and Expert Systems Applications - 30th International
+  Conference, {DEXA} 2019, Linz, Austria, August 26-29, 2019, Proceedings, Part
+  {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11706},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{379}--\blpage{395}.
+doi:\doiurl{10.1007/978-3-030-27615-7\_29}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dexa/HacquesSMH19}
+\begin{bchapter}
+\bauthor{\binits{F.}~\bsnm{Hacques}},
+\bauthor{\binits{H.}~\bsnm{Skaf{-}Molli}},
+\bauthor{\binits{P.}~\bsnm{Molli}} and
+\bauthor{\binits{S.E.}~\bsnm{Hassad}},
+\bctitle{PFed: Recommending Plausible Federated {SPARQL} Queries},
+in: \bbtitle{Database and Expert Systems Applications - 30th International
+  Conference, {DEXA} 2019, Linz, Austria, August 26-29, 2019, Proceedings, Part
+  {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11707},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{184}--\blpage{197}.
+doi:\doiurl{10.1007/978-3-030-27618-8\_14}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dexa/RavatZ19}
+\begin{bchapter}
+\bauthor{\binits{F.}~\bsnm{Ravat}} and
+\bauthor{\binits{Y.}~\bsnm{Zhao}},
+\bctitle{Data Lakes: Trends and Perspectives},
+in: \bbtitle{Database and Expert Systems Applications - 30th International
+  Conference, {DEXA} 2019, Linz, Austria, August 26-29, 2019, Proceedings, Part
+  {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11706},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{304}--\blpage{313}.
+doi:\doiurl{10.1007/978-3-030-27615-7\_23}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dils/EndrisVA18}
+\begin{bchapter}
+\bauthor{\binits{K.M.}~\bsnm{Endris}},
+\bauthor{\binits{M.}~\bsnm{Vidal}} and
+\bauthor{\binits{S.}~\bsnm{Auer}},
+\bctitle{FedSDM: Semantic Data Manager for Federations of {RDF} Datasets},
+in: \bbtitle{Data Integration in the Life Sciences - 13th International
+  Conference, {DILS} 2018, Hannover, Germany, November 20-21, 2018,
+  Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11371},
+\bpublisher{Springer},
+\byear{2018},
+pp.~\bfpage{85}--\blpage{90}.
+doi:\doiurl{10.1007/978-3-030-06016-9\_8}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dlog/NolleN13}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Nolle}} and
+\bauthor{\binits{G.}~\bsnm{Nemirovski}},
+\bctitle{{ELITE:} An Entailment-Based Federated Query Engine for Complete and
+  Transparent Semantic Data Integration},
+in: \bbtitle{Informal Proceedings of the 26th International Workshop on
+  Description Logics, Ulm, Germany, July 23 - 26, 2013},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1014},
+\bpublisher{CEUR-WS.org},
+\byear{2013},
+pp.~\bfpage{854}--\blpage{867}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/edbt/BuronGMM20}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Buron}},
+\bauthor{\binits{F.}~\bsnm{Goasdou{\'{e}}}},
+\bauthor{\binits{I.}~\bsnm{Manolescu}} and
+\bauthor{\binits{M.}~\bsnm{Mugnier}},
+\bctitle{Ontology-Based {RDF} Integration of Heterogeneous Data},
+in: \bbtitle{Proceedings of the 23rd International Conference on Extending
+  Database Technology, {EDBT} 2020, Copenhagen, Denmark, March 30 - April 02,
+  2020},
+\bpublisher{OpenProceedings.org},
+\byear{2020},
+pp.~\bfpage{299}--\blpage{310}.
+doi:\doiurl{10.5441/002/edbt.2020.27}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/edbt/MakrisBGC12}
+\begin{bchapter}
+\bauthor{\binits{K.}~\bsnm{Makris}},
+\bauthor{\binits{N.}~\bsnm{Bikakis}},
+\bauthor{\binits{N.}~\bsnm{Gioldasis}} and
+\bauthor{\binits{S.}~\bsnm{Christodoulakis}},
+\bctitle{{SPARQL-RW:} transparent query access over mapped {RDF} data sources},
+in: \bbtitle{15th International Conference on Extending Database Technology,
+  {EDBT} '12, Berlin, Germany, March 27-30, 2012, Proceedings},
+\bpublisher{{ACM}},
+\byear{2012},
+pp.~\bfpage{610}--\blpage{613}.
+doi:\doiurl{10.1145/2247596.2247678}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/edbt/RohdeV20}
+\begin{bchapter}
+\bauthor{\binits{P.D.}~\bsnm{Rohde}} and
+\bauthor{\binits{M.}~\bsnm{Vidal}},
+\bctitle{Optimizing Federated Queries Based on the Physical Design of a Data
+  Lake},
+in: \bbtitle{Proceedings of the Workshop on Search, Exploration, and Analysis
+  in Heterogeneous Datastores (SEA Data), colocated with {EDBT/ICDT} 2020 Joint
+  Conference, Copenhagen, Denmark, March 30, 2020},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{2578},
+\bpublisher{CEUR-WS.org},
+\byear{2020}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/ekaw/UmbrichKHP12}
+\begin{bchapter}
+\bauthor{\binits{J.}~\bsnm{Umbrich}},
+\bauthor{\binits{M.}~\bsnm{Karnstedt}},
+\bauthor{\binits{A.}~\bsnm{Hogan}} and
+\bauthor{\binits{J.X.}~\bsnm{Parreira}},
+\bctitle{Freshening up while Staying Fast: Towards Hybrid {SPARQL} Queries},
+in: \bbtitle{Knowledge Engineering and Knowledge Management - 18th
+  International Conference, {EKAW} 2012, Galway City, Ireland, October 8-12,
+  2012. Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7603},
+\bpublisher{Springer},
+\byear{2012},
+pp.~\bfpage{164}--\blpage{174}.
+doi:\doiurl{10.1007/978-3-642-33876-2\_16}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/er/HaiQW19}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Hai}},
+\bauthor{\binits{C.}~\bsnm{Quix}} and
+\bauthor{\binits{D.}~\bsnm{Wang}},
+\bctitle{Relaxed Functional Dependency Discovery in Heterogeneous Data Lakes},
+in: \bbtitle{Conceptual Modeling - 38th International Conference, {ER} 2019,
+  Salvador, Brazil, November 4-7, 2019, Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11788},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{225}--\blpage{239}.
+doi:\doiurl{10.1007/978-3-030-33223-5\_19}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/ercimdl/FafaliosYT16}
+\begin{bchapter}
+\bauthor{\binits{P.}~\bsnm{Fafalios}},
+\bauthor{\binits{T.}~\bsnm{Yannakis}} and
+\bauthor{\binits{Y.}~\bsnm{Tzitzikas}},
+\bctitle{Querying the Web of Data with {SPARQL-LD}},
+in: \bbtitle{Research and Advanced Technology for Digital Libraries - 20th
+  International Conference on Theory and Practice of Digital Libraries, {TPDL}
+  2016, Hannover, Germany, September 5-9, 2016, Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{9819},
+\bpublisher{Springer},
+\byear{2016},
+pp.~\bfpage{175}--\blpage{187}.
+doi:\doiurl{10.1007/978-3-319-43997-6\_14}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/ArandaAC11}
+\begin{bchapter}
+\bauthor{\binits{C.B.}~\bsnm{Aranda}},
+\bauthor{\binits{M.}~\bsnm{Arenas}} and
+\bauthor{\binits{{\'{O}}.}~\bsnm{Corcho}},
+\bctitle{Semantics and Optimization of the {SPARQL} 1.1 Federation Extension},
+in: \bbtitle{The Semanic Web: Research and Applications - 8th Extended Semantic
+  Web Conference, {ESWC} 2011, Heraklion, Crete, Greece, May 29 - June 2, 2011,
+  Proceedings, Part {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{6644},
+\bpublisher{Springer},
+\byear{2011},
+pp.~\bfpage{1}--\blpage{15}.
+doi:\doiurl{10.1007/978-3-642-21064-8\_1}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/HartigP15}
+\begin{bchapter}
+\bauthor{\binits{O.}~\bsnm{Hartig}} and
+\bauthor{\binits{G.}~\bsnm{Pirr{\`{o}}}},
+\bctitle{A Context-Based Semantics for {SPARQL} Property Paths Over the Web},
+in: \bbtitle{The Semantic Web. Latest Advances and New Domains - 12th European
+  Semantic Web Conference, {ESWC} 2015, Portoroz, Slovenia, May 31 - June 4,
+  2015. Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{9088},
+\bpublisher{Springer},
+\byear{2015},
+pp.~\bfpage{71}--\blpage{87}.
+doi:\doiurl{10.1007/978-3-319-18818-8\_5}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/HasnainZZM0R17}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Hasnain}},
+\bauthor{\binits{S.S.}~\bsnm{e~Zainab}},
+\bauthor{\binits{D.}~\bsnm{Zehra}},
+\bauthor{\binits{Q.}~\bsnm{Mehmood}},
+\bauthor{\binits{M.}~\bsnm{Saleem}} and
+\bauthor{\binits{D.}~\bsnm{Rebholz{-}Schuhmann}},
+\bctitle{Federated Query Formulation and Processing through BioFed},
+in: \bbtitle{Proceedings of the Workshop on Semantic Web Solutions for
+  Large-scale Biomedical Data Analytics co-located with 14th Extended Semantic
+  Web Conference, SeWeBMeDA@ESWC 2017, Portoroz, Slovenia, May 28, 2017},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1948},
+\bpublisher{CEUR-WS.org},
+\byear{2017},
+pp.~\bfpage{16}--\blpage{19}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/Heling19}
+\begin{bchapter}
+\bauthor{\binits{L.}~\bsnm{Heling}},
+\bctitle{Quality-Driven Query Processing over Federated {RDF} Data Sources},
+in: \bbtitle{The Semantic Web: {ESWC} 2019 Satellite Events - {ESWC} 2019
+  Satellite Events, Portoro{\v{z}}, Slovenia, June 2-6, 2019, Revised Selected
+  Papers},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11762},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{209}--\blpage{219}.
+doi:\doiurl{10.1007/978-3-030-32327-1\_40}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/IbragimovHPZ15}
+\begin{bchapter}
+\bauthor{\binits{D.}~\bsnm{Ibragimov}},
+\bauthor{\binits{K.}~\bsnm{Hose}},
+\bauthor{\binits{T.B.}~\bsnm{Pedersen}} and
+\bauthor{\binits{E.}~\bsnm{Zim{\'{a}}nyi}},
+\bctitle{Processing Aggregate Queries in a Federation of {SPARQL} Endpoints},
+in: \bbtitle{The Semantic Web. Latest Advances and New Domains - 12th European
+  Semantic Web Conference, {ESWC} 2015, Portoroz, Slovenia, May 31 - June 4,
+  2015. Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{9088},
+\bpublisher{Springer},
+\byear{2015},
+pp.~\bfpage{269}--\blpage{285}.
+doi:\doiurl{10.1007/978-3-319-18818-8\_17}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/JakobsenMH19}
+\begin{bchapter}
+\bauthor{\binits{A.L.}~\bsnm{Jakobsen}},
+\bauthor{\binits{G.}~\bsnm{Montoya}} and
+\bauthor{\binits{K.}~\bsnm{Hose}},
+\bctitle{How Diverse Are Federated Query Execution Plans Really?},
+in: \bbtitle{The Semantic Web: {ESWC} 2019 Satellite Events - {ESWC} 2019
+  Satellite Events, Portoro{\v{z}}, Slovenia, June 2-6, 2019, Revised Selected
+  Papers},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11762},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{105}--\blpage{110}.
+doi:\doiurl{10.1007/978-3-030-32327-1\_21}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/Kjernsmo12}
+\begin{bchapter}
+\bauthor{\binits{K.}~\bsnm{Kjernsmo}},
+\bctitle{Sharing Statistics for {SPARQL} Federation Optimization, with Emphasis
+  on Benchmark Quality},
+in: \bbtitle{The Semantic Web: Research and Applications - 9th Extended
+  Semantic Web Conference, {ESWC} 2012, Heraklion, Crete, Greece, May 27-31,
+  2012. Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7295},
+\bpublisher{Springer},
+\byear{2012},
+pp.~\bfpage{828}--\blpage{832}.
+doi:\doiurl{10.1007/978-3-642-30284-8\_65}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/KostopoulosMTPC21}
+\begin{bchapter}
+\bauthor{\binits{C.}~\bsnm{Kostopoulos}},
+\bauthor{\binits{G.}~\bsnm{Mouchakis}},
+\bauthor{\binits{A.}~\bsnm{Troumpoukis}},
+\bauthor{\binits{N.}~\bsnm{Prokopaki{-}Kostopoulou}},
+\bauthor{\binits{A.}~\bsnm{Charalambidis}} and
+\bauthor{\binits{S.}~\bsnm{Konstantopoulos}},
+\bctitle{{KOBE:} Cloud-Native Open Benchmarking Engine for Federated Query
+  Processors},
+in: \bbtitle{The Semantic Web - 18th International Conference, {ESWC} 2021,
+  Virtual Event, June 6-10, 2021, Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{12731},
+\bpublisher{Springer},
+\byear{2021},
+pp.~\bfpage{664}--\blpage{679}.
+doi:\doiurl{10.1007/978-3-030-77385-4\_40}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/Kurniawan18}
+\begin{bchapter}
+\bauthor{\binits{K.}~\bsnm{Kurniawan}},
+\bctitle{Semantic Query Federation for Scalable Security Log Analysis},
+in: \bbtitle{The Semantic Web: {ESWC} 2018 Satellite Events - {ESWC} 2018
+  Satellite Events, Heraklion, Crete, Greece, June 3-7, 2018, Revised Selected
+  Papers},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11155},
+\bpublisher{Springer},
+\byear{2018},
+pp.~\bfpage{294}--\blpage{303}.
+doi:\doiurl{10.1007/978-3-319-98192-5\_48}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/LangeggerWB08}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Langegger}},
+\bauthor{\binits{W.}~\bsnm{W{\"{o}}{\ss}}} and
+\bauthor{\binits{M.}~\bsnm{Bl{\"{o}}chl}},
+\bctitle{A Semantic Web Middleware for Virtual Data Integration on the Web},
+in: \bbtitle{The Semantic Web: Research and Applications, 5th European Semantic
+  Web Conference, {ESWC} 2008, Tenerife, Canary Islands, Spain, June 1-5, 2008,
+  Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{5021},
+\bpublisher{Springer},
+\byear{2008},
+pp.~\bfpage{493}--\blpage{507}.
+doi:\doiurl{10.1007/978-3-540-68234-9\_37}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/LefrancoisZB17}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Lefran{\c{c}}ois}},
+\bauthor{\binits{A.}~\bsnm{Zimmermann}} and
+\bauthor{\binits{N.}~\bsnm{Bakerally}},
+\bctitle{A {SPARQL} Extension for Generating {RDF} from Heterogeneous Formats},
+in: \bbtitle{The Semantic Web - 14th International Conference, {ESWC} 2017,
+  Portoro{\v{z}}, Slovenia, May 28 - June 1, 2017, Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{10249},
+\byear{2017},
+pp.~\bfpage{35}--\blpage{50}.
+doi:\doiurl{10.1007/978-3-319-58068-5\_3}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/MamiGGEL20}
+\begin{bchapter}
+\bauthor{\binits{M.N.}~\bsnm{Mami}},
+\bauthor{\binits{I.}~\bsnm{Grangel{-}Gonz{\'{a}}lez}},
+\bauthor{\binits{D.}~\bsnm{Graux}},
+\bauthor{\binits{E.}~\bsnm{Elezi}} and
+\bauthor{\binits{F.}~\bsnm{L{\"{o}}sch}},
+\bctitle{Semantic Data Integration for the {SMT} Manufacturing Process Using
+  {SANSA} Stack},
+in: \bbtitle{The Semantic Web: {ESWC} 2020 Satellite Events - {ESWC} 2020
+  Satellite Events, Heraklion, Crete, Greece, May 31 - June 4, 2020, Revised
+  Selected Papers},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{12124},
+\bpublisher{Springer},
+\byear{2020},
+pp.~\bfpage{307}--\blpage{311}.
+doi:\doiurl{10.1007/978-3-030-62327-2\_47}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/MartinUA10}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Martin}},
+\bauthor{\binits{J.}~\bsnm{Unbehauen}} and
+\bauthor{\binits{S.}~\bsnm{Auer}},
+\bctitle{Improving the Performance of Semantic Web Applications with {SPARQL}
+  Query Caching},
+in: \bbtitle{The Semantic Web: Research and Applications, 7th Extended Semantic
+  Web Conference, {ESWC} 2010, Heraklion, Crete, Greece, May 30 - June 3, 2010,
+  Proceedings, Part {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{6089},
+\bpublisher{Springer},
+\byear{2010},
+pp.~\bfpage{304}--\blpage{318}.
+doi:\doiurl{10.1007/978-3-642-13489-0\_21}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/MinierMSM17}
+\begin{bchapter}
+\bauthor{\binits{T.}~\bsnm{Minier}},
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{H.}~\bsnm{Skaf{-}Molli}} and
+\bauthor{\binits{P.}~\bsnm{Molli}},
+\bctitle{PeNeLoop: Parallelizing Federated {SPARQL} Queries in Presence of
+  Replicated Fragments},
+in: \bbtitle{Proceedings of the Querying the Web of Data (QuWeDa 2017)
+  Workshops co-located with 14th {ESWC} 2017 {(ESWC} 2017), Portoroz, Slovenia,
+  May 28th - to - 29th, 2017},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1870},
+\bpublisher{CEUR-WS.org},
+\byear{2017},
+pp.~\bfpage{37}--\blpage{50}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/MinierMSM17a}
+\begin{bchapter}
+\bauthor{\binits{T.}~\bsnm{Minier}},
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{H.}~\bsnm{Skaf{-}Molli}} and
+\bauthor{\binits{P.}~\bsnm{Molli}},
+\bctitle{Parallelizing Federated {SPARQL} Queries in Presence of Replicated
+  Data},
+in: \bbtitle{The Semantic Web: {ESWC} 2017 Satellite Events - {ESWC} 2017
+  Satellite Events, Portoro{\v{z}}, Slovenia, May 28 - June 1, 2017, Revised
+  Selected Papers},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{10577},
+\bpublisher{Springer},
+\byear{2017},
+pp.~\bfpage{181}--\blpage{196}.
+doi:\doiurl{10.1007/978-3-319-70407-4\_33}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/NgomoS16}
+\begin{bchapter}
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}} and
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bctitle{Federated Query Processing: Challenges and Opportunities},
+in: \bbtitle{Proceedings of the 3rd International Workshop on Dataset PROFIling
+  and fEderated Search for Linked Data {(PROFILES} '16) co-located with the
+  13th {ESWC} 2016 Conference, Anissaras, Greece, May 30, 2016},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1597},
+\bpublisher{CEUR-WS.org},
+\byear{2016}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/OzkanSDN16}
+\begin{bchapter}
+\bauthor{\binits{E.C.}~\bsnm{Ozkan}},
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{E.}~\bsnm{Dogdu}} and
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}},
+\bctitle{{UPSP:} Unique Predicate-based Source Selection for {SPARQL} Endpoint
+  Federation},
+in: \bbtitle{Proceedings of the 3rd International Workshop on Dataset PROFIling
+  and fEderated Search for Linked Data {(PROFILES} '16) co-located with the
+  13th {ESWC} 2016 Conference, Anissaras, Greece, May 30, 2016},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1597},
+\bpublisher{CEUR-WS.org},
+\byear{2016}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/PriyatnaAC13}
+\begin{bchapter}
+\bauthor{\binits{F.}~\bsnm{Priyatna}},
+\bauthor{\binits{C.B.}~\bsnm{Aranda}} and
+\bauthor{\binits{{\'{O}}.}~\bsnm{Corcho}},
+\bctitle{Applying {SPARQL-DQP} for Federated {SPARQL} Querying over Google
+  Fusion Tables},
+in: \bbtitle{The Semantic Web: {ESWC} 2013 Satellite Events - {ESWC} 2013
+  Satellite Events, Montpellier, France, May 26-30, 2013, Revised Selected
+  Papers},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7955},
+\bpublisher{Springer},
+\byear{2013},
+pp.~\bfpage{189}--\blpage{193}.
+doi:\doiurl{10.1007/978-3-642-41242-4\_22}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/QuilitzL08}
+\begin{bchapter}
+\bauthor{\binits{B.}~\bsnm{Quilitz}} and
+\bauthor{\binits{U.}~\bsnm{Leser}},
+\bctitle{Querying Distributed {RDF} Data Sources with {SPARQL}},
+in: \bbtitle{The Semantic Web: Research and Applications, 5th European Semantic
+  Web Conference, {ESWC} 2008, Tenerife, Canary Islands, Spain, June 1-5, 2008,
+  Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{5021},
+\bpublisher{Springer},
+\byear{2008},
+pp.~\bfpage{524}--\blpage{538}.
+doi:\doiurl{10.1007/978-3-540-68234-9\_39}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/SaleemN14}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Saleem}} and
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}},
+\bctitle{HiBISCuS: Hypergraph-Based Source Selection for {SPARQL} Endpoint
+  Federation},
+in: \bbtitle{The Semantic Web: Trends and Challenges - 11th International
+  Conference, {ESWC} 2014, Anissaras, Crete, Greece, May 25-29, 2014.
+  Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{8465},
+\bpublisher{Springer},
+\byear{2014},
+pp.~\bfpage{176}--\blpage{191}.
+doi:\doiurl{10.1007/978-3-319-07443-6\_13}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/SchwarteHHSS11a}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Schwarte}},
+\bauthor{\binits{P.}~\bsnm{Haase}},
+\bauthor{\binits{K.}~\bsnm{Hose}},
+\bauthor{\binits{R.}~\bsnm{Schenkel}} and
+\bauthor{\binits{M.}~\bsnm{Schmidt}},
+\bctitle{FedX: {A} Federation Layer for Distributed Query Processing on Linked
+  Open Data},
+in: \bbtitle{The Semanic Web: Research and Applications - 8th Extended Semantic
+  Web Conference, {ESWC} 2011, Heraklion, Crete, Greece, May 29 - June 2, 2011,
+  Proceedings, Part {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{6644},
+\bpublisher{Springer},
+\byear{2011},
+pp.~\bfpage{481}--\blpage{486}.
+doi:\doiurl{10.1007/978-3-642-21064-8\_39}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/ThostD19}
+\begin{bchapter}
+\bauthor{\binits{V.}~\bsnm{Thost}} and
+\bauthor{\binits{J.}~\bsnm{Dolby}},
+\bctitle{{QED:} Out-of-the-Box Datasets for {SPARQL} Query Evaluation},
+in: \bbtitle{The Semantic Web - 16th International Conference, {ESWC} 2019,
+  Portoro{\v{z}}, Slovenia, June 2-6, 2019, Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11503},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{491}--\blpage{506}.
+doi:\doiurl{10.1007/978-3-030-21348-0\_32}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/YannakisFT18}
+\begin{bchapter}
+\bauthor{\binits{T.}~\bsnm{Yannakis}},
+\bauthor{\binits{P.}~\bsnm{Fafalios}} and
+\bauthor{\binits{Y.}~\bsnm{Tzitzikas}},
+\bctitle{Heuristics-based Query Reordering for Federated Queries in {SPARQL}
+  1.1 and {SPARQL-LD}},
+in: \bbtitle{Proceedings of the 2nd Workshop on Querying the Web of Data
+  co-located with 15th Extended Semantic Web Conference {(ESWC} 2018),
+  Heraklion, Greece, June 3, 2018},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{2110},
+\bpublisher{CEUR-WS.org},
+\byear{2018},
+pp.~\bfpage{74}--\blpage{88}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/hci/Gombos016}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Gombos}} and
+\bauthor{\binits{A.}~\bsnm{Kiss}},
+\bctitle{Federated Query Evaluation Supported by {SPARQL} Recommendation},
+in: \bbtitle{Human Interface and the Management of Information: Information,
+  Design and Interaction - 18th International Conference, {HCI} International
+  2016 Toronto, Canada, July 17-22, 2016, Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{9734},
+\bpublisher{Springer},
+\byear{2016},
+pp.~\bfpage{263}--\blpage{274}.
+doi:\doiurl{10.1007/978-3-319-40349-6\_25}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/hpec/GadepallyCDEHKM16}
+\begin{bchapter}
+\bauthor{\binits{V.}~\bsnm{Gadepally}},
+\bauthor{\binits{P.}~\bsnm{Chen}},
+\bauthor{\binits{J.}~\bsnm{Duggan}},
+\bauthor{\binits{A.J.}~\bsnm{Elmore}},
+\bauthor{\binits{B.}~\bsnm{Haynes}},
+\bauthor{\binits{J.}~\bsnm{Kepner}},
+\bauthor{\binits{S.}~\bsnm{Madden}},
+\bauthor{\binits{T.}~\bsnm{Mattson}} and
+\bauthor{\binits{M.}~\bsnm{Stonebraker}},
+\bctitle{The BigDAWG polystore system and architecture},
+in: \bbtitle{2016 {IEEE} High Performance Extreme Computing Conference, {HPEC}
+  2016, Waltham, MA, USA, September 13-15, 2016},
+\bpublisher{{IEEE}},
+\byear{2016},
+pp.~\bfpage{1}--\blpage{6}.
+doi:\doiurl{10.1109/HPEC.2016.7761636}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/i-semantics/0002PSHN18}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{A.}~\bsnm{Potocki}},
+\bauthor{\binits{T.}~\bsnm{Soru}},
+\bauthor{\binits{O.}~\bsnm{Hartig}} and
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}},
+\bctitle{CostFed: Cost-Based Query Optimization for {SPARQL} Endpoint
+  Federation},
+in: \bbtitle{Proceedings of the 14th International Conference on Semantic
+  Systems, SEMANTiCS 2018, Vienna, Austria, September 10-13, 2018},
+\bsertitle{Procedia Computer Science},
+Vol.~\bseriesno{137},
+\bpublisher{Elsevier},
+\byear{2018},
+pp.~\bfpage{163}--\blpage{174}.
+doi:\doiurl{10.1016/j.procs.2018.09.016}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/i-semantics/CharalambidisTK15}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Charalambidis}},
+\bauthor{\binits{A.}~\bsnm{Troumpoukis}} and
+\bauthor{\binits{S.}~\bsnm{Konstantopoulos}},
+\bctitle{SemaGrow: optimizing federated {SPARQL} queries},
+in: \bbtitle{Proceedings of the 11th International Conference on Semantic
+  Systems, SEMANTiCS 2015, Vienna, Austria, September 15-17, 2015},
+\bpublisher{{ACM}},
+\byear{2015},
+pp.~\bfpage{121}--\blpage{128}.
+doi:\doiurl{10.1145/2814864.2814886}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/i-semantics/GalkinEACVA17}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Galkin}},
+\bauthor{\binits{K.M.}~\bsnm{Endris}},
+\bauthor{\binits{M.}~\bsnm{Acosta}},
+\bauthor{\binits{D.}~\bsnm{Collarana}},
+\bauthor{\binits{M.}~\bsnm{Vidal}} and
+\bauthor{\binits{S.}~\bsnm{Auer}},
+\bctitle{SMJoin: {A} Multi-way Join Operator for {SPARQL} Queries},
+in: \bbtitle{Proceedings of the 13th International Conference on Semantic
+  Systems, SEMANTiCS 2017, Amsterdam, The Netherlands, September 11-14, 2017},
+\bpublisher{{ACM}},
+\byear{2017},
+pp.~\bfpage{104}--\blpage{111}.
+doi:\doiurl{10.1145/3132218.3132220}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/i-semantics/HaaseMZ10}
+\begin{bchapter}
+\bauthor{\binits{P.}~\bsnm{Haase}},
+\bauthor{\binits{T.}~\bsnm{Math{\"{a}}{\ss}}} and
+\bauthor{\binits{M.}~\bsnm{Ziller}},
+\bctitle{An evaluation of approaches to federated query processing over linked
+  data},
+in: \bbtitle{Proceedings the 6th International Conference on Semantic Systems,
+  {I-SEMANTICS} 2010, Graz, Austria, September 1-3, 2010},
+\bsertitle{{ACM} International Conference Proceeding Series},
+\bpublisher{{ACM}},
+\byear{2010}.
+doi:\doiurl{10.1145/1839707.1839713}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/i-semantics/JaiswalL17}
+\begin{bchapter}
+\bauthor{\binits{S.}~\bsnm{Jaiswal}} and
+\bauthor{\binits{M.}~\bsnm{Lefran{\c{c}}ois}},
+\bctitle{Towards Federated Queries for Web of Things Devices},
+in: \bbtitle{Proceedings of Workshop on Semantic Interoperability and
+  Standardization in the IoT (SIS-IoT) co-located with the 13th International
+  Conference on Semantic Systems (SEMANTiCS 2017), Amsterdam, Netherlands,
+  September 11 and 14, 2017},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{2063},
+\bpublisher{CEUR-WS.org},
+\byear{2017}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/icdcs/SinghalZNSO19}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Singhal}},
+\bauthor{\binits{N.}~\bsnm{Zhang}},
+\bauthor{\binits{L.}~\bsnm{Nardi}},
+\bauthor{\binits{M.}~\bsnm{Shahbaz}} and
+\bauthor{\binits{K.}~\bsnm{Olukotun}},
+\bctitle{Polystore++: Accelerated Polystore System for Heterogeneous
+  Workloads},
+in: \bbtitle{39th {IEEE} International Conference on Distributed Computing
+  Systems, {ICDCS} 2019, Dallas, TX, USA, July 7-10, 2019},
+\bpublisher{{IEEE}},
+\byear{2019},
+pp.~\bfpage{1641}--\blpage{1651}.
+doi:\doiurl{10.1109/ICDCS.2019.00163}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/icde/BlakeleyCERW05}
+\begin{bchapter}
+\bauthor{\binits{J.A.}~\bsnm{Blakeley}},
+\bauthor{\binits{C.}~\bsnm{Cunningham}},
+\bauthor{\binits{N.}~\bsnm{Ellis}},
+\bauthor{\binits{B.}~\bsnm{Rathakrishnan}} and
+\bauthor{\binits{M.}~\bsnm{Wu}},
+\bctitle{Distributed/Heterogeneous Query Processing in Microsoft {SQL} Server},
+in: \bbtitle{Proceedings of the 21st International Conference on Data
+  Engineering, {ICDE} 2005, 5-8 April 2005, Tokyo, Japan},
+\bpublisher{{IEEE} Computer Society},
+\byear{2005},
+pp.~\bfpage{1001}--\blpage{1012}.
+doi:\doiurl{10.1109/ICDE.2005.51}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/icde/LeKDL12}
+\begin{bchapter}
+\bauthor{\binits{W.}~\bsnm{Le}},
+\bauthor{\binits{A.}~\bsnm{Kementsietsidis}},
+\bauthor{\binits{S.}~\bsnm{Duan}} and
+\bauthor{\binits{F.}~\bsnm{Li}},
+\bctitle{Scalable Multi-query Optimization for {SPARQL}},
+in: \bbtitle{{IEEE} 28th International Conference on Data Engineering {(ICDE}
+  2012), Washington, DC, {USA} (Arlington, Virginia), 1-5 April, 2012},
+\bpublisher{{IEEE} Computer Society},
+\byear{2012},
+pp.~\bfpage{666}--\blpage{677}.
+doi:\doiurl{10.1109/ICDE.2012.37}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/icde/SchlegelSBGK14}
+\begin{bchapter}
+\bauthor{\binits{K.}~\bsnm{Schlegel}},
+\bauthor{\binits{F.}~\bsnm{Stegmaier}},
+\bauthor{\binits{S.}~\bsnm{Bayerl}},
+\bauthor{\binits{M.}~\bsnm{Granitzer}} and
+\bauthor{\binits{H.}~\bsnm{Kosch}},
+\bctitle{Balloon Fusion: {SPARQL} rewriting based on unified co-reference
+  information},
+in: \bbtitle{Proceedings of 5th International Workshop on Data Engineering
+  meets the Semantic Web (DESWeb) co-located with the 30th International
+  Conference on Data Engineering, {ICDE} 2014, Chicago, IL, USA, March 31 -
+  April 4, 2014},
+\bpublisher{{IEEE} Computer Society},
+\byear{2014},
+pp.~\bfpage{254}--\blpage{259}.
+doi:\doiurl{10.1109/ICDEW.2014.6818335}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/iceis/AzevedoSSM20}
+\begin{bchapter}
+\bauthor{\binits{L.G.}~\bsnm{Azevedo}},
+\bauthor{\binits{E.F.}~\bsnm{de~Souza~Soares}},
+\bauthor{\binits{R.}~\bsnm{Souza}} and
+\bauthor{\binits{M.F.}~\bsnm{Moreno}},
+\bctitle{Modern Federated Database Systems: An Overview},
+in: \bbtitle{Proceedings of the 22nd International Conference on Enterprise
+  Information Systems, {ICEIS} 2020, Prague, Czech Republic, May 5-7, 2020,
+  Volume 1},
+\bpublisher{{SCITEPRESS}},
+\byear{2020},
+pp.~\bfpage{276}--\blpage{283}.
+doi:\doiurl{10.5220/0009795402760283}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/icsoc/MouhoubGM14}
+\begin{bchapter}
+\bauthor{\binits{M.L.}~\bsnm{Mouhoub}},
+\bauthor{\binits{D.}~\bsnm{Grigori}} and
+\bauthor{\binits{M.}~\bsnm{Manouvrier}},
+\bctitle{A Framework for Searching Semantic Data and Services with {SPARQL}},
+in: \bbtitle{Service-Oriented Computing - 12th International Conference,
+  {ICSOC} 2014, Paris, France, November 3-6, 2014. Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{8831},
+\bpublisher{Springer},
+\byear{2014},
+pp.~\bfpage{123}--\blpage{138}.
+doi:\doiurl{10.1007/978-3-662-45391-9\_9}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/ihc/NetoSS020}
+\begin{bchapter}
+\bauthor{\binits{C.G.}~\bsnm{Neto}},
+\bauthor{\binits{L.}~\bsnm{Salgado}},
+\bauthor{\binits{V.}~\bsnm{Str{\"{o}}ele}} and
+\bauthor{\binits{D.}~\bsnm{de~Oliveira}},
+\bctitle{SigniFYIng APIs in the context of polystore systems: a case study with
+  BigDAWG},
+in: \bbtitle{{IHC} '20: {XIX} Brazilian Symposium on Human Factors in Computing
+  Systems, Online Event / Diamantina, Brazil, October 26-30, 2020},
+\bpublisher{{ACM}},
+\byear{2020},
+pp.~\bfpage{57:1}--\blpage{57:6}.
+doi:\doiurl{10.1145/3424953.3426654}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/iiwas/ChengH20}
+\begin{bchapter}
+\bauthor{\binits{S.}~\bsnm{Cheng}} and
+\bauthor{\binits{O.}~\bsnm{Hartig}},
+\bctitle{FedQPL: {A} Language for Logical Query Plans over Heterogeneous
+  Federations of {RDF} Data Sources},
+in: \bbtitle{iiWAS '20: The 22nd International Conference on Information
+  Integration and Web-based Applications {\&amp;} Services, Virtual Event /
+  Chiang Mai, Thailand, November 30 - December 2, 2020},
+\bpublisher{{ACM}},
+\byear{2020},
+pp.~\bfpage{436}--\blpage{445}.
+doi:\doiurl{10.1145/3428757.3429120}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/iiwas/Lorey13}
+\begin{bchapter}
+\bauthor{\binits{J.}~\bsnm{Lorey}},
+\bctitle{{SPARQL} Endpoint Metrics for Quality-Aware Linked Data Consumption},
+in: \bbtitle{The 15th International Conference on Information Integration and
+  Web-based Applications {\&amp;} Services, {IIWAS} '13, Vienna, Austria,
+  December 2-4, 2013},
+\bpublisher{{ACM}},
+\byear{2013},
+p.~\bfpage{319}.
+doi:\doiurl{10.1145/2539150.2539240}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/iiwas/MamiGSJAL19}
+\begin{bchapter}
+\bauthor{\binits{M.N.}~\bsnm{Mami}},
+\bauthor{\binits{D.}~\bsnm{Graux}},
+\bauthor{\binits{S.}~\bsnm{Scerri}},
+\bauthor{\binits{H.}~\bsnm{Jabeen}},
+\bauthor{\binits{S.}~\bsnm{Auer}} and
+\bauthor{\binits{J.}~\bsnm{Lehmann}},
+\bctitle{Uniform Access to Multiform Data Lakes using Semantic Technologies},
+in: \bbtitle{Proceedings of the 21st International Conference on Information
+  Integration and Web-based Applications {\&amp;} Services, iiWAS 2019, Munich,
+  Germany, December 2-4, 2019},
+\bpublisher{{ACM}},
+\byear{2019},
+pp.~\bfpage{313}--\blpage{322}.
+doi:\doiurl{10.1145/3366030.3366054}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/iiwas/RakhmawatiSLD14}
+\begin{bchapter}
+\bauthor{\binits{N.A.}~\bsnm{Rakhmawati}},
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{S.}~\bsnm{Lalithsena}} and
+\bauthor{\binits{S.}~\bsnm{Decker}},
+\bctitle{QFed: Query Set For Federated {SPARQL} Query Benchmark},
+in: \bbtitle{Proceedings of the 16th International Conference on Information
+  Integration and Web-based Applications {\&amp;} Services, Hanoi, Vietnam,
+  December 4-6, 2014},
+\bpublisher{{ACM}},
+\byear{2014},
+pp.~\bfpage{207}--\blpage{211}.
+doi:\doiurl{10.1145/2684200.2684321}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/ijcai/WacheVVSSNH01}
+\begin{bchapter}
+\bauthor{\binits{H.}~\bsnm{Wache}},
+\bauthor{\binits{T.}~\bsnm{V{\"{o}}gele}},
+\bauthor{\binits{U.}~\bsnm{Visser}},
+\bauthor{\binits{H.}~\bsnm{Stuckenschmidt}},
+\bauthor{\binits{G.}~\bsnm{Schuster}},
+\bauthor{\binits{H.}~\bsnm{Neumann}} and
+\bauthor{\binits{S.}~\bsnm{H{\"{u}}bner}},
+\bctitle{Ontology-Based Integration of Information - {A} Survey of Existing
+  Approaches},
+in: \bbtitle{Proceedings of the {IJCAI-01} Workshop on Ontologies and
+  Information Sharing, Seattle, USA, August 4-5, 2001},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{47},
+\bpublisher{CEUR-WS.org},
+\byear{2001}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/kcap/ValdestilhasS019}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Valdestilhas}},
+\bauthor{\binits{T.}~\bsnm{Soru}} and
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bctitle{More Complete Resultset Retrieval from Large Heterogeneous {RDF}
+  Sources},
+in: \bbtitle{Proceedings of the 10th International Conference on Knowledge
+  Capture, {K-CAP} 2019, Marina Del Rey, CA, USA, November 19-21, 2019},
+\bpublisher{{ACM}},
+\byear{2019},
+pp.~\bfpage{223}--\blpage{230}.
+doi:\doiurl{10.1145/3360901.3364436}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/kesw/Nikolov0TK17}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Nikolov}},
+\bauthor{\binits{P.}~\bsnm{Haase}},
+\bauthor{\binits{J.}~\bsnm{Trame}} and
+\bauthor{\binits{A.}~\bsnm{Kozlov}},
+\bctitle{Ephedra: Efficiently Combining {RDF} Data and Services Using {SPARQL}
+  Federation},
+in: \bbtitle{Knowledge Engineering and Semantic Web - 8th International
+  Conference, {KESW} 2017, Szczecin, Poland, November 8-10, 2017, Proceedings},
+\bsertitle{Communications in Computer and Information Science},
+Vol.~\bseriesno{786},
+\bpublisher{Springer},
+\byear{2017},
+pp.~\bfpage{246}--\blpage{262}.
+doi:\doiurl{10.1007/978-3-319-69548-8\_17}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/kesw/RakhmawatiUKHH13}
+\begin{bchapter}
+\bauthor{\binits{N.A.}~\bsnm{Rakhmawati}},
+\bauthor{\binits{J.}~\bsnm{Umbrich}},
+\bauthor{\binits{M.}~\bsnm{Karnstedt}},
+\bauthor{\binits{A.}~\bsnm{Hasnain}} and
+\bauthor{\binits{M.}~\bsnm{Hausenblas}},
+\bctitle{A Comparison of Federation over {SPARQL} Endpoints Frameworks},
+in: \bbtitle{Knowledge Engineering and the Semantic Web - 4th International
+  Conference, {KESW} 2013, St. Petersburg, Russia, October 7-9, 2013.
+  Proceedings},
+\bsertitle{Communications in Computer and Information Science},
+Vol.~\bseriesno{394},
+\bpublisher{Springer},
+\byear{2013},
+pp.~\bfpage{132}--\blpage{146}.
+doi:\doiurl{10.1007/978-3-642-41360-5\_11}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/pods/GolshanHMT17}
+\begin{bchapter}
+\bauthor{\binits{B.}~\bsnm{Golshan}},
+\bauthor{\binits{A.Y.}~\bsnm{Halevy}},
+\bauthor{\binits{G.A.}~\bsnm{Mihaila}} and
+\bauthor{\binits{W.}~\bsnm{Tan}},
+\bctitle{Data Integration: After the Teenage Years},
+in: \bbtitle{Proceedings of the 36th {ACM} {SIGMOD-SIGACT-SIGAI} Symposium on
+  Principles of Database Systems, {PODS} 2017, Chicago, IL, USA, May 14-19,
+  2017},
+\bpublisher{{ACM}},
+\byear{2017},
+pp.~\bfpage{101}--\blpage{106}.
+doi:\doiurl{10.1145/3034786.3056124}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/rweb/ArenasP12}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Arenas}} and
+\bauthor{\binits{J.}~\bsnm{P{\'{e}}rez}},
+\bctitle{Federation and Navigation in {SPARQL} 1.1},
+in: \bbtitle{Reasoning Web. Semantic Technologies for Advanced Query Answering
+  - 8th International Summer School 2012, Vienna, Austria, September 3-8, 2012.
+  Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7487},
+\bpublisher{Springer},
+\byear{2012},
+pp.~\bfpage{78}--\blpage{111}.
+doi:\doiurl{10.1007/978-3-642-33158-9\_3}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/sac/FafaliosT19}
+\begin{bchapter}
+\bauthor{\binits{P.}~\bsnm{Fafalios}} and
+\bauthor{\binits{Y.}~\bsnm{Tzitzikas}},
+\bctitle{How many and what types of {SPARQL} queries can be answered through
+  zero-knowledge link traversal?},
+in: \bbtitle{Proceedings of the 34th {ACM/SIGAPP} Symposium on Applied
+  Computing, {SAC} 2019, Limassol, Cyprus, April 8-12, 2019},
+\bpublisher{{ACM}},
+\byear{2019},
+pp.~\bfpage{2267}--\blpage{2274}.
+doi:\doiurl{10.1145/3297280.3297505}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/scam/FinkGC20}
+\begin{bchapter}
+\bauthor{\binits{J.}~\bsnm{Fink}},
+\bauthor{\binits{M.}~\bsnm{Gobert}} and
+\bauthor{\binits{A.}~\bsnm{Cleve}},
+\bctitle{Adapting Queries to Database Schema Changes in Hybrid Polystores},
+in: \bbtitle{20th {IEEE} International Working Conference on Source Code
+  Analysis and Manipulation, {SCAM} 2020, Adelaide, Australia, September 28 -
+  October 2, 2020},
+\bpublisher{{IEEE}},
+\byear{2020},
+pp.~\bfpage{127}--\blpage{131}.
+doi:\doiurl{10.1109/SCAM51674.2020.00019}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semco/RinaldiR18}
+\begin{bchapter}
+\bauthor{\binits{A.M.}~\bsnm{Rinaldi}} and
+\bauthor{\binits{C.}~\bsnm{Russo}},
+\bctitle{A Matching Framework for Multimedia Data Integration Using Semantics
+  and Ontologies},
+in: \bbtitle{12th {IEEE} International Conference on Semantic Computing, {ICSC}
+  2018, Laguna Hills, CA, USA, January 31 - February 2, 2018},
+\bpublisher{{IEEE} Computer Society},
+\byear{2018},
+pp.~\bfpage{363}--\blpage{368}.
+doi:\doiurl{10.1109/ICSC.2018.00074}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/AcostaVLCR11}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Acosta}},
+\bauthor{\binits{M.}~\bsnm{Vidal}},
+\bauthor{\binits{T.}~\bsnm{Lampo}},
+\bauthor{\binits{J.}~\bsnm{Castillo}} and
+\bauthor{\binits{E.}~\bsnm{Ruckhaus}},
+\bctitle{{ANAPSID:} An Adaptive Query Processing Engine for {SPARQL}
+  Endpoints},
+in: \bbtitle{The Semantic Web - {ISWC} 2011 - 10th International Semantic Web
+  Conference, Bonn, Germany, October 23-27, 2011, Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7031},
+\bpublisher{Springer},
+\byear{2011},
+pp.~\bfpage{18}--\blpage{34}.
+doi:\doiurl{10.1007/978-3-642-25073-6\_2}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/AliM019}
+\begin{bchapter}
+\bauthor{\binits{M.I.}~\bsnm{Ali}},
+\bauthor{\binits{Q.}~\bsnm{Mehmood}} and
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bctitle{Assessing, Monitoring and Analyzing Linked Data Quality in Public
+  {SPARQL} Endpoints},
+in: \bbtitle{Proceedings of the QuWeDa 2019: 3rd Workshop on Querying and
+  Benchmarking the Web of Data co-located with 18th International Semantic Web
+  Conference {(ISWC} 2019), Auckland, New Zealand, October 26-30, 2019},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{2496},
+\bpublisher{CEUR-WS.org},
+\byear{2019},
+pp.~\bfpage{37}--\blpage{50}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/LadwigT10}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Ladwig}} and
+\bauthor{\binits{T.}~\bsnm{Tran}},
+\bctitle{Linked Data Query Processing Strategies},
+in: \bbtitle{The Semantic Web - {ISWC} 2010 - 9th International Semantic Web
+  Conference, {ISWC} 2010, Shanghai, China, November 7-11, 2010, Revised
+  Selected Papers, Part {I}},
+\beditor{\binits{P.F.}~\bsnm{Patel{-}Schneider}},
+\beditor{\binits{Y.}~\bsnm{Pan}},
+\beditor{\binits{P.}~\bsnm{Hitzler}},
+\beditor{\binits{P.}~\bsnm{Mika}},
+\beditor{\binits{L.}~\bsnm{Zhang}},
+\beditor{\binits{J.Z.}~\bsnm{Pan}},
+\beditor{\binits{I.}~\bsnm{Horrocks}} and
+\beditor{\binits{B.}~\bsnm{Glimm}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{6496},
+\bpublisher{Springer},
+\byear{2010},
+pp.~\bfpage{453}--\blpage{469}.
+doi:\doiurl{10.1007/978-3-642-17746-0\_29}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/ArandaHUV13}
+\begin{bchapter}
+\bauthor{\binits{C.B.}~\bsnm{Aranda}},
+\bauthor{\binits{A.}~\bsnm{Hogan}},
+\bauthor{\binits{J.}~\bsnm{Umbrich}} and
+\bauthor{\binits{P.}~\bsnm{Vandenbussche}},
+\bctitle{{SPARQL} Web-Querying Infrastructure: Ready for Action?},
+in: \bbtitle{The Semantic Web - {ISWC} 2013 - 12th International Semantic Web
+  Conference, Sydney, NSW, Australia, October 21-25, 2013, Proceedings, Part
+  {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{8219},
+\bpublisher{Springer},
+\byear{2013},
+pp.~\bfpage{277}--\blpage{293}.
+doi:\doiurl{10.1007/978-3-642-41338-4\_18}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/ArandaPU14}
+\begin{bchapter}
+\bauthor{\binits{C.B.}~\bsnm{Aranda}},
+\bauthor{\binits{A.}~\bsnm{Polleres}} and
+\bauthor{\binits{J.}~\bsnm{Umbrich}},
+\bctitle{Strategies for Executing Federated Queries in {SPARQL1.1}},
+in: \bbtitle{The Semantic Web - {ISWC} 2014 - 13th International Semantic Web
+  Conference, Riva del Garda, Italy, October 19-23, 2014. Proceedings, Part
+  {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{8797},
+\bpublisher{Springer},
+\byear{2014},
+pp.~\bfpage{390}--\blpage{405}.
+doi:\doiurl{10.1007/978-3-319-11915-1\_25}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/BascaB10}
+\begin{bchapter}
+\bauthor{\binits{C.}~\bsnm{Basca}} and
+\bauthor{\binits{A.}~\bsnm{Bernstein}},
+\bctitle{Avalanche: Putting the Spirit of the Web back into Semantic Web
+  Querying},
+in: \bbtitle{Proceedings of the {ISWC} 2010 Posters {\&} Demonstrations Track:
+  Collected Abstracts, Shanghai, China, November 9, 2010},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{658},
+\bpublisher{CEUR-WS.org},
+\byear{2010}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/CastilloPV13}
+\begin{bchapter}
+\bauthor{\binits{S.}~\bsnm{Castillo}},
+\bauthor{\binits{G.}~\bsnm{Palma}} and
+\bauthor{\binits{M.}~\bsnm{Vidal}},
+\bctitle{{SILURIAN:} a Sparql vIsuaLizer for UndeRstanding querIes And
+  federatioNs},
+in: \bbtitle{Proceedings of the {ISWC} 2013 Posters {\&amp;} Demonstrations
+  Track, Sydney, Australia, October 23, 2013},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1035},
+\bpublisher{CEUR-WS.org},
+\byear{2013},
+pp.~\bfpage{137}--\blpage{140}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/Chaves-FragaGC17}
+\begin{bchapter}
+\bauthor{\binits{D.}~\bsnm{Chaves{-}Fraga}},
+\bauthor{\binits{C.}~\bsnm{Guti{\'{e}}rrez}} and
+\bauthor{\binits{{\'{O}}.}~\bsnm{Corcho}},
+\bctitle{On the Role of the {GRAPH} Clause in the Performance of Federated
+  {SPARQL} Queries},
+in: \bbtitle{Proceedings of the 4th International Workshop on Dataset PROFIling
+  and fEderated Search for Web Data {(PROFILES} 2017) co-located with The 16th
+  International Semantic Web Conference {(ISWC} 2017), Vienna, Austria, October
+  22, 2017},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1927},
+\bpublisher{CEUR-WS.org},
+\byear{2017}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/FafaliosT15}
+\begin{bchapter}
+\bauthor{\binits{P.}~\bsnm{Fafalios}} and
+\bauthor{\binits{Y.}~\bsnm{Tzitzikas}},
+\bctitle{{SPARQL-LD:} a {SPARQL} Extension for Fetching and Querying Linked
+  Data},
+in: \bbtitle{Proceedings of the {ISWC} 2015 Posters {\&amp;} Demonstrations
+  Track co-located with the 14th International Semantic Web Conference
+  (ISWC-2015), Bethlehem, PA, USA, October 11, 2015},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1486},
+\bpublisher{CEUR-WS.org},
+\byear{2015}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/GorlitzS11}
+\begin{bchapter}
+\bauthor{\binits{O.}~\bsnm{G{\"{o}}rlitz}} and
+\bauthor{\binits{S.}~\bsnm{Staab}},
+\bctitle{{SPLENDID:} {SPARQL} Endpoint Federation Exploiting {VOID}
+  Descriptions},
+in: \bbtitle{Proceedings of the Second International Workshop on Consuming
+  Linked Data (COLD2011), Bonn, Germany, October 23, 2011},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{782},
+\bpublisher{CEUR-WS.org},
+\byear{2011}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/GorlitzTS12}
+\begin{bchapter}
+\bauthor{\binits{O.}~\bsnm{G{\"{o}}rlitz}},
+\bauthor{\binits{M.}~\bsnm{Thimm}} and
+\bauthor{\binits{S.}~\bsnm{Staab}},
+\bctitle{{SPLODGE:} Systematic Generation of {SPARQL} Benchmark Queries for
+  Linked Open Data},
+in: \bbtitle{The Semantic Web - {ISWC} 2012 - 11th International Semantic Web
+  Conference, Boston, MA, USA, November 11-15, 2012, Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7649},
+\bpublisher{Springer},
+\byear{2012},
+pp.~\bfpage{116}--\blpage{132}.
+doi:\doiurl{10.1007/978-3-642-35176-1\_8}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/GrubenmannBMS17}
+\begin{bchapter}
+\bauthor{\binits{T.}~\bsnm{Grubenmann}},
+\bauthor{\binits{A.}~\bsnm{Bernstein}},
+\bauthor{\binits{D.}~\bsnm{Moor}} and
+\bauthor{\binits{S.}~\bsnm{Seuken}},
+\bctitle{Challenges of Source Selection in the WoD},
+in: \bbtitle{The Semantic Web - {ISWC} 2017 - 16th International Semantic Web
+  Conference, Vienna, Austria, October 21-25, 2017, Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{10587},
+\bpublisher{Springer},
+\byear{2017},
+pp.~\bfpage{313}--\blpage{328}.
+doi:\doiurl{10.1007/978-3-319-68288-4\_19}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/HartigBF09}
+\begin{bchapter}
+\bauthor{\binits{O.}~\bsnm{Hartig}},
+\bauthor{\binits{C.}~\bsnm{Bizer}} and
+\bauthor{\binits{J.C.}~\bsnm{Freytag}},
+\bctitle{Executing {SPARQL} Queries over the Web of Linked Data},
+in: \bbtitle{The Semantic Web - {ISWC} 2009, 8th International Semantic Web
+  Conference, {ISWC} 2009, Chantilly, VA, USA, October 25-29, 2009.
+  Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{5823},
+\bpublisher{Springer},
+\byear{2009},
+pp.~\bfpage{293}--\blpage{309}.
+doi:\doiurl{10.1007/978-3-642-04930-9\_19}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/Hasnain0NR18}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Hasnain}},
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}} and
+\bauthor{\binits{D.}~\bsnm{Rebholz{-}Schuhmann}},
+\bctitle{Extending LargeRDFBench for Multi-Source Data at Scale for {SPARQL}
+  Endpoint Federation},
+in: \bbtitle{Emerging Topics in Semantic Technologies - {ISWC} 2018 Satellite
+  Events [best papers from 13 of the workshops co-located with the {ISWC} 2018
+  conference]},
+\bsertitle{Studies on the Semantic Web},
+Vol.~\bseriesno{36},
+\bpublisher{{IOS} Press},
+\byear{2018},
+pp.~\bfpage{203}--\blpage{218}.
+doi:\doiurl{10.3233/978-1-61499-894-5-203}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/HernandezHRRZ16}
+\begin{bchapter}
+\bauthor{\binits{D.}~\bsnm{Hern{\'{a}}ndez}},
+\bauthor{\binits{A.}~\bsnm{Hogan}},
+\bauthor{\binits{C.}~\bsnm{Riveros}},
+\bauthor{\binits{C.}~\bsnm{Rojas}} and
+\bauthor{\binits{E.}~\bsnm{Zerega}},
+\bctitle{Querying Wikidata: Comparing SPARQL, Relational and Graph Databases},
+in: \bbtitle{The Semantic Web - {ISWC} 2016 - 15th International Semantic Web
+  Conference, Kobe, Japan, October 17-21, 2016, Proceedings, Part {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{9982},
+\byear{2016},
+pp.~\bfpage{88}--\blpage{103}.
+doi:\doiurl{10.1007/978-3-319-46547-0\_10}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/Konstantopoulos16}
+\begin{bchapter}
+\bauthor{\binits{S.}~\bsnm{Konstantopoulos}},
+\bauthor{\binits{A.}~\bsnm{Charalambidis}},
+\bauthor{\binits{G.}~\bsnm{Mouchakis}},
+\bauthor{\binits{A.}~\bsnm{Troumpoukis}},
+\bauthor{\binits{J.}~\bsnm{Jakobitsch}} and
+\bauthor{\binits{V.}~\bsnm{Karkaletsis}},
+\bctitle{Semantic Web Technologies and Big Data Infrastructures: {SPARQL}
+  Federated Querying of Heterogeneous Big Data Stores},
+in: \bbtitle{Proceedings of the {ISWC} 2016 Posters {\&amp;} Demonstrations
+  Track co-located with 15th International Semantic Web Conference {(ISWC}
+  2016), Kobe, Japan, October 19, 2016},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1690},
+\bpublisher{CEUR-WS.org},
+\byear{2016}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/MamiGSJA019}
+\begin{bchapter}
+\bauthor{\binits{M.N.}~\bsnm{Mami}},
+\bauthor{\binits{D.}~\bsnm{Graux}},
+\bauthor{\binits{S.}~\bsnm{Scerri}},
+\bauthor{\binits{H.}~\bsnm{Jabeen}},
+\bauthor{\binits{S.}~\bsnm{Auer}} and
+\bauthor{\binits{J.}~\bsnm{Lehmann}},
+\bctitle{How to Feed the Squerall with {RDF} and Other Data Nuts?},
+in: \bbtitle{Proceedings of the {ISWC} 2019 Satellite Tracks (Posters {\&amp;}
+  Demonstrations, Industry, and Outrageous Ideas) co-located with 18th
+  International Semantic Web Conference {(ISWC} 2019), Auckland, New Zealand,
+  October 26-30, 2019},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{2456},
+\bpublisher{CEUR-WS.org},
+\byear{2019},
+pp.~\bfpage{293}--\blpage{296}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/MamiGSJA019a}
+\begin{bchapter}
+\bauthor{\binits{M.N.}~\bsnm{Mami}},
+\bauthor{\binits{D.}~\bsnm{Graux}},
+\bauthor{\binits{S.}~\bsnm{Scerri}},
+\bauthor{\binits{H.}~\bsnm{Jabeen}},
+\bauthor{\binits{S.}~\bsnm{Auer}} and
+\bauthor{\binits{J.}~\bsnm{Lehmann}},
+\bctitle{Squerall: Virtual Ontology-Based Access to Heterogeneous and Large
+  Data Sources},
+in: \bbtitle{The Semantic Web - {ISWC} 2019 - 18th International Semantic Web
+  Conference, Auckland, New Zealand, October 26-30, 2019, Proceedings, Part
+  {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11779},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{229}--\blpage{245}.
+doi:\doiurl{10.1007/978-3-030-30796-7\_15}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/MontoyaSH17}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{H.}~\bsnm{Skaf{-}Molli}} and
+\bauthor{\binits{K.}~\bsnm{Hose}},
+\bctitle{The Odyssey Approach for Optimizing Federated {SPARQL} Queries},
+in: \bbtitle{The Semantic Web - {ISWC} 2017 - 16th International Semantic Web
+  Conference, Vienna, Austria, October 21-25, 2017, Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{10587},
+\bpublisher{Springer},
+\byear{2017},
+pp.~\bfpage{471}--\blpage{489}.
+doi:\doiurl{10.1007/978-3-319-68288-4\_28}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/MontoyaSMV15}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{H.}~\bsnm{Skaf{-}Molli}},
+\bauthor{\binits{P.}~\bsnm{Molli}} and
+\bauthor{\binits{M.}~\bsnm{Vidal}},
+\bctitle{Federated {SPARQL} Queries Processing with Replicated Fragments},
+in: \bbtitle{The Semantic Web - {ISWC} 2015 - 14th International Semantic Web
+  Conference, Bethlehem, PA, USA, October 11-15, 2015, Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{9366},
+\bpublisher{Springer},
+\byear{2015},
+pp.~\bfpage{36}--\blpage{51}.
+doi:\doiurl{10.1007/978-3-319-25007-6\_3}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/MontoyaVA12}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{M.}~\bsnm{Vidal}} and
+\bauthor{\binits{M.}~\bsnm{Acosta}},
+\bctitle{A Heuristic-Based Approach for Planning Federated {SPARQL} Queries},
+in: \bbtitle{Proceedings of the Third International Workshop on Consuming
+  Linked Data, {COLD} 2012, Boston, MA, USA, November 12, 2012},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{905},
+\bpublisher{CEUR-WS.org},
+\byear{2012}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/MontoyaVCRA12}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{M.}~\bsnm{Vidal}},
+\bauthor{\binits{{\'{O}}.}~\bsnm{Corcho}},
+\bauthor{\binits{E.}~\bsnm{Ruckhaus}} and
+\bauthor{\binits{C.B.}~\bsnm{Aranda}},
+\bctitle{Benchmarking Federated {SPARQL} Query Engines: Are Existing Testbeds
+  Enough?},
+in: \bbtitle{The Semantic Web - {ISWC} 2012 - 11th International Semantic Web
+  Conference, Boston, MA, USA, November 11-15, 2012, Proceedings, Part {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7650},
+\bpublisher{Springer},
+\byear{2012},
+pp.~\bfpage{313}--\blpage{324}.
+doi:\doiurl{10.1007/978-3-642-35173-0\_21}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/Nikolov0TK17}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Nikolov}},
+\bauthor{\binits{P.}~\bsnm{Haase}},
+\bauthor{\binits{J.}~\bsnm{Trame}} and
+\bauthor{\binits{A.}~\bsnm{Kozlov}},
+\bctitle{Ephedra: {SPARQL} Federation over {RDF} Data and Services},
+in: \bbtitle{Proceedings of the {ISWC} 2017 Posters {\&amp;} Demonstrations and
+  Industry Tracks co-located with 16th International Semantic Web Conference
+  {(ISWC} 2017), Vienna, Austria, October 23rd - to - 25th, 2017},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1963},
+\bpublisher{CEUR-WS.org},
+\byear{2017}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/NikolovSH13}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Nikolov}},
+\bauthor{\binits{A.}~\bsnm{Schwarte}} and
+\bauthor{\binits{C.}~\bsnm{H{\"{u}}tter}},
+\bctitle{FedSearch: Efficiently Combining Structured Queries and Full-Text
+  Search in a {SPARQL} Federation},
+in: \bbtitle{The Semantic Web - {ISWC} 2013 - 12th International Semantic Web
+  Conference, Sydney, NSW, Australia, October 21-25, 2013, Proceedings, Part
+  {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{8218},
+\bpublisher{Springer},
+\byear{2013},
+pp.~\bfpage{427}--\blpage{443}.
+doi:\doiurl{10.1007/978-3-642-41335-3\_27}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/Potocki0SHVN17}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Potocki}},
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{T.}~\bsnm{Soru}},
+\bauthor{\binits{O.}~\bsnm{Hartig}},
+\bauthor{\binits{M.}~\bsnm{Voigt}} and
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}},
+\bctitle{Federated {SPARQL} Query Processing Via CostFed},
+in: \bbtitle{Proceedings of the {ISWC} 2017 Posters {\&amp;} Demonstrations and
+  Industry Tracks co-located with 16th International Semantic Web Conference
+  {(ISWC} 2017), Vienna, Austria, October 23rd - to - 25th, 2017},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1963},
+\bpublisher{CEUR-WS.org},
+\byear{2017}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/SaleemAHMN15}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{M.I.}~\bsnm{Ali}},
+\bauthor{\binits{A.}~\bsnm{Hogan}},
+\bauthor{\binits{Q.}~\bsnm{Mehmood}} and
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}},
+\bctitle{{LSQ:} The Linked {SPARQL} Queries Dataset},
+in: \bbtitle{The Semantic Web - {ISWC} 2015 - 14th International Semantic Web
+  Conference, Bethlehem, PA, USA, October 11-15, 2015, Proceedings, Part {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{9367},
+\bpublisher{Springer},
+\byear{2015},
+pp.~\bfpage{261}--\blpage{269}.
+doi:\doiurl{10.1007/978-3-319-25010-6\_15}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/SaleemNPDH13}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{A.N.}~\bsnm{Ngomo}},
+\bauthor{\binits{J.X.}~\bsnm{Parreira}},
+\bauthor{\binits{H.F.}~\bsnm{Deus}} and
+\bauthor{\binits{M.}~\bsnm{Hauswirth}},
+\bctitle{{DAW:} Duplicate-AWare Federated Query Processing over the Web of
+  Data},
+in: \bbtitle{The Semantic Web - {ISWC} 2013 - 12th International Semantic Web
+  Conference, Sydney, NSW, Australia, October 21-25, 2013, Proceedings, Part
+  {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{8218},
+\bpublisher{Springer},
+\byear{2013},
+pp.~\bfpage{574}--\blpage{590}.
+doi:\doiurl{10.1007/978-3-642-41335-3\_36}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/Schmedding11}
+\begin{bchapter}
+\bauthor{\binits{F.}~\bsnm{Schmedding}},
+\bctitle{Incremental {SPARQL} Evaluation for Query Answering on Linked Data},
+in: \bbtitle{Proceedings of the Second International Workshop on Consuming
+  Linked Data (COLD2011), Bonn, Germany, October 23, 2011},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{782},
+\bpublisher{CEUR-WS.org},
+\byear{2011}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/SchmidtGHLST11}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Schmidt}},
+\bauthor{\binits{O.}~\bsnm{G{\"{o}}rlitz}},
+\bauthor{\binits{P.}~\bsnm{Haase}},
+\bauthor{\binits{G.}~\bsnm{Ladwig}},
+\bauthor{\binits{A.}~\bsnm{Schwarte}} and
+\bauthor{\binits{T.}~\bsnm{Tran}},
+\bctitle{FedBench: {A} Benchmark Suite for Federated Semantic Data Query
+  Processing},
+in: \bbtitle{The Semantic Web - {ISWC} 2011 - 10th International Semantic Web
+  Conference, Bonn, Germany, October 23-27, 2011, Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7031},
+\bpublisher{Springer},
+\byear{2011},
+pp.~\bfpage{585}--\blpage{600}.
+doi:\doiurl{10.1007/978-3-642-25073-6\_37}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/SchwarteHHSS11}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Schwarte}},
+\bauthor{\binits{P.}~\bsnm{Haase}},
+\bauthor{\binits{K.}~\bsnm{Hose}},
+\bauthor{\binits{R.}~\bsnm{Schenkel}} and
+\bauthor{\binits{M.}~\bsnm{Schmidt}},
+\bctitle{FedX: Optimization Techniques for Federated Query Processing on Linked
+  Data},
+in: \bbtitle{The Semantic Web - {ISWC} 2011 - 10th International Semantic Web
+  Conference, Bonn, Germany, October 23-27, 2011, Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7031},
+\bpublisher{Springer},
+\byear{2011},
+pp.~\bfpage{601}--\blpage{616}.
+doi:\doiurl{10.1007/978-3-642-25073-6\_38}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/TaelmanHSV18}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Taelman}},
+\bauthor{\binits{J.V.}~\bsnm{Herwegen}},
+\bauthor{\binits{M.V.}~\bsnm{Sande}} and
+\bauthor{\binits{R.}~\bsnm{Verborgh}},
+\bctitle{Comunica: {A} Modular {SPARQL} Query Engine for the Web},
+in: \bbtitle{The Semantic Web - {ISWC} 2018 - 17th International Semantic Web
+  Conference, Monterey, CA, USA, October 8-12, 2018, Proceedings, Part {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11137},
+\bpublisher{Springer},
+\byear{2018},
+pp.~\bfpage{239}--\blpage{255}.
+doi:\doiurl{10.1007/978-3-030-00668-6\_15}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/TroumpoukisKMPP20}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Troumpoukis}},
+\bauthor{\binits{S.}~\bsnm{Konstantopoulos}},
+\bauthor{\binits{G.}~\bsnm{Mouchakis}},
+\bauthor{\binits{N.}~\bsnm{Prokopaki{-}Kostopoulou}},
+\bauthor{\binits{C.}~\bsnm{Paris}},
+\bauthor{\binits{L.}~\bsnm{Bruzzone}},
+\bauthor{\binits{D.}~\bsnm{Pantazi}} and
+\bauthor{\binits{M.}~\bsnm{Koubarakis}},
+\bctitle{GeoFedBench: {A} Benchmark for Federated GeoSPARQL Query Processors},
+in: \bbtitle{Proceedings of the {ISWC} 2020 Demos and Industry Tracks: From
+  Novel Ideas to Industrial Practice co-located with 19th International
+  Semantic Web Conference {(ISWC} 2020), Globally online, November 1-6, 2020
+  {(UTC)}},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{2721},
+\bpublisher{CEUR-WS.org},
+\byear{2020},
+pp.~\bfpage{228}--\blpage{232}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/UmbrichKHP12}
+\begin{bchapter}
+\bauthor{\binits{J.}~\bsnm{Umbrich}},
+\bauthor{\binits{M.}~\bsnm{Karnstedt}},
+\bauthor{\binits{A.}~\bsnm{Hogan}} and
+\bauthor{\binits{J.X.}~\bsnm{Parreira}},
+\bctitle{Hybrid {SPARQL} Queries: Fresh vs. Fast Results},
+in: \bbtitle{The Semantic Web - {ISWC} 2012 - 11th International Semantic Web
+  Conference, Boston, MA, USA, November 11-15, 2012, Proceedings, Part {I}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7649},
+\bpublisher{Springer},
+\byear{2012},
+pp.~\bfpage{608}--\blpage{624}.
+doi:\doiurl{10.1007/978-3-642-35176-1\_38}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/WuYK15}
+\begin{bchapter}
+\bauthor{\binits{H.}~\bsnm{Wu}},
+\bauthor{\binits{A.}~\bsnm{Yamaguchi}} and
+\bauthor{\binits{J.}~\bsnm{Kim}},
+\bctitle{Dynamic Join Order Optimization for {SPARQL} Endpoint Federation},
+in: \bbtitle{Proceedings of the 11th International Workshop on Scalable
+  Semantic Web Knowledge Base Systems co-located with 14th International
+  Semantic Web Conference {(ISWC} 2015), Bethlehem, PA, USA, October 11, 2015},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1457},
+\bpublisher{CEUR-WS.org},
+\byear{2015},
+pp.~\bfpage{48}--\blpage{62}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/sigmod/AlotaibiBDMZ19}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Alotaibi}},
+\bauthor{\binits{D.}~\bsnm{Bursztyn}},
+\bauthor{\binits{A.}~\bsnm{Deutsch}},
+\bauthor{\binits{I.}~\bsnm{Manolescu}} and
+\bauthor{\binits{S.}~\bsnm{Zampetakis}},
+\bctitle{Towards Scalable Hybrid Stores: Constraint-Based Rewriting to the
+  Rescue},
+in: \bbtitle{Proceedings of the 2019 International Conference on Management of
+  Data, {SIGMOD} Conference 2019, Amsterdam, The Netherlands, June 30 - July 5,
+  2019},
+\bpublisher{{ACM}},
+\byear{2019},
+pp.~\bfpage{1660}--\blpage{1677}.
+doi:\doiurl{10.1145/3299869.3319895}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/sigmod/HaiGQ16}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Hai}},
+\bauthor{\binits{S.}~\bsnm{Geisler}} and
+\bauthor{\binits{C.}~\bsnm{Quix}},
+\bctitle{Constance: An Intelligent Data Lake System},
+in: \bbtitle{Proceedings of the 2016 International Conference on Management of
+  Data, {SIGMOD} Conference 2016, San Francisco, CA, USA, June 26 - July 01,
+  2016},
+\bpublisher{{ACM}},
+\byear{2016},
+pp.~\bfpage{2097}--\blpage{2100}.
+doi:\doiurl{10.1145/2882903.2899389}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/sigmod/HalperinACCKMORWWXBHS14}
+\begin{bchapter}
+\bauthor{\binits{D.}~\bsnm{Halperin}},
+\bauthor{\binits{V.T.}~\bsnm{de~Almeida}},
+\bauthor{\binits{L.L.}~\bsnm{Choo}},
+\bauthor{\binits{S.}~\bsnm{Chu}},
+\bauthor{\binits{P.}~\bsnm{Koutris}},
+\bauthor{\binits{D.}~\bsnm{Moritz}},
+\bauthor{\binits{J.}~\bsnm{Ortiz}},
+\bauthor{\binits{V.}~\bsnm{Ruamviboonsuk}},
+\bauthor{\binits{J.}~\bsnm{Wang}},
+\bauthor{\binits{A.}~\bsnm{Whitaker}},
+\bauthor{\binits{S.}~\bsnm{Xu}},
+\bauthor{\binits{M.}~\bsnm{Balazinska}},
+\bauthor{\binits{B.}~\bsnm{Howe}} and
+\bauthor{\binits{D.}~\bsnm{Suciu}},
+\bctitle{Demonstration of the Myria big data management service},
+in: \bbtitle{International Conference on Management of Data, {SIGMOD} 2014
+  (Demonstrations), Snowbird, UT, USA, June 22-27, 2014},
+\bpublisher{{ACM}},
+\byear{2014},
+pp.~\bfpage{881}--\blpage{884}.
+doi:\doiurl{10.1145/2588555.2594530}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/sigmod/HoseS12}
+\begin{bchapter}
+\bauthor{\binits{K.}~\bsnm{Hose}} and
+\bauthor{\binits{R.}~\bsnm{Schenkel}},
+\bctitle{Towards benefit-based {RDF} source selection for {SPARQL} queries},
+in: \bbtitle{Proceedings of the 4th International Workshop on Semantic Web
+  Information Management, {SWIM} 2012, Scottsdale, AZ, USA, May 20, 2012},
+\bpublisher{{ACM}},
+\byear{2012},
+p.~\bfpage{2}.
+doi:\doiurl{10.1145/2237867.2237869}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/sigmod/XuCT19}
+\begin{bchapter}
+\bauthor{\binits{L.}~\bsnm{Xu}},
+\bauthor{\binits{R.L.}~\bsnm{Cole}} and
+\bauthor{\binits{D.}~\bsnm{Ting}},
+\bctitle{Learning to optimize federated queries},
+in: \bbtitle{Proceedings of the Second International Workshop on Exploiting
+  Artificial Intelligence Techniques for Data Management, aiDM@SIGMOD 2019,
+  Amsterdam, The Netherlands, July 5, 2019},
+\bpublisher{{ACM}},
+\byear{2019},
+pp.~\bfpage{2:1}--\blpage{2:7}.
+doi:\doiurl{10.1145/3329859.3329873}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/sofsem/BouararBR17}
+\begin{bchapter}
+\bauthor{\binits{S.}~\bsnm{Bouarar}},
+\bauthor{\binits{L.}~\bsnm{Bellatreche}} and
+\bauthor{\binits{A.}~\bsnm{Roukh}},
+\bctitle{Eco-Data Warehouse Design Through Logical Variability},
+in: \bbtitle{{SOFSEM} 2017: Theory and Practice of Computer Science - 43rd
+  International Conference on Current Trends in Theory and Practice of Computer
+  Science, Limerick, Ireland, January 16-20, 2017, Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{10139},
+\bpublisher{Springer},
+\byear{2017},
+pp.~\bfpage{436}--\blpage{449}.
+doi:\doiurl{10.1007/978-3-319-51963-0\_34}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/sofsem/MegdicheRZ21}
+\begin{bchapter}
+\bauthor{\binits{I.}~\bsnm{Megdiche}},
+\bauthor{\binits{F.}~\bsnm{Ravat}} and
+\bauthor{\binits{Y.}~\bsnm{Zhao}},
+\bctitle{Metadata Management on Data Processing in Data Lakes},
+in: \bbtitle{{SOFSEM} 2021: Theory and Practice of Computer Science - 47th
+  International Conference on Current Trends in Theory and Practice of Computer
+  Science, {SOFSEM} 2021, Bolzano-Bozen, Italy, January 25-29, 2021,
+  Proceedings},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{12607},
+\bpublisher{Springer},
+\byear{2021},
+pp.~\bfpage{553}--\blpage{562}.
+doi:\doiurl{10.1007/978-3-030-67731-2\_40}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/stids/StolpeHH13}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Stolpe}},
+\bauthor{\binits{J.}~\bsnm{Halvorsen}} and
+\bauthor{\binits{B.J.}~\bsnm{Hansen}},
+\bctitle{Supporting Evacuation Missions with Ontology-Based {SPARQL}
+  Federation},
+in: \bbtitle{Proceedings of the Eighth Conference on Semantic Technologies for
+  Intelligence, Defense, and Security, Fairfax VA, USA, November 12-15, 2013},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1097},
+\bpublisher{CEUR-WS.org},
+\byear{2013},
+pp.~\bfpage{141}--\blpage{148}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/vldb/Sheth91}
+\begin{bchapter}
+\bauthor{\binits{A.P.}~\bsnm{Sheth}},
+\bctitle{Federated Database Systems for Managing Distributed, Heterogeneous,
+  and Autonomous Databases},
+in: \bbtitle{17th International Conference on Very Large Data Bases, September
+  3-6, 1991, Barcelona, Catalonia, Spain, Proceedings},
+\bpublisher{Morgan Kaufmann},
+\byear{1991},
+p.~\bfpage{489}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/webist/RakhmawatiKHD14}
+\begin{bchapter}
+\bauthor{\binits{N.A.}~\bsnm{Rakhmawati}},
+\bauthor{\binits{M.}~\bsnm{Karnstedt}},
+\bauthor{\binits{M.}~\bsnm{Hausenblas}} and
+\bauthor{\binits{S.}~\bsnm{Decker}},
+\bctitle{On Metrics for Measuring Fragmentation of Federation over {SPARQL}
+  Endpoints},
+in: \bbtitle{{WEBIST} 2014 - Proceedings of the 10th International Conference
+  on Web Information Systems and Technologies, Volume 1, Barcelona, Spain, 3-5
+  April, 2014},
+\bpublisher{SciTePress},
+\byear{2014},
+pp.~\bfpage{119}--\blpage{126}.
+doi:\doiurl{10.5220/0004760101190126}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/www/AcostaSFV18}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Acosta}},
+\bauthor{\binits{E.}~\bsnm{Simperl}},
+\bauthor{\binits{F.}~\bsnm{Fl{\"{o}}ck}} and
+\bauthor{\binits{M.}~\bsnm{Vidal}},
+\bctitle{{HARE:} An Engine for Enhancing Answer Completeness of {SPARQL}
+  Queries via Crowdsourcing},
+in: \bbtitle{Companion of the The Web Conference 2018 on The Web Conference
+  2018, {WWW} 2018, Lyon , France, April 23-27, 2018},
+\bpublisher{{ACM}},
+\byear{2018},
+pp.~\bfpage{501}--\blpage{505}.
+doi:\doiurl{10.1145/3184558.3186241}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/www/AkarHED12}
+\begin{bchapter}
+\bauthor{\binits{Z.}~\bsnm{Akar}},
+\bauthor{\binits{T.G.}~\bsnm{Hala{\c{c}}}},
+\bauthor{\binits{E.E.}~\bsnm{Ekinci}} and
+\bauthor{\binits{O.}~\bsnm{Dikenelli}},
+\bctitle{Querying the Web of Interlinked Datasets using {VOID} Descriptions},
+in: \bbtitle{{WWW2012} Workshop on Linked Data on the Web, Lyon, France, 16
+  April, 2012},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{937},
+\bpublisher{CEUR-WS.org},
+\byear{2012}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/www/CharalambidisKK15}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Charalambidis}},
+\bauthor{\binits{S.}~\bsnm{Konstantopoulos}} and
+\bauthor{\binits{V.}~\bsnm{Karkaletsis}},
+\bctitle{Dataset Descriptions for Optimizing Federated Querying},
+in: \bbtitle{Proceedings of the 24th International Conference on World Wide Web
+  Companion, {WWW} 2015, Florence, Italy, May 18-22, 2015 - Companion Volume},
+\bpublisher{{ACM}},
+\byear{2015},
+pp.~\bfpage{17}--\blpage{18}.
+doi:\doiurl{10.1145/2740908.2742779}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/www/MamiGSJA19}
+\begin{bchapter}
+\bauthor{\binits{M.N.}~\bsnm{Mami}},
+\bauthor{\binits{D.}~\bsnm{Graux}},
+\bauthor{\binits{S.}~\bsnm{Scerri}},
+\bauthor{\binits{H.}~\bsnm{Jabeen}} and
+\bauthor{\binits{S.}~\bsnm{Auer}},
+\bctitle{Querying Data Lakes using Spark and Presto},
+in: \bbtitle{The World Wide Web Conference, {WWW} 2019, San Francisco, CA, USA,
+  May 13-17, 2019},
+\bpublisher{{ACM}},
+\byear{2019},
+pp.~\bfpage{3574}--\blpage{3578}.
+doi:\doiurl{10.1145/3308558.3314132}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/www/MichelFG18}
+\begin{bchapter}
+\bauthor{\binits{F.}~\bsnm{Michel}},
+\bauthor{\binits{C.}~\bsnm{Faron{-}Zucker}} and
+\bauthor{\binits{F.}~\bsnm{Gandon}},
+\bctitle{{SPARQL} Micro-Services: Lightweight Integration of Web APIs and
+  Linked Data},
+in: \bbtitle{Workshop on Linked Data on the Web co-located with The Web
+  Conference 2018, LDOW@WWW 2018, Lyon, France April 23rd, 2018},
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{2073},
+\bpublisher{CEUR-WS.org},
+\byear{2018}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{gaignard2012semantic}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Gaignard}},
+\bauthor{\binits{J.}~\bsnm{Montagnat}},
+\bauthor{\binits{C.F.}~\bsnm{Zucker}} and
+\bauthor{\binits{O.}~\bsnm{Corby}},
+\bctitle{Semantic Federation of Distributed Neurodata},
+in: \bbtitle{MICCAI Workshop on Data-and Compute-Intensive Clinical and
+  Translational Imaging Applications},
+\byear{2012},
+pp.~\bfpage{41}--\blpage{50}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{golubchik2013send}
+\begin{bchapter}
+\bauthor{\binits{L.}~\bsnm{Golubchik}},
+\bauthor{\binits{S.}~\bsnm{Khuller}},
+\bauthor{\binits{K.}~\bsnm{Mukherjee}} and
+\bauthor{\binits{Y.}~\bsnm{Yao}},
+\bctitle{To send or not to send: Reducing the cost of data transmission},
+in: \bbtitle{2013 Proceedings IEEE INFOCOM},
+\binstitute{IEEE},
+\byear{2013},
+pp.~\bfpage{2472}--\blpage{2478}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{moreau2020ensuring}
+\begin{bchapter}
+\bauthor{\binits{B.}~\bsnm{Moreau}} and
+\bauthor{\binits{P.}~\bsnm{Serrano-Alvarado}},
+\bctitle{Ensuring License Compliance in Federated Query Processing},
+in: \bbtitle{36{\`e}me Conf{\'e}rence sur la Gestion de Donn{\'e}es--Principes,
+  Technologies et Applications (BDA 2020)},
+\byear{2020}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{mukherjee2017comparative}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Mukherjee}} and
+\bauthor{\binits{P.}~\bsnm{Kar}},
+\bctitle{A comparative review of data warehousing ETL tools with new trends and
+  industry insight},
+in: \bbtitle{2017 IEEE 7th International Advance Computing Conference (IACC)},
+\binstitute{IEEE},
+\byear{2017},
+pp.~\bfpage{943}--\blpage{948}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{VLDB2020fed}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Gobert}},
+\bctitle{Schema Evolution in Hybrid Databases Systems},
+in: \bbtitle{proceedings of the 46th International Conference on Very Large
+  Data Bases: PhD workshop track},
+\byear{2020}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{sethi2019presto}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Sethi}},
+\bauthor{\binits{M.}~\bsnm{Traverso}},
+\bauthor{\binits{D.}~\bsnm{Sundstrom}},
+\bauthor{\binits{D.}~\bsnm{Phillips}},
+\bauthor{\binits{W.}~\bsnm{Xie}},
+\bauthor{\binits{Y.}~\bsnm{Sun}},
+\bauthor{\binits{N.}~\bsnm{Yegitbasi}},
+\bauthor{\binits{H.}~\bsnm{Jin}},
+\bauthor{\binits{E.}~\bsnm{Hwang}},
+\bauthor{\binits{N.}~\bsnm{Shingte}} \betal,
+\bctitle{Presto: SQL on everything},
+in: \bbtitle{2019 IEEE 35th International Conference on Data Engineering
+  (ICDE)},
+\binstitute{IEEE},
+\byear{2019},
+pp.~\bfpage{1802}--\blpage{1813}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{begoli2018apache}
+\begin{bchapter}
+\bauthor{\binits{E.}~\bsnm{Begoli}},
+\bauthor{\binits{J.}~\bsnm{Camacho-Rodr{\'\i}guez}},
+\bauthor{\binits{J.}~\bsnm{Hyde}},
+\bauthor{\binits{M.J.}~\bsnm{Mior}} and
+\bauthor{\binits{D.}~\bsnm{Lemire}},
+\bctitle{Apache calcite: A foundational framework for optimized query
+  processing over heterogeneous data sources},
+in: \bbtitle{Proceedings of the 2018 International Conference on Management of
+  Data},
+\byear{2018},
+pp.~\bfpage{221}--\blpage{230}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{kim2018federated}
+\begin{bchapter}
+\bauthor{\binits{S.}~\bsnm{Kim}} and
+\bauthor{\binits{B.}~\bsnm{Moon}},
+\bctitle{Federated database system for scientific data},
+in: \bbtitle{Proceedings of the 30th International Conference on Scientific and
+  Statistical Database Management},
+\byear{2018},
+pp.~\bfpage{1}--\blpage{4}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{vu2019graph}
+\begin{bchapter}
+\bauthor{\binits{X.-S.}~\bsnm{Vu}},
+\bauthor{\binits{A.}~\bsnm{Ait-Mlouk}},
+\bauthor{\binits{E.}~\bsnm{Elmroth}} and
+\bauthor{\binits{L.}~\bsnm{Jiang}},
+\bctitle{Graph-based interactive data federation system for heterogeneous data
+  retrieval and analytics},
+in: \bbtitle{The World Wide Web Conference},
+\byear{2019},
+pp.~\bfpage{3595}--\blpage{3599}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{abel2019faster}
+\begin{botherref}
+\oauthor{\binits{A.}~\bsnm{Abel}},
+Faster SPARQL Federated Queries,
+PhD thesis,
+Universit{\'e} Rennes1,
+2019.
+\end{botherref}
+\endbibitem
+
+\bibitem{basca2015federated}
+\begin{botherref}
+\oauthor{\binits{C.}~\bsnm{Basca}},
+Federated SPARQL Query Processing Reconciling Diversity, Flexibility and
+  Performance on the Web of Data,
+PhD thesis,
+University of Zurich,
+2015.
+\end{botherref}
+\endbibitem
+
+\bibitem{bilidas2020database}
+\begin{botherref}
+\oauthor{\binits{D.}~\bsnm{Bilidas}},
+Database techniques for ontology-based data access,
+PhD thesis,
+National and Kapodistrian University of Athens,
+2020.
+\end{botherref}
+\endbibitem
+
+\bibitem{buron2020efficient}
+\begin{botherref}
+\oauthor{\binits{M.}~\bsnm{Buron}},
+Efficient reasoning on large-scale heterogeneous data,
+PhD thesis,
+Institut Polytechnique de Paris,
+2020.
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:phd/dnb/Endris20}
+\begin{botherref}
+\oauthor{\binits{K.M.}~\bsnm{Endris}},
+Federated Query Processing over Heterogeneous Data Sources in a Semantic Data
+  Lake,
+PhD thesis,
+University of Bonn, Germany,
+2020.
+\url{http://hdl.handle.net/20.500.11811/8347}.
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:phd/dnb/Saleem18}
+\begin{botherref}
+\oauthor{\binits{M.}~\bsnm{Saleem}},
+Efficient source selection and benchmarking for {SPARQL} endpoint query
+  federation,
+PhD thesis,
+Leipzig University, Germany,
+2018.
+ISBN 978-3-89838-732-3.
+\url{https://d-nb.info/1162645547}.
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:phd/dnb/Valdestilhas21}
+\begin{botherref}
+\oauthor{\binits{A.}~\bsnm{Valdestilhas}},
+Identifying, Relating, Consisting and Querying Large Heterogeneous {RDF}
+  Sources,
+PhD thesis,
+Leipzig University, Germany,
+2021.
+\url{https://nbn-resolving.org/urn:nbn:de:bsz:15-qucosa2-732931}.
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:phd/hal/Ayed19}
+\begin{botherref}
+\oauthor{\binits{R.}~\bsnm{Ayed}},
+Aggregated search in Distributed Graph Databases. (Recherche d'information
+  agr{\'{e}}gative dans des bases de graphes distribu{\'{e}}es),
+PhD thesis,
+University of Lyon, France,
+2019.
+\url{https://tel.archives-ouvertes.fr/tel-02520460}.
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:phd/hal/Buron20}
+\begin{botherref}
+\oauthor{\binits{M.}~\bsnm{Buron}},
+Efficient reasoning on large and heterogeneous graphs. (Raisonnement efficace
+  sur des grandsgraphes h{\'{e}}t{\'{e}}rog{\`{e}}nes),
+PhD thesis,
+{\'{E}}cole Polytechnique, Palaiseau, France,
+2020.
+\url{https://tel.archives-ouvertes.fr/tel-03107689}.
+\end{botherref}
+\endbibitem
+
+\bibitem{hai2020data}
+\begin{botherref}
+\oauthor{\binits{R.}~\bsnm{Hai}},
+\oauthor{\binits{R.}~\bsnm{Miller}},
+\oauthor{\binits{M.}~\bsnm{Jarke}} and
+\oauthor{\binits{C.J.}~\bsnm{Quix}},
+Data Integration and Metadata Management in Data Lakes,
+Technical Report,
+Lehrstuhl f{\"u}r Informatik 5 (Informationssysteme und Datenbanken),
+2020.
+\end{botherref}
+\endbibitem
+
+\bibitem{hasnain2017cataloguing}
+\begin{botherref}
+\oauthor{\binits{S.M.A.}~\bsnm{Hasnain}},
+Cataloguing and linking publicly available biomedical SPARQL endpoints for
+  federation-addressing aPosteriori data integration,
+PhD thesis,
+National University of IReland, Galway,
+2017.
+\end{botherref}
+\endbibitem
+
+\bibitem{molli2020semcat}
+\begin{botherref}
+\oauthor{\binits{P.}~\bsnm{Molli}},
+\oauthor{\binits{H.}~\bsnm{Skaf-Molli}} and
+\oauthor{\binits{A.}~\bsnm{Grall}},
+SemCat: Source Selection Services for Linked Data,
+PhD thesis,
+universit{\'e} de Nantes,
+2020.
+\end{botherref}
+\endbibitem
+
+\bibitem{paalsson2020querying}
+\begin{botherref}
+\oauthor{\binits{J.}~\bsnm{P{\aa}lsson}},
+Querying Federations of Eiffel Event Data Repositories,
+2020.
+\end{botherref}
+\endbibitem
+
+\bibitem{rakhmawati2017evaluating}
+\begin{botherref}
+\oauthor{\binits{N.A.}~\bsnm{Rakhmawati}},
+Evaluating and benchmarking the performance of federated SPARQL endpoints and
+  their partitioning using selected metrics and specific query types,
+PhD thesis,
+National University of Ireland, Galway,
+2017.
+\end{botherref}
+\endbibitem
+
+\bibitem{rohde2019query}
+\begin{botherref}
+\oauthor{\binits{P.D.}~\bsnm{Rohde}},
+Query Optimization Techniques For Scaling Up To Data Variety,
+Master's thesis,
+Hannover: Institutionelles Repositorium der Leibniz Universit{\"a}t Hannover,
+2019.
+\end{botherref}
+\endbibitem
+
+\bibitem{thesis}
+\begin{botherref}
+\oauthor{\binits{C.R.}~\bsnm{da~Silva~Teixeira}},
+Implementation of a data virtualization laver applied to insurance data,
+Master's thesis,
+University of Porto,
+2016.
+\end{botherref}
+\endbibitem
+
+\bibitem{wigham2014state}
+\begin{botherref}
+\oauthor{\binits{M.}~\bsnm{Wigham}},
+State of the art in federated querying in SPARQL,
+Technical Report,
+Wageningen UR,
+2014.
+\end{botherref}
+\endbibitem
+
+\bibitem{xu2020new}
+\begin{botherref}
+\oauthor{\binits{L.}~\bsnm{Xu}},
+New capabilities for large-scale exploratory data analysis,
+PhD thesis,
+University of Illinois at Urbana-Champaign,
+2020.
+\end{botherref}
+\endbibitem
+
+\bibitem{serrano2020protecting}
+\begin{botherref}
+\oauthor{\binits{P.}~\bsnm{Serrano-Alvarado}},
+Protecting user data in distributed systems,
+PhD thesis,
+Universit{\'e} de Nantes (UN),
+2020.
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/HarthUHD07}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Harth}},
+\bauthor{\binits{J.}~\bsnm{Umbrich}},
+\bauthor{\binits{A.}~\bsnm{Hogan}} and
+\bauthor{\binits{S.}~\bsnm{Decker}},
+\bctitle{{YARS2:} {A} Federated Repository for Querying Graph Structured Data
+  from the Web},
+in: \bbtitle{The Semantic Web, 6th International Semantic Web Conference, 2nd
+  Asian Semantic Web Conference, {ISWC} 2007 + {ASWC} 2007, Busan, Korea,
+  November 11-15, 2007},
+\beditor{\binits{K.}~\bsnm{Aberer}},
+\beditor{\binits{K.}~\bsnm{Choi}},
+\beditor{\binits{N.F.}~\bsnm{Noy}},
+\beditor{\binits{D.}~\bsnm{Allemang}},
+\beditor{\binits{K.}~\bsnm{Lee}},
+\beditor{\binits{L.J.B.}~\bsnm{Nixon}},
+\beditor{\binits{J.}~\bsnm{Golbeck}},
+\beditor{\binits{P.}~\bsnm{Mika}},
+\beditor{\binits{D.}~\bsnm{Maynard}},
+\beditor{\binits{R.}~\bsnm{Mizoguchi}},
+\beditor{\binits{G.}~\bsnm{Schreiber}} and
+\beditor{\binits{P.}~\bsnm{Cudr{\'{e}}{-}Mauroux}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{4825},
+\bpublisher{Springer},
+\byear{2007},
+pp.~\bfpage{211}--\blpage{224}.
+doi:\doiurl{10.1007/978-3-540-76298-0\_16}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{lynden2011aderis}
+\begin{bchapter}
+\bauthor{\binits{S.}~\bsnm{Lynden}},
+\bauthor{\binits{I.}~\bsnm{Kojima}},
+\bauthor{\binits{A.}~\bsnm{Matono}} and
+\bauthor{\binits{Y.}~\bsnm{Tanimura}},
+\bctitle{Aderis: An adaptive query processor for joining federated sparql
+  endpoints},
+in: \bbtitle{OTM Confederated International Conferences" On the Move to
+  Meaningful Internet Systems"},
+\byear{2011},
+pp.~\bfpage{808}--\blpage{817}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/LadwigT11}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Ladwig}} and
+\bauthor{\binits{T.}~\bsnm{Tran}},
+\bctitle{SIHJoin: Querying Remote and Local Linked Data},
+in: \bbtitle{The Semantic Web: Research and Applications - 8th Extended
+  Semantic Web Conference, {ESWC} 2011, Heraklion, Crete, Greece, May 29-June
+  2, 2011, Proceedings, Part {I}},
+\beditor{\binits{G.}~\bsnm{Antoniou}},
+\beditor{\binits{M.}~\bsnm{Grobelnik}},
+\beditor{\binits{E.P.B.}~\bsnm{Simperl}},
+\beditor{\binits{B.}~\bsnm{Parsia}},
+\beditor{\binits{D.}~\bsnm{Plexousakis}},
+\beditor{\binits{P.D.}~\bsnm{Leenheer}} and
+\beditor{\binits{J.Z.}~\bsnm{Pan}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{6643},
+\bpublisher{Springer},
+\byear{2011},
+pp.~\bfpage{139}--\blpage{153}.
+doi:\doiurl{10.1007/978-3-642-21034-1\_10}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/www/WangTD13}
+\begin{bchapter}
+\bauthor{\binits{X.}~\bsnm{Wang}},
+\bauthor{\binits{T.}~\bsnm{Tiropanis}} and
+\bauthor{\binits{H.C.}~\bsnm{Davis}},
+\bctitle{{LHD:} Optimising Linked Data Query Processing Using Parallelisation},
+in: \bbtitle{Proceedings of the {WWW2013} Workshop on Linked Data on the Web,
+  Rio de Janeiro, Brazil, 14 May, 2013},
+\beditor{\binits{C.}~\bsnm{Bizer}},
+\beditor{\binits{T.}~\bsnm{Heath}},
+\beditor{\binits{T.}~\bsnm{Berners{-}Lee}},
+\beditor{\binits{M.}~\bsnm{Hausenblas}} and
+\beditor{\binits{S.}~\bsnm{Auer}}, eds,
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{996},
+\bpublisher{CEUR-WS.org},
+\byear{2013}.
+\url{http://ceur-ws.org/Vol-996/papers/ldow2013-paper-06.pdf}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/sigmod/Hartig13}
+\begin{bchapter}
+\bauthor{\binits{O.}~\bsnm{Hartig}},
+\bctitle{{SQUIN:} a traversal based query execution system for the web of
+  linked data},
+in: \bbtitle{Proceedings of the {ACM} {SIGMOD} International Conference on
+  Management of Data, {SIGMOD} 2013, New York, NY, USA, June 22-27, 2013},
+\beditor{\binits{K.A.}~\bsnm{Ross}},
+\beditor{\binits{D.}~\bsnm{Srivastava}} and
+\beditor{\binits{D.}~\bsnm{Papadias}}, eds,
+\bpublisher{{ACM}},
+\byear{2013},
+pp.~\bfpage{1081}--\blpage{1084}.
+doi:\doiurl{10.1145/2463676.2465231}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:phd/dnb/Gorlitz15}
+\begin{botherref}
+\oauthor{\binits{O.}~\bsnm{G{\"{o}}rlitz}},
+Distributed query processing for federated {RDF} data management,
+PhD thesis,
+University of Koblenz-Landau,
+2015.
+\url{http://kola.opus.hbz-nrw.de/volltexte/2015/1091/pdf/diss\_print\_final.pdf}.
+\end{botherref}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/Konstantopoulos17}
+\begin{bchapter}
+\bauthor{\binits{S.}~\bsnm{Konstantopoulos}},
+\bauthor{\binits{A.}~\bsnm{Charalambidis}},
+\bauthor{\binits{A.}~\bsnm{Troumpoukis}},
+\bauthor{\binits{G.}~\bsnm{Mouchakis}} and
+\bauthor{\binits{V.}~\bsnm{Karkaletsis}},
+\bctitle{The {S}evod Vocabulary for Dataset Descriptions for Federated
+  Querying},
+in: \bbtitle{Proceedings of the 4th International Workshop on Dataset PROFIling
+  and fEderated Search for Web Data {(PROFILES} 2017) co-located with The 16th
+  International Semantic Web Conference {(ISWC} 2017), Vienna, Austria, October
+  22, 2017},
+\beditor{\binits{E.}~\bsnm{Demidova}},
+\beditor{\binits{S.}~\bsnm{Dietze}},
+\beditor{\binits{J.}~\bsnm{Szymanski}} and
+\beditor{\binits{J.G.}~\bsnm{Breslin}}, eds,
+\bsertitle{{CEUR} Workshop Proceedings},
+Vol.~\bseriesno{1927},
+\bpublisher{CEUR-WS.org},
+\byear{2017}.
+\url{http://ceur-ws.org/Vol-1927/paper4.pdf}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:books/sp/18/GiacomoLLPR18}
+\begin{bchapter}
+\bauthor{\binits{G.D.}~\bsnm{Giacomo}},
+\bauthor{\binits{D.}~\bsnm{Lembo}},
+\bauthor{\binits{M.}~\bsnm{Lenzerini}},
+\bauthor{\binits{A.}~\bsnm{Poggi}} and
+\bauthor{\binits{R.}~\bsnm{Rosati}},
+\bctitle{Using Ontologies for Semantic Data Integration},
+in: \bbtitle{A Comprehensive Guide Through the Italian Database Research Over
+  the Last 25 Years},
+\beditor{\binits{S.}~\bsnm{Flesca}},
+\beditor{\binits{S.}~\bsnm{Greco}},
+\beditor{\binits{E.}~\bsnm{Masciari}} and
+\beditor{\binits{D.}~\bsnm{Sacc{\`{a}}}}, eds,
+\bsertitle{Studies in Big Data},
+Vol.~\bseriesno{31},
+\bpublisher{Springer International Publishing},
+\byear{2018},
+pp.~\bfpage{187}--\blpage{202}.
+doi:\doiurl{10.1007/978-3-319-61893-7\_11}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/www/MinierSM19}
+\begin{bchapter}
+\bauthor{\binits{T.}~\bsnm{Minier}},
+\bauthor{\binits{H.}~\bsnm{Skaf{-}Molli}} and
+\bauthor{\binits{P.}~\bsnm{Molli}},
+\bctitle{SaGe: Web Preemption for Public {SPARQL} Query Services},
+in: \bbtitle{The World Wide Web Conference, {WWW} 2019, San Francisco, CA, USA,
+  May 13-17, 2019},
+\beditor{\binits{L.}~\bsnm{Liu}},
+\beditor{\binits{R.W.}~\bsnm{White}},
+\beditor{\binits{A.}~\bsnm{Mantrach}},
+\beditor{\binits{F.}~\bsnm{Silvestri}},
+\beditor{\binits{J.J.}~\bsnm{McAuley}},
+\beditor{\binits{R.}~\bsnm{Baeza{-}Yates}} and
+\beditor{\binits{L.}~\bsnm{Zia}}, eds,
+\bpublisher{{ACM}},
+\byear{2019},
+pp.~\bfpage{1268}--\blpage{1278}.
+doi:\doiurl{10.1145/3308558.3313652}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/bigdataconf/AggourKCWGDHGV19}
+\begin{bchapter}
+\bauthor{\binits{K.S.}~\bsnm{Aggour}},
+\bauthor{\binits{V.S.}~\bsnm{Kumar}},
+\bauthor{\binits{P.}~\bsnm{Cuddihy}},
+\bauthor{\binits{J.W.}~\bsnm{Williams}},
+\bauthor{\binits{V.}~\bsnm{Gupta}},
+\bauthor{\binits{L.}~\bsnm{Dial}},
+\bauthor{\binits{T.}~\bsnm{Hanlon}},
+\bauthor{\binits{J.}~\bsnm{Gambone}} and
+\bauthor{\binits{J.}~\bsnm{Vinciquerra}},
+\bctitle{Federated Multimodal Big Data Storage {\&} Analytics Platform for
+  Additive Manufacturing},
+in: \bbtitle{2019 {IEEE} International Conference on Big Data {(IEEE} BigData),
+  Los Angeles, CA, USA, December 9-12, 2019},
+\beditor{\binits{C.K.}~\bsnm{Baru}},
+\beditor{\binits{J.}~\bsnm{Huan}},
+\beditor{\binits{L.}~\bsnm{Khan}},
+\beditor{\binits{X.}~\bsnm{Hu}},
+\beditor{\binits{R.}~\bsnm{Ak}},
+\beditor{\binits{Y.}~\bsnm{Tian}},
+\beditor{\binits{R.S.}~\bsnm{Barga}},
+\beditor{\binits{C.}~\bsnm{Zaniolo}},
+\beditor{\binits{K.}~\bsnm{Lee}} and
+\beditor{\binits{Y.F.}~\bsnm{Ye}}, eds,
+\bpublisher{{IEEE}},
+\byear{2019},
+pp.~\bfpage{1729}--\blpage{1738}.
+doi:\doiurl{10.1109/BigData47090.2019.9006495}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/BelcaoFBV21}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Belcao}},
+\bauthor{\binits{E.}~\bsnm{Falzone}},
+\bauthor{\binits{E.}~\bsnm{Bionda}} and
+\bauthor{\binits{E.D.}~\bsnm{Valle}},
+\bctitle{Chimera: {A} Bridge Between Big Data Analytics and Semantic
+  Technologies},
+in: \bbtitle{The Semantic Web - {ISWC} 2021 - 20th International Semantic Web
+  Conference, {ISWC} 2021, Virtual Event, October 24-28, 2021, Proceedings},
+\beditor{\binits{A.}~\bsnm{Hotho}},
+\beditor{\binits{E.}~\bsnm{Blomqvist}},
+\beditor{\binits{S.}~\bsnm{Dietze}},
+\beditor{\binits{A.}~\bsnm{Fokoue}},
+\beditor{\binits{Y.}~\bsnm{Ding}},
+\beditor{\binits{P.M.}~\bsnm{Barnaghi}},
+\beditor{\binits{A.}~\bsnm{Haller}},
+\beditor{\binits{M.}~\bsnm{Dragoni}} and
+\beditor{\binits{H.}~\bsnm{Alani}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{12922},
+\bpublisher{Springer},
+\byear{2021},
+pp.~\bfpage{463}--\blpage{479}.
+doi:\doiurl{10.1007/978-3-030-88361-4\_27}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:series/lncs/EndrisVG20}
+\begin{bchapter}
+\bauthor{\binits{K.M.}~\bsnm{Endris}},
+\bauthor{\binits{M.}~\bsnm{Vidal}} and
+\bauthor{\binits{D.}~\bsnm{Graux}},
+\bctitle{Federated Query Processing},
+in: \bbtitle{Knowledge Graphs and Big Data Processing},
+\beditor{\binits{V.}~\bsnm{Janev}},
+\beditor{\binits{D.}~\bsnm{Graux}},
+\beditor{\binits{H.}~\bsnm{Jabeen}} and
+\beditor{\binits{E.}~\bsnm{Sallinger}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{12072},
+\bpublisher{Springer},
+\byear{2020},
+pp.~\bfpage{73}--\blpage{86}.
+doi:\doiurl{10.1007/978-3-030-53199-7\_5}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/HelingA20}
+\begin{bchapter}
+\bauthor{\binits{L.}~\bsnm{Heling}} and
+\bauthor{\binits{M.}~\bsnm{Acosta}},
+\bctitle{Cost- and Robustness-Based Query Optimization for Linked Data
+  Fragments},
+in: \bbtitle{The Semantic Web - {ISWC} 2020 - 19th International Semantic Web
+  Conference, Athens, Greece, November 2-6, 2020, Proceedings, Part {I}},
+\beditor{\binits{J.Z.}~\bsnm{Pan}},
+\beditor{\binits{V.A.M.}~\bsnm{Tamma}},
+\beditor{\binits{C.}~\bsnm{d'Amato}},
+\beditor{\binits{K.}~\bsnm{Janowicz}},
+\beditor{\binits{B.}~\bsnm{Fu}},
+\beditor{\binits{A.}~\bsnm{Polleres}},
+\beditor{\binits{O.}~\bsnm{Seneviratne}} and
+\beditor{\binits{L.}~\bsnm{Kagal}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{12506},
+\bpublisher{Springer},
+\byear{2020},
+pp.~\bfpage{238}--\blpage{257}.
+doi:\doiurl{10.1007/978-3-030-62419-4\_14}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{saleem2018evaluation}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{Y.}~\bsnm{Khan}},
+\bauthor{\binits{A.}~\bsnm{Hasnain}},
+\bauthor{\binits{I.}~\bsnm{Ermilov}} and
+\bauthor{\binits{A.-C.}~\bsnm{Ngonga~Ngomo}},
+\bctitle{An evaluation of SPARQL federation engines over multiple endpoints},
+in: \bbtitle{International Web Conference},
+\byear{2018}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/www/SchenkS08}
+\begin{bchapter}
+\bauthor{\binits{S.}~\bsnm{Schenk}} and
+\bauthor{\binits{S.}~\bsnm{Staab}},
+\bctitle{Networked graphs: a declarative mechanism for {SPARQL} rules, {SPARQL}
+  views and {RDF} data integration on the web},
+in: \bbtitle{Proceedings of the 17th International Conference on World Wide
+  Web, {WWW} 2008, Beijing, China, April 21-25, 2008},
+\beditor{\binits{J.}~\bsnm{Huai}},
+\beditor{\binits{R.}~\bsnm{Chen}},
+\beditor{\binits{H.}~\bsnm{Hon}},
+\beditor{\binits{Y.}~\bsnm{Liu}},
+\beditor{\binits{W.}~\bsnm{Ma}},
+\beditor{\binits{A.}~\bsnm{Tomkins}} and
+\beditor{\binits{X.}~\bsnm{Zhang}}, eds,
+\bpublisher{{ACM}},
+\byear{2008},
+pp.~\bfpage{585}--\blpage{594}.
+doi:\doiurl{10.1145/1367497.1367577}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/aswc/WangTD11}
+\begin{bchapter}
+\bauthor{\binits{X.}~\bsnm{Wang}},
+\bauthor{\binits{T.}~\bsnm{Tiropanis}} and
+\bauthor{\binits{H.C.}~\bsnm{Davis}},
+\bctitle{Evaluating Graph Traversal Algorithms for Distributed {SPARQL} Query
+  Optimization},
+in: \bbtitle{The Semantic Web - Joint International Semantic Technology
+  Conference, {JIST} 2011, Hangzhou, China, December 4-7, 2011. Proceedings},
+\beditor{\binits{J.Z.}~\bsnm{Pan}},
+\beditor{\binits{H.}~\bsnm{Chen}},
+\beditor{\binits{H.}~\bsnm{Kim}},
+\beditor{\binits{J.}~\bsnm{Li}},
+\beditor{\binits{Z.}~\bsnm{Wu}},
+\beditor{\binits{I.}~\bsnm{Horrocks}},
+\beditor{\binits{R.}~\bsnm{Mizoguchi}} and
+\beditor{\binits{Z.}~\bsnm{Wu}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7185},
+\bpublisher{Springer},
+\byear{2011},
+pp.~\bfpage{210}--\blpage{225}.
+doi:\doiurl{10.1007/978-3-642-29923-0\_14}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/edbt/PrasserKK12}
+\begin{bchapter}
+\bauthor{\binits{F.}~\bsnm{Prasser}},
+\bauthor{\binits{A.}~\bsnm{Kemper}} and
+\bauthor{\binits{K.A.}~\bsnm{Kuhn}},
+\bctitle{Efficient distributed query processing for autonomous {RDF}
+  databases},
+in: \bbtitle{15th International Conference on Extending Database Technology,
+  {EDBT} '12, Berlin, Germany, March 27-30, 2012, Proceedings},
+\beditor{\binits{E.A.}~\bsnm{Rundensteiner}},
+\beditor{\binits{V.}~\bsnm{Markl}},
+\beditor{\binits{I.}~\bsnm{Manolescu}},
+\beditor{\binits{S.}~\bsnm{Amer{-}Yahia}},
+\beditor{\binits{F.}~\bsnm{Naumann}} and
+\beditor{\binits{I.}~\bsnm{Ari}}, eds,
+\bpublisher{{ACM}},
+\byear{2012},
+pp.~\bfpage{372}--\blpage{383}.
+doi:\doiurl{10.1145/2247596.2247640}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dawak/MehmoodJRS18}
+\begin{bchapter}
+\bauthor{\binits{Q.}~\bsnm{Mehmood}},
+\bauthor{\binits{A.}~\bsnm{Jha}},
+\bauthor{\binits{D.}~\bsnm{Rebholz{-}Schuhmann}} and
+\bauthor{\binits{R.}~\bsnm{Sahay}},
+\bctitle{FedS: Towards Traversing Federated {RDF} Graphs},
+in: \bbtitle{Big Data Analytics and Knowledge Discovery - 20th International
+  Conference, DaWaK 2018, Regensburg, Germany, September 3-6, 2018,
+  Proceedings},
+\beditor{\binits{C.}~\bsnm{Ordonez}} and
+\beditor{\binits{L.}~\bsnm{Bellatreche}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11031},
+\bpublisher{Springer},
+\byear{2018},
+pp.~\bfpage{34}--\blpage{45}.
+doi:\doiurl{10.1007/978-3-319-98539-8\_3}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dasfaa/GeQ0021}
+\begin{bchapter}
+\bauthor{\binits{N.}~\bsnm{Ge}},
+\bauthor{\binits{Z.}~\bsnm{Qin}},
+\bauthor{\binits{P.}~\bsnm{Peng}} and
+\bauthor{\binits{L.}~\bsnm{Zou}},
+\bctitle{FedTopK: Top-K Queries Optimization over Federated {RDF} Systems},
+in: \bbtitle{Database Systems for Advanced Applications - 26th International
+  Conference, {DASFAA} 2021, Taipei, Taiwan, April 11-14, 2021, Proceedings,
+  Part {III}},
+\beditor{\binits{C.S.}~\bsnm{Jensen}},
+\beditor{\binits{E.}~\bsnm{Lim}},
+\beditor{\binits{D.}~\bsnm{Yang}},
+\beditor{\binits{W.}~\bsnm{Lee}},
+\beditor{\binits{V.S.}~\bsnm{Tseng}},
+\beditor{\binits{V.}~\bsnm{Kalogeraki}},
+\beditor{\binits{J.}~\bsnm{Huang}} and
+\beditor{\binits{C.}~\bsnm{Shen}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{12683},
+\bpublisher{Springer},
+\byear{2021},
+pp.~\bfpage{595}--\blpage{599}.
+doi:\doiurl{10.1007/978-3-030-73200-4\_42}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dasfaa/RaoZZF18}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Rao}},
+\bauthor{\binits{B.}~\bsnm{Zhao}},
+\bauthor{\binits{X.}~\bsnm{Zhang}} and
+\bauthor{\binits{Z.}~\bsnm{Feng}},
+\bctitle{FedQL: {A} Framework for Federated Queries Processing on {RDF} Stream
+  and Relational Data},
+in: \bbtitle{Database Systems for Advanced Applications - {DASFAA} 2018
+  International Workshops: BDMS, BDQM, GDMA, and SeCoP, Gold Coast, QLD,
+  Australia, May 21-24, 2018, Proceedings},
+\beditor{\binits{C.}~\bsnm{Liu}},
+\beditor{\binits{L.}~\bsnm{Zou}} and
+\beditor{\binits{J.}~\bsnm{Li}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{10829},
+\bpublisher{Springer},
+\byear{2018},
+pp.~\bfpage{141}--\blpage{155}.
+doi:\doiurl{10.1007/978-3-319-91455-8\_14}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/dexa/EndrisALVA18}
+\begin{bchapter}
+\bauthor{\binits{K.M.}~\bsnm{Endris}},
+\bauthor{\binits{Z.}~\bsnm{Almhithawi}},
+\bauthor{\binits{I.}~\bsnm{Lytra}},
+\bauthor{\binits{M.}~\bsnm{Vidal}} and
+\bauthor{\binits{S.}~\bsnm{Auer}},
+\bctitle{{BOUNCER:} Privacy-Aware Query Processing over Federations of {RDF}
+  Datasets},
+in: \bbtitle{Database and Expert Systems Applications - 29th International
+  Conference, {DEXA} 2018, Regensburg, Germany, September 3-6, 2018,
+  Proceedings, Part {I}},
+\beditor{\binits{S.}~\bsnm{Hartmann}},
+\beditor{\binits{H.}~\bsnm{Ma}},
+\beditor{\binits{A.}~\bsnm{Hameurlain}},
+\beditor{\binits{G.}~\bsnm{Pernul}} and
+\beditor{\binits{R.R.}~\bsnm{Wagner}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11029},
+\bpublisher{Springer},
+\byear{2018},
+pp.~\bfpage{69}--\blpage{84}.
+doi:\doiurl{10.1007/978-3-319-98809-2\_5}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/www/Collarana0A16}
+\begin{bchapter}
+\bauthor{\binits{D.}~\bsnm{Collarana}},
+\bauthor{\binits{C.}~\bsnm{Lange}} and
+\bauthor{\binits{S.}~\bsnm{Auer}},
+\bctitle{FuhSen: {A} Platform for Federated, RDF-based Hybrid Search},
+in: \bbtitle{Proceedings of the 25th International Conference on World Wide
+  Web, {WWW} 2016, Montreal, Canada, April 11-15, 2016, Companion Volume},
+\beditor{\binits{J.}~\bsnm{Bourdeau}},
+\beditor{\binits{J.}~\bsnm{Hendler}},
+\beditor{\binits{R.}~\bsnm{Nkambou}},
+\beditor{\binits{I.}~\bsnm{Horrocks}} and
+\beditor{\binits{B.Y.}~\bsnm{Zhao}}, eds,
+\bpublisher{{ACM}},
+\byear{2016},
+pp.~\bfpage{171}--\blpage{174}.
+doi:\doiurl{10.1145/2872518.2890535}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/uksim/FatimaLWK15}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Fatima}},
+\bauthor{\binits{C.}~\bsnm{Luca}},
+\bauthor{\binits{G.}~\bsnm{Wilson}} and
+\bauthor{\binits{M.S.}~\bsnm{Kettouch}},
+\bctitle{Result Optimisation for Federated {SPARQL} Queries},
+in: \bbtitle{UKSim-AMSS 17th International Conference on Computer Modelling and
+  Simulation, UKSim 2015, Cambridge, United Kingdom, March 25-27, 2015},
+\beditor{\binits{D.}~\bsnm{Al{-}Dabass}},
+\beditor{\binits{A.}~\bsnm{Orsoni}},
+\beditor{\binits{R.J.}~\bsnm{Cant}},
+\beditor{\binits{Z.}~\bsnm{Ibrahim}} and
+\beditor{\binits{I.}~\bsnm{Saad}}, eds,
+\bpublisher{{IEEE}},
+\byear{2015},
+pp.~\bfpage{491}--\blpage{496}.
+doi:\doiurl{10.1109/UKSim.2015.50}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/otm/MakrisGBC10}
+\begin{bchapter}
+\bauthor{\binits{K.}~\bsnm{Makris}},
+\bauthor{\binits{N.}~\bsnm{Gioldasis}},
+\bauthor{\binits{N.}~\bsnm{Bikakis}} and
+\bauthor{\binits{S.}~\bsnm{Christodoulakis}},
+\bctitle{Ontology Mapping and {SPARQL} Rewriting for Querying Federated {RDF}
+  Data Sources - (Short Paper)},
+in: \bbtitle{On the Move to Meaningful Internet Systems, {OTM} 2010 -
+  Confederated International Conferences: CoopIS, IS, {DOA} and ODBASE,
+  Hersonissos, Crete, Greece, October 25-29, 2010, Proceedings, Part {II}},
+\beditor{\binits{R.}~\bsnm{Meersman}},
+\beditor{\binits{T.S.}~\bsnm{Dillon}} and
+\beditor{\binits{P.}~\bsnm{Herrero}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{6427},
+\bpublisher{Springer},
+\byear{2010},
+pp.~\bfpage{1108}--\blpage{1117}.
+doi:\doiurl{10.1007/978-3-642-16949-6\_32}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DBLP:conf/esws/MontoyaVA12}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{M.}~\bsnm{Vidal}} and
+\bauthor{\binits{M.}~\bsnm{Acosta}},
+\bctitle{{DEFENDER:} {A} DEcomposer for quEries agaiNst feDERations of
+  Endpoints},
+in: \bbtitle{The Semantic Web: {ESWC} 2012 Satellite Events - {ESWC} 2012
+  Satellite Events, Heraklion, Crete, Greece, May 27-31, 2012. Revised Selected
+  Papers},
+\beditor{\binits{E.}~\bsnm{Simperl}},
+\beditor{\binits{B.}~\bsnm{Norton}},
+\beditor{\binits{D.}~\bsnm{Mladenic}},
+\beditor{\binits{E.D.}~\bsnm{Valle}},
+\beditor{\binits{I.}~\bsnm{Fundulaki}},
+\beditor{\binits{A.}~\bsnm{Passant}} and
+\beditor{\binits{R.}~\bsnm{Troncy}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{7540},
+\bpublisher{Springer},
+\byear{2012},
+pp.~\bfpage{480}--\blpage{484}.
+doi:\doiurl{10.1007/978-3-662-46641-4\_49}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{FMQO}
+\begin{bchapter}
+\bauthor{\binits{Q.}~\bsnm{Ge}},
+\bauthor{\binits{P.}~\bsnm{Peng}},
+\bauthor{\binits{Z.}~\bsnm{Xu}},
+\bauthor{\binits{L.}~\bsnm{Zou}} and
+\bauthor{\binits{Z.}~\bsnm{Qin}},
+\bctitle{{FMQO:} {A} Federated {RDF} System Supporting Multi-query
+  Optimization},
+in: \bbtitle{Proc. of Int. Joint Conf. APWeb-WAIM},
+\bsertitle{LNCS},
+Vol.~\bseriesno{11642},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{397}--\blpage{401}.
+doi:\doiurl{10.1007/978-3-030-26075-0\_30}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{PolyWebGit}
+\begin{bchapter}
+\bauthor{\binits{Y.}~\bsnm{Khan}},
+\bauthor{\binits{A.}~\bsnm{Zimmermann}},
+\bauthor{\binits{A.}~\bsnm{Jha}},
+\bauthor{\binits{D.}~\bsnm{Rebholz{-}Schuhmann}} and
+\bauthor{\binits{R.}~\bsnm{Sahay}},
+\bctitle{Querying web polystores},
+in: \bbtitle{Proc. of IEEE Int. Conf. on Big Data (IEEE BigData)},
+\bpublisher{{IEEE} Computer Society},
+\byear{2017},
+pp.~\bfpage{3190}--\blpage{3195}.
+doi:\doiurl{10.1109/BigData.2017.8258299}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{granatum2012oedw}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Hasnain}},
+\bauthor{\binits{R.}~\bsnm{Fox}},
+\bauthor{\binits{S.}~\bsnm{Decker}} and
+\bauthor{\binits{H.F.}~\bsnm{Deus}},
+\bctitle{Cataloguing and Linking Life Sciences LOD Cloud},
+in: \bbtitle{Proc. of 1st Int. Workshop on Ontology Engineering in a
+  Data-driven World (OEDW), co-located with EKAW},
+\byear{2012}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{granatum2014jist}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Hasnain}},
+\bauthor{\binits{S.S.}~\bsnm{e~Zainab}},
+\bauthor{\binits{M.R.}~\bsnm{Kamdar}},
+\bauthor{\binits{Q.}~\bsnm{Mehmood}},
+\bauthor{\binits{C.N.W.}~\bsnm{Jr.}},
+\bauthor{\binits{Q.A.}~\bsnm{Fatimah}},
+\bauthor{\binits{H.F.}~\bsnm{Deus}},
+\bauthor{\binits{M.}~\bsnm{Mehdi}} and
+\bauthor{\binits{S.}~\bsnm{Decker}},
+\bctitle{A Roadmap for Navigating the Life Sciences Linked Open Data Cloud},
+in: \bbtitle{Semantic Technology - 4th Joint International Conference, {JIST}
+  2014, Chiang Mai, Thailand, November 9-11, 2014. Revised Selected Papers},
+\beditor{\binits{T.}~\bsnm{Supnithi}},
+\beditor{\binits{T.}~\bsnm{Yamaguchi}},
+\beditor{\binits{J.Z.}~\bsnm{Pan}},
+\beditor{\binits{V.}~\bsnm{Wuwongse}} and
+\beditor{\binits{M.}~\bsnm{Buranarach}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{8943},
+\bpublisher{Springer},
+\byear{2014},
+pp.~\bfpage{97}--\blpage{112}.
+doi:\doiurl{10.1007/978-3-319-15615-6\_8}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{granatum2014iswc}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Hasnain}},
+\bauthor{\binits{M.R.}~\bsnm{Kamdar}},
+\bauthor{\binits{P.}~\bsnm{Hasapis}},
+\bauthor{\binits{D.}~\bsnm{Zeginis}},
+\bauthor{\binits{C.N.W.}~\bsnm{Jr.}},
+\bauthor{\binits{H.F.}~\bsnm{Deus}},
+\bauthor{\binits{D.}~\bsnm{Ntalaperas}},
+\bauthor{\binits{K.A.}~\bsnm{Tarabanis}},
+\bauthor{\binits{M.}~\bsnm{Mehdi}} and
+\bauthor{\binits{S.}~\bsnm{Decker}},
+\bctitle{Linked Biomedical Dataspace: Lessons Learned Integrating Data for Drug
+  Discovery},
+in: \bbtitle{The Semantic Web - {ISWC} 2014 - 13th International Semantic Web
+  Conference, Riva del Garda, Italy, October 19-23, 2014. Proceedings, Part
+  {I}},
+\beditor{\binits{P.}~\bsnm{Mika}},
+\beditor{\binits{T.}~\bsnm{Tudorache}},
+\beditor{\binits{A.}~\bsnm{Bernstein}},
+\beditor{\binits{C.}~\bsnm{Welty}},
+\beditor{\binits{C.A.}~\bsnm{Knoblock}},
+\beditor{\binits{D.}~\bsnm{Vrandecic}},
+\beditor{\binits{P.}~\bsnm{Groth}},
+\beditor{\binits{N.F.}~\bsnm{Noy}},
+\beditor{\binits{K.}~\bsnm{Janowicz}} and
+\beditor{\binits{C.A.}~\bsnm{Goble}}, eds,
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{8796},
+\bpublisher{Springer},
+\byear{2014},
+pp.~\bfpage{114}--\blpage{130}.
+doi:\doiurl{10.1007/978-3-319-11964-9\_8}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{qtree2010www}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Harth}},
+\bauthor{\binits{K.}~\bsnm{Hose}},
+\bauthor{\binits{M.}~\bsnm{Karnstedt}},
+\bauthor{\binits{A.}~\bsnm{Polleres}},
+\bauthor{\binits{K.}~\bsnm{Sattler}} and
+\bauthor{\binits{J.}~\bsnm{Umbrich}},
+\bctitle{Data summaries for on-demand queries over linked data},
+in: \bbtitle{Proceedings of the 19th International Conference on World Wide
+  Web, {WWW} 2010, Raleigh, North Carolina, USA, April 26-30, 2010},
+\beditor{\binits{M.}~\bsnm{Rappa}},
+\beditor{\binits{P.}~\bsnm{Jones}},
+\beditor{\binits{J.}~\bsnm{Freire}} and
+\beditor{\binits{S.}~\bsnm{Chakrabarti}}, eds,
+\bpublisher{{ACM}},
+\byear{2010},
+pp.~\bfpage{411}--\blpage{420}.
+doi:\doiurl{10.1145/1772690.1772733}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{gds2011techrep}
+\begin{botherref}
+\oauthor{\binits{X.}~\bsnm{Wang}},
+\oauthor{\binits{T.}~\bsnm{Tiropanis}} and
+\oauthor{\binits{H.C.}~\bsnm{Davis}},
+Querying the Web of Data with Graph Theory-based Techniques,
+Technical Report,
+University of Southampton,
+2011.
+\end{botherref}
+\endbibitem
+
+\end{thebibliography}

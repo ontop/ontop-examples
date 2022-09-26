@@ -1,0 +1,28 @@
+
+\begin{table*}[tbp]
+	\centering
+	\caption{Summary of the selected data federation systems. Academic systems in \textit{italics}}
+	\label{Tab:NewSummaryOfSystem}
+	\renewcommand{\dfsPrint}{
+		\ifdefempty{\dfsNameVal}{}{\ifbool{dfsIsAcademicVal}{\textit{\dfsNameVal}}{\dfsNameVal}}%
+                \ifdefempty{\dfsRefsVal}{}{\,\cite{\dfsRefsVal}} &
+		\ifdefempty{\dfsProviderVal}{}{\dfsProviderVal} &
+		\ifdefempty{\dfsDescriptionVal}{}{\dfsDescriptionVal} \\
+	}
+	\begin{mytabular}[1.19]{|L{2.95cm}||L{2.95cm}||L{9.3cm}|}
+		\hhline{|-||-||-|}
+		\tabhead
+		System & Provider & Description \\
+		\hhline{:=::=::=:}
+		\tabbody
+		\ExpandableInput{Tab/systems.tex}
+		\hhline{|-||-||-|}
+	\end{mytabular}
+\end{table*}
+
+\endinput
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

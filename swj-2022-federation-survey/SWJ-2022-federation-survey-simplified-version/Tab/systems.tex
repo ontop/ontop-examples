@@ -1,0 +1,2811 @@
+\dfs{
+	\dfsName{AllegroGraph}
+	\dfsRefs{AllegroGraph}
+	\dfsProvider{Franz Inc.}
+	\dfsDescription{Distributed graph \& document DB supporting OWL, SPARQL, SHACL and federation}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasWebApi
+	\dfsHasSparqlEndpoint
+	\dfsDevelLangs{Java, Lisp} 
+	\dfsIsSupported
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsDeployIaasPaas{AWS, Azure}
+	\dfsReleaseFirst{6.4.0}{2004}
+	\dfsReleaseLast{7.2.0}{2021}
+	\dfsQueryLangs{SPARQL, Prolog}
+	\dfsTransparent{Transparent, Explicit}  
+	\dfsSrcList{
+		\srcAllegroGraph  
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - cmp (AWS): https://aws.amazon.com/marketplace/pp/prodview-pj32e53ojamak
+% - cmp (Azure): https://azuremarketplace.microsoft.com/en-us/marketplace/apps/franzinc1593030725310.agraph-enterprise-vm
+% - onprem (Docker): https://hub.docker.com/r/franzinc/agraph/
+% - onprem (Linux): https://franz.com/agraph/downloads/?ui=new
+% === TRANSPARENT / EXPLICIT ===
+% - support SPARQL service keyword: https://franz.com/agraph/support/documentation/current/agraph-introduction.html#SPARQL-federated-queries
+% === ORIGINAL DESCRIPTION ===
+% - AllegroGraph~\cite{AllegroGraph} is a database and application framework for building Enterprise Knowledge Graph solutions based on a high-performance triple store. It is a product of Franz Inc. The key benefits of AllegroGraph federation are scalability; making triple stores more manageable; and making data archives almost trivial. 
+% === FORMER TABLE DESCRIPTION ===
+% - A horizontally distributed, multi-model (document and graph), entity-event knowledge graph technology enabling users to extract predictive analytics from highly complex, distributed data 
+% === FORMER TABLE FEATURES ===
+% - High-scalability and efficiency by using efficient memory management combining with disk-based storage
+% - Compliant W3C/ISO standards, like SPARQL 1.1, SHACL, and JSON
+% - Semantic Entity-Event data modeling
+% === LINKS & NOTES ===
+% - [Summary] https://franz.com/agraph/support/documentation/current/agraph-introduction.html#ai-overview
+% - [Detail] https://franz.com/agraph/support/documentation/7.2.0/
+% - [Overview] https://allegrograph.com/products/allegrograph/
+% - [Introduction] https://allegrograph.com/articles/allegrograph-v7-2-now-available-with-gnns-virtual-graphs-spark-and-kafka/
+
+\dfs{
+	\dfsName{Amazon Athena}
+	\dfsRefs{AmazonAthenaFederation}
+	\dfsProvider{Amazon.com, Inc.}
+	\dfsDescription{Inter. cloud query service for Amazon S3 data, based on Presto~\cite{Presto}}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasAuditing
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsDeploySaas{AWS}
+	\dfsReleaseFirst{}{2017}
+	\dfsReleaseLast{}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent} 
+	\dfsSrcList{
+		\srcAmazonAWSSystemsManagerInventory
+		\srcAmazonCloudWatch
+		\srcAmazonDocumentDB
+		\srcAmazonDynamoDB
+		\srcAmazonNeptune
+		\srcAmazonOpenSearch
+		\srcAmazonRedshift
+		\srcAmazonTimestream
+		\srcCommonLogFormat
+		\srcCSV % CSV, TSV, Text File with Custom Delimiters
+		\srcHBase
+		\srcJSON
+		\srcMySQL
+		\srcORC
+		\srcParquet
+		\srcPostgreSQL
+		\srcRedis
+		\srcVertica
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - saas (AWS, dep: AWS Glue Data Catalog): https://aws.amazon.com/athena/pricing/?nc=sn&loc=3
+% === TRANSPARENT / EXPLICIT ===
+% - transparent, needed unified relational schema: https://docs.aws.amazon.com/athena/latest/ug/writing-federated-queries.html
+% === SUPPORTED FILE STORAGES ===
+% - Amazon S3, 
+% === ORIGINAL DESCRIPTION ===
+% - Amazon Athena~\cite{AmazonAthenaFederation} enables users to query the data in place or build pipelines that extract data from multiple data sources and store them in Amazon S3. It is developed by Amazon. Its key feature is that SQL queries can be run across data stored in relational, non-relational, object, and custom data sources. 
+% === FORMER TABLE DESCRIPTION ===
+% - An interactive query service that makes it easy to analyze data directly in Amazon Simple Storage Service (Amazon S3) using standard SQL
+% === FORMER TABLE FEATURES ===
+% - Serverless, no ETL
+% - Only pay for data scanned
+% - Built on Presto, runs standard SQL
+% - Interactive performance even for large datasets
+% === LINKS & NOTES ===
+% - [Overview] https://www.amazonaws.cn/en/athena/
+% - [Document] https://docs.aws.amazon.com/athena/latest/ug/connect-to-a-data-source.html
+% - [BigData Blog] https://aws.amazon.com/blogs/big-data/query-any-data-source-with-amazon-athenas-new-federated-query/
+% - [data sources] https://docs.aws.amazon.com/athena/latest/ug/athena-prebuilt-data-connectors.html
+% - [file sources via Amazon Glue] https://docs.aws.amazon.com/athena/latest/ug/data-sources-glue.html
+% - [file sources via Hive Metastore] https://docs.aws.amazon.com/athena/latest/ug/connect-to-data-source-hive-connecting-athena-to-an-apache-hive-metastore.html
+
+\dfs{
+	\dfsName{Amazon Neptune}
+	\dfsRefs{AmazonNeptune}
+	\dfsProvider{Amazon.com, Inc.}
+	\dfsDescription{Fully-managed cloud graph DB (property graph, RDF), part of Amazon AWS}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasAuditing
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsDeploySaas{AWS}
+	\dfsReleaseFirst{1.0.1.0}{2018}
+	\dfsReleaseLast{1.0.5.1}{2021}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Explicit} 
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - saas (AWS): https://aws.amazon.com/neptune/?nc1=h_ls
+% === TRANSPARENT / EXPLICIT ===
+% - explicit, SPARQL service keyword: https://docs.aws.amazon.com/neptune/latest/userguide/sparql-service.html
+% === ORIGINAL DESCRIPTION ===
+% - Amazon Neptune~\cite{AmazonNeptune} is a fast, reliable, fully-managed graph database service that makes it easy to build and run applications that work with highly connected datasets. It is a part of Amazon Web Services and supports SPARQL 1.1 federated queries since 2019. Its key features are supporting open graph APIs; high performance and scalability; high availability and durability; high security; and fully being managed. 
+% === FORMER TABLE DESCRIPTION ===
+% - A fast, reliable, fully-managed graph DB service making it easy to build and run applications that work with highly connected datasets
+% === FORMER TABLE FEATURES ===
+% - Supporting open graph APIs
+% -	High performance and scalability
+% - High availability and durability
+% - High security and fully being managed
+% === LINKS & NOTES ===
+% - [Overview] https://www.amazonaws.cn/en/neptune/
+% - [UserGuide] https://docs.aws.amazon.com/neptune/latest/userguide/sparql-service.html
+
+\dfs{
+	\dfsName{AnzoGraph DB}
+	\dfsRefs{Anzograph}
+	\dfsProvider{Cambridge Semantics}
+	\dfsDescription{Massively-parallel distributed graph DB (property-graph, RDF) for large-scale analytics}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasDataMasking
+	\dfsHasDataMaskingNG
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasWebApi
+	\dfsHasSparqlEndpoint
+	\dfsDevelLangs{C}
+	\dfsIsSupported
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsDeployIaasPaas{AWS}
+	\dfsReleaseFirst{2.0}{-}
+	\dfsReleaseLast{2.3}{2021}
+	\dfsQueryLangs{SPARQL, Cypher}  
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcCSV % also TSV
+		\srcDerby
+		\srcGoogleBigQuery
+		\srcHive
+		\srcHSQLDB
+		\srcHTTPREST
+		\srcIBMDBtwo
+		\srcImpala
+		\srcJDBC % [manual] just says that additional JDBC drivers may be installed in a specific directory, but does not discuss tuning parameters of such drivers
+		\srcJSON
+		\srcMariaDB
+		\srcMicrosoftSQLServer
+		\srcMySQL
+		\srcParquet
+		\srcPostgreSQL
+		\srcSAPASE
+		\srcSASBDAT
+		\srcSASXPT
+		\srcSPARQL % via service only
+		\srcXML
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - cmp (AWS): https://docs.cambridgesemantics.com/anzograph/v2.5/userdoc/deploy-aws-cfn.htm
+% - onprem (RHEL/CentOS 7.9; Open JDK 11): https://docs.cambridgesemantics.com/anzograph/v2.5/userdoc/deploy-centos.htm
+% - onprem (docker): https://hub.docker.com/r/cambridgesemantics/anzograph-db
+% - onprem (docker + IBM Cloud Pak): https://docs.cambridgesemantics.com/anzograph/v2.5/userdoc/cloudpak.htm
+% - onprem (kubernetes): https://docs.cambridgesemantics.com/anzograph/v2.5/userdoc/deploy-k8s-helm.htm
+% === TRANSPARENT / EXPLICIT ===
+% - support SPARQL, does not support SPARQL service keyword
+% === ORIGINAL DESCRIPTION ===
+% - AnzoGraph~DB~\cite{Anzograph}, built for data harmonization and analytics, is a horizontally scalable graph database that uses familiar SPARQL/OWL for semantic graphs but also supports Labeled Property Graphs~\cite{angles2018propertygraph}. It is developed by Cambridge Semantics. Since version 2.2, AnzoGraph DB supports data virtualization, streaming, business intelligence tools, and geospatial. 
+% === FORMER TABLE DESCRIPTION ===
+% - A high performance graph OLAP database that lets users perform BI-style analytics with unparalled speed and scalability
+% === FORMER TABLE FEATURES ===
+% - Massively parallel processing
+% - Graph OLAP technology
+% - Advanced analytics
+% - Multi-graph support
+% === LINKS & NOTES ===
+% - [Overview] https://cambridgesemantics.com/anzograph/
+% - [UserGuide] https://docs.cambridgesemantics.com/anzograph/v2.3/userdoc/home.htm
+% - [Connecting to Sources with the Graph Data Interface] https://docs.cambridgesemantics.com/anzograph/v2.3/userdoc/graph-data-interface.htm
+% - [sources] https://docs.cambridgesemantics.com/anzograph/v2.5/userdoc/gdi-intro.htm
+% - [sources ontology] https://docs.cambridgesemantics.com/anzograph/v2.2/userdoc/datatoolkit-ont.trig
+% - [GraphDB Languages] https://en.wikipedia.org/wiki/Graph_database
+% - [manual] https://docs.cambridgesemantics.com/pdf/Anzo-v52-user-guide.pdf
+% - [SERVICE support] https://docs.cambridgesemantics.com/anzograph/v2.2/userdoc/where.htm
+
+\dfs{
+	\dfsName{Apache Drill}
+	\dfsRefs{Drill,DrillP}
+	\dfsProvider{Apache Software Foundation}
+	\dfsDescription{Distributed schema-free engine for interactive SQL queries on heterogeneous \& nested data, inspired by Dremel~\cite{melnik2011dremel}}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{M1}{2012}
+	\dfsReleaseLast{1.19}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAvro
+		\srcCassandra
+		\srcCommonLogFormat
+		\srcCSV % also TSV and PSV
+		\srcDerby
+		\srcDruid
+		\srcElasticsearch
+		\srcExcel
+		\srcHBase
+		\srcHive
+		\srcHTTPREST
+		\srcHtwo
+		\srcJSON
+		\srcKafka
+		\srcMapRDB
+		\srcMicrosoftSQLServer
+		\srcMongoDB
+		\srcMySQL
+		\srcOpenTSDB
+		\srcOracleDB
+		\srcParquet
+		\srcPostgreSQL
+		\srcSequenceFile
+		\srcSplunk
+		\srcXML
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Linux/Mac OS X/Windows, Oracle or OpenJDK 8): https://drill.apache.org/docs/embedded-mode-prerequisites/
+% - onprem (Docker): https://hub.docker.com/search?q=apache%2Fdrill
+% - dep / ZooKeeper (cluster mode, required): https://drill.apache.org/docs/distributed-mode-prerequisites/
+% - dep / YARN (cluster mode, optional): https://drill.apache.org/docs/drill-on-yarn-introduction/
+% === TRANSPARENT / EXPLICIT ===
+% - support standard SQL queries: https://drill.apache.org/docs/sql-reference-introduction/
+% === SUPPORTED FILE STORAGES ===
+% - HDFS
+% - Azure Blob Storage
+% - Oracle Object Storage -- Oracle Cloud Infrastructure Object Storage (OCI OS)
+% - Dropbox
+% - Amazon S3
+% === ORIGINAL DESCRIPTION ===
+% - Apache Drill~\cite{Drill, DrillP} is an Apache distributed SQL query engine for Big Data exploration. It is the open source version of Google's Dremel system which is available as an infrastructure service called Google BigQuery~\cite{bigquery}. The main features are schema-free JSON model; industry-standard APIs; extremely user and developer friendly; and pluggable architecture enabling connectivity to multiple data stores.
+% === FORMER TABLE DESCRIPTION ===
+% - Schema-free SQL query engine for Hadoop, NoSQL and cloud storage
+% % - Open source version of Google's Dremel system which is available as an infrastructure service called Google BigQuery~\cite{bigquery}
+% === FORMER TABLE FEATURES ===
+% - Dynamic queries on self-describing data in files and HBase tables without metadata
+% - Nested data support
+% - Integration with Apache Hive
+% - BI/SQL tool integration using standard drivers
+% === LINKS & NOTES ===
+% - [key features] https://drill.apache.org/faq/
+% - [key features] https://drill.apache.org/docs/drill-introduction/
+% - https://drill.apache.org/docs/
+% - https://drill.apache.org/docs/connect-a-data-source-introduction/
+% - [Security] https://drill.apache.org/docs/securing-drill-introduction/
+% - [supported files] https://drill.apache.org/docs/querying-a-file-system-introduction/
+
+\dfs{
+	\dfsName{Apache Jena}
+	\dfsRefs{Jena}
+	\dfsProvider{Apache Software Foundation}
+	\dfsDescription{SPARQL query engine of Jena framework and TDB triple store, supporting federation}
+	\dfsHasAuthentication
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasSparqlEndpoint
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{2.7.0}{2012}
+	\dfsReleaseLast{4.2.0}{2021}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Explicit}
+	\dfsSrcList{
+		\srcJenaSource
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java 11): https://jena.apache.org/download/index.cgi
+% === TRANSPARENT / EXPLICIT ===
+% - Support SPARQL service keyword: https://jena.apache.org/documentation/query/
+% === ORIGINAL DESCRIPTION ===
+% - Apache Jena~\cite{Jena} is a free and open source Java framework for building Semantic Web and Linked Data applications. ARQ is a SPARQL 1.1 compliant query engine for Jena that supports remote federated queries as per SPARQL~1.1 standard, and free text search.
+% === FORMER TABLE DESCRIPTION ===
+% - A query engine for Jena that supports SPARQL
+% === FORMER TABLE FEATURES ===
+% - Free text search via Lucene
+% - SPARQL/Update
+% - Support for federated query
+% - Client-support for remote access to any SPARQL endpoint
+% === LINKS & NOTES ===
+% - https://jena.apache.org/documentation/query/index.html
+
+\dfs{
+	\dfsName{Apache Spark}
+	\dfsRefs{SparkSQL,SparkSQLC}
+	\dfsProvider{Apache Software Foundation}
+	\dfsDescription{Multi-lang. (incl. SQL) distributed engine for large-scale data processing \& analytics}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsDevelLangs{Scala}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{1.0}{2014}
+	\dfsReleaseLast{3.2.1}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAnyFile
+		\srcAvro
+		\srcCSV % Text
+		\srcHive
+		\srcJDBC % configurable, see https://spark.apache.org/docs/latest/sql-data-sources-jdbc.html
+		\srcJSON
+		\srcORC
+		\srcParquet
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java 8-11): https://spark.apache.org/docs/latest/spark-standalone.html
+% - onprem (docker): https://hub.docker.com/r/apache/spark
+% - onprem (kubernetes): https://spark.apache.org/docs/latest/running-on-kubernetes.html
+% - dep / YARN (cluster mode, optional): https://spark.apache.org/docs/latest/running-on-yarn.html
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent, standard SQL queries: https://spark.apache.org/docs/latest/sql-ref.html
+% === ORIGINAL DESCRIPTION ===
+% - Apache Spark~\cite{SparkSQL,SparkSQLC} provides a common way to access a variety of data sources. It is a module added into Spark from 2014. The key features are seamlessly mixing SQL queries with Spark programs; uniform data access; Hive integration; standard connectivity; high performance \& scalability.
+% === FORMER TABLE DESCRIPTION ===
+% - Multi-language engine for executing data engineering, data science, and machine learning on single-node machines or clusters
+% - Built on an advanced distributed SQL engine for large-scale data
+% === FORMER TABLE FEATURES ===
+% - Batch/streaming data
+% - Executing fast, distributed SQL queries
+% - Data science at scale
+% - Machine learning
+% === LINKS & NOTES ===
+% - http://spark.apache.org/docs/latest/sql-programming-guide.html
+% - [Spark SQL Features] https://spark.apache.org/sql/
+
+\dfs{
+	\dfsName{BigDAWG}
+	\dfsRefs{BigDAWG,BigDAWGv1.0}
+	\dfsProvider{Intel Science \& Technology Center for Big data}
+	\dfsDescription{Polystore with heterogeneous storage engines for time series (SciDB), text (Accumulo) and relational data (PostgreSQL)}
+	\dfsIsAcademic
+	\dfsHasCli
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{}{2015}
+	\dfsReleaseLast{0.0.5}{2017} 
+	\dfsQueryLangs{BigDAWG Query}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAccumulo
+		\srcPostgreSQL
+		\srcSciDB
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java for server, Python 2.7-3.5 for Web UI, Docker for deps): https://bigdawg-documentation.readthedocs.io/en/latest/getting-started.html#bigdawg-cluster-setup-steps
+% === TRANSPARENT / EXPLICIT ===
+% - https://bigdawg-documentation.readthedocs.io/en/latest/query-language.html
+% === ORIGINAL DESCRIPTION ===
+% - (missing)
+% === FORMER TABLE DESCRIPTION ===
+% - A open source polystore system, builting on top of multiple, heterogeneous, integrated storage engines
+% === FORMER TABLE FEATURES ===
+% - Supporting heterogeneous database engines
+% - multiple programming languages
+% - complex analytics for a variety of workloads
+% === LINKS & NOTES ===
+% - https://bigdawg-documentation.readthedocs.io/en/latest/index.html
+% - [cli example] https://bigdawg-documentation.readthedocs.io/en/latest/getting-started.html
+
+\dfs{
+	\dfsName{Blazegraph}
+	\dfsRefs{Blazegraph}
+	\dfsProvider{Systap}
+	\dfsDescription{Triple store supporting SPARQL 1.1 federation and powering Wikidata (via a fork)}
+	\dfsHasCli
+	\dfsHasGui
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{2.1.5}{2019}
+	\dfsReleaseLast{2.1.6rc}{2020}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Explicit}
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java 7+): https://github.com/blazegraph/database
+
+\dfs{
+	\dfsName{CloudMdsQL} 
+	\dfsRefs{CloudMdsQL, CloudMdsQLJ}
+	\dfsProvider{Inria \& LIRMM}
+	\dfsDescription{Polystore integrating heterogeneous storage engines (incl. RDBMS, NoSQL, HDFS)}
+	\dfsIsAcademic
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseUnique{}{2017}
+	\dfsQueryLangs{CloudMdsQL}
+	\dfsTransparent{Explicit}
+	\dfsSrcList{
+		\srcDerby
+		\srcMongoDB
+		\srcSparksee
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java 1.6+): https://github.com/SparsityTechnologies/common-query-engine
+% === TRANSPARENT / EXPLICIT ===
+% - CloudMdsQL: a functional SQL-like language, capable of querying multiple heterogeneous data stores within a single query that may contain embedded invocations to each data store's native query interface. 
+% - A single query containing nested sub-queries, each subquery addresses directly a particular data store and may contain embedded invocations to the data store's native query interface;
+% - The input queries can exploit the full power of local data stores by simply allowing some local data store native queries to be called as functions
+% === ORIGINAL DESCRIPTION ===
+% - CloudMdsQL~\cite{CloudMdsQL, CloudMdsQLJ} is a functional SQL-like language, capable of querying heterogeneous data stores with a single query that may contain embedded invocations to each data store's native query interface. It was proposed in 2016%\cite{CloudMdsQL,CloudMdsQLJ} and motivated by the issue that the existing multistore systems do not preserve the full expressiveness of an arbitrary data store's query language. The key feature is that a CloudMdsQL query can exploit the full power of local data stores.
+% === FORMER TABLE DESCRIPTION ===
+% - A multistore system that uses an SQL-like query language for querying heterogeneous data stores
+% === FORMER TABLE FEATURES ===
+% - Allowing sub-queries to contain embedded invocations to each data store's native query interface
+% - Allowing exploiting the full capabilities of the underlying data stores
+% === LINKS & NOTES ===
+% - [cli example] https://github.com/SparsityTechnologies/common-query-engine
+% - [code] https://github.com/SparsityTechnologies/common-query-engine
+
+\dfs{
+	\dfsName{Comunica}
+	\dfsRefs{DBLP:conf/semweb/TaelmanHSV18}
+	\dfsProvider{Univ. Ghent}
+	\dfsDescription{Modular JS federated query engine for heterogeneous web sources, incl. SPARQL endpoints}
+	%\dfsDescription{A highly modular and flexibe query engine platform for the Web}
+	\dfsHasSparqlEndpoint
+	\dfsHasGui
+	\dfsHasCli
+	\dfsIsAcademic
+	\dfsDevelLangs{JavaScript}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{1.0.0}{2018}
+	\dfsReleaseLast{1.22.3}{2021}
+	\dfsQueryLangs{SPARQL, GraphQL}
+	\dfsTransparent{Transparent, Explicit}
+	\dfsSrcList{
+		\srcSPARQL
+		\srcTPF
+		\srcRDF
+		%RDF files, SPARQL endpoints, Triple Pattern Fragments, Solid data pods
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (docker): https://comunica.dev/docs/query/getting_started/query_docker/
+% - onprem (Node.js): https://comunica.dev/docs/query/getting_started/setup_endpoint/
+% - browser: https://comunica.dev/docs/query/getting_started/query_browser_app/
+% === ORIGINAL DESCRIPTION ===
+% - Comunica SPARQL is a SPARQL query engine for JavaScript for querying over decentralized RDF knowledge graphs on the Web
+% === LINKS & NOTES ===
+% - [code] https://github.com/comunica/comunica/tree/master/engines/query-sparql
+% - [code] https://github.com/comunica/comunica/tree/v1.0.0
+
+\dfs{
+	\dfsName{CostFed}
+	\dfsRefs{CostFed}
+	\dfsProvider{Univ. Leipzig} % Universit\"at Leipzig
+	\dfsDescription{Index-assisted, cost-based data federation system for SPARQL endpoints}
+	\dfsHasGui
+	\dfsIsAcademic
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{}{2016}
+	\dfsReleaseLast{}{2018}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java): https://github.com/dice-group/CostFed
+% - onprem (docker - only dockerfile): https://github.com/dice-group/CostFed/blob/master/Dokerfile
+% === ORIGINAL DESCRIPTION ===
+% - CostFed~\cite{CostFed} is an index-assisted federation engine for SPARQL endpoints. It was developed by the Universit\"at Leipzig of Germany in 2018. The key features are that CostFed takes the skew in the distribution of subjects and objects across predicates into account and relies on a non-linear model for the estimation of the selectivity of joins. Experiments on FedBench~\cite{FedBench} benchmark show that CostFed outperforms HiBISCuS, SemaGrow and SPLENDID (three systems described later), as well as ANAPSID~\cite{ANAPSID} and FedX~\cite{FedX} by reducing the number of sources selected and the overall query runtime on a majority of the tested queries.
+% === FORMER TABLE DESCRIPTION ===
+% - Index-assisted federation engine for federated SPARQL query processing
+% === FORMER TABLE FEATURES ===
+% - Considering the skew distribution of the resources to perform efficient source selection
+% - Cost-based query planning
+% - Relying on a non-liner model for the estimation of the selectivity of joins
+% === LINKS & NOTES ===
+% - [code] https://github.com/dice-group/CostFed
+
+\dfs{
+	\dfsName{DARQ}
+	\dfsRefs{DARQ}
+	\dfsProvider{Univ. HU Berlin} % Humboldt-Universit\"at zu Berlin
+	\dfsDescription{Earliest data federation system for SPARQL endpoints, cost-based}
+	\dfsHasCli
+	\dfsIsAcademic
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{}{2006}
+	\dfsReleaseLast{}{2008}
+	\dfsQueryLangs{SPARQL} 
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java): http://darq.sourceforge.net/#Example:_Querying_two_SPARQL_endpoints
+% === TRANSPARENT / EXPLICIT ===
+% - DARQ: provides transparent query access to multiple SPARQL services, i.e., it gives the user the impression to query one single RDF graph despite the real data being distributed on the web. 
+% === ORIGINAL DESCRIPTION ===
+% - DARQ~\cite{DARQ} is the earliest SPARQL federated query engine that provides transparent query access to multiple SPARQL services. It was developed by Humboldt-Universit\"at zu Berlin in 2006. DARQ makes use of indexes for annotating data source and decomposing a query, as well as query rewriting and cost-based query optimization to speed up query execution. Experiments show that these optimizations significantly improve query performance even when only a very limited amount of statistical information is available. 
+% === FORMER TABLE DESCRIPTION ===
+% - The earliest engine for federated SPARQL query answering
+% === FORMER TABLE FEATURES ===
+% - Introducing service descriptions that describe the capabilities of SPARQL endpoints
+% - Taking using of query rewriting and cost-based query optimization 
+% - Proposing a way to estimate the result sizes of SPARQL queries with only very few statistical information
+% === LINKS & NOTES ===
+% - [code, with cli example] http://darq.sourceforge.net/
+
+\dfs{
+	\dfsName{Data Virtuality}
+	\dfsRefs{DataVirtuality}
+	\dfsProvider{Data Virtuality GmbH}
+	\dfsDescription{Heterogeneous data integration solution combining data virtualization and ETL}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsIsSupported
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseLast{2.4}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAmazonRedshift
+		\srcClickHouse
+		\srcCSV
+		\srcDataVirtuality
+		\srcDerby
+		\srcDHLTrackAndTraceAPI
+		\srcExasol
+		\srcExcel
+		\srcGoogleAdsAPI
+		\srcGoogleAnalyticsAPI
+		\srcGoogleBigQuery
+		\srcGreenplum
+		\srcHive
+		\srcHSQLDB
+		\srcHTTPREST % arbitrary HTTP 
+		\srcHtwo
+		\srcIBMDBtwo
+		\srcIBMInformix
+		\srcIBMNetezza
+		\srcIngres
+		\srcInterSystemsCache
+		\srcJDBC % configurable: jdbc-ansi vs jdbc-simple + several configuration properties, https://documentation.datavirtuality.com/24/reference-guide/connecting-data-sources/jdbc-connectors
+		\srcJSON
+		\srcKdbplus
+		\srcLDAP
+		\srcMDX
+		\srcMetaMatrix
+		\srcMicrosoftSQLServer
+		\srcModeShape
+		\srcMongoDB
+		\srcMySQL
+		\srcNeoforj
+		\srcOracleDB
+		\srcPostgreSQL
+		\srcRedis
+		\srcSalesforce
+		\srcSAPASE
+		\srcSingleStore
+		\srcSnowflake
+		\srcTeradata
+		\srcXML
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Linux, Windows, Mac OS): https://documentation.datavirtuality.com/24/administration-guide/installation
+% - onprem (docker - preview, dockerfile only): https://github.com/DataVirtuality/datavirtuality-docker
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent, needs to create virtual schema: https://documentation.datavirtuality.com/3/reference-guide/sql-support/identifiers
+% === SUPPORTED FILE STORAGES ===
+% - Amazon S3,
+% - Microsoft Azure Blob Storage
+% - FTP/SFTP
+% - SCP
+% === ORIGINAL DESCRIPTION ===
+% - Data Virtuality~\cite{DataVirtuality} is a high-performance data virtualization solution that allows leveraging existing data sources by offering solutions for leverages existing data environment through data access, data centralization, automation and data governance. It was founded in 2012. The key benefits are agile data management; data governance; and providing more than 200 available data connectors. 
+% === FORMER TABLE DESCRIPTION ===
+% - Data virtualization for flexible data architectures
+% === FORMER TABLE FEATURES ===
+% - Agile data management
+% - Data governance
+% - Providing more than 200 available data connectors
+% === LINKS & NOTES ===
+% - https://documentation.datavirtuality.com/24/user-guide/introduction-to-data-virtuality-server
+% - [sources] https://documentation.datavirtuality.com/24/reference-guide/connecting-data-sources
+% - [file storage] https://documentation.datavirtuality.com/21/reference-guide/connecting-datasources/file-based-connectors
+% - [file formats] https://pipes.datavirtuality.com/connectors/join/amazon-s3/flat-file-xml-csv-json-etc/
+
+\dfs{
+	\dfsName{Denodo}
+	\dfsRefs{Denodo}
+	\dfsProvider{Denodo Technologies Inc.}
+	\dfsDescription{Data virtualization solution for heterogeneous sources, also available as cloud service}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasAuditing
+	\dfsHasEncryption
+	\dfsHasDataMasking
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsHasAdoNet
+	\dfsIsSupported
+	\dfsDeployIaasPaas{AWS, Azure, GCP}
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{1.0}{2002}
+	\dfsReleaseLast{8.0}{2020}
+	\dfsQueryLangs{SQL, GraphQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAmazonAthena
+		\srcAmazonOpenSearch
+		\srcAmazonRedshift
+		\srcCassandra
+		\srcCSV
+		\srcDatabricks
+		\srcDenodo
+		\srcDerby
+		\srcElasticsearch
+		\srcExcel
+		\srcGoogleBigQuery
+		\srcGreenplum
+		\srcHive
+		\srcIBMDBtwo
+		\srcIBMInformix
+		\srcIBMNetezza
+		\srcImpala
+		\srcITPilot
+		\srcJDBC % configurable, see https://community.denodo.com/docs/html/browse/6.0/vdp/administration/creating_views/importing_data_sources_and_creating_base_views/jdbc_sources#generic-adapter
+		\srcJSON
+		\srcLDAP
+		\srcMicrosoftAnalysisServices
+		\srcMicrosoftAzureSQLDatabase
+		\srcMicrosoftSQLServer
+		\srcMicrosoftSynapseAnalytics
+		\srcMondrian
+		\srcMongoDB
+		\srcMySQL
+		\srcOracleDB
+		\srcOracleEssbase
+		\srcOracleTimesTen
+		\srcPostgreSQL
+		\srcPresto
+		\srcSalesforce
+		\srcSAPASE
+		\srcSAPBAPI
+		\srcSAPBusinessWarehouse
+		\srcSAPHANA
+		\srcSnowflake
+		\srcSOAPWSDL
+		\srcTeradata
+		\srcTrino
+		\srcVertica
+		\srcXML
+		\srcYellowbrick
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - cmp (AWS): https://aws.amazon.com/marketplace/pp/prodview-e2ortibjq4cqm#pdp-pricing
+% - cmp (Azure): https://azuremarketplace.microsoft.com/en-us/marketplace/apps/denodo.denodo-8_0-ent_plus-vm-payg?tab=Overview
+% - cmp (GCP): https://console.cloud.google.com/marketplace/product/denodo4gcp-public/denodo-80-enterprise-vdp-payg-sa-lnx?q=search&referrer=search&project=carbon-helix-148918
+% - onprem (Linux, Windows): https://community.denodo.com/docs/html/browse/8.0/en/platform/installation/preinstallation_tasks/software_requirements/software_requirements
+% - onprem (Docker): https://community.denodo.com/docs/html/document/7.0/DenodoPlatformContainerQuickStartGuide
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: Denodo Virtual DataPort provides business applications with easy access to integrated views of various heterogeneous, distributed and structured and semi-structured data sources. 
+% - need virtual database (VDB): https://community.denodo.com/docs/html/browse/8.0/en/vdp/vql/general_overview_of_virtual_dataport/creating_or_defining_data/creating_or_defining_data
+% === SUPPORTED FILE STORAGES ===
+% - locally mounted filesystems
+% === ORIGINAL DESCRIPTION ===
+% -Denodo~\cite{Denodo} is a data virtualization platform that provides agile, high performance data integration and data abstraction across a broad range of enterprise, cloud, big data and unstructured data sources, and real-time data services. It was born in 1999 as a research project at the University of A Coru\~na. Denodo's main features are cloud-native deployments; support for data science; performance acceleration for complex analytical scenarios; enhanced data services and API support with GraphQL; and enhanced user experience.
+% === FORMER TABLE DESCRIPTION ===
+% - A data virtualization platform providing agile, high performance data integration and data abstraction across a broad range of data sources
+% === FORMER TABLE FEATURES ===
+% - Cloud-native deployments
+% - Support for data science
+% - Performance acceleration for complex analytical scenarios
+% - Enhanced data services and API support with GraphQL
+% - Enhanced user experience
+% === LINKS & NOTES ===
+% - https://community.denodo.com/docs/html/browse/8.0/en//platform/installation/index
+% - https://www.denodo.com/en/denodo-platform/denodo-platform-80
+% - [data source] https://community.denodo.com/docs/html/browse/8.0/en/vdp/administration/creating_data_sources_and_base_views/creating_data_sources_and_base_views
+% - [JDBC sources] https://community.denodo.com/docs/html/browse/8.0/en/vdp/administration/appendix/supported_jdbc_data_sources/supported_jdbc_data_sources
+
+\dfs{
+	\dfsName{Dremio}
+	\dfsRefs{Dremio}
+	\dfsProvider{Dremio Corporation}
+	\dfsDescription{Data ``lakehouse'' (lake + warehouse) solution supporting heterogeneous data sources}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasDataMasking
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsIsOpenSource
+	\dfsDeployIaasPaas{AWS, Azure}
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{1.1}{2017}
+	\dfsReleaseLast{19.0}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAmazonOpenSearch
+		\srcAmazonRedshift
+		\srcCSV % Delimited files in general
+		\srcElasticsearch
+		\srcExcel
+		\srcHBase
+		\srcHive
+		\srcJSON
+		\srcMicrosoftSQLServer
+		\srcMongoDB
+		\srcMySQL
+		\srcOracleDB
+		\srcParquet
+		\srcPostgreSQL
+		\srcTeradata
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - cmp (AWS - free & commercial editions): https://aws.amazon.com/marketplace/pp/prodview-pnlijtzyoyjok?sr=0-3&ref_=beagle&applicationId=AWSMPContessa
+% - cmp (Azure - free edition): https://azuremarketplace.microsoft.com/en-us/marketplace/apps/dremiocorporation.dremio_ce?tab=Overview
+% - onprem (Docker): https://hub.docker.com/r/dremio/dremio-oss
+% - onprem (Hadoop, MapR): https://docs.dremio.com/software/deployment/standalone/standalone-cluster/
+% === TRANSPARENT / EXPLICIT ===
+% - https://docs.dremio.com/software/sql-reference/sql-commands/tables/#querying-tables
+% - unified schema (virtual datasets): https://docs.dremio.com/software/working-with-datasets/virtual-datasets/
+% === SUPPORTED FILE STORAGES ===
+% - locally mounted filesystems (incl. NAS)
+% - Amazon S3
+% -	Microsoft Azure Data Lake Storage
+% - Google Cloud Storage
+% -	HDFS
+% - MapR-FS
+% === ORIGINAL DESCRIPTION ===
+% - Dremio~\cite{Dremio} is a next-generation data lake engine that provides for live, interactive queries directly on cloud data lake storage. Founded in 2015, Dremio is a Data-as-a-Service Platform company. The main features of Dremio are fast queries; self-service semantic layer; flexibility, open source technology and powerful JOIN capability.
+% === FORMER TABLE DESCRIPTION ===
+% - Data lakehouse query engine, delivering high-performing BI dashboards and interactive analytics directly on data lake storage
+% === FORMER TABLE FEATURES ===
+% - Lightning-fast queries
+% - Self-service semantic layer
+% - Flexibility and open source technology
+% - Powerful JOIN capability 
+% === LINKS & NOTES ===
+% - [Document] https://docs.dremio.com/?_ga=2.168584225.1226498452.1638884456-806688515.1636764975
+% - Graphical Interface
+
+\dfs{
+	\dfsName{FEDRA}
+	\dfsRefs{FEDRA}
+	\dfsProvider{Univ. Nantes (LINA lab.)} % LINA laboratory of the Nantes University
+	\dfsDescription{Data federation system for SPARQL endpoints exploiting data replication}
+	\dfsIsAcademic
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseUnique{}{2015}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java - there are only scripts to run experiments): https://github.com/gmontoya/fedra
+% === TRANSPARENT / EXPLICIT ===
+% - Contain source selection algorithm
+% === ORIGINAL DESCRIPTION ===
+% - FEDRA~\cite{FEDRA} is a source selection strategy that exploits fragment definitions to select non-redundant sources for federated SPARQL query answering over SPARQL endpoints. It was proposed by the LINA laboratory of the Nantes University of France in 2015 and motivated by the fact that replicating fragments can offer a new trade-off between performance and availability. FEDRA extends state-of-the-art federated query engines, such as FedX, and its evaluation over benchmarks shows that it can efficiently leverage replication using only a small number of public, replicated SPARQL endpoints.
+% === FORMER TABLE DESCRIPTION ===
+% - A framework for querying Linked Data
+% === FORMER TABLE FEATURES ===
+% - Taking advantage of client-side data replication
+% - Performing a source selection aiming to reduce selected SPARQL endpoints, execution time, and intermediate results
+% === LINKS & NOTES ===
+% - [code] https://github.com/gmontoya/fedra
+
+\dfs{
+	\dfsName{FedX~(RDF4J)} 
+	\dfsRefs{FedX,FedX1}
+	\dfsProvider{fluid Operations AG} % fluid Operations AG of Germany
+	\dfsDescription{On-demand (no statistics, query-time) data federation system for SPARQL endpoints}
+	\dfsHasAuthentication
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasWebApi
+	\dfsHasSparqlEndpoint
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{}{2011}
+	\dfsReleaseLast{3.7.4}{2021} 
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcRDFforJSource
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java)
+% === TRANSPARENT / EXPLICIT ===
+% - Using asking queries to source the sources of triple patterns
+% - do not need SPARQL service keywords: https://rdf4j.org/documentation/programming/federation/
+% === ORIGINAL DESCRIPTION ===
+% - RDF4J~(FedX)~\cite{FedX,FedX1} is an open source Java framework for processing and querying RDF data that embeds FedX, a practical solution that enables efficient SPARQL query processing on heterogeneous, virtually integrated Linked Data sources without any pre-processing. FedX was developed by the fluid Operations AG of Germany and the Max-Planck Institute for Informatics of Germany in 2011 and motivated by the issue that the existing systems do not support the full SPARQL standard and require pre-processed metadata and statistics. Experiment against the FedBench benchmark indicates performance improvement over that time state-of-the-art federated query engines DARQ (previously described) and AliBaba (unavailable now).
+% === FORMER TABLE DESCRIPTION ===
+% - A solution providing transparent federation of multiple SPARQL endpoint under a single virtual endpoint
+% === FORMER TABLE FEATURES ===
+% - Virtual integration of heterogeneous Linked Data sources
+% - On-demand federation setup at query time
+% - Fast and effective query execution due to new optimization techniques
+% - Practical applicability \& easy integration as a RDF4J repository
+% === LINKS & NOTES ===
+% - https://rdf4j.org/documentation/programming/federation/
+
+\dfs{
+	\dfsName{GraphDB}
+	\dfsRefs{GraphDB}
+	\dfsProvider{Ontotext}
+	\dfsDescription{Triple store featuring OWL reasoning, SPARQL federated queries \& RDBMS access}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasAuditing
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasWebApi
+	\dfsHasSparqlEndpoint
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{6.2}{2015}
+	\dfsReleaseLast{9.10}{2021}
+	\dfsQueryLangs{SPARQL, SQL, Cypher}
+	\dfsTransparent{Transparent, Explicit}
+	\dfsSrcList{
+		\srcGraphDB
+		\srcIBMDBtwo
+		\srcMicrosoftSQLServer
+		\srcMySQL
+		\srcOracleDB
+		\srcPostgreSQL
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Windows, MacOS, Linux): https://graphdb.ontotext.com/documentation/10.0/quick-start-guide.html#run-graphdb-as-a-desktop-installation
+% - onprem (docker): https://hub.docker.com/r/ontotext/graphdb/
+% - onprem (puppet): https://github.com/Ontotext-AD/puppet-graphdb
+% === TRANSPARENT / EXPLICIT ===
+% - Explicit: it supports SPARQL 1.1 federation extension (service keyword): https://graphdb.ontotext.com/documentation/standard/sparql-compliance.html
+% - internal federation: also explicit
+% - Supports FedX(RDF4J): https://graphdb.ontotext.com/documentation/standard/fedx-federation.html
+% - a data partitioning technology that provides transparent federation of multiple SPARQL endpoints under a single virtual endpoint.
+% === ORIGINAL DESCRIPTION ===
+% - GraphDB~\cite{GraphDB} is a highly efficient and robust graph database with RDF and SPARQL support. It is a product of Ontotext. The data virtualization in GraphDB enables direct access to relational databases with SPARQL queries.
+% === FORMER TABLE DESCRIPTION ===
+% - An enterprise ready Semantic Graph Database, compliant with W3C Standards
+% === FORMER TABLE FEATURES ===
+% - Enabling direct access to relational databases with SPARQL queries
+% === LINKS & NOTES ===
+% - https://graphdb.ontotext.com/documentation/free/internal-federation.html
+% - [Data virtualization] https://graphdb.ontotext.com/documentation/free/virtualization.html
+% - [Federation (FedX/Internal Federation) Support] https://graphdb.ontotext.com/documentation/free/fedx-federation.html
+% - [Access with RDF4J API/SPARQL Endpoint] https://graphdb.ontotext.com/documentation/free/using-graphdb-with-the-rdf4j-api.html
+% - [JDBC driver] https://graphdb.ontotext.com/documentation/free/sql-access-over-jdbc.html
+% - with three different versions
+
+\dfs{
+	\dfsName{HiBISCuS}
+	\dfsRefs{HiBISCus}
+	\dfsProvider{Univ. Leipzig} % Universitat Leipzig
+	\dfsDescription{Source selection for SPARQL data federation (DARQ, FedX \& SPLENDID extension)}
+	\dfsIsAcademic
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseUnique{1}{2014}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java - Eclipse project)
+% === TRANSPARENT / EXPLICIT ===
+% - core technique: hyper-graph based source selection for SPARQL queries
+% === ORIGINAL DESCRIPTION ===
+% - HiBISCuS~\cite{HiBISCus} is a hypergraph-based source selection approach for federated SPARQL query answering. It was proposed by the Universitat Leipzig of Germany in 2014 and motivated by the issue that the existing approaches pay less attention to devising source selection approaches beyond triple pattern-wise source selection. The key feature is that HiBSCus can be directly combined with the existing SPARQL query federation engines. Experiments on DARQ, FedX and SPLENDID extended with HiBISCuS over FedBench benchmark implies that HiBISCuS can reduce the total number of sources selected without losing recall.
+% === FORMER TABLE DESCRIPTION ===
+% - A hypergraph-based source selection approach to federated SPARQL querying
+% === FORMER TABLE FEATURES ===
+% - Selecting data sources based on hypergraph with the motivation of querying few data sources
+% - Being directly combined with other SPARQL query federation engines
+% === LINKS & NOTES ===
+% - [code, old link] https://code.google.com/archive/p/hibiscusfederation/source 
+% - [code, new link] https://github.com/AKSW/HiBISCuS
+
+\dfs{
+	\dfsName{IBM Cloud Pak for Data}
+	\dfsRefs{IBMCloudPak}
+	\dfsProvider{IBM}
+	\dfsDescription{Data federation system with data discovery, governance, security and privacy solutions, also available as cloud service (formerly IBM Cloud Private for Data)}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasAuditing
+	\dfsHasEncryption
+	\dfsHasDataMasking
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasWebApi
+	\dfsIsSupported
+	\dfsDeploySaas{IBM}
+	\dfsDeployIaasPaas{AWS, Azure, GCP}
+	\dfsDeployOnPremises{Containerized}
+	\dfsReleaseFirst{2.1.0}{2018}
+	\dfsReleaseLast{4.0}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAmazonRedshift
+		\srcCSV % also TSV
+		\srcDerby
+		\srcExcel
+		\srcGoogleBigQuery
+		\srcGreenplum
+		\srcHive
+		\srcIBMDBtwo
+		\srcIBMDbtwoBigSQL
+		\srcIBMDBtwoEventStore
+		\srcIBMDBtwoWarehouse
+		\srcIBMDVM
+		\srcIBMInformix
+		\srcIBMNetezza
+		\srcImpala
+		\srcMariaDB
+		\srcMicrosoftSQLServer
+		\srcMongoDB
+		\srcMySQL
+		\srcOData
+		\srcOracleDB
+		\srcPostgreSQL
+		\srcSalesforce
+		\srcSAPASE
+		\srcSAPGatewayOData
+		\srcSAPHANA
+		\srcSnowflake
+		\srcTeradata
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - saas (IBM): https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/overview-cpdaas.html
+% - cmp (AWS via openshift): https://www.ibm.com/be-en/products/cloud-pak-for-data/deployment-model-options
+% - cmp (Azure via openshift): https://azuremarketplace.microsoft.com/en-us/marketplace/apps/ibm-alliance-global-1560886.cloud_pak_for_data?tab=PlansAndPrice
+% - cmp (GCP via openshift): https://www.ibm.com/be-en/products/cloud-pak-for-data/deployment-model-options
+% - onprem (via docker images + openshift on private cluster): https://www.ibm.com/docs/en/cloud-paks/cp-data/3.5.0?topic=overview
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: configurable, virtual data view for multiple data sources
+% - https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=services-data-virtualization
+% - https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=data-virtualizing
+% === SUPPORTED FILE STORAGES ===
+% - locally mounted filesystems
+% - Amazon S3
+% -	IBM Cloud Object Storage
+% === ORIGINAL DESCRIPTION ===
+% - IBM Cloud Pak for Data~\cite{IBMCloudPak} is a technology that connects all data sources into a single self-balancing collection of data sources or databases. It is a product of IBM and formerly called IBM Cloud Private for Data. Its highlight features are queries across multiple databases and big data repositories; centralized  access control and governance; and simplified data analytics with a scalable and powerful platform.
+% === FORMER TABLE DESCRIPTION ===
+% - Cloud-native solution enabling users to put data to work quickly and efficiently via a single and unified interface
+% === FORMER TABLE FEATURES ===
+% - Data access and availability
+% - Data quality and governance
+% - Data privacy and security
+% - ModelOps
+% - AI governance
+% === LINKS & NOTES ===
+% - https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/cpd/overview/overview.html
+% - https://www.ibm.com/support/knowledgecenter/SSQNUZ_3.5.0/cpd/access/data-sources.html
+% - [Features] https://cloud.ibm.com/catalog/content/ibm-cp-datacore-6825cc5d-dbf8-4ba2-ad98-690e6f221701-global
+% - [Supported data sources] https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/cpd/access/data-sources.html
+% - [masking] https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/wsj/governance/dmg22.html
+% - [security] https://www.ibm.com/support/producthub/icpdata/docs/content/SSQNUZ_latest/cpd/plan/security.html
+
+\dfs{
+	\dfsName{IBM Db2 Big SQL}
+	\dfsRefs{IBMDb2BigSQL}
+	\dfsProvider{IBM}
+	\dfsDescription{Massively-parallel Hadoop SQL engine for heterogeneous sources (formerly IBM SQL)}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasAuditing
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsDeploySaas{IBM}
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{}{2017}
+	\dfsReleaseLast{7.1.0}{2020}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAmazonAthena
+		\srcAmazonOpenSearch
+		\srcAmazonRedshift
+		\srcCouchDB
+		\srcDerby
+		\srcGoogleBigQuery
+		\srcGreenplum
+		\srcHive
+		\srcIBMDBtwo
+		\srcIBMDbtwoBigSQL
+		\srcIBMDBtwoWarehouse
+		\srcIBMDVM
+		\srcIBMInformix
+		\srcIBMIntegratedAnalyticsSystem
+		\srcIBMMQ
+		\srcIBMNetezza
+		\srcIBMPureData
+		\srcImpala
+		\srcMariaDB
+		\srcMicrosoftAzureSQLDatabase
+		\srcMicrosoftSQLServer
+		\srcMongoDB
+		\srcMySQL
+		\srcOracleDB
+		\srcParquet
+		\srcPostgreSQL
+		\srcSalesforce
+		\srcSAPASE
+		\srcSAPHANA
+		\srcTeradata
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - saas (IBM): https://www.ibm.com/products/db2-big-sql
+% - onprem (CentOS 7.x, RHEL 7; Cloudera Data Platform; Java 8): https://www.ibm.com/docs/en/db2-big-sql/7.1?topic=installing-installation-roadmap
+% === TRANSPARENT / EXPLICIT ===
+% - federated DB for data sources: https://www.ibm.com/docs/en/db2-big-sql/7.1?topic=federation-federated-systems
+% === ORIGINAL DESCRIPTION ===
+% - IBM Db2 BigSQL~\cite{IBMDb2BigSQL} is a hybrid SQL-on-Hadoop engine delivering advanced, security-rich data query across enterprise big data sources. Now a product of the IBM Db2 family, it was called IBM SQL before 2018. The key features are low latency; high performance; data security; SQL compatibility; and federation capabilities to evaluate ad hoc and complex queries.
+% === FORMER TABLE DESCRIPTION ===
+% - A high performance massively parallel processing SQL engine making querying enterprise data from across the organization an easy and secure experience
+% === FORMER TABLE FEATURES ===
+% - Easy-to-use tools
+% - Flexible security options
+% - Strong federation and performance capabilities
+% - A massively parallel processing SQL engine
+% === LINKS & NOTES ===
+% - [overview] https://www.ibm.com/products/db2-big-sql
+% - [features] https://www.ibm.com/docs/en/db2-big-sql/7.1?topic=overview-release-notes
+% - [document] https://www.ibm.com/docs/en/db2-big-sql/7.1?topic=overview-release-notes
+% - [federation] https://www.ibm.com/docs/en/db2-big-sql/7.1?topic=federation
+% - [data sources] https://www.ibm.com/support/pages/node/6258191
+
+\dfs{
+	\dfsName{IBM InfoSphere Federation Server}
+	\dfsRefs{IBMInforSF}
+	\dfsProvider{IBM}
+	\dfsDescription{SQL-based data federation system for heterogeneous sources (formerly WebSphere Federation Server)}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasWebApi
+	\dfsIsSupported
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseLast{10.5.0}{2019}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcIBMDBtwo
+		\srcIBMInformix
+		\srcMicrosoftSQLServer
+		\srcOracleDB
+		\srcSAPASE
+		\srcDatacomDB
+		\srcTeradata
+		\srcIBMNetezza
+		\srcExcel
+		\srcXML
+		\srcSOAPWSDL
+		\srcBioRS
+		\srcIBMMQ
+		\srcIDMS
+		\srcIMS
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Linux, Unix, Windows; DB2): https://www.ibm.com/docs/en/db2/10.1.0?topic=installation-hardware-software-requirements
+% === TRANSPARENT / EXPLICIT ===
+% === SUPPORTED FILE STORAGES ===
+% - IBM VSAM (some kind of disk storage & access method also supporting storing record data)
+% === ORIGINAL DESCRIPTION ===
+% - IBM InforSphere Federation Server~\cite{IBMInforSF} enables users to access and integrate diverse data and content as if it is a single resource. It is a part of the IBM InfoSphere portfolio and was called WebSphere Federation Server before 2008. Its key features are support for SQL statements and stored procedures calls; dynamic data access and integration; visual metadata management; and performance optimization.
+% === FORMER TABLE DESCRIPTION ===
+% - Enabling users to access and integrate diverse data and contents as if it is a single resource
+% === FORMER TABLE FEATURES ===
+% - Support for SQL statements and stored procedures calls
+% - Dynamic data access and integration
+% - Visual metadata management
+% - Performance optimization.
+% === LINKS & NOTES ===
+% - [data sources] https://www.ibm.com/support/pages/infosphere-federation-server-version-105-data-source-requirements
+% - [document] https://www.ibm.com/docs/en/iis/11.7?topic=components-infosphere-federation-server
+% - https://www.ibm.com/support/knowledgecenter/SS2K5T_10.5.0/com.ibm.swg.im.iis.db.found.conn.fw.sds.doc/topics/rfpint24.html
+% - [Supported data sources] https://www.ibm.com/support/pages/infosphere-federation-server-version-105-data-source-requirements
+
+\dfs{
+	\dfsName{JBoss Data Virtualization}
+	\dfsRefs{JBossDV}
+	\dfsProvider{Red Hat, Inc.}
+	\dfsDescription{Data federation system based on Teiid and providing read/write access to heterogeneous sources, data security, and multiple user interfaces / APIs}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasAuditing
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{6.0.0}{2014}
+	\dfsReleaseLast{6.4.0}{2018}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAccumulo
+		\srcActianVector
+		\srcAmazonOpenSearch
+		\srcAmazonRedshift
+		\srcCassandra
+		\srcCouchbase
+		\srcCSV % Delimited and fixed-length
+		\srcExasol
+		\srcExcel
+		\srcGoogleSheetsAPI
+		\srcGreenplum
+		\srcHBase
+		\srcHive
+		\srcHive
+		\srcHTTPREST % with JSON response bodies
+		\srcIBMDBtwo
+		\srcIBMInformix
+		\srcIBMNetezza
+		\srcImpala
+		\srcIngres
+		\srcJBossDataVirtualization
+		\srcLDAP
+		\srcMariaDB
+		\srcMetaMatrix
+		\srcMicrosoftAccess
+		\srcMicrosoftSQLServer
+		\srcModeShape
+		\srcMondrian
+		\srcMongoDB
+		\srcMySQL % also handles MySQL sources on Amazon Relational Data Service (RDS) 
+		\srcOData % V4
+		\srcOracleDB
+		\srcOSIsoftPI
+		\srcPostgreSQL
+		\srcPresto
+		\srcRedHatDataGrid % via HotRod protocol
+		\srcRedHatDirectoryServer
+		\srcSalesforce
+		\srcSAPASE
+		\srcSAPGatewayOData
+		\srcSAPHANA
+		\srcSAPIQ
+		\srcSOAPWSDL
+		\srcSolr
+		\srcTeradata
+		\srcVertica
+		\srcXML
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java 6/7/8): https://access.redhat.com/webassets/avalon/d/Red_Hat_JBoss_Data_Virtualization-6.3-Installation_Guide-en-US/Red_Hat_JBoss_Data_Virtualization-6.3-Installation_Guide-en-US.pdf
+% - onprem (via openshift): https://access.redhat.com/documentation/en-us/red_hat_jboss_data_virtualization/6.4/html/red_hat_jboss_data_virtualization_for_openshift/index
+% === TRANSPARENT / EXPLICIT ===
+% - needs to create virtual database for multiple data sources
+% === SUPPORTED FILE STORAGES ===
+% - Amazon S3
+% - Cloudera CDH (Hadoop distribution)
+% - Hortonworks Data Platform (Hadoop distribution)
+% === ORIGINAL DESCRIPTION ===
+% - JBoss Data Virtualization~\cite{JBossDV} is a virtual data integration solution providing an easily consumable, unified and actionable view of available data. It is open source and a product of Red Hat. The main features of JBoss Data Virtualization are bi-directional integration; agile development; consumer-driven access; and comprehensive data security.
+% === FORMER TABLE DESCRIPTION ===
+% - A lean, virtual data integration solution unlocking trapped data and delivering it as easily consumable, unified, and actionable information
+% === FORMER TABLE FEATURES ===
+% - Bi-directional integration
+% - Agile development
+% - Consumer-driven access
+% - Comprehensive data security
+% === LINKS & NOTES ===
+% - [!!!!documentation] https://access.redhat.com/documentation/en-us/red_hat_jboss_data_virtualization/6.4
+% - [supported Data Sources] https://access.redhat.com/articles/703663#jdv64support
+% - [overview] https://access.redhat.com/products/red-hat-jboss-data-virtualization
+% - [overview/fc] https://www.slideshare.net/WebMarketing3/red-hat-jboss-data-virtualization-64871707
+% - [document] https://developers.redhat.com/products/datavirt/docs-and-apis
+
+%
+% REMOVED AS SOURCE CODE IS NOT AVAILABLE ANYWHERE (INCL. ITS GITHUB REPO)
+%
+%\dfs{
+%	\dfsName{Lusail}
+%	\dfsRefs{LUSAIL}
+%	\dfsProvider{Univ. KAUST} % King Abdullah University of Science \& Technology
+%	\dfsDescription{Data federation system for SPARQL endpoints using schema \& instances statistics}
+%	\dfsIsAcademic
+%	\dfsDevelLangs{Java}
+%	\dfsIsOpenSource
+%	\dfsReleaseFirst{1}{2017}
+%	\dfsReleaseLast{1}{2019}
+%	\dfsQueryLangs{BGPs}
+%	\dfsTransparent{Transparent}
+%	\dfsSrcList{
+%		\srcSPARQL
+%	}
+%}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - *** there is no source code available! ***
+% === TRANSPARENT / EXPLICIT ===
+% - Supports pure SPARQL queries without service keywords
+% === ORIGINAL DESCRIPTION ===
+% - Lusail~\cite{LUSAIL} is a scalable and efficient federated SPARQL system for querying large RDF graphs that are distributed in different SPARQL endpoints. It was developed by the King Abdullah University of Science \& Technology and the Qatar Computing Research Institute of the Hamad Bin Khalifa University~(HBKU) in 2017. The key feature is that Lusail relies on not only schema information but also on instance information to improve performance. Experiments on the LargeRDFBench benchmark~ \cite{LargeRDFBench} show that Lusail outperforms FedX, SPLENDID and HiBISCuS (three systems of this survey) in terms of scalability and response time.
+% === FORMER TABLE DESCRIPTION ===
+% - A scalable and efficient federated SPARQL system for distributed SPARQL endpoints 
+% === FORMER TABLE FEATURES ===
+% - Federated query processing by relying on information about the RDF instances and not only the schema
+% - Increasing parallelism and minimizes the retrieval of unnecessary data
+% === LINKS & NOTES ===
+% - [code] https://github.com/Lusail/lusail
+
+\dfs{
+	\dfsName{Metaphactory}
+	\dfsRefs{Metaphactory,MetaphactoryJ}
+	\dfsProvider{metaphacts GmbH}
+	\dfsDescription{KG platform on top of SPARQL endpoints with two federation engines (Ephedra, FedX)}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasWebApi
+	\dfsHasSparqlEndpoint
+	\dfsDeployIaasPaas{AWS}
+	\dfsDeployOnPremises{Docker}
+	\dfsReleaseFirst{}{2015}
+	\dfsReleaseLast{4.3.0}{2021}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent, Explicit}
+	\dfsSrcList{
+		% Ephedra, % FC: these are the federation engines embedded in Metaphactory
+		% FedX % FC: these are the federation engines embedded in Metaphactory
+		\srcAmazonNeptune
+		\srcElasticsearch % via Ephedra/FedX engines
+		\srcGraphDB
+		\srcHTTPREST % with JSON response bodies, via Ephedra/FedX engines
+		\srcJDBC % via Ephedra/FedX engines, by directly writing SQL query matching a certain triple pattern, see https://help.metaphacts.com/resource/Help:EphedraSQLService
+		\srcSPARQL
+		\srcStardog
+		\srcVirtuoso
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - cmp (AWS): https://aws.amazon.com/marketplace/pp/prodview-vahdpbppwgdpi?sr=0-2&ref_=beagle&applicationId=AWSMPContessa
+% - onprem (docker): https://help.metaphacts.com/resource/Help:Installation
+% === TRANSPARENT / EXPLICIT ===
+% - Support FedX: transparent, https://help.metaphacts.com/resource/Help:Federation
+% - Support SPARQL service: https://help.metaphacts.com/resource/Help:Ephedra, also support transparent
+% === ORIGINAL DESCRIPTION ===
+% - Metaphactory~\cite{Metaphactory, MetaphactoryJ} is an end-to-end knowledge graph platform.%for knowledge graph asset management, rapid application development, and end-user oriented interaction. It provides two federation engines, i.e., Ephedra~\cite{Ephedra} and FedX, tailored towards data integration from multiple sources. Its key features are knowledge graph asset management, rapid application development, and end-user oriented interaction. 
+% === FORMER TABLE DESCRIPTION ===
+% - An end-to-end knowledge graph platform for knowledge graph asset management, rapid application building, and end-user oriented interaction
+% - Proving two federation engines, i.e., Ephedra \cite{Ephedra} and FedX \cite{FedX}
+% === FORMER TABLE FEATURES ===
+% - Knowledge graph asset management
+% - Rapid application building
+% - End-user oriented interaction
+% === LINKS & NOTES ===
+% - https://help.metaphacts.com/resource/Help:Start
+% [Graph DBs] https://metaphacts.com/product/graph-databases
+% [Federation over Graph DBs] https://metaphacts.com/product
+% [Ephedra federation engine] https://metaphacts.com/ephedra
+% [HTTP/REST via Ephedra] https://help.metaphacts.com/resource/Help:EphedraRESTService
+% [JDBC sources via Ephedra] https://help.metaphacts.com/resource/Help:EphedraSQLService
+% [Elasticsearch via Ephedra] https://help.metaphacts.com/resource/Help:EphedraElasticsearch
+% [Sources (repository types)] https://help.metaphacts.com/resource/Help:RepositoryManager
+
+\dfs{
+	\dfsName{Myria}
+	\dfsRefs{Myria}
+	\dfsProvider{Univ. Washington} % University of Washington
+	\dfsDescription{Cloud service for big data management/analytics with parallel \& federated query engine}
+	\dfsIsAcademic
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{1}{2014}
+	\dfsReleaseLast{1}{2017}
+	\dfsQueryLangs{SQL, MyriaL}
+	\dfsTransparent{Transparent} 
+	\dfsSrcList{
+		% proprietary binary format likely corresponding to Java DataOutputStream
+		\srcAmazonOpenSearch
+		\srcCSV % also TSV
+		\srcSciDB
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java 8, PostgreSQL|SQLite, Google App Engine SDK for web UI): http://myria.cs.washington.edu/docs/myriax/
+% - there are also scripts to automate deployment on an AWS cluster (not saas): http://myria.cs.washington.edu/docs/myria-ec2.html
+% === TRANSPARENT / EXPLICIT ===
+% - do not contain queries of data sources in the input queries
+% === SUPPORTED FILE STORAGES ===
+% - HDFS
+% === ORIGINAL DESCRIPTION ===
+% Myria~\cite{Myria} is a cloud service designed for big data management and analytics. It is developed by the University of Washington since 2014. The key feature of Myria is that Myria queries are executed on a scalable, parallel cluster that uses both state-of-the-art and novel methods for distributed query processing.
+% === FORMER TABLE DESCRIPTION ===
+% - A cloud service designed for big data management and analytics
+% === FORMER TABLE FEATURES ===
+% - Using both state-of-the-art and novel methods for distributed query processing
+% === LINKS & NOTES ===
+% - [overview, code] http://myria.cs.washington.edu/
+% - [Raco support for other sources] https://github.com/uwescience/raco
+% - [also about sources] https://par.nsf.gov/servlets/purl/10074262
+% - files accessed via MyriaX
+
+\dfs{
+	\dfsName{Neo4j (Fabric)}
+	\dfsRefs{Neo4j}
+	\dfsProvider{Neo4j, Inc.}
+	\dfsDescription{Federation solution of Neo4J graph DB (Cypher~\cite{Cypher} queries on property graph model)}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsIsOpenSource
+	\dfsDeploySaas{Neo4j AuraDB}
+	\dfsDeployIaasPaas{AWS, Azure, GCP}
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{4.0.11}{2020}
+	\dfsReleaseLast{4.3.7}{2021}
+	\dfsQueryLangs{Cypher}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcNeoforj
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - saas (Neo4j AuraDB): https://neo4j.com/cloud/platform/aura-graph-database/
+% - cmp (AWS): https://aws.amazon.com/marketplace/pp/prodview-akmzjikgawgn4?sr=0-1&ref_=beagle&applicationId=AWSMPContessa
+% - cmp (Azure): https://azuremarketplace.microsoft.com/en-us/marketplace/apps/neo4j.neo4j-ee?tab=Overview
+% - cmp (GCP): https://console.cloud.google.com/marketplace/product/endpoints/prod.n4gcp.neo4j.io?project=carbon-helix-148918
+% - onprem (CentOS 7/8, Ubuntu 16.04+, Amazon Linux AMI 2018.03, Windows 2016+; Java SE 8/11): https://neo4j.com/docs/operations-manual/current/installation/requirements/
+% - onprem (docker): https://neo4j.com/developer/guide-cloud-deployment/
+% - onprem (Kubernetes): https://neo4j.com/developer/guide-cloud-deployment/
+% === TRANSPARENT / EXPLICIT ===
+% - Fabric virtual databases: https://neo4j.com/docs/operations-manual/current/fabric/introduction/
+% === ORIGINAL DESCRIPTION ===
+% - Neo4j~\cite{Neo4j} is a graph database management system developed by Neo4j, Inc. Fabric, introduced in Neo4j 4.0, is a way to store and retrieve data in multiple databases, whether they are on the same Neo4j DBMS or in multiple DBMSs, using a single Cypher~\cite{Cypher} query. The key features of Neo4j Fabric are a unified view of local and distributed data; increased scalability for reading/writing operations; and predictable response time.
+% === FORMER TABLE DESCRIPTION ===
+% - Introduced in Neo4j 4.0, a way to store and retrieve data in multiple databases
+% === FORMER TABLE FEATURES ===
+% - A unified view of local and distributed data
+% - Increased scalability for read/write operations
+% - Predictable response time for queries executed during normal operations
+% === LINKS & NOTES ===
+% - https://neo4j.com/docs/operations-manual/current/fabric/introduction/
+% - [documentation] https://neo4j.com/docs/
+% - [!!!]Read/Write capability] https://neo4j.com/docs/operations-manual/current/fabric/introduction/
+% - Neo4j JDBC driver
+% - Neo4j Fabric的features!!!
+% - Fabric Federation Engine 
+
+\dfs{
+	\dfsName{Obi-Wan}
+	\dfsRefs{Obi-Wan,Obi-Wan1}
+	\dfsProvider{Inria \& Polytechnic Institute of Paris}
+	\dfsDescription{Ontology-Based Data Access (OBDA)~\cite{OBDA3} system on top of Tatooine~\cite{Tatooine} mediator for heterogeneous sources}
+	\dfsIsAcademic
+	\dfsHasCli
+	\dfsHasSparqlEndpoint
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseUnique{}{2020}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcJenaTDB
+		\srcMongoDB
+		\srcPostgreSQL
+		\srcRedis
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java 8, PostgreSQL, MongoDB): https://gitlab.inria.fr/cedar/obi-wan/-/wikis/Get-started
+% === TRANSPARENT / EXPLICIT ===
+% - A unified schema for data sources in the federation
+% === ORIGINAL DESCRIPTION ===
+% - Obi-Wan~\cite{Obi-Wan,Obi-Wan1} is a mediator developed on top of Tatooine (a mediator system handing JSON, relational, key-value and RDF data) and following the Ontology-Based Data Access~(OBDA)~\cite{OBDA3} paradigm to integrate heterogeneous data sources under an interface based on RDF graphs and ontologies. It was developed by the Inria and Institue Polytechnique de Paris of France in 2019. Its expressiveness is to combine maximum integration power with the highest query answering power supported by an RDF mediator. Experiments show that a smart decomposition of reasoning between offline pre-computation and query time, i.e., balanced use of query reformulation and mapping saturation, makes queries be answered fastly.
+% === FORMER TABLE DESCRIPTION ===
+% - Ontology based-data access mediators exposing, integrating and flexibly querying data from heterogeneous sources
+% === FORMER TABLE FEATURES ===
+% - Following OBDA paradigm
+% - Handling GLAV mappings
+% - Developed on top of a mediator system Tatooine
+% === LINKS & NOTES ===
+% - [code, old link] https://pages.saclay.inria.fr/maxime.buron/projects/obi-wan/index.html
+% - [code, new link] https://gitlab.inria.fr/cedar/obi-wan
+
+\dfs{
+	\dfsName{Odyssey}
+	\dfsRefs{ODYSSEY}
+	\dfsProvider{Univ.\,Aalborg \& Univ.\,Nantes} % Aalborg University and Nantes University
+	\dfsDescription{Statistics \& cost-based optimizer for SPARQL data federation (FedX extension)}
+	\dfsHasCli
+	\dfsIsAcademic
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{}{2016}
+	\dfsReleaseLast{}{2019}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java 8, Python 2.7.12): https://github.com/gmontoya/federatedOptimizer
+% === TRANSPARENT / EXPLICIT ===
+% - Support BGPs without service keyword to access concrete sources
+% === ORIGINAL DESCRIPTION ===
+% - Odyssey~\cite{ODYSSEY} is a cost-based query optimization approach for federations of SPARQL endpoints. It was developed by the Alborg University of Denmark and the Nantes University of France in 2017. The key feature is that Odyssey defines statistics for representing entities and statistics for representing links among datasets while guaranteeing result completeness. Experiments over FedBench show that Odyssey produces better query execution plans than HiBISCuS, SemaGrow, FedX and SPLENDID (all systems of this survey) in terms of data transfer and execution time. 
+% === FORMER TABLE DESCRIPTION ===
+% - An approach using statistics that allow for a more accurate cost estimation for federated queries
+% === FORMER TABLE FEATURES ===
+% - Concise statistics of adequate granularity representing entities and describing links among datasets
+% - A lightweight technique to compute federated statistics in a federated setup
+% - A query optimization algorithm based on dynamic programming
+% === LINKS & NOTES ===
+% - [code] https://github.com/gmontoya/federatedOptimizer
+
+\dfs{
+	\dfsName{Ontario}
+	\dfsRefs{Ontario}
+	\dfsProvider{L3S Research Center} % L3S Research Center of Germany
+	\dfsDescription{Heuristics-based system using RDF Molecule Templates (introduced by its predecessor MULDER~\cite{MULDER}) to describe/map source content as star-shaped RDF instance descriptions}
+	\dfsIsAcademic
+	\dfsHasCli
+	\dfsDevelLangs{Python}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{}{2018}
+	\dfsReleaseLast{}{2021}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcCSV % also TSV
+		\srcMongoDB
+		\srcMySQL
+		\srcNeoforj
+		\srcSPARQL
+		\srcXML
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (python 3)
+% === TRANSPARENT / EXPLICIT ===
+% - standard BGPs without service keyword
+% === ORIGINAL DESCRIPTION ===
+% - Ontario~\cite{Ontario} is a federated SPARQL query engine tailored for large-scale heterogeneous data in a data lake. It was developed by the L3S Research Center of Germany and the TIB Leibniz Information Centre for Science and Technology of Hannover in 2019. The key feature of Ontario is that it relies on RDF Molecule Templates~\cite{MULDER} to describe the heterogeneity of data sources. Experiments over LSLOD benchmark~\cite{BioFed} indicates that Ontario can effectively select query plans that can be efficiently executed against heterogeneous data sources.
+% === FORMER TABLE DESCRIPTION ===
+% - A federated query processing approach tailored for large-scale heterogeneous data
+% === FORMER TABLE FEATURES ===
+% - Resorting to source descriptions named RDF Molecule Templates~\cite{MULDER}\footnote{Abstract descriptions of the properties of the entities in a unified schema}
+% - Able to classify star-shaped subqueries according to type of instantiations and joins
+% - Heuristic-based query processing
+% === LINKS & NOTES ===
+% - [code] https://github.com/SDM-TIB/Ontario
+
+\dfs{
+	\dfsName{Onto-KIT}
+	\dfsRefs{Onto-KIT}
+	\dfsProvider{Univ. Toulouse} % University of Toulouse
+	\dfsDescription{Data federation system focusing on Earth Observation data with hypergraph-based data model and query processing techniques}
+	\dfsIsAcademic
+	\dfsHasGui
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseUnique{}{2020}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcCSV
+		\srcENVI
+		\srcJSON
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java)
+% === TRANSPARENT / EXPLICIT ===
+% - standard BGPs, using hyper-graph to select sources for the triple patterns
+% === ORIGINAL DESCRIPTION ===
+% - Onto-KIT~\cite{Onto-KIT} is a knowledge hypergraph-based approach for heterogeneous data integration and querying. It was developed by the University of Toulouse of France and the University of Manouba of Tunisia in 2020. The key features are knowledge hypergraph-based virtual data integration and hypergraph-based query processing, i.e., using the technologies of hypergraph in federated query answering. The evaluation through real use case studies shows that the proposal enhances query processing in terms of accuracy, completeness, and semantic richness of the answers of queries.
+% === FORMER TABLE DESCRIPTION ===
+% - Hypergraph-based approach for heterogeneous data integration and querying
+% === FORMER TABLE FEATURES ===
+% - Based on hypergraph to describe and integrate data sources
+% - Based on hypergraph to process SPARQL queries
+% === LINKS ===
+% - [code, gui mentioned] https://github.com/marouamasmoudi/Onto-KIT
+
+\dfs{
+	\dfsName{Oracle Big Data SQL}
+	\dfsRefs{OracleBigDataSQL}
+	\dfsProvider{Oracle Corporation}
+	\dfsDescription{Data federation system for Oracle DB that accesses Hadoop storage \& processing}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasGui
+	\dfsHasCli
+	\dfsReleaseFirst{3.0.1}{}
+	\dfsReleaseLast{4.1.1}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsDeployOnPremises{Native}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAvro
+		\srcCSV
+		\srcHBase
+		\srcHive
+		\srcJSON
+		\srcKafka
+		\srcOracleNoSQL
+		\srcORC
+		\srcParquet
+		\srcXML
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (data/compute nodes of local Hadoop cluster): https://docs.oracle.com/en/bigdata/big-data-sql/4.0/bdsig/introduction.html#GUID-D56FF53C-8F81-49E3-9ADA-E2F3342AE9E9 
+% === TRANSPARENT / EXPLICIT ===
+% - using external tables for multiple data sources
+% - https://docs.oracle.com/en/bigdata/big-data-sql/4.0/bdsug/bigsql.html#GUID-60F61D46-EAF7-463E-A62C-C1E08EA58726
+% - https://docs.oracle.com/en/bigdata/big-data-sql/4.0/bdsug/concepts.html#GUID-ECF201F6-24F1-4937-A524-80F9FC1EA46C
+% === SUPPORTED FILE STORAGES ===
+% - HDFS
+% - Amazon S3
+% -	Microsoft Azure Blob Storage
+% - Oracle Object Storage
+% === ORIGINAL DESCRIPTION ===
+% - Oracle Big Data SQL~\cite{OracleBigDataSQL} is a data virtualization solution from Oracle that enables unified queries for distributed data. Its main features are rich SQL processing on all data; enhanced external tables; data-driven parallel processing; distributed aggregation; query streams; extend information life-cycle management; Oracle database security on Big Data; and support for a range of Big Data deployments.
+% === FORMER TABLE DESCRIPTION ===
+% - A data virtualization solution from Oracle, enabling users to query diverse data sources using the full power of Oracle SQL
+% === FORMER TABLE FEATURES ===
+% - Supporting Cloudera Enterprise and Hortonworks distributions of Hadoop
+% - Using the full power of Oracle SQL
+% - Applying proven Smart Scan scale-out processing enabling fast query performance
+% - Extend Oracle Database security
+% === LINKS & NOTES ===
+% - [Overview, key features, key benefits] https://www.oracle.com/database/technologies/datawarehouse-bigdata/bigdata-sql.html
+% - [Document, user guide] https://docs.oracle.com/en/bigdata/big-data-sql/4.1.1/bdsug/oracle-big-data-sql-security.html
+% - [Document, Installation guide] https://docs.oracle.com/en/bigdata/big-data-sql/4.1.1/bdsig/index.html
+% - https://docs.oracle.com/en/bigdata/big-data-sql/4.1/resources.html
+% - [Big Data SQL Get Start] https://docs.oracle.com/en/bigdata/big-data-sql/4.1.1/index.html
+% - [supported file formats] https://docs.oracle.com/en/bigdata/big-data-sql/4.1/bdsug/concepts.html#GUID-60CE9B2C-91E1-4F0A-88EE-8C14F4AEBDE6
+
+\dfs{
+	\dfsName{Oracle DB (Spatial \& Graph)}
+	\dfsRefs{OracleSpatialAndGraph,OracleSpatialAndGraphJ}
+	\dfsProvider{Oracle Corporation}
+	\dfsDescription{Oracle DB component for semantic technologies with data federation capabilities (RDF views) over relational, graph, and RDF (SPARQL) sources}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasDataMasking
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasWebApi
+	\dfsHasSparqlEndpoint
+	\dfsIsSupported
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{}{2016}
+	\dfsReleaseLast{21c}{2021}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Explicit}
+	\dfsSrcList{
+		\srcOracleDB % only local DB tables;  only locally stored RDF / property graph data
+		\srcSPARQL % via \textsc{service}
+		% TODO {\color{red} no unified view}
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Linux, Windows, Mac OS X, Unix): https://docs.oracle.com/en/database/oracle/oracle-database/19/install-and-upgrade.html
+% - onprem (docker): https://hub.docker.com/_/oraclelinux
+% === TRANSPARENT / EXPLICIT ===
+% - Explicit, support SPARQL 1.1 federation
+% - https://docs.oracle.com/database/121/RDFRM/changes-in-this-release.htm#RDFRM130
+% - https://docs.oracle.com/en/database/oracle/oracle-database/18/rdfrm/rdf-semantic-graph-overview.html#GUID-6ACF73EA-A1A7-49D2-ADB9-15B50AE8B73E
+% === ORIGINAL DESCRIPTION ===
+% - Oracle (Spatial and Graph)~\cite{OracleSpatialAndGraph, OracleSpatialAndGraphJ} now is a free option component of all Oracle Databases for semantic technologies, including storage, inference, and query capabilities for data and ontologies based on Semantic Web standards.  In early December 2019, Oracle removed it from the Oracle price list making it a free extension. It supports query federation over multiple data sources.
+% === FORMER TABLE DESCRIPTION ===
+% - A free extension of Oracle DBs for semantic technologies
+% === FORMER TABLE FEATURES ===
+% - Query federation over multiple data sources
+% === LINKS & NOTES ===
+% - [overview] https://www.oracle.com/database/technologies/spatialandgraph.html
+% - https://docs.oracle.com/database/121/SPATL/what-is-oracle-spatial-and-graph.htm#SPATL440
+% - https://blogs.oracle.com/oraclespatial/
+% - https://www.oracle.com/a/tech/docs/sg-oow2019-graph-databases-and-analytics.pdf
+% - [Oracle DB Document -- Contain property graph and RDF graph] https://docs.oracle.com/en/database/oracle/oracle-database/21/index.html
+% - [RDF Graph DB] https://docs.oracle.com/en/database/oracle/oracle-database/21/rdfrm/index.html
+% - Oracle Help Center: for document search
+% - 1.6.8. With this capability, you can combine local RDF data (native RDF data or RDF views of relational data) with other, possibly remote, RDF data served by a W3C standards-compliant SPARQL endpoint. [Interesting!!!]
+
+\dfs{
+	\dfsName{PolyWeb}
+	\dfsRefs{PolyWeb,PolyWebGit}
+	\dfsProvider{Univ. NUI Galway} % National University of Ireland Galway
+	\dfsDescription{SPARQL-based data federation system for different sources on the Web (RDF \& CSV data, RDBMS), focusing on source selection, query optimization \& execution}
+	\dfsIsAcademic
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseUnique{}{2017}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcCSV % TSV
+		\srcMySQL % undocumented, MySQL in experiments, code refers to JDBC
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java)
+% === TRANSPARENT / EXPLICIT ===
+% - BGPs without service keyword
+% === ORIGINAL DESCRIPTION ===
+% - PolyWeb~\cite{PolyWeb} is a web-based SPARQL federation engine that unifies query answering over multiple native data models (CSV, RDB and RDF). It was developed by the National University of Ireland Galway in 2019. PolyWeb is demonstrated on a cancer genomics use case and compared with FedX and HiBISCuS.
+% === FORMER TABLE DESCRIPTION ===
+% - A web-based query federation mechanism that unifies query answering over multiple native data models
+% === FORMER TABLE FEATURES ===
+% - Devising a method to select prospective data sources
+% - Query optimization, join, and execution over different data models
+% - https://github.com/yasarkhangithub/PolyWeb
+% === LINKS & NOTES ===
+% - [code] https://github.com/yasarkhangithub/PolyWeb
+% - [code] http://polyweb.insight-centre.org/
+
+\dfs{
+	\dfsName{Presto}
+	\dfsRefs{Presto,PrestoP}
+	\dfsProvider{Presto Foundation}
+	\dfsDescription{SQL-based distributed query engine suitable to interactive (big) data analytics}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasAuditing
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{0.54}{2013}
+	\dfsReleaseLast{0.265.1}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAccumulo
+		\srcAmazonRedshift
+		\srcCassandra
+		\srcDruid
+		\srcElasticsearch
+		\srcGoogleBigQuery
+		\srcHive
+		\srcIceberg
+		\srcKafka
+		\srcKudu
+		\srcMicrosoftSQLServer
+		\srcMongoDB
+		\srcMySQL
+		\srcOracleDB
+		\srcPinot
+		\srcPostgreSQL
+		\srcPrometheus
+		\srcRedis
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (independent cluster): https://prestodb.io/docs/current/installation/deployment.html
+% - onprem (spark cluster): https://prestodb.io/docs/current/installation/spark.html
+% - onprem (docker): https://prestodb.io/docs/current/installation/deployment.html
+% === TRANSPARENT / EXPLICIT ===
+% - supports standard SQL and needs global schema
+% === ORIGINAL DESCRIPTION ===
+% - Presto~\cite{Presto, PrestoP} is an open source distributed SQL query engine for running interactive analytic queries against data sources of all sizes. It is owned and driven by the Presto Foundation. Its main features are querying data where it lives; combining data from multiple sources; and allowing for analytics on large amounts of data.
+% === FORMER TABLE DESCRIPTION ===
+% - A distributed SQL query engine designed to query large data sets distributed over one or more heterogeneous data sources
+% === FORMER TABLE FEATURES ===
+% - Design suitable for cloud
+% - High performance
+% - Unified SQL interface
+% === LINKS & NOTES ===
+% - https://prestodb.io/docs/current/optimizer.html
+% - https://ahana.io/blog/top-5-reasons-presto-is-the-foundation-of-the-data-analytics-stack/
+% - [ODBC Driver] https://prestodb.io/resources.html
+% - [Overview] https://prestodb.io/overview.html
+
+\dfs{
+	\dfsName{Querona Data Virtualization}
+	\dfsRefs{Querona}
+	\dfsProvider{YouNeedIT Sp. z o.o. Sp. k.} % but probably not
+	\dfsDescription{Data federation system for a variety of heterogeneous sources, based on Apache Spark and targeting big data analytics with the support of main BI tools}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasDataMasking
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasAdoNet
+	\dfsIsSupported
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{}{2015}
+	\dfsReleaseLast{}{2020}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{ % generic JDBC / ODBC / OLE DB / ADO.NET configurable in terms of dialect: https://docs.querona.io/administration-guide/sql-dialects/about-sql-dialects.html
+		\srcActianMatrix
+		\srcActianVector
+		\srcADONET
+		\srcAlibabaAnalyticDBforMySQL
+		\srcAlibabaDataLakeAnalytics
+		\srcAmazonAthena
+		\srcAmazonAurora
+		\srcAmazonOpenSearch
+		\srcAmazonRedshift
+		\srcClickHouse
+		\srcCSV % also TSV, Text
+		\srcDatabricks
+		\srcDataStax
+		\srcDBase
+		\srcDenodo
+		\srcDrill
+		\srcExasol
+		\srcExcel
+		\srcGoogleBigQuery
+		\srcIBMDBtwo
+		\srcJDBC
+		\srcKafka
+		\srcMariaDB
+		\srcMicrosoftAccess
+		\srcMicrosoftSQLServer
+		\srcMicrosoftSynapseAnalytics
+		\srcMSGEML
+		\srcMySQL
+		\srcODBC
+		\srcOLEDB
+		\srcOracleDB
+		\srcPDF
+		\srcPostgreSQL
+		\srcSAPHANA
+		\srcSASScalablePerformanceDataServer
+		\srcSparkSQL
+		\srcTeradata
+		\srcTeradataAster
+		\srcVertica
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Windows 2016/2019/10/8.1, .Net): https://docs.querona.io/installation-guide/requirements.html
+% === TRANSPARENT / EXPLICIT ===
+% - can refer the way of identifing tables in the input SQL queries
+% - https://docs.querona.io/sql-guide/about-sql.html#
+% - need virtual database: https://docs.querona.io/quickstart/connect.html
+% === SUPPORTED FILE STORAGES ===
+% - Amazon S3
+% - Wasabi Object Storage
+% - Cloudera (Hadoop distribution)
+% - Hortonworks Data Platform (Hadoop distribution)
+% - Microsoft Azure HDInsight (Hadoop distribution)
+% === ORIGINAL DESCRIPTION ===
+% - Querona Data Virtualization~\cite{Querona} is a virtual database that seamlessly connects any data source with Microsoft Power BI, Microsoft Excel or others, and lets users build a universal data model and share it among reporting tools. It is a product and brand of YouNeedIT. The key features are connecting more than 128 types of data sources; ETL free; compatibility with any BI client; and embedded Apache Spark Big Data engine.
+% === FORMER TABLE DESCRIPTION ===
+% - A virtual database that seamlessly connects any data source with Power BI or others.
+% === FORMER TABLE FEATURES ===
+% - Connecting more than 128 types of data sources
+% - Compatibility with any BI client to present reports
+% - Real-time data access
+% - Embedded Apache Spark Big data engine for data analytics
+% === LINKS & NOTES ===
+% - https://www.querona.io/product/
+% - https://docs.querona.io/quickstart/getting-started.html
+% - https://docs.querona.io/concepts/data-virtualization.html
+% - https://docs.querona.io/data-sources/about-data-sources.html
+% - Row level security / Column level security
+
+\dfs{
+	\dfsName{RDFLib}
+	\dfsRefs{RDFLib}
+	\dfsProvider{RDFLib team}
+	\dfsDescription{A pure Python package for working with RDF, supporting SPARQL 1.1 federation}
+	\dfsHasCli % sparqlwrapper module used as cli tool: https://github.com/RDFLib/sparqlwrapper
+	\dfsDevelLangs{Python}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{1.1.1}{2002}
+	\dfsReleaseLast{6.1.1}{2021}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Explicit}
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (python)
+% === LINKS & NOTES ===
+% - https://github.com/blazegraph/database/wiki
+
+\dfs{
+	\dfsName{SAFE}
+	\dfsRefs{SAFE}
+	\dfsProvider{Insight SFI Research Centre for Data Analytics} % Insight Centre for Data Analytics of Ireland
+	\dfsDescription{Data federation system for SPARQL endpoints exposing RDF data cubes with sensitive data, featuring access policy-aware data summaries, source selection \& query execution}
+	\dfsIsAcademic
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseUnique{}{2017}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java)
+% === TRANSPARENT / EXPLICIT ===
+% - Standard BGPs; the systems need to do the task of source selection
+% === ORIGINAL DESCRIPTION ===
+% - SAFE~\cite{SAFE} is a SPARQL query federation engine that enables policy-aware access to sensitive statistical data sources represented as RDF data cubes in a distributed setting. It was developed by the Insight Centre for Data Analytics of Ireland in 2017. The key feature of SAFE is that access control is coupled with source selection, user profiles and access rights. Its data summary has a significantly lower index generation time and size compared to existing ones. Thus it allows for faster data updates.
+% === FORMER TABLE DESCRIPTION ===
+% - A query federation engine that enables police-aware access to sensitive statistical data in a federated setting
+% === FORMER TABLE FEATURES ===
+% - Proposing a join-aware source selection that avoids wasteful requests to irrelevant and unauthorized data sources
+% - Indexing system not hold any data instances so as to allow faster updates when sources change
+% === LINKS & NOTES ===
+% - [code] https://github.com/yasarkhangithub/SAFE
+
+\dfs{
+	\dfsName{SAGE}
+	\dfsRefs{DBLP:conf/www/MinierSM19}
+	\dfsProvider{Univ. Nantes}
+	\dfsDescription{SPARQL engine with ``web preemption'' (i.e., query suspend/resume) \& federation capabilities}
+	%\dfsDescription{A SPARQL query engine based on Web preemption}
+	\dfsHasGui
+	\dfsHasCli
+	\dfsIsAcademic
+	\dfsDevelLangs{Python}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{1.1}{2019}
+	\dfsReleaseLast{2.3}{2021}
+	\dfsQueryLangs{SPARQL} % GraphQL mentioned in the paper as future work and supported via plugin in the website
+	\dfsTransparent{Explicit}
+	\dfsSrcList{
+		\srcSPARQL % SPARQL endpoints
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (python for the server, nodejs for the client): https://github.com/sage-org/sage-engine
+% - onprem (docker): https://hub.docker.com/r/callidon/sage/
+% === LINKS & NOTES ===
+% - https://github.com/sage-org/sage-client
+% - https://github.com/sage-org/sage-engine#documentation
+% - document: http://sage.univ-nantes.fr/
+
+\dfs{
+	\dfsName{SAP HANA}
+	\dfsRefs{SAPHANASmartDataAccess}
+	\dfsProvider{SAP SE}
+	\dfsDescription{In-memory DB targeting with data federation capabilities, also available as cloud service}
+	\dfsHasAuthentication
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsHasAdoNet
+	\dfsDevelLangs{C}
+	\dfsIsSupported
+	\dfsDeployIaasPaas{AWS, GCP}
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{1.0.SPS12}{2018}
+	\dfsReleaseLast{2.0.SPS05}{2020}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAmazonAthena
+		\srcGoogleBigQuery
+		\srcIBMDBtwo
+		\srcIBMNetezza
+		\srcMicrosoftSQLServer
+		\srcOracleDB
+		\srcSAPASE
+		\srcSAPHANA
+ 		\srcSAPHANAStreamingAnalytics
+		\srcSAPIQ
+		\srcSAPMaxDB
+		\srcTeradata
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - cmp (AWS): https://docs.aws.amazon.com/quickstart/latest/sap-hana/deployment.html
+% - cmp (GCP): https://cloud.google.com/solutions/sap/docs/sap-hana-deployment-guide
+% - onprem (Linux): https://help.sap.com/docs/SLTOOLSET/3aa4caa3bd634a22bdc572d82d1311ec/de681a8057a34bbfbf465b69feb910f9.html?locale=en-US&version=CURRENT_VERSION
+% - onprem (Docker): https://hub.docker.com/r/saplabs/hanaexpress
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: needs to create virtual tables for remote/different data sources
+% - https://help.sap.com/docs/HANA_CLOUD_DATABASE/477aa413a36c4a95878460696fcc8896/a07c7ff25997460bbcb73099fb59007d.html?locale=en-US
+% === ORIGINAL DESCRIPTION ===
+% - SAP HANA~\cite{SAPHANASmartDataAccess} enables remote data to be accessed as if they were local tables in SAP HANA.  It is a part of the SAP HANA core system and first introduced in SAP HANA SPS 06. The key features are providing operational and cost benefits; and supporting the development and deployment of the next generation of analytical applications.
+% === FORMER TABLE DESCRIPTION ===
+% - High-performance in-memory database that provides advanced analytics on multimodel data, on premise and in the cloud
+% === FORMER TABLE FEATURES ===
+% - Fully managed multi-cloud environment with a seamless hybrid deployment and on-premise
+% - Security, privacy, and anonymization with proven enterprise reliability
+% - connected, distributed data without the need to collect it
+% - Advanced data tiering to quickly manage performance, cost, and storage
+% === LINKS & NOTES ===
+% - https://help.sap.com/viewer/6b94445c94ae495c83a19646e7c3fd56/2.0.05/en-US/3d1cffb7f4b24073ab6b3c3134b2a457.html
+% - [Overview] https://www.sap.com/products/hana.html
+% - [capability and features] https://www.sap.com/products/hana/features.html#application-development
+% - [federating queries] https://help.sap.com/viewer/477aa413a36c4a95878460696fcc8896/2021_3_QRC/en-US/a07c7ff25997460bbcb73099fb59007d.html
+% - [smart data access] https://help.sap.com/viewer/6b94445c94ae495c83a19646e7c3fd56/2.0.05/en-US/a07c7ff25997460bbcb73099fb59007d.html
+% - [help portal] SAP HANA Smart Data Integration and SAP HANA Smart Data Quality Master Guide on the SAP Help Portal.
+% - [sources, all accessed via ODBC] https://help.sap.com/viewer/6b94445c94ae495c83a19646e7c3fd56/2.0.05/en-US/98cf2f660b214dbaa5c519f86e361c6f.html
+
+\dfs{
+	\dfsName{SAS Federation Server}
+	\dfsRefs{SASFederationServer}
+	\dfsProvider{SAS Institute}
+	\dfsDescription{Data federation system featuring data caches, masking, encryption \& quality functions}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasDataMasking
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsDevelLangs{C}
+	\dfsIsSupported
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseFirst{3.2}{2013}
+	\dfsReleaseLast{4.4}{2021}
+	\dfsQueryLangs{FedSQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcBtrieve % only in table, no further evidence but likely accessed via ODBC
+		\srcDBase
+		\srcGreenplum
+		\srcHive
+		\srcIBMDBtwo
+		\srcIBMInformix % only in table, no further evidence but likely accessed via ODBC
+		\srcIBMNetezza
+		\srcImpala
+		\srcMicrosoftAccess
+		\srcMicrosoftSQLServer
+		\srcMySQL
+		\srcOracleDB
+		\srcParadox
+		\srcPostgreSQL
+		\srcProgressOpenEdgeRDBMS % only in table, no further evidence but likely accessed via ODBC
+		\srcSalesforce % only in table, no further evidence but likely accessed via ODBC
+		\srcSAPASE % only in table, no further evidence but likely accessed via ODBC
+		\srcSAPHANA
+		\srcSAPRFC
+		\srcSASFederationServer
+		\srcSASScalablePerformanceDataServer
+		\srcTeradata
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Windows, Unix): https://documentation.sas.com/doc/en/fedsrvag/4.4/n0yya3av0h99rbn1gt5mbvskonle.htm
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: catalog and names needed to be defined for the data sources
+% - https://go.documentation.sas.com/doc/en/fedsrvcdc/4.4/fedsqlref/n0l2vbw7dh5z69n1ierjurnwl1as.htm
+% - https://go.documentation.sas.com/doc/en/fedsrvcdc/4.4/fedsqlref/p03ltqa9xwjle7n1m5wp0s4uaqa4.htm
+% === ORIGINAL DESCRIPTION ===
+% - SAS Federation Server~\cite{SASFederationServer} is a data virtualization tool that provides scalable, threaded, multi-user, and standards-based data access technology to process and seamlessly integrate data from multiple data services. It is a product of SAS. The key features are virtualized data layer; centralized administration; on-demand data quality; improved performance with in-memory data caches \& scheduling; and secured information with data masking \& encryption. 
+% === FORMER TABLE DESCRIPTION ===
+% - Data virtualization tool providing a secure, business-centric virtual view of data without moving it
+% === FORMER TABLE FEATURES ===
+% - Virtualized data layer
+% - Centralized administration
+% - On-demand data quality
+% - Improved performance with in-memory data caches \& scheduling
+% - Secured information with data masking \& encryption 
+% === LINKS & NOTES ===
+% - https://documentation.sas.com/?cdcId=pgmsascdc&cdcVersion=9.4_3.5&docsetId=whatsnew&docsetTarget=p0kdf9lkzi1g6jn1xm0kxwx06otz.htm&locale=en
+% - [Administrator's Guide] https://documentation.sas.com/doc/en/fedsrvag/4.4/p0b2qr4wqsqqd8n1l6owuylwmiou.htm
+% - [SAS Federation Server] https://support.sas.com/en/software/federation-server-support.html
+% - [sources - general tabe, maybe inaccurate] https://go.documentation.sas.com/doc/en/fedsrvcdc/4.4/fedsrvag/p0ldpvr0324oxcn1jxxbjywpdn6s.htm
+% - [sources - via ODBC] https://go.documentation.sas.com/doc/en/fedsrvcdc/4.4/fedsrvag/n0epei7bc45r82n1a9chw6zp70as.htm
+
+\dfs{
+	\dfsName{SemaGrow}
+	\dfsRefs{SemaGrow}
+	\dfsProvider{IIT NCSR `Demokritos'} % Institute of Informatics and Telecommunication NCSR `Demokritos' of Greece
+	\dfsDescription{Data federation system for SPARQL endpoints with statistics-based query optimization}
+	\dfsHasCli
+	\dfsHasGui
+	\dfsIsAcademic
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{1.0}{2014}
+	\dfsReleaseLast{2.2.1}{2021} 
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java): https://github.com/semagrow/semagrow 
+% - onprem (docker): https://hub.docker.com/r/semagrow/semagrow/
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: standard BGP queries, systems need to be source selection for triple patterns
+% === ORIGINAL DESCRIPTION ===
+% - SemaGrow~\cite{SemaGrow} is a federated SPARQL query system that uses metadata about the federated data sources to optimize query execution. It was developed by the Institute of Informatics and Telecommunication NCSR `Demokritos' of Greece in 2015. Testing against FedBench indicates that SemaGrow outperforms SPLENDID and is either on par or faster than FedX.
+% === FORMER TABLE DESCRIPTION ===
+% - A federated SPARQL querying system using metadata about the federated data sources to optimize query execution
+% === FORMER TABLE FEATURES ===
+% - Featuring a query optimizer that introduces little overhead, has appropriate fall backs in the absence of metadata
+% - Exploiting non-blocking and asynchronous stream processing technologies to achieve query execution efficiency and robustness
+% === LINKS & NOTES ===
+% - [code, no more available] https://bitbucket.org/dataengineering/semagrow-fedbench
+% - [code, new link] https://github.com/semagrow/kobe
+% - [code] https://github.com/semagrow/kobe/tags
+% - [code, with evidence of CLI and GUI] https://github.com/semagrow/semagrow
+
+\dfs{
+	\dfsName{SPLENDID}
+	\dfsRefs{SPLENDID}
+	\dfsProvider{Univ. Koblenz-Landau} % University of Koblenz-Landau
+	\dfsDescription{Data federation system for SPARQL endpoints that provide VOID~\cite{VOID} data statistics}
+	\dfsIsAcademic
+	\dfsHasCli
+	\dfsDevelLangs{Java}
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native}
+	\dfsReleaseUnique{}{2011}
+	\dfsQueryLangs{SPARQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcSPARQL
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java): https://github.com/goerlitz/splendid
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: Standard BGP queries, use unified schema 
+% === ORIGINAL DESCRIPTION ===
+% - SPLENDID~\cite{SPLENDID} is a federated SPARQL query engine that solely relies on VOID~\cite{VOID} dataset statistics already incorporated in source RDF data for both source selection and query optimization. It was developed by the University of Koblenz-Landau of Germany in 2011 and motivated by the issue that extraction of ad-hoc statistical information from RDF data sources may sometimes become impossible. SPLENDID can integrate any RDF data source found in the Semantic Web. It is evaluated over FedBench benchmark and compared with DARQ, FedX and AliBaba.
+% === FORMER TABLE DESCRIPTION ===
+% - A query optimization strategy for federating SPARQL endpoints 
+% === FORMER TABLE FEATURES ===
+% - Optimization solely based on statistical data obtained from VOID (Vocabulary of Interlinked Datasets) description~\cite{VOID}
+% - Integrate virtually any RDF data found in the Semantic Web
+% === LINKS & NOTES ===
+% - [code] https://github.com/goerlitz/rdffederator
+% - [code] https://github.com/goerlitz/splendid
+% - [code] https://github.com/semagrow/fork-splendid-server/commits/master
+
+\dfs{
+	\dfsName{SQL Server (PolyBase)}
+	\dfsRefs{SQLServerPolyBase}
+	\dfsProvider{Microsoft Corporation}
+	\dfsDescription{SQL Server component for data federation supporting Hadoop and Azure storage}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasAuditing
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasAdoNet
+	\dfsDevelLangs{C}
+	\dfsIsSupported
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{2016}{2016}
+	\dfsReleaseLast{2019}{2019}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcCSV
+		\srcJSON
+		\srcMicrosoftSQLServer
+		\srcMongoDB
+		\srcODBC % arbitrary ODBC drivers but push down is disabled - https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-configure-odbc-generic?view=sql-server-ver15
+		\srcOracleDB
+		\srcORC
+		\srcParquet
+		\srcRCFile
+		\srcTeradata
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Windows x64, Linux): https://docs.microsoft.com/en-us/sql/sql-server/install/what-s-new-in-sql-server-installation?view=sql-server-ver15
+% - onprem (docker): https://hub.docker.com/_/microsoft-mssql-server
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: need to create external tables for data sources
+% - https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-queries?view=sql-server-ver15
+% === SUPPORTED FILE STORAGES ===
+% - HDFS (computation delegated to Hadoop)
+% - Microsoft Azure Blob Storage
+% === ORIGINAL DESCRIPTION ===
+% - SQL Server (PolyBase)~\cite{SQLServerPolyBase} is a data virtualization solution to connect, report, and analyze disparate data sources. It is available as part of Microsoft SQL Server 2016, and Microsoft enhanced it in 2019 with the ability to connect more data sources. The key features are querying Hadoop data with Transact-SQL; importing and exporting data; and running PolyBase queries from Microsoft BI tools.
+% === FORMER TABLE DESCRIPTION ===
+% - A data virtualization feature for SQL Server
+% === FORMER TABLE FEATURES ===
+% - Querying Hadoop data with Transact-SQL
+% - Importing and exporting data
+% - Running PolyBase queries from Microsoft BI tools
+% === LINKS & NOTES ===
+% - https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-type-mapping?view=sql-server-ver15
+% - https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide?view=sql-server-ver15
+% - [overview] https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide?view=sql-server-ver15
+% - [file sources] https://docs.microsoft.com/en-us/sql/t-sql/statements/create-external-file-format-transact-sql?view=sql-server-ver15&tabs=delimited
+
+\dfs{
+	\dfsName{Squerall}
+	\dfsRefs{Squerall}
+	\dfsProvider{Univ. Bonn} % Bonn University
+	\dfsDescription{Data federation system for heterogeneous sources built on Spark, Presto, and RML mappings}
+	\dfsIsAcademic
+	\dfsHasCli
+	\dfsHasGui
+	\dfsDevelLangs{Python}
+	\dfsIsOpenSource
+	\dfsReleaseFirst{0.1}{2018}
+	\dfsReleaseLast{0.2}{2019}
+	\dfsQueryLangs{SPARQL}
+	\dfsDeployOnPremises{Native}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcCassandra
+		\srcCouchbase
+		\srcCSV
+		\srcElasticsearch
+		\srcMongoDB
+		\srcMySQL % \srcJDBC claimed but only "MySQL tested", not info on how to setup another RDBMS; code refers spark SQL
+		\srcParquet
+		% TODO {\color{red} ``RDF Stores'' were listed but I found no evidence for that}
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Spark|Presto, Hive Metastore): https://github.com/EIS-Bonn/Squerall
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: standard BGPs, needs to be source selection automatically
+% === SUPPORTED FILE STORAGES ===
+% - HDFS
+% === ORIGINAL DESCRIPTION ===
+% - Squerall~\cite{Squerall} is a framework that builds on the principles of OBDA to enable the querying of disparate heterogeneous sources using a single SPARQL query. It was developed at the Bonn University of Germany in 2019. The key feature of Squerall is that it provides user interfaces for the creation of necessary inputs, like SPARQL queries.
+% === FORMER TABLE DESCRIPTION ===
+% - A framework building on the principles of ontology-based data access to enable the querying of disparate heterogeneous sources
+% === FORMER TABLE FEATURES ===
+% - Providing user interfaces for the creation of necessary inputs, such as mappings and configuration,  and guiding non-SPARQL experts to write SPARQL queries
+% - Integrating Apache Spark and Presto so as to relieve users from hand-crafting wrappers
+% === LINKS & NOTES ===
+% - [code, with evidence of CLI and GUI] https://eis-bonn.github.io/Squerall/
+
+\dfs{
+	\dfsName{Starburst}
+	\dfsRefs{Starburst}
+	\dfsProvider{Starburst Data, Inc.}
+	\dfsDescription{Commercial distribution of Trino, extra security features, available on-premise/on-cloud}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasAuditing
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsReleaseFirst{0.188-e}{2019}
+	\dfsReleaseLast{364-e LTS}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsDeployIaasPaas{AWS, Azure, GCP}
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAccumulo
+		\srcAmazonDynamoDB
+		\srcAmazonKinesis
+		\srcAmazonRedshift
+		\srcAvro
+		\srcCassandra
+		\srcClickHouse
+		\srcCSV
+		\srcDruid
+		\srcElasticsearch
+		\srcGoogleBigQuery
+		\srcGoogleSheetsAPI
+		\srcGreenplum
+		\srcHBase % via Apache Phoenix
+		\srcHive
+		\srcIBMDBtwo
+		\srcIBMNetezza
+		\srcIceberg
+		\srcJDBC % configurable, see https://docs.starburst.io/latest/connector/starburst-generic-jdbc.html
+		\srcJSON
+		\srcKafka
+		\srcKudu
+		\srcMicrosoftSQLServer
+		\srcMicrosoftSynapseAnalytics
+		\srcMongoDB
+		\srcMySQL
+		\srcOracleDB
+		\srcORC
+		\srcParquet
+		\srcPinot
+		\srcPostgreSQL
+		\srcPrometheus
+		\srcRCFile % RCText, RCBinary variants
+		\srcRedis
+		\srcSalesforce
+		\srcSAPHANA
+		\srcSequenceFile
+		\srcSingleStore
+		\srcSnowflake
+		\srcSplunk
+		\srcStarburst % via "Stargate" connector
+		\srcTeradata
+		\srcVertica
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - cmp (AWS): https://aws.amazon.com/marketplace/pp/prodview-pwnl3c6p2jycg
+% - cmp (Azure): https://azuremarketplace.microsoft.com/en-us/marketplace/apps/starburstdatainc1582306810515.starburst-enterprise
+% - cmp (GCP): https://console.cloud.google.com/marketplace/product/starburst-public/starburst-galaxy-gcp?q=search&referrer=search&project=carbon-helix-148918
+% - onprem (Linux; Java 17; Python 2.7.x-3.X): https://docs.starburst.io/starburst-enterprise/starburst-admin/index.html#requirements-for-managed-cluster-nodes
+% - onprem (openshift): https://www.starburst.io/platform/deployment-options/red-hat/
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: needs to create catalog for each data sources:
+% - https://docs.starburst.io/data-consumer/starburst-sql.html
+% - https://docs.starburst.io/data-engineer/catalogs.html
+% === SUPPORTED FILE STORAGES ===
+% -	MinIO (cloud object storage)
+% -	IBM Cloud Object Storage
+% - Cloudera CDP (Hadoop distribution)
+% - Delta Lake (direct access to files in data lake using Hive metastore for metadata)
+% === ORIGINAL DESCRIPTION ===
+% (unavailable, system not listed)
+% === FORMER TABLE DESCRIPTION ===
+% (unavailable, system not listed)
+% === FORMER TABLE FEATURES ===
+% (unavailable, system not listed)
+% === LINKS & NOTES ===
+% - [Overview] https://docs.starburst.io/latest/overview.html
+% - [Cloud Provides & Web Services] https://docs.starburst.io/latest/overview.html
+% - [references] https://docs.starburst.io/latest/release.html
+% - https://docs.starburst.io/latest/connector/starburst-connectors.html
+% - !!!Support Materialized Views
+
+\dfs{
+	\dfsName{Stardog}
+	\dfsRefs{Stardog}
+	\dfsProvider{Stardog Union}
+	\dfsDescription{KG platform including data federation of heterogeneous sources \& query-time inference}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasDataMasking
+	\dfsHasDataMaskingNG
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasWebApi
+	\dfsHasSparqlEndpoint
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsReleaseFirst{0.7.3}{2011}
+	\dfsReleaseLast{7.7.3}{2021}
+	\dfsQueryLangs{SPARQL}
+	\dfsDeploySaas{Stardog}
+	\dfsDeployIaasPaas{AWS}
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsTransparent{Transparent, Explicit}
+	\dfsSrcList{
+		\srcAmazonAthena
+		\srcAmazonAurora
+		\srcAmazonOpenSearch
+		\srcAmazonRedshift
+		\srcCassandra
+		\srcCSV
+		\srcDataStax
+		\srcDerby
+		\srcElasticsearch
+		\srcExasol
+		\srcGoogleBigQuery
+		\srcGoogleSheetsAPI
+		\srcHive
+		\srcHtwo
+		\srcIBMDBtwo
+		\srcImpala
+		\srcJira
+		\srcJSON
+		\srcLDAP
+		\srcMariaDB
+		\srcMicrosoftAzureCosmosDB
+		\srcMicrosoftSQLServer
+		\srcMongoDB
+		\srcMySQL
+		\srcOracleDB
+		\srcPostgreSQL
+		\srcSalesforce
+		\srcSAPASE
+		\srcSAPHANA
+		\srcSnowflake
+		\srcSPARQL
+		\srcSplunk
+		\srcStardog
+		\srcTeradata
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - saas (by Stardog): https://www.stardog.com/stardog-cloud/
+% - cmp (AWS): https://aws.amazon.com/marketplace/pp/prodview-ulfm6fel7xgjq
+% - onprem (Linux / Windows / Mac OS X (no M1); Java 8/11): https://docs.stardog.com/get-started/install-stardog/
+% - onprem (https://docs.stardog.com/get-started/install-stardog/docker)
+% === TRANSPARENT / EXPLICIT ===
+% - Service keyword can be used explicitly or as variables to let systems to choose sources
+% - https://docs.stardog.com/query-stardog/#federated-queries
+% - create virtual graph for other sources: https://docs.stardog.com/virtual-graphs/
+% === ORIGINAL DESCRIPTION ===
+% - StarDog~\cite{Stardog} is an enterprise knowledge graph platform that creates a flexible, reusable, and uniform data layer for answering complex queries across data silos. Its key features are connecting and querying data of any structure; supporting virtualization and materialization; inference engine for explainable AI; built-in machine learning; navigating data with StarDog Pathfinder extension; data quality management; compliance with Semantic Web standards; and high-performance.
+% === FORMER TABLE DESCRIPTION ===
+% - Enterprise knowledge graph platform creating a flexible, reusable data layer for answering complex queries across data silos
+% === FORMER TABLE FEATURES ===
+% - Connecting and querying data of any structure
+% - Inference engine for explainable AI
+% - Built-in machine learning
+% - Navigating data with Pathfinder
+% - Data quality management and based on open standards
+% === LINKS & NOTES ===
+% - https://docs.stardog.com/virtual-graphs/
+% - [features] https://www.stardog.com/platform/
+% - [multi-language programming] https://docs.stardog.com/developing/programming-with-stardog/
+% - [supported data sources] https://docs.stardog.com/virtual-graphs/virtual-graph-configuration
+% - [supported data sources] https://docs.stardog.com/virtual-graphs/data-sources/supported-data-sources
+
+\dfs{
+	\dfsName{Teiid}
+	\dfsRefs{Teiid}
+	\dfsProvider{Red Hat, Inc.}
+	\dfsDescription{SQL-based engine for data federation of heterogeneous sources}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsHasAdoNet
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsIsOpenSource
+	\dfsReleaseFirst{6.0.0}{2009}
+	\dfsReleaseLast{16.0.0}{2020}
+	\dfsQueryLangs{SQL}
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAccumulo
+		\srcActianVector
+		\srcAmazonAthena
+		\srcAmazonOpenSearch
+		\srcAmazonRedshift
+		\srcAmazonSimpleDB
+		\srcCassandra
+		\srcCouchbase
+		\srcCSV
+		\srcDerby
+		\srcExasol
+		\srcExcel
+		\srcGoogleSheetsAPI
+		\srcGreenplum
+		\srcHBase
+		\srcHive
+		\srcHSQLDB
+		\srcHTTPREST
+		\srcHtwo
+		\srcIBMDBtwo
+		\srcIBMInformix
+		\srcIBMNetezza
+		\srcImpala
+		\srcInfinispan % via Hot Rod binary protocol
+		\srcIngres
+		\srcInterSystemsCache
+		\srcJDBC % configurable: jdbc-simple vs. jdbc-ansi + connector properties, see http://teiid.github.io/teiid-documents/16.0.x/content/reference/as_jdbc-translators.html, http://teiid.github.io/teiid-documents/16.0.x/content/reference/r_jdbc-ansi-translator.html, http://teiid.github.io/teiid-documents/16.0.x/content/reference/r_jdbc-simple-translator.html
+		\srcJPA
+		\srcJSON
+		\srcLDAP
+		\srcMariaDB
+		\srcMDX
+		\srcMetaMatrix
+		\srcMicrosoftAccess
+		\srcMicrosoftActiveDirectory
+		\srcMicrosoftSQLServer
+		\srcModeShape
+		\srcMondrian
+		\srcMongoDB
+		\srcMySQL
+		\srcOData % V2, V3, V4
+		\srcOpenAPI % also Swagger
+		\srcOracleDB
+		\srcOSIsoftPI
+		\srcPostgreSQL
+		\srcPresto
+		\srcRedHatDirectoryServer
+		\srcSalesforce
+		\srcSAPASE
+		\srcSAPGatewayOData
+		\srcSAPHANA
+		\srcSAPIQ
+		\srcSOAPWSDL
+		\srcSolr
+		\srcTeiid
+		\srcTeradata
+		\srcVertica
+		\srcXML
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Java 11): https://teiid.io/teiid_wildfly/
+% - onprem (docker): https://registry.hub.docker.com/r/jboss/teiid
+% - onprem (openshift): https://teiid.io/teiid_cloud/
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: needs to create virtual databases for the data sources
+% - http://teiid.github.io/teiid-documents/16.0.x/content/reference/as_virtual-databases.html
+% === SUPPORTED FILE STORAGES ===
+% - Amazon S3
+% === ORIGINAL DESCRIPTION ===
+% - Teiid~\cite{Teiid} is a cloud-native data virtualization system that allows users to quickly, consistently and securely assess a wide variety of data sources. It is open source and has been a part of the JBoss Community of projects under the Red Hat umbrella for over 10 years. The key features are flexible deployments on OpenShift; visual data virtualization design tool; and flexibility in customizing Teiid and running it in the WildFly Java EE Server, in Spring Boot or doing whatever you need in Java.
+% === FORMER TABLE DESCRIPTION ===
+% - Cloud-native data virtualization system
+% === FORMER TABLE FEATURES ===
+% - Familiar interfaces and query language
+% - Multiple sources look like one
+% - Easy to desploy
+% - Eliminated hand-coded data access logic
+% - High optimized
+% === LINKS & NOTES ===
+% - http://teiid.github.io/teiid-documents/16.0.x/content/
+% - [features] https://teiid.io/about/why-teiid/
+
+\dfs{
+	\dfsName{TIBCO Data Virtualization} 
+	\dfsRefs{TIBCO}
+	\dfsProvider{TIBCO Software Inc.}
+	\dfsDescription{Data federation system for heterogeneous sources, with data caching \& security, massively parallel processing \& GUI tools (formerly Composite, then Cisco Data Virtualization)} 
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsHasAdoNet
+	\dfsIsSupported
+	\dfsDeployIaasPaas{AWS, Azure}
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{7.0.5}{2007}
+	\dfsReleaseLast{8.4.0}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAmazonDynamoDB
+		\srcAmazonOpenSearch
+		\srcAmazonRedshift
+		\srcCassandra
+		\srcCouchbase
+		\srcCSV % Delimited
+		\srcDrill
+		\srcElasticsearch
+		\srcEloqua
+		\srcExcel
+		\srcFacebook
+		\srcGoogleAdsAPI
+		\srcGoogleAnalyticsAPI
+		\srcGoogleBigQuery
+		\srcGoogleCalendarAPI
+		\srcGoogleContactsAPI
+		\srcGoogleSheetsAPI
+		\srcGreenplum
+		\srcHBase
+		\srcHive
+		\srcHPNeoview
+		\srcHSQLDB
+		\srcHTTPREST % with XML response bodies
+		\srcHubSpot
+		\srcIBMDBtwo
+		\srcIBMInformix
+		\srcIBMNetezza
+		\srcIMAP
+		\srcJSON
+		\srcMarketo
+		\srcMarkLogic
+		\srcMicrosoftAccess
+		\srcMicrosoftAzureCosmosDB
+		\srcMicrosoftSharepoint
+		\srcMicrosoftSharepointExcelServices
+		\srcMicrosoftSQLServer
+		\srcMongoDB
+		\srcMySQL
+		\srcNetsuite
+		\srcOData
+		\srcOracleDB
+		\srcPostgreSQL
+		\srcRSS % RSS 2.0
+		\srcSalesforce
+		\srcSAPASE
+		\srcSAPBusinessWarehouse
+		\srcSAPBusinessWarehouse
+		\srcSAPHANA
+		\srcSAPRFC
+		\srcSnowflake
+		\srcSOAPWSDL
+		\srcSplunk
+		\srcTeradata
+		\srcTibcoComputeDB
+		\srcTibcoDataVirtualization
+		\srcTwitter
+		\srcVertica
+		\srcXML
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - cmp (AWS): https://aws.amazon.com/marketplace/pp/prodview-kdfqlzdk243qo#pdp-pricing
+% - cmp (Azure): https://azuremarketplace.microsoft.com/en-us/marketplace/apps/tibco-software.tibco_data_virtualization
+% - onprem (Unix-like / Windows): https://docs.tibco.com/pub/tdv/8.3.0/doc/pdf/TIB_tdv_8.3.0_InstallationGuide.pdf?id=0
+% - onprem (Docker): https://docs.tibco.com/pub/tdv/8.6.0/doc/pdf/TIB_tdv_8.6.0_InstallationGuide.pdf?id=84
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: needs to create a virtual data layer for the data sources
+% - https://docs.tibco.com/pub/tdv/8.5.2/doc/pdf/TIB_tdv_8.5.0_UsersGuide.pdf?id=12
+% === SUPPORTED FILE STORAGES ===
+% - locally mounted filesystems
+% - Amazon S3
+% - Microsoft Azure Data Lake Storage
+% - Google Drive
+% === ORIGINAL DESCRIPTION ===
+% - TIBCO Data Virtualization~\cite{TIBCO} is an enterprise data virtualization solution that orchestrates access to multiple and varied data sources, and delivers the datasets and IT-cured data services foundation for nearly any solution. In 2017, the TIBCO company acquired the Cisco's data virtualization business to provide their customers and partners a more complete solution. The key features of TIBCO Data virtualization are orchestrated data services; centralized metadata control; advanced query engines; Studio design tool; business directory; and governance \& security.
+% === FORMER TABLE DESCRIPTION ===
+% - Enterprise data virtualization solution orchestrating access to multiple and varied data sources and delivering the datasets and IT-curated data services foundation for nearly any solution
+% === FORMER TABLE FEATURES ===
+% - Orchestrated data services
+% - Advanced query engines
+% - Studio design tool and Web UI
+% - Governance \& security
+% === LINKS & NOTES ===
+% - [Documentation] https://docs.tibco.com/products/tibco-data-virtualization-8-4-0
+% - [supported sources / pdf] https://docs.tibco.com/pub/tdv/8.4.0/doc/pdf/TIB_tdv_8.4.0_InstallationGuide.pdf?id=12
+% - [file data sources] https://docs.tibco.com/pub/tdv/8.4.0/doc/pdf/TIB_tdv_8.4.0_AdapterGuide_FileDataSources.pdf?id=14
+
+\dfs{
+	\dfsName{Trino}
+	\dfsRefs{Trino}
+	\dfsProvider{Trino Software Foundation}
+	\dfsDescription{SQL-based query distributed engine for interactive big data analytics, forked from Presto}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsDevelLangs{Java}
+	\dfsIsSupported
+	\dfsIsOpenSource
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseFirst{0.54}{}
+	\dfsReleaseLast{364}{2021}
+	\dfsQueryLangs{SQL}
+	\dfsTransparent{Transparent}
+	\dfsSrcList{
+		\srcAccumulo
+		\srcAmazonKinesis
+	    \srcAmazonRedshift
+		\srcCassandra
+		\srcClickHouse
+		\srcDruid
+		\srcElasticsearch
+		\srcGoogleBigQuery
+		\srcGoogleSheetsAPI
+		\srcHBase
+		\srcHive
+		\srcIceberg
+		\srcKafka
+		\srcKudu
+		\srcMicrosoftSQLServer
+		\srcMongoDB
+		\srcMySQL
+		\srcOracleDB
+		\srcPinot
+		\srcPostgreSQL
+		\srcPrometheus
+		\srcRedis
+		\srcSingleStore
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - onprem (Linux, Java 17, Python 2.7.x-3.X): https://trino.io/docs/current/installation/deployment.html
+% - onprem (Docker): https://hub.docker.com/r/trinodb/trino
+% === TRANSPARENT / EXPLICIT ===
+%Transparent: needs to create catalog and schema for data sources
+%https://trino.io/docs/current/overview/concepts.html
+% === ORIGINAL DESCRIPTION ===
+% - Trino~\cite{Trino} is a distributed SQL query engine designed to query large datasets distributed over one or more heterogeneous data sources. It was previously named Presto SQL. The main features are speed; scalability; simplicity; versatility; in-place analysis; and query federation.
+% === FORMER TABLE DESCRIPTION ===
+% - Fast and distributed SQL query engine for big data analytics 
+% === FORMER TABLE FEATURES ===
+% - Interactive data analytics
+% - high performance analytics of object storage with SQL
+% - centralized data access and analytics
+% - Batch ETL processing across disparate systems
+% === LINKS & NOTES ===
+% - https://trino.io/docs/current/overview.html
+		
+\dfs{
+	\dfsName{Virtuoso}
+	\dfsRefs{Virtuoso,VirtuosoJ,VirtuosoC}
+	\dfsProvider{OpenLink Software}
+	\dfsDescription{Multi-model DB (object-relational, RDF, XML) with data federation facilities}
+	\dfsHasAuthentication
+	\dfsHasAuthorization
+	\dfsHasEncryption
+	\dfsHasGui
+	\dfsHasCli
+	\dfsHasJdbc
+	\dfsHasOdbc
+	\dfsHasWebApi
+	\dfsHasAdoNet
+	\dfsHasSparqlEndpoint
+	\dfsDevelLangs{C}
+	\dfsIsSupported
+	\dfsDeployIaasPaas{AWS, Azure}
+	\dfsDeployOnPremises{Native, Containerized}
+	\dfsReleaseLast{8.3}{2020}
+	\dfsQueryLangs{SPARQL, SQL}
+	\dfsTransparent{Transparent, Explicit}
+	\dfsSrcList{
+		\srcFirebird
+		\srcIBMDBtwo
+		\srcIBMInformix
+		\srcIngres
+		\srcMicrosoftSQLServer
+		\srcMySQL
+		\srcOracleDB
+		\srcPostgreSQL
+		\srcProgressOpenEdgeRDBMS
+		\srcSAPASE
+		\srcSPARQL % via SERVICE only
+	}
+}
+% === INFRASTRUCTURAL DEPENDENCIES ===
+% - cmp (AWS): https://aws.amazon.com/marketplace/server/procurement?productId=af02fc40-74ed-4f8c-9c38-e4229c456267
+% - cmp (Azure): https://azuremarketplace.microsoft.com/en-us/marketplace/apps/openlinkswcom-pago.openlink-virtuoso-azure-pago-offer-20201019
+% - onprem (Docker): https://hub.docker.com/r/openlink/virtuoso-closedsource-8#
+% - onprem (Linux / Mac OS X / Windows): http://virtuoso.openlinksw.com/pricing/
+% === TRANSPARENT / EXPLICIT ===
+% - Transparent: Virtuoso SQL federation is transparent
+% - Explicit: Support SPARQL 1.1 federation
+% - https://community.openlinksw.com/t/enabling-sparql-1-1-federated-query-processing-in-virtuoso/2477
+% === ORIGINAL DESCRIPTION ===
+% - Virtuoso~\cite{Virtuoso, VirtuosoJ, VirtuosoC} was first developed as a row-wise transaction oriented RDBMS with SQL federation. It was subsequently re-targeted as an RDF graph store. It supports query federation over multiple data sources. The key features are data virtualization, real fusion of data and artificial intelligence, intelligent data security, and high performance and scalability.  
+% === FORMER TABLE DESCRIPTION ===
+% - Data Virtualization platform, enabling fast and flexible harmonization of disparate data that increases agility for individuals and enterprises alike
+% === FORMER TABLE FEATURES ===
+% - Enabling construction and deployment of KBs atop existing data
+% - Real fusion of data and artificial intelligence
+% - Intelligent data privacy \& security
+% - High performance \& scalability
+% === LINKS & NOTES ===
+% - http://docs.openlinksw.com/virtuoso/ch-vdbengine/
+% - [SERVICE support] https://community.openlinksw.com/t/enabling-sparql-1-1-federated-query-processing-in-virtuoso/2477

@@ -1,0 +1,947 @@
+\begin{thebibliography}{69}
+% BibTex style file: ios1.bst, 2019-01-11
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1} \fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1} \fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{\textit{#1}}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1} \fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1} \fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1} \fi
+\ifx \bissue  \undefined \def \bissue#1{#1} \fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1} \fi
+\ifx \blpage  \undefined \def \blpage #1{#1} \fi
+\ifx \burl  \undefined \def \burl#1{#1} \fi
+\ifx \doiurl  \undefined \def \doiurl#1{#1} \fi
+\ifx \betal  \undefined \def \betal{et al.} \fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1} \fi
+\ifx \beditor  \undefined \def \beditor#1{#1} \fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1} \fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{\textit{#1}} \fi
+\ifx \bedition  \undefined \def \bedition#1{#1} \fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1} \fi
+\ifx \blocation  \undefined \def \blocation#1{#1} \fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1} \fi
+\ifx \bsnm \undefined \def \bsnm#1{#1} \fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1} \fi
+\ifx \bparticle \undefined \def \bparticle#1{#1} \fi
+\ifx \barticle \undefined \def \barticle#1{#1} \fi
+\ifx \botherref \undefined \def \botherref #1{#1} \fi
+\ifx \url \undefined \def \url#1{#1} \fi
+\ifx \bchapter \undefined \def \bchapter#1{#1} \fi
+\ifx \bbook \undefined \def \bbook#1{#1} \fi
+\ifx \bcomment \undefined \def \bcomment#1{#1} \fi
+\ifx \oauthor \undefined \def \oauthor#1{#1} \fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1} \fi
+\ifx \texttildelow  \undefined \def \texttildelow{\symbol{126}} \fi
+\def \endbibitem {}
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1} \fi
+
+\bibitem{AllegroGraph}
+\begin{botherref}
+AllegroGraph,
+Accessed 18 November 2021.
+\url{https://allegrograph.com/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{AmazonAthenaFederation}
+\begin{botherref}
+{Amazon Athena},
+Accessed 18 November 2021.
+\url{https://docs.aws.amazon.com/athena/latest/ug/work-with-data-stores.html}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Presto}
+\begin{botherref}
+{Presto},
+Accessed 18 November 2021.
+\url{https://prestodb.io/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{AmazonNeptune}
+\begin{botherref}
+{Amazon Neptune},
+Accessed 18 November 2021.
+\url{https://aws.amazon.com/neptune/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Anzograph}
+\begin{botherref}
+Anzograph,
+Accessed 17 November 2021.
+\url{https://www.cambridgesemantics.com/anzograph/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Drill}
+\begin{botherref}
+{Apache Drill},
+Accessed 18 November 2021.
+\url{https://drill.apache.org/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{DrillP}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Hausenblas}} and
+\bauthor{\binits{J.}~\bsnm{Nadeau}},
+\batitle{{Apache} {Drill}: Interactive Ad-Hoc Analysis at Scale},
+\bjtitle{Big Data}
+\bvolume{1}(\bissue{2})
+(\byear{2013}),
+\bfpage{100}--\blpage{104}.
+doi:\doiurl{10.1089/big.2013.0011}.
+\end{barticle}
+\endbibitem
+
+\bibitem{melnik2011dremel}
+\begin{barticle}
+\bauthor{\binits{S.}~\bsnm{Melnik}},
+\bauthor{\binits{A.}~\bsnm{Gubarev}},
+\bauthor{\binits{J.J.}~\bsnm{Long}},
+\bauthor{\binits{G.}~\bsnm{Romer}},
+\bauthor{\binits{S.}~\bsnm{Shivakumar}},
+\bauthor{\binits{M.}~\bsnm{Tolton}} and
+\bauthor{\binits{T.}~\bsnm{Vassilakis}},
+\batitle{{Dremel}: interactive analysis of web-scale datasets},
+\bjtitle{Communications of the ACM}
+\bvolume{54}(\bissue{6})
+(\byear{2011}),
+\bfpage{114}--\blpage{123}.
+doi:\doiurl{10.1145/1953122.1953148}.
+\end{barticle}
+\endbibitem
+
+\bibitem{Jena}
+\begin{botherref}
+{Jena},
+Accessed 18 November 2021.
+\url{https://jena.apache.org/documentation/query/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{SparkSQL}
+\begin{botherref}
+{Spark SQL},
+Accessed 18 November 2021.
+\url{https://spark.apache.org/sql/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{SparkSQLC}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Armbrust}},
+\bauthor{\binits{R.S.}~\bsnm{Xin}},
+\bauthor{\binits{C.}~\bsnm{Lian}},
+\bauthor{\binits{Y.}~\bsnm{Huai}},
+\bauthor{\binits{D.}~\bsnm{Liu}},
+\bauthor{\binits{J.K.}~\bsnm{Bradley}},
+\bauthor{\binits{X.}~\bsnm{Meng}},
+\bauthor{\binits{T.}~\bsnm{Kaftan}},
+\bauthor{\binits{M.J.}~\bsnm{Franklin}},
+\bauthor{\binits{A.}~\bsnm{Ghodsi}} and
+\bauthor{\binits{M.}~\bsnm{Zaharia}},
+\bctitle{Spark {SQL:} Relational Data Processing in {Spark}},
+in: \bbtitle{Proc. of ACM SIGMOD Int. Conf. on Management of Data (SIGMOD)},
+\bpublisher{ACM},
+\byear{2015},
+pp.~\bfpage{1383}--\blpage{1394}.
+doi:\doiurl{10.1145/2723372.2742797}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{BigDAWG}
+\begin{barticle}
+\bauthor{\binits{J.}~\bsnm{Duggan}},
+\bauthor{\binits{A.J.}~\bsnm{Elmore}},
+\bauthor{\binits{M.}~\bsnm{Stonebraker}},
+\bauthor{\binits{M.}~\bsnm{Balazinska}},
+\bauthor{\binits{B.}~\bsnm{Howe}},
+\bauthor{\binits{J.}~\bsnm{Kepner}},
+\bauthor{\binits{S.}~\bsnm{Madden}},
+\bauthor{\binits{D.}~\bsnm{Maier}},
+\bauthor{\binits{T.}~\bsnm{Mattson}} and
+\bauthor{\binits{S.B.}~\bsnm{Zdonik}},
+\batitle{The {BigDAWG} Polystore System},
+\bjtitle{SIGMOD Record}
+\bvolume{44}(\bissue{2})
+(\byear{2015}),
+\bfpage{11}--\blpage{16}.
+doi:\doiurl{10.1145/2814710.2814713}.
+\end{barticle}
+\endbibitem
+
+\bibitem{BigDAWGv1.0}
+\begin{bchapter}
+\bauthor{\binits{V.}~\bsnm{Gadepally}},
+\bauthor{\binits{K.}~\bsnm{O'Brien}},
+\bauthor{\binits{A.}~\bsnm{Dziedzic}},
+\bauthor{\binits{A.J.}~\bsnm{Elmore}},
+\bauthor{\binits{J.}~\bsnm{Kepner}},
+\bauthor{\binits{S.}~\bsnm{Madden}},
+\bauthor{\binits{T.}~\bsnm{Mattson}},
+\bauthor{\binits{J.}~\bsnm{Rogers}},
+\bauthor{\binits{Z.}~\bsnm{She}} and
+\bauthor{\binits{M.}~\bsnm{Stonebraker}},
+\bctitle{BigDAWG version 0.1},
+in: \bbtitle{Proc. of IEEE High Performance Extreme Computing Conf. (HPEC)},
+\bpublisher{{IEEE}},
+\byear{2017},
+pp.~\bfpage{1}--\blpage{7}.
+doi:\doiurl{10.1109/HPEC.2017.8091077}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{Blazegraph}
+\begin{botherref}
+{Blazegraph},
+Accessed 6 December 2021.
+\url{https://blazegraph.com/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{CloudMdsQL}
+\begin{bchapter}
+\bauthor{\binits{B.}~\bsnm{Kolev}},
+\bauthor{\binits{C.}~\bsnm{Bondiombouy}},
+\bauthor{\binits{P.}~\bsnm{Valduriez}},
+\bauthor{\binits{R.}~\bsnm{Jim{\'e}nez-Peris}},
+\bauthor{\binits{R.}~\bsnm{Pau}} and
+\bauthor{\binits{J.}~\bsnm{Pereira}},
+\bctitle{The {CloudMdsQL} Multistore System},
+in: \bbtitle{Proc. of ACM SIGMOD Int. Conf. on Management of Data (SIGMOD)},
+\bpublisher{ACM},
+\byear{2016},
+pp.~\bfpage{2113}--\blpage{2116}.
+doi:\doiurl{10.1145/2882903.2899400}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{CloudMdsQLJ}
+\begin{barticle}
+\bauthor{\binits{B.}~\bsnm{Kolev}},
+\bauthor{\binits{P.}~\bsnm{Valduriez}},
+\bauthor{\binits{C.}~\bsnm{Bondiombouy}},
+\bauthor{\binits{R.}~\bsnm{Jim{\'e}nez-Peris}},
+\bauthor{\binits{R.}~\bsnm{Pau}} and
+\bauthor{\binits{J.}~\bsnm{Pereira}},
+\batitle{{CloudMdsQL}: querying heterogeneous cloud data stores with a common
+  language},
+\bjtitle{Distributed Parallel Databases}
+\bvolume{34}(\bissue{4})
+(\byear{2016}),
+\bfpage{463}--\blpage{503}.
+doi:\doiurl{10.1007/s10619-015-7185-y}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:conf/semweb/TaelmanHSV18}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Taelman}},
+\bauthor{\binits{J.V.}~\bsnm{Herwegen}},
+\bauthor{\binits{M.V.}~\bsnm{Sande}} and
+\bauthor{\binits{R.}~\bsnm{Verborgh}},
+\bctitle{Comunica: {A} Modular {SPARQL} Query Engine for the Web},
+in: \bbtitle{The Semantic Web - {ISWC} 2018 - 17th International Semantic Web
+  Conference, Monterey, CA, USA, October 8-12, 2018, Proceedings, Part {II}},
+\bsertitle{Lecture Notes in Computer Science},
+Vol.~\bseriesno{11137},
+\bpublisher{Springer},
+\byear{2018},
+pp.~\bfpage{239}--\blpage{255}.
+doi:\doiurl{10.1007/978-3-030-00668-6\_15}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{CostFed}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{A.}~\bsnm{Potocki}},
+\bauthor{\binits{T.}~\bsnm{Soru}},
+\bauthor{\binits{O.}~\bsnm{Hartig}} and
+\bauthor{\binits{A.-C.}~\bsnm{Ngonga~Ngomo}},
+\bctitle{{CostFed}: Cost-Based Query Optimization for {SPARQL} Endpoint
+  Federation},
+in: \bbtitle{Proc. of Int. Conf. on Semantic Systems (SEMANTICS)},
+\bsertitle{Procedia Computer Science},
+Vol.~\bseriesno{137},
+\bpublisher{Elsevier},
+\byear{2018},
+pp.~\bfpage{163}--\blpage{174}.
+doi:\doiurl{10.1016/j.procs.2018.09.016}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DARQ}
+\begin{bchapter}
+\bauthor{\binits{B.}~\bsnm{Quilitz}} and
+\bauthor{\binits{U.}~\bsnm{Leser}},
+\bctitle{Querying Distributed {RDF} Data Sources with {SPARQL}},
+in: \bbtitle{Proc. of European Semantic Web Conf. (ESWC)},
+\bsertitle{LNCS},
+Vol.~\bseriesno{5021},
+\bpublisher{Springer},
+\byear{2008},
+pp.~\bfpage{524}--\blpage{538}.
+doi:\doiurl{10.1007/978-3-540-68234-9\_39}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{DataVirtuality}
+\begin{botherref}
+Data Virtuality,
+Accessed 17 November 2021.
+\url{https://datavirtuality.com/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Denodo}
+\begin{botherref}
+{Denodo},
+Accessed 17 Novemebr 2021.
+\url{https://www.denodo.com/en}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Dremio}
+\begin{botherref}
+{Dremio},
+Accessed 17 November 2021.
+\url{https://www.dremio.com/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{FEDRA}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{H.}~\bsnm{Skaf-Molli}},
+\bauthor{\binits{P.}~\bsnm{Molli}} and
+\bauthor{\binits{M.-E.}~\bsnm{Vidal}},
+\bctitle{Federated {SPARQL} Queries Processing with Replicated Fragments},
+in: \bbtitle{Proc. of Int. Semantic Web Conf. (ISWC)},
+\bsertitle{LNCS},
+Vol.~\bseriesno{9366},
+\bpublisher{Springer},
+\byear{2015},
+pp.~\bfpage{36}--\blpage{51}.
+doi:\doiurl{10.1007/978-3-319-25007-6\_3}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{FedX}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Schwarte}},
+\bauthor{\binits{P.}~\bsnm{Haase}},
+\bauthor{\binits{K.}~\bsnm{Hose}},
+\bauthor{\binits{R.}~\bsnm{Schenkel}} and
+\bauthor{\binits{M.}~\bsnm{Schmidt}},
+\bctitle{{FedX}: {A} Federation Layer for Distributed Query Processing on
+  {Linked} {Open} {Data}},
+in: \bbtitle{Proc. of Extended Semantic Web Conference (ESWC)},
+\bsertitle{LNCS},
+Vol.~\bseriesno{6644},
+\bpublisher{Springer},
+\byear{2011},
+pp.~\bfpage{481}--\blpage{486}.
+doi:\doiurl{10.1007/978-3-642-21064-8\_39}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{FedX1}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Schwarte}},
+\bauthor{\binits{P.}~\bsnm{Haase}},
+\bauthor{\binits{K.}~\bsnm{Hose}},
+\bauthor{\binits{R.}~\bsnm{Schenkel}} and
+\bauthor{\binits{M.}~\bsnm{Schmidt}},
+\bctitle{{FedX}: Optimization Techniques for Federated Query Processing on
+  {Linked} {Data}},
+in: \bbtitle{Proc. of Int. Semantic Web Conf. (ISWC)},
+\bsertitle{LNCS},
+Vol.~\bseriesno{7031},
+\bpublisher{Springer},
+\byear{2011},
+pp.~\bfpage{601}--\blpage{616}.
+doi:\doiurl{10.1007/978-3-642-25073-6\_38}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{GraphDB}
+\begin{botherref}
+{GraphDB},
+Accessed 17 November 2021.
+\url{https://graphdb.ontotext.com/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{HiBISCus}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Saleem}} and
+\bauthor{\binits{A.-C.}~\bsnm{Ngonga~Ngomo}},
+\bctitle{{HiBISCuS:} Hypergraph-Based Source Selection for {SPARQL} Endpoint
+  Federation},
+in: \bbtitle{Proc. of European Semantic Web Conf. (ESWC)},
+\bsertitle{LNCS},
+Vol.~\bseriesno{8465},
+\bpublisher{Springer},
+\byear{2014},
+pp.~\bfpage{176}--\blpage{191}.
+doi:\doiurl{10.1007/978-3-319-07443-6\_13}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{IBMCloudPak}
+\begin{botherref}
+{IBM Cloud Pak for Data},
+Accessed 17 November 2021.
+\url{https://www.ibm.com/products/cloud-pak-for-data}.
+\end{botherref}
+\endbibitem
+
+\bibitem{IBMDb2BigSQL}
+\begin{botherref}
+{IBM Db2 Big SQL},
+Accessed 18 November 2021.
+\url{https://www.ibm.com/products/db2-big-sql}.
+\end{botherref}
+\endbibitem
+
+\bibitem{IBMInforSF}
+\begin{botherref}
+{IBM InfoSphere Federation Server},
+Accessed 18 November 2021.
+\url{https://www.ibm.com/docs/en/iis/11.7?topic=components-infosphere-federation-server}.
+\end{botherref}
+\endbibitem
+
+\bibitem{JBossDV}
+\begin{botherref}
+{JBoss Data Virtualization},
+Accessed 17 November 2021.
+\url{https://developers.redhat.com/products/datavirt/overview}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Metaphactory}
+\begin{botherref}
+{Metaphactory},
+Accessed 18 November 2021.
+\url{https://metaphacts.com/product}.
+\end{botherref}
+\endbibitem
+
+\bibitem{MetaphactoryJ}
+\begin{barticle}
+\bauthor{\binits{P.}~\bsnm{Haase}},
+\bauthor{\binits{D.M.}~\bsnm{Herzig}},
+\bauthor{\binits{A.}~\bsnm{Kozlov}},
+\bauthor{\binits{A.}~\bsnm{Nikolov}} and
+\bauthor{\binits{J.}~\bsnm{Trame}},
+\batitle{{metaphactory}: {A} platform for knowledge graph management},
+\bjtitle{Semantic Web}
+\bvolume{10}(\bissue{6})
+(\byear{2019}),
+\bfpage{1109}--\blpage{1125}.
+doi:\doiurl{10.3233/SW-190360}.
+\end{barticle}
+\endbibitem
+
+\bibitem{Myria}
+\begin{bchapter}
+\bauthor{\binits{J.}~\bsnm{Wang}},
+\bauthor{\binits{T.}~\bsnm{Baker}},
+\bauthor{\binits{M.}~\bsnm{Balazinska}},
+\bauthor{\binits{D.}~\bsnm{Halperin}},
+\bauthor{\binits{B.}~\bsnm{Haynes}},
+\bauthor{\binits{B.}~\bsnm{Howe}},
+\bauthor{\binits{D.}~\bsnm{Hutchison}},
+\bauthor{\binits{S.}~\bsnm{Jain}},
+\bauthor{\binits{R.}~\bsnm{Maas}},
+\bauthor{\binits{P.}~\bsnm{Mehta}},
+\bauthor{\binits{D.}~\bsnm{Moritz}},
+\bauthor{\binits{B.}~\bsnm{Myers}},
+\bauthor{\binits{J.}~\bsnm{Ortiz}},
+\bauthor{\binits{D.}~\bsnm{Suciu}},
+\bauthor{\binits{A.}~\bsnm{Whitaker}} and
+\bauthor{\binits{S.}~\bsnm{Xu}},
+\bctitle{The {Myria} Big Data Management and Analytics System and Cloud
+  Services},
+in: \bbtitle{Proc. of Biennial Conf. on Innovative Data Systems Research
+  (CIDR)},
+\bpublisher{www.cidrdb.org},
+\byear{2017}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{Neo4j}
+\begin{botherref}
+{Neo4j},
+Accessed 17 November 2021.
+\url{https://neo4j.com/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Cypher}
+\begin{bchapter}
+\bauthor{\binits{N.}~\bsnm{Francis}},
+\bauthor{\binits{A.}~\bsnm{Green}},
+\bauthor{\binits{P.}~\bsnm{Guagliardo}},
+\bauthor{\binits{L.}~\bsnm{Libkin}},
+\bauthor{\binits{T.}~\bsnm{Lindaaker}},
+\bauthor{\binits{V.}~\bsnm{Marsault}},
+\bauthor{\binits{S.}~\bsnm{Plantikow}},
+\bauthor{\binits{M.}~\bsnm{Rydberg}},
+\bauthor{\binits{P.}~\bsnm{Selmer}} and
+\bauthor{\binits{A.}~\bsnm{Taylor}},
+\bctitle{{Cypher}: An Evolving Query Language for Property Graphs},
+in: \bbtitle{Proc. of ACM SIGMOD Int. Conf. on Management of Data (SIGMOD)},
+\bpublisher{ACM},
+\byear{2018},
+pp.~\bfpage{1433}--\blpage{1445}.
+doi:\doiurl{10.1145/3183713.3190657}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{Obi-Wan}
+\begin{bchapter}
+\bauthor{\binits{M.}~\bsnm{Buron}},
+\bauthor{\binits{F.}~\bsnm{Goasdou{\'e}}},
+\bauthor{\binits{I.}~\bsnm{Manolescu}} and
+\bauthor{\binits{M.-L.}~\bsnm{Mugnier}},
+\bctitle{Ontology-Based {RDF} Integration of Heterogeneous Data},
+in: \bbtitle{Proc. of 23rd Int. Conf. on Extending Database Technology (EDBT)},
+\bpublisher{OpenProceedings.org},
+\byear{2020},
+pp.~\bfpage{299}--\blpage{310}.
+doi:\doiurl{10.5441/002/edbt.2020.27}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{Obi-Wan1}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Buron}},
+\bauthor{\binits{F.}~\bsnm{Goasdou{\'e}}},
+\bauthor{\binits{I.}~\bsnm{Manolescu}} and
+\bauthor{\binits{M.-L.}~\bsnm{Mugnier}},
+\batitle{{Obi-Wan}: Ontology-Based {RDF} Integration of Heterogeneous Data},
+\bjtitle{Proc. of VLDB Endowment}
+\bvolume{13}(\bissue{12})
+(\byear{2020}),
+\bfpage{2933}--\blpage{2936}.
+doi:\doiurl{10.14778/3415478.3415512}.
+\end{barticle}
+\endbibitem
+
+\bibitem{OBDA3}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Xiao}},
+\bauthor{\binits{D.}~\bsnm{Calvanese}},
+\bauthor{\binits{R.}~\bsnm{Kontchakov}},
+\bauthor{\binits{D.}~\bsnm{Lembo}},
+\bauthor{\binits{A.}~\bsnm{Poggi}},
+\bauthor{\binits{R.}~\bsnm{Rosati}} and
+\bauthor{\binits{M.}~\bsnm{Zakharyaschev}},
+\bctitle{Ontology-Based Data Access: A Survey},
+in: \bbtitle{Proc. of 27th Int. Joint Conf. on Artificial Intelligence
+  (IJCAI)},
+\bpublisher{ijcai.org},
+\byear{2018},
+pp.~\bfpage{5511}--\blpage{5519}.
+doi:\doiurl{10.24963/ijcai.2018/777}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{Tatooine}
+\begin{barticle}
+\bauthor{\binits{R.}~\bsnm{Bonaque}},
+\bauthor{\binits{T.D.}~\bsnm{Cao}},
+\bauthor{\binits{B.}~\bsnm{Cautis}},
+\bauthor{\binits{F.}~\bsnm{Goasdou{\'e}}},
+\bauthor{\binits{J.}~\bsnm{Letelier}},
+\bauthor{\binits{I.}~\bsnm{Manolescu}},
+\bauthor{\binits{O.}~\bsnm{Mendoza}},
+\bauthor{\binits{S.}~\bsnm{Ribeiro}},
+\bauthor{\binits{X.}~\bsnm{Tannier}} and
+\bauthor{\binits{M.}~\bsnm{Thomazo}},
+\batitle{Mixed-instance querying: a lightweight integration architecture for
+  data journalism},
+\bjtitle{Proc. of VLDB Endowment}
+\bvolume{9}(\bissue{13})
+(\byear{2016}),
+\bfpage{1513}--\blpage{1516}.
+doi:\doiurl{10.14778/3007263.3007297}.
+\end{barticle}
+\endbibitem
+
+\bibitem{ODYSSEY}
+\begin{bchapter}
+\bauthor{\binits{G.}~\bsnm{Montoya}},
+\bauthor{\binits{H.}~\bsnm{Skaf-Molli}} and
+\bauthor{\binits{K.}~\bsnm{Hose}},
+\bctitle{The {Odyssey} Approach for Optimizing Federated {SPARQL} Queries},
+in: \bbtitle{Proc. of Int. Semantic Web Conf. (ISWC)},
+\bsertitle{LNCS},
+Vol.~\bseriesno{10587},
+\bpublisher{Springer},
+\byear{2017},
+pp.~\bfpage{471}--\blpage{489}.
+doi:\doiurl{10.1007/978-3-319-68288-4\_28}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{Ontario}
+\begin{bchapter}
+\bauthor{\binits{K.M.}~\bsnm{Endris}},
+\bauthor{\binits{P.D.}~\bsnm{Rohde}},
+\bauthor{\binits{M.-E.}~\bsnm{Vidal}} and
+\bauthor{\binits{S.}~\bsnm{Auer}},
+\bctitle{{Ontario}: Federated Query Processing Against a Semantic Data Lake},
+in: \bbtitle{Proc. of Int. Conf. on Database and Expert Systems Applications
+  (DEXA)},
+\bsertitle{LNCS},
+Vol.~\bseriesno{11706},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{379}--\blpage{395}.
+doi:\doiurl{10.1007/978-3-030-27615-7\_29}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{MULDER}
+\begin{barticle}
+\bauthor{\binits{K.M.}~\bsnm{Endris}},
+\bauthor{\binits{M.}~\bsnm{Galkin}},
+\bauthor{\binits{I.}~\bsnm{Lytra}},
+\bauthor{\binits{M.N.}~\bsnm{Mami}},
+\bauthor{\binits{M.-E.}~\bsnm{Vidal}} and
+\bauthor{\binits{S.}~\bsnm{Auer}},
+\batitle{Querying Interlinked Data by Bridging {RDF} Molecule Templates},
+\bjtitle{Trans. Large Scale Data Knowledge Centered Systems}
+\bvolume{39}
+(\byear{2018}),
+\bfpage{1}--\blpage{42}.
+doi:\doiurl{10.1007/978-3-662-58415-6\_1}.
+\end{barticle}
+\endbibitem
+
+\bibitem{Onto-KIT}
+\begin{barticle}
+\bauthor{\binits{M.}~\bsnm{Masmoudi}},
+\bauthor{\binits{S.B.A.B.}~\bsnm{Lamine}},
+\bauthor{\binits{H.B.}~\bsnm{Zghal}},
+\bauthor{\binits{B.}~\bsnm{Archim{\`{e}}de}} and
+\bauthor{\binits{M.-H.}~\bsnm{Karray}},
+\batitle{Knowledge hypergraph-based approach for data integration and querying:
+  Application to {Earth} Observation},
+\bjtitle{Future Generation Computer Systems}
+\bvolume{115}
+(\byear{2021}),
+\bfpage{720}--\blpage{740}.
+doi:\doiurl{10.1016/j.future.2020.09.029}.
+\end{barticle}
+\endbibitem
+
+\bibitem{OracleBigDataSQL}
+\begin{botherref}
+{Oracle Big Data SQL},
+Accessed 18 November 2021.
+\url{https://www.oracle.com/database/technologies/datawarehouse-bigdata/bigdata-sql.html}.
+\end{botherref}
+\endbibitem
+
+\bibitem{OracleSpatialAndGraph}
+\begin{botherref}
+{Oracle Spatial and Graph},
+Accessed 16 November 2021.
+\url{https://www.oracle.com/database/technologies/spatialandgraph.html}.
+\end{botherref}
+\endbibitem
+
+\bibitem{OracleSpatialAndGraphJ}
+\begin{botherref}
+\oauthor{\binits{L.}~\bsnm{Jayapalan}},
+{Oracle Spatial and Graph RDF Knowledge Developer's Guide},
+Technical Report,
+Oracle,
+2021.
+\url{https://docs.oracle.com/en/database/oracle/oracle-database/19/rdfrm/spatial-and-graph-rdf-knowledge-graph-developers-guide.pdf}.
+\end{botherref}
+\endbibitem
+
+\bibitem{PolyWeb}
+\begin{barticle}
+\bauthor{\binits{Y.}~\bsnm{Khan}},
+\bauthor{\binits{A.}~\bsnm{Zimmermann}},
+\bauthor{\binits{A.}~\bsnm{Jha}},
+\bauthor{\binits{V.}~\bsnm{Gadepally}},
+\bauthor{\binits{M.}~\bsnm{d'Aquin}} and
+\bauthor{\binits{R.}~\bsnm{Sahay}},
+\batitle{One Size Does Not Fit All: Querying {Web} Polystores},
+\bjtitle{IEEE Access}
+\bvolume{7}
+(\byear{2019}),
+\bfpage{9598}--\blpage{9617}.
+doi:\doiurl{10.1109/ACCESS.2018.2888601}.
+\end{barticle}
+\endbibitem
+
+\bibitem{PolyWebGit}
+\begin{bchapter}
+\bauthor{\binits{Y.}~\bsnm{Khan}},
+\bauthor{\binits{A.}~\bsnm{Zimmermann}},
+\bauthor{\binits{A.}~\bsnm{Jha}},
+\bauthor{\binits{D.}~\bsnm{Rebholz{-}Schuhmann}} and
+\bauthor{\binits{R.}~\bsnm{Sahay}},
+\bctitle{Querying web polystores},
+in: \bbtitle{Proc. of IEEE Int. Conf. on Big Data (IEEE BigData)},
+\bpublisher{{IEEE} Computer Society},
+\byear{2017},
+pp.~\bfpage{3190}--\blpage{3195}.
+doi:\doiurl{10.1109/BigData.2017.8258299}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{PrestoP}
+\begin{bchapter}
+\bauthor{\binits{R.}~\bsnm{Sethi}},
+\bauthor{\binits{M.}~\bsnm{Traverso}},
+\bauthor{\binits{D.}~\bsnm{Sundstrom}},
+\bauthor{\binits{D.}~\bsnm{Phillips}},
+\bauthor{\binits{W.}~\bsnm{Xie}},
+\bauthor{\binits{Y.}~\bsnm{Sun}},
+\bauthor{\binits{N.}~\bsnm{Yegitbasi}},
+\bauthor{\binits{H.}~\bsnm{Jin}},
+\bauthor{\binits{E.}~\bsnm{Hwang}},
+\bauthor{\binits{N.}~\bsnm{Shingte}} and
+\bauthor{\binits{C.}~\bsnm{Berner}},
+\bctitle{Presto: {SQL} on Everything},
+in: \bbtitle{Proc. of 35th Int. Conf. on Data Engineering (ICDE)},
+\bpublisher{IEEE},
+\byear{2019},
+pp.~\bfpage{1802}--\blpage{1813}.
+doi:\doiurl{10.1109/ICDE.2019.00196}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{Querona}
+\begin{botherref}
+{Querona Data Virtualization},
+Accessed 17 November 2021.
+\url{https://www.querona.io/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{RDFLib}
+\begin{botherref}
+{RDFLib},
+Accessed 26 July 2022.
+\url{https://rdflib.readthedocs.io/en/stable/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{SAFE}
+\begin{barticle}
+\bauthor{\binits{Y.}~\bsnm{Khan}},
+\bauthor{\binits{M.}~\bsnm{Saleem}},
+\bauthor{\binits{M.}~\bsnm{Mehdi}},
+\bauthor{\binits{A.}~\bsnm{Hogan}},
+\bauthor{\binits{Q.}~\bsnm{Mehmood}},
+\bauthor{\binits{D.}~\bsnm{Rebholz-Schuhmann}} and
+\bauthor{\binits{R.}~\bsnm{Sahay}},
+\batitle{{SAFE:} {SPARQL} Federation over {RDF} Data Cubes with Access
+  Control},
+\bjtitle{J. Biomedical Semantics}
+\bvolume{8}(\bissue{1})
+(\byear{2017}),
+\bfpage{5:1}--\blpage{5:22}.
+doi:\doiurl{10.1186/s13326-017-0112-6}.
+\end{barticle}
+\endbibitem
+
+\bibitem{DBLP:conf/www/MinierSM19}
+\begin{bchapter}
+\bauthor{\binits{T.}~\bsnm{Minier}},
+\bauthor{\binits{H.}~\bsnm{Skaf{-}Molli}} and
+\bauthor{\binits{P.}~\bsnm{Molli}},
+\bctitle{SaGe: Web Preemption for Public {SPARQL} Query Services},
+in: \bbtitle{The World Wide Web Conference, {WWW} 2019, San Francisco, CA, USA,
+  May 13-17, 2019},
+\beditor{\binits{L.}~\bsnm{Liu}},
+\beditor{\binits{R.W.}~\bsnm{White}},
+\beditor{\binits{A.}~\bsnm{Mantrach}},
+\beditor{\binits{F.}~\bsnm{Silvestri}},
+\beditor{\binits{J.J.}~\bsnm{McAuley}},
+\beditor{\binits{R.}~\bsnm{Baeza{-}Yates}} and
+\beditor{\binits{L.}~\bsnm{Zia}}, eds,
+\bpublisher{{ACM}},
+\byear{2019},
+pp.~\bfpage{1268}--\blpage{1278}.
+doi:\doiurl{10.1145/3308558.3313652}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{SAPHANASmartDataAccess}
+\begin{botherref}
+{SAP HANA (Smart Data Access)},
+Accessed 18 November 2021.
+\url{https://help.sap.com/docs/SAP_HANA_PLATFORM/6b94445c94ae495c83a19646e7c3fd56/a07c7ff25997460bbcb73099fb59007d.html?locale=en-US&version=2.0.05}.
+\end{botherref}
+\endbibitem
+
+\bibitem{SASFederationServer}
+\begin{botherref}
+{SAS Federation Server},
+Accessed 18 November 2021.
+\url{https://support.sas.com/en/software/federation-server-support.html}.
+\end{botherref}
+\endbibitem
+
+\bibitem{SemaGrow}
+\begin{bchapter}
+\bauthor{\binits{A.}~\bsnm{Charalambidis}},
+\bauthor{\binits{A.}~\bsnm{Troumpoukis}} and
+\bauthor{\binits{S.}~\bsnm{Konstantopoulos}},
+\bctitle{{SemaGrow:} optimizing federated {SPARQL} queries},
+in: \bbtitle{Proc. of 11th Int. Conf. on Semantic Systems (SEMANTICS)},
+\bpublisher{ACM},
+\byear{2015},
+pp.~\bfpage{121}--\blpage{128}.
+doi:\doiurl{10.1145/2814864.2814886}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{SPLENDID}
+\begin{bchapter}
+\bauthor{\binits{O.}~\bsnm{G{\"o}rlitz}} and
+\bauthor{\binits{S.}~\bsnm{Staab}},
+\bctitle{{SPLENDID:} {SPARQL} Endpoint Federation Exploiting {VOID}
+  Descriptions},
+in: \bbtitle{Proc. of 2nd Int. Workshop on Consuming Linked Data (COLD)},
+\bsertitle{CEUR Workshop Proceedings},
+Vol.~\bseriesno{782},
+\bpublisher{CEUR-WS.org},
+\byear{2011}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{VOID}
+\begin{bchapter}
+\bauthor{\binits{K.}~\bsnm{Alexander}},
+\bauthor{\binits{R.}~\bsnm{Cyganiak}},
+\bauthor{\binits{M.}~\bsnm{Hausenblas}} and
+\bauthor{\binits{J.}~\bsnm{Zhao}},
+\bctitle{Describing Linked Datasets},
+in: \bbtitle{Proc. of Int. Workshop on Linked Data on the Web (LDOW)},
+\bsertitle{CEUR Workshop Proceedings},
+Vol.~\bseriesno{538},
+\bpublisher{CEUR-WS.org},
+\byear{2009}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{SQLServerPolyBase}
+\begin{botherref}
+{SQL Server (PolyBase)},
+Accessed 18 November 2021.
+\url{https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide?view=sql-server-ver15}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Squerall}
+\begin{bchapter}
+\bauthor{\binits{M.N.}~\bsnm{Mami}},
+\bauthor{\binits{D.}~\bsnm{Graux}},
+\bauthor{\binits{S.}~\bsnm{Scerri}},
+\bauthor{\binits{H.}~\bsnm{Jabeen}},
+\bauthor{\binits{S.}~\bsnm{Auer}} and
+\bauthor{\binits{J.}~\bsnm{Lehmann}},
+\bctitle{{Squerall}: Virtual Ontology-Based Access to Heterogeneous and Large
+  Data Sources},
+in: \bbtitle{Proc. of Int. Semantic Web Conf. (ISWC)},
+\bsertitle{LNCS},
+Vol.~\bseriesno{11779},
+\bpublisher{Springer},
+\byear{2019},
+pp.~\bfpage{229}--\blpage{245}.
+doi:\doiurl{10.1007/978-3-030-30796-7\_15}.
+\end{bchapter}
+\endbibitem
+
+\bibitem{Starburst}
+\begin{botherref}
+{Starburst},
+Accessed 18 December 2021.
+\url{https://www.starburst.io/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Stardog}
+\begin{botherref}
+{Stardog},
+Accessed 17 November 2021.
+\url{https://www.stardog.com/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Teiid}
+\begin{botherref}
+{Teiid},
+Accessed 16 November 2021.
+\url{https://teiid.io/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{TIBCO}
+\begin{botherref}
+{TIBCO Data Virtualization},
+Accessed 17 November 2021.
+\url{https://www.tibco.com/products/data-virtualization}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Trino}
+\begin{botherref}
+{Trino},
+Accessed 18 November 2021.
+\url{https://trino.io/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{Virtuoso}
+\begin{botherref}
+{Virtuoso},
+Accessed 17 November 2021.
+\url{https://virtuoso.openlinksw.com/}.
+\end{botherref}
+\endbibitem
+
+\bibitem{VirtuosoJ}
+\begin{barticle}
+\bauthor{\binits{O.}~\bsnm{Erling}},
+\batitle{Virtuoso, a Hybrid {RDBMS}/{Graph} Column Store},
+\bjtitle{IEEE Data Engineering Bull.}
+\bvolume{35}(\bissue{1})
+(\byear{2012}),
+\bfpage{3}--\blpage{8}.
+\end{barticle}
+\endbibitem
+
+\bibitem{VirtuosoC}
+\begin{bchapter}
+\bauthor{\binits{O.}~\bsnm{Erling}} and
+\bauthor{\binits{I.}~\bsnm{Mikhailov}},
+\bctitle{{RDF} Support in the Virtuoso {DBMS}},
+in: \bbtitle{Proc. of Conf. on Social Semantic Web (CSSW)},
+\bsertitle{{LNI}},
+Vol.~\bseriesno{{P-113}},
+\bpublisher{{GI}},
+\byear{2007},
+pp.~\bfpage{59}--\blpage{68}.
+\end{bchapter}
+\endbibitem
+
+\end{thebibliography}

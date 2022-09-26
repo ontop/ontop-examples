@@ -1,0 +1,67 @@
+% !TeX spellcheck = en_US
+
+%-Standards of types of data sources
+
+%\clearpage
+%\onecolumn
+
+{
+	\renewcommand{\dfsPrint}{
+		\xdef\dfsSrcPrefixDefault{, }%
+		\gdef\dfsSrcPrintCell{\xdef\dfsSrcPrefixCurrent{}\ignorespaces\dfsSrcListVal}%
+		\ifdefempty{\dfsNameVal}{}{\ifbool{dfsIsAcademicVal}{\textit{\dfsNameVal}}{\dfsNameVal}} &
+		\xdef\dfsSrcTypeFilter{r}\dfsSrcPrintCell &
+		\xdef\dfsSrcTypeFilter{g}\dfsSrcPrintCell &
+		\xdef\dfsSrcTypeFilter{a}\dfsSrcPrintCell &
+		\xdef\dfsSrcTypeFilter{f}\dfsSrcPrintCell &
+		\xdef\dfsSrcTypeFilter{w}\dfsSrcPrintCell &
+		\xdef\dfsSrcTypeFilter{o}\dfsSrcPrintCell
+		\xdef\dfsSrcTypeFilter{}\xdef\dfsSrcPrefixDefault{} \\
+	}
+
+	\captionsetup[longtable]{labelfont={normal,footnotesize},labelsep=newline,textfont={normal,footnotesize},justification=centerfirst}
+	\begin{mylongtable}{|L{1.4cm}||L{4.7cm}L{1.2cm}L{2.2cm}L{1.4cm}L{1.3cm}||L{2.2cm}|}
+		\caption{%
+			\parbox{\linewidth}{
+			\vspace{.15cm}
+			Supported data sources.
+			Academic systems in \textit{italics}.
+			Additional source information in subscript position: 
+			\emph{$\ast$} = investigated system;
+			\emph{a} = specialized web API;
+			\emph{r} = RDF triple store;
+			\emph{g} = property graph store;
+			\emph{k} = key-value store;
+			\emph{w} = wide-column store;
+			\emph{d} = document store;
+			\emph{s} = search engine;
+			\emph{h} = hardware~+ software appliance;
+			\emph{m} = MDX (MultiDimensional eXpressions) support.
+			SPARQLp denotes the SPARQL protocol
+			}
+		}
+	    \label{Tab:DataSourcesSupported}
+	    \\
+		\hhline{|-||-----||-|}
+		\tabhead
+		System & \srcTypeRelational & \srcTypeGraph & \srcTypeAggregate & \srcTypeFile & \srcTypeService & \srcTypeOther \\
+		\hhline{:=::=====::=:}
+		\endfirsthead
+		\hhline{|-||-----||-|}
+		\tabhead
+		System & \srcTypeRelational & \srcTypeGraph & \srcTypeAggregate & \srcTypeFile & \srcTypeService & \srcTypeOther \\
+		\hhline{:=::=====::=:}
+		\endhead
+		\hhline{|-||-----||-|}
+		\endfoot
+		\tabbody
+		\ExpandableInput{Tab/systems.tex}
+	\end{mylongtable}
+}
+
+\endinput
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

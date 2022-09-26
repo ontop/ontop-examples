@@ -1,0 +1,180 @@
+\newcommand{\urlemail}[1]{\href{mailto:#1}{#1}}
+\newcommand{\eg}{\textit{e.g.},\xspace}
+\newcommand{\ie}{\textit{i.e.},\xspace}
+\newenvironment{myinparaenum}
+  {\begin{inparaenum}[\itshape (i)]}
+  {\end{inparaenum}}
+\newenvironment{myenumerate}
+  {\begin{enumerate}}%[(1)]}
+  {\end{enumerate}}
+\newenvironment{myitemize}
+  {\begin{itemize}}
+  {\end{itemize}}
+
+\definecolor{mygray1}{gray}{.8}
+\definecolor{mygray2}{gray}{.9}
+\definecolor{mygray3}{gray}{.95}
+\definecolor{mygray}{gray}{.9}
+\definecolor{mypink}{rgb}{.99,.91,.95}
+\definecolor{mycyan}{cmyk}{.3,0,0,0} 
+
+\newcommand{\cmark}{\Checkmark}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1.}}
+\newcommand{\mysubparagraph}[1]{\vspace{0.46em plus 0.1em minus 0.1em}\noindent\textit{#1}\hspace{0.46em plus 0.1em minus 0.1em}}
+
+% definitions of data federation systems
+\newbool{dfsIsAcademicVal}
+\newbool{dfsHasAuthenticationVal}
+\newbool{dfsHasAuthorizationVal}
+\newbool{dfsHasAuditingVal}
+\newbool{dfsHasEncryptionVal}
+\newbool{dfsHasDataMaskingVal}
+\newbool{dfsHasDataMaskingNGVal}
+\newbool{dfsHasGuiVal}
+\newbool{dfsHasCliVal}
+\newbool{dfsHasJdbcVal}
+\newbool{dfsHasOdbcVal}
+\newbool{dfsHasWebApiVal}
+\newbool{dfsHasAdoNetVal}
+\newbool{dfsHasSparqlEndpointVal}
+\newbool{dfsIsSupportedVal}
+\newbool{dfsIsOpenSourceVal}
+\newcommand{\dfsName}[1]{\gdef\dfsNameVal{#1}\ignorespaces}
+\newcommand{\dfsRefs}[1]{\gdef\dfsRefsVal{#1}\ignorespaces}
+\newcommand{\dfsProvider}[1]{\gdef\dfsProviderVal{#1}\ignorespaces}
+\newcommand{\dfsDescription}[1]{\gdef\dfsDescriptionVal{#1}\ignorespaces}
+\newcommand{\dfsIsAcademic}{\global\booltrue{dfsIsAcademicVal}\ignorespaces}
+\newcommand{\dfsHasAuthentication}{\global\booltrue{dfsHasAuthenticationVal}\ignorespaces}
+\newcommand{\dfsHasAuthorization}{\global\booltrue{dfsHasAuthorizationVal}\ignorespaces}
+\newcommand{\dfsHasAuditing}{\global\booltrue{dfsHasAuditingVal}\ignorespaces}
+\newcommand{\dfsHasEncryption}{\global\booltrue{dfsHasEncryptionVal}\ignorespaces}
+\newcommand{\dfsHasDataMasking}{\global\booltrue{dfsHasDataMaskingVal}\ignorespaces}
+\newcommand{\dfsHasDataMaskingNG}{\global\booltrue{dfsHasDataMaskingNGVal}\ignorespaces}
+\newcommand{\dfsHasGui}{\global\booltrue{dfsHasGuiVal}\ignorespaces}
+\newcommand{\dfsHasCli}{\global\booltrue{dfsHasCliVal}\ignorespaces}
+\newcommand{\dfsHasJdbc}{\global\booltrue{dfsHasJdbcVal}\ignorespaces}
+\newcommand{\dfsHasOdbc}{\global\booltrue{dfsHasOdbcVal}\ignorespaces}
+\newcommand{\dfsHasWebApi}{\global\booltrue{dfsHasWebApiVal}\ignorespaces}
+\newcommand{\dfsHasAdoNet}{\global\booltrue{dfsHasAdoNetVal}\ignorespaces}
+\newcommand{\dfsHasSparqlEndpoint}{\global\booltrue{dfsHasSparqlEndpointVal}\ignorespaces}
+\newcommand{\dfsDevelLangs}[1]{\gdef\dfsDevelLangsVal{#1}\ignorespaces}
+\newcommand{\dfsIsSupported}{\global\booltrue{dfsIsSupportedVal}\ignorespaces}
+\newcommand{\dfsIsOpenSource}{\global\booltrue{dfsIsOpenSourceVal}\ignorespaces}
+\newcommand{\dfsDeployOnPremises}[1]{\gdef\dfsDeployOnPremisesVal{#1}\ignorespaces}
+\newcommand{\dfsDeployIaasPaas}[1]{\gdef\dfsDeployIaasPaasVal{#1}\ignorespaces}
+\newcommand{\dfsDeploySaas}[1]{\gdef\dfsDeploySaasVal{#1}\ignorespaces}
+\newcommand{\dfsReleaseFirst}[2]{\gdef\dfsVersionFirstVal{#1}\gdef\dfsYearFirstVal{#2}\ignorespaces}
+\newcommand{\dfsReleaseLast}[2]{\gdef\dfsVersionLastVal{#1}\gdef\dfsYearLastVal{#2}\ignorespaces}
+\newcommand{\dfsReleaseUnique}[2]{\dfsReleaseFirst{#1}{#2}\dfsReleaseLast{#1}{#2}\ignorespaces}
+\newcommand{\dfsQueryLangs}[1]{\gdef\dfsQueryLangsVal{#1}\ignorespaces}
+\newcommand{\dfsTransparent}[1]{\gdef\dfsTransparentVal{#1}\ignorespaces} 
+\newcommand{\dfsMajorInfrastructural}[1]{\gdef\dfsMajorInfrastructuralVal{#1}\ignorespaces} 
+\newcommand{\dfsSrcList}[1]{\gdef\dfsSrcListVal{#1}\ignorespaces}
+\newcommand{\dfsPrint}{}
+\newcommand{\dfs}[1]{%
+	\gdef\dfsNameVal{}%
+	\gdef\dfsRefsVal{}%
+	\gdef\dfsProviderVal{}%
+	\gdef\dfsDescriptionVal{}%
+	\global\boolfalse{dfsIsAcademicVal}%
+	\global\boolfalse{dfsHasAuthenticationVal}%
+	\global\boolfalse{dfsHasAuthorizationVal}%
+	\global\boolfalse{dfsHasAuditingVal}%
+	\global\boolfalse{dfsHasEncryptionVal}%
+	\global\boolfalse{dfsHasDataMaskingVal}%
+	\global\boolfalse{dfsHasDataMaskingNGVal}%
+	\global\boolfalse{dfsHasGuiVal}%
+	\global\boolfalse{dfsHasCliVal}%
+	\global\boolfalse{dfsHasJdbcVal}%
+	\global\boolfalse{dfsHasOdbcVal}%
+	\global\boolfalse{dfsHasWebApiVal}%
+	\global\boolfalse{dfsHasAdoNetVal}%
+	\global\boolfalse{dfsHasSparqlEndpointVal}%
+	\gdef\dfsDevelLangsVal{}%
+	\global\boolfalse{dfsIsSupportedVal}%
+	\global\boolfalse{dfsIsOpenSourceVal}%
+	\gdef\dfsDeployOnPremisesVal{}%
+	\gdef\dfsDeployIaasPaasVal{}%
+	\gdef\dfsDeploySaasVal{}%
+	\gdef\dfsVersionFirstVal{}%
+	\gdef\dfsVersionLastVal{}%
+	\gdef\dfsYearFirstVal{}%
+	\gdef\dfsYearLastVal{}%
+	\gdef\dfsQueryLangsVal{}%
+	\gdef\dfsSrcListVal{}%
+	\ignorespaces #1%
+	\dfsPrint%
+}
+
+% table column definitions
+\newcommand{\PreserveBackslash}[1]{\let\temp=\\#1\let\\=\temp}
+\gdef\setRowStyle{} % callback to set row style
+\newcolumntype{C}[1]{>{\PreserveBackslash\centering\setRowStyle}m{#1}}
+\newcolumntype{R}[1]{>{\PreserveBackslash\raggedleft\setRowStyle}m{#1}}
+\newcolumntype{L}[1]{>{\PreserveBackslash\raggedright\setRowStyle}m{#1}}
+\newcolumntype{M}{>{\PreserveBackslash\centering\setRowStyle}c} % for multicolumn
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+% table commands and environments
+\gdef\tableColorOdd{gray!10} % was gray!20
+\gdef\tableColorEven{gray!25} % was gray!40
+\gdef\tableColorTotals{gray!5} % was gray!6
+\newcommand{\tabhead}{\gdef\setRowStyle{\baselineskip=1em\bfseries}\setRowStyle}
+\newcommand{\tabsubhead}{\gdef\setRowStyle{\fontsize{6.5pt}{6.5pt}\selectfont\baselineskip=1em\bfseries}\setRowStyle}
+\newcommand{\tabbody}{\showrowcolors\gdef\setRowStyle{\baselineskip=1em\normalfont}\setRowStyle}
+\newcommand{\tabfoot}{\rowcolor{\tableColorTotals}\gdef\setRowStyle{\baselineskip=1em\bfseries}\setRowStyle}
+\newenvironment{mytabular}[2][1.2]{
+	\scriptsize
+	\setlength{\tabcolsep}{3pt}
+	\renewcommand{\arraystretch}{#1}
+	\rowcolors{1}{\tableColorOdd}{\tableColorEven}
+	\begin{tabular}{#2}
+		\hiderowcolors
+}{
+	\end{tabular}%
+	\gdef\setRowStyle{}%
+	\ignorespaces
+}
+\newenvironment{mylongtable}[1]{%
+	\scriptsize%
+	\setlength{\tabcolsep}{3pt}%
+	\renewcommand{\arraystretch}{1.2}%
+	\rowcolors{1}{\tableColorOdd}{\tableColorEven}
+	\begin{longtable}{#1}%
+		\hiderowcolors%
+}{
+	\end{longtable}%
+	\gdef\setRowStyle{}%
+	\ignorespaces%
+}
+
+\makeatletter
+\newcommand*\ExpandableInput[1]{\@@input#1 }
+\makeatother
+
+\usepackage{mdframed}
+\newenvironment{queryexample}{%
+	\medskip%
+	\begin{mdframed}[
+		topline=false,
+		bottomline=false,
+		rightline=false,
+		innertopmargin=5pt,
+		innerbottommargin=5pt,
+		innerleftmargin=10pt,
+		innerrightmargin=5pt,
+		linewidth=2pt,
+		linecolor=black!20,
+		backgroundcolor=black!4
+		]\raggedright\small\tt\color{black!70}%
+	}{%
+	\end{mdframed}%
+}
+
+\endinput
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

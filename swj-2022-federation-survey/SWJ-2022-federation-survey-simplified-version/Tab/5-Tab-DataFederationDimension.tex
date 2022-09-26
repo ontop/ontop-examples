@@ -1,0 +1,91 @@
+% !TeX spellcheck = en_US
+
+\begin{table*}[tbp]
+        \centering
+        \caption{Evaluation of query language and data source
+         sub-dimensions. Academic systems in \textit{italics}. ``--''~denotes
+         feature/information not found in the systems' official documentation,
+         websites, or academic publications, to the best of our efforts}
+        \label{Tab:DataFederationDimension}
+
+        \newcounter{dfsQueryLangsSparqlCount}
+        \newcounter{dfsQueryLangsSqlCount}
+        \newcounter{dfsQueryLangsOtherCount}
+        \newcounter{dfsSrcRelationalCount}
+        \newcounter{dfsSrcGraphCount}
+        \newcounter{dfsSrcAggregateCount}
+        \newcounter{dfsSrcFileCount}
+        \newcounter{dfsSrcServiceCount}
+        \newcounter{dfsSrcOtherCount}
+        \newcommand{\dfsSrcTypeCheckmark}[2]{%
+            \gdef\dfsSrcTypeFilter{#1}%
+            \gdef\dfsSrcTypeExists{}%
+            \dfsSrcListVal{}%
+            %\ifbool{dfsIsAcademicVal}{ % only academic systems
+            \ifdefempty{\dfsSrcTypeExists}{--}{\cmark\addtocounter{#2}{1}}%
+            %}{--}
+        }
+        
+        \renewcommand{\dfsPrint}{
+                \StrSubstitute{ \dfsQueryLangsVal,@@}{ SPARQL,}{}[\dfsTmp]
+                \StrSubstitute{\dfsTmp}{ SQL,}{}[\dfsTmp]
+                \StrSubstitute{\dfsTmp}{ BGPs,}{}[\dfsTmp]
+                \StrSubstitute{\dfsTmp}{,@@}{}[\dfsTmp]
+                \StrSubstitute{\dfsTmp}{@@}{}[\dfsTmp]
+                \xdef\dfsQueryLangsOtherVal{\dfsTmp}
+                \StrSubstitute{\dfsTmp}{ }{}[\dfsTmp]
+                \IfStrEq{\dfsTmp}{}{\xdef\dfsQueryLangsOtherVal{}}{}
+                %
+                \ifdefempty{\dfsNameVal}{}{\ifbool{dfsIsAcademicVal}{\textit{\dfsNameVal}}{\dfsNameVal}} &
+                \IfSubStr{ \dfsQueryLangsVal,}{ SPARQL,}{%
+                    \cmark\addtocounter{dfsQueryLangsSparqlCount}{1}%
+                }{
+                    \IfSubStr{ \dfsQueryLangsVal,}{ BGPs,}{%
+                        \cmark\addtocounter{dfsQueryLangsSparqlCount}{1}\hspace{-.05cm}$_\textit{bgp}$\hspace{-.28cm}\,%
+                    }{--}
+                } &
+                \IfSubStr{ \dfsQueryLangsVal,}{ SQL,}{%
+                    \cmark\addtocounter{dfsQueryLangsSqlCount}{1}%
+                }{--} &
+                \ifdefempty{\dfsQueryLangsOtherVal}{--}{\dfsQueryLangsOtherVal\addtocounter{dfsQueryLangsOtherCount}{1}} &
+                \dfsSrcTypeCheckmark{?r}{dfsSrcRelationalCount} &
+                \dfsSrcTypeCheckmark{?g}{dfsSrcGraphCount} &
+                \dfsSrcTypeCheckmark{?a}{dfsSrcAggregateCount} &
+                \dfsSrcTypeCheckmark{?f}{dfsSrcFileCount} &
+                \dfsSrcTypeCheckmark{?w}{dfsSrcServiceCount} &
+                \dfsSrcTypeCheckmark{?o}{dfsSrcOtherCount} \\
+        }
+
+        \begin{mytabular}{|L{3.5cm}||C{0.9cm}C{0.9cm}C{1.8cm}||C{1.1cm}C{1.1cm}C{1.1cm}C{1.1cm}C{1.4cm}C{0.9cm}|}
+        %\begin{mytabular}{|L{2.8cm}||C{0.8cm}C{0.6cm}C{1.3cm}||C{0.9cm}C{1cm}C{1cm}C{1.1cm}C{1.3cm}C{1cm}C{0.8cm}|}
+                \hhline{-||---||------}
+                \tabhead
+                \multirow{3}{*}{System} & \multicolumn{3}{M||}{Query language} & \multicolumn{6}{M|}{Data source}  \\
+                \hhline{|~||---||------|}
+                \tabsubhead
+                & SPARQL & SQL & Other & \srcTypeRelational & \srcTypeGraph & \srcTypeAggregate & \srcTypeFile & \srcTypeService & \srcTypeOther \\
+                \hhline{:=::===::======:}
+                \tabbody
+                \ExpandableInput{Tab/systems.tex}
+                \hhline{:=::===::======:}
+                \tabfoot
+                Number &
+                \arabic{dfsQueryLangsSparqlCount} &
+                \arabic{dfsQueryLangsSqlCount} &
+                \arabic{dfsQueryLangsOtherCount} &
+                \arabic{dfsSrcRelationalCount} &
+                \arabic{dfsSrcGraphCount} &
+                \arabic{dfsSrcAggregateCount} &
+                \arabic{dfsSrcFileCount} &
+                \arabic{dfsSrcServiceCount} &
+                \arabic{dfsSrcOtherCount} \\
+                \hhline{|-||---||------|}
+        \end{mytabular}
+\end{table*}
+
+\endinput
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

@@ -1,0 +1,61 @@
+% !TeX spellcheck = en_US
+
+%OLE DB Driver; OData; Node.js; ADO.NET
+
+\begin{table*}[tbp]
+        \centering
+        \caption{Evaluation of the \textit{interface} dimension. Academic
+         systems in \textit{italics}. ``--''~denotes feature/information not
+         found in the systems' official documentation, websites, or academic publications, to the best of our efforts}
+        \label{Tab:InterfaceDimension}
+
+        \newcounter{dfsHasGuiCount}
+        \newcounter{dfsHasCliCount}
+        \newcounter{dfsHasJdbcCount}
+        \newcounter{dfsHasOdbcCount}
+        \newcounter{dfsHasWebApiCount}
+        \newcounter{dfsHasAdoNetCount}
+        \newcounter{dfsHasSparqlEndpointCount}
+
+        \renewcommand{\dfsPrint}{
+                \ifdefempty{\dfsNameVal}{}{\ifbool{dfsIsAcademicVal}{\textit{\dfsNameVal}}{\dfsNameVal}} &
+                \ifbool{dfsHasGuiVal}{\cmark\addtocounter{dfsHasGuiCount}{1}}{--} &
+                \ifbool{dfsHasCliVal}{\cmark\addtocounter{dfsHasCliCount}{1}}{--} &
+                \ifbool{dfsHasJdbcVal}{\cmark\addtocounter{dfsHasJdbcCount}{1}}{--} &
+                \ifbool{dfsHasOdbcVal}{\cmark\addtocounter{dfsHasOdbcCount}{1}}{--} &
+                \ifbool{dfsHasWebApiVal}{\cmark\addtocounter{dfsHasWebApiCount}{1}}{--} &
+                \ifbool{dfsHasAdoNetVal}{\cmark\addtocounter{dfsHasAdoNetCount}{1}}{--} &
+                \ifbool{dfsHasSparqlEndpointVal}{\cmark\addtocounter{dfsHasSparqlEndpointCount}{1}}{--} \\
+        }
+
+        \begin{mytabular}{|L{3.7cm}||C{1.5cm}C{1.5cm}||C{1.5cm}C{1.5cm}C{1.5cm}C{1.5cm}C{1.5cm}|}
+        %\begin{mytabular}{|L{2.8cm}||C{1.5cm}C{1.5cm}||C{1.5cm}C{1.5cm}C{1.5cm}C{1.5cm}C{1.5cm}|}
+                \hhline{|-||--||-----|}
+                \tabhead
+                \multirow{3}{=}{System} & \multirow{3}{=}{\centering Graphical interface} & \multirow{3}{=}{\centering Command line interface} & \multicolumn{5}{M|}{Application programming interface} \\
+                \hhline{|~||~~||-----|}
+                \tabsubhead
+                & & & JDBC Driver & ODBC Driver & Web API & ADO.NET & SPARQL HTTP API \\
+                \hhline{:=::==::=====:}
+                \tabbody
+                \ExpandableInput{Tab/systems.tex}
+                \hhline{:=::==::=====:}
+                \tabfoot
+                Number &
+                \arabic{dfsHasGuiCount} &
+                \arabic{dfsHasCliCount} &
+                \arabic{dfsHasJdbcCount} &
+                \arabic{dfsHasOdbcCount} &
+                \arabic{dfsHasWebApiCount} &
+                \arabic{dfsHasAdoNetCount} &
+                \arabic{dfsHasSparqlEndpointCount} \\
+                \hhline{|-||--||-----|}
+        \end{mytabular}
+\end{table*}
+
+\endinput
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

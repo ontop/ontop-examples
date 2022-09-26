@@ -1,0 +1,449 @@
+% !TeX spellcheck = en_US
+
+\begin{table*}[tbp]
+	\newcommand{\dimsep}{,\hspace{.6em}}
+	\newcommand{\marker}{$^\ast$}
+	\centering
+	\caption{Collected system comparison publications. \emph{Cit.} = citations (2022/06/07); \marker = restriction to selected aspects/systems; \textbf{bold} = systems in our survey}%
+	\label{Tab:SurveyWork}%
+	\small
+	\begin{mytabular}{|L{4.2cm}||L{1.1cm}||C{0.5cm}||C{0.5cm}||L{3.5cm}||L{4.6cm}|}
+		\hhline{|-||-||-||-||-||-|}
+		\tabhead
+		\textbf{Title} & \textbf{Venues} & \textbf{Year} & \textbf{Cit.} & \textbf{Considered systems} &  \textbf{Assessed dimensions}\\
+		\hhline{:=::=::=::=::=::=:}
+		\tabbody
+		%
+		% === FedBench ===
+		FedBench: A benchmark suite for federated semantic data query processing~\cite{FedBench} &
+	    ISWC &
+		2011 &
+		194
+		&
+		{\bfseries SPLENDID}\dimsep % (11)
+		\sout{Sesame AliBaba}
+		&
+		evaluation time\dimsep
+		\# endpoint requests
+		\\
+		
+		% === Survey-FederateComparisonSPARQL ===
+		A comparison of federation over SPARQL endpoints frameworks~\cite{Survey-FederateComparisonSPARQL}
+		\par\smallskip
+		\emph{also available as PhD thesis chapter~\cite{rakhmawati2017evaluating}}
+		&
+		KESW &
+		2013 &
+		21
+		&
+		ADERIS\dimsep % (11)
+		ANAPSID\dimsep % (11)
+		Avalanche\dimsep % (14)
+		{\bfseries DARQ}\dimsep % (08)
+		Distributed SPARQL\dimsep % (08)
+		{\bfseries FedX}\dimsep % (11)
+		GDS\dimsep % (11)
+		{\bfseries Jena}\dimsep
+		SemWIQ\dimsep % (08)
+		\sout{Sesame AliBaba}\dimsep
+		SPARQL-DQP\dimsep % (11)
+		{\bfseries SPLENDID}\dimsep % (11)
+		{\bfseries Virtuoso}\dimsep
+		WoDQA % (12)
+		&
+		catalog\dimsep
+		platform\dimsep
+		source selection\dimsep
+		cache\dimsep
+		query execution (join types)\dimsep
+		source tracking\dimsep
+		GUI
+		\\
+		
+		% === rakhmawati2013holistic ===
+		An holistic evaluation of federated SPARQL query engine~\cite{rakhmawati2013holistic} &
+		ISICO & % Proc. (system evaluation)
+		2013 &
+		2
+		&
+		{\bfseries DARQ}\dimsep % (08)
+		{\bfseries FedX}\dimsep % (11)
+		{\bfseries SPLENDID} % (11)
+		&
+		response time\dimsep
+		amount of data sent/received\dimsep
+		size of intermediate results\dimsep
+		\#\,requests\dimsep
+		\#\,ASK requests\dimsep
+		\#\,sources selected\dimsep
+		avg. size of intermediate results\dimsep
+		max rows retrieved\dimsep
+		requests workload\dimsep
+		avg.\ data received
+		\\
+		
+		% % === DBLP:conf/semweb/SaleemNPDH13 ===
+		% DAW: Duplicate-aware federated query processing over the Web of Data~\cite{DBLP:conf/semweb/SaleemNPDH13} &
+		% ISWC & % Proc. (system evaluation)
+		% 2013 &
+		% 95
+		% &
+		% {\bfseries DARQ}\dimsep % (08)
+		% {\bfseries FedX}\dimsep % (11)
+		% {\bfseries SPLENDID} % (11)
+		% &
+		% avg.\ \# triple pattern-wise sources skipped\dimsep
+		% avg.\ recall\dimsep
+		% avg.\ query execution time
+		% \\
+		
+		% === DBLP:conf/iiwas/RakhmawatiSLD14 ===
+		QFed: Query set for federated SPARQL query benchmark~\cite{DBLP:conf/iiwas/RakhmawatiSLD14} &
+		iiWAS & % Proc. (system evaluation)
+		2014 &
+		13
+		&
+		{\bfseries FedX}\dimsep % (11)
+		{\bfseries Jena}
+		&
+		data transmission\dimsep
+		run time
+		\\
+		
+		% === DBLP:conf/webist/RakhmawatiKHD14 ===
+		On metrics for measuring fragmentation of federation over SPARQL Endpoints~\cite{DBLP:conf/webist/RakhmawatiKHD14} &
+		WEBIST & % Proc. (system evaluation)
+		2014 &
+		7
+		&
+		{\bfseries DARQ}\dimsep % (08)
+		{\bfseries SPLENDID} % (11)
+		&
+		data transfer\dimsep
+		requests workload
+		\\
+		
+		% === DBLP:phd/dnb/Gorlitz15 ===
+		% Mediator SAIL(Stuckenschmidt et a), QTree (Data Summaries)
+		Distributed query processing for federated RDF data \cite{DBLP:phd/dnb/Gorlitz15} &
+		PhD thesis Univ.\ Koblenz-Landau &
+		2015 &
+		3
+		&
+		ANAPSID\dimsep % (11)
+		Avalanche\dimsep % (14)
+		{\bfseries DARQ}\dimsep % (08)
+		FeDeRate\dimsep % (09)
+		{\bfseries FedX}\dimsep
+		Mediator SAIL\dimsep % (05)
+		Min-Tree BGP\dimsep % (11)
+		MisMed\dimsep % (12)
+		Networked Graphs\dimsep % (08)
+		Prasser at al.\dimsep % (12)
+		QTree\dimsep % (10)
+		SemWIQ\dimsep % (08)
+		SPARQL-DQP\dimsep % (11)
+		{\bfseries SPLENDID} % (11)
+		&
+		catalog\dimsep
+		source selection\dimsep
+		query optimization (heuristics or cost-based)\dimsep
+		query execution (join types)
+		% remarks
+		\\
+		
+		% === Survey-FederatedLD ===
+		Federated query processing on Linked Data: A qualitative survey and open challenges~\cite{Survey-FederatedLD} &
+		Knowl. Eng. Rev. &
+		2015 &
+		32
+		&
+		ADERIS\dimsep % (11)
+		ANAPSID\dimsep % (11)
+		{\bfseries DARQ}\dimsep % (08)
+		{\bfseries FedX}\dimsep % (11)
+		LHD\dimsep % (13)
+		{\bfseries SPLENDID}\dimsep % (11)
+		WoDQA % (12)
+		&
+		data source selection\dimsep
+		join methods\dimsep
+		query optimization
+		\\
+	
+		% === Survey-FederateFineGrainedEvaluation ===
+		% https://docs.google.com/forms/d/1J5r_VOxDdTPhgxDnPsKJw8hjpXE4dj2gGGujco-xoLM/viewanalytics
+		% actual questionnaire survey
+		% 14 systems particiapted in the interview
+		A fine-grained evaluation of SPARQL endpoint federation systems~\cite{Survey-FederateFineGrainedEvaluation}
+		\par\smallskip
+		\emph{also available as PhD thesis chapter~\cite{DBLP:phd/dnb/Saleem18,hasnain2017cataloguing}}
+		&
+	    Semantic Web &
+		2016 &
+		125
+		&
+	    ADERIS\marker\dimsep % (11)
+	    ANAPSID\marker\dimsep % (11)
+	    Atlas\dimsep % (10)
+	    Avalanche\dimsep % (14)
+	    {\bfseries DARQ}\marker\dimsep % (08)
+	    DAW\dimsep % (13)
+	    FedSearch\dimsep % (13)
+	    {\bfseries FedX}\marker\dimsep % (11)
+	    GRANATUM\dimsep % (12)
+	    LDQPS\dimsep % (10)
+	    LHD\marker\dimsep % (13) 
+	    SIHJoin\dimsep % (11)
+	    {\bfseries SPLENDID}\marker\dimsep % (11)
+	    WoDQA\dimsep % (12)
+	    &
+		category\dimsep
+		code availability\dimsep
+		implementation language\dimsep
+		license\dimsep
+		source selection type\dimsep
+		join type\dimsep
+		cache\dimsep
+		index/catalog update\dimsep
+		system's features (results completeness and duplicate detection)\dimsep
+		supported SPARQL constructors
+		\#\,sources selected\marker\dimsep
+		\#\,ASK requests\marker\dimsep
+		result completeness\marker\dimsep
+		source selection time\marker\dimsep
+		query execution time\marker\dimsep
+		overall performance\marker\dimsep
+		effect of data partitioning\marker
+		\\
+	
+		% === DBLP:phd/dnb/Saleem18 ===
+		%Efficient source selection for SPARQL endpoint query federation~\cite{DBLP:phd/dnb/Saleem18} &
+		%PhD thesis Univ.\ Leipzig &
+		%2016 &
+		%2
+		%& 
+		%\emph{same as \cite{Survey-FederateFineGrainedEvaluation}}
+		%&
+		%\emph{same as \cite{Survey-FederateFineGrainedEvaluation}}
+		%\\
+		
+		% === hasnain2017cataloguing ===
+		%Cataloguing and linking publicly available biomedical SPARQL endpoints for federation - addressing aPosteriori data integration~\cite{hasnain2017cataloguing} &
+		%PhD thesis NUI Galway &
+		%2017 &
+		%3
+		%& 
+		%\emph{same as \cite{Survey-FederateFineGrainedEvaluation}}
+		%&
+		%\emph{same as \cite{Survey-FederateFineGrainedEvaluation}}
+		%\\ 
+	
+		% === LargeRDFBench ===	
+		LargeRDFBench: A billion triples benchmark for SPARQL endpoint federation~\cite{LargeRDFBench} &
+		J. Web Semant. &
+		2018 &
+		57
+		&
+		ANAPSID\dimsep % (11)
+		{\bfseries FedX}\dimsep % (11)
+		{\bfseries HiBISCuS}\dimsep % (14)
+		{\bfseries SPLENDID} % (11)
+		&
+		source selection\dimsep
+		result set completeness and correctness\dimsep
+		query execution time
+		\\
+		
+		% === DBLP:conf/semweb/Hasnain0NR18 ===
+		Extending LargeRDFBench for multi-source data at scale for SPARQL endpoint federation~\cite{DBLP:conf/semweb/Hasnain0NR18} &
+		SSWS @ ISWC &
+		2018 &
+		4
+		&
+		ANAPSID\dimsep % (11)
+		{\bfseries CostFed}\dimsep % (18)
+		{\bfseries FedX}\dimsep % (11)
+		{\bfseries HiBISCuS}\dimsep % (14)
+		{\bfseries SemaGrow}\dimsep % (14)
+		{\bfseries SPLENDID} % (11)
+		&
+		\# source selection (TPWSS)\dimsep
+		\# ASK requests\dimsep
+		source selection time\dimsep
+		runtime
+		\\
+		
+		% === Survey-QPHeterogeneousData ===
+		Enabling query processing across heterogeneous data models: A survey~\cite{Survey-QPHeterogeneousData} &
+		BigData &
+		2017 &
+		101
+		&
+		{\bfseries Apache Drill}\dimsep
+		{\bfseries BigDAWG}\dimsep % (16)
+		{\bfseries CloudMdsQL}\dimsep % (16)
+		{\bfseries Myria} % (17)
+		&
+		heterogeneity\dimsep
+		autonomy\dimsep
+		transparency\dimsep
+		flexibility\dimsep
+		optimality
+		\\
+		
+		% === rakhmawati2017evaluating ===
+		%Evaluating and benchmarking the performance of federated SPARQL endpoints and their partitioning using selected metrics and specific query types~\cite{rakhmawati2017evaluating} &
+		%PhD thesis NUI Galway &
+		%2017 &
+		%1
+		%&
+		%\emph{same as \cite{Survey-FederateComparisonSPARQL}}
+		%&
+		%\emph{same as \cite{Survey-FederateComparisonSPARQL}}
+		%\\
+	
+		% === Survey-FederateEmpiricalEvaluationCostBased ===
+		An empirical evaluation of cost-based federated SPARQL query processing Engines~\cite{Survey-FederateEmpiricalEvaluationCostBased} &
+		Semantic Web &
+		2019 &
+		1
+		&
+		ANAPSID\dimsep % (11)
+		BioFed\dimsep % (18)
+		{\bfseries CostFed}\marker\dimsep % (18)
+		{\bfseries DARQ}\dimsep % (08)
+		{\bfseries FedX}\dimsep % (11)
+		LHD\marker\dimsep % (14)
+		Lusail\dimsep % (17)
+		MULDER\dimsep % (18)
+		{\bfseries Odyssey}\marker\dimsep % (17)
+		{\bfseries SemaGrow}\marker\dimsep % (14)
+		{\bfseries SPLENDID}\marker % (11)
+		&
+		index\dimsep
+		query processing\dimsep
+		network (i.e., \# transferred tuples)\dimsep
+		result set\dimsep
+		resources\dimsep
+		errors/q-error of triple patterns\marker\dimsep
+		errors/q-error of joins between triple patterns\marker\dimsep
+		errors/q-error of overall query plans\marker\dimsep
+		overall query runtime\marker\dimsep
+		\#\,tuples transferred\marker\dimsep
+		source selection metrics\marker\dimsep
+		quality of generated plans\marker
+		\\
+		
+		% === Survey-LargeScaleSILinkedData ===
+		Large scale semantic integration of Linked Data: A survey~\cite{Survey-LargeScaleSILinkedData} &
+		ACM Comput. Surv. &
+		2019 &
+		54
+		&
+		ANAPSID\dimsep % (11)
+		{\bfseries DARQ}\dimsep % (08)
+		DAW\dimsep % (13)
+		{\bfseries FedX}\dimsep % (11)
+		{\bfseries HiBISCuS}\dimsep % (14)
+		MULDER\dimsep % (17)
+		{\bfseries SPLENDID} % (11)
+		&
+		data set types\dimsep
+		output types\dimsep
+		transformations\dimsep
+		schema matching\dimsep
+		instance matching\dimsep
+		provenance levels\dimsep
+		quality\dimsep
+		evolution\dimsep
+		tested data sets and scalability
+		\\
+		
+		% === DBLP:phd/dnb/Endris20 ===
+		Federated query processing over heterogeneous data sources in a semantic data lake~\cite{DBLP:phd/dnb/Endris20} &
+		PhD thesis Univ. Bonn &
+		2020 &
+		3
+		&
+		ANAPSID\dimsep % (11)
+		Avalance\dimsep % (14)
+		{\bfseries DARQ}\dimsep % (08)
+		DAW\dimsep % (13)
+		{\bfseries FEDRA}\dimsep % (15)
+		{\bfseries FedX}\dimsep % (11)
+		{\bfseries HiBISCuS}\dimsep % (14)
+		Lusail\dimsep % (17)
+		{\bfseries Odyssey}\dimsep % (17)
+		{\bfseries SAFE}\dimsep % (17)
+		{\bfseries Semagrow}\dimsep % (14)
+		{\bfseries SPLENDID} % (11)
+		&
+		catalog\dimsep
+		ASK-based source selection\dimsep
+		privacy awareness
+		\\
+		
+		% === Survey-ModernFDS ===
+		Modern federated database systems: An overview~\cite{Survey-ModernFDS} &
+		ICEIS & % Proc.
+		2020 &
+		3
+		&
+	    {\bfseries Apache Drill}\dimsep
+	    {\bfseries BigDAWG}\dimsep % (16)
+	    {\bfseries CloudMdsQL}\dimsep % (16)
+	    {\bfseries Myria} % (17)
+	    &
+		definition\dimsep
+		owner\dimsep
+		goal\dimsep
+		internal data representation and platform for data operations\dimsep
+		context segregation\dimsep
+		query specification and execution\dimsep
+		heterogeneity\dimsep
+		main components\dimsep
+		demonstration
+		\\
+		
+		% === DBLP:phd/dnb/Valdestilhas21 ===
+		Identifying, relating, consisting and querying large heterogeneous RDF sources~\cite{DBLP:phd/dnb/Valdestilhas21} &
+		PhD thesis Univ. Leipzig &
+		2021 &
+		--
+		&
+		ADERIS\dimsep % (11)
+		ANAPSID\dimsep % (11)
+		{\bfseries Comunica}\dimsep % (18)
+		{\bfseries CostFed}\dimsep % (18)
+		{\bfseries DARQ}\dimsep % (08)
+		DAW\dimsep % (13)
+		{\bfseries FEDRA}\dimsep % (15)
+		{\bfseries FedX}\dimsep % (11)
+		LDQPS\dimsep % (10)
+		Lusail\dimsep % (17)
+		MULDER\dimsep % (18)
+		{\bfseries Odissey}\dimsep % (17)
+		{\bfseries SaGe}\dimsep % (18)
+		{\bfseries SemaGrow}\dimsep % (15)
+		SIHJoin\dimsep % (11)
+		SOUIN\dimsep % (13)
+		{\bfseries SPLENDID}\dimsep % (11)
+		TPF Client\dimsep % (16)
+		WimuQ\dimsep % (19)
+		WoDQA % (12)
+		&
+		SPARQL query federation\dimsep
+		link traversal based SPARQL federation\dimsep
+		dataset identification\dimsep
+		source selection\dimsep
+		duplicate awareness
+		\\
+		
+	    \hhline{|-||-||-||-||-||-|}
+
+		%%missing, not free
+		%Efficient source selection and benchmarking for SPARQL endpoint query federation,
+	\end{mytabular}
+\end{table*}
+
