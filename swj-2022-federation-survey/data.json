@@ -1,0 +1,3766 @@
+{
+	"Sources": {
+		"ADONET": {
+			"Name": "ADO.NET",
+			"Website": "https://en.wikipedia.org/wiki/ADO.NET",
+			"Type": "relational"
+		},
+		"JDBC": {
+			"Name": "JDBC",
+			"Website": "https://en.wikipedia.org/wiki/Java_Database_Connectivity",
+			"Type": "relational"
+		},
+		"ODBC": {
+			"Name": "ODBC",
+			"Website": "https://en.wikipedia.org/wiki/Open_Database_Connectivity",
+			"Type": "relational"
+		},
+		"OLEDB": {
+			"Name": "OLE DB",
+			"Website": "https://en.wikipedia.org/wiki/OLE_DB",
+			"Type": "relational"
+		},
+		"Derby": {
+			"Name": "Derby",
+			"Website": "https://en.wikipedia.org/wiki/Apache_derby",
+			"Type": "relational"
+		},
+		"HSQLDB": {
+			"Name": "HSQLDB",
+			"Website": "https://en.wikipedia.org/wiki/HSQLDB",
+			"Type": "relational"
+		},
+		"Htwo": {
+			"Name": "H2",
+			"Website": "https://en.wikipedia.org/wiki/H2_(DBMS)",
+			"Type": "relational"
+		},
+		"MariaDB": {
+			"Name": "MariaDB",
+			"Website": "https://en.wikipedia.org/wiki/MariaDB",
+			"Type": "relational"
+		},
+		"MySQL": {
+			"Name": "MySQL",
+			"Website": "https://en.wikipedia.org/wiki/MySQL",
+			"Type": "relational"
+		},
+		"PostgreSQL": {
+			"Name": "PostgreSQL",
+			"Website": "https://en.wikipedia.org/wiki/PostgreSQL",
+			"Type": "relational"
+		},
+		"ActianMatrix": {
+			"Name": "Actian Matrix",
+			"Website": "http://www.odbms.org/wp-content/uploads/2014/08/WP03-ActianMatrix-0414.pdf",
+			"Type": "relational",
+			"Comment": "formerly ParAccel (PaDB), now discontinued, massively parallel columnar RDBMS for analytic workloads"
+		},
+		"ActianVector": {
+			"Name": "Actian Vector",
+			"Website": "https://en.wikipedia.org/wiki/Vectorwise",
+			"Type": "relational",
+			"Comment": "High-performance vectorized columnar analytics database with JDBC driver"
+		},
+		"DatacomDB": {
+			"Name": "Datacom/DB",
+			"Website": "https://en.wikipedia.org/wiki/DATACOM/DB",
+			"Type": "relational",
+			"Comment": "RDBMS for mainframes with JDBC driver (legacy system)"
+		},
+		"DBase": {
+			"Name": "dBASE",
+			"Website": "https://en.wikipedia.org/wiki/DBase",
+			"Type": "relational",
+			"Comment": "old RDBMS introduced for DOS and personal pc"
+		},
+		"Firebird": {
+			"Name": "Firebird",
+			"Website": "https://en.wikipedia.org/wiki/Firebird_(database_server)",
+			"Type": "relational"
+		},
+		"IBMDBtwo": {
+			"Name": "IBM DB2",
+			"Website": "https://en.wikipedia.org/wiki/IBM_Db2_Family",
+			"Type": "relational"
+		},
+		"IBMInformix": {
+			"Name": "IBM Informix",
+			"Website": "https://en.wikipedia.org/wiki/IBM_Informix",
+			"Type": "relational"
+		},
+		"Ingres": {
+			"Name": "Ingres",
+			"Website": "https://en.wikipedia.org/wiki/Ingres_(database)",
+			"Type": "relational"
+		},
+		"MicrosoftAccess": {
+			"Name": "MS Access",
+			"Website": "https://en.wikipedia.org/wiki/Microsoft_Access",
+			"Type": "relational"
+		},
+		"MicrosoftSQLServer": {
+			"Name": "MS SQL Server",
+			"Website": "https://en.wikipedia.org/wiki/Microsoft_SQL_Server",
+			"Type": "relational",
+			"Dfs": true
+		},
+		"OracleDB": {
+			"Name": "Oracle DB",
+			"Website": "https://en.wikipedia.org/wiki/Oracle_Database",
+			"Type": "relational",
+			"Dfs": true
+		},
+		"OracleTimesTen": {
+			"Name": "Oracle TimesTen",
+			"Website": "https://en.wikipedia.org/wiki/TimesTen",
+			"Type": "relational",
+			"Comment": "in-memory RDBMS with persistence & high availability with JDBC/ODBC drivers"
+		},
+		"Paradox": {
+			"Name": "Paradox",
+			"Website": "https://en.wikipedia.org/wiki/Paradox_(database)",
+			"Type": "relational"
+		},
+		"ProgressOpenEdgeRDBMS": {
+			"Name": "Progress OpenEdge RDBMS",
+			"Website": "https://en.wikipedia.org/wiki/OpenEdge_Advanced_Business_Language",
+			"Type": "relational"
+		},
+		"SAPASE": {
+			"Name": "SAP ASE",
+			"Website": "https://en.wikipedia.org/wiki/Adaptive_Server_Enterprise",
+			"Type": "relational"
+		},
+		"SAPHANA": {
+			"Name": "SAP HANA",
+			"Website": "https://en.wikipedia.org/wiki/SAP_HANA",
+			"Type": "relational",
+			"Dfs": true
+		},
+		"SAPMaxDB": {
+			"Name": "SAP MaxDB",
+			"Website": "https://en.wikipedia.org/wiki/MaxDB",
+			"Type": "relational",
+			"Comment": "RDBMS used with SAP applications, also separately available in closed source form"
+		},
+		"SASScalablePerformanceDataServer": {
+			"Name": "SAS Scalable Performance Data Server",
+			"Website": "https://documentation.sas.com/doc/en/pgmsascdc/v_022/spdsug/titlepage.htm",
+			"Type": "relational",
+			"Comment": "SAS server providing parallel access and computation on large datasets, using a relational model and accessible via JDBC"
+		},
+		"Vertica": {
+			"Name": "Vertica",
+			"Website": "https://en.wikipedia.org/wiki/Vertica",
+			"Type": "relational",
+			"Comment": "column-store MPP RDBMS with ODBC, JDBC, ADO.NET, and OLE DB interfaces"
+		},
+		"ClickHouse": {
+			"Name": "ClickHouse",
+			"Website": "https://en.wikipedia.org/wiki/ClickHouse",
+			"Type": "relational",
+			"Comment": "OS column-oriented C++ distributed OLAP store (not on Hadoop) powering Yandex, with JDBC driver"
+		},
+		"Druid": {
+			"Name": "Druid",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Druid",
+			"Type": "relational",
+			"Comment": "OS column-oriented Java distributed OLAP store on Hadoop, suitable to time series and event data"
+		},
+		"Greenplum": {
+			"Name": "Greenplum",
+			"Website": "https://en.wikipedia.org/wiki/Greenplum",
+			"Type": "relational",
+			"Comment": "open-source analytic RDBMS built on PostgreSQL (Pivotal Greenplum Database)"
+		},
+		"Iceberg": {
+			"Name": "Iceberg",
+			"Website": "https://iceberg.apache.org/",
+			"Type": "relational",
+			"Comment": "open-source table format specification, relying on a catalog that may be implemented using HIVE Metadata Store (or a RDBMS) and providing a Java library for manipulating tables; addresses issues of HIVE - not exactly a store but provides the basis of a store"
+		},
+		"Kudu": {
+			"Name": "Kudu",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Kudu",
+			"Type": "relational",
+			"Comment": "OS column-oriented Java RDBMS on Hadoop accessible via JDBC using Impala"
+		},
+		"Pinot": {
+			"Name": "Pinot",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Pinot",
+			"Type": "relational",
+			"Comment": "OS column-oriented Java distributed OLAP store on Hadoop, with JDBC driver"
+		},
+		"AlibabaAnalyticDBforMySQL": {
+			"Name": "Alibaba AnalyticDB for MySQL",
+			"Website": "https://www.alibabacloud.com/product/analyticdb-for-mysql",
+			"Type": "relational",
+			"Comment": "relational cloud and SQL-based data warehouse solution compatible with MySQL client protocol"
+		},
+		"AlibabaDataLakeAnalytics": {
+			"Name": "Alibaba Data Lake Analytics",
+			"Website": "https://www.alibabacloud.com/product/data-lake-analytics",
+			"Type": "relational",
+			"Comment": "cloud-based analytics service integrated in Alibaba Cloud offer using SQL language and Presto or SPARK as query engines"
+		},
+		"AmazonAurora": {
+			"Name": "Amazon Aurora",
+			"Website": "https://en.wikipedia.org/wiki/Amazon_Aurora",
+			"Type": "relational",
+			"Comment": "cloud RDBMS and document store, compatible with MySQL and PostgreSQL"
+		},
+		"AmazonRedshift": {
+			"Name": "Amazon Redshift",
+			"Website": "https://en.wikipedia.org/wiki/Amazon_Redshift",
+			"Type": "relational",
+			"Comment": "large scale data warehouse service for use with business intelligence tools"
+		},
+		"Databricks": {
+			"Name": "Databricks",
+			"Website": "https://docs.databricks.com/getting-started/introduction/index.html",
+			"Type": "relational",
+			"Comment": "cloud-based data lake platform from the creators of Spark, accessible via JDBC"
+		},
+		"Exasol": {
+			"Name": "Exasol",
+			"Website": "https://en.wikipedia.org/wiki/Exasol",
+			"Type": "relational",
+			"Comment": "clustered in-memory column-oriented RDBMS"
+		},
+		"GoogleBigQuery": {
+			"Name": "Google BigQuery",
+			"Website": "https://en.wikipedia.org/wiki/BigQuery",
+			"Type": "relational"
+		},
+		"IBMDBtwoWarehouse": {
+			"Name": "IBM Db2 Warehouse",
+			"Website": "https://en.wikipedia.org/wiki/IBM_Db2_Family#Db2_Warehouse",
+			"Type": "relational",
+			"Comment": "relational data warehouse available also on cloud"
+		},
+		"MicrosoftAzureSQLDatabase": {
+			"Name": "MS Azure SQL Database",
+			"Website": "https://en.wikipedia.org/wiki/Microsoft_Azure_SQL_Database",
+			"Type": "relational"
+		},
+		"MicrosoftSynapseAnalytics": {
+			"Name": "MS Azure Synapse Analytics",
+			"Website": "https://azure.microsoft.com/en-us/services/synapse-analytics/",
+			"Type": "relational",
+			"Comment": "a.k.a. SQL Data Warehouse"
+		},
+		"SAPIQ": {
+			"Name": "SAP IQ",
+			"Website": "https://en.wikipedia.org/wiki/SAP_IQ",
+			"Type": "relational"
+		},
+		"SingleStore": {
+			"Name": "SingleStore",
+			"Website": "https://en.wikipedia.org/wiki/SingleStore",
+			"Type": "relational"
+		},
+		"Snowflake": {
+			"Name": "Snowflake",
+			"Website": "https://en.wikipedia.org/wiki/Snowflake_Inc.",
+			"Type": "relational",
+			"Comment": "cloud-based relational data warehouse with JDBC driver"
+		},
+		"Teradata": {
+			"Name": "Teradata",
+			"Website": "https://www.teradata.com/Vantage",
+			"Type": "relational",
+			"Comment": "hybrid cloud data analytics software platform, primarily relational + document/graph/spatial/time series"
+		},
+		"TeradataAster": {
+			"Name": "Teradata Aster",
+			"Website": "https://assets.teradata.com/resourceCenter/downloads/Brochures/Teradata_Aster_Discovery_Platform_EB7573.pdf",
+			"Type": "relational",
+			"Comment": "discontinued big data for relational data (graph data support claimed too) and different query engines, including one using MapReduce"
+		},
+		"TibcoComputeDB": {
+			"Name": "Tibco ComputeDB",
+			"Website": "https://community.tibco.com/products/tibco-computedb",
+			"Type": "relational",
+			"Comment": "distributed in-memory RDBMS for real-time operational analytics based on Apache Spark, with JDBC driver"
+		},
+		"Drill": {
+			"Name": "Drill",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Drill",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "schema-free SQL query engine for Hadoop, NoSQL and cloud storage, RDBMS / document-store"
+		},
+		"Hive": {
+			"Name": "Hive",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Hive",
+			"Type": "relational",
+			"Comment": "SQL on Hadopp, Java SQL engine suited to complex batch queries, memory+disk processing via MapReduce, Flink or Tez runtimes, with UDF, using Calcite, with JDBC driver"
+		},
+		"Impala": {
+			"Name": "Impala",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Impala",
+			"Type": "relational",
+			"Comment": "SQL on Hadoop, C++/LLVM SQL engine suited for fast interactive queries, in-memory only, no UDF, with JDBC driver"
+		},
+		"JBossDataVirtualization": {
+			"Name": "JBoss Data Virtualization",
+			"Website": "https://access.redhat.com/products/red-hat-jboss-data-virtualization",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "a relational DFS of this survey, formerly JBoss Enterprise Data Services Platform"
+		},
+		"Presto": {
+			"Name": "Presto",
+			"Website": "https://prestodb.io/",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "Distributed query engine for big data with a relational model and JDBC driver - Facebook / Linux Foundation"
+		},
+		"SparkSQL": {
+			"Name": "Spark",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Spark#Spark_SQL",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "Spark component for managing and querying structured data, via DSL and SQL, with JDBC/ODBC drivers"
+		},
+		"Teiid": {
+			"Name": "Teiid",
+			"Website": "https://teiid.io/",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "a system of this survey, presenting a relational interface"
+		},
+		"Trino": {
+			"Name": "Trino",
+			"Website": "https://trino.io/",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "Distributed query engine for big data with a relational model and JDBC driver - fork by original authors, commercially exploited by Starburst"
+		},
+		"AmazonAthena": {
+			"Name": "Amazon Athena",
+			"Website": "https://aws.amazon.com/athena/?nc=sn&loc=0",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "interactive query service (Presto ANSI SQL support) for data on S3, integrated with Amazon Glue and coming with JDBC driver"
+		},
+		"DataVirtuality": {
+			"Name": "Data Virtuality",
+			"Website": "https://datavirtuality.com/en/",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "data federation system of this survey, SQL based and likely accessed via its JDBC driver"
+		},
+		"Denodo": {
+			"Name": "Denodo",
+			"Website": "https://www.denodo.com/en/denodo-platform/denodo-platform-80",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "Denodo Virtual DataPort, a system of this survey"
+		},
+		"IBMDbtwoBigSQL": {
+			"Name": "IBM Db2 Big SQL",
+			"Website": "https://www.ibm.com/products/db2-big-sql",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "ANSI-compliant SQL-on-Hadoop engine, included as data federation system in this survey -- DFS SYSTEM"
+		},
+		"IBMDVM": {
+			"Name": "IBM DVM",
+			"Website": "https://www.ibm.com/products/data-virtualization-manager-for-zos",
+			"Type": "relational",
+			"Comment": "IBM Data Virtualization Manager for z/OS - provides virtual, integrated views of data on IBM Z"
+		},
+		"MetaMatrix": {
+			"Name": "MetaMatrix",
+			"Website": "https://en.wikipedia.org/wiki/MetaMatrix",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "commercial legacy relational system later acquired by Red Hat and evolved into Teiid"
+		},
+		"SASFederationServer": {
+			"Name": "SAS Federation Server",
+			"Website": "https://www.sas.com/en_us/software/federation-server.html",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "a system of this survey, presenting a relational interface"
+		},
+		"Starburst": {
+			"Name": "Starburst",
+			"Website": "https://www.starburst.io/",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "DFS of this survey"
+		},
+		"TibcoDataVirtualization": {
+			"Name": "TibcoDataVirtualization",
+			"Website": "https://www.tibco.com/products/data-virtualization",
+			"Type": "relational",
+			"Dfs": true,
+			"Comment": "a system of this survey, presenting a relational interface"
+		},
+		"HPNeoview": {
+			"Name": "HP Neoview",
+			"Website": "https://en.wikipedia.org/wiki/HP_Neoview",
+			"Type": "relational",
+			"SubTypes": ["appliance"],
+			"Comment": "data warehouse HW+SW solution providing RDBMS capabilities and SQL interface, dismissed in 2011"
+		},
+		"IBMIntegratedAnalyticsSystem": {
+			"Name": "IBM Integrated Analytics System",
+			"Website": "https://www.ibm.com/docs/en/ias",
+			"Type": "relational",
+			"SubTypes": ["appliance"],
+			"Comment": "HW+SW solution providing RDBMS capabilities, replacement of Netezza"
+		},
+		"IBMNetezza": {
+			"Name": "IBM Netezza",
+			"Website": "https://en.wikipedia.org/wiki/Netezza",
+			"Type": "relational",
+			"SubTypes": ["appliance"],
+			"Comment": "data warehouse RDBMS and analytics appliance by IBM with ODBC, JDBC, OLE DB interfaces"
+		},
+		"IBMPureData": {
+			"Name": "IBM PureData",
+			"Website": "https://en.wikipedia.org/wiki/PureSystems#PureData",
+			"Type": "relational",
+			"SubTypes": ["appliance"],
+			"Comment": "HW+SW solutions in different flavours providing OLTP/OLAP RDBMS capabilities"
+		},
+		"Yellowbrick": {
+			"Name": "Yellowbrick",
+			"Website": "https://en.wikipedia.org/wiki/Yellowbrick_Data",
+			"Type": "relational",
+			"SubTypes": ["appliance"],
+			"Comment": "data warehouse RDBMS with JDBC/ODBC/ADO.NET drivers supplied as cloud server / appliance"
+		},
+		"MDX": {
+			"Name": "MDX",
+			"Website": "https://en.wikipedia.org/wiki/MultiDimensional_eXpressions",
+			"Type": "relational",
+			"SubTypes": ["mdx"],
+			"Comment": "OLAP RDBMS accessed via Multidimensional Expressions (MDX) protocol & query language"
+		},
+		"MicrosoftAnalysisServices": {
+			"Name": "MS Analysis Service",
+			"Website": "https://docs.microsoft.com/en-us/analysis-services/",
+			"Type": "relational",
+			"SubTypes": ["mdx"],
+			"Comment": "OLAP server with MDX support, available on Azure or bundled with SQL Server"
+		},
+		"Mondrian": {
+			"Name": "Mondrian",
+			"Website": "https://en.wikipedia.org/wiki/Mondrian_OLAP_server",
+			"Type": "relational",
+			"SubTypes": ["mdx"],
+			"Comment": "OLAP server with MDX support"
+		},
+		"OracleEssbase": {
+			"Name": "Oracle Essbase",
+			"Website": "https://en.wikipedia.org/wiki/Essbase",
+			"Type": "relational",
+			"SubTypes": ["mdx"],
+			"Comment": "multidimensional OLAP RDBMS with JDBC/ODBC/ADO.NET drivers, formerly by Hyperion"
+		},
+		"SAPBusinessWarehouse": {
+			"Name": "SAP Business Warehouse",
+			"Website": "https://en.wikipedia.org/wiki/SAP_NetWeaver_Business_Warehouse",
+			"Type": "relational",
+			"SubTypes": ["mdx"],
+			"Comment": "a.k.a. Business Intelligence -- relational data warehouse intended for loading, transforming and storing data modelled into cubes for analysis purposes, also supporting MDX and at a certain point temporarily named SAP BI (Business Intelligence) - see https://www.createch.ca/blog/whats-the-difference-between-sap-bi-sap-bw-sap-bo"
+		},
+		"AllegroGraph": {
+			"Name": "AllegroGraph",
+			"Website": "https://en.wikipedia.org/wiki/AllegroGraph",
+			"Type": "graph-based",
+			"SubTypes": ["RDF triple store"],
+			"Dfs": true
+		},
+		"AmazonNeptune": {
+			"Name": "Amazon Neptune",
+			"Website": "https://en.wikipedia.org/wiki/Amazon_Neptune",
+			"Type": "graph-based",
+			"SubTypes": ["RDF triple store", "property graph"],
+			"Dfs": true
+		},
+		"GraphDB": {
+			"Name": "GraphDB",
+			"Website": "https://en.wikipedia.org/wiki/Ontotext_GraphDB",
+			"Type": "graph-based",
+			"SubTypes": ["RDF triple store"]
+		},
+		"JenaSource": {
+			"Name": "Jena API",
+			"Website": "https://jena.apache.org/documentation/javadoc/jena/org/apache/jena/rdf/model/package-summary.html",
+			"Type": "graph-based",
+			"Comment": "Jena Model-compliant"
+		},
+		"JenaTDB": {
+			"Name": "Jena TDB",
+			"Website": "https://jena.apache.org/documentation/tdb/",
+			"Type": "graph-based",
+			"SubTypes": ["RDF triple store"]
+		},
+		"Neoforj": {
+			"Name": "Neo4j",
+			"Website": "https://en.wikipedia.org/wiki/Neo4j",
+			"Type": "graph-based",
+			"SubTypes": ["property graph"],
+			"Dfs": true
+		},
+		"RDFforJSource": {
+			"Name": "RDF4J API",
+			"Website": "https://rdf4j.org/documentation/programming/repository/",
+			"Type": "graph-based",
+			"Comment": "RDF4J Repository-compliant"
+		},
+		"Sparksee": {
+			"Name": "Sparksee",
+			"Website": "https://en.wikipedia.org/wiki/Sparksee_(graph_database)",
+			"Type": "graph-based",
+			"SubTypes": ["property graph"]
+		},
+		"SPARQL": {
+			"Name": "SPARQLp",
+			"Website": "https://www.w3.org/TR/sparql11-protocol/",
+			"Type": "graph-based"
+		},
+		"TPF": {
+			"Name": "TPF",
+			"Website": "https://linkeddatafragments.org/specification/triple-pattern-fragments/",
+			"Type": "graph-based"
+		},
+		"Stardog": {
+			"Name": "Stardog",
+			"Website": "https://www.stardog.com/",
+			"Type": "graph-based",
+			"SubTypes": ["RDF triple store"],
+			"Dfs": true
+		},
+		"Virtuoso": {
+			"Name": "Virtuoso",
+			"Website": "https://en.wikipedia.org/wiki/Virtuoso_Universal_Server",
+			"Type": "graph-based",
+			"SubTypes": ["RDF triple store"],
+			"Dfs": true
+		},
+		"Infinispan": {
+			"Name": "Infinispan",
+			"Website": "https://en.wikipedia.org/wiki/Infinispan",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["key/value store"],
+			"Comment": "open source distributed cache and key-value NoSQL data store by Red Hat"
+		},
+		"OracleNoSQL": {
+			"Name": "Oracle NoSQL",
+			"Website": "https://en.wikipedia.org/wiki/Oracle_NoSQL_Database",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["key/value store"],
+			"Comment": "key-value store where values can be JSON or table rows, supporting distribution and secondary indexes"
+		},
+		"RedHatDataGrid": {
+			"Name": "Red Hat Data Grid",
+			"Website": "https://developers.redhat.com/products/datagrid/overview",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["key/value store"],
+			"Comment": "distributed caching solution, commercial version of Infinispan"
+		},
+		"Redis": {
+			"Name": "Redis",
+			"Website": "https://en.wikipedia.org/wiki/Redis",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["key/value store"],
+			"Comment": "distributed key-value store"
+		},
+		"Accumulo": {
+			"Name": "Accumulo",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Accumulo",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["wide column store"],
+			"Comment": "scalable sorted and distributed store based on Google Bigtable"
+		},
+		"AmazonSimpleDB": {
+			"Name": "Amazon SimpleDB",
+			"Website": "https://en.wikipedia.org/wiki/Amazon_SimpleDB",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["key/value store", "wide column store"],
+			"Comment": "cloud-based key-value store, still available but being phased out in favor of DynamoDB -- NOTE: sometimes classified as key-value store (but can store/query item columns!) and compared to DynamoDB (which is now a document-store)"
+		},
+		"Cassandra": {
+			"Name": "Cassandra",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Cassandra",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["wide column store"],
+			"Comment": "wide-column store based on ideas of BigTable and DynamoDB"
+		},
+		"DataStax": {
+			"Name": "DataStax",
+			"Website": "https://en.wikipedia.org/wiki/DataStax",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["wide column store"],
+			"Comment": "store built on Apache Cassandra"
+		},
+		"HBase": {
+			"Name": "HBase",
+			"Website": "https://en.wikipedia.org/wiki/Apache_HBase",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["wide column store"],
+			"Comment": "wide-column store based on Apache Hadoop and on concepts of BigTable"
+		},
+		"MapRDB": {
+			"Name": "MapR-DB",
+			"Website": "https://mapr.com/products/mapr-db/",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["wide column store"],
+			"Comment": "proprietary wide-column store, apparently derived from HBase and now rebranded"
+		},
+		"AmazonDocumentDB": {
+			"Name": "Amazon DocumentDB",
+			"Website": "https://en.wikipedia.org/wiki/Amazon_DocumentDB",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["document store"]
+		},
+		"AmazonDynamoDB": {
+			"Name": "Amazon DynamoDB",
+			"Website": "https://en.wikipedia.org/wiki/Amazon_DynamoDB",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["document store"]
+		},
+		"Couchbase": {
+			"Name": "Couchbase",
+			"Website": "https://en.wikipedia.org/wiki/Couchbase_Server",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["document store"]
+		},
+		"CouchDB": {
+			"Name": "CouchDB",
+			"Website": "https://en.wikipedia.org/wiki/Apache_CouchDB",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["document store"]
+		},
+		"MarkLogic": {
+			"Name": "MarkLogic",
+			"Website": "https://en.wikipedia.org/wiki/MarkLogic_Server",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["document store"],
+			"Comment": "also a document store"
+		},
+		"MicrosoftAzureCosmosDB": {
+			"Name": "MS Azure Cosmos DB",
+			"Website": "https://en.wikipedia.org/wiki/Cosmos_DB",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["document store"],
+			"Comment": "multimodel, mainly document"
+		},
+		"MongoDB": {
+			"Name": "MongoDB",
+			"Website": "https://en.wikipedia.org/wiki/MongoDB",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["document store"]
+		},
+		"AmazonOpenSearch": {
+			"Name": "Amazon OpenSearch",
+			"Website": "https://aws.amazon.com/opensearch-service/",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["search engine"],
+			"Comment": "Elasticsearch on AWS, OpenSearch = Elasticsearch fork with ASLv2 license"
+		},
+		"Elasticsearch": {
+			"Name": "Elasticsearch",
+			"Website": "https://en.wikipedia.org/wiki/Elasticsearch",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["search engine"],
+			"Comment": "mainly a search engine"
+		},
+		"Solr": {
+			"Name": "Solr",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Solr",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["search engine"],
+			"Comment": "open source search engine indexing documents consisting of fields"
+		},
+		"Splunk": {
+			"Name": "Splunk",
+			"Website": "https://docs.splunk.com/Documentation/Splunk/",
+			"Type": "aggregate-oriented",
+			"SubTypes": ["search engine"],
+			"Comment": "indexing and search engine for event/log data, using inverted indexes and storing data as field-based documents"
+		},
+		"Avro": {
+			"Name": "Avro",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Avro",
+			"Type": "structured file",
+			"Comment": "open source RPC and data serialization framework"
+		},
+		"CommonLogFormat": {
+			"Name": "Common Log Format",
+			"Website": "https://en.wikipedia.org/wiki/Common_Log_Format",
+			"Type": "structured file",
+			"Comment": "log file format for Apache & other HTTP servers"
+		},
+		"CSV": {
+			"Name": "CSV",
+			"Website": "https://en.wikipedia.org/wiki/Comma-separated_values",
+			"Type": "structured file",
+			"Comment": "CSV/TSV/PSV (P = pipe)"
+		},
+		"ENVI": {
+			"Name": "ENVI",
+			"Website": "https://www.l3harrisgeospatial.com/docs/enviimagefiles.html",
+			"Type": "structured file",
+			"Comment": "binary format for multidimensional raster data"
+		},
+		"Excel": {
+			"Name": "Excel",
+			"Website": "https://en.wikipedia.org/wiki/Microsoft_Excel",
+			"Type": "structured file"
+		},
+		"ORC": {
+			"Name": "ORC",
+			"Website": "https://en.wikipedia.org/wiki/Apache_ORC",
+			"Type": "structured file"
+		},
+		"Parquet": {
+			"Name": "Parquet",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Parquet",
+			"Type": "structured file",
+			"Comment": "open source column-oriented data storage format for Hadoop"
+		},
+		"RCFile": {
+			"Name": "RCFile",
+			"Website": "https://en.wikipedia.org/wiki/RCFile",
+			"Type": "structured file",
+			"Comment": "file formats for tabular data that splits data by row groups first and then by columns (Record Columnar File)"
+		},
+		"SASBDAT": {
+			"Name": "SAS7BDAT",
+			"Website": "https://fileinfo.com/extension/sas7bdat",
+			"Type": "structured file",
+			"Comment": "database storage file created by SAS"
+		},
+		"SASXPT": {
+			"Name": "SAS XPT",
+			"Website": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000464.shtml",
+			"Type": "structured file",
+			"Comment": "SAS Transport File Format Family (XPORT, XPT)"
+		},
+		"SequenceFile": {
+			"Name": "SequenceFile",
+			"Website": "https://cwiki.apache.org/confluence/display/HADOOP2/SequenceFile",
+			"Type": "structured file",
+			"Comment": "flat file consisting of binary key/value pairs, used in Hadoop MapReduce"
+		},
+		"JSON": {
+			"Name": "JSON",
+			"Website": "https://en.wikipedia.org/wiki/JSON",
+			"Type": "structured file"
+		},
+		"XML": {
+			"Name": "XML",
+			"Website": "https://en.wikipedia.org/wiki/XML",
+			"Type": "structured file"
+		},
+		"RDF": {
+			"Name": "RDF",
+			"Website": "https://en.wikipedia.org/wiki/Resource_Description_Framework",
+			"Type": "structured file"
+		},
+		"AnyFile": {
+			"Name": "any file (content field + metadata)",
+			"Type": "structured file"
+		},
+		"MSGEML": {
+			"Name": "MSG/EML (email)",
+			"Website": "https://docs.querona.io/data-sources/data-services-files/csv-tsv-pdf-msg-txt.html#emailmessages",
+			"Type": "structured file",
+			"Comment": "single record with email fields"
+		},
+		"PDF": {
+			"Name": "PDF~(metadata)",
+			"Website": "https://docs.querona.io/data-sources/data-services-files/csv-tsv-pdf-msg-txt.html#pdfdocuments",
+			"Type": "structured file",
+			"Comment": "single record with metadata of a PDF file"
+		},
+		"OData": {
+			"Name": "OData",
+			"Website": "https://en.wikipedia.org/wiki/Open_Data_Protocol",
+			"Type": "web service paradigm",
+			"Comment": "HTTP/REST services complying to OData specification"
+		},
+		"OpenAPI": {
+			"Name": "OpenAPI",
+			"Website": "https://en.wikipedia.org/wiki/OpenAPI_Specification",
+			"Type": "web service paradigm",
+			"Comment": "HTTP/REST services compliant with OpenAPI specification"
+		},
+		"HTTPREST": {
+			"Name": "HTTP~/ REST",
+			"Website": "https://en.wikipedia.org/wiki/Representational_state_transfer",
+			"Type": "web service paradigm",
+			"Comment": "arbitrary HTTP-based web services using the REST paradigm, not compliant with OData or OpenAPI"
+		},
+		"SOAPWSDL": {
+			"Name": "SOAP~/ WSDL",
+			"Website": "https://en.wikipedia.org/wiki/Web_Services_Description_Language",
+			"Type": "web service paradigm",
+			"Comment": "arbitrary XML-based (SOAP), RPC-style web services defined via a WSDL specification"
+		},
+		"AmazonTimestream": {
+			"Name": "Amazon Timestream",
+			"Website": "https://aws.amazon.com/timestream/?nc=sn&loc=0",
+			"Type": "other",
+			"Comment": "time series database service for IoT & operational applications with JDBC support"
+		},
+		"Kdbplus": {
+			"Name": "Kdb+",
+			"Website": "https://en.wikipedia.org/wiki/Kdb%2B",
+			"Type": "other",
+			"Comment": "column-based, in-memory relational time series database with SQL like interface and JDBC driver"
+		},
+		"OpenTSDB": {
+			"Name": "OpenTSDB",
+			"Website": "http://opentsdb.net/",
+			"Type": "other",
+			"Comment": "open source time series DBMS based on HBase"
+		},
+		"Prometheus": {
+			"Name": "Prometheus",
+			"Website": "https://en.wikipedia.org/wiki/Prometheus_(software)",
+			"Type": "other",
+			"Comment": "open source time series DBMS & monitoring system for other software components"
+		},
+		"IBMDBtwoEventStore": {
+			"Name": "IBM Db2 Event Store",
+			"Website": "https://en.wikipedia.org/wiki/IBM_Db2_Family#Db2_Event_Store",
+			"Type": "other",
+			"Comment": "open source time series DBMS & monitoring system for other software components"
+		},
+		"SciDB": {
+			"Name": "SciDB",
+			"Website": "https://en.wikipedia.org/wiki/SciDB",
+			"Type": "other",
+			"Comment": "scalable & distributed DBMS with multi-dimensional array data model"
+		},
+		"InterSystemsCache": {
+			"Name": "InterSystems Caché",
+			"Website": "https://en.wikipedia.org/wiki/InterSystems_Cach%C3%A9",
+			"Type": "other",
+			"Comment": "multi-model DBMS, popular as OODMBS and also usable as RDBMS and key-value store"
+		},
+		"JPA": {
+			"Name": "JPA/JPQL sources",
+			"Website": "https://en.wikipedia.org/wiki/Jakarta_Persistence",
+			"Type": "other"
+		},
+		"Btrieve": {
+			"Name": "Btrieve",
+			"Website": "https://en.wikipedia.org/wiki/Btrieve",
+			"Type": "other",
+			"Comment": "navigational DBMS by Pervasive"
+		},
+		"IDMS": {
+			"Name": "IDMS",
+			"Website": "https://en.wikipedia.org/wiki/IDMS",
+			"Type": "other",
+			"Comment": "network model (CODASYL) DBMS for mainframes (legacy system)"
+		},
+		"IMS": {
+			"Name": "IMS",
+			"Website": "https://en.wikipedia.org/wiki/IBM_Information_Management_System",
+			"Type": "other",
+			"Comment": "hierarchical DBMS with transaction support"
+		},
+		"ModeShape": {
+			"Name": "ModeShape",
+			"Website": "https://modeshape.jboss.org/",
+			"Type": "other",
+			"Comment": "Open source JCR implementation, supporting a SQL-like language to query nodes in the repository"
+		},
+		"AmazonKinesis": {
+			"Name": "Amazon Kinesis",
+			"Website": "https://aws.amazon.com/kinesis/",
+			"Type": "other",
+			"Comment": "cloud service for real-time processing of big data streams"
+		},
+		"IBMMQ": {
+			"Name": "IBM MQ",
+			"Website": "https://en.wikipedia.org/wiki/IBM_MQ",
+			"Type": "other",
+			"Comment": "message-oriented middleware"
+		},
+		"Kafka": {
+			"Name": "Kafka",
+			"Website": "https://en.wikipedia.org/wiki/Apache_Kafka",
+			"Type": "other",
+			"Comment": "open source stream processing framework"
+		},
+		"SAPHANAStreamingAnalytics": {
+			"Name": "SAP HANA Streaming Analytics",
+			"Website": "https://help.sap.com/viewer/5a6dde9fb8be49e180c74f131fe24966/2.0.04/en-US/5cfc455da179443fa85090fcd5823411.html",
+			"Type": "other",
+			"Comment": "formerly SAP Event Stream Processor https://help.sap.com/viewer/product/SAP_EVENT_STREAM_PROCESSOR/5.1.12/en-US]{SAP HANA Streaming Analytics"
+		},
+		"LDAP": {
+			"Name": "LDAP",
+			"Website": "https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol",
+			"Type": "other"
+		},
+		"MicrosoftActiveDirectory": {
+			"Name": "MS Active Directory",
+			"Website": "https://en.wikipedia.org/wiki/Active_Directory",
+			"Type": "other"
+		},
+		"RedHatDirectoryServer": {
+			"Name": "Red Hat Directory Server",
+			"Website": "https://en.wikipedia.org/wiki/389_Directory_Server",
+			"Type": "other"
+		},
+		"IMAP": {
+			"Name": "IMAP",
+			"Website": "https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol",
+			"Type": "other"
+		},
+		"RSS": {
+			"Name": "RSS",
+			"Website": "https://en.wikipedia.org/wiki/RSS",
+			"Type": "other"
+		},
+		"AmazonAWSSystemsManagerInventory": {
+			"Name": "Amazon AWS System Manager Inventory",
+			"Website": "https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-inventory.html",
+			"Type": "other",
+			"SubTypes": ["specialized web API"],
+			"Comment": "cloud service collecting metadata of all resources used by an AWS customer"
+		},
+		"AmazonCloudWatch": {
+			"Name": "Amazon CloudWatch",
+			"Website": "https://en.wikipedia.org/wiki/Amazon_Elastic_Compute_Cloud#Amazon_CloudWatch",
+			"Type": "other",
+			"SubTypes": ["specialized web API"],
+			"Comment": "cloud service collecting logs and metrics from other machines/services"
+		},
+		"BioRS": {
+			"Name": "BioRS",
+			"Website": "https://www.biomax.com/lib/products/biors/Biomax_BioRS_Technical_Profile.pdf",
+			"Type": "other",
+			"Comment": "query & retrieval system for integrating biological and medical data by Biomax Informatics (dismissed or merged into other product)"
+		},
+		"DHLTrackAndTraceAPI": {
+			"Name": "DHL Track & Trace",
+			"Website": "https://developer.dhl.com/api-reference/shipment-tracking",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"Eloqua": {
+			"Name": "Eloqua",
+			"Website": "https://www.oracle.com/cx/marketing/automation/",
+			"Type": "other",
+			"SubTypes": ["specialized web API"],
+			"Comment": "SaaS platform for marketing automation for supporting marketing campaigns and sales lead generation, from Oracle"
+		},
+		"Facebook": {
+			"Name": "Facebook",
+			"Website": "https://developers.facebook.com/docs/graph-api/",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"GoogleAdsAPI": {
+			"Name": "Google Ads",
+			"Website": "https://developers.google.com/google-ads/api/",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"GoogleAnalyticsAPI": {
+			"Name": "Google Analytics",
+			"Website": "https://developers.google.com/analytics/",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"GoogleCalendarAPI": {
+			"Name": "Google Calendar",
+			"Website": "https://developers.google.com/calendar/api",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"GoogleContactsAPI": {
+			"Name": "Google Contacts",
+			"Website": "https://developers.google.com/contacts",
+			"Type": "other",
+			"SubTypes": ["specialized web API"],
+			"Comment": "now migrated to People API https://developers.google.com/people"
+		},
+		"GoogleSheetsAPI": {
+			"Name": "Google Sheets",
+			"Website": "https://developers.google.com/sheets/api",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"HubSpot": {
+			"Name": "HubSpot",
+			"Website": "https://en.wikipedia.org/wiki/HubSpot",
+			"Type": "other",
+			"SubTypes": ["specialized web API"],
+			"Comment": "software for CRM, inbound marketing, and sales"
+		},
+		"ITPilot": {
+			"Name": "ITPilot (website wrapper generator)",
+			"Website": "https://community.denodo.com/docs/html/browse/6.0/itpilot/user_guide/index",
+			"Type": "other"
+		},
+		"Jira": {
+			"Name": "Jira",
+			"Website": "https://en.wikipedia.org/wiki/Jira_(software)",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"Marketo": {
+			"Name": "Marketo",
+			"Website": "https://en.wikipedia.org/wiki/Marketo",
+			"Type": "other",
+			"SubTypes": ["specialized web API"],
+			"Comment": "marketing automation software"
+		},
+		"MicrosoftSharepoint": {
+			"Name": "MS Sharepoint",
+			"Website": "https://en.wikipedia.org/wiki/Excel_Services",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"MicrosoftSharepointExcelServices": {
+			"Name": "MS Sharepoint Excel Services",
+			"Website": "https://en.wikipedia.org/wiki/Excel_Services",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"Netsuite": {
+			"Name": "NetSuite",
+			"Website": "https://en.wikipedia.org/wiki/NetSuite",
+			"Type": "other",
+			"SubTypes": ["specialized web API"],
+			"Comment": "cloud business management suite comprising ERP/Financials, CRM and ecommerce, used by more than 28,000 customers, owned by Oracle"
+		},
+		"OSIsoftPI": {
+			"Name": "OSIsoft PI",
+			"Website": "https://en.wikipedia.org/wiki/OSIsoft",
+			"Type": "other",
+			"Comment": "suite of software products for capturing, processing, analyzing, and storing real-time data, focusing in industrial settings and with data exposed (also) via JDBC interface (assuming a fixed schema)"
+		},
+		"Salesforce": {
+			"Name": "Salesforce",
+			"Website": "https://www.salesforce.com/products/marketing-cloud/pricing/salesforce-cdp/",
+			"Type": "other",
+			"SubTypes": ["specialized web API"],
+			"Comment": "cloud data source with relational model and support for ODBC/JDBC ccess (Salesforce CDP - Customer Data Platform)"
+		},
+		"SAPBAPI": {
+			"Name": "SAP Business",
+			"Website": "https://en.wikipedia.org/wiki/Business_Application_Programming_Interface",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"SAPGatewayOData": {
+			"Name": "SAP Gateway OData",
+			"Website": "https://help.sap.com/doc/05d53b2d3bbb43d2ab5efa23829b2777/1610%20002/en-US/frameset.htm?ecaeea50ca692309e10000000a445394.html",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		},
+		"SAPRFC": {
+			"Name": "SAP RFC",
+			"Website": "https://support.sap.com/en/product/connectors/nwrfcsdk.html",
+			"Type": "other",
+			"SubTypes": ["specialized web API"],
+			"Comment": "Remote Function Call"
+		},
+		"Twitter": {
+			"Name": "Twitter",
+			"Website": "https://en.wikipedia.org/wiki/Twitter",
+			"Type": "other",
+			"SubTypes": ["specialized web API"]
+		}
+	},
+	"Systems": {
+		"AllegroGraph": {
+			"Name": "AllegroGraph",
+			"References": [ "AllegroGraph" ],
+			"Website": "https://allegrograph.com/products/allegrograph/",
+			"Provider": "Franz Inc.",
+			"Description": "Distributed graph & document DB supporting OWL, SPARQL, SHACL and federation",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasWebApi": true,
+			"HasSparqlEndpoint": true,
+			"DevelLangs": [ "Java", "Lisp" ],
+			"IsSupported": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"DeployIaasPaas": [ "AWS", "Azure" ],
+			"ReleaseFirstVersion": "6.4.0",
+			"ReleaseFirstYear": "2004",
+			"ReleaseLastVersion": "7.2.0",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL", "Prolog" ],
+			"Transparent": "Transparent, Explicit",
+			"SrcList": [
+				"AllegroGraph"
+			]
+		},
+		"Amazon Athena": {
+			"Name": "Amazon Athena",
+			"References": [ "AmazonAthenaFederation" ],
+			"Website": "https://aws.amazon.com/athena/",
+			"Provider": "Amazon.com, Inc.",
+			"Description": "Inter. cloud query service for Amazon S3 data, based on Presto",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasAuditing": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"DeploySaas": [ "AWS" ],
+			"ReleaseFirstYear": "2017",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"AmazonAWSSystemsManagerInventory",
+				"AmazonCloudWatch",
+				"AmazonDocumentDB",
+				"AmazonDynamoDB",
+				"AmazonNeptune",
+				"AmazonOpenSearch",
+				"AmazonRedshift",
+				"AmazonTimestream",
+				"CommonLogFormat",
+				"CSV",
+				"HBase",
+				"JSON",
+				"MySQL",
+				"ORC",
+				"Parquet",
+				"PostgreSQL",
+				"Redis",
+				"Vertica"
+			]
+		},
+		"Amazon Neptune": {
+			"Name": "Amazon Neptune",
+			"References": [ "AmazonNeptune" ],
+			"Website": "https://aws.amazon.com/neptune/",
+			"Provider": "Amazon.com, Inc.",
+			"Description": "Fully-managed cloud graph DB (property graph, RDF), part of Amazon AWS",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasAuditing": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"DeploySaas": [ "AWS" ],
+			"ReleaseFirstVersion": "1.0.1.0",
+			"ReleaseFirstYear": "2018",
+			"ReleaseLastVersion": "1.0.5.1",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Explicit",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"AnzoGraph DB": {
+			"Name": "AnzoGraph DB",
+			"References": [ "Anzograph" ],
+			"Website": "https://cambridgesemantics.com/anzograph/",
+			"Provider": "Cambridge Semantics",
+			"Description": "Massively-parallel distributed graph DB (property-graph, RDF) for large-scale analytics",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasDataMasking": true,
+			"HasDataMaskingNG": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasWebApi": true,
+			"HasSparqlEndpoint": true,
+			"DevelLangs": [ "C" ],
+			"IsSupported": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"DeployIaasPaas": [ "AWS" ],
+			"ReleaseFirstVersion": "2.0",
+			"ReleaseFirstYear": "-",
+			"ReleaseLastVersion": "2.3",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL", "Cypher" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"CSV",
+				"Derby",
+				"GoogleBigQuery",
+				"Hive",
+				"HSQLDB",
+				"HTTPREST",
+				"IBMDBtwo",
+				"Impala",
+				"JDBC",
+				"JSON",
+				"MariaDB",
+				"MicrosoftSQLServer",
+				"MySQL",
+				"Parquet",
+				"PostgreSQL",
+				"SAPASE",
+				"SASBDAT",
+				"SASXPT",
+				"SPARQL",
+				"XML"
+			]
+		},
+		"Apache Drill": {
+			"Name": "Apache Drill",
+			"References": [ "Drill", "DrillP" ],
+			"Website": "https://drill.apache.org/",
+			"Code": "https://github.com/apache/drill",
+			"Provider": "Apache Software Foundation",
+			"Description": "Distributed schema-free engine for interactive SQL queries on heterogeneous & nested data, inspired by Dremel",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "M1",
+			"ReleaseFirstYear": "2012",
+			"ReleaseLastVersion": "1.19",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Avro",
+				"Cassandra",
+				"CommonLogFormat",
+				"CSV",
+				"Derby",
+				"Druid",
+				"Elasticsearch",
+				"Excel",
+				"HBase",
+				"Hive",
+				"HTTPREST",
+				"Htwo",
+				"JSON",
+				"Kafka",
+				"MapRDB",
+				"MicrosoftSQLServer",
+				"MongoDB",
+				"MySQL",
+				"OpenTSDB",
+				"OracleDB",
+				"Parquet",
+				"PostgreSQL",
+				"SequenceFile",
+				"Splunk",
+				"XML"
+			]
+		},
+		"Apache Jena": {
+			"Name": "Apache Jena",
+			"References": [ "Jena" ],
+			"Website": "https://jena.apache.org/",
+			"Code": "https://github.com/apache/jena",
+			"Provider": "Apache Software Foundation",
+			"Description": "SPARQL query engine of Jena framework and TDB triple store, supporting federation",
+			"HasAuthentication": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasSparqlEndpoint": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstVersion": "2.7.0",
+			"ReleaseFirstYear": "2012",
+			"ReleaseLastVersion": "4.2.0",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Explicit",
+			"SrcList": [
+				"JenaSource",
+				"SPARQL"
+			]
+		},
+		"Apache Spark": {
+			"Name": "Apache Spark",
+			"References": [ "SparkSQL", "SparkSQLC" ],
+			"Website": "https://spark.apache.org/",
+			"Code": "https://github.com/apache/spark",
+			"Provider": "Apache Software Foundation",
+			"Description": "Multi-lang. (incl. SQL) distributed engine for large-scale data processing & analytics",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"DevelLangs": [ "Scala" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "1.0",
+			"ReleaseFirstYear": "2014",
+			"ReleaseLastVersion": "3.2.1",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"AnyFile",
+				"Avro",
+				"CSV",
+				"Hive",
+				"JDBC",
+				"JSON",
+				"ORC",
+				"Parquet"
+			]
+		},
+		"BigDAWG": {
+			"Name": "BigDAWG",
+			"References": [ "BigDAWG", "BigDAWGv1.0" ],
+			"Website": "https://bigdawg.mit.edu/",
+			"Code": "https://github.com/bigdawg-istc/bigdawg",
+			"Provider": "Intel Science & Technology Center for Big data",
+			"Description": "Polystore with heterogeneous storage engines for time series (SciDB), text (Accumulo) and relational data (PostgreSQL)",
+			"IsAcademic": true,
+			"HasCli": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstYear": "2015",
+			"ReleaseLastVersion": "0.0.5",
+			"ReleaseLastYear": "2017",
+			"QueryLangs": [ "BigDAWG Query" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Accumulo",
+				"PostgreSQL",
+				"SciDB"
+			]
+		},
+		"Blazegraph": {
+			"Name": "Blazegraph",
+			"References": [ "Blazegraph" ],
+			"Website": "https://blazegraph.com/",
+			"Code": "https://github.com/blazegraph/database",
+			"Provider": "Systap",
+			"Description": "Triple store supporting SPARQL 1.1 federation and powering Wikidata (via a fork)",
+			"HasCli": true,
+			"HasGui": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstVersion": "2.1.5",
+			"ReleaseFirstYear": "2019",
+			"ReleaseLastVersion": "2.1.6rc",
+			"ReleaseLastYear": "2020",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Explicit",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"CloudMdsQL": {
+			"Name": "CloudMdsQL",
+			"References": [ "CloudMdsQL", "CloudMdsQLJ" ],
+			"Code": "https://github.com/SparsityTechnologies/common-query-engine",
+			"Provider": "Inria & LIRMM",
+			"Description": "Polystore integrating heterogeneous storage engines (incl. RDBMS, NoSQL, HDFS)",
+			"IsAcademic": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseUniqueYear": "2017",
+			"QueryLangs": [ "CloudMdsQL" ],
+			"Transparent": "Explicit",
+			"SrcList": [
+				"Derby",
+				"MongoDB",
+				"Sparksee"
+			]
+		},
+		"Comunica": {
+			"Name": "Comunica",
+			"References": [ "DBLP:conf/semweb/TaelmanHSV18" ],
+			"Website": "https://comunica.dev/",
+			"Code": "https://github.com/comunica/comunica/",
+			"Provider": "Univ. Ghent",
+			"Description": "Modular JS federated query engine for heterogeneous web sources, incl. SPARQL endpoints",
+			"HasSparqlEndpoint": true,
+			"HasGui": true,
+			"HasCli": true,
+			"IsAcademic": true,
+			"DevelLangs": [ "JavaScript" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "1.0.0",
+			"ReleaseFirstYear": "2018",
+			"ReleaseLastVersion": "1.22.3",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL", "GraphQL" ],
+			"Transparent": "Transparent, Explicit",
+			"SrcList": [
+				"SPARQL",
+				"TPF",
+				"RDF"
+			]
+		},
+		"CostFed": {
+			"Name": "CostFed",
+			"References": [ "CostFed" ],
+			"Code": "https://github.com/dice-group/CostFed",
+			"Provider": "Univ. Leipzig",
+			"Description": "Index-assisted, cost-based data federation system for SPARQL endpoints",
+			"HasGui": true,
+			"IsAcademic": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstYear": "2016",
+			"ReleaseLastYear": "2018",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"DARQ": {
+			"Name": "DARQ",
+			"References": [ "DARQ" ],
+			"Website": "https://darq.sourceforge.net/",
+			"Code": "https://sourceforge.net/projects/darq/",
+			"Provider": "Univ. HU Berlin",
+			"Description": "Earliest data federation system for SPARQL endpoints, cost-based",
+			"HasCli": true,
+			"IsAcademic": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstYear": "2006",
+			"ReleaseLastYear": "2008",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"Data Virtuality": {
+			"Name": "Data Virtuality",
+			"References": [ "DataVirtuality" ],
+			"Website": "https://datavirtuality.com/en/",
+			"Provider": "Data Virtuality GmbH",
+			"Description": "Heterogeneous data integration solution combining data virtualization and ETL",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"IsSupported": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseLastVersion": "2.4",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"AmazonRedshift",
+				"ClickHouse",
+				"CSV",
+				"DataVirtuality",
+				"Derby",
+				"DHLTrackAndTraceAPI",
+				"Exasol",
+				"Excel",
+				"GoogleAdsAPI",
+				"GoogleAnalyticsAPI",
+				"GoogleBigQuery",
+				"Greenplum",
+				"Hive",
+				"HSQLDB",
+				"HTTPREST",
+				"Htwo",
+				"IBMDBtwo",
+				"IBMInformix",
+				"IBMNetezza",
+				"Ingres",
+				"InterSystemsCache",
+				"JDBC",
+				"JSON",
+				"Kdbplus",
+				"LDAP",
+				"MDX",
+				"MetaMatrix",
+				"MicrosoftSQLServer",
+				"ModeShape",
+				"MongoDB",
+				"MySQL",
+				"Neoforj",
+				"OracleDB",
+				"PostgreSQL",
+				"Redis",
+				"Salesforce",
+				"SAPASE",
+				"SingleStore",
+				"Snowflake",
+				"Teradata",
+				"XML"
+			]
+		},
+		"Denodo": {
+			"Name": "Denodo",
+			"References": [ "Denodo" ],
+			"Website": "https://www.denodo.com/en/denodo-platform/denodo-platform-80",
+			"Provider": "Denodo Technologies Inc.",
+			"Description": "Data virtualization solution for heterogeneous sources, also available as cloud service",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasAuditing": true,
+			"HasEncryption": true,
+			"HasDataMasking": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"HasAdoNet": true,
+			"IsSupported": true,
+			"DeployIaasPaas": [ "AWS", "Azure", "GCP" ],
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "1.0",
+			"ReleaseFirstYear": "2002",
+			"ReleaseLastVersion": "8.0",
+			"ReleaseLastYear": "2020",
+			"QueryLangs": [ "SQL", "GraphQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"AmazonAthena",
+				"AmazonOpenSearch",
+				"AmazonRedshift",
+				"Cassandra",
+				"CSV",
+				"Databricks",
+				"Denodo",
+				"Derby",
+				"Elasticsearch",
+				"Excel",
+				"GoogleBigQuery",
+				"Greenplum",
+				"Hive",
+				"IBMDBtwo",
+				"IBMInformix",
+				"IBMNetezza",
+				"Impala",
+				"ITPilot",
+				"JDBC",
+				"JSON",
+				"LDAP",
+				"MicrosoftAnalysisServices",
+				"MicrosoftAzureSQLDatabase",
+				"MicrosoftSQLServer",
+				"MicrosoftSynapseAnalytics",
+				"Mondrian",
+				"MongoDB",
+				"MySQL",
+				"OracleDB",
+				"OracleEssbase",
+				"OracleTimesTen",
+				"PostgreSQL",
+				"Presto",
+				"Salesforce",
+				"SAPASE",
+				"SAPBAPI",
+				"SAPBusinessWarehouse",
+				"SAPHANA",
+				"Snowflake",
+				"SOAPWSDL",
+				"Teradata",
+				"Trino",
+				"Vertica",
+				"XML",
+				"Yellowbrick"
+			]
+		},
+		"Dremio": {
+			"Name": "Dremio",
+			"References": [ "Dremio" ],
+			"Website": "https://www.dremio.com/",
+			"Code": "https://github.com/dremio/dremio-oss",
+			"Provider": "Dremio Corporation",
+			"Description": "Data ``lakehouse'' (lake + warehouse) solution supporting heterogeneous data sources",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasDataMasking": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"IsOpenSource": true,
+			"DeployIaasPaas": [ "AWS", "Azure" ],
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "1.1",
+			"ReleaseFirstYear": "2017",
+			"ReleaseLastVersion": "19.0",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"AmazonOpenSearch",
+				"AmazonRedshift",
+				"CSV",
+				"Elasticsearch",
+				"Excel",
+				"HBase",
+				"Hive",
+				"JSON",
+				"MicrosoftSQLServer",
+				"MongoDB",
+				"MySQL",
+				"OracleDB",
+				"Parquet",
+				"PostgreSQL",
+				"Teradata"
+			]
+		},
+		"FEDRA": {
+			"Name": "FEDRA",
+			"References": [ "FEDRA" ],
+			"Code": "https://github.com/gmontoya/fedra",
+			"Provider": "Univ. Nantes (LINA lab.)",
+			"Description": "Data federation system for SPARQL endpoints exploiting data replication",
+			"IsAcademic": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseUniqueYear": "2015",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"FedX~(RDF4J)": {
+			"Name": "FedX~(RDF4J)",
+			"References": [ "FedX", "FedX1" ],
+			"Website": "https://rdf4j.org/documentation/programming/federation/",
+			"Code": "https://github.com/eclipse/rdf4j/tree/main/tools/federation",
+			"Provider": "fluid Operations AG",
+			"Description": "On-demand (no statistics, query-time) data federation system for SPARQL endpoints",
+			"HasAuthentication": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasWebApi": true,
+			"HasSparqlEndpoint": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstYear": "2011",
+			"ReleaseLastVersion": "3.7.4",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"RDFforJSource",
+				"SPARQL"
+			]
+		},
+		"GraphDB": {
+			"Name": "GraphDB",
+			"References": [ "GraphDB" ],
+			"Website": "https://graphdb.ontotext.com/",
+			"Provider": "Ontotext",
+			"Description": "Triple store featuring OWL reasoning, SPARQL federated queries & RDBMS access",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasAuditing": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasWebApi": true,
+			"HasSparqlEndpoint": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "6.2",
+			"ReleaseFirstYear": "2015",
+			"ReleaseLastVersion": "9.10",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL", "SQL", "Cypher" ],
+			"Transparent": "Transparent, Explicit",
+			"SrcList": [
+				"GraphDB",
+				"IBMDBtwo",
+				"MicrosoftSQLServer",
+				"MySQL",
+				"OracleDB",
+				"PostgreSQL",
+				"SPARQL"
+			]
+		},
+		"HiBISCuS": {
+			"Name": "HiBISCuS",
+			"References": [ "HiBISCus" ],
+			"Code": "https://github.com/AKSW/HiBISCuS",
+			"Provider": "Univ. Leipzig",
+			"Description": "Source selection for SPARQL data federation (DARQ, FedX & SPLENDID extension)",
+			"IsAcademic": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseUniqueVersion": "1",
+			"ReleaseUniqueYear": "2014",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"IBM Cloud Pak for Data": {
+			"Name": "IBM Cloud Pak for Data",
+			"References": [ "IBMCloudPak" ],
+			"Website": "https://www.ibm.com/products/cloud-pak-for-data",
+			"Provider": "IBM",
+			"Description": "Data federation system with data discovery, governance, security and privacy solutions, also available as cloud service (formerly IBM Cloud Private for Data)",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasAuditing": true,
+			"HasEncryption": true,
+			"HasDataMasking": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasWebApi": true,
+			"IsSupported": true,
+			"DeploySaas": [ "IBM" ],
+			"DeployIaasPaas": [ "AWS", "Azure", "GCP" ],
+			"DeployOnPremises": [ "Containerized" ],
+			"ReleaseFirstVersion": "2.1.0",
+			"ReleaseFirstYear": "2018",
+			"ReleaseLastVersion": "4.0",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"AmazonRedshift",
+				"CSV",
+				"Derby",
+				"Excel",
+				"GoogleBigQuery",
+				"Greenplum",
+				"Hive",
+				"IBMDBtwo",
+				"IBMDbtwoBigSQL",
+				"IBMDBtwoEventStore",
+				"IBMDBtwoWarehouse",
+				"IBMDVM",
+				"IBMInformix",
+				"IBMNetezza",
+				"Impala",
+				"MariaDB",
+				"MicrosoftSQLServer",
+				"MongoDB",
+				"MySQL",
+				"OData",
+				"OracleDB",
+				"PostgreSQL",
+				"Salesforce",
+				"SAPASE",
+				"SAPGatewayOData",
+				"SAPHANA",
+				"Snowflake",
+				"Teradata"
+			]
+		},
+		"IBM Db2 Big SQL": {
+			"Name": "IBM Db2 Big SQL",
+			"References": [ "IBMDb2BigSQL" ],
+			"Website": "https://www.ibm.com/products/db2-big-sql",
+			"Provider": "IBM",
+			"Description": "Massively-parallel Hadoop SQL engine for heterogeneous sources (formerly IBM SQL)",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasAuditing": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"DeploySaas": [ "IBM" ],
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstYear": "2017",
+			"ReleaseLastVersion": "7.1.0",
+			"ReleaseLastYear": "2020",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"AmazonAthena",
+				"AmazonOpenSearch",
+				"AmazonRedshift",
+				"CouchDB",
+				"Derby",
+				"GoogleBigQuery",
+				"Greenplum",
+				"Hive",
+				"IBMDBtwo",
+				"IBMDbtwoBigSQL",
+				"IBMDBtwoWarehouse",
+				"IBMDVM",
+				"IBMInformix",
+				"IBMIntegratedAnalyticsSystem",
+				"IBMMQ",
+				"IBMNetezza",
+				"IBMPureData",
+				"Impala",
+				"MariaDB",
+				"MicrosoftAzureSQLDatabase",
+				"MicrosoftSQLServer",
+				"MongoDB",
+				"MySQL",
+				"OracleDB",
+				"Parquet",
+				"PostgreSQL",
+				"Salesforce",
+				"SAPASE",
+				"SAPHANA",
+				"Teradata"
+			]
+		},
+		"IBM InfoSphere Federation Server": {
+			"Name": "IBM InfoSphere Federation Server",
+			"References": [ "IBMInforSF" ],
+			"Website": "https://www.ibm.com/docs/en/iis/11.7?topic=components-infosphere-federation-server",
+			"Provider": "IBM",
+			"Description": "SQL-based data federation system for heterogeneous sources (formerly WebSphere Federation Server)",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasWebApi": true,
+			"IsSupported": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseLastVersion": "10.5.0",
+			"ReleaseLastYear": "2019",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"IBMDBtwo",
+				"IBMInformix",
+				"MicrosoftSQLServer",
+				"OracleDB",
+				"SAPASE",
+				"DatacomDB",
+				"Teradata",
+				"IBMNetezza",
+				"Excel",
+				"XML",
+				"SOAPWSDL",
+				"BioRS",
+				"IBMMQ",
+				"IDMS",
+				"IMS"
+			]
+		},
+		"JBoss Data Virtualization": {
+			"Name": "JBoss Data Virtualization",
+			"References": [ "JBossDV" ],
+			"Website": "https://access.redhat.com/products/red-hat-jboss-data-virtualization",
+			"Code": "https://developers.redhat.com/content-gateway/file/jboss-dv-6.4.0-sources.zip",
+			"Provider": "Red Hat, Inc.",
+			"Description": "Data federation system based on Teiid and providing read/write access to heterogeneous sources, data security, and multiple user interfaces / APIs",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasAuditing": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "6.0.0",
+			"ReleaseFirstYear": "2014",
+			"ReleaseLastVersion": "6.4.0",
+			"ReleaseLastYear": "2018",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Accumulo",
+				"ActianVector",
+				"AmazonOpenSearch",
+				"AmazonRedshift",
+				"Cassandra",
+				"Couchbase",
+				"CSV",
+				"Exasol",
+				"Excel",
+				"GoogleSheetsAPI",
+				"Greenplum",
+				"HBase",
+				"Hive",
+				"Hive",
+				"HTTPREST",
+				"IBMDBtwo",
+				"IBMInformix",
+				"IBMNetezza",
+				"Impala",
+				"Ingres",
+				"JBossDataVirtualization",
+				"LDAP",
+				"MariaDB",
+				"MetaMatrix",
+				"MicrosoftAccess",
+				"MicrosoftSQLServer",
+				"ModeShape",
+				"Mondrian",
+				"MongoDB",
+				"MySQL",
+				"OData",
+				"OracleDB",
+				"OSIsoftPI",
+				"PostgreSQL",
+				"Presto",
+				"RedHatDataGrid",
+				"RedHatDirectoryServer",
+				"Salesforce",
+				"SAPASE",
+				"SAPGatewayOData",
+				"SAPHANA",
+				"SAPIQ",
+				"SOAPWSDL",
+				"Solr",
+				"Teradata",
+				"Vertica",
+				"XML"
+			]
+		},
+		"Metaphactory": {
+			"Name": "Metaphactory",
+			"References": [ "Metaphactory", "MetaphactoryJ" ],
+			"Website": "https://metaphacts.com/product",
+			"Provider": "metaphacts GmbH",
+			"Description": "KG platform on top of SPARQL endpoints with two federation engines (Ephedra, FedX)",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasWebApi": true,
+			"HasSparqlEndpoint": true,
+			"DeployIaasPaas": [ "AWS" ],
+			"DeployOnPremises": [ "Docker" ],
+			"ReleaseFirstYear": "2015",
+			"ReleaseLastVersion": "4.3.0",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent, Explicit",
+			"SrcList": [
+				"AmazonNeptune",
+				"Elasticsearch",
+				"GraphDB",
+				"HTTPREST",
+				"JDBC",
+				"SPARQL",
+				"Stardog",
+				"Virtuoso"
+			]
+		},
+		"Myria": {
+			"Name": "Myria",
+			"References": [ "Myria" ],
+			"Website": "http://myria.cs.washington.edu/",
+			"Code": "https://github.com/uwescience/myria",
+			"Provider": "Univ. Washington",
+			"Description": "Cloud service for big data management/analytics with parallel & federated query engine",
+			"IsAcademic": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstVersion": "1",
+			"ReleaseFirstYear": "2014",
+			"ReleaseLastVersion": "1",
+			"ReleaseLastYear": "2017",
+			"QueryLangs": [ "SQL", "MyriaL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"AmazonOpenSearch",
+				"CSV",
+				"SciDB",
+				"SPARQL"
+			]
+		},
+		"Neo4j (Fabric)": {
+			"Name": "Neo4j (Fabric)",
+			"References": [ "Neo4j" ],
+			"Website": "https://neo4j.com/",
+			"Code": "https://github.com/neo4j/neo4j",
+			"Provider": "Neo4j, Inc.",
+			"Description": "Federation solution of Neo4J graph DB (Cypher queries on property graph model)",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"IsOpenSource": true,
+			"DeploySaas": [ "Neo4j AuraDB" ],
+			"DeployIaasPaas": [ "AWS", "Azure", "GCP" ],
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "4.0.11",
+			"ReleaseFirstYear": "2020",
+			"ReleaseLastVersion": "4.3.7",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "Cypher" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Neoforj"
+			]
+		},
+		"Obi-Wan": {
+			"Name": "Obi-Wan",
+			"References": [ "Obi-Wan", "Obi-Wan1" ],
+			"Website": "https://gitlab.inria.fr/cedar/obi-wan/-/wikis/Home",
+			"Code": "https://gitlab.inria.fr/cedar/obi-wan",
+			"Provider": "Inria & Polytechnic Institute of Paris",
+			"Description": "Ontology-Based Data Access (OBDA) system on top of Tatooine mediator for heterogeneous sources",
+			"IsAcademic": true,
+			"HasCli": true,
+			"HasSparqlEndpoint": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseUniqueYear": "2020",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"JenaTDB",
+				"MongoDB",
+				"PostgreSQL",
+				"Redis"
+			]
+		},
+		"Odyssey": {
+			"Name": "Odyssey",
+			"References": [ "ODYSSEY" ],
+			"Code": "https://github.com/gmontoya/federatedOptimizer",
+			"Provider": "Univ. Aalborg & Univ. Nantes",
+			"Description": "Statistics & cost-based optimizer for SPARQL data federation (FedX extension)",
+			"HasCli": true,
+			"IsAcademic": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstYear": "2016",
+			"ReleaseLastYear": "2019",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"Ontario": {
+			"Name": "Ontario",
+			"References": [ "Ontario" ],
+			"Code": "https://github.com/SDM-TIB/Ontario",
+			"Provider": "L3S Research Center",
+			"Description": "Heuristics-based system using RDF Molecule Templates (introduced by its predecessor MULDER) to describe/map source content as star-shaped RDF instance descriptions",
+			"IsAcademic": true,
+			"HasCli": true,
+			"DevelLangs": [ "Python" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstYear": "2018",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"CSV",
+				"MongoDB",
+				"MySQL",
+				"Neoforj",
+				"SPARQL",
+				"XML"
+			]
+		},
+		"Onto-KIT": {
+			"Name": "Onto-KIT",
+			"References": [ "Onto-KIT" ],
+			"Code": "https://github.com/marouamasmoudi/Onto-KIT",
+			"Provider": "Univ. Toulouse",
+			"Description": "Data federation system focusing on Earth Observation data with hypergraph-based data model and query processing techniques",
+			"IsAcademic": true,
+			"HasGui": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseUniqueYear": "2020",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"CSV",
+				"ENVI",
+				"JSON"
+			]
+		},
+		"Oracle Big Data SQL": {
+			"Name": "Oracle Big Data SQL",
+			"References": [ "OracleBigDataSQL" ],
+			"Website": "https://www.oracle.com/database/technologies/datawarehouse-bigdata/bigdata-sql.html",
+			"Provider": "Oracle Corporation",
+			"Description": "Data federation system for Oracle DB that accesses Hadoop storage & processing",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasGui": true,
+			"HasCli": true,
+			"ReleaseFirstVersion": "3.0.1",
+			"ReleaseLastVersion": "4.1.1",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"DeployOnPremises": [ "Native" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Avro",
+				"CSV",
+				"HBase",
+				"Hive",
+				"JSON",
+				"Kafka",
+				"OracleNoSQL",
+				"ORC",
+				"Parquet",
+				"XML"
+			]
+		},
+		"Oracle DB (Spatial & Graph)": {
+			"Name": "Oracle DB (Spatial & Graph)",
+			"References": [ "OracleSpatialAndGraph", "OracleSpatialAndGraphJ" ],
+			"Website": "https://www.oracle.com/database/technologies/spatialandgraph.html",
+			"Provider": "Oracle Corporation",
+			"Description": "Oracle DB component for semantic technologies with data federation capabilities (RDF views) over relational, graph, and RDF (SPARQL) sources",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasDataMasking": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasWebApi": true,
+			"HasSparqlEndpoint": true,
+			"IsSupported": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstYear": "2016",
+			"ReleaseLastVersion": "21c",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Explicit",
+			"SrcList": [
+				"OracleDB",
+				"SPARQL"
+			]
+		},
+		"PolyWeb": {
+			"Name": "PolyWeb",
+			"References": [ "PolyWeb", "PolyWebGit" ],
+			"Website": "http://polyweb.insight-centre.org/",
+			"Code": "https://github.com/yasarkhangithub/PolyWeb",
+			"Provider": "Univ. NUI Galway",
+			"Description": "SPARQL-based data federation system for different sources on the Web (RDF & CSV data, RDBMS), focusing on source selection, query optimization & execution",
+			"IsAcademic": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseUniqueYear": "2017",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"CSV",
+				"MySQL",
+				"SPARQL"
+			]
+		},
+		"Presto": {
+			"Name": "Presto",
+			"References": [ "Presto", "PrestoP" ],
+			"Website": "https://prestodb.io/",
+			"Code": "https://github.com/prestodb/presto",
+			"Provider": "Presto Foundation",
+			"Description": "SQL-based distributed query engine suitable to interactive (big) data analytics",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasAuditing": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "0.54",
+			"ReleaseFirstYear": "2013",
+			"ReleaseLastVersion": "0.265.1",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Accumulo",
+				"AmazonRedshift",
+				"Cassandra",
+				"Druid",
+				"Elasticsearch",
+				"GoogleBigQuery",
+				"Hive",
+				"Iceberg",
+				"Kafka",
+				"Kudu",
+				"MicrosoftSQLServer",
+				"MongoDB",
+				"MySQL",
+				"OracleDB",
+				"Pinot",
+				"PostgreSQL",
+				"Prometheus",
+				"Redis"
+			]
+		},
+		"Querona Data Virtualization": {
+			"Name": "Querona Data Virtualization",
+			"References": [ "Querona" ],
+			"Website": "https://www.querona.io/product/",
+			"Provider": "YouNeedIT Sp. z o.o. Sp. k.",
+			"Description": "Data federation system for a variety of heterogeneous sources, based on Apache Spark and targeting big data analytics with the support of main BI tools",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasDataMasking": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasAdoNet": true,
+			"IsSupported": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstYear": "2015",
+			"ReleaseLastYear": "2020",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"ActianMatrix",
+				"ActianVector",
+				"ADONET",
+				"AlibabaAnalyticDBforMySQL",
+				"AlibabaDataLakeAnalytics",
+				"AmazonAthena",
+				"AmazonAurora",
+				"AmazonOpenSearch",
+				"AmazonRedshift",
+				"ClickHouse",
+				"CSV",
+				"Databricks",
+				"DataStax",
+				"DBase",
+				"Denodo",
+				"Drill",
+				"Exasol",
+				"Excel",
+				"GoogleBigQuery",
+				"IBMDBtwo",
+				"JDBC",
+				"Kafka",
+				"MariaDB",
+				"MicrosoftAccess",
+				"MicrosoftSQLServer",
+				"MicrosoftSynapseAnalytics",
+				"MSGEML",
+				"MySQL",
+				"ODBC",
+				"OLEDB",
+				"OracleDB",
+				"PDF",
+				"PostgreSQL",
+				"SAPHANA",
+				"SASScalablePerformanceDataServer",
+				"SparkSQL",
+				"Teradata",
+				"TeradataAster",
+				"Vertica"
+			]
+		},
+		"RDFLib": {
+			"Name": "RDFLib",
+			"References": [ "RDFLib" ],
+			"Website": "https://rdflib.readthedocs.io/",
+			"Code": "https://github.com/RDFLib/rdflib",
+			"Provider": "RDFLib team",
+			"Description": "A pure Python package for working with RDF, supporting SPARQL 1.1 federation",
+			"HasCli": true,
+			"DevelLangs": [ "Python" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstVersion": "1.1.1",
+			"ReleaseFirstYear": "2002",
+			"ReleaseLastVersion": "6.1.1",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Explicit",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"SAFE": {
+			"Name": "SAFE",
+			"References": [ "SAFE" ],
+			"Code": "https://github.com/yasarkhangithub/SAFE",
+			"Provider": "Insight SFI Research Centre for Data Analytics",
+			"Description": "Data federation system for SPARQL endpoints exposing RDF data cubes with sensitive data, featuring access policy-aware data summaries, source selection & query execution",
+			"IsAcademic": true,
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseUniqueYear": "2017",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"SAGE": {
+			"Name": "SAGE",
+			"References": [ "DBLP:conf/www/MinierSM19" ],
+			"Website": "http://sage.univ-nantes.fr/",
+			"Code": "https://github.com/sage-org",
+			"Provider": "Univ. Nantes",
+			"Description": "SPARQL engine with ``web preemption'' (i.e., query suspend/resume) & federation capabilities",
+			"HasGui": true,
+			"HasCli": true,
+			"IsAcademic": true,
+			"DevelLangs": [ "Python" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "1.1",
+			"ReleaseFirstYear": "2019",
+			"ReleaseLastVersion": "2.3",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Explicit",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"SAP HANA": {
+			"Name": "SAP HANA",
+			"References": [ "SAPHANASmartDataAccess" ],
+			"Website": "https://www.sap.com/products/hana.html",
+			"Provider": "SAP SE",
+			"Description": "In-memory DB targeting with data federation capabilities, also available as cloud service",
+			"HasAuthentication": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"HasAdoNet": true,
+			"DevelLangs": [ "C" ],
+			"IsSupported": true,
+			"DeployIaasPaas": [ "AWS", "GCP" ],
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "1.0.SPS12",
+			"ReleaseFirstYear": "2018",
+			"ReleaseLastVersion": "2.0.SPS05",
+			"ReleaseLastYear": "2020",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"AmazonAthena",
+				"GoogleBigQuery",
+				"IBMDBtwo",
+				"IBMNetezza",
+				"MicrosoftSQLServer",
+				"OracleDB",
+				"SAPASE",
+				"SAPHANA",
+				"SAPHANAStreamingAnalytics",
+				"SAPIQ",
+				"SAPMaxDB",
+				"Teradata"
+			]
+		},
+		"SAS Federation Server": {
+			"Name": "SAS Federation Server",
+			"References": [ "SASFederationServer" ],
+			"Website": "https://www.sas.com/en_us/software/federation-server.html",
+			"Provider": "SAS Institute",
+			"Description": "Data federation system featuring data caches, masking, encryption & quality functions",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasDataMasking": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "C" ],
+			"IsSupported": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseFirstVersion": "3.2",
+			"ReleaseFirstYear": "2013",
+			"ReleaseLastVersion": "4.4",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "FedSQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Btrieve",
+				"DBase",
+				"Greenplum",
+				"Hive",
+				"IBMDBtwo",
+				"IBMInformix",
+				"IBMNetezza",
+				"Impala",
+				"MicrosoftAccess",
+				"MicrosoftSQLServer",
+				"MySQL",
+				"OracleDB",
+				"Paradox",
+				"PostgreSQL",
+				"ProgressOpenEdgeRDBMS",
+				"Salesforce",
+				"SAPASE",
+				"SAPHANA",
+				"SAPRFC",
+				"SASFederationServer",
+				"SASScalablePerformanceDataServer",
+				"Teradata"
+			]
+		},
+		"SemaGrow": {
+			"Name": "SemaGrow",
+			"References": [ "SemaGrow" ],
+			"Website": "https://semagrow.github.io/",
+			"Code": "https://github.com/semagrow/semagrow",
+			"Provider": "IIT NCSR `Demokritos'",
+			"Description": "Data federation system for SPARQL endpoints with statistics-based query optimization",
+			"HasCli": true,
+			"HasGui": true,
+			"IsAcademic": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "1.0",
+			"ReleaseFirstYear": "2014",
+			"ReleaseLastVersion": "2.2.1",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"SPLENDID": {
+			"Name": "SPLENDID",
+			"References": [ "SPLENDID" ],
+			"Code": "https://github.com/goerlitz/splendid",
+			"Provider": "Univ. Koblenz-Landau",
+			"Description": "Data federation system for SPARQL endpoints that provide VOID data statistics",
+			"IsAcademic": true,
+			"HasCli": true,
+			"DevelLangs": [ "Java" ],
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native" ],
+			"ReleaseUniqueYear": "2011",
+			"QueryLangs": [ "SPARQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"SPARQL"
+			]
+		},
+		"SQL Server (PolyBase)": {
+			"Name": "SQL Server (PolyBase)",
+			"References": [ "SQLServerPolyBase" ],
+			"Website": "https://learn.microsoft.com/en-us/sql/relational-databases/polybase/",
+			"Provider": "Microsoft Corporation",
+			"Description": "SQL Server component for data federation supporting Hadoop and Azure storage",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasAuditing": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasAdoNet": true,
+			"DevelLangs": [ "C" ],
+			"IsSupported": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "2016",
+			"ReleaseFirstYear": "2016",
+			"ReleaseLastVersion": "2019",
+			"ReleaseLastYear": "2019",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"CSV",
+				"JSON",
+				"MicrosoftSQLServer",
+				"MongoDB",
+				"ODBC",
+				"OracleDB",
+				"ORC",
+				"Parquet",
+				"RCFile",
+				"Teradata"
+			]
+		},
+		"Squerall": {
+			"Name": "Squerall",
+			"References": [ "Squerall" ],
+			"Website": "https://eis-bonn.github.io/Squerall/",
+			"Code": "https://github.com/EIS-Bonn/Squerall",
+			"Provider": "Univ. Bonn",
+			"Description": "Data federation system for heterogeneous sources built on Spark, Presto, and RML mappings",
+			"IsAcademic": true,
+			"HasCli": true,
+			"HasGui": true,
+			"DevelLangs": [ "Python" ],
+			"IsOpenSource": true,
+			"ReleaseFirstVersion": "0.1",
+			"ReleaseFirstYear": "2018",
+			"ReleaseLastVersion": "0.2",
+			"ReleaseLastYear": "2019",
+			"QueryLangs": [ "SPARQL" ],
+			"DeployOnPremises": [ "Native" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Cassandra",
+				"Couchbase",
+				"CSV",
+				"Elasticsearch",
+				"MongoDB",
+				"MySQL",
+				"Parquet"
+			]
+		},
+		"Starburst": {
+			"Name": "Starburst",
+			"References": [ "Starburst" ],
+			"Website": "https://www.starburst.io/",
+			"Provider": "Starburst Data, Inc.",
+			"Description": "Commercial distribution of Trino, extra security features, available on-premise/on-cloud",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasAuditing": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"ReleaseFirstVersion": "0.188-e",
+			"ReleaseFirstYear": "2019",
+			"ReleaseLastVersion": "364-e LTS",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"DeployIaasPaas": [ "AWS", "Azure", "GCP" ],
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Accumulo",
+				"AmazonDynamoDB",
+				"AmazonKinesis",
+				"AmazonRedshift",
+				"Avro",
+				"Cassandra",
+				"ClickHouse",
+				"CSV",
+				"Druid",
+				"Elasticsearch",
+				"GoogleBigQuery",
+				"GoogleSheetsAPI",
+				"Greenplum",
+				"HBase",
+				"Hive",
+				"IBMDBtwo",
+				"IBMNetezza",
+				"Iceberg",
+				"JDBC",
+				"JSON",
+				"Kafka",
+				"Kudu",
+				"MicrosoftSQLServer",
+				"MicrosoftSynapseAnalytics",
+				"MongoDB",
+				"MySQL",
+				"OracleDB",
+				"ORC",
+				"Parquet",
+				"Pinot",
+				"PostgreSQL",
+				"Prometheus",
+				"RCFile",
+				"Redis",
+				"Salesforce",
+				"SAPHANA",
+				"SequenceFile",
+				"SingleStore",
+				"Snowflake",
+				"Splunk",
+				"Starburst",
+				"Teradata",
+				"Vertica"
+			]
+		},
+		"Stardog": {
+			"Name": "Stardog",
+			"References": [ "Stardog" ],
+			"Website": "https://www.stardog.com/platform/",
+			"Provider": "Stardog Union",
+			"Description": "KG platform including data federation of heterogeneous sources & query-time inference",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasDataMasking": true,
+			"HasDataMaskingNG": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasWebApi": true,
+			"HasSparqlEndpoint": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"ReleaseFirstVersion": "0.7.3",
+			"ReleaseFirstYear": "2011",
+			"ReleaseLastVersion": "7.7.3",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SPARQL" ],
+			"DeploySaas": [ "Stardog" ],
+			"DeployIaasPaas": [ "AWS" ],
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"Transparent": "Transparent, Explicit",
+			"SrcList": [
+				"AmazonAthena",
+				"AmazonAurora",
+				"AmazonOpenSearch",
+				"AmazonRedshift",
+				"Cassandra",
+				"CSV",
+				"DataStax",
+				"Derby",
+				"Elasticsearch",
+				"Exasol",
+				"GoogleBigQuery",
+				"GoogleSheetsAPI",
+				"Hive",
+				"Htwo",
+				"IBMDBtwo",
+				"Impala",
+				"Jira",
+				"JSON",
+				"LDAP",
+				"MariaDB",
+				"MicrosoftAzureCosmosDB",
+				"MicrosoftSQLServer",
+				"MongoDB",
+				"MySQL",
+				"OracleDB",
+				"PostgreSQL",
+				"Salesforce",
+				"SAPASE",
+				"SAPHANA",
+				"Snowflake",
+				"SPARQL",
+				"Splunk",
+				"Stardog",
+				"Teradata"
+			]
+		},
+		"Teiid": {
+			"Name": "Teiid",
+			"References": [ "Teiid" ],
+			"Website": "https://teiid.io/",
+			"Code": "https://github.com/teiid/teiid",
+			"Provider": "Red Hat, Inc.",
+			"Description": "SQL-based engine for data federation of heterogeneous sources",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"HasAdoNet": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"IsOpenSource": true,
+			"ReleaseFirstVersion": "6.0.0",
+			"ReleaseFirstYear": "2009",
+			"ReleaseLastVersion": "16.0.0",
+			"ReleaseLastYear": "2020",
+			"QueryLangs": [ "SQL" ],
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Accumulo",
+				"ActianVector",
+				"AmazonAthena",
+				"AmazonOpenSearch",
+				"AmazonRedshift",
+				"AmazonSimpleDB",
+				"Cassandra",
+				"Couchbase",
+				"CSV",
+				"Derby",
+				"Exasol",
+				"Excel",
+				"GoogleSheetsAPI",
+				"Greenplum",
+				"HBase",
+				"Hive",
+				"HSQLDB",
+				"HTTPREST",
+				"Htwo",
+				"IBMDBtwo",
+				"IBMInformix",
+				"IBMNetezza",
+				"Impala",
+				"Infinispan",
+				"Ingres",
+				"InterSystemsCache",
+				"JDBC",
+				"JPA",
+				"JSON",
+				"LDAP",
+				"MariaDB",
+				"MDX",
+				"MetaMatrix",
+				"MicrosoftAccess",
+				"MicrosoftActiveDirectory",
+				"MicrosoftSQLServer",
+				"ModeShape",
+				"Mondrian",
+				"MongoDB",
+				"MySQL",
+				"OData",
+				"OpenAPI",
+				"OracleDB",
+				"OSIsoftPI",
+				"PostgreSQL",
+				"Presto",
+				"RedHatDirectoryServer",
+				"Salesforce",
+				"SAPASE",
+				"SAPGatewayOData",
+				"SAPHANA",
+				"SAPIQ",
+				"SOAPWSDL",
+				"Solr",
+				"Teiid",
+				"Teradata",
+				"Vertica",
+				"XML"
+			]
+		},
+		"TIBCO Data Virtualization": {
+			"Name": "TIBCO Data Virtualization",
+			"References": [ "TIBCO" ],
+			"Website": "https://www.tibco.com/products/data-virtualization",
+			"Provider": "TIBCO Software Inc.",
+			"Description": "Data federation system for heterogeneous sources, with data caching & security, massively parallel processing & GUI tools (formerly Composite, then Cisco Data Virtualization)",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"HasAdoNet": true,
+			"IsSupported": true,
+			"DeployIaasPaas": [ "AWS", "Azure" ],
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "7.0.5",
+			"ReleaseFirstYear": "2007",
+			"ReleaseLastVersion": "8.4.0",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"AmazonDynamoDB",
+				"AmazonOpenSearch",
+				"AmazonRedshift",
+				"Cassandra",
+				"Couchbase",
+				"CSV",
+				"Drill",
+				"Elasticsearch",
+				"Eloqua",
+				"Excel",
+				"Facebook",
+				"GoogleAdsAPI",
+				"GoogleAnalyticsAPI",
+				"GoogleBigQuery",
+				"GoogleCalendarAPI",
+				"GoogleContactsAPI",
+				"GoogleSheetsAPI",
+				"Greenplum",
+				"HBase",
+				"Hive",
+				"HPNeoview",
+				"HSQLDB",
+				"HTTPREST",
+				"HubSpot",
+				"IBMDBtwo",
+				"IBMInformix",
+				"IBMNetezza",
+				"IMAP",
+				"JSON",
+				"Marketo",
+				"MarkLogic",
+				"MicrosoftAccess",
+				"MicrosoftAzureCosmosDB",
+				"MicrosoftSharepoint",
+				"MicrosoftSharepointExcelServices",
+				"MicrosoftSQLServer",
+				"MongoDB",
+				"MySQL",
+				"Netsuite",
+				"OData",
+				"OracleDB",
+				"PostgreSQL",
+				"RSS",
+				"Salesforce",
+				"SAPASE",
+				"SAPBusinessWarehouse",
+				"SAPBusinessWarehouse",
+				"SAPHANA",
+				"SAPRFC",
+				"Snowflake",
+				"SOAPWSDL",
+				"Splunk",
+				"Teradata",
+				"TibcoComputeDB",
+				"TibcoDataVirtualization",
+				"Twitter",
+				"Vertica",
+				"XML"
+			]
+		},
+		"Trino": {
+			"Name": "Trino",
+			"References": [ "Trino" ],
+			"Website": "https://trino.io/",
+			"Code": "https://github.com/starburstdata/trino",
+			"Provider": "Trino Software Foundation",
+			"Description": "SQL-based query distributed engine for interactive big data analytics, forked from Presto",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"DevelLangs": [ "Java" ],
+			"IsSupported": true,
+			"IsOpenSource": true,
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseFirstVersion": "0.54",
+			"ReleaseLastVersion": "364",
+			"ReleaseLastYear": "2021",
+			"QueryLangs": [ "SQL" ],
+			"Transparent": "Transparent",
+			"SrcList": [
+				"Accumulo",
+				"AmazonKinesis",
+				"AmazonRedshift",
+				"Cassandra",
+				"ClickHouse",
+				"Druid",
+				"Elasticsearch",
+				"GoogleBigQuery",
+				"GoogleSheetsAPI",
+				"HBase",
+				"Hive",
+				"Iceberg",
+				"Kafka",
+				"Kudu",
+				"MicrosoftSQLServer",
+				"MongoDB",
+				"MySQL",
+				"OracleDB",
+				"Pinot",
+				"PostgreSQL",
+				"Prometheus",
+				"Redis",
+				"SingleStore"
+			]
+		},
+		"Virtuoso": {
+			"Name": "Virtuoso",
+			"References": [ "Virtuoso", "VirtuosoJ", "VirtuosoC" ],
+			"Website": "https://virtuoso.openlinksw.com/",
+			"Provider": "OpenLink Software",
+			"Description": "Multi-model DB (object-relational, RDF, XML) with data federation facilities",
+			"HasAuthentication": true,
+			"HasAuthorization": true,
+			"HasEncryption": true,
+			"HasGui": true,
+			"HasCli": true,
+			"HasJdbc": true,
+			"HasOdbc": true,
+			"HasWebApi": true,
+			"HasAdoNet": true,
+			"HasSparqlEndpoint": true,
+			"DevelLangs": [ "C" ],
+			"IsSupported": true,
+			"DeployIaasPaas": [ "AWS", "Azure" ],
+			"DeployOnPremises": [ "Native", "Containerized" ],
+			"ReleaseLastVersion": "8.3",
+			"ReleaseLastYear": "2020",
+			"QueryLangs": [ "SPARQL", "SQL" ],
+			"Transparent": "Transparent, Explicit",
+			"SrcList": [
+				"Firebird",
+				"IBMDBtwo",
+				"IBMInformix",
+				"Ingres",
+				"MicrosoftSQLServer",
+				"MySQL",
+				"OracleDB",
+				"PostgreSQL",
+				"ProgressOpenEdgeRDBMS",
+				"SAPASE",
+				"SPARQL"
+			]
+		}
+	},
+	"FederationTechniques": {
+		"Metadata catalog": {
+			"Automatic collection of source metadata": {
+				"Comment": "e.g., data summaries",
+				"References": [ "CostFed", "PolyWeb" ],
+				"ExampleSystems": [
+					"AnzoGraph DB", "Apache Spark", "CostFed", "Data Virtuality", "Denodo", "Dremio", "FedX (RDF4J)", "HiBISCuS", "IBM Cloud Pak for Data",
+					"JBoss Data Virtualization", "Neo4j (Fabric)", "Odyssey", "Ontario", "Oracle Big Data SQL", "PolyWeb", "Presto", "SAFE", "SAP HANA",
+					"SAS Federation Server", "SemaGrow", "SPLENDID", "Starburst", "Stardog", "Teiid", "TIBCO Data Virtualization", "Trino"
+				]
+			},
+			"Manual provision of source metadata": {
+				"Comment": "e.g., VoID, Sevod, Service descriptions, DARQ",
+				"References": [ "VOID", "Sevod", "Service descriptions" ],
+				"ExampleSystems": [
+					"Apache Drill", "DARQ", "Denodo", "JBoss Data Virtualization", "Oracle Big Data SQL", "Presto", "Querona Data Virtualization",
+					"SemaGrow", "SPLENDID", "Starburst", "Teiid", "Trino"
+				]
+			}
+		},
+		"Unified schema and mappings": {
+			"Simple merge of schemas": {
+				"ExampleSystems": [ "Comunica", "CostFed", "DARQ", "HiBISCuS", "Neo4j (Fabric)", "Odyssey", "Ontario", "SAFE" ]
+			},
+			"Configurable unified schema": {
+				"Comment": "e.g., virtual databases",
+				"References": [ "Teiid" ],
+				"ExampleSystems": [
+					"AnzoGraph DB", "Apache Spark", "Data Virtuality", "Denodo", "Dremio", "IBM Cloud Pak for Data", "JBoss Data Virtualization", "Onto-kit",
+					"Oracle Big Data SQL", "PolyWeb", "Querona Data Virtualization", "SAP HANA", "SAS Federation Server", "Squerall", "Stardog", "Teiid", "Trino"
+				]
+			}
+		},
+		"Source selection and query partition": {
+			"Index-based": {
+				"References": [ "10.1145/988672.988758", "PolyWeb", "HiBISCus", "SAFE", "SPLENDID" ],
+				"ExampleSystems": [ "CostFed", "DARQ", "FEDRA", "HiBISCuS", "Ontario", "PolyWeb", "SAFE", "SPLENDID" ]
+			},
+			"Query-based": {
+				"References": [ "FedX1", "HiBISCus", "PolyWeb", "SAFE", "SPLENDID" ],
+				"ExampleSystems": [ "FEDRA", "FedX (RDF4J)", "HiBISCuS", "PolyWeb", "SAFE", "SPLENDID" ]
+			},
+			"Graph-based": {
+				"References": [ "CostFed", "HiBISCus", "Onto-KIT", "SAFE" ],
+				"ExampleSystems": [ "CostFed", "HiBISCuS", "Onto-kit", "SAFE" ]
+			},
+			"Push down": {
+				"References": [ "tamer2020distdbbook", "haas1997garlic", "DataVirtualityPushDown", "IBMDb2BigSQLPushDown", "SQLServerPolyBasePushDown", "StarburstPushDown", "TrinoPushDown" ],
+				"ExampleSystems": [ "Data Virtuality", "IBM Db2 Big SQL", "SQL Server (PolyBase)", "Starburst", "Teiid", "Trino" ]
+			}
+		},
+		"Query optimization and query plan generation": {
+			"Cost-based optimization": {
+				"References": [ "DBLP:books/mg/SKS20" ],
+				"ExampleSystems": [
+					"Apache Drill", "Apache Spark", "CostFed", "DARQ", "Data Virtuality", "Denodo", "Dremio", "IBM Cloud Pak for Data", "Neo4j (Fabric)",
+					"Odyssey", "Presto", "SAP HANA", "SemaGrow", "SQL Server (PolyBase)", "Starburst", "TIBCO Data Virtualization", "Trino"
+				]
+			},
+			"Rule-based optimization": {
+				"References": [ "FedX", "Ontario", "PolyWeb", "TeiidPlanning", "SAPHANASmartDataAccessPlanning" ],
+				"ExampleSystems": [ "Data Virtuality", "FedX (RDF4J)", "Ontario", "PolyWeb", "SAP HANA", "Teiid" ]
+			},
+			"Materialization": {
+				"References": [ "tamer2020distdbbook" ],
+				"ExampleSystems": [ "Denodo", "IBM Db2 Big SQL", "JBoss Data virtualization", "Starburst", "Teiid" ]
+			}
+		},
+		"Query execution": {
+			"Bind join": {
+				"References": [ "tamer2020distdbbook", "Survey-FederatedLD", "DARQ", "SemaGrow" ],
+				"ExampleSystems": [ "CostFed", "DARQ", "Data Virtuality", "FEDRA", "FedX (RDF4J)", "PolyWeb", "SAFE", "SemaGrow", "SPLENDID", "Teiid" ]
+			},
+			"Nested loop join": {
+				"References": [ "DBLP:books/mg/SKS20", "Survey-FederatedLD" ],
+				"ExampleSystems": [ "Apache Drill", "DARQ", "Data Virtuality", "Denodo", "FEDRA", "FedX (RDF4J)", "PolyWeb", "SAFE", "TIBCO Data Virtualization" ]
+			},
+			"Hash join": {
+				"References": [ "DBLP:books/mg/SKS20", "Survey-FederatedLD" ],
+				"ExampleSystems": [ "Apache Drill", "Apache Spark", "CostFed", "Denodo", "SemaGrow", "SPLENDID", "TIBCO Data Virtualization" ]
+			},
+			"Merge join": {
+				"References": [ "DBLP:books/mg/SKS20" ],
+				"ExampleSystems": [ "Apache Drill", "Apache Spark", "Data Virtuality", "Denodo", "SemaGrow", "TIBCO Data Virtualization" ]
+			},
+			"Broadcast join": {
+				"References": [ "DBLP:conf/sigmod/BlanasPERST10", "DrillBroadcastJoin", "StarburstBroadcastJoin" ],
+				"ExampleSystems": [ "Amazon Athena", "Apache Drill", "Apache Spark", "Starburst", "Trino" ]
+			},
+			"Partitioned (shuffle) join": {
+				"References": [ "DBLP:conf/hpec/GuptaGS16", "PrestoPartitionedJoin", "TrinoPartitionJoin" ],
+				"ExampleSystems": [ "Apache Spark", "BigDAWG", "Presto", "Trino" ]
+			},
+			"Semijion": {
+				"References": [ "DBLP:books/mg/SKS20" ],
+				"ExampleSystems": [	"TIBCO Data Virtualization" ]
+			},
+			"Optional join": {
+				"References": [ "DataVirtuality", "Teiid" ],
+				"ExampleSystems": [ "Data Virtuality", "Teiid" ]
+			},
+			"Shuffle join": {
+				"References": [ "DBLP:conf/hpec/GuptaGS16" ],
+				"ExampleSystems": [	"BigDAWG", "SparkSQL" ]
+			},
+			"Parallelization": {
+				"References": [ "tamer2020distdbbook}", "Survey-FederatedLD" ],
+				"ExampleSystems": [ "AllegroGraph", "Amazon Athena", "Apache Drill", "Data Virtuality", "Denodo", "FedX (RDF4J)", "Squerall", "Starburst", "TIBCO Data Virtualization" ]
+			},
+			"Data Movement/Ship": {
+				"References": [ "DataFederationDenodoDataMovement" ],
+				"ExampleSystems": [ "Denodo", "TIBCO Data Virtualization" ]
+			},
+			"Caching": {
+				"References": [ "Survey-FederatedLD", "DBLP:conf/hpec/GuptaGS16", "FedX1" ],
+				"ExampleSystems": [
+					"Apache Drill", "Apache Spark", "Comunica", "Data Virtuality", "Denodo", "Dremio", "FEDRA", "FedX (RDF4J)", "HiBISCuS", "IBM Cloud Pak for Data",
+					"IBM Db2 Big SQL", "JBoss Data Virtualization", "Presto", "SAFE", "SAP HANA", "SAS Federation Server", "Teiid", "TIBCO Data Virtualization"
+				]
+			}
+		}
+	},
+	"PublicationStatistics": {
+		"Years": [ "⩽2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021" ],
+		"Journals": {
+			"J. Web Semant.":                [ 1, 0, 0, 1, 1, 0, 1, 2, 2, 0, 0, 0 ],
+			"Semantic Web":                  [ 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 2 ],
+			"ACM Comput. Surv.":             [ 1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0 ],
+			"IEEE Trans. Knowl. Data Eng.":  [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3 ],
+			"J. Biomed. Semant.":            [ 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 0, 0 ],
+			"VLDB J.":                       [ 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0 ],
+			"Other journals":                [ 9, 4, 1, 3, 4, 4, 8, 4, 5, 6, 6, 3 ]
+		},
+		"Conferences": {
+			"ISWC":                          [ 3, 3, 3, 3, 2, 2, 1, 2, 1, 1, 1, 1 ],
+			"ESWC":                          [ 3, 3, 2, 1, 1, 2, 0, 2, 1, 3, 1, 1 ],
+			"WWW":                           [ 2, 0, 0, 0, 0, 1, 1, 0, 2, 3, 0, 0 ],
+			"VLDB":                          [ 1, 0, 0, 0, 0, 0, 3, 1, 0, 1, 2, 0 ],
+			"SIGMOD":                        [ 0, 0, 0, 2, 1, 1, 1, 0, 1, 1, 0, 0 ],
+			"DEXA":                          [ 0, 0, 0, 0, 0, 0, 0, 1, 1, 3, 0, 0 ],
+			"IEEE BigData":                  [ 0, 0, 0, 0, 0, 0, 1, 2, 0, 2, 0, 0 ],
+			"iiWAS":                         [ 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 2, 0 ],
+			"SEMANTiCS":                     [ 1, 0, 0, 0, 0, 1, 0, 2, 1, 0, 0, 0 ],
+			"ICDE":                          [ 1, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0 ],
+			"CIDR":                          [ 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0 ],
+			"EDBT":                          [ 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0 ],
+			"Other conferences":             [ 3, 2, 3, 3, 3, 2, 4, 4, 9, 7, 4, 1 ]
+		},
+		"Workshops": {
+			"PROFILES @ ISWC/ESWC":          [ 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0 ],
+			"COLD @ ISWC":                   [ 0, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+			"LDOW @ WWW":                    [ 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0 ],
+			"QuWeDa @ ESWC/ISWC":            [ 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0 ],
+			"AMW":                           [ 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0 ],
+			"Other workshops":               [ 2, 1, 2, 3, 0, 1, 0, 1, 0, 1, 3, 0 ]
+		},
+		"Others": {
+			"PhD theses":                    [ 0, 0, 0, 0, 0, 2, 0, 2, 1, 2, 7, 1 ],
+			"Posters &  demos":              [ 2, 1, 0, 1, 1, 2, 1, 3, 0, 1, 1, 0 ],
+			"Other (e.g., books, chapters)": [ 0, 2, 1, 0, 1, 0, 0, 0, 2, 0, 4, 2 ]
+		}
+	},
+	"SystemComparisonPublications": {
+		"FedBench": {
+			"Title": "FedBench: A benchmark suite for federated semantic data query processing",
+			"Venue": "ISWC",
+			"Year": 2011,
+			"Citations": 194,
+			"SystemsSurvey": ["SPLENDID"],
+			"SystemsDiscontinued": ["Sesame AliBaba"],
+			"AssessedDimensions": ["evaluation time", "# endpoint requests"]
+		},
+		"Survey-FederateComparisonSPARQL": {
+			"Title": "A comparison of federation over SPARQL endpoints frameworks",
+			"Venue": "KESW",
+			"Year": 2013,
+			"Citations": 21,
+			"SystemsSurvey": ["DARQ", "FedX", "Jena", "SPLENDID", "Virtuoso"],
+			"SystemsOther": ["ADERIS", "ANAPSID", "Avalanche", "Distributed SPARQL", "GDS", "SemWIQ", "SPARQL-DQP", "WoDQA"],
+			"SystemsDiscontinued": ["Sesame AliBaba"],
+			"AssessedDimensions": ["catalog", "platform", "source selection", "cache", "query execution (join types)", "source tracking", "GUI"],
+			"Alt": "rakhmawati2017evaluating",
+			"AltTitle": "also available as PhD thesis chapter"
+		},
+		"rakhmawati2013holistic": {
+			"Title": "An holistic evaluation of federated SPARQL query engine",
+			"Venue": "ISICO",
+			"Year": 2013,
+			"Citations": 2,
+			"SystemsSurvey": ["DARQ", "FedX", "SPLENDID"],
+			"AssessedDimensions": ["response time", "amount of data sent/received", "size of intermediate results", "# requests", "# ASK requests", "# sources selected", "avg. size of intermediate results", "max rows retrieved", "requests workload", "avg. data received"]
+		},
+		"DBLP:conf/iiwas/RakhmawatiSLD14": {
+			"Title": "QFed: Query set for federated SPARQL query benchmark",
+			"Venue": "iiWAS",
+			"Year": 2014,
+			"Citations": 13,
+			"SystemsSurvey": ["FedX", "Jena"],
+			"AssessedDimensions": ["data transmission", "run time"]
+		},
+		"DBLP:conf/webist/RakhmawatiKHD14": {
+			"Title": "On metrics for measuring fragmentation of federation over SPARQL Endpoints",
+			"Venue": "WEBIST",
+			"Year": 2014,
+			"Citations": 7,
+			"SystemsSurvey": ["DARQ", "SPLENDID"],
+			"AssessedDimensions": ["data transfer", "requests workload"]
+		},
+		"DBLP:phd/dnb/Gorlitz15": {
+			"Title": "Distributed query processing for federated RDF data",
+			"Venue": "PhD thesis Univ. Koblenz-Landau",
+			"Year": 2015,
+			"Citations": 3,
+			"SystemsSurvey": ["DARQ", "FedX", "SPLENDID"],
+			"SystemsOther": ["ANAPSID", "Avalanche", "FeDeRate", "Mediator SAIL", "Min-Tree BGP", "MisMed", "Networked Graphs", "Prasser at al.", "QTree", "SemWIQ", "SPARQL-DQP"],
+			"AssessedDimensions": ["catalog", "source selection", "query optimization (heuristics or cost-based)", "query execution (join types)"]
+		},
+		"Survey-FederatedLD": {
+			"Title": "Federated query processing on Linked Data: A qualitative survey and open challenges",
+			"Venue": "Knowl. Eng. Rev.",
+			"Year": 2015,
+			"Citations": 32,
+			"SystemsSurvey": ["DARQ", "FedX", "SPLENDID"],
+			"SystemsOther": ["ADERIS", "ANAPSID", "LHD", "WoDQA"],
+			"AssessedDimensions": ["data source selection", "join methods", "query optimization"]
+		},
+		"Survey-FederateFineGrainedEvaluation": {
+			"Title": "A fine-grained evaluation of SPARQL endpoint federation systems",
+			"Venue": "Semantic Web",
+			"Year": 2016,
+			"Citations": 125,
+			"SystemsSurvey": ["DARQ*", "FedX*", "SPLENDID*"],
+			"SystemsOther": ["ADERIS*", "ANAPSID*", "Atlas", "Avalanche", "DAW", "FedSearch", "GRANATUM", "LDQPS", "LHD*", "SIHJoin", "WoDQA"],
+			"AssessedDimensions": ["category", "code availability", "implementation language", "license", "source selection type", "join type", "cache", "index/catalog update", "system's features (results completeness and duplicate detection)", "supported SPARQL constructors", "# sources selected*", "# ASK requests*", "result completeness*", "source selection time*", "query execution time*", "overall performance*", "effect of data partitioning*"],
+			"Alt": "DBLP:phd/dnb/Saleem18",
+			"AltTitle": "also available as PhD thesis chapter"
+		},
+		"LargeRDFBench": {
+			"Title": "LargeRDFBench: A billion triples benchmark for SPARQL endpoint federation",
+			"Venue": "J. Web Semant.",
+			"Year": 2018,
+			"Citations": 57,
+			"SystemsSurvey": ["FedX", "HiBISCuS", "SPLENDID"],
+			"SystemsOther": ["ANAPSID"],
+			"AssessedDimensions": ["source selection", "result set completeness and correctness", "query execution time"]
+		},
+		"DBLP:conf/semweb/Hasnain0NR18": {
+			"Title": "Extending LargeRDFBench for multi-source data at scale for SPARQL endpoint federation",
+			"Venue": "SSWS @ ISWC",
+			"Year": 2018,
+			"Citations": 4,
+			"SystemsSurvey": ["CostFed", "FedX", "HiBISCuS", "SemaGrow", "SPLENDID"],
+			"SystemsOther": ["ANAPSID"],
+			"AssessedDimensions": ["# source selection (TPWSS)", "# ASK requests", "source selection time", "runtime"]
+		},
+		"Survey-QPHeterogeneousData": {
+			"Title": "Enabling query processing across heterogeneous data models: A survey",
+			"Venue": "BigData",
+			"Year": 2017,
+			"Citations": 101,
+			"SystemsSurvey": ["Apache Drill", "BigDAWG", "CloudMdsQL", "Myria"],
+			"AssessedDimensions": ["heterogeneity", "autonomy", "transparency", "flexibility", "optimality"]
+		},
+		"Survey-FederateEmpiricalEvaluationCostBased": {
+			"Title": "An empirical evaluation of cost-based federated SPARQL query processing Engines",
+			"Venue": "Semantic Web",
+			"Year": 2019,
+			"Citations": 1,
+			"SystemsSurvey": ["CostFed*", "DARQ", "FedX", "Odyssey*", "SemaGrow*", "SPLENDID*"],
+			"SystemsOther": ["ANAPSID", "BioFed", "LHD*", "Lusail", "MULDER"],
+			"AssessedDimensions": ["index", "query processing", "network (i.e., # transferred tuples)", "result set", "resources", "errors/q-error of triple patterns*", "errors/q-error of joins between triple patterns*", "errors/q-error of overall query plans*", "overall query runtime*", "# tuples transferred*", "source selection metrics*", "quality of generated plans*"]
+		},
+		"Survey-LargeScaleSILinkedData": {
+			"Title": "Large scale semantic integration of Linked Data: A survey",
+			"Venue": "ACM Comput. Surv.",
+			"Year": 2019,
+			"Citations": 54,
+			"SystemsSurvey": ["DARQ", "FedX", "HiBISCuS", "SPLENDID"],
+			"SystemsOther": ["ANAPSID", "DAW", "MULDER"],
+			"AssessedDimensions": ["data set types", "output types", "transformations", "schema matching", "instance matching", "provenance levels", "quality", "evolution", "tested data sets and scalability"]
+		},
+		"DBLP:phd/dnb/Endris20": {
+			"Title": "Federated query processing over heterogeneous data sources in a semantic data lake",
+			"Venue": "PhD thesis Univ. Bonn",
+			"Year": 2020,
+			"Citations": 3,
+			"SystemsSurvey": ["DARQ", "FEDRA", "FedX", "HiBISCuS", "Odyssey", "SAFE", "Semagrow", "SPLENDID"],
+			"SystemsOther": ["ANAPSID", "Avalance", "DAW", "Lusail"],
+			"AssessedDimensions": ["catalog", "ASK-based source selection", "privacy awareness"]
+		},
+		"Survey-ModernFDS": {
+			"Title": "Modern federated database systems: An overview",
+			"Venue": "ICEIS",
+			"Year": 2020,
+			"Citations": 3,
+			"SystemsSurvey": ["Apache Drill", "BigDAWG", "CloudMdsQL", "Myria"],
+			"AssessedDimensions": ["definition", "owner", "goal", "internal data representation and platform for data operations", "context segregation", "query specification and execution", "heterogeneity", "main components", "demonstration"]
+		},
+		"DBLP:phd/dnb/Valdestilhas21": {
+			"Title": "Identifying, relating, consisting and querying large heterogeneous RDF sources",
+			"Venue": "PhD thesis Univ. Leipzig",
+			"Year": 2021,
+			"Citations": 0,
+			"SystemsSurvey": ["Comunica", "CostFed", "DARQ", "FEDRA", "FedX", "Odissey", "SaGe", "SemaGrow", "SPLENDID"],
+			"SystemsOther": ["ADERIS", "ANAPSID", "DAW", "LDQPS", "Lusail", "MULDER", "SIHJoin", "SOUIN", "TPF Client", "WimuQ", "WoDQA"],
+			"AssessedDimensions": ["SPARQL query federation", "link traversal based SPARQL federation", "dataset identification", "source selection", "duplicate awareness"]
+		}
+	},
+	"AcademicSystemSelection": {
+		"⩽2008": {
+			"DARQ": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 12,
+				"Citations": ">500",
+				"References": [ "DARQ" ]
+			},
+			"Mediator SAIL": {
+				"InSystemComparisonPapers": 1,
+				"Citations": "71",
+				"References": [ "DBLP:journals/ijwet/StuckenschmidtVBH05" ]
+			},
+			"Distributed SPARQL": {
+				"InSystemComparisonPapers": 1,
+				"Citations": "36",
+				"References": [ "DBLP:conf/semweb/ZemanekS08" ]
+			},
+			"Networked Graphs": {
+				"InSystemComparisonPapers": 1,
+				"Citations": "133",
+				"References": [ "DBLP:conf/www/SchenkS08" ]
+			},
+			"SemWIQ": {
+				"InSystemComparisonPapers": 2,
+				"Citations": "133",
+				"References": [ "DBLP:conf/esws/LangeggerWB08" ]
+			}
+		},
+		"2009-2011": {
+			"SPLENDID": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 16,
+				"Citations": "307",
+				"References": [ "SPLENDID" ]
+			},
+			"FeDeRate": {
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 1,
+				"Citations": "74",
+				"References": [ "DBLP:journals/bmcbi/CheungFMPSZP09" ]
+			},
+			"Atlas": {
+				"InSystemComparisonPapers": 1,
+				"Citations": "53",
+				"References": [ "DBLP:journals/ws/KaoudiKKMMP10" ]
+			},
+			"QTree": {
+				"InSystemComparisonPapers": 1,
+				"Citations": "259",
+				"References": [ "qtree2010www" ]
+			},
+			"LDQPS": {
+				"InSystemComparisonPapers": 2,
+				"Citations": "149",
+				"References": [ "DBLP:conf/semweb/LadwigT10" ]
+			},
+			"ANAPSID": {
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 11,
+				"Citations": "237",
+				"References": [ "ANAPSID" ]
+			},
+			"ADERIS": {
+				"InSystemComparisonPapers": 1,
+				"Citations": "43",
+				"References": [ "lynden2011aderis" ]
+			},
+			"GDS": {
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 1,
+				"Citations": "3",
+				"References": [ "gds2011techrep" ]
+			},
+			"Min-Tree BGP": {
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 1,
+				"Citations": "24",
+				"References": [ "DBLP:conf/aswc/WangTD11" ]
+			},
+			"SIHJoin": {
+				"InSystemComparisonPapers": 2,
+				"Citations": "84",
+				"References": [ "DBLP:conf/esws/LadwigT11" ]
+			},
+			"SPARQL-DQP": {
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 2,
+				"Citations": "101",
+				"References": [ "DBLP:conf/esws/ArandaAC11" ]
+			}
+		},
+		"2012-2014": {
+			"HiBISCuS": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 4,
+				"Citations": "150",
+				"References": [ "HiBISCus" ]
+			},
+			"Prasser et al.": {
+				"InSystemComparisonPapers": 1,
+				"Citations": "150",
+				"References": [ "DBLP:conf/edbt/PrasserKK12" ]
+			},
+			"DISMED": {
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 1,
+				"Citations": "6",
+				"References": [ "DBLP:journals/titb/MoraEB12" ]
+			},
+			"WoDQA": {
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 4,
+				"Citations": "6",
+				"References": [ "DBLP:conf/www/AkarHED12" ]
+			},
+			"GRANATUM": {
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 4,
+				"Citations": "113",
+				"References": [ "granatum2014iswc", "granatum2014jist", "granatum2012oedw" ]
+			},
+			"LHD": {
+				"InSystemComparisonPapers": 5,
+				"Citations": "54",
+				"References": [ "DBLP:conf/www/WangTD13" ]
+			},
+			"FedSearch": {
+				"InSystemComparisonPapers": 1,
+				"Citations": "35",
+				"References": [ "DBLP:conf/semweb/NikolovSH13" ]
+			},
+			"DAW": {
+				"InSystemComparisonPapers": 4,
+				"Citations": "95",
+				"References": [ "DBLP:conf/semweb/SaleemNPDH13" ]
+			},
+			"SOUIN": {
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 1,
+				"Citations": "50",
+				"References": [ "DBLP:conf/sigmod/Hartig13" ]
+			},
+			"Avalance": {
+				"InSystemComparisonPapers": 1,
+				"Citations": "100",
+				"References": [ "DBLP:conf/semweb/BascaB10", "DBLP:journals/ws/BascaB14" ]
+			}
+		},
+		"2015-2019": {
+			"FEDRA": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 2,
+				"Citations": "40",
+				"References": [ "FEDRA" ]
+			},
+			"SemaGrow": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 5,
+				"Citations": "70",
+				"References": [ "SemaGrow" ]
+			},
+			"oLinDa": {
+				"CodeAvailability": true,
+				"Citations": "1",
+				"References": [ "DBLP:journals/jidm/CunhaL15" ]
+			},
+			"CloudMdsQL": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 2,
+				"DataHeterogeneity": true,
+				"Citations": "159",
+				"References": [ "CloudMdsQL", "CloudMdsQLJ", "DBLP:conf/closer/KolevBLVJPP16" ]
+			},
+			"BigDAWG": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 2,
+				"DataHeterogeneity": true,
+				"Citations": ">500",
+				"References": [ "BigDAWGv1.0", "DBLP:journals/pvldb/ElmoreDSBCGHHKK15", "BigDAWG" ]
+			},
+			"SPARQL-LD": {
+				"CodeAvailability": true,
+				"Citations": "45",
+				"References": [ "DBLP:conf/ercimdl/FafaliosYT16", "DBLP:conf/semweb/FafaliosT15", "DBLP:conf/esws/YannakisFT18" ]
+			},
+			"FuhSen": {
+				"CodeAvailability": true,
+				"Citations": "25",
+				"References": [ "DBLP:conf/www/Collarana0A16" ]
+			},
+			"Odyssey": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 2,
+				"Citations": "50",
+				"References": [ "ODYSSEY" ]
+			},
+			"SAFE": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 1,
+				"DataSecurity": true,
+				"Citations": "96",
+				"References": [ "SAFE", "DBLP:conf/swat4ls/KhanSIMHNDS14" ]
+			},
+			"Lusail": {
+				"InSystemComparisonPapers": 3,
+				"Citations": "41",
+				"References": [ "LUSAIL", "DBLP:conf/sigmod/MansourAOAK17", "DBLP:conf/icde/AbdelazizMOAK17" ]
+			},
+			"Myria": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 2,
+				"Citations": "217",
+				"References": [ "Myria", "DBLP:conf/sigmod/HalperinACCKMORWWXBHS14" ]
+			},
+			"LILAC": {
+				"CodeAvailability": true,
+				"Citations": "22",
+				"References": [ "DBLP:conf/www/Collarana0A16" ]
+			},
+			"BioFed": {
+				"InSystemComparisonPapers": 1,
+				"Citations": "44",
+				"References": [ "BioFed" ]
+			},
+			"Comunica (TPF-Client)": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 1,
+				"Citations": "393",
+				"References": [ "DBLP:conf/semweb/TaelmanHSV18", "DBLP:journals/ws/VerborghSHHVMHC16" ]
+			},
+			"CostFed": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 4,
+				"Citations": "40",
+				"References": [ "CostFed", "DBLP:conf/semweb/Potocki0SHVN17" ]
+			},
+			"BOUNCER": {
+				"CodeAvailability": true,
+				"DataSecurity": true,
+				"Citations": "6",
+				"References": [ "DBLP:conf/dexa/EndrisALVA18" ]
+			},
+			"SPARQL Micro-Services": {
+				"CodeAvailability": true,
+				"Citations": "18",
+				"References": [ "DBLP:conf/www/MichelFG18" ]
+			},
+			"PolyWeb": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"DataHeterogeneity": true,
+				"Citations": "40",
+				"References": [ "PolyWeb", "PolyWebGit" ]
+			},
+			"Ontario": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"DataHeterogeneity": true,
+				"Citations": "65",
+				"References": [ "Ontario", "MULDER" ]
+			},
+			"SAGE": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 1,
+				"Citations": "39",
+				"References": [ "DBLP:conf/www/MinierSM19" ]
+			},
+			"Squerall": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"DataHeterogeneity": true,
+				"Citations": "58",
+				"References": [ "Squerall", "DBLP:conf/www/MamiGSJA19", "DBLP:conf/iiwas/MamiGSJAL19", "DBLP:conf/semweb/MamiGSJA019" ]
+			},
+			"FMQO": {
+				"CodeAvailability": true,
+				"Citations": "9",
+				"References": [ "DBLP:conf/apweb/Ge0X0Q19", "DBLP:conf/dasfaa/00010OZ18" ]
+			},
+			"WimuQ": {
+				"CodeAvailability": true,
+				"InSystemComparisonPapers": 1,
+				"Citations": "6",
+				"References": [ "DBLP:conf/kcap/ValdestilhasS019" ]
+			},
+			"SpecINT": {
+				"CodeAvailability": true,
+				"Citations": "2",
+				"References": [ "DBLP:journals/semweb/ArsicSMRZ19a" ]
+			},
+			"LDaQ": {
+				"CodeAvailability": true,
+				"Citations": "4",
+				"References": [ "DBLP:conf/sac/FafaliosT19" ]
+			},
+			"Polystore++": {
+				"CodeAvailability": true,
+				"DataHeterogeneity": true,
+				"Citations": "2",
+				"References": [ "DBLP:conf/icdcs/SinghalZNSO19" ]
+			},
+			"SemKT": {
+				"CodeAvailability": true,
+				"Citations": "8",
+				"References": [ "DBLP:conf/bigdataconf/AggourKCWGDHGV19" ]
+			}
+		},
+		"≥2020": {
+			"Obi-Wan": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"DataHeterogeneity": true,
+				"Citations": "25",
+				"References": [ "Obi-Wan", "Obi-Wan1" ]
+			},
+			"Onto-Kit": {
+				"InThisSurvey": true,
+				"CodeAvailability": true,
+				"DataHeterogeneity": true,
+				"Citations": "6",
+				"References": [ "Onto-KIT" ]
+			},
+			"FLiQue": {
+				"CodeAvailability": true,
+				"Citations": "1",
+				"References": [ "moreau2020ensuring" ]
+			}
+		}
+	},
+	"Bibliography": {
+		"AllegroGraph": { "Type": "website", "Url": "https://allegrograph.com/products/allegrograph/" },
+		"AmazonAthenaFederation": { "Type": "website", "Url": "https://aws.amazon.com/athena/" },
+		"AmazonNeptune": { "Type": "website", "Url": "https://aws.amazon.com/neptune/" },
+		"ANAPSID": { "Label": "ISWC 2011", "Url": "10.1007/978-3-642-25073-6_2" },
+		"Anzograph": { "Type": "website", "Url": "https://cambridgesemantics.com/anzograph/" },
+		"BigDAWG": { "Label": "SIGMOD 2015", "Url": "https://doi.org/10.1145/2814710.2814713" },
+		"BigDAWGv1.0": { "Label": "HPEC 2017", "Url": "https://doi.org/10.1109/HPEC.2017.8091077" },
+		"BioFed": { "Label": "J. Biomedical Semant. 2017", "Url": "https://doi.org/10.1186/s13326-017-0118-0" },
+		"Blazegraph": { "Type": "website", "Url": "https://blazegraph.com/" },
+		"CloudMdsQLJ": { "Label": "Distr. Parall. Datab. 2016", "Url": "https://doi.org/10.1007/s10619-015-7185-y" },
+		"CloudMdsQL": { "Label": "SIGMOD 2016", "Url": "https://doi.org/10.1145/2882903.2899400" },
+		"CostFed": { "Label": "SEMANTiCS 2018", "Url": "https://doi.org/10.1016/j.procs.2018.09.016" },
+		"DARQ": { "Label": "ESWC 2008", "Url": "https://doi.org/10.1007/978-3-540-68234-9_39" },
+		"DataVirtuality": { "Type": "website", "Url": "https://datavirtuality.com/" },
+		"DBLP:conf/apweb/Ge0X0Q19": { "Label": "APWeb 2019", "Url": "https://doi.org/10.1007/978-3-030-26075-0_30" },
+		"DBLP:conf/aswc/WangTD11": { "Label": "JIST 2011", "Url": "https://doi.org/10.1007/978-3-642-29923-0_14" },
+		"DBLP:conf/bigdataconf/AggourKCWGDHGV19": { "Label": "IEEE Big Data 2019", "Url": "https://doi.org/10.1109/BigData47090.2019.9006495" },
+		"DBLP:conf/closer/KolevBLVJPP16": { "Label": "CLOSER 2016", "Url": "https://doi.org/10.5220/0005923803520359" },
+		"DBLP:conf/dasfaa/00010OZ18": { "Label": "DASFAA 2018", "Url": "https://doi.org/10.1007/978-3-319-91452-7_48" },
+		"DBLP:conf/dexa/EndrisALVA18": { "Label": "DEXA 2018", "Url": "https://doi.org/10.1007/978-3-319-98809-2_5" },
+		"DBLP:conf/edbt/PrasserKK12": { "Label": "EDBT 2012", "Url": "https://doi.org/10.1145/2247596.2247640" },
+		"DBLP:conf/ercimdl/FafaliosYT16": { "Label": "TPDL 2016", "Url": "https://doi.org/10.1007/978-3-319-43997-6_14" },
+		"DBLP:conf/esws/ArandaAC11": { "Label": "ESWC 2011", "Url": "https://doi.org/10.1007/978-3-642-21064-8_1" },
+		"DBLP:conf/esws/LadwigT11": { "Label": "ESWC 2011", "Url": "https://doi.org/10.1007/978-3-642-21034-1_10" },
+		"DBLP:conf/esws/LangeggerWB08": { "Label": "ESWC 2008", "Url": "https://doi.org/10.1007/978-3-540-68234-9_37" },
+		"DBLP:conf/esws/YannakisFT18": { "Label": "QuWeDa@ESWC 2018", "Url": "http://ceur-ws.org/Vol-2110/paper7.pdf" },
+		"DBLP:conf/icdcs/SinghalZNSO19": { "Label": "ICDCS 2019", "Url": "https://doi.org/10.1109/ICDCS.2019.00163" },
+		"DBLP:conf/icde/AbdelazizMOAK17": { "Label": "ICDE 2017", "Url": "https://doi.org/10.1109/ICDE.2017.59" },
+		"DBLP:conf/iiwas/MamiGSJAL19": { "Label": "iiWAS 2019", "Url": "https://doi.org/10.1145/3366030.3366054" },
+		"DBLP:conf/iiwas/RakhmawatiSLD14": { "Label": "iiWAS 2014", "Url": "https://doi.org/10.1145/2684200.2684321" },
+		"DBLP:conf/kcap/ValdestilhasS019": { "Label": "K-CAP 2019", "Url": "https://doi.org/10.1145/3360901.3364436" },
+		"DBLP:conf/sac/FafaliosT19": { "Label": "SAC 2019", "Url": "https://doi.org/10.1145/3297280.3297505" },
+		"DBLP:conf/semweb/BascaB10": { "Label": "ISWC (posters&demo) 2010", "Url": "http://ceur-ws.org/Vol-658/paper527.pdf" },
+		"DBLP:conf/semweb/FafaliosT15": { "Label": "ISWC (posters&demo) 2016", "Url": "http://ceur-ws.org/Vol-1486/paper_71.pdf" },
+		"DBLP:conf/semweb/Hasnain0NR18": { "Label": "SSWS @ ISWC, 2018", "Url": "https://doi.org/10.3233/978-1-61499-894-5-203" },
+		"DBLP:conf/semweb/LadwigT10": { "Label": "ISWC 2010", "Url": "https://doi.org/10.1007/978-3-642-17746-0_29" },
+		"DBLP:conf/semweb/MamiGSJA019": { "Label": "ISWC (satellites) 2019", "Url": "http://ceur-ws.org/Vol-2456/paper76.pdf" },
+		"DBLP:conf/semweb/NikolovSH13": { "Label": "ISWC 2013", "Url": "https://doi.org/10.1007/978-3-642-41335-3_27" },
+		"DBLP:conf/semweb/Potocki0SHVN17": { "Label": "ISWC (posters&demos) 2017", "Url": "http://ceur-ws.org/Vol-1963/paper599.pdf" },
+		"DBLP:conf/semweb/SaleemNPDH13": { "Label": "ISWC 2013", "Url": "https://doi.org/10.1007/978-3-642-41335-3_36" },
+		"DBLP:conf/semweb/TaelmanHSV18": { "Label": "ISWC 2018", "Url": "https://doi.org/10.1007/978-3-030-00668-6_15" },
+		"DBLP:conf/semweb/ZemanekS08": { "Label": "ISWC 2008 (poster&demos)", "Url": "http://ceur-ws.org/Vol-401/iswc2008pd_submission_69.pdf" },
+		"DBLP:conf/sigmod/HalperinACCKMORWWXBHS14": { "Label": "SIGMOD 2014", "Url": "https://doi.org/10.1145/2588555.2594530" },
+		"DBLP:conf/sigmod/Hartig13": { "Label": "SIGMOD 2013", "Url": "https://doi.org/10.1145/2463676.2465231" },
+		"DBLP:conf/sigmod/MansourAOAK17": { "Label": "SIGMOD 2017", "Url": "https://doi.org/10.1145/3035918.3058731" },
+		"DBLP:conf/swat4ls/KhanSIMHNDS14": { "Label": "SWAT5LS 2014", "Url": "http://ceur-ws.org/Vol-1320/paper_7.pdf" },
+		"DBLP:conf/webist/RakhmawatiKHD14": { "Label": "WEBIST 2014", "Url": "https://doi.org/10.5220/0004760101190126" },
+		"DBLP:conf/www/AkarHED12": { "Label": "LDOW 2012", "Url": "http://ceur-ws.org/Vol-937/ldow2012-paper-06.pdf" },
+		"DBLP:conf/www/Collarana0A16": { "Label": "WWW 2016", "Url": "https://doi.org/10.1145/2872518.2890535" },
+		"DBLP:conf/www/MamiGSJA19": { "Label": "WWW 2019", "Url": "https://doi.org/10.1145/3308558.3314132" },
+		"DBLP:conf/www/MichelFG18": { "Label": "LDOW@WWW 2018", "Url": "http://ceur-ws.org/Vol-2073/article-01.pdf" },
+		"DBLP:conf/www/MinierSM19": { "Label": "WWW 2019", "Url": "https://doi.org/10.1145/3308558.3313652" },
+		"DBLP:conf/www/SchenkS08": { "Label": "WWW 2008", "Url": "https://doi.org/10.1145/1367497.1367577" },
+		"DBLP:conf/www/WangTD13": { "Label": "LDOW 2013", "Url": "http://ceur-ws.org/Vol-996/papers/ldow2013-paper-06.pdf" },
+		"DBLP:journals/bmcbi/CheungFMPSZP09": { "Label": "BMC Bioinf. 2009", "Url": "https://doi.org/10.1186/1471-2105-10-S10-S10" },
+		"DBLP:journals/ijwet/StuckenschmidtVBH05": { "Label": "IJWET 2005", "Url": "https://doi.org/10.1504/IJWET.2005.008484" },
+		"DBLP:journals/jidm/CunhaL15": { "Label": "J. Inf. Data Manag. 2015", "Url": "https://sol.sbc.org.br/journals/index.php/jidm/article/view/1562" },
+		"DBLP:journals/pvldb/ElmoreDSBCGHHKK15": { "Label": "VLDB 2015", "Url": "https://doi.org/10.14778/2824032.2824098" },
+		"DBLP:journals/semweb/ArsicSMRZ19a": { "Label": "Semant. Web 2019", "Url": "https://doi.org/10.3233/SW-180327" },
+		"DBLP:journals/titb/MoraEB12": { "Label": "IEEE Trans. Inf. Technol. Biomed. 2012", "Url": "https://doi.org/10.1109/TITB.2012.2215045" },
+		"DBLP:journals/ws/BascaB14": { "Label": "J. Web Semant. 2014", "Url": "https://doi.org/10.1016/j.websem.2014.04.002" },
+		"DBLP:journals/ws/KaoudiKKMMP10": { "Label": "J. Web Semant. 2010", "Url": "https://doi.org/10.1016/j.websem.2010.07.001" },
+		"DBLP:journals/ws/VerborghSHHVMHC16": { "Label": "J. Web Semant. 2016", "Url": "https://doi.org/10.1016/j.websem.2016.03.003" },
+		"DBLP:phd/dnb/Endris20": { "Label": "PhD thesis U. Bonn, 2020", "Url": "http://hdl.handle.net/20.500.11811/8347" },
+		"DBLP:phd/dnb/Gorlitz15": { "Label": "PhD thesis U. Koblenz-Landau, 2015", "Url": "http://kola.opus.hbz-nrw.de/volltexte/2015/1091/pdf/diss_print_final.pdf" },
+		"DBLP:phd/dnb/Saleem18": { "Label": "PhD thesis U. Leipzig, 2018", "Url": "https://d-nb.info/1162645547" },
+		"DBLP:phd/dnb/Valdestilhas21": { "Label": "PhD thesis U. Leipzig, 2021", "Url": "https://nbn-resolving.org/urn:nbn:de:bsz:15-qucosa2-732931" },
+		"Denodo": { "Type": "website", "Url": "https://www.denodo.com/en" },
+		"Dremio": { "Type": "website", "Url": "https://www.dremio.com/" },
+		"DrillP": { "Label": "Big Data 2013", "Url": "https://doi.org/10.1089/big.2013.0011" },
+		"Drill": { "Type": "website", "Url": "https://drill.apache.org/" },
+		"FedBench": { "Label": "ISWC 2011", "Url": "https://doi.org/10.1007/978-3-642-25073-6_37" },
+		"FEDRA": { "Label": "ISWC 2015", "Url": "https://doi.org/10.1007/978-3-319-25007-6_3" },
+		"FedX1": { "Label": "ISWC 2011", "Url": "https://doi.org/10.1007/978-3-642-25073-6_38" },
+		"FedX": { "Label": "ESWC 2011", "Url": "https://doi.org/10.1007/978-3-642-21064-8_39" },
+		"gds2011techrep": { "Label": "tech. rep. U. Southampton 2011", "Url": "https://www.openresearch.org/wiki/Querying_the_Web_of_Data_with_Graph_Theory-based_Techniques" },
+		"granatum2012oedw": { "Label": "OEDW@EKAW 2014", "Url": "https://pdfs.semanticscholar.org/f940/fb1c870e21a0a771225d3b70b398e46c77bc.pdf" },
+		"granatum2014iswc": { "Label": "ISWC 2014", "Url": "https://doi.org/10.1007/978-3-319-11964-9_8" },
+		"granatum2014jist": { "Label": "JIST 2014", "Url": "https://doi.org/10.1007/978-3-319-15615-6_8" },
+		"GraphDB": { "Type": "website", "Url": "https://graphdb.ontotext.com/" },
+		"HiBISCus": { "Label": "ESWC 2014", "Url": "https://doi.org/10.1007/978-3-319-07443-6_13" },
+		"IBMCloudPak": { "Type": "website", "Url": "https://www.ibm.com/products/cloud-pak-for-data" },
+		"IBMDb2BigSQL": { "Type": "website", "Url": "https://www.ibm.com/products/db2-big-sql" },
+		"IBMInforSF": { "Type": "website", "Url": "https://www.ibm.com/docs/en/iis/11.7?topic=components-infosphere-federation-server" },
+		"JBossDV": { "Type": "website", "Url": "https://developers.redhat.com/products/datavirt/overview" },
+		"Jena": { "Type": "website", "Url": "https://jena.apache.org/documentation/query/" },
+		"LargeRDFBench": { "Label": "J. Web Semant., 2018", "URL": "https://doi.org/10.1016/j.websem.2017.12.005" },
+		"LUSAIL": { "Label": "VLDB 2017", "Url": "https://doi.org/10.1145/3186728.3164144" },
+		"lynden2011aderis": { "Label": "OTM 2011", "Url": "https://doi.org/10.1007/978-3-642-25106-1_28" },
+		"MetaphactoryJ": { "Label": "Semantic Web 2019", "Url": "https://doi.org/10.3233/SW-190360" },
+		"Metaphactory": { "Type": "website", "Url": "https://metaphacts.com/product" },
+		"moreau2020ensuring": { "Label": "BDA 2020", "Url": "https://hal.archives-ouvertes.fr/hal-02904076/document" },
+		"MULDER": { "Label": "DEXA 2017", "Url": "https://doi.org/10.1007/978-3-662-58415-6_1" },
+		"Myria": { "Label": "CIDR 2017", "Url": "http://cidrdb.org/cidr2017/papers/p37-wang-cidr17.pdf" },
+		"Neo4j": { "Type": "website", "Url": "https://neo4j.com/" },
+		"Obi-Wan1": { "Label": "VLDB 2020", "Url": "https://doi.org/10.14778/3415478.3415512" },
+		"Obi-Wan": { "Label": "EDBT 2020", "Url": "https://doi.org/10.5441/002/edbt.2020.27" },
+		"ODYSSEY": { "Label": "ISWC 2017", "Url": "https://doi.org/10.1007/978-3-319-68288-4_28" },
+		"Ontario": { "Label": "DEXA 2019", "Url": "https://doi.org/10.1007/978-3-030-27615-7_29" },
+		"Onto-KIT": { "Label": "Future Generation Computer Systems 2011", "Url": "https://doi.org/10.1016/j.future.2020.09.029" },
+		"OracleBigDataSQL": { "Type": "website", "Url": "https://www.oracle.com/database/technologies/datawarehouse-bigdata/bigdata-sql.html" },
+		"OracleSpatialAndGraphJ": { "Label": "Oracle tech. rep. 2021", "Url": "https://docs.oracle.com/en/database/oracle/oracle-database/19/rdfrm/spatial-and-graph-rdf-knowledge-graph-developers-guide.pdf" },
+		"OracleSpatialAndGraph": { "Type": "website", "Url": "https://www.oracle.com/database/technologies/spatialandgraph.html" },
+		"PolyWebGit": { "Label": "BigData 2017", "Url": "https://doi.org/10.1109/BigData.2017.8258299" },
+		"PolyWeb": { "Label": "IEEE Access 2019", "Url": "https://doi.org/10.1109/ACCESS.2018.2888601" },
+		"PrestoP": { "Label": "ICDE 2019", "Url": "https://doi.org/10.1109/ICDE.2019.00196" },
+		"Presto": { "Type": "website", "Url": "https://prestodb.io/" },
+		"qtree2010www": { "Label": "WWW 2010", "Url": "https://doi.org/10.1145/1772690.1772733" },
+		"Querona": { "Type": "website", "Url": "https://www.querona.io/" },
+		"rakhmawati2013holistic": { "Label": "ISICO 2013", "Url": "https://is.its.ac.id/pubs/oajis/index.php/home/detail/1183/An-Holistic-Evaluation-of-Federated-SPARQL-Query-Engine" },
+		"rakhmawati2017evaluating": { "Label": "PhD thesis NUI Galway, 2017", "Url": "https://aran.library.nuigalway.ie/handle/10379/6284" },
+		"RDFLib": { "Type": "website", "Url": "https://rdflib.readthedocs.io/en/stable/" },
+		"SAFE": { "Label": "J. Biom. Sem. 2017", "Url": "https://doi.org/10.1186/s13326-017-0112-6" },
+		"SAPHANASmartDataAccess": { "Type": "website", "Url": "https://help.sap.com/docs/SAP_HANA_PLATFORM/6b94445c94ae495c83a19646e7c3fd56/a07c7ff25997460bbcb73099fb59007d.html?locale=en-US&version=2.0.05" },
+		"SASFederationServer": { "Type": "website", "Url": "https://www.sas.com/en_us/software/federation-server.html" },
+		"SemaGrow": { "Label": "SEMANTiCS 2015", "Url": "https://doi.org/10.1145/2814864.2814886" },
+		"SparkSQLC": { "Label": "SIGMOD 2015", "Url": "https://doi.org/10.1145/2723372.2742797" },
+		"SparkSQL": { "Type": "website", "Url": "https://spark.apache.org/sql/" },
+		"SPLENDID": { "Label": "COLD @ ISWC 2011", "Url": "http://ceur-ws.org/Vol-782/GoerlitzAndStaab_COLD2011.pdf" },
+		"SQLServerPolyBase": { "Type": "website", "Url": "https://docs.microsoft.com/en-us/sql/relational-databases/polybase/polybase-guide?view=sql-server-ver15" },
+		"Squerall": { "Label": "ISWC 2019", "Url": "https://doi.org/10.1007/978-3-030-30796-7_15" },
+		"Starburst": { "Type": "website", "Url": "https://www.starburst.io/" },
+		"Stardog": { "Type": "website", "Url": "https://www.stardog.com/" },
+		"Survey-FederateComparisonSPARQL": { "Label": "KESW 2013", "Url": "https://doi.org/10.1007/978-3-642-41360-5_11" },
+		"Survey-FederatedLD": { "Label": "Knowl. Eng. Rev., 2015", "Url": "https://doi.org/10.1017/S0269888915000107" },
+		"Survey-FederateEmpiricalEvaluationCostBased": { "Label": "Semantic Web, 2019", "Url": "https://doi.org/10.3233/SW-200420" },
+		"Survey-FederateFineGrainedEvaluation": { "Label": "Semantic Web, 2016", "Url": "https://doi.org/10.3233/SW-150186" },
+		"Survey-LargeScaleSILinkedData": { "Label": "ACM Comput. Surv., 2019", "Url": "https://doi.org/10.1145/3345551" },
+		"Survey-ModernFDS": { "Label": "ICEIS, 2020", "Url": "https://doi.org/10.5220/0009795402760283" },
+		"Survey-QPHeterogeneousData": { "Label": "BigData, 2017", "Url": "https://doi.org/10.1109/BigData.2017.8258302" },
+		"Teiid": { "Type": "website", "Url": "https://teiid.io/" },
+		"TIBCO": { "Type": "website", "Url": "https://www.tibco.com/products/data-virtualization" },
+		"Trino": { "Type": "website", "Url": "https://trino.io/" },
+		"VirtuosoC": { "Label": "CSSW 2007", "Url": "https://dl.gi.de/20.500.12116/22407" },
+		"VirtuosoJ": { "Label": "IEEE Data Engineering Bull. 2012", "Url": "http://sites.computer.org/debull/A12mar/vicol.pdf" },
+		"Virtuoso": { "Type": "website", "Url": "https://virtuoso.openlinksw.com/" }
+	}
+}
