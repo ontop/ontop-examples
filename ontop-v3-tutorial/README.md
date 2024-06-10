@@ -7,4 +7,4 @@ Sessions:
   2. [Mapping Engineering](session2)
 
 
-The up-to-date version of the Ontop tutorial is at: https://ontop-vkg.org/tutorial/
+**The up-to-date version of the Ontop tutorial is at: https://ontop-vkg.org/tutorial/**
